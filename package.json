@@ -27,5 +27,9 @@
     }
   },
 
-  "workspaces": ["apps/*", "agents/*", "packages/*"]
+  "workspaces": ["apps/*", "agents/*", "packages/*"],
+
+  "allowScripts": {
+    "fsevents": false
+  }
 }
