@@ -5,6 +5,7 @@
 
   "scripts": {
     "build": "turbo run build",
+    "db": "docker compose up --detach --wait",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
