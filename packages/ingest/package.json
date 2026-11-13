@@ -1,0 +1,21 @@
+{
+  "name": "@wtt/package-ingest",
+  "version": "0.0.0",
+  "private": true,
+
+  "type": "module",
+
+  "scripts": {
+    "typecheck": "tsc"
+  },
+
+  "dependencies": {
+    "@duckdb/node-api": "2.0.0-r.1",
+    "@wtt/package-db": "0.0.0"
+  },
+
+  "devDependencies": {
+    "@types/node": "^24",
+    "typescript": "^5"
+  }
+}
