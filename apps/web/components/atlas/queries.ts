@@ -213,6 +213,148 @@ GROUP BY e.period, e.editor_group ORDER BY e.period, e.editor_group;`,
   },
 ];
 
+export const SURVIVAL: Query[] = [
+  {
+    about:
+      "build-islands.sql: a paragraph that only moved or changed its neighbours is one stay, not several. A row begins a new stay when it does not start where the row before it ended.",
+    text: String.raw`SELECT r.*,
+       SUM(new_stay) OVER (
+         PARTITION BY page_id,hash,dup ORDER BY a,b
+         ROWS UNBOUNDED PRECEDING) island
+FROM (
+  SELECT raw.*,
+         IF(LAG(b) OVER (
+           PARTITION BY page_id,hash,dup ORDER BY a,b)=a,0,1) new_stay
+  FROM raw WHERE b>a
+) r;`,
+  },
+  {
+    about:
+      "build-km.sql: the Kaplan–Meier product in MariaDB, as a running sum of logarithms over the ages at which a stay ended. One statement, broken into lines here.",
+    text: String.raw`CREATE TABLE km AS
+SELECT *,
+       IF(SUM(deaths=at_risk) OVER w>0, 0,
+          EXP(SUM(IF(deaths<at_risk, LN(1-deaths*1e0/at_risk), 0)) OVER w)) survival
+FROM risk
+WINDOW w AS (PARTITION BY endpoint,dimension,grp ORDER BY duration ROWS UNBOUNDED PRECEDING);`,
+  },
+  {
+    about:
+      "medians.sql: the median is the earliest age at which the curve is at or under a half.",
+    text: String.raw`SELECT endpoint,dimension,grp,SUM(exits) n,SUM(deaths) deaths,
+       MIN(IF(survival<=0.5,duration,NULL))/86400 median_days,
+       MAX(duration)/86400 max_followup_days
+FROM km GROUP BY endpoint,dimension,grp;`,
+  },
+];
+
+export const OFFICES: Query[] = [
+  {
+    about:
+      "The table, from the lab's README: two periods on one row. System time is when Wikipedia said it, loaded from the real edit times. Valid time is the term the infobox states. Shortened: seven columns that describe the stating version are one comment.",
+    text: String.raw`CREATE TABLE office_term (
+  page_id     INT UNSIGNED NOT NULL,   -- the article that makes the statement
+  person      VARCHAR(255) NOT NULL,   -- its title
+  office      VARCHAR(64)  NOT NULL,
+  valid_from  DATE NOT NULL,           -- stated first day in office
+  valid_to    DATE NOT NULL,           -- stated last day, exclusive
+  open_ended  BOOLEAN NOT NULL,        -- still in office: valid_to is 9999-12-31
+  -- rev_id, seq, editor, editor_kind, comment, versions, source_text
+  row_start   TIMESTAMP(6) GENERATED ALWAYS AS ROW START,
+  row_end     TIMESTAMP(6) GENERATED ALWAYS AS ROW END,
+  PERIOD FOR SYSTEM_TIME (row_start, row_end),
+  PERIOD FOR valid_time (valid_from, valid_to),
+  PRIMARY KEY (page_id, office, valid_time WITHOUT OVERLAPS),
+  KEY office_valid (office, valid_from, valid_to)
+) WITH SYSTEM VERSIONING;`,
+  },
+  {
+    about:
+      "a2-answer-that-flips.sql: one day of history asked of four Wikipedias. Shortened to the first and the last of the four.",
+    text: String.raw`SELECT '2006-12-31' AS wikipedia_as_of, person, valid_from, valid_to, rev_id
+FROM office_term FOR SYSTEM_TIME AS OF TIMESTAMP '2006-12-31 23:59:59'
+WHERE office = 'Suomen tasavallan presidentti' AND valid_from <= DATE '1925-03-01' AND valid_to > DATE '1925-03-01'
+UNION ALL
+SELECT 'now', person, valid_from, valid_to, rev_id
+FROM office_term
+WHERE office = 'Suomen tasavallan presidentti' AND valid_from <= DATE '1925-03-01' AND valid_to > DATE '1925-03-01';`,
+  },
+  {
+    about:
+      "c-term-changes.sql, as the lab's README gives it: a statement's system period ends at the instant another statement about overlapping days begins in the same article. The file adds what changed, whether the new value is today's and how long it stood.",
+    text: String.raw`SELECT b.row_start AS changed_at, a.person, a.office,
+       a.valid_from AS from_before, IF(a.open_ended, NULL, a.valid_to) AS to_before,
+       b.valid_from AS from_after,  IF(b.open_ended, NULL, b.valid_to) AS to_after,
+       b.editor, b.rev_id, b.comment
+FROM office_term FOR SYSTEM_TIME ALL a
+JOIN office_term FOR SYSTEM_TIME ALL b
+  ON b.page_id = a.page_id AND b.office = a.office
+ AND b.row_start = a.row_end                                    -- system time: one replaces the other
+ AND a.valid_from < b.valid_to AND b.valid_from < a.valid_to    -- valid time: about the same days
+ORDER BY changed_at;`,
+  },
+  {
+    about:
+      "a3-nobody.sql: FOR SYSTEM_TIME AS OF takes one moment, so to ask 21 year ends at once the query joins a sequence to all of history on row_start and row_end.",
+    text: String.raw`SELECT y.seq AS wikipedia_at_end_of, COALESCE(GROUP_CONCAT(o.person), '(nobody)') AS president_on_1944_08_02
+FROM seq_2006_to_2026 y
+LEFT JOIN office_term FOR SYSTEM_TIME ALL o
+       ON o.row_start <= TIMESTAMP(CONCAT(y.seq, '-12-31 23:59:59'))
+      AND o.row_end   >  TIMESTAMP(CONCAT(y.seq, '-12-31 23:59:59'))
+      AND o.office = 'Suomen tasavallan presidentti'
+      AND o.valid_from <= DATE '1944-08-02' AND o.valid_to > DATE '1944-08-02'
+GROUP BY y.seq ORDER BY y.seq;`,
+  },
+];
+
+export const JOURNEYS: Query[] = [
+  {
+    about:
+      "raw.sql: every lifetime of every prose paragraph of at least 120 characters, from the versioned passage table.",
+    text: String.raw`CREATE TABLE raw AS SELECT p.page_id,p.hash,p.dup,p.born_rev,p.row_start s,p.row_end e
+ FROM wtt.passage FOR SYSTEM_TIME ALL p JOIN wtt.passage_text t ON t.hash=p.hash WHERE t.kind='prose' AND t.chars>=120;`,
+  },
+  {
+    about:
+      "pairs.sql: the first and the second article each wording was observed in, and the seconds between them.",
+    text: String.raw`CREATE TABLE pairs AS SELECT a.hash,a.page_id src,b.page_id dst,a.first_at src_at,b.first_at dst_at,a.born_rev src_rev,b.born_rev dst_rev,TIMESTAMPDIFF(SECOND,a.first_at,b.first_at) delay_seconds FROM ranked a JOIN ranked b ON a.hash=b.hash AND a.pos=1 AND b.pos=2;`,
+  },
+  {
+    about:
+      "edges.sql and events.sql: for a wording's first appearance in an article, every earlier article that still had it up to an hour before. Five or more arriving in one revision from one article make a transfer candidate.",
+    text: String.raw`CREATE TABLE edges AS SELECT d.hash,s.page_id src,d.page_id dst,d.first_at at,d.born_rev dst_rev,MAX(s.e) src_end,
+ MAX(s.e>d.first_at) overlaps, (ABS(TIMESTAMPDIFF(SECOND,MAX(s.e),d.first_at))<=3600) near_removal
+ FROM ranked d JOIN presence s ON s.hash=d.hash AND s.page_id<>d.page_id AND s.s<d.first_at AND s.e>=d.first_at-INTERVAL 1 HOUR
+ GROUP BY d.hash,s.page_id,d.page_id,d.first_at,d.born_rev;
+
+CREATE TABLE events AS SELECT src,dst,at,dst_rev,COUNT(*) paragraphs,SUM(near_removal) moved,SUM(NOT near_removal AND overlaps) retained FROM edges GROUP BY src,dst,at,dst_rev HAVING COUNT(*)>=5;`,
+  },
+];
+
+export const SOURCES: Query[] = [
+  {
+    about:
+      "build-flags.sql: one pass over every wording ever stored, marking the ones with an inline reference. <references> does not match.",
+    text: String.raw`CREATE TABLE flags AS
+SELECT hash,kind,chars,
+       (wikitext REGEXP '<ref([[:space:]/>])') has_ref
+FROM wtt.passage_text;`,
+  },
+  {
+    about:
+      "build-origins.sql: when each paragraph was first seen and when it first carried a reference.",
+    text: String.raw`CREATE TABLE origins AS
+SELECT page_id,slot,MIN(a) written,
+       MIN(IF(has_ref,a,NULL)) referenced
+FROM stays GROUP BY page_id,slot;`,
+  },
+  {
+    about:
+      "all-sourcing-by-year.sql: the chart. Every paragraph first seen in a year, with those later removed, and how many were born with a reference.",
+    text: String.raw`SELECT YEAR(o.written) year,COUNT(*) paragraphs,SUM(COALESCE(o.referenced=o.written,0)) born_referenced,100*SUM(COALESCE(o.referenced=o.written,0))/COUNT(*) born_referenced_pct FROM origins o JOIN first_versions v USING(page_id,slot) WHERE v.kind='prose' AND v.chars>=80 GROUP BY YEAR(o.written);`,
+  },
+];
+
 /* The three designs of the search lab, as they were timed. */
 
 export const VERSIONED = String.raw`SET mhnsw_ef_search=80;

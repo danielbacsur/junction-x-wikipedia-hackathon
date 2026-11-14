@@ -73,7 +73,7 @@ export function Section({
             ▾
           </span>
           <span className="font-medium">SQL</span>
-          <span className="text-ink-faint">
+          <span className="shrink-0 text-ink-faint">
             {queries.length} {queries.length === 1 ? "statement" : "statements"}
           </span>
           <span className="ml-auto truncate font-mono text-[11px] text-ink-faint">

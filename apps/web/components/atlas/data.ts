@@ -4,6 +4,17 @@
  * these files or arithmetic on such fields. The few numbers the labs report
  * only in their README are in `quoted.ts`, each with the line it comes from.
  */
+import gapsByYearEnd from "../../../../labs/bitemporal-offices/data/gaps-by-asof.json";
+import officeTimings from "../../../../labs/bitemporal-offices/data/query-timings.json";
+import officeSummary from "../../../../labs/bitemporal-offices/data/summary.json";
+import termChanges from "../../../../labs/bitemporal-offices/data/term-changes.json";
+import termsAsOf from "../../../../labs/bitemporal-offices/data/terms-by-asof.json";
+import candidateWaits from "../../../../labs/claims-before-sources/data/all-candidate-metrics.json";
+import sourceAudit from "../../../../labs/claims-before-sources/data/audit.json";
+import neverSourced from "../../../../labs/claims-before-sources/data/never-unsourced-age.json";
+import publicationYears from "../../../../labs/claims-before-sources/data/publication-summary.json";
+import sourcingByYear from "../../../../labs/claims-before-sources/data/sourcing-by-year.json";
+import sourcingSummary from "../../../../labs/claims-before-sources/data/summary.json";
 import clusterSummary from "../../../../labs/exposure-clock/data/cluster-summary.json";
 import editorSummary from "../../../../labs/exposure-clock/data/editor-summary.json";
 import identity from "../../../../labs/exposure-clock/data/identity-sensitivity.json";
@@ -18,6 +29,16 @@ import nameSwaps from "../../../../labs/history-of-history/data/war-name-swaps.j
 import warNames from "../../../../labs/history-of-history/data/war-names.json";
 import yearsMentioned from "../../../../labs/history-of-history/data/year-heatmap-years.json";
 import decadesMentioned from "../../../../labs/history-of-history/data/year-heatmap.json";
+import removalsReread from "../../../../labs/paragraph-survival/data/containment.json";
+import survivalMedians from "../../../../labs/paragraph-survival/data/medians.json";
+import oldestStanding from "../../../../labs/paragraph-survival/data/oldest-standing.json";
+import survivalSummary from "../../../../labs/paragraph-survival/data/summary.json";
+import survivalByEditor from "../../../../labs/paragraph-survival/data/survival-by-editor.json";
+import survivalOverall from "../../../../labs/paragraph-survival/data/survival-overall.json";
+import delayBins from "../../../../labs/sentence-journeys/data/delay-bins.json";
+import sameReadingText from "../../../../labs/sentence-journeys/data/same-reading-text.json";
+import transferCandidates from "../../../../labs/sentence-journeys/data/splits-and-merges.json";
+import journeySummary from "../../../../labs/sentence-journeys/data/summary.json";
 import annCorpus from "../../../../labs/temporal-ann/data/corpus.json";
 import annLatency from "../../../../labs/temporal-ann/data/latency.json";
 import annRecall from "../../../../labs/temporal-ann/data/recall.json";
@@ -347,6 +368,398 @@ export const clusters = {
       ]),
     ).values(),
   ].sort((a, b) => b.events - a.events),
+};
+
+/* ── Paragraph survival ───────────────────────────────────────────────── */
+
+const HOUR = 3_600;
+const DAY = 86_400;
+
+type Curve = {
+  endpoint: string;
+  grp: string;
+  age_seconds: number;
+  survival: number | null;
+  at_risk: number;
+}[];
+
+/**
+ * One Kaplan–Meier curve at the lab's fixed ages, an hour to twenty years,
+ * with its median. An age past the group's follow-up has no value.
+ */
+const stays = (
+  curve: Curve,
+  endpoint: string,
+  dimension: string,
+  group: string,
+) => {
+  const median = survivalMedians.rows.find(
+    (row) =>
+      row.endpoint === endpoint &&
+      row.dimension === dimension &&
+      row.grp === group,
+  )!;
+
+  const points = curve
+    .filter(
+      (row) =>
+        row.endpoint === endpoint &&
+        row.grp === group &&
+        row.age_seconds >= HOUR,
+    )
+    .flatMap((row) =>
+      row.survival === null
+        ? []
+        : [{ seconds: row.age_seconds, share: row.survival }],
+    );
+
+  return {
+    n: median.n,
+    endings: median.deaths,
+
+    /** Null when the curve has not come down to a half. */
+    medianDays: median.median_days,
+    points,
+
+    /** The share already gone at one of the fixed ages. */
+    goneBy: (seconds: number) =>
+      1 - points.find((point) => point.seconds === seconds)!.share,
+  };
+};
+
+const wordingCounts = survivalSummary.rows.find(
+  (row) => row.prose_stays !== undefined,
+)!;
+
+export const survival = {
+  HOUR,
+  DAY,
+
+  /** Every prose wording, removals that were later undone left open. */
+  all: stays(survivalOverall.rows, "wording", "overall", "all"),
+
+  /** The same with every removal counted as an ending. */
+  raw: stays(survivalOverall.rows, "wording_raw", "overall", "all"),
+
+  named: stays(survivalByEditor.rows, "wording", "editor", "named"),
+  anonymous: stays(survivalByEditor.rows, "wording", "editor", "anonymous"),
+
+  /** Inferred paragraphs, from first appearance to final disappearance. */
+  slots: stays(survivalOverall.rows, "slot", "overall", "all"),
+
+  standing: wordingCounts.standing ?? 0,
+  undoneRemovals: wordingCounts.censored_removals ?? 0,
+  standingSinceBefore2010: (wordingCounts.before_2010_pct ?? 0) / 100,
+
+  /** The file is in order of age: the first row is the oldest. */
+  oldest: oldestStanding.rows.map((row) => ({
+    title: row.title,
+    since: row.written_at,
+    days: row.days,
+    text: row.text,
+    revId: row.born_rev,
+  })),
+
+  /** The longest-lived "removals", checked for their text still being there. */
+  removals: {
+    checked: removalsReread.rows[0].candidates,
+    stillThereAfter: removalsReread.rows[0].present_at_removal,
+    stillThereNow: removalsReread.rows[0].present_at_cutoff,
+  },
+};
+
+/* ── Bitemporal offices ───────────────────────────────────────────────── */
+
+const PRESIDENCY = "Suomen tasavallan presidentti";
+
+const counted = (measure: string) =>
+  officeSummary.rows.find((row) => row.measure === measure)!.value;
+
+/** "2012-03-14 19:17:02", or a date alone, as seconds. */
+const seconds = (moment: string) =>
+  Date.parse(
+    `${moment.replace(" ", "T").padEnd(11, "T").padEnd(19, "00:00:00")}Z`,
+  ) / 1000;
+
+/** A stated term includes its first day and not its last. */
+const covers = (from: string, to: string | null, date: string) =>
+  from <= date && (to === null || date < to);
+
+const presidencyChanges = termChanges.rows
+  .filter((row) => row.office === PRESIDENCY)
+  .sort((a, b) => a.changed_at.localeCompare(b.changed_at));
+
+/** The four moments a2-answer-that-flips.sql asks Wikipedia at. */
+const ASKED_AT = [
+  "2006-12-31 23:59:59",
+  "2008-12-31 23:59:59",
+  "2012-12-31 23:59:59",
+  null,
+];
+
+/**
+ * Who the presidents' articles named for one day, over Wikipedia's own
+ * time. Only the changes that moved a stated term across the day are
+ * replayed, so this holds for a day whose answer came from them alone.
+ */
+const answersFor = (date: string) => {
+  const moves = presidencyChanges
+    .map((row) => ({
+      at: row.changed_at,
+      person: row.person,
+      revId: row.rev_id,
+      before: covers(row.from_before, row.to_before, date),
+      after: covers(row.from_after, row.to_after, date),
+    }))
+    .filter((move) => move.before !== move.after);
+
+  // Whoever a first move takes the day from was named for it from the start.
+  const first = termsAsOf.rows.find(
+    (row) =>
+      row.as_of === "2006-12-31" &&
+      covers(row.valid_from, row.valid_to, date) &&
+      moves.find((move) => move.person === row.person)?.before,
+  )!;
+
+  let named = [
+    { person: first.person, revId: first.rev_id, since: first.said_since },
+  ];
+  let since = first.said_since;
+
+  const stretches = moves.map((move) => {
+    const stretch = { from: since, to: move.at, named };
+
+    named = move.after
+      ? [...named, { person: move.person, revId: move.revId, since: move.at }]
+      : named.filter((holder) => holder.person !== move.person);
+    since = move.at;
+
+    return stretch;
+  });
+
+  const all = [...stretches, { from: since, to: null, named }].map(
+    (stretch) => ({
+      ...stretch,
+      seconds: seconds(stretch.to ?? corpus.lastEdit) - seconds(stretch.from),
+    }),
+  );
+
+  /** An answer stood for days. Between two edits of one sitting, seconds. */
+  const answers = all.filter((stretch) => stretch.seconds >= DAY);
+
+  return {
+    date,
+    answers,
+    inBetween: all.filter((stretch) => stretch.seconds < DAY),
+    asked: ASKED_AT.map((moment) => ({
+      asOf: moment,
+      answer: answers.find((stretch) =>
+        moment === null || stretch.to === null
+          ? moment === stretch.to
+          : stretch.from <= moment && stretch.to > moment,
+      )!,
+    })),
+  };
+};
+
+const statedToday = termsAsOf.rows
+  .filter((row) => row.as_of === "now")
+  .sort((a, b) => a.valid_from.localeCompare(b.valid_from));
+
+/** Handovers at which today's articles leave days to nobody. */
+const unclaimed = statedToday.slice(1).flatMap((incoming, index) => {
+  const outgoing = statedToday[index];
+  if (outgoing.valid_to === null) return [];
+
+  const days =
+    (seconds(incoming.valid_from) - seconds(outgoing.valid_to)) / DAY;
+
+  // When each side of the handover was first moved to the date it has today.
+  const ended = presidencyChanges.find(
+    (row) =>
+      row.person === outgoing.person &&
+      row.to_before !== row.to_after &&
+      row.to_after === outgoing.valid_to,
+  );
+  const started = presidencyChanges.find(
+    (row) =>
+      row.person === incoming.person &&
+      row.from_before !== row.from_after &&
+      row.from_after === incoming.valid_from,
+  );
+
+  // The gap is as old as the later of the two.
+  const since = [ended, started]
+    .flatMap((change) => (change ? [change.changed_at] : []))
+    .sort()
+    .at(-1);
+
+  return days > 0 && since
+    ? [
+        {
+          outgoing: outgoing.person,
+          ends: outgoing.valid_to,
+          incoming: incoming.person,
+          starts: incoming.valid_from,
+          days,
+          since,
+        },
+      ]
+    : [];
+});
+
+const timed = (query: string) =>
+  officeTimings.rows.find((row) => row.query === query)!.ms;
+
+export const offices = {
+  articles: counted("articles read"),
+  versions: counted("versions read"),
+  skipped: counted("versions skipped as reverted within 30 days"),
+  withoutInfobox: counted("accepted versions without an office infobox"),
+  statements: counted("stated terms read (version x term)"),
+  refused: counted("stated terms refused (version x field)"),
+  rows: counted("claim lifetime rows loaded (office_term, all system time)"),
+  statedToday: counted("of those, current statements"),
+  rowsWithEveryVersion: counted("none: claim rows"),
+  presidencyRows: officeSummary.by_office.find(
+    (row) => row.office === PRESIDENCY,
+  )!.claim_rows,
+
+  changes: termChanges.rows.length,
+  presidencyChanges: presidencyChanges.length,
+  changesToTodaysValue: termChanges.rows.filter(
+    (row) => row.verdict === "to today's value",
+  ).length,
+  changesWithoutSummary: termChanges.rows.filter((row) => !row.comment).length,
+
+  /** Who was president on 1 March 1925? */
+  flip: answersFor("1925-03-01"),
+
+  unclaimed,
+
+  /** Days no article claims, as Wikipedia stood at each year end. */
+  gaps: gapsByYearEnd.rows.map((row) => ({
+    year: row.year_end,
+    handovers: row.gaps,
+    days: row.gap_days,
+  })),
+
+  flipMs: timed("a2-answer-that-flips"),
+  changesMs: timed("c-term-changes"),
+};
+
+/* ── Sentence journeys ────────────────────────────────────────────────── */
+
+const travelled = journeySummary.rows[0];
+
+export const journeys = {
+  articles: travelled.articles,
+  wordings: travelled.prose_wordings,
+  shared: travelled.shared,
+  inFiveOrMore: travelled.five_plus,
+  mostArticles: travelled.max_articles,
+  sharedToday: travelled.current_shared,
+
+  /** The same reading text can sit under more than one hash. */
+  readingTexts: sameReadingText.rows[0].clean_texts,
+
+  delay: {
+    medianDays: travelled.delay.median_seconds / DAY,
+    withinHour: travelled.delay.within_hour,
+    withinDay: travelled.delay.within_day,
+    bins: delayBins.rows.map((row) => ({
+      bin: row.bin,
+      wordings: row.wordings,
+    })),
+  },
+
+  transfers: {
+    events: travelled.transfers.events,
+    moves: travelled.transfers.move_events,
+    copies: travelled.transfers.copy_events,
+    withComment: travelled.comment_corroboration.either_comment_matches,
+    wordings: travelled.bulk_reused_wordings,
+
+    /** The file holds the thirty largest, largest first. */
+    largest: transferCandidates.rows.map((row) => ({
+      source: row.source,
+      destination: row.destination,
+      at: row.at,
+      revId: row.dst_rev,
+      paragraphs: row.paragraphs,
+      moved: row.moved,
+      retained: row.retained,
+      comment: row.comment,
+    })),
+  },
+
+  bornWithEarlierText: travelled.birth.any_reused_at_birth,
+  bornWithFive: travelled.birth.five_reused_at_birth,
+
+  /** First and second article, where the first still had the text. */
+  outlasting: {
+    pairs: travelled.survival.overlapping_first_second,
+    later: travelled.survival.destination_outlives,
+    first: travelled.survival.source_outlives,
+    bothStanding: travelled.survival.both_censored,
+    followedAYear: travelled.survival.eligible_year,
+    laterAfterAYear: travelled.survival.destination_survives_year,
+    firstAfterAYear: travelled.survival.source_survives_year,
+  },
+};
+
+/* ── Claims before sources ────────────────────────────────────────────── */
+
+const sourced = sourcingSummary.rows[0];
+
+const waited = new Map(
+  candidateWaits.rows.map((row) => [
+    `${row.page_id} ${row.slot}`,
+    row.wait_days,
+  ]),
+);
+
+export const sourcing = {
+  paragraphs: sourced.current_paragraphs,
+  referenced: sourced.referenced_today,
+  bornReferenced: sourced.born_with_reference,
+  gained: sourced.gained_reference,
+  unreferenced: sourced.no_reference_today,
+  lostTheirs: sourced.reference_removed,
+
+  wait: {
+    medianDays: sourced.gained_wait_median_days,
+    q25Days: sourced.gained_wait_p25_days,
+    q75Days: sourced.gained_wait_p75_days,
+  },
+
+  /** No inline reference now or at any time, in a slot this old. */
+  neverIn15Years: neverSourced.rows[0].years15,
+  unreferencedFor15Years: sourced.unsourced_15_years,
+
+  references: sourced.publication_reference_occurrences,
+  dated: sourced.publication_year_parsed,
+  namedElsewhere: publicationYears.rows[0].current_unresolved_named,
+
+  candidates: sourced.candidate_paragraphs,
+
+  /** New prose paragraphs of each year, with those later removed. */
+  years: sourcingByYear.rows.map((row) => ({
+    year: row.year,
+    paragraphs: row.paragraphs,
+    born: row.born_referenced,
+    share: row.born_referenced / row.paragraphs,
+  })),
+
+  /** The longest waits, read one by one, in order of the wait. */
+  audit: sourceAudit.rows.map((row) => ({
+    rank: row.rank,
+    article: row.article,
+    verdict: row.classification,
+    waitDays: waited.get(`${row.page_id} ${row.slot}`) ?? 0,
+  })),
+
+  confirmedCircular: sourced.confirmed_circular_sourcing,
 };
 
 /* ── Temporal ANN ─────────────────────────────────────────────────────── */

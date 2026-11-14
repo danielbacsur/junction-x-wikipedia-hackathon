@@ -34,6 +34,19 @@ export {
 export { type Change, type Comparison, compareArticle } from "./compare.ts";
 export { type Evidence, type Source, gatherEvidence } from "./evidence.ts";
 export {
+  type Holding,
+  type StatedTerm,
+  type TermChange,
+  type TermGap,
+  type TermOverlap,
+  OFFICES,
+  listTerms,
+  termChanges,
+  termConflicts,
+  termHistory,
+  whoHeld,
+} from "./offices.ts";
+export {
   type PassageHit,
   type PassageSearch,
   passageSearch,

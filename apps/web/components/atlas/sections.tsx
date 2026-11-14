@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { day, number } from "@/lib/format";
 
 import {
@@ -6,30 +8,41 @@ import {
   clusters,
   corpus,
   exposure,
+  journeys,
   names,
+  offices,
   peakOf,
   reading,
   readings,
   snapshots,
+  sourcing,
+  survival,
   swaps,
   temporary,
   whiteNameStrings,
   words,
 } from "./data";
 import { Clusters, Exposure as ExposureChart } from "./exposure";
-import { duration, percent } from "./format";
+import { duration, fullDay, percent } from "./format";
+import { Journeys as JourneysChart, Transfers } from "./journeys";
 import { MainArticle } from "./main-article";
 import { NameSwaps } from "./name-swaps";
+import { Offices as OfficesChart } from "./offices";
 import * as queries from "./queries";
 import {
+  CANDIDATE_OVERLAP,
   EXACT_GLOBAL_1000,
+  JOURNEY,
   ONE_ACCOUNT_2008,
   ONE_BOOK_1975,
   PLAN_AT_1000,
   REWRITE,
+  WORDING_AT_LEAST,
 } from "./quoted";
 import { Search as SearchChart, Shapes } from "./search";
 import { N, Section } from "./section";
+import { Audit, Sourcing } from "./sources";
+import { Oldest, Survival as SurvivalChart } from "./survival";
 import { Temporary as TemporaryChart } from "./temporary";
 import { WarNames } from "./war-names";
 import { Words } from "./words";
@@ -38,6 +51,10 @@ import { YearHeat } from "./year-heat";
 const HISTORY = "labs/history-of-history";
 const CLOCK = "labs/exposure-clock";
 const SEARCH = "labs/temporal-ann";
+const SURVIVAL = "labs/paragraph-survival";
+const OFFICES = "labs/bitemporal-offices";
+const JOURNEYS = "labs/sentence-journeys";
+const SOURCES = "labs/claims-before-sources";
 
 /* ── The name of the war ──────────────────────────────────────────────── */
 
@@ -475,6 +492,331 @@ function Temporary() {
   );
 }
 
+/* ── Paragraph survival ───────────────────────────────────────────────── */
+
+const halfLife = (stays: { medianDays: number | null }) =>
+  (stays.medianDays ?? 0).toFixed(1);
+
+function Survival() {
+  const { all, raw, named, anonymous, slots, removals } = survival;
+  const [oldest] = survival.oldest;
+
+  return (
+    <Section
+      id="survival"
+      lab="Paragraph survival · how long an exact wording stands"
+      title={
+        <>
+          Half of the exact wordings of a paragraph are gone after{" "}
+          <N>{halfLife(all)} days</N>: after <N>{halfLife(named)}</N> when a
+          named account introduced them, after <N>{halfLife(anonymous)}</N> when
+          an anonymous one did.
+        </>
+      }
+      figure={
+        <>
+          <SurvivalChart />
+          <Oldest />
+        </>
+      }
+      facts={[
+        {
+          value: `${percent(all.goneBy(survival.HOUR), 2)} / ${percent(all.goneBy(survival.DAY), 2)}`,
+          label: "of wordings are gone within an hour and within a day",
+        },
+        {
+          value: `${halfLife(raw)} days`,
+          label: `the half-life if every removal counts. The headline leaves ${number(survival.undoneRemovals)} endings open, because the edit that removed the wording was itself undone.`,
+        },
+        {
+          value: percent(survival.standingSinceBefore2010, 2),
+          label: `of the ${number(survival.standing)} prose wordings standing on 1 October 2026 have stood without interruption since before 2010`,
+        },
+        {
+          value: `${removals.stillThereAfter} of ${removals.checked}`,
+          label: `of the longest-lived paragraphs that count as finally removed kept their whole reading text in the article straight after the removal. ${removals.stillThereNow} still have it today.`,
+        },
+      ]}
+      queries={queries.SURVIVAL}
+      source={SURVIVAL}
+    >
+      <p>
+        A wording is the exact wikitext of one prose paragraph of at least{" "}
+        {WORDING_AT_LEAST} characters in one article, and a stay is the time it
+        stands there without a break: {number(all.n)} stays over the whole
+        history of the {number(corpus.articles)} articles, of which{" "}
+        {number(raw.endings)} had ended by 1 October 2026. The oldest still
+        standing is in {oldest.title}, unchanged since {day(oldest.since)}.
+        Anonymous means an IP address or a temporary account, and the account is
+        the one whose edit began the stay, which can be someone restoring a
+        paragraph and not its writer.
+      </p>
+      <p>
+        The end of a wording is not a retraction. A corrected typo, a new
+        footnote or a change of markup ends a stay as surely as a deletion does,
+        because the hash is of the wikitext. The lab also followed inferred
+        paragraphs through their rewordings: of {number(slots.n)},{" "}
+        {number(slots.endings)} have finally disappeared, so that curve never
+        comes down to a half. Even those are not all removals. Reread by hand,
+        the {removals.checked} longest-lived include a paragraph merged into its
+        neighbour and one that only gained a reference. The gap between named
+        and anonymous accounts is a description, not an effect of who wrote: the
+        groups differ in what they edit and when, and nothing is adjusted for
+        that. And leaving undone removals open leans on a label that is broader
+        than vandalism, which is why the figure with every removal counted is
+        given next to it.
+      </p>
+    </Section>
+  );
+}
+
+/* ── Bitemporal offices ───────────────────────────────────────────────── */
+
+const surname = (person: string) => person.split(" ").at(-1);
+
+function Offices() {
+  const { flip, unclaimed } = offices;
+  const [first, ...later] = flip.asked;
+  const now = later.pop()!;
+
+  const nobody = flip.inBetween.filter((stretch) => !stretch.named.length);
+  const both = flip.inBetween.filter((stretch) => stretch.named.length > 1);
+
+  return (
+    <Section
+      id="offices"
+      lab="Bitemporal offices · when it was true, and when Wikipedia said so"
+      title={
+        <>
+          Who was president on {fullDay(flip.date)}?{" "}
+          {surname(first.answer.named[0].person)}, said Wikipedia at the end of{" "}
+          <N>{first.asOf?.slice(0, 4)}</N>.{" "}
+          {later.map(({ asOf, answer }) => (
+            <span key={asOf}>
+              {surname(answer.named[0].person)} at the end of{" "}
+              <N>{asOf?.slice(0, 4)}</N>,{" "}
+            </span>
+          ))}
+          and {surname(now.answer.named[0].person)} today.
+        </>
+      }
+      figure={<OfficesChart />}
+      facts={[
+        {
+          value: `${number(offices.statements)} → ${offices.rows}`,
+          label: `statements of a term, one per saved version, collapse into one row per lifetime of a claim. ${offices.presidencyRows} of the rows are about the presidency and ${offices.statedToday} are stated today.`,
+        },
+        {
+          value: `${offices.changes} changes`,
+          label: `of a stated start or end date, ${offices.presidencyChanges} of them on the presidency. ${offices.changesToTodaysValue} moved to the value stated today, ${offices.changesWithoutSummary} came without an edit summary.`,
+        },
+        {
+          value: `${offices.gaps[offices.gaps.length - 1].days} days`,
+          label: `of history for which today’s articles name no president: ${unclaimed.map((gap) => `${gap.days} between ${surname(gap.outgoing)} and ${surname(gap.incoming)}`).join(", ")}. The gaps first opened on ${[...new Set(unclaimed.map((gap) => day(gap.since)))].join(" and ")}.`,
+        },
+        {
+          value: `${offices.flipMs} ms`,
+          label: `for the statement that asks the day of four Wikipedias, and ${offices.changesMs} ms to find all ${offices.changes} changes. Medians of seven runs on a laptop.`,
+        },
+      ]}
+      queries={queries.OFFICES}
+      source={OFFICES}
+    >
+      <p>
+        One table holds two kinds of time. Valid time is the term an infobox
+        states, as a MariaDB application-time period. System time is when
+        Wikipedia stated it, loaded from the real edit times of{" "}
+        {number(offices.versions)} versions of the {offices.articles}{" "}
+        presidents’ articles. Asked for one day of history as of one moment of
+        Wikipedia’s, the table returns a name and the revision that said it. The
+        handover of 1925 moved between 1 and 2 March {flip.answers.length - 1}{" "}
+        times, each time in one sitting across two articles. Between the two
+        edits of a sitting the day belonged to nobody for{" "}
+        {nobody.map((stretch) => stretch.seconds).join(" and ")} seconds, and to
+        both men for {both.map((stretch) => stretch.seconds).join(" and ")}{" "}
+        seconds.
+      </p>
+      <p>
+        “Wikipedia said” has a definition here: a version that a revert removed
+        within 30 days is skipped, {number(offices.skipped)} of them, and
+        without that rule the table would have {offices.rowsWithEveryVersion}{" "}
+        rows. The statements come from the infoboxes and nothing else.{" "}
+        {number(offices.withoutInfobox)} accepted versions have none, the parser
+        refused {offices.refused} stated terms, and the articles’ prose and the
+        lists of presidents, which could disagree with the infoboxes, were not
+        read. The count of changes is a lower bound: it pairs a statement only
+        with the one that replaced it in the same edit. The lab does not judge
+        which date is right. And one thing it learned about MariaDB:{" "}
+        <code className="font-mono text-[13px]">WITHOUT OVERLAPS</code> on a
+        system-versioned table compares only rows with the same{" "}
+        <code className="font-mono text-[13px]">row_end</code>, so the key keeps
+        today’s statements from overlapping and does not make history
+        consistent.
+      </p>
+      <p>
+        <Link
+          href="/atlas/presidents"
+          className="font-medium text-ink underline decoration-rule underline-offset-4 hover:decoration-rubric"
+        >
+          Turn both dials yourself
+        </Link>{" "}
+        <span aria-hidden className="font-mono text-xs text-rubric">
+          →
+        </span>
+      </p>
+    </Section>
+  );
+}
+
+/* ── Sentence journeys ────────────────────────────────────────────────── */
+
+function Journeys() {
+  const { delay, transfers, outlasting } = journeys;
+  const [largest] = transfers.largest;
+
+  return (
+    <Section
+      id="journeys"
+      lab="Sentence journeys · paragraphs observed in more than one article"
+      title={
+        <>
+          <N>{number(journeys.shared)}</N> of {number(journeys.wordings)}{" "}
+          paragraphs stood in more than one article. The copy outlasted the text
+          it was first observed in <N>{number(outlasting.later)}</N> times,
+          against <N>{outlasting.first}</N>.
+        </>
+      }
+      figure={
+        <>
+          <JourneysChart />
+          <Transfers />
+        </>
+      }
+      facts={[
+        {
+          value: `${delay.medianDays.toFixed(2)} days`,
+          label: `median from the first article to the second. ${percent(delay.withinHour, 2)} arrived within an hour, ${percent(delay.withinDay, 2)} within a day.`,
+        },
+        {
+          value: `${transfers.events} transfers`,
+          label: `in which at least ${JOURNEY.paragraphs} paragraphs arrived in one revision. The largest took ${largest.paragraphs} from ${largest.source} to ${largest.destination} on ${day(largest.at)}. In ${transfers.withComment} an edit summary has a word for moving or copying.`,
+        },
+        {
+          value: `${journeys.bornWithEarlierText} articles`,
+          label: `began with a paragraph first observed in another of the articles. ${journeys.bornWithFive} began with five or more.`,
+        },
+        {
+          value: `${percent(outlasting.laterAfterAYear / outlasting.followedAYear, 2)} / ${percent(outlasting.firstAfterAYear / outlasting.followedAYear, 2)}`,
+          label: `unchanged a year on, in the second article and in the first, among the ${number(outlasting.followedAYear)} pairs that can be followed for a year`,
+        },
+      ]}
+      queries={queries.JOURNEYS}
+      source={JOURNEYS}
+    >
+      <p>
+        A paragraph here is the exact wikitext of a prose paragraph of at least{" "}
+        {JOURNEY.atLeast} characters, and it has travelled when the same text is
+        found in a second article. {journeys.inFiveOrMore} reached five articles
+        and none more than {journeys.mostArticles}. Most of it is not sentences
+        wandering off on their own: {number(transfers.wordings)} of the{" "}
+        {number(journeys.shared)} (
+        {percent(transfers.wordings / journeys.shared, 1)}) took part in a bulk
+        transfer, an editor splitting an article or moving a section to a new
+        one.
+      </p>
+      <p>
+        All of this is the order in which text was first observed within these{" "}
+        {number(journeys.articles)} articles. It is not authorship, and it is
+        not the first appearance on Wikipedia: the earlier article may have
+        taken the paragraph from an article outside the collection, from a
+        deleted revision or from a source both used, and a paraphrase is not
+        detected at all. Identity is the hash of the wikitext, which is stricter
+        than what a reader sees. The {number(journeys.shared)} hashes are{" "}
+        {number(journeys.readingTexts)} distinct reading texts, and a change of
+        markup alone ends a copy’s life, so “outlasted” means stayed unchanged
+        for longer. It leaves out the {outlasting.bothStanding} pairs that both
+        still stand. Nobody should be called a copyist on this evidence.
+      </p>
+    </Section>
+  );
+}
+
+/* ── Claims before sources ────────────────────────────────────────────── */
+
+const read = (verdict: string) =>
+  sourcing.audit.filter((row) => row.verdict.startsWith(verdict)).length;
+
+function Sources() {
+  const { wait } = sourcing;
+
+  return (
+    <Section
+      id="sources"
+      lab="Claims before sources · when a paragraph gets its reference"
+      title={
+        <>
+          <N>{percent(sourcing.referenced / sourcing.paragraphs, 2)}</N> of
+          today’s paragraphs carry a reference. Of the{" "}
+          <N>{sourcing.candidates}</N> whose first source is younger than the
+          claim, the {sourcing.audit.length} that waited longest were read, and
+          circular sourcing was confirmed in <N>{sourcing.confirmedCircular}</N>
+          .
+        </>
+      }
+      figure={
+        <>
+          <Sourcing />
+          <Audit />
+        </>
+      }
+      facts={[
+        {
+          value: number(sourcing.gained),
+          label: `paragraphs gained their first reference after they were written, after a median of ${number(Math.round(wait.medianDays))} days (quartiles ${number(Math.round(wait.q25Days))} and ${number(Math.round(wait.q75Days))}). ${number(sourcing.bornReferenced)} were born with one.`,
+        },
+        {
+          value: number(sourcing.neverIn15Years),
+          label: `paragraphs that are at least 15 years old have never carried an inline reference. ${number(sourcing.lostTheirs)} of today’s unreferenced paragraphs once had one.`,
+        },
+        {
+          value: percent(sourcing.dated / sourcing.references, 2),
+          label: `of the ${number(sourcing.references)} references in today’s paragraphs give a publication year the parser accepts. ${number(sourcing.namedElsewhere)} are named references defined outside their paragraph. Only the dated ones can be screened.`,
+        },
+      ]}
+      queries={queries.SOURCES}
+      source={SOURCES}
+    >
+      <p>
+        A paragraph counts as referenced when its wikitext holds a{" "}
+        <code className="font-mono text-[13px]">&lt;ref&gt;</code> tag:{" "}
+        {number(sourcing.referenced)} of the {number(sourcing.paragraphs)} prose
+        paragraphs of at least {WORDING_AT_LEAST} characters standing on 1
+        October 2026, and {number(sourcing.unreferenced)} without. The search
+        for a claim older than its source asks for more: a first reference whose
+        citation gives a publication year later than the year the paragraph was
+        first seen, no gap in the paragraph’s history before it, the same source
+        still cited today, and at least {percent(CANDIDATE_OVERLAP)} of the
+        words shared between the original, the first referenced and the current
+        wording. {sourcing.candidates} paragraphs pass.
+      </p>
+      <p>
+        This is a negative result. Read one by one, the {sourcing.audit.length}{" "}
+        that waited longest are {read("claim was updated")} paragraphs whose
+        claim was itself changed in the edit that brought the source (a death
+        date, a corrected year), {read("later better source")} old claims that
+        were probably just sourced late, and {read("possible circular")} that
+        cannot be settled without the publication in hand. None is a confirmed
+        case of a source that took its claim from Wikipedia. The screen hands an
+        editor candidates to check. It does not find culprits: a long wait is
+        ordinary, publication years are typed in by editors and some are wrong,
+        and word overlap cannot say which sentence a citation supports. The
+        waits describe paragraphs that survive and are referenced today, not
+        every paragraph ever written.
+      </p>
+    </Section>
+  );
+}
+
 /* ── Temporal ANN ─────────────────────────────────────────────────────── */
 
 function Search() {
@@ -561,6 +903,10 @@ export const SECTIONS = [
   { id: "nato", Finding: Nato },
   { id: "exposure", Finding: Exposure },
   { id: "temporary", Finding: Temporary },
+  { id: "survival", Finding: Survival },
+  { id: "journeys", Finding: Journeys },
+  { id: "sources", Finding: Sources },
+  { id: "offices", Finding: Offices },
   { id: "search", Finding: Search },
 ];
 
@@ -586,6 +932,11 @@ export const HEADLINES = [
     href: "#exposure",
     value: `${(exposure.knownHash.medianSeconds / 60).toFixed(2)} min`,
     label: `median time an undone edit stood, over ${number(exposure.knownHash.n)} of them`,
+  },
+  {
+    href: "#survival",
+    value: `${halfLife(survival.all)} days`,
+    label: `until half of the exact wordings of a paragraph are gone, over ${number(survival.all.n)} stays`,
   },
   {
     href: "#search",

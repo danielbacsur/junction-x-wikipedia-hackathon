@@ -341,7 +341,9 @@ export default function Method() {
         </div>
         <p className="mt-2 text-xs text-ink-faint">
           37 questions is a small set: one question is about three points. The
-          last row counts the articles of the passages an answer would cite,
+          weights of the search were set while looking at these same questions,
+          so this is how well it does on them and not a promise about others.
+          The last row counts the articles of the passages an answer would cite,
           which is a harder test than naming the article.
         </p>
       </section>

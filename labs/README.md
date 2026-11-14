@@ -24,13 +24,17 @@ when the answer is "no". The product only adopts what a lab has proved.
 MariaDB 12.3.3 on `127.0.0.1:3310`, database `wtt`, user `wtt`, password
 `wtt` (root password `wtt` for creating a lab database).
 
-| Table                               | What it holds                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `revision`                          | system-versioned: one row per article, 862,076 versions as history rows with wikipedia's real edit times; raw wikitext in `text`               |
-| `edit`                              | one slim row per version: `seq`, `saved_at`, `ended_at`, `user`, `editor` (named, ip, temp, hidden), `bytes`, `delta`, `restores`, `undone_by` |
-| `article`                           | current clean text: 568,416 Finnish articles, plus Swedish and English for the history of finland set (`history = 1`)                          |
-| `article_vector`                    | bge-m3 vector per history of finland article, HNSW index                                                                                       |
-| `category_link`, `article_category` | the Finnish category tree                                                                                                                      |
+| Table                               | What it holds                                                                                                                                                 |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `revision`                          | system-versioned: one row per article, 862,076 versions as history rows with wikipedia's real edit times; raw wikitext in `text`                              |
+| `edit`                              | one slim row per version: `seq`, `saved_at`, `ended_at`, `user`, `editor` (named, ip, temp, hidden), `bytes`, `delta`, `restores`, `undone_by`, `reverted_by` |
+| `passage`                           | system-versioned: one row per stretch a wording stood in an article, with `born_rev`, and `slot`, `prev_hash`, `sim` as our reading of which paragraph it is  |
+| `passage_text`                      | every distinct wording once, by hash: `kind`, `wikitext`, clean `text`, Finnish `stems` with a full-text index                                                |
+| `passage_vector`                    | bge-m3 vector per wording, as far as the embedding job has come                                                                                               |
+| `office_term`                       | system-versioned with an application-time period: the terms of office the presidents' infoboxes stated                                                        |
+| `article`                           | current clean text: 568,416 Finnish articles, plus Swedish and English for the history of finland set (`history = 1`)                                         |
+| `article_vector`                    | bge-m3 vector per history of finland article, HNSW index                                                                                                      |
+| `category_link`, `article_category` | the Finnish category tree                                                                                                                                     |
 
 The same data as Parquet is in `data/s`, `data/m` and `data/l`, which DuckDB
 reads directly and is often the faster way to explore.

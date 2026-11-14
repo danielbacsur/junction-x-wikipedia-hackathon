@@ -6,6 +6,7 @@ import {
   checkAnswer,
   compareArticle,
   gatherEvidence,
+  listTerms,
   listVersions,
   moment,
   readArticle,
@@ -13,7 +14,11 @@ import {
   readStanding,
   readTimeline,
   searchArticles,
+  termChanges,
+  termConflicts,
+  termHistory,
   traceClaim,
+  whoHeld,
 } from "./index.ts";
 
 // The engine is only worth testing against the real data: every claim
@@ -44,6 +49,14 @@ describe("moment", () => {
     expect(() => moment("yesterday")).toThrow("is not a date");
     expect(() => moment("2008-13")).toThrow("is not a date");
     expect(() => moment("2008-02-30")).toThrow("is not a date");
+    expect(() => moment("2008-01-01 99:99:99")).toThrow("is not a date");
+    expect(() => moment("0001")).toThrow("is not a date");
+  });
+
+  it("keeps a moment to the microsecond", () => {
+    expect(moment("2005-09-26T10:02:23.000001")).toBe(
+      "2005-09-26 10:02:23.000001",
+    );
   });
 });
 
@@ -106,6 +119,36 @@ describe("checkAnswer", () => {
     expect(right).toMatchObject({ supported: true, missing: [] });
     expect(wrong).toMatchObject({ supported: false, missing: ["95,348"] });
   });
+
+  it("does not find a number in digits that only stand next to each other", () => {
+    const supported = (answer: string, passage: string) =>
+      checkAnswer(answer, [passage])[0].supported;
+
+    // The digits of "1956–1982" run together hold 5619, and "26 662" holds 26.
+    expect(supported("There were 5619 deaths [1].", sources[0])).toBe(false);
+    expect(supported("There were 26 killed [1].", sources[1])).toBe(false);
+
+    // Two numbers in a list are each looked up, in any order.
+    expect(
+      supported("The figures are 27, 1982 [1].", "In 1982 there were 27."),
+    ).toBe(true);
+  });
+
+  it("reads a decimal and a date the way each language writes them", () => {
+    const supported = (answer: string, passage: string) =>
+      checkAnswer(answer, [passage])[0].supported;
+
+    expect(supported("About 2.5 million [1].", "noin 2,5 miljoonaa")).toBe(
+      true,
+    );
+    expect(supported("About 25 million [1].", "noin 2,5 miljoonaa")).toBe(
+      false,
+    );
+    expect(supported("It ended on 13 March 1940 [1].", "13.3.1940")).toBe(true);
+    expect(supported("It ended on 14 March 1940 [1].", "13.3.1940")).toBe(
+      false,
+    );
+  });
 });
 
 describe.runIf(reachable)("against the loaded database", () => {
@@ -157,6 +200,18 @@ describe.runIf(reachable)("against the loaded database", () => {
     expect(listed!.versions.map((version) => version.revId)).toEqual([
       9591170, 9587074, 9538173,
     ]);
+
+    // A limit that is not a count of rows never reaches the statement.
+    const one = await listVersions("Talvisota", { before: "2010", limit: -1 });
+    expect(one!.versions).toHaveLength(1);
+  });
+
+  it("tells apart two versions saved within the same second", async () => {
+    const first = await readArticle(710, "2005-09-26 10:02:23.000000");
+    const second = await readArticle(710, "2005-09-26 10:02:23.000001");
+
+    expect(first!.revId).toBe(443880);
+    expect(second!.revId).toBe(443881);
   });
 
   it("compares two dates and never pairs unlike paragraphs", async () => {
@@ -175,6 +230,9 @@ describe.runIf(reachable)("against the loaded database", () => {
 
     await expect(compareArticle("Talvisota", "now")).rejects.toThrow(
       "has to be in the past",
+    );
+    await expect(compareArticle("Talvisota", "2010", "2008")).rejects.toThrow(
+      "has to be before the later one",
     );
   });
 
@@ -240,5 +298,192 @@ describe.runIf(reachable)("against the loaded database", () => {
 
     expect(life!.lifetimes.length).toBe(tracing.traces[0].stays);
     expect(life!.alive).toBe(tracing.traces[0].alive);
+  });
+
+  it("counts the days of a wording once when it stands twice in an article", async () => {
+    // "(lisää)" stood in Talvisota in up to five places at once. Its 26
+    // history rows cover 721.9 days, not the 2,887.6 they add up to.
+    const repeated = await readBiography(1256, "97EF267A72FEB4CA");
+
+    expect(repeated!.lifetimes).toHaveLength(5);
+    expect(repeated!.daysAlive).toBeCloseTo(721.91, 2);
+
+    // No wording can have stood longer than the article has existed.
+    const always = await readBiography(1256, "8DBB16B2E5B596F4");
+
+    expect(always!.lifetimes).toHaveLength(1);
+    expect(always!.daysAlive).toBeCloseTo(6686.12, 2);
+  });
+});
+
+// The table of stated terms is loaded by packages/ingest/offices.ts. Every
+// claim below is what the infoboxes said, with the version that said it.
+const loaded = await db()
+  .query("SELECT 1 FROM office_term LIMIT 1")
+  .then((rows) => rows.length > 0)
+  .catch(() => false);
+
+describe.runIf(loaded)("terms of office on two timelines", () => {
+  const holder = async (day: string, date?: string) => {
+    const held = await whoHeld("president", day, date);
+
+    return held!.holders.map((term) => [term.person, term.from, term.to]);
+  };
+
+  it("gives a different president for 1 March 1925 depending on the Wikipedia asked", async () => {
+    expect(await holder("1925-03-01", "2006")).toEqual([
+      ["Lauri Kristian Relander", "1925-03-01", "1931-03-01"],
+    ]);
+    expect(await holder("1925-03-01", "2008")).toEqual([
+      ["K. J. Ståhlberg", "1919-07-26", "1925-03-02"],
+    ]);
+    expect(await holder("1925-03-01", "2012")).toEqual([
+      ["Lauri Kristian Relander", "1925-03-01", "1931-03-01"],
+    ]);
+    expect(await holder("1925-03-01")).toEqual([
+      ["K. J. Ståhlberg", "1919-07-25", "1925-03-02"],
+    ]);
+  });
+
+  it("cites the version that said Kekkonen was president on 1 May 1960", async () => {
+    const held = await whoHeld(
+      "Suomen tasavallan presidentti",
+      "1960-05-01",
+      "2006",
+    );
+
+    expect(held).toMatchObject({
+      office: "Suomen tasavallan presidentti",
+      day: "1960-05-01",
+      at: "2006-12-31 23:59:59",
+    });
+    expect(held!.holders).toHaveLength(1);
+    expect(held!.holders[0]).toMatchObject({
+      person: "Urho Kekkonen",
+      acting: false,
+      from: "1956-03-01",
+      to: "1982-01-27",
+      revId: 752136,
+      url: "https://fi.wikipedia.org/?oldid=752136",
+      editor: "Waldemar",
+      saidSince: "2006-01-30 15:01:04.000000",
+      saidUntil: "2007-01-19 19:02:59.000000",
+    });
+
+    // One statement, with both times in it.
+    expect(held!.sql).toHaveLength(1);
+    expect(held!.sql[0].sql).toContain(
+      "FOR SYSTEM_TIME AS OF TIMESTAMP '2006-12-31 23:59:59'",
+    );
+    expect(held!.sql[0].sql).toContain("valid_from <= DATE '1960-05-01'");
+  });
+
+  it("names nobody for 2 August 1944 since the edits of 9 August 2011", async () => {
+    expect(await holder("1944-08-02", "2011-08-08")).toEqual([
+      ["Risto Ryti", "1940-12-19", "1944-08-04"],
+    ]);
+    expect(await holder("1944-08-02", "2011-08-09")).toEqual([]);
+    expect(await holder("1944-08-02")).toEqual([]);
+  });
+
+  it("gives the handover day to the successor and marks an acting holder", async () => {
+    expect(await holder("1982-01-27")).toEqual([
+      ["Mauno Koivisto", "1982-01-27", "1994-03-01"],
+    ]);
+
+    const sickLeave = await whoHeld("president", "1981-12-01");
+
+    expect(
+      sickLeave!.holders.map((term) => [term.person, term.acting]),
+    ).toEqual([
+      ["Urho Kekkonen", false],
+      ["Mauno Koivisto", true],
+    ]);
+  });
+
+  it("refuses a day that is not one and an office it does not hold", async () => {
+    await expect(whoHeld("president", "1925")).rejects.toThrow("is not a date");
+    await expect(whoHeld("president", "1925-02-30")).rejects.toThrow(
+      "is not a date",
+    );
+    expect(await whoHeld("pope", "1925-03-01")).toBeNull();
+  });
+
+  it("lists the presidents as Wikipedia stated them on a date", async () => {
+    const then = await listTerms("president", "2006");
+    const now = await listTerms("president");
+
+    expect(then!.terms).toHaveLength(11);
+    expect(then!.terms.at(-1)).toMatchObject({
+      person: "Tarja Halonen",
+      from: "2000-03-01",
+      to: null,
+    });
+
+    // Thirteen presidents, and Koivisto standing in for Kekkonen in 1981.
+    expect(now!.terms.filter((term) => !term.acting)).toHaveLength(13);
+    expect(now!.terms.filter((term) => term.acting)).toHaveLength(1);
+    expect(now!.terms.at(-1)).toMatchObject({
+      person: "Alexander Stubb",
+      from: "2024-03-01",
+      to: null,
+      saidUntil: null,
+    });
+  });
+
+  it("holds every statement ever made, one row per lifetime", async () => {
+    const all = await termHistory("president");
+
+    expect(all!.terms).toHaveLength(59);
+    expect(all!.terms.filter((term) => term.saidUntil === null)).toHaveLength(
+      14,
+    );
+  });
+
+  it("finds the 45 times a stated date was changed", async () => {
+    const { changes } = (await termChanges())!;
+
+    expect(changes).toHaveLength(45);
+    expect(
+      changes.filter((change) => change.verdict === "to today's value"),
+    ).toHaveLength(25);
+    expect(
+      changes.filter((change) => change.verdict === "away from today's value"),
+    ).toHaveLength(4);
+    expect(changes.filter((change) => change.editorKind === "ip")).toHaveLength(
+      13,
+    );
+
+    // The handover of 1925 moved to 2 March for the second time.
+    expect(changes.find((change) => change.revId === 13641376)).toMatchObject({
+      at: "2013-11-05 19:36:27.000000",
+      person: "K. J. Ståhlberg",
+      what: "end",
+      before: { from: "1919-07-25", to: "1925-03-01" },
+      after: { from: "1919-07-25", to: "1925-03-02" },
+      editor: "KLS",
+      comment: "kyllä tämä pitää paikkansa.",
+      stoodDays: null,
+    });
+
+    expect((await termChanges("president"))!.changes).toHaveLength(35);
+  });
+
+  it("finds the days nobody claims and the moments two articles claimed", async () => {
+    const { gaps, overlaps } = (await termConflicts("president"))!;
+
+    expect(
+      gaps.map((gap) => [gap.outgoing, gap.days, gap.firstYear, gap.lastYear]),
+    ).toEqual([
+      ["P. E. Svinhufvud", 1, 2008, 2009],
+      ["Risto Ryti", 3, 2011, 2026],
+      ["Carl Gustaf Emil Mannerheim", 7, 2011, 2026],
+    ]);
+    expect(gaps[1].firstSaid.slice(0, 10)).toBe("2011-08-09");
+
+    expect(overlaps).toHaveLength(10);
+    expect(Math.max(...overlaps.map((overlap) => overlap.seconds))).toBe(
+      349_488,
+    );
   });
 });

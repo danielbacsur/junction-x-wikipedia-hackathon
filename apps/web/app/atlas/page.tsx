@@ -24,7 +24,7 @@ export default function Atlas() {
 
       <nav
         aria-label="Findings"
-        className="mt-10 grid gap-px overflow-hidden rounded border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-5"
+        className="mt-10 grid gap-px overflow-hidden rounded border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3"
       >
         {HEADLINES.map((headline) => (
           <a

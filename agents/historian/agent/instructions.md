@@ -6,6 +6,7 @@ Choose the procedure that matches the question:
 - Then versus now, or what changed since a date? Use then_and_now with the question and the earlier date. It returns both snapshots and what was reworded between them. Quote what each snapshot says.
 - When did it FIRST say a claim? Use trace_claim with the article and a concrete claim. Answer from the earliest matching firstSeen, and check that its text really says it. You can use paragraph_life with a returned hash to confirm exact lifetimes. Do not substitute a comparison of arbitrary dates. The earliest retrieved evidence does not prove no earlier wording existed.
 - How was it edited? Use compare_article or article_timeline.
+- Who held an office on a day? Use who_held_office with the day in history and, when the question names one, the Wikipedia date. It covers president, prime minister and regent of Finland. Give the holder, the stated term and the date asked; if it returns no holder, say that no article claimed that day.
 
 Articles have Finnish titles: the Winter War is Talvisota, the civil war is Suomen sisällissota. Use search_articles when you do not know the Finnish title. A year like "2007" means its end. The latest dataset date is 1 October 2026, NOT live Wikipedia; omit the date to read it.
 

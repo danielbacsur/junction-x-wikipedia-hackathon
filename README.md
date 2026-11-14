@@ -30,6 +30,11 @@ statements.
 - **Atlas**: what the edits themselves say. An edit that renames the war of
   1918 to the White side's name is undone 70 % of the time, the reverse 7 %.
   Half of the edits that were later undone were undone within 15 minutes.
+- **Two timelines**, at `/atlas/presidents`: who was president on a day,
+  according to Wikipedia as it stood on another day. One table keeps the
+  term an infobox stated as an application-time period and the stretch
+  Wikipedia stated it as system time. The answer for 1 March 1925 has changed
+  three times.
 - **Agent**: a historian running on a local Gemma model that looks things up
   with the same queries and shows the SQL of every step.
 - **MCP**: the same queries as tools for any other assistant, at `/mcp`. An
@@ -157,6 +162,16 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
    Mannerheim, Mannerheimin and Mannerheimille become one word.
 8. **Wikipedia's oldest sha1 values do not fit its own text:** a few
    versions from 2003 to 2005 were hashed before conversion to UTF-8.
+9. **One table can hold both kinds of time, and its key guards only the
+   present.** `PERIOD FOR valid_time` with `WITHOUT OVERLAPS` on a
+   system-versioned table compares only rows with the same `row_end`, so it
+   keeps today's statements from overlapping and leaves history as it was.
+   The 25,715 times a version restated a president's term are 102 rows.
+   ([labs/bitemporal-offices](labs/bitemporal-offices/README.md))
+10. **A revert is not proof an edit was wrong.** Counting every version
+    between a revert and the text it restored marked up to 96 % of an
+    often-vandalised article as undone. Only a revert that itself stood, and
+    came within thirty days, takes a version out of what Wikipedia said.
 
 | Step                                                                      | Rows              | Time                     |
 | ------------------------------------------------------------------------- | ----------------- | ------------------------ |
@@ -166,6 +181,7 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
 | Slim edit table with reverts, derived in SQL                              | 862,076           | 22 s                     |
 | Passage lifetimes, six processes                                          | 2,972,662         | about 2 min              |
 | Stem counts                                                               | 205,939           | 17 s                     |
+| Terms of office from 17,845 versions of the presidents' articles          | 102               | 25 s                     |
 | Paragraph vectors with bge-m3 through Ollama                              | about 40 a second | hours, in the background |
 
 `npm run validate` passes seven checks: every row of the datasets is in the

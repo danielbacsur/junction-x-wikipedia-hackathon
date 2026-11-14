@@ -1,7 +1,7 @@
-import { day } from "@/lib/format";
+import { day, number } from "@/lib/format";
 
 import { latestSnapshot, when } from "./data";
-import { across } from "./format";
+import { across, percent } from "./format";
 
 /**
  * A chart in its panel: what it shows above, how to read it below. The
@@ -211,5 +211,69 @@ export function Meter({
       <rect width="100%" height="10" className="fill-paper-sunk" />
       <rect width={across(share)} height="10" className={className} />
     </svg>
+  );
+}
+
+/** The parts of a whole as one bar, each named under it with its count. */
+export function Shares({
+  parts,
+  label,
+  shares = true,
+}: {
+  parts: { name: string; count: number; className: string }[];
+  label: string;
+
+  /** Whether a percentage of the whole means anything next to the count. */
+  shares?: boolean;
+}) {
+  const total = parts.reduce((sum, part) => sum + part.count, 0);
+  const before = (index: number) =>
+    parts.slice(0, index).reduce((sum, part) => sum + part.count, 0);
+
+  return (
+    <div>
+      <svg
+        width="100%"
+        height="14"
+        role="img"
+        aria-label={label}
+        className="block"
+      >
+        {parts.map((part, index) => (
+          <rect
+            key={part.name}
+            x={across(before(index) / total)}
+            width={across(part.count / total)}
+            height="14"
+            className={`stroke-paper-raised ${part.className}`}
+          />
+        ))}
+      </svg>
+      <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4">
+        {parts.map((part) => (
+          <div key={part.name}>
+            <dt className="text-xs leading-snug text-ink-faint">
+              <svg
+                width="10"
+                height="10"
+                aria-hidden
+                className="mr-1.5 inline-block align-[-1px]"
+              >
+                <rect width="10" height="10" className={part.className} />
+              </svg>
+              {part.name}
+            </dt>
+            <dd className="mt-0.5 font-serif text-xl tabular-nums">
+              {number(part.count)}
+              {shares && (
+                <span className="ml-2 font-sans text-xs text-ink-faint">
+                  {percent(part.count / total, 2)}
+                </span>
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }

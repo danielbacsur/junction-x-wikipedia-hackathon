@@ -128,6 +128,45 @@ test("a claim is traced back to when it was first said", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("the atlas shows what every lab found", async ({ page }) => {
+  await page.goto("/atlas");
+
+  for (const id of [
+    "names",
+    "exposure",
+    "survival",
+    "journeys",
+    "sources",
+    "offices",
+    "search",
+  ]) {
+    await expect(page.locator(`#${id}`)).toBeVisible();
+  }
+
+  await page.getByRole("link", { name: /Turn both dials yourself/ }).click();
+  await expect(page).toHaveURL(/\/atlas\/presidents/);
+});
+
+test("the president of a day depends on the wikipedia that is asked", async ({
+  page,
+}) => {
+  await page.goto("/atlas/presidents");
+
+  await expect(
+    page.getByRole("heading", { level: 1, name: /Who was president on/ }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "K. J. Ståhlberg" }),
+  ).toBeVisible();
+
+  // The same day, asked of Wikipedia as it stood at the end of 2012.
+  await page.getByRole("button", { name: "end of 2012" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Lauri Kristian Relander" }),
+  ).toBeVisible();
+  await expect(page.getByText(/FOR SYSTEM_TIME AS OF/).first()).toBeVisible();
+});
+
 test("the method page reports every check as passed", async ({ page }) => {
   await page.goto("/method");
 
@@ -173,6 +212,7 @@ test("another agent can ask what wikipedia said through mcp", async ({
     "trace_claim",
     "paragraph_life",
     "article_timeline",
+    "who_held_office",
   ]);
 
   const found = await call("tools/call", {
@@ -192,6 +232,19 @@ test("another agent can ask what wikipedia said through mcp", async ({
   });
 
   expect(refused.isError).toBe(true);
+
+  // Two timelines in one call: a day in 1925, asked of two Wikipedias.
+  const holder = async (date?: string) => {
+    const held = await call("tools/call", {
+      name: "who_held_office",
+      arguments: { day: "1925-03-01", date },
+    });
+
+    return held.structuredContent.holders[0].holder;
+  };
+
+  expect(await holder("2012")).toBe("Lauri Kristian Relander");
+  expect(await holder()).toBe("K. J. Ståhlberg");
 });
 
 test("the historian looks both dates up before it answers", async ({
@@ -221,6 +274,9 @@ test("no page scrolls sideways on a phone @phone", async ({ page }) => {
     "/read",
     "/read/Talvisota?date=2008-12-31",
     "/trace",
+    "/atlas",
+    "/atlas/presidents",
+    "/agent",
     "/method",
   ]) {
     await page.goto(path);

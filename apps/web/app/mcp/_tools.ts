@@ -6,6 +6,7 @@ import {
   readBiography,
   readTimeline,
   traceClaim,
+  whoHeld,
 } from "@wtt/package-engine";
 import { z } from "zod";
 
@@ -335,6 +336,55 @@ export function registerTools(server: McpServer) {
           lastEdit: life.lastEdit,
           byYear: [...years].map(([year, counts]) => ({ year, ...counts })),
           sql: life.sql,
+        };
+      }),
+  );
+
+  server.registerTool(
+    "who_held_office",
+    {
+      title: "Who held an office on a day, as of a date",
+      description:
+        "Who was president, prime minister or regent of Finland on a day, " +
+        "according to Wikipedia as it stood on a date. Answered from a " +
+        "bitemporal table of the terms the articles' infoboxes stated: the " +
+        "holder, the stated term, since when Wikipedia said so and the version " +
+        "that first said it. No holders means no article claimed that day; two " +
+        "means two articles disagreed, or one of them was acting.",
+      annotations,
+      inputSchema: z.object({
+        office: z
+          .enum(["president", "prime minister", "regent"])
+          .optional()
+          .describe("Leave out for president."),
+        day: z
+          .string()
+          .regex(/^\d{4}-\d{1,2}-\d{1,2}$/)
+          .describe('The day in history, such as "1925-03-01".'),
+        date,
+      }),
+    },
+    ({ office = "president", day, date }) =>
+      answering(async () => {
+        const held = await whoHeld(office, day, date);
+        if (!held) throw new Error(`No terms are held for "${office}".`);
+
+        return {
+          office: held.office,
+          day: held.day,
+          asOf: held.at ?? LATEST,
+          holders: held.holders.map((term) => ({
+            holder: term.person,
+            acting: term.acting,
+            statedFrom: term.from,
+            statedTo: term.to ?? "still in office",
+            saidSince: term.saidSince,
+            saidUntil: term.saidUntil ?? "still stated",
+            firstSaidBy: term.editor,
+            editSummary: term.comment,
+            version: term.url,
+          })),
+          sql: held.sql,
         };
       }),
   );
