@@ -64,6 +64,10 @@ export const compareArticle = async (
 
   if (!from) throw new Error("the earlier date has to be in the past");
 
+  if (to && to < from) {
+    throw new Error("the earlier date has to be before the later one");
+  }
+
   const rows = await database.query<{
     hash: string;
     side: "from" | "to";

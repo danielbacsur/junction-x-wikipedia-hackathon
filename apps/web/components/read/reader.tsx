@@ -76,7 +76,7 @@ export function Reader({
 }: {
   article: ArticleView;
 
-  /** The paragraph whose life is open, by hash. */
+  /** The paragraph whose life is open or that the address points at, by hash. */
   selected: string | null;
 
   /** Paragraphs written after this moment are shown as newly arrived. */

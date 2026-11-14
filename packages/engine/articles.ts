@@ -3,7 +3,7 @@ import { embedOne } from "@wtt/package-models";
 import { type Inline, clean, inline, references } from "@wtt/package-wikitext";
 
 import { type Terms, pickTerms, prefixQuery, stemQuery } from "./keywords.ts";
-import { type Shown, show } from "./sql.ts";
+import { type Shown, count, show } from "./sql.ts";
 import { LAST_EDIT, asOf, moment, when } from "./time.ts";
 
 export type Page = { pageId: number; title: string };
@@ -586,7 +586,7 @@ export const listVersions = async (
      FROM edit
      WHERE page_id = ? AND saved_at <= ?
      ORDER BY saved_at DESC
-     LIMIT ${Math.min(options.limit ?? 30, 200)}`,
+     LIMIT ${count(options.limit, 30, 200)}`,
     [page.pageId, before],
   );
 
@@ -635,7 +635,7 @@ export const listFeatured = async (
      FROM page_stats AS s
      JOIN revision AS r USING (page_id)
      ORDER BY s.edits DESC
-     LIMIT ${Math.min(limit, 100)}`,
+     LIMIT ${count(limit, 18, 100)}`,
   );
 
   return {

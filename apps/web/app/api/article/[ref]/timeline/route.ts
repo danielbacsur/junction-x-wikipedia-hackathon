@@ -1,6 +1,6 @@
 import { readTimeline } from "@wtt/package-engine";
 
-import { respond } from "@/lib/respond";
+import { decoded, respond } from "@/lib/respond";
 
 export const GET = (
   _request: Request,
@@ -9,5 +9,5 @@ export const GET = (
   respond(async () => {
     const { ref } = await context.params;
 
-    return readTimeline(decodeURIComponent(ref));
+    return readTimeline(decoded(ref));
   });

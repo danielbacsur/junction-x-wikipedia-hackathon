@@ -1,6 +1,6 @@
 import { compareArticle } from "@wtt/package-engine";
 
-import { param, respond } from "@/lib/respond";
+import { decoded, param, respond } from "@/lib/respond";
 
 export const GET = (
   request: Request,
@@ -12,5 +12,5 @@ export const GET = (
 
     if (!from) throw new Error('"" is not a date');
 
-    return compareArticle(decodeURIComponent(ref), from, param(request, "to"));
+    return compareArticle(decoded(ref), from, param(request, "to"));
   });

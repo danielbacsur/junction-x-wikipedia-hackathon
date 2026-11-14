@@ -29,7 +29,7 @@ statements.
   Wikipedia start saying this?"
 - **Atlas**: what the edits themselves say. An edit that renames the war of
   1918 to the White side's name is undone 70 % of the time, the reverse 7 %.
-  A reverted edit stays live for a median of 15 minutes.
+  Half of the edits that were later undone were undone within 15 minutes.
 - **Agent**: a historian running on a local Gemma model that looks things up
   with the same queries and shows the SQL of every step.
 - **MCP**: the same queries as tools for any other assistant, at `/mcp`. An
@@ -97,7 +97,8 @@ A loader walks every version of every article, cuts the wikitext into blocks
 and compares each version with the one before. A block's row starts with the
 edit that wrote its wording and ends with the edit that changed or removed
 it, written with Wikipedia's real timestamps through
-`system_versioning_insert_history`. Its history rows are its lifetimes. The
+`system_versioning_insert_history`. Its history rows, joined where they
+touch, are its lifetimes: a row also ends when a paragraph only moves. The
 words sit once per wording in `passage_text` with Finnish stems and a
 full-text index, the vectors in `passage_vector`, and time always comes from
 joining the versioned table:
@@ -179,13 +180,15 @@ every cited passage stood in the version it links to.
 Separate agents explored ideas past the brief, each in its own folder with a
 README of what it measured, including when the answer was no.
 
-| Lab                                                     | What it found                                                                                                                                                       |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [temporal-ann](labs/temporal-ann/README.md)             | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                                                      |
-| [history-of-history](labs/history-of-history/README.md) | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about.                                      |
-| [exposure-clock](labs/exposure-clock/README.md)         | How long reverted edits stayed live from 2004 to 2026, and what changed with temporary accounts in 2025.                                                            |
-| [paragraph-survival](labs/paragraph-survival/README.md) | An exact wording has a half-life of 238 days; one written by a named account lasts sixteen times longer than an anonymous one.                                      |
-| [bitemporal-offices](labs/bitemporal-offices/README.md) | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times. |
+| Lab                                                           | What it found                                                                                                                                                       |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [temporal-ann](labs/temporal-ann/README.md)                   | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                                                      |
+| [history-of-history](labs/history-of-history/README.md)       | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about.                                      |
+| [exposure-clock](labs/exposure-clock/README.md)               | How long it took to undo an edit from 2004 to 2026, and what changed with temporary accounts in 2025.                                                               |
+| [paragraph-survival](labs/paragraph-survival/README.md)       | An exact wording has a half-life of 238 days; one written by a named account lasts sixteen times longer than an anonymous one.                                      |
+| [bitemporal-offices](labs/bitemporal-offices/README.md)       | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times. |
+| [sentence-journeys](labs/sentence-journeys/README.md)         | Paragraphs that travel: 1,899 stood in more than one article, 85 bulk moves show articles being split, and a copy usually outlives its source.                      |
+| [claims-before-sources](labs/claims-before-sources/README.md) | 191 paragraphs cite a first source published after the claim already stood. A manual audit of the top fifteen found no confirmed circular sourcing.                 |
 
 ## Layout
 

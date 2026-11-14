@@ -6,9 +6,11 @@
   "type": "module",
 
   "scripts": {
+    "bench": "node bench.ts --out ../../apps/web/content/latency.json",
     "embed": "node embed.ts",
     "evaluate": "node evaluate.ts --out ../../apps/web/content/evaluation.json",
-    "load": "node articles.ts && node revisions.ts && node edits.ts && node passages.ts && node terms.ts",
+    "load": "node articles.ts && node revisions.ts && node edits.ts && node passages.ts && node terms.ts && node offices.ts",
+    "test": "vitest --run",
     "typecheck": "tsc",
     "validate": "node validate.ts --out ../../apps/web/content/validation.json"
   },
@@ -24,6 +26,7 @@
 
   "devDependencies": {
     "@types/node": "^24",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5"
   }
 }

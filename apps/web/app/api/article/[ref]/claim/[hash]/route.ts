@@ -1,6 +1,6 @@
 import { readBiography } from "@wtt/package-engine";
 
-import { respond } from "@/lib/respond";
+import { decoded, respond } from "@/lib/respond";
 
 export const GET = (
   _request: Request,
@@ -9,5 +9,5 @@ export const GET = (
   respond(async () => {
     const { ref, hash } = await context.params;
 
-    return readBiography(decodeURIComponent(ref), hash);
+    return readBiography(decoded(ref), hash);
   });

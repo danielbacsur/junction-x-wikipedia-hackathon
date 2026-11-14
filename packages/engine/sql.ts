@@ -40,6 +40,19 @@ const tidy = (sql: string) => {
   return lines.map((line) => line.slice(indent)).join("\n");
 };
 
+/**
+ * A number of rows that is safe to write into a statement: a whole number
+ * from one up to the most a page may ask for, whatever was sent.
+ */
+export const count = (
+  asked: number | undefined,
+  usual: number,
+  most: number,
+) =>
+  Number.isFinite(asked)
+    ? Math.min(Math.max(Math.trunc(asked!), 1), most)
+    : usual;
+
 /** Puts each parameter back where its question mark stands. */
 export const show = (statement: Statement): Shown => {
   let next = 0;

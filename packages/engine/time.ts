@@ -27,9 +27,18 @@ export const moment = (input?: string | null): string | null => {
   const lastDay = new Date(Date.UTC(year, month, 0)).getUTCDate();
   const day = parts[3] ? Number(parts[3]) : lastDay;
 
-  if (month < 1 || month > 12 || day < 1 || day > lastDay) {
-    throw new Error(`"${input}" is not a date`);
-  }
+  // MariaDB's TIMESTAMP starts in 1970, and nothing here is older than 2003.
+  const real =
+    year >= 1970 &&
+    month >= 1 &&
+    month <= 12 &&
+    day >= 1 &&
+    day <= lastDay &&
+    Number(parts[4] ?? 0) <= 23 &&
+    Number(parts[5] ?? 0) <= 59 &&
+    Number(parts[6] ?? 0) <= 59;
+
+  if (!real) throw new Error(`"${input}" is not a date`);
 
   const time = parts[4]
     ? `${pad(Number(parts[4]))}:${parts[5]}:${parts[6] ?? "00"}${parts[7] ?? ""}`

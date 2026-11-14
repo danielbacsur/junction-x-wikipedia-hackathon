@@ -12,7 +12,7 @@ export const respond = async (work: () => Promise<unknown>) => {
       : Response.json(result);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    const bad = /is not a date|has to be in the past/.test(message);
+    const bad = /is not a date|has to be (in|before) the/.test(message);
 
     return Response.json({ error: message }, { status: bad ? 400 : 500 });
   }
@@ -21,3 +21,15 @@ export const respond = async (work: () => Promise<unknown>) => {
 /** A query parameter, or undefined when it is missing or empty. */
 export const param = (request: Request, name: string) =>
   new URL(request.url).searchParams.get(name)?.trim() || undefined;
+
+/**
+ * A route parameter as text. Next has usually decoded it already, and
+ * decoding a title such as "100 %" a second time would throw.
+ */
+export const decoded = (text: string) => {
+  try {
+    return decodeURIComponent(text);
+  } catch {
+    return text;
+  }
+};

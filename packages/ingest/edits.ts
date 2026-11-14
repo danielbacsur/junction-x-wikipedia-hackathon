@@ -21,7 +21,7 @@ const timed = async (label: string, work: Promise<unknown>) => {
 const BLANK_BYTES = 100;
 
 /** A version that stood longer than this was what wikipedia said. */
-const REVERT_WINDOW = "30 DAY";
+const REVERT_DAYS = 30;
 
 const deriveEdits = async () => {
   await db().query("TRUNCATE TABLE edit");
@@ -78,14 +78,20 @@ const deriveEdits = async () => {
   );
 };
 
+const time = (at: string) => Date.parse(`${at.replace(" ", "T")}Z`);
+
 /**
  * Marks the versions a standing revert removed within thirty days.
  *
  * Which reverts stood is decided from the newest backwards: a revert stands
- * unless a later standing revert reaches back past it. A vandal who puts
- * the same text back five times makes five "reverts" to their own earlier
- * vandalism, and each is itself undone by the editor who cleans up, so none
- * of them stands and nothing good between them is marked.
+ * unless a later standing revert reaches back past it within thirty days. A
+ * vandal who puts the same text back five times makes five "reverts" to
+ * their own earlier vandalism, and each is itself undone by the editor who
+ * cleans up, so none of them stands and nothing good between them is marked.
+ *
+ * The thirty days count for the reverts as they do for the versions. A
+ * clean-up that stood for two months is what wikipedia said, and somebody
+ * restoring an older text after that does not make it never have happened.
  */
 const markReverted = async () => {
   const reverts = await db().query<{
@@ -103,19 +109,28 @@ const markReverted = async () => {
   );
 
   const standing: unknown[][] = [];
+  const window = REVERT_DAYS * 86_400_000;
   let page = 0;
-  let reachesBackTo = Infinity;
+  let later: { restores: number; at: number }[] = [];
 
   for (const revert of reverts) {
     if (revert.page_id !== page) {
       page = revert.page_id;
-      reachesBackTo = Infinity;
+      later = [];
     }
 
-    // A later standing revert restored a text older than this one.
-    if (reachesBackTo < revert.seq) continue;
+    const at = time(revert.saved_at);
 
-    reachesBackTo = Math.min(reachesBackTo, revert.restores);
+    // A later standing revert soon restored a text older than this one.
+    if (
+      later.some(
+        (other) => other.restores < revert.seq && other.at - at <= window,
+      )
+    ) {
+      continue;
+    }
+
+    later.push({ restores: revert.restores, at });
     standing.push([
       revert.seq,
       revert.page_id,
@@ -133,7 +148,7 @@ const markReverted = async () => {
     await db().batch(
       `UPDATE edit SET reverted_by = ?
        WHERE page_id = ? AND seq > ? AND seq < ?
-         AND saved_at >= ? - INTERVAL ${REVERT_WINDOW}`,
+         AND saved_at >= ? - INTERVAL ${REVERT_DAYS} DAY`,
       standing.slice(i, i + 2_000),
     );
   }

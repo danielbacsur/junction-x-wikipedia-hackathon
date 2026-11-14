@@ -41,11 +41,18 @@ export const span = (days: number) => {
 
 export const number = (value: number) => value.toLocaleString("en");
 
-/** The page of an article here, as it stood at a date. */
-export const readHref = (title: string, date?: string | null) =>
-  `/read/${encodeURIComponent(title.replaceAll(" ", "_"))}${
-    date ? `?date=${encodeURIComponent(date.slice(0, 10))}` : ""
+/**
+ * The page of an article here, as it stood at a moment. The moment is kept
+ * to the microsecond: two edits can share a second, and a link that only
+ * named the day would open whatever the article said by that evening.
+ */
+export const readHref = (title: string, at?: string | null) => {
+  const date = at?.endsWith(" 23:59:59") ? at.slice(0, 10) : at;
+
+  return `/read/${encodeURIComponent(title.replaceAll(" ", "_"))}${
+    date ? `?date=${encodeURIComponent(date.replace(" ", "T"))}` : ""
   }`;
+};
 
 /** Reads a stream of JSON lines as they arrive. */
 export async function* jsonLines<Event>(

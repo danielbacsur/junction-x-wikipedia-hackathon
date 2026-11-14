@@ -153,15 +153,15 @@ export function Ask() {
               <b className="font-medium text-rubric">
                 {count(thenToday, "reworded")}
               </b>{" "}
-              were reworded and{" "}
+              read differently today and{" "}
               <b className="font-medium text-removed">
                 {count(thenToday, "absent")}
               </b>{" "}
-              are gone. Of today&apos;s,{" "}
+              have no counterpart left. Of today&apos;s,{" "}
               <b className="font-medium text-added">
                 {count(todayThen, "absent")}
               </b>{" "}
-              had not been written yet.
+              had none in {year}.
             </p>
           )}
 

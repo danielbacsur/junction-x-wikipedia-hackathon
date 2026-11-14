@@ -4,6 +4,7 @@
   "private": true,
 
   "scripts": {
+    "bench": "npm run bench -w @wtt/package-ingest",
     "build": "turbo run build",
     "db": "docker compose up --detach --wait",
     "dev": "turbo run dev",

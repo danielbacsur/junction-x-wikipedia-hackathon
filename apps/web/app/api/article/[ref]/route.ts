@@ -1,6 +1,6 @@
 import { readArticle } from "@wtt/package-engine";
 
-import { param, respond } from "@/lib/respond";
+import { decoded, param, respond } from "@/lib/respond";
 
 export const GET = (
   request: Request,
@@ -9,5 +9,5 @@ export const GET = (
   respond(async () => {
     const { ref } = await context.params;
 
-    return readArticle(decodeURIComponent(ref), param(request, "date"));
+    return readArticle(decoded(ref), param(request, "date"));
   });

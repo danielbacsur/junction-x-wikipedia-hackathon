@@ -85,10 +85,44 @@ const days = (from: string, to: string | null) =>
     Date.parse(`${from.replace(" ", "T")}Z`)) /
   86_400_000;
 
+type Stay = { from: string; to: string | null; bornRev: number };
+
+/**
+ * Turns a wording's history rows, oldest first, into the stretches of time
+ * it stood. A row also ends when a block only moves, and a wording that
+ * stands twice in an article has a row for each copy, so rows that touch
+ * or overlap are one stay. Summing the rows instead counted the same days
+ * once for every copy.
+ */
+const stays = (
+  rows: {
+    row_start: string;
+    row_end: string;
+    current: number;
+    born_rev: number;
+  }[],
+): Stay[] => {
+  const found: Stay[] = [];
+
+  for (const row of rows) {
+    const last = found.at(-1);
+    const to = row.current ? null : row.row_end;
+
+    if (!last || (last.to !== null && last.to < row.row_start)) {
+      found.push({ from: row.row_start, to, bornRev: row.born_rev });
+    } else if (last.to !== null && (to === null || to > last.to)) {
+      last.to = to;
+    }
+  }
+
+  return found;
+};
+
 /**
  * The life of one wording in one article. Its history rows in the
- * versioned passage table are its lifetimes: each starts with the edit
- * that wrote it and ends with the edit that changed or removed it.
+ * versioned passage table, joined where they touch, are its lifetimes:
+ * each starts with the edit that wrote it and ends with the edit that
+ * changed or removed it.
  */
 export const readBiography = async (
   reference: string | number,
@@ -121,39 +155,22 @@ export const readBiography = async (
     [key],
   );
 
-  // A row also ends when a block only moves. Rows that touch belong to the
-  // same stay, so they are joined before anything is called a lifetime.
-  const stays: { from: string; to: string | null; bornRev: number }[] = [];
-
-  for (const row of rows) {
-    const last = stays.at(-1);
-
-    if (last && last.to === row.row_start) {
-      last.to = row.current ? null : row.row_end;
-    } else {
-      stays.push({
-        from: row.row_start,
-        to: row.current ? null : row.row_end,
-        bornRev: row.born_rev,
-      });
-    }
-  }
-
-  const ends = stays.flatMap((stay) => (stay.to ? [stay.to] : []));
+  const stood = stays(rows);
+  const ends = stood.flatMap((stay) => (stay.to ? [stay.to] : []));
 
   const edits = await database.query<EditRow>(
     `SELECT rev_id, saved_at, user, editor, comment, reverted_by
      FROM edit
      WHERE page_id = ? AND (
-       rev_id IN (${stays.map(() => "?").join(", ")})
+       rev_id IN (${stood.map(() => "?").join(", ")})
        ${ends.length > 0 ? `OR saved_at IN (${ends.map(() => "?").join(", ")})` : ""})`,
-    [page.pageId, ...stays.map((stay) => stay.bornRev), ...ends],
+    [page.pageId, ...stood.map((stay) => stay.bornRev), ...ends],
   );
 
   const byRev = new Map(edits.map((edit) => [edit.rev_id, edit]));
   const byTime = new Map(edits.map((edit) => [edit.saved_at, edit]));
 
-  const lifetimes = stays.map((stay) => ({
+  const lifetimes = stood.map((stay) => ({
     from: stay.from,
     to: stay.to,
     days: days(stay.from, stay.to),
@@ -337,8 +354,7 @@ export const traceClaim = async (
   const hashes = candidates.map((row) => Buffer.from(row.hash, "hex"));
   const marks = hashes.map(() => "?").join(", ");
 
-  // Every stretch each wording stood in any article, squeezed into one row
-  // per wording and article. LAST_EDIT stands in for "still there".
+  // Where each wording stood, squeezed into one row per wording and article.
   const lives = await database.query<{
     hash: string;
     page_id: number;
@@ -346,55 +362,49 @@ export const traceClaim = async (
     first_seen: string;
     last_seen: string;
     alive: number;
-    seconds: number;
-    stays: number;
     first_rev: number;
     slot: number;
   }>(
     `SELECT HEX(p.hash) AS hash, p.page_id, r.title,
             MIN(p.row_start) AS first_seen, MAX(p.row_end) AS last_seen,
             MAX(p.row_end) > NOW() AS alive,
-            SUM(TIMESTAMPDIFF(SECOND, p.row_start,
-                              LEAST(p.row_end, TIMESTAMP ?))) AS seconds,
-            COUNT(DISTINCT p.born_rev) AS stays,
             MIN(p.born_rev) AS first_rev, MAX(p.slot) AS slot
      FROM passage FOR SYSTEM_TIME ALL AS p
      JOIN revision AS r ON r.page_id = p.page_id
      WHERE p.hash IN (${marks})
      GROUP BY p.hash, p.page_id`,
-    [LAST_EDIT, ...hashes],
+    hashes,
   );
 
-  // The same rows one by one, to draw each stretch. A row also ends when
-  // a block only moves, so rows that touch are one stretch.
+  // The same rows one by one. The stretches a wording stood, and how long
+  // it stood in all, are worked out from these and not summed in SQL.
   const rows = await database.query<{
     hash: string;
     page_id: number;
     row_start: string;
     row_end: string;
     current: number;
+    born_rev: number;
   }>(
     `SELECT HEX(hash) AS hash, page_id, row_start, row_end,
-            row_end > NOW() AS current
+            row_end > NOW() AS current, born_rev
      FROM passage FOR SYSTEM_TIME ALL
      WHERE hash IN (${marks})
      ORDER BY hash, page_id, row_start`,
     hashes,
   );
 
-  const stretches = new Map<string, { from: string; to: string | null }[]>();
+  const histories = new Map<string, typeof rows>();
 
   for (const row of rows) {
     const key = `${row.hash}:${row.page_id}`;
-    const list = stretches.get(key) ?? [];
-    const last = list.at(-1);
-    const to = row.current ? null : row.row_end;
 
-    if (last && last.to === row.row_start) last.to = to;
-    else list.push({ from: row.row_start, to });
-
-    stretches.set(key, list);
+    histories.set(key, [...(histories.get(key) ?? []), row]);
   }
+
+  const stretches = new Map(
+    [...histories].map(([key, history]) => [key, stays(history)]),
+  );
 
   const writers = await database.query<EditRow>(
     `SELECT rev_id, saved_at, user, editor, comment, reverted_by
@@ -408,6 +418,7 @@ export const traceClaim = async (
   const traces = lives
     .map((life): Trace => {
       const candidate = found.get(life.hash)!;
+      const stood = stretches.get(`${life.hash}:${life.page_id}`) ?? [];
 
       return {
         hash: life.hash,
@@ -420,10 +431,9 @@ export const traceClaim = async (
         firstSeen: life.first_seen,
         lastSeen: life.alive ? null : life.last_seen,
         alive: life.alive === 1,
-        days: Number(life.seconds) / 86_400,
-        stays:
-          stretches.get(`${life.hash}:${life.page_id}`)?.length ?? life.stays,
-        lifetimes: stretches.get(`${life.hash}:${life.page_id}`) ?? [],
+        days: stood.reduce((sum, stay) => sum + days(stay.from, stay.to), 0),
+        stays: stood.length,
+        lifetimes: stood.map(({ from, to }) => ({ from, to })),
         writtenBy: editRef(byRev.get(life.first_rev)!),
         slot: life.slot,
       };

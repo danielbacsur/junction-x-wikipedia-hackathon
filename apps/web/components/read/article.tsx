@@ -11,7 +11,7 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 import { SqlDrawer } from "@/components/sql-drawer";
 import { LAST_YEAR, LATEST, day, minute, number } from "@/lib/format";
@@ -28,6 +28,23 @@ const stamp = (at: string) => at.replace(" ", "T");
 const yearsBefore = (date: string, years: number) =>
   `${Number(date.slice(0, 4)) - years}${date.slice(4, 10)}`;
 
+const onAnchor = (notify: () => void) => {
+  window.addEventListener("hashchange", notify);
+
+  return () => window.removeEventListener("hashchange", notify);
+};
+
+/** The paragraph an address points at with "#p-…", by its hash. */
+const useAnchor = () => {
+  const anchor = useSyncExternalStore(
+    onAnchor,
+    () => window.location.hash,
+    () => "",
+  );
+
+  return anchor.startsWith("#p-") ? anchor.slice(3) : null;
+};
+
 /**
  * One article through time. The date in the address decides which version
  * is on screen, a second date turns on the comparison, and a paragraph's
@@ -39,10 +56,18 @@ export function Article() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const name = decodeURIComponent(title).replaceAll("_", " ");
+  // A title such as "100 %" is not valid to decode twice.
+  let name = title;
+
+  try {
+    name = decodeURIComponent(title);
+  } catch {}
+
+  name = name.replaceAll("_", " ");
   const date = params.get("date");
   const from = params.get("from");
   const claim = params.get("claim");
+  const anchor = useAnchor();
 
   const base = `/api/article/${encodeURIComponent(name)}`;
   const article = useJson<ArticleView>(`${base}${date ? `?date=${date}` : ""}`);
@@ -95,14 +120,17 @@ export function Article() {
   const at = view?.at ?? null;
   const ready = view?.revId;
 
-  // A link to a paragraph's life should land on the paragraph.
+  // A link to a paragraph should land on it. The paragraphs arrive after
+  // the page does, so the browser cannot do this from the address alone.
+  const marked = claim ?? anchor;
+
   useEffect(() => {
-    if (claim && ready) {
+    if (marked && ready) {
       document
-        .getElementById(`p-${claim}`)
+        .getElementById(`p-${marked}`)
         ?.scrollIntoView({ block: "center", behavior: "smooth" });
     }
-  }, [claim, ready]);
+  }, [marked, ready]);
   const shown = (at ?? LATEST).slice(0, 10);
 
   return (
@@ -243,8 +271,9 @@ export function Article() {
           <button
             key={years}
             type="button"
+            disabled={article.loading}
             onClick={() => go({ from: yearsBefore(shown, years) })}
-            className={`rounded border px-3 py-1.5 ${
+            className={`rounded border px-3 py-1.5 disabled:opacity-40 ${
               from === yearsBefore(shown, years)
                 ? "border-rubric text-rubric"
                 : "border-rule text-ink-soft hover:text-ink"
@@ -326,7 +355,7 @@ export function Article() {
 
                 <Reader
                   article={view}
-                  selected={claim}
+                  selected={marked}
                   fresh={fresh}
                   onSelect={(hash) => go({ claim: hash })}
                 />

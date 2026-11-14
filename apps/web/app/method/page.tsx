@@ -44,12 +44,12 @@ JOIN passage  FOR SYSTEM_TIME AS OF TIMESTAMP '2007-12-31 23:59:59' AS p USING (
 JOIN revision FOR SYSTEM_TIME AS OF TIMESTAMP '2007-12-31 23:59:59' AS r ON r.page_id = p.page_id
 JOIN passage_text AS t USING (hash)
 JOIN edit AS b ON b.rev_id = p.born_rev
-WHERE b.undone_by IS NULL
+WHERE b.reverted_by IS NULL
 ORDER BY score DESC LIMIT 8;`;
 
 const LIFE = `SELECT row_start, row_end, born_rev
 FROM passage FOR SYSTEM_TIME ALL
-WHERE page_id = 1256 AND hash = x'5a0c1f6e2b7d9340'
+WHERE page_id = 1256 AND hash = x'af55da97074908b8'
 ORDER BY row_start;`;
 
 const FINDINGS = [
@@ -155,9 +155,10 @@ export default function Method() {
           Everything here is one MariaDB 12.3 database on a laptop. Every saved
           version of every article is cut into blocks, and each block is a row
           in a system-versioned table: inserted by the edit that wrote its
-          wording, ended by the edit that changed or removed it. Its history
-          rows are its lifetimes. Vectors and full-text search find the
-          wordings, and the versioned table says when each one was true.
+          wording, ended by the edit that changed, moved or removed it. Its
+          history rows, joined where they touch, are its lifetimes. Vectors and
+          full-text search find the wordings, and the versioned table says when
+          each one was true.
         </p>
       </section>
 
@@ -225,12 +226,12 @@ export default function Method() {
           />
           <Statement
             title="What Wikipedia said about a question on a day"
-            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and drops anything that arrived through an edit later reverted."
+            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and drops anything that arrived through an edit that was reverted within thirty days by a revert that itself stood."
             sql={SEARCH}
           />
           <Statement
             title="The life of one paragraph"
-            about="Every stretch of time one exact wording stood in the article, and the edit that wrote it each time."
+            about="Every row one paragraph of Talvisota about Estonia has had: it was written in 2006 and came back four times before 2009. A row also ends when a paragraph only moves, so rows that touch are read as one stay."
             sql={LIFE}
           />
         </div>

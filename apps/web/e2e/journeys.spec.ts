@@ -144,6 +144,10 @@ test("a bad date and an unknown article are refused, not guessed", async ({
 
   const unknown = await request.get("/api/article/No_such_article_anywhere");
   expect(unknown.status()).toBe(404);
+
+  // A percent sign in a title is a title, not a broken escape.
+  const percent = await request.get("/api/article/100%25");
+  expect(percent.status()).toBe(404);
 });
 
 test("another agent can ask what wikipedia said through mcp", async ({

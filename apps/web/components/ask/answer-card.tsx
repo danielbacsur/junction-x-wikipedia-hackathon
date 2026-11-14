@@ -55,7 +55,9 @@ function Fate({ standing, other }: { standing: Standing; other: Other }) {
           : "bg-added-wash text-added"
       }`}
     >
-      {other.later ? `gone ${other.label}` : `not yet written ${other.label}`}
+      {other.later
+        ? `this wording is gone ${other.label}`
+        : `this wording not yet written ${other.label}`}
     </span>
   );
 }
@@ -132,6 +134,11 @@ function SourceCard({
         <p className="mt-3 border-l-2 border-rubric pl-3 font-serif text-[14px] leading-relaxed text-ink-soft">
           <span className="mb-1 block font-sans text-[10px] tracking-wide text-ink-faint uppercase">
             {other.later ? "what changed since" : "what changed to get here"}
+            <span className="ml-2 normal-case tracking-normal">
+              {standing.via === "meaning"
+                ? `our reading: the same paragraph, matched by meaning at distance ${standing.distance?.toFixed(2)}`
+                : "our reading: the same paragraph, followed through the edits"}
+            </span>
           </span>
           {inTime(standing.words, other.later).map((word, index) =>
             word.added ? (

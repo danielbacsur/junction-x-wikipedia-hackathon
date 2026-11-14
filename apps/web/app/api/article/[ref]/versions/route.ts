@@ -1,6 +1,6 @@
 import { listVersions } from "@wtt/package-engine";
 
-import { param, respond } from "@/lib/respond";
+import { decoded, param, respond } from "@/lib/respond";
 
 export const GET = (
   request: Request,
@@ -9,7 +9,7 @@ export const GET = (
   respond(async () => {
     const { ref } = await context.params;
 
-    return listVersions(decodeURIComponent(ref), {
+    return listVersions(decoded(ref), {
       before: param(request, "before"),
       limit: Number(param(request, "limit") ?? 30),
     });

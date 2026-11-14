@@ -63,15 +63,64 @@ export type Sentence = {
   text: string;
   cites: number[];
 
-  /** It cites passages that were given, and its numbers are in them. */
+  /**
+   * It cites passages that were given, and its numbers are in them. This
+   * checks citations and figures. It does not check that the passage means
+   * what the sentence says.
+   */
   supported: boolean;
 
   /** Numbers in the sentence that none of its cited passages contain. */
   missing: string[];
 };
 
-/** The digits of a text, so "26 662", "26,662" and "26.662" are one number. */
-const digits = (text: string) => text.replace(/\D/g, "");
+type Figure = {
+  /** The number as it was written. */
+  written: string;
+
+  /** Every value it can be read as, with thousands joined and "." for decimals. */
+  readings: string[];
+
+  /** The runs of digits a date or a decimal is made of. */
+  parts: string[];
+};
+
+/**
+ * The numbers in a text, one at a time. "26 662", "26,662" and "26.662"
+ * are all 26662, "2,5" is 2.5, and a number written like "5.619" is kept
+ * as both because the two languages disagree about it. Two numbers that
+ * only stand next to each other, as in "1956–1982" or "27, 1982", stay
+ * two numbers: running all the digits of a passage together let "5619"
+ * pass as a number found in "1956–1982".
+ */
+const figures = (text: string): Figure[] =>
+  [
+    ...text
+      // A date such as "13.3.1940" is a day, a month and a year.
+      .replace(/(?<![\d.])(\d{1,2})\.(\d{1,2})\.(\d{4})(?!\d)/g, "$1 / $2 / $3")
+      .matchAll(
+        /(?<!\d)(?:(\d{1,3}(?:[ \u00a0\u202f.,]\d{3}(?!\d))+)|(\d+)(?:[.,](\d+))?)/g,
+      ),
+  ].map(([written, grouped, whole, fraction]) => {
+    if (grouped) {
+      const groups = grouped.split(/\D/);
+      const decimal = groups.length === 2 && /[.,]/.test(grouped);
+
+      return {
+        written,
+        readings: [groups.join(""), ...(decimal ? [groups.join(".")] : [])],
+        parts: [],
+      };
+    }
+
+    return fraction
+      ? {
+          written,
+          readings: [`${whole}.${fraction}`],
+          parts: [whole, fraction],
+        }
+      : { written, readings: [whole], parts: [] };
+  });
 
 /**
  * Where an answer's sentences end. A full stop ends a sentence only when a
@@ -114,14 +163,23 @@ export const checkAnswer = (answer: string, sources: string[]): Sentence[] =>
         cites.length > 0 &&
         cites.every((cite) => cite >= 1 && cite <= sources.length);
 
-      const cited = valid ? cites.map((cite) => digits(sources[cite - 1])) : [];
+      const cited = new Set(
+        valid
+          ? cites
+              .flatMap((cite) => figures(sources[cite - 1]))
+              .flatMap((figure) => [...figure.readings, ...figure.parts])
+          : [],
+      );
 
       // Single digits are left alone: "one of the two" is not a figure.
       const missing = valid
-        ? (text.match(/\d[\d\s.,\u00a0\u202f]*\d/g) ?? []).filter(
-            (number) =>
-              !cited.some((passage) => passage.includes(digits(number))),
-          )
+        ? figures(text)
+            .filter((figure) => figure.written.replace(/\D/g, "").length > 1)
+            .filter(
+              (figure) =>
+                !figure.readings.some((reading) => cited.has(reading)),
+            )
+            .map((figure) => figure.written)
         : [];
 
       return { text, cites, supported: valid && missing.length === 0, missing };
