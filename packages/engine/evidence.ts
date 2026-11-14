@@ -31,7 +31,17 @@ export type Evidence = {
 
   /** The articles the question was routed to. */
   articles: { pageId: number; title: string; revId: number }[];
+
+  /** Empty when even the nearest passage is too far to be about the question. */
   sources: Source[];
+
+  /**
+   * Cosine distance from the question to the nearest passage found, and
+   * the distance beyond which we take it to be about something else. Both
+   * are our reading, not evidence.
+   */
+  nearest: number | null;
+  tooFar: number;
 
   /** Passages embedded on the spot because the background job had not reached them. */
   embeddedNow: number;
@@ -44,6 +54,16 @@ const SOURCES = 8;
 
 /** How much an article matching the question counts for its passages. */
 const ARTICLE_WEIGHT = 1;
+
+/**
+ * When even the nearest passage is farther than this, nothing that stood
+ * that day is about the question. Questions about the history of Finland
+ * in three languages had their nearest passage between 0.31 and 0.50, and
+ * questions about pizza and routers between 0.54 and 0.57. Search always
+ * returns its nearest eight, so without this a model was handed eight
+ * passages about something else and asked to answer from them.
+ */
+const TOO_FAR = 0.53;
 
 /**
  * Finds the Finnish articles a question is about, among those that existed
@@ -202,12 +222,19 @@ export const gatherEvidence = async (
       bornUrl: `https://fi.wikipedia.org/?oldid=${hit.bornRev}`,
     }));
 
+  const distances = sources.flatMap((source) =>
+    source.distance === null ? [] : [source.distance],
+  );
+  const nearest = distances.length > 0 ? Math.min(...distances) : null;
+
   return {
     question,
     at,
     terms,
     articles,
-    sources,
+    sources: nearest !== null && nearest > TOO_FAR ? [] : sources,
+    nearest,
+    tooFar: TOO_FAR,
     embeddedNow,
     sql: database.statements.map(show),
   };

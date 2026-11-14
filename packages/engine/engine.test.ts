@@ -300,6 +300,28 @@ describe.runIf(reachable)("against the loaded database", () => {
     expect(life!.alive).toBe(tracing.traces[0].alive);
   });
 
+  it("tells the earliest wording apart from the first with the claim's number", async () => {
+    const tracing = await traceClaim(
+      "Talvisodassa kuoli 26 662 suomalaista sotilasta",
+    );
+
+    expect(tracing.figures).toEqual(["26 662"]);
+
+    // The paragraph is older than the number: it said 22 800 at first.
+    expect(tracing.earliest!.saysFigures).toBe(false);
+    expect(tracing.earliestSaying!.text).toMatch(/26 ?662/);
+    expect(tracing.earliestSaying!.firstSeen.slice(0, 10)).toBe("2009-08-22");
+    expect(
+      tracing.earliest!.firstSeen < tracing.earliestSaying!.firstSeen,
+    ).toBe(true);
+
+    // No article lists the same words twice.
+    const listed = tracing.traces.map(
+      (trace) => `${trace.pageId} ${trace.text}`,
+    );
+    expect(new Set(listed).size).toBe(listed.length);
+  });
+
   it("counts the days of a wording once when it stands twice in an article", async () => {
     // "(lisää)" stood in Talvisota in up to five places at once. Its 26
     // history rows cover 721.9 days, not the 2,887.6 they add up to.

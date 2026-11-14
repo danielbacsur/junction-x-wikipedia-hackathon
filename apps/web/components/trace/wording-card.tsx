@@ -21,8 +21,8 @@ const times = (count: number) =>
 const LONG = 520;
 
 /**
- * One exact wording in one article: what it said, when it stood and who
- * wrote it. Pointing at the card lights its line in the chart above.
+ * One wording in one article: what it said, when it stood and who wrote
+ * it. Pointing at the card lights its line in the chart above.
  */
 export function WordingCard({
   placed,
@@ -82,6 +82,30 @@ export function WordingCard({
             className={`${CHIP} bg-paper-sunk text-ink-faint`}
           >
             came back {times(trace.stays - 1)}
+          </span>
+        )}
+        {trace.saysFigures !== null && (
+          <span
+            title={
+              trace.saysFigures
+                ? "Every number of your claim is written in this wording."
+                : "A number of your claim is not written in this wording."
+            }
+            className={`${CHIP} ${
+              trace.saysFigures
+                ? "bg-paper-sunk font-medium text-gold"
+                : "bg-paper-sunk text-ink-faint"
+            }`}
+          >
+            {trace.saysFigures ? "your number" : "another number"}
+          </span>
+        )}
+        {trace.variants > 1 && (
+          <span
+            title="Their footnotes, links or markup differ, but a reader saw the same words, so they are shown as one and their time is joined."
+            className={`${CHIP} bg-paper-sunk text-ink-faint`}
+          >
+            {trace.variants} wikitexts, same words
           </span>
         )}
         {trace.distance !== null && (

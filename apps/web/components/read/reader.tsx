@@ -7,12 +7,13 @@ import { LATEST, day, span } from "@/lib/format";
 
 const READABLE = new Set(["prose", "list", "heading"]);
 
-const MARKUP: Record<string, string> = {
-  template: "template",
-  table: "table",
-  file: "image",
-  meta: "category",
-  markup: "markup",
+/** What a block that is not shown is called, one of it and several. */
+const MARKUP: Record<string, [string, string]> = {
+  template: ["template", "templates"],
+  table: ["table", "tables"],
+  file: ["image", "images"],
+  meta: ["category", "categories"],
+  markup: ["piece of markup", "pieces of markup"],
 };
 
 const daysBetween = (from: string, to: string) =>
@@ -72,6 +73,7 @@ export function Reader({
   article,
   selected,
   fresh,
+  noted,
   onSelect,
 }: {
   article: ArticleView;
@@ -81,6 +83,9 @@ export function Reader({
 
   /** Paragraphs written after this moment are shown as newly arrived. */
   fresh: string | null;
+
+  /** Whether there is room in the margin for the note on who wrote it. */
+  noted: boolean;
   onSelect: (hash: string) => void;
 }) {
   const at = article.at ?? LATEST;
@@ -92,8 +97,7 @@ export function Reader({
           const kinds = new Map<string, number>();
 
           for (const block of group.markup) {
-            const name = MARKUP[block.kind] ?? block.kind;
-            kinds.set(name, (kinds.get(name) ?? 0) + 1);
+            kinds.set(block.kind, (kinds.get(block.kind) ?? 0) + 1);
           }
 
           return (
@@ -102,10 +106,13 @@ export function Reader({
               className="my-2 font-mono text-[11px] text-ink-faint select-none"
             >
               {[...kinds]
-                .map(([name, count]) =>
-                  count > 1 ? `${count} ${name} blocks` : name,
-                )
-                .join(" · ")}
+                .map(([kind, count]) => {
+                  const [one, many] = MARKUP[kind] ?? [kind, kind];
+
+                  return count > 1 ? `${count} ${many}` : `1 ${one}`;
+                })
+                .join(", ")}
+              , not shown
             </p>
           );
         }
@@ -158,17 +165,17 @@ export function Reader({
               <Inline nodes={block.nodes} date={article.at} />
               {block.kind === "prose" && block.references === 0 && (
                 <sup
-                  title="This paragraph carries no reference."
+                  title="This paragraph carries no reference of its own. An opening paragraph often has none by convention."
                   className="ml-1 font-sans text-[10px] text-ink-faint"
                 >
-                  unsourced
+                  no footnote
                 </sup>
               )}{" "}
               <button
                 type="button"
                 onClick={() => onSelect(block.hash)}
                 aria-label="Life of this paragraph"
-                className="font-sans text-xs text-ink-faint opacity-0 group-hover:opacity-100 hover:text-rubric focus:opacity-100 xl:hidden"
+                className={`font-sans text-xs text-ink-faint group-hover:opacity-100 hover:text-rubric focus:opacity-100 [@media(hover:hover)]:opacity-0 ${noted ? "xl:hidden" : ""}`}
               >
                 ¶ life
               </button>
@@ -179,7 +186,9 @@ export function Reader({
             <button
               type="button"
               onClick={() => onSelect(block.hash)}
-              className={`absolute top-1.5 left-full ml-5 hidden w-44 text-left font-sans text-[11px] leading-snug text-ink-faint hover:text-rubric xl:block ${
+              className={`absolute top-1.5 left-full ml-5 hidden w-44 text-left font-sans text-[11px] leading-snug wrap-anywhere text-ink-faint hover:text-rubric ${
+                noted ? "xl:block" : ""
+              } ${
                 open
                   ? ""
                   : "opacity-0 group-hover:opacity-100 focus:opacity-100"

@@ -10,6 +10,7 @@ import { Reply } from "./reply";
 const EXAMPLES = [
   "What did Wikipedia say about Finnish losses in the Winter War in 2007, and what does it say now?",
   "When did the article Talvisota first say that Finland lost about 26 600 men?",
+  "Who was president of Finland on 1 March 1925, according to Wikipedia at the end of 2012?",
   "Mitä Wikipedia kertoi talvisodan tappioista vuonna 2007?",
   "Show the editing timeline of Suomen sisällissota.",
 ];
@@ -58,17 +59,40 @@ function ToolPanel({
     "matches",
     "lifetimes",
   ].find((k) => Array.isArray(result[k]));
+  // The two tools that answer in one call say what they found, so the
+  // evidence can be compared with the reply without opening anything.
+  const snapshot = (side: unknown) => {
+    const { asOf, wikipediaAsOf, passages, holders } = record(side);
+    const [passage] = Array.isArray(passages) ? passages.map(record) : [];
+    const names = Array.isArray(holders)
+      ? holders.map((holder) => String(record(holder).holder)).join(", ")
+      : null;
+
+    return passage
+      ? `${String(asOf)} · ${String(passage.article)}: ${String(passage.text).slice(0, 170)}…`
+      : names !== null
+        ? `Wikipedia as of ${String(wikipediaAsOf)}: ${names || "no article claims that day"}`
+        : null;
+  };
+  const sides = [
+    snapshot(result.then),
+    snapshot(result.onTheDateAsked),
+    snapshot(result.now),
+  ].filter((line): line is string => line !== null);
+
   const summary = result.error
     ? String(result.error)
-    : collection
-      ? `${(result[collection] as unknown[]).length} ${collection} returned${result.article ? ` · ${result.article}` : ""}${result.asOf ? ` · ${result.asOf}` : ""}`
-      : result.edits !== undefined
-        ? `${result.edits} edits · ${result.reverts} reverts · ${result.firstEdit} – ${result.lastEdit}`
-        : state === "completed"
-          ? "Lookup complete"
-          : state === "failed"
-            ? `Lookup failed: ${String(error ?? "please retry")}`
-            : "Reading the archive…";
+    : sides.length > 0
+      ? sides.join("\n")
+      : collection
+        ? `${(result[collection] as unknown[]).length} ${collection} returned${result.article ? ` · ${result.article}` : ""}${result.asOf ? ` · ${result.asOf}` : ""}`
+        : result.edits !== undefined
+          ? `${result.edits} edits · ${result.reverts} reverts · ${result.firstEdit} – ${result.lastEdit}`
+          : state === "completed"
+            ? "Lookup complete"
+            : state === "failed"
+              ? `Lookup failed: ${String(error ?? "please retry")}`
+              : "Looking it up…";
   const { sql: omitted, ...evidence } = result;
   void omitted;
   return (
@@ -87,7 +111,7 @@ function ToolPanel({
             .join(" · ")}
         />
       </p>
-      <p className="mt-2 text-sm text-ink-soft">
+      <p className="mt-2 text-sm whitespace-pre-line text-ink-soft">
         <Dates text={summary} />
       </p>
       {output !== undefined && (
@@ -165,11 +189,12 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
           Palimpsest / The historian
         </p>
         <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-          A conversation with the archive.
+          Ask the historian agent.
         </h1>
         <p className="mt-4 text-ink-soft">
           Ask what Finnish Wikipedia said, when a claim appeared, or how an
-          article changed. Follow the evidence and the SQL behind each lookup.
+          article changed. A local model picks the lookups, and each one shows
+          what MariaDB returned and the SQL it ran.
         </p>
         <p className="mt-4 text-xs text-ink-faint">AI historian · {model}</p>
         <p className="mt-1 text-xs text-ink-faint">
@@ -179,7 +204,7 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
         {agent.messages.length === 0 && (
           <div className="my-10">
             <p className="mb-3 text-xs tracking-wide text-ink-faint uppercase">
-              Open a line of inquiry
+              Try
             </p>
             <ul className="space-y-3">
               {EXAMPLES.map((q) => (
@@ -223,6 +248,15 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
                   />
                 ) : null,
               )}
+              {message.role !== "user" &&
+                !busy &&
+                message.parts.some((part) => part.type === "text") && (
+                  <p className="mt-3 text-xs text-ink-faint">
+                    Written by the model from the lookups above. Its wording is
+                    not checked against them, so open the evidence before
+                    trusting a number.
+                  </p>
+                )}
             </article>
           ))}
         </div>
@@ -230,7 +264,7 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
           <p role="status" className="writing mt-6 text-sm text-ink-soft">
             {agent.status === "resuming"
               ? "Reopening the conversation…"
-              : "The historian is consulting the archive. Local replies can take a little time…"}
+              : "Looking it up. The local model takes a few seconds."}
           </p>
         )}
         {(sendError || agent.error) && (
@@ -257,6 +291,17 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
             id="historian-question"
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              // Enter sends, and Shift with Enter starts a new line.
+              if (
+                e.key === "Enter" &&
+                !e.shiftKey &&
+                !e.nativeEvent.isComposing
+              ) {
+                e.preventDefault();
+                if (draft.trim()) void send(draft);
+              }
+            }}
             rows={3}
             disabled={busy}
             placeholder="What did Wikipedia say about…"

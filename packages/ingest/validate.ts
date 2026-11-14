@@ -114,7 +114,7 @@ await check("every row of the datasets is in the database", async () => {
   };
 });
 
-await check("stored versions carry the text wikipedia hashed", async () => {
+await check("stored versions carry the text Wikipedia hashed", async () => {
   const sample = await db().query<{
     page_id: number;
     saved_at: string;
@@ -143,7 +143,7 @@ await check("stored versions carry the text wikipedia hashed", async () => {
 
   return {
     ok: wrong === 0,
-    detail: `${match} of ${sample.length} match wikipedia's sha1, ${legacy} are pre-2006 versions hashed before utf-8, ${wrong} are wrong`,
+    detail: `${match} of ${sample.length} match Wikipedia's sha1, ${legacy} ${legacy === 1 ? "is a pre-2006 version" : "are pre-2006 versions"} hashed before UTF-8, ${wrong} ${wrong === 1 ? "is" : "are"} wrong`,
     numbers: { sampled: sample.length, match, legacy, wrong },
   };
 });
@@ -222,8 +222,8 @@ await check("every version rebuilds from its passages", async () => {
     ok: result.different.length === 0,
     detail:
       `${result.checked - result.different.length} of ${result.checked} versions rebuilt byte for byte ` +
-      `inside MariaDB, ${result.matchWikipedia} match wikipedia's own sha1, ` +
-      `${result.legacy} were hashed before utf-8`,
+      `inside MariaDB, ${result.matchWikipedia} match Wikipedia's own sha1, ` +
+      `${result.legacy} were hashed before UTF-8`,
     numbers: {
       checked: result.checked,
       different: result.different.length,
@@ -333,6 +333,43 @@ await check("every cited passage stood in the cited version", async () => {
     numbers: { questions: asked.length, sources, wrong },
   };
 });
+
+await check(
+  "every stated term of office is in the version cited for it",
+  async () => {
+    // The office table is read from infoboxes by a parser. Each row names the
+    // version that first stated the term, so that version has to hold the
+    // field as written, be saved at the moment the row starts, and not be one
+    // a revert took back.
+    const terms = await one<Record<string, number>>(
+      `SELECT COUNT(*) AS terms,
+            SUM(INSTR(r.text, o.source_text) > 0) AS written,
+            SUM(e.saved_at = o.row_start) AS timed,
+            SUM(e.reverted_by IS NULL) AS accepted
+     FROM office_term FOR SYSTEM_TIME ALL AS o
+     JOIN edit AS e ON e.rev_id = o.rev_id
+     JOIN revision FOR SYSTEM_TIME ALL AS r ON r.rev_id = o.rev_id`,
+    );
+
+    const all = Number(terms.terms);
+    const right = (count: number) => Number(count) === all;
+
+    return {
+      ok:
+        all > 0 &&
+        right(terms.written) &&
+        right(terms.timed) &&
+        right(terms.accepted),
+      detail: `${terms.written} of ${all} stated terms are written in the version cited, ${terms.timed} start at the moment it was saved`,
+      numbers: {
+        terms: all,
+        written: Number(terms.written),
+        timed: Number(terms.timed),
+        accepted: Number(terms.accepted),
+      },
+    };
+  },
+);
 
 const sizes = await db().query<{ name: string; rows: number; mb: number }>(
   `SELECT table_name AS name, table_rows AS \`rows\`,

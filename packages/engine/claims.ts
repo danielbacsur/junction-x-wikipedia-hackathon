@@ -2,10 +2,11 @@ import { db, toVector } from "@wtt/package-db";
 import { embedOne } from "@wtt/package-models";
 import { diffWords } from "diff";
 
+import { figures } from "./answer.ts";
 import { resolvePage } from "./articles.ts";
 import { type Terms, pickTerms, stemQuery } from "./keywords.ts";
 import { KEYWORD_WEIGHT } from "./passages.ts";
-import { type Shown, show } from "./sql.ts";
+import { type Shown, count, show } from "./sql.ts";
 import { LAST_EDIT } from "./time.ts";
 
 type EditRef = {
@@ -259,14 +260,37 @@ export type Trace = {
   lifetimes: { from: string; to: string | null }[];
   writtenBy: EditRef;
   slot: number;
+
+  /**
+   * How many wikitexts read as this same text. A changed footnote or link
+   * makes a new wikitext, but a reader saw the same words, so they are one
+   * entry here and their stretches are joined.
+   */
+  variants: number;
+
+  /** Whether it holds every number of the claim. Null when the claim has none. */
+  saysFigures: boolean | null;
 };
 
 /**
- * A wording farther than this from the claim is about something else.
+ * A wording farther than this from the claim is about something else. A
+ * claim in English sits about 0.1 farther from a Finnish paragraph than
+ * the same claim in Finnish does, which is why this is not tighter.
  * Keyword matches only raise the rank of wordings that are close in
  * meaning: on their own they found paragraphs that merely share a number.
  */
-const FARTHEST = 0.45;
+const FARTHEST = 0.5;
+
+/** How many of the index's nearest wordings are looked at. */
+const NEAREST = 300;
+
+/**
+ * "Earliest" is chosen among wordings no farther than this beyond the
+ * closest one. Without it the earliest was often a paragraph on another
+ * subject that happened to be old: for Finnish losses in the Winter War, a
+ * sentence about the dead of the civil war.
+ */
+const NEAR = 0.1;
 
 export type Tracing = {
   claim: string;
@@ -274,16 +298,26 @@ export type Tracing = {
 
   /**
    * Passages that say something like the claim, across all of history.
-   * Each is one exact wording in one article with the dates it stood.
+   * Each is one text in one article with the dates it stood.
    */
   traces: Trace[];
 
-  /** The earliest moment any of them appeared. */
+  /**
+   * The earliest of the wordings about as close as the closest one: our
+   * reading of where the claim begins, not proof nothing stood before it.
+   */
   earliest: Trace | null;
+
+  /** The numbers in the claim, and the earliest such wording that holds them all. */
+  figures: string[];
+  earliestSaying: Trace | null;
 
   /** At most this many wordings are returned, none farther than this. */
   limit: number;
   farthest: number;
+
+  /** How far beyond the closest wording "earliest" may be. */
+  near: number;
   sql: Shown[];
 };
 
@@ -292,6 +326,10 @@ export type Tracing = {
  * claim says anywhere in history, living or long removed, and reads their
  * lifetimes from the versioned table. Nothing here is pinned to a date:
  * the point is to see all of time at once.
+ *
+ * Only wordings that have a vector can be found, and the index names its
+ * nearest 300, so the earliest wording returned is the earliest found and
+ * not proof that nothing stood before it.
  */
 export const traceClaim = async (
   claim: string,
@@ -301,12 +339,29 @@ export const traceClaim = async (
   const terms = await pickTerms(database, claim);
   const vector = toVector(await embedOne(claim));
   const match = stemQuery(terms);
-  const limit = options.limit ?? 12;
+  const limit = count(options.limit, 24, 60);
+
+  // A number of one digit is left alone, as it is when an answer is checked.
+  const asked = figures(claim).filter(
+    (figure) => figure.written.replace(/\D/g, "").length > 1,
+  );
+
+  const nothing = {
+    claim,
+    terms,
+    traces: [],
+    earliest: null,
+    figures: asked.map((figure) => figure.written),
+    earliestSaying: null,
+    limit,
+    farthest: FARTHEST,
+    near: NEAR,
+  };
 
   const candidates = await database.query<{
     hash: string;
     text: string;
-    distance: number | null;
+    distance: number;
     score: number;
   }>(
     `WITH v AS (
@@ -314,7 +369,7 @@ export const traceClaim = async (
        FROM (SELECT hash, VEC_DISTANCE_COSINE(embedding, ?) AS distance
              FROM passage_vector
              ORDER BY distance
-             LIMIT 80) AS nearest)
+             LIMIT ${NEAREST}) AS nearest)
      ${
        match
          ? `, k AS (
@@ -323,7 +378,7 @@ export const traceClaim = async (
              FROM passage_text
              WHERE MATCH(stems) AGAINST (? IN BOOLEAN MODE)
              ORDER BY relevance DESC
-             LIMIT 80) AS matched)`
+             LIMIT ${NEAREST}) AS matched)`
          : ""
      }
      SELECT HEX(found.hash) AS hash, t.text, v.distance,
@@ -335,125 +390,120 @@ export const traceClaim = async (
      JOIN passage_text AS t USING (hash)
      WHERE v.distance <= ${FARTHEST}
      ORDER BY score DESC
-     LIMIT ${limit * 2}`,
+     LIMIT ${limit * 4}`,
     match ? [vector, match, match] : [vector],
   );
 
   if (candidates.length === 0) {
-    return {
-      claim,
-      terms,
-      traces: [],
-      earliest: null,
-      limit,
-      farthest: FARTHEST,
-      sql: database.statements.map(show),
-    };
+    return { ...nothing, sql: database.statements.map(show) };
   }
 
-  const hashes = candidates.map((row) => Buffer.from(row.hash, "hex"));
-  const marks = hashes.map(() => "?").join(", ");
+  const found = new Map(candidates.map((row) => [row.hash, row]));
 
-  // Where each wording stood, squeezed into one row per wording and article.
-  const lives = await database.query<{
-    hash: string;
-    page_id: number;
-    title: string;
-    first_seen: string;
-    last_seen: string;
-    alive: number;
-    first_rev: number;
-    slot: number;
-  }>(
-    `SELECT HEX(p.hash) AS hash, p.page_id, r.title,
-            MIN(p.row_start) AS first_seen, MAX(p.row_end) AS last_seen,
-            MAX(p.row_end) > NOW() AS alive,
-            MIN(p.born_rev) AS first_rev, MAX(p.slot) AS slot
-     FROM passage FOR SYSTEM_TIME ALL AS p
-     JOIN revision AS r ON r.page_id = p.page_id
-     WHERE p.hash IN (${marks})
-     GROUP BY p.hash, p.page_id`,
-    hashes,
-  );
-
-  // The same rows one by one. The stretches a wording stood, and how long
-  // it stood in all, are worked out from these and not summed in SQL.
+  // Every history row of every candidate, in every article it stood in.
+  // The stretches a wording stood, and how long it stood in all, are
+  // worked out from these and not summed in SQL.
   const rows = await database.query<{
     hash: string;
     page_id: number;
+    title: string;
     row_start: string;
     row_end: string;
     current: number;
     born_rev: number;
+    slot: number;
   }>(
-    `SELECT HEX(hash) AS hash, page_id, row_start, row_end,
-            row_end > NOW() AS current, born_rev
-     FROM passage FOR SYSTEM_TIME ALL
-     WHERE hash IN (${marks})
-     ORDER BY hash, page_id, row_start`,
-    hashes,
+    `SELECT HEX(p.hash) AS hash, p.page_id, r.title, p.row_start, p.row_end,
+            p.row_end > NOW() AS current, p.born_rev, p.slot
+     FROM passage FOR SYSTEM_TIME ALL AS p
+     JOIN revision AS r ON r.page_id = p.page_id
+     WHERE p.hash IN (${candidates.map(() => "?").join(", ")})
+     ORDER BY p.page_id, p.row_start`,
+    candidates.map((row) => Buffer.from(row.hash, "hex")),
   );
 
+  // One entry per text and article. Wikitexts that read the same are the
+  // same words to a reader, so their rows are one history.
   const histories = new Map<string, typeof rows>();
 
   for (const row of rows) {
-    const key = `${row.hash}:${row.page_id}`;
+    const key = `${row.page_id}\n${found.get(row.hash)!.text}`;
 
     histories.set(key, [...(histories.get(key) ?? []), row]);
   }
 
-  const stretches = new Map(
-    [...histories].map(([key, history]) => [key, stays(history)]),
-  );
+  const lives = [...histories.values()].map((history) => ({
+    history,
+    firstRev: Math.min(...history.map((row) => row.born_rev)),
+  }));
 
   const writers = await database.query<EditRow>(
     `SELECT rev_id, saved_at, user, editor, comment, reverted_by
      FROM edit WHERE rev_id IN (${lives.map(() => "?").join(", ")})`,
-    lives.map((life) => life.first_rev),
+    lives.map((life) => life.firstRev),
   );
 
   const byRev = new Map(writers.map((edit) => [edit.rev_id, edit]));
-  const found = new Map(candidates.map((row) => [row.hash, row]));
 
   const traces = lives
-    .map((life): Trace => {
-      const candidate = found.get(life.hash)!;
-      const stood = stretches.get(`${life.hash}:${life.page_id}`) ?? [];
+    .map(({ history, firstRev }): Trace => {
+      const [first] = history;
+      const stood = stays(history);
+      const wordings = [...new Set(history.map((row) => row.hash))].map(
+        (hash) => found.get(hash)!,
+      );
+      const { text } = wordings[0];
+      const held = new Set(
+        figures(text).flatMap((figure) => [
+          ...figure.readings,
+          ...figure.parts,
+        ]),
+      );
 
       return {
-        hash: life.hash,
-        pageId: life.page_id,
-        title: life.title,
-        text: candidate.text,
-        distance:
-          candidate.distance === null ? null : Number(candidate.distance),
-        score: Number(candidate.score),
-        firstSeen: life.first_seen,
-        lastSeen: life.alive ? null : life.last_seen,
-        alive: life.alive === 1,
+        hash: first.hash,
+        pageId: first.page_id,
+        title: first.title,
+        text,
+        distance: Math.min(
+          ...wordings.map((wording) => Number(wording.distance)),
+        ),
+        score: Math.max(...wordings.map((wording) => Number(wording.score))),
+        firstSeen: stood[0].from,
+        lastSeen: stood.at(-1)!.to,
+        alive: stood.at(-1)!.to === null,
         days: stood.reduce((sum, stay) => sum + days(stay.from, stay.to), 0),
         stays: stood.length,
         lifetimes: stood.map(({ from, to }) => ({ from, to })),
-        writtenBy: editRef(byRev.get(life.first_rev)!),
-        slot: life.slot,
+        writtenBy: editRef(byRev.get(firstRev)!),
+        slot: Math.max(...history.map((row) => row.slot)),
+        variants: wordings.length,
+        saysFigures:
+          asked.length === 0
+            ? null
+            : asked.every((figure) =>
+                figure.readings.some((reading) => held.has(reading)),
+              ),
       };
     })
     .sort((a, b) => b.score - a.score)
     .slice(0, limit);
 
-  const earliest = traces.reduce<Trace | null>(
-    (first, trace) =>
-      !first || trace.firstSeen < first.firstSeen ? trace : first,
-    null,
-  );
+  const first = (among: Trace[]) =>
+    among.reduce<Trace | null>(
+      (earliest, trace) =>
+        !earliest || trace.firstSeen < earliest.firstSeen ? trace : earliest,
+      null,
+    );
+
+  const closest = Math.min(...traces.map((trace) => trace.distance!));
+  const close = traces.filter((trace) => trace.distance! <= closest + NEAR);
 
   return {
-    claim,
-    terms,
+    ...nothing,
     traces,
-    earliest,
-    limit,
-    farthest: FARTHEST,
+    earliest: first(close),
+    earliestSaying: first(close.filter((trace) => trace.saysFigures)),
     sql: database.statements.map(show),
   };
 };

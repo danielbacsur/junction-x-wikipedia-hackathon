@@ -135,7 +135,7 @@ export function Timeline({
                 textAnchor={firstAt > 60 ? "end" : "start"}
                 className="fill-rubric text-[11px] font-medium tabular-nums"
               >
-                first said {day(first.trace.firstSeen)}
+                earliest found {day(first.trace.firstSeen)}
               </text>
             </g>
           )}

@@ -41,7 +41,10 @@ function Who({
       {edit.editor === "ip" || edit.editor === "temp" ? " (anonymous)" : ""} on{" "}
       {minute(edit.at)}
       {edit.comment ? (
-        <span className="text-ink-faint"> “{edit.comment.slice(0, 120)}”</span>
+        <span className="wrap-anywhere text-ink-faint">
+          {" "}
+          “{edit.comment.slice(0, 120)}”
+        </span>
       ) : null}
       {edit.undone ? (
         <span className="text-removed"> · this edit was later reverted</span>

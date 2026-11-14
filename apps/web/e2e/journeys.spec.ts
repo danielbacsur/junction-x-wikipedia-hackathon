@@ -7,7 +7,7 @@ import { expect, test } from "@playwright/test";
  * fact of the dataset.
  */
 
-const LOSSES = "How many Finnish soldiers died in the Winter War?";
+const LOSSES = "Kuinka monta suomalaista kaatui talvisodassa?";
 
 test("asking a question on two dates shows how the answer changed", async ({
   page,
@@ -37,6 +37,9 @@ test("asking a question on two dates shows how the answer changed", async ({
     page.getByText(/Written by .* from the \d+ passages/),
   ).toHaveCount(2);
 
+  // A passage says how far it is from the question, as our reading.
+  await expect(page.getByText(/^distance 0\.\d\d$/).first()).toBeVisible();
+
   // The SQL behind the answer is on the page and travels in time.
   await page
     .getByRole("button", { name: /SQL behind these passages/ })
@@ -45,6 +48,20 @@ test("asking a question on two dates shows how the answer changed", async ({
   await expect(
     page.getByText("FOR SYSTEM_TIME AS OF TIMESTAMP").first(),
   ).toBeVisible();
+});
+
+test("a question about nothing in the articles gets no answer", async ({
+  page,
+}) => {
+  await page.goto(`/?q=${encodeURIComponent("How do I reset my router?")}`);
+
+  await expect(
+    page.getByText(/No passage that stood in Wikipedia/),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/the nearest passage is at cosine distance/),
+  ).toBeVisible();
+  await expect(page.getByText(/Written by/)).toHaveCount(0);
 });
 
 test("an article can be read as it stood on a day", async ({ page }) => {
@@ -77,6 +94,9 @@ test("an article can be read as it stood on a day", async ({ page }) => {
   await page.getByRole("button", { name: "5 years earlier" }).click();
   await expect(page).toHaveURL(/from=2003-12-28/);
   await expect(page.getByText(/the article\s+was saved/)).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: /SQL behind this comparison/ }),
+  ).toBeVisible();
 
   // And every paragraph has a life that can be opened.
   await page
@@ -114,14 +134,20 @@ test("searching the library puts the article a name means first", async ({
 
 test("a claim is traced back to when it was first said", async ({ page }) => {
   await page.goto(
-    `/trace?claim=${encodeURIComponent("Talvisodassa kaatui noin 25 000 suomalaista sotilasta")}`,
+    `/trace?claim=${encodeURIComponent("Talvisodassa kuoli 26 662 suomalaista sotilasta")}`,
   );
 
   await expect(
-    page.getByRole("heading", { name: /First said on/ }),
+    page.getByRole("heading", { name: /Earliest wording found/ }),
   ).toBeVisible();
   await expect(
     page.getByRole("heading", { name: /in Talvisota/ }),
+  ).toBeVisible();
+
+  // The paragraph is from 2003, but it said 22 800 then. The number in the
+  // claim was first written six years later.
+  await expect(
+    page.getByText(/26 662 is first written on\s+22 Aug 2009/),
   ).toBeVisible();
   await expect(
     page.getByText(/closest wordings|wordings? in \d+ article/).first(),
@@ -171,7 +197,7 @@ test("the method page reports every check as passed", async ({ page }) => {
   await page.goto("/method");
 
   await expect(page.getByText("862,076").first()).toBeVisible();
-  await expect(page.getByText("passed", { exact: true })).toHaveCount(7);
+  await expect(page.getByText("passed", { exact: true })).toHaveCount(8);
   await expect(page.getByText("failed", { exact: true })).toHaveCount(0);
 });
 
@@ -268,11 +294,34 @@ test("the historian looks both dates up before it answers", async ({
   await expect(said(/26[ ,.]?662/)).toBeVisible();
 });
 
+test("the historian asks the office table who was president", async ({
+  page,
+}) => {
+  await page.goto("/agent");
+
+  await page
+    .getByRole("button", {
+      name: "Who was president of Finland on 1 March 1925, according to Wikipedia at the end of 2012?",
+    })
+    .click();
+
+  await expect(page.getByText("who_held_office").first()).toBeVisible();
+
+  // Relander is the answer of 2012 and Ståhlberg today's: both are in the
+  // reply only if the date reached the tool.
+  const said = (name: RegExp) =>
+    page.getByText(name).filter({ visible: true }).first();
+
+  await expect(said(/Relander/)).toBeVisible();
+  await expect(said(/Ståhlberg/)).toBeVisible();
+});
+
 test("no page scrolls sideways on a phone @phone", async ({ page }) => {
   for (const path of [
     "/",
     "/read",
     "/read/Talvisota?date=2008-12-31",
+    "/read/Talvisota?date=2007-12-31&claim=0CED976AFA46F845",
     "/trace",
     "/atlas",
     "/atlas/presidents",

@@ -6,7 +6,8 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 import { SqlDrawer } from "@/components/sql-drawer";
-import { day, readHref } from "@/lib/format";
+import validation from "@/content/validation.json";
+import { day, number, readHref } from "@/lib/format";
 
 import { arrange } from "./arrange";
 import { Timeline } from "./timeline";
@@ -15,7 +16,7 @@ import { WordingCard } from "./wording-card";
 
 const EXAMPLES = [
   {
-    claim: "Talvisodassa kaatui noin 25 000 suomalaista sotilasta",
+    claim: "Talvisodassa kuoli 26 662 suomalaista sotilasta",
     about: "losses in the Winter War",
   },
   {
@@ -33,9 +34,16 @@ const EXAMPLES = [
   },
 ];
 
-/** The API lists no more wordings than this, and none farther than that. */
-const MOST = 12;
-const FARTHEST = 0.45;
+/**
+ * How much of history can be found at all: only a wording with a vector,
+ * and the job that computes them is still running. Counting them reads
+ * every vector, so the count is the one taken when the data was last
+ * checked.
+ */
+const COVERAGE =
+  `${number(validation.corpus.embeddedWordings)} of ` +
+  `${number(validation.corpus.searchableWordings)} wordings had a vector ` +
+  `when last counted, on ${day(validation.validatedAt.replace("T", " "))}`;
 
 const plural = (count: number, one: string, many: string) =>
   `${count} ${count === 1 ? one : many}`;
@@ -65,8 +73,9 @@ function Examples({ onPick }: { onPick: (claim: string) => void }) {
 function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
   const [lit, setLit] = useState<string | null>(null);
 
-  const { traces, terms } = tracing;
+  const { traces, terms, figures, earliestSaying } = tracing;
   const groups = arrange(traces);
+  const figure = figures.join(" and ");
   const standing = traces.filter((trace) => trace.alive).length;
   const gone = traces.length - standing;
 
@@ -77,7 +86,7 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
     <>
       <div className="rise mx-auto max-w-3xl">
         <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl">
-          First said on{" "}
+          Earliest wording found:{" "}
           <span className="text-rubric">{day(earliest.firstSeen)}</span>, in{" "}
           <Link
             href={`${readHref(earliest.title, earliest.firstSeen)}#p-${earliest.hash}`}
@@ -94,9 +103,29 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
           .
         </h2>
 
+        {figures.length > 0 && !earliest.saysFigures && (
+          <p className="mt-3 font-serif text-xl text-ink-soft">
+            That wording gives another number.{" "}
+            {earliestSaying ? (
+              <>
+                {figure} is first written on{" "}
+                <a
+                  href={`#w-${earliestSaying.pageId}-${earliestSaying.hash}`}
+                  className="text-rubric underline decoration-rule decoration-1 underline-offset-4"
+                >
+                  {day(earliestSaying.firstSeen)}
+                </a>
+                , in {earliestSaying.title}.
+              </>
+            ) : (
+              <>None of the close wordings found has {figure} in it.</>
+            )}
+          </p>
+        )}
+
         <p className="mt-4 text-ink-soft">
-          {traces.length === MOST
-            ? `The ${MOST} closest wordings`
+          {traces.length === tracing.limit
+            ? `The ${tracing.limit} closest wordings`
             : plural(traces.length, "wording", "wordings")}{" "}
           in {plural(groups.length, "article", "articles")}{" "}
           {traces.length === 1 ? "says" : "say"} something close to this.{" "}
@@ -120,8 +149,12 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
         <p className="mt-2 text-xs text-ink-faint">
           What each wording says, when it stood and who saved it is what MariaDB
           returned. That it means what you wrote is our reading: a cosine
-          distance of {FARTHEST} or less, shown on every card. “First” is the
-          earliest of the wordings found.
+          distance of {tracing.farthest} or less, shown on every card.
+          “Earliest” is the oldest of the wordings within {tracing.near} of the
+          closest one, and an older one may be missing: {COVERAGE}
+          {traces.length === tracing.limit &&
+            `, and only the ${tracing.limit} closest are shown, so a gap in the chart is not proof the claim was absent`}
+          .
         </p>
       </div>
 
@@ -223,10 +256,11 @@ export function TraceClaim() {
         </h1>
 
         <p className="mt-3 max-w-2xl text-ink-soft">
-          Paste a claim in any language. Every wording that means the same is
-          looked up across the whole edit history of Finnish Wikipedia&apos;s
-          articles on the history of Finland: when it appeared, how long it
-          stood, who wrote it and whether it is still there.
+          Paste a claim in any language. The wordings closest to it in meaning
+          are looked up across the whole edit history of Finnish
+          Wikipedia&apos;s articles on the history of Finland: when each
+          appeared, how long it stood, who wrote it and whether it is still
+          there.
         </p>
 
         <form
@@ -277,12 +311,13 @@ export function TraceClaim() {
               <div className="mx-auto max-w-3xl">
                 <p className="font-serif text-2xl text-ink-faint">
                   <span className="writing">
-                    Reading every version of every paragraph
+                    Searching every wording that has a vector
                   </span>
                 </p>
                 <p className="mt-2 text-sm text-ink-faint">
-                  The whole edit history is searched at once, not one date. On a
-                  busy laptop that takes a few seconds.
+                  All of the edit history is searched at once, living and long
+                  removed, not one date. On a busy laptop that takes a few
+                  seconds.
                 </p>
               </div>
 
@@ -311,10 +346,11 @@ export function TraceClaim() {
               </p>
               <p className="text-sm text-ink-soft">
                 That is not proof Wikipedia never said it. Only part of the edit
-                history has been given a vector yet, and a background job is
-                still adding the rest, so a wording that did stand can be
-                missing here. Of the wordings that have one, none came within
-                cosine distance {FARTHEST} of your claim.
+                history has been given a vector yet ({COVERAGE}), and a
+                background job is still adding the rest, so a wording that did
+                stand can be missing here. The 300 nearest wordings the vector
+                index returned held none within cosine distance{" "}
+                {traced.tracing.farthest} of your claim.
               </p>
 
               <div className="mt-4 mb-6">

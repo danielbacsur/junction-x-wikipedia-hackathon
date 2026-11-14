@@ -9,10 +9,13 @@ import { AnswerCard } from "./answer-card";
 import { useAsk } from "./use-ask";
 import { useStanding } from "./use-standing";
 
+// The local model writes Finnish well and translates it loosely, so the
+// first example is one it answers in the language of its passages.
 const EXAMPLES = [
-  { question: "How many Finnish soldiers died in the Winter War?", year: 2007 },
-  { question: "Kuka oli Suomen presidentti vuosina 1956–1982?", year: null },
+  { question: "Kuinka monta suomalaista kaatui talvisodassa?", year: 2007 },
+  { question: "Kuka oli Suomen presidentti vuosina 1956–1982?", year: 2010 },
   { question: "Mistä Suomen sisällissota johtui?", year: 2006 },
+  { question: "How many Finnish soldiers died in the Winter War?", year: 2007 },
   { question: "Vad hände i Finland år 1918?", year: 2010 },
 ];
 
@@ -35,6 +38,7 @@ export function Ask() {
   const [draft, setDraft] = useState(question);
   const [dial, setDial] = useState<number | null>(year);
   const [hovered, setHovered] = useState<number | null>(null);
+  const [hoveredNow, setHoveredNow] = useState<number | null>(null);
 
   const then = useAsk(question, year === null ? null : String(year));
   const now = useAsk(question, null, year !== null);
@@ -64,6 +68,11 @@ export function Ask() {
   const count = (standing: typeof thenToday, state: string) =>
     Object.values(standing ?? {}).filter((fate) => fate.state === state).length;
 
+  const same = count(thenToday, "same");
+  const reworded = count(thenToday, "reworded");
+  const gone = count(thenToday, "absent");
+  const fresh = count(todayThen, "absent");
+
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-5 pt-12 pb-24">
       <section className="mx-auto max-w-3xl">
@@ -77,8 +86,9 @@ export function Ask() {
 
         <p className="mt-3 max-w-2xl text-ink-soft">
           Ask in English, Finnish or Swedish. The answer is written only from
-          paragraphs that stood in Finnish Wikipedia on the date you pick, and
-          every sentence links to the exact version that held it.
+          paragraphs that stood in Finnish Wikipedia on the date you pick. Each
+          sentence cites a paragraph, and each paragraph links to the version
+          that held it.
         </p>
 
         <form
@@ -147,20 +157,13 @@ export function Ask() {
           {comparing && thenToday && todayThen && (
             <p className="rise mb-6 rounded border border-rule bg-paper-sunk px-4 py-3 text-sm text-ink-soft">
               Same question, two dates. Of the passages Wikipedia held in {year}
-              ,{" "}
-              <b className="font-medium text-ink">{count(thenToday, "same")}</b>{" "}
-              still stand word for word,{" "}
-              <b className="font-medium text-rubric">
-                {count(thenToday, "reworded")}
-              </b>{" "}
-              read differently today and{" "}
-              <b className="font-medium text-removed">
-                {count(thenToday, "absent")}
-              </b>{" "}
-              have no counterpart left. Of today&apos;s,{" "}
-              <b className="font-medium text-added">
-                {count(todayThen, "absent")}
-              </b>{" "}
+              , <b className="font-medium text-ink">{same}</b>{" "}
+              {same === 1 ? "still stands" : "still stand"} word for word,{" "}
+              <b className="font-medium text-rubric">{reworded}</b>{" "}
+              {reworded === 1 ? "reads" : "read"} differently today and{" "}
+              <b className="font-medium text-removed">{gone}</b>{" "}
+              {gone === 1 ? "has" : "have"} no counterpart left. Of
+              today&apos;s, <b className="font-medium text-added">{fresh}</b>{" "}
               had none in {year}.
             </p>
           )}
@@ -170,6 +173,7 @@ export function Ask() {
           >
             <AnswerCard
               asked={then}
+              side="then"
               standing={thenToday}
               other={{ label: "today", later: true }}
               hovered={hovered}
@@ -178,10 +182,11 @@ export function Ask() {
             {comparing && (
               <AnswerCard
                 asked={now}
+                side="now"
                 standing={todayThen}
                 other={{ label: `in ${year}`, later: false }}
-                hovered={null}
-                onHover={() => {}}
+                hovered={hoveredNow}
+                onHover={setHoveredNow}
               />
             )}
           </div>

@@ -40,8 +40,10 @@ export const answerPrompt = (evidence: Evidence): Message[] => {
         `You answer questions about what Finnish Wikipedia said on ${date}. ` +
         `You are given numbered passages, in Finnish, that stood in Wikipedia ` +
         `on that date. Answer only from them, in two to four short sentences, ` +
-        `in ${language}, the language of the question. Translate carefully: "kaatunut" and ` +
-        `"menehtynyt" mean killed, "haavoittunut" means wounded. Copy every ` +
+        `in ${language}, the language of the question. Translate carefully: ` +
+        `"kaatunut", "kuollut" and "menehtynyt" mean killed, "haavoittunut" ` +
+        `means wounded, and "sotatoimissa kuollutta" means killed in action. ` +
+        `Copy every ` +
         `number and name exactly as the passage has it. End every sentence ` +
         `with the number of the passage it comes from, like [1] or [2][3]. Do ` +
         `not use anything you know from elsewhere, and do not mention events ` +
@@ -93,7 +95,7 @@ type Figure = {
  * two numbers: running all the digits of a passage together let "5619"
  * pass as a number found in "1956–1982".
  */
-const figures = (text: string): Figure[] =>
+export const figures = (text: string): Figure[] =>
   [
     ...text
       // A date such as "13.3.1940" is a day, a month and a year.

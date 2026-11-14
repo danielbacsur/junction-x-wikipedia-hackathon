@@ -1,5 +1,5 @@
 {
-  "validatedAt": "2026-11-14T11:58:33.788Z",
+  "validatedAt": "2026-11-14T12:50:54.727Z",
   "deep": false,
   "passed": true,
   "checks": [
@@ -16,7 +16,7 @@
         "versionedArticles": 19742,
         "allFinnish": 568416
       },
-      "seconds": 1.080417375
+      "seconds": 4.673882
     },
     {
       "name": "stored versions carry the text wikipedia hashed",
@@ -28,7 +28,7 @@
         "legacy": 1,
         "wrong": 0
       },
-      "seconds": 4.4324713330000005
+      "seconds": 25.609317750000002
     },
     {
       "name": "asking for a date returns the version live at that moment",
@@ -39,7 +39,7 @@
         "wrong": 0,
         "beforeFirstEdit": 0
       },
-      "seconds": 0.6768407919999999
+      "seconds": 3.659959666999999
     },
     {
       "name": "two edits in one second stay two versions",
@@ -49,7 +49,7 @@
         "same": 0,
         "moved": 20
       },
-      "seconds": 0.11563574999999947
+      "seconds": 1.040396292000005
     },
     {
       "name": "every version rebuilds from its passages",
@@ -61,7 +61,7 @@
         "matchWikipedia": 300,
         "legacy": 0
       },
-      "seconds": 3.1788125
+      "seconds": 26.772423291
     },
     {
       "name": "search pinned to a date never returns text from another time",
@@ -72,7 +72,7 @@
         "inside": 40,
         "leaked": 0
       },
-      "seconds": 26.37363275
+      "seconds": 118.85221774999998
     },
     {
       "name": "every cited passage stood in the cited version",
@@ -83,7 +83,19 @@
         "sources": 40,
         "wrong": 0
       },
-      "seconds": 9.681495666000002
+      "seconds": 14.599842459000007
+    },
+    {
+      "name": "every stated term of office is in the version cited for it",
+      "ok": true,
+      "detail": "102 of 102 stated terms are written in the version cited, 102 start at the moment it was saved",
+      "numbers": {
+        "terms": 102,
+        "written": 102,
+        "timed": 102,
+        "accepted": 102
+      },
+      "seconds": 0.14267270799999823
     }
   ],
   "corpus": {
@@ -91,12 +103,12 @@
     "lifetimes": 2972662,
     "wordings": 1630250,
     "searchableWordings": 960142,
-    "embeddedWordings": 140567,
+    "embeddedWordings": 193237,
     "wordingMb": 745,
     "wholeCopyMb": 12163,
     "reverts": 46334,
     "undone": 70176,
-    "reverted": 54505,
+    "reverted": 54741,
     "editors": 73430
   },
   "tables": [
@@ -111,14 +123,14 @@
       "mb": 2293
     },
     {
+      "name": "passage_vector",
+      "rows": 122558,
+      "mb": 1907
+    },
+    {
       "name": "passage_text",
       "rows": 1472983,
       "mb": 1408
-    },
-    {
-      "name": "passage_vector",
-      "rows": 69340,
-      "mb": 1377
     },
     {
       "name": "passage",
@@ -149,6 +161,16 @@
       "name": "page_stats",
       "rows": 20100,
       "mb": 2
+    },
+    {
+      "name": "office_unparsed",
+      "rows": 17,
+      "mb": 0
+    },
+    {
+      "name": "office_term",
+      "rows": 102,
+      "mb": 0
     },
     {
       "name": "category_link",

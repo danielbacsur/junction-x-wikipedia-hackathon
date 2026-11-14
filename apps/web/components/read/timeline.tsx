@@ -5,7 +5,7 @@ import type { Timeline as Life } from "@wtt/package-engine";
 import { FIRST_YEAR, LAST_YEAR } from "@/lib/format";
 
 const WIDTH = 1000;
-const HEIGHT = 96;
+const HEIGHT = 82;
 const BASE = 74;
 const MONTHS = (LAST_YEAR - FIRST_YEAR + 1) * 12;
 
@@ -76,16 +76,6 @@ export function Timeline({
               y2={BASE + 4}
               stroke="var(--rule)"
             />
-            {(year % 5 === 0 || year === FIRST_YEAR) && (
-              <text
-                x={(year - FIRST_YEAR) * 12 * step + 3}
-                y={HEIGHT - 4}
-                fontSize={11}
-                fill="var(--ink-faint)"
-              >
-                {year}
-              </text>
-            )}
           </g>
         ))}
 
@@ -130,6 +120,24 @@ export function Timeline({
           strokeWidth={2}
         />
       </svg>
+
+      {/* The years are text under the drawing and not inside it, so they
+          stay readable when the drawing shrinks to a phone. */}
+      <div className="relative h-4 text-[11px] text-ink-faint tabular-nums">
+        {years
+          .filter((year) => year % 5 === 0 || year === FIRST_YEAR)
+          .map((year) => (
+            <span
+              key={year}
+              style={{
+                left: `${(((year - FIRST_YEAR) * 12) / MONTHS) * 100}%`,
+              }}
+              className={`absolute pl-[3px] ${year === FIRST_YEAR ? "max-sm:hidden" : ""}`}
+            >
+              {year}
+            </span>
+          ))}
+      </div>
 
       <figcaption className="mt-1 flex flex-wrap gap-x-4 text-xs text-ink-faint">
         <span>

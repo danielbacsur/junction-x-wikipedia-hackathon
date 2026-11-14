@@ -26,6 +26,9 @@ export function TimeDial({
   const ticks = [];
   for (let tick = FIRST_YEAR; tick <= latest; tick++) ticks.push(tick);
 
+  const crowded = (tick: number) =>
+    tick % 5 === 0 && (latest - tick <= 2 || tick - FIRST_YEAR <= 2);
+
   return (
     <div className="select-none">
       <div className="mb-1 flex items-baseline justify-between">
@@ -60,7 +63,12 @@ export function TimeDial({
             key={tick}
             className={`w-0 text-center ${tick === value ? "font-medium text-rubric" : ""}`}
           >
-            <span className="inline-block -translate-x-1/2">
+            {/* A label next to either end runs into it on a narrow screen. */}
+            <span
+              className={`inline-block -translate-x-1/2 ${
+                crowded(tick) ? "max-sm:invisible" : ""
+              }`}
+            >
               {tick % 5 === 0 || tick === FIRST_YEAR || tick === latest
                 ? tick === latest
                   ? "now"

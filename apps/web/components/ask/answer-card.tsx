@@ -10,14 +10,16 @@ import type { Asked } from "./use-ask";
 
 function Cite({
   n,
+  side,
   onHover,
 }: {
   n: number;
+  side: string;
   onHover: (n: number | null) => void;
 }) {
   return (
     <a
-      href={`#source-${n}`}
+      href={`#${side}-source-${n}`}
       onMouseEnter={() => onHover(n)}
       onMouseLeave={() => onHover(null)}
       className="mx-0.5 inline-flex h-[1.15rem] min-w-[1.15rem] -translate-y-0.5 items-center justify-center rounded-sm bg-rubric-wash px-1 font-sans text-[11px] font-medium text-rubric no-underline"
@@ -90,12 +92,14 @@ const inTime = (words: Word[], later: boolean): Word[] => {
 
 function SourceCard({
   source,
+  side,
   at,
   lit,
   standing,
   other,
 }: {
   source: Source;
+  side: string;
   at: string | null;
   lit: boolean;
 
@@ -108,8 +112,8 @@ function SourceCard({
 
   return (
     <li
-      id={`source-${source.n}`}
-      className={`rise rounded border bg-paper-raised p-4 transition-colors ${
+      id={`${side}-source-${source.n}`}
+      className={`rise scroll-mt-6 rounded border bg-paper-raised p-4 transition-colors ${
         lit ? "border-rubric" : "border-rule"
       }`}
     >
@@ -164,6 +168,14 @@ function SourceCard({
           wording written {day(source.bornAt)}
           {source.bornBy ? ` by ${source.bornBy}` : ""}
         </span>
+        {source.distance !== null && (
+          <span
+            title="Cosine distance between your question and this passage. 0 is the same meaning. It is our reading, not evidence."
+            className="rounded-sm border border-dotted border-ink-faint px-1.5 text-[10px] tracking-wide uppercase"
+          >
+            distance {source.distance.toFixed(2)}
+          </span>
+        )}
         <a
           href={source.url}
           target="_blank"
@@ -183,12 +195,16 @@ function SourceCard({
 /** One answer with the passages it stands on and the SQL that found them. */
 export function AnswerCard({
   asked,
+  side,
   standing,
   other,
   hovered,
   onHover,
 }: {
   asked: Asked;
+
+  /** Which of the two answers this is, so its anchors are its own. */
+  side: "then" | "now";
 
   /** What became of each passage on the other date, by "page:hash". */
   standing?: Record<string, Standing> | null;
@@ -231,6 +247,13 @@ export function AnswerCard({
         <p className="font-serif text-lg text-ink-soft">
           No passage that stood in Wikipedia on {day(at)} comes close to this
           question.
+          {evidence.nearest !== null && (
+            <span className="mt-2 block font-sans text-xs text-ink-faint">
+              Our reading: the nearest passage is at cosine distance{" "}
+              {evidence.nearest.toFixed(2)}, and beyond {evidence.tooFar} a
+              passage is about something else, so no answer is written from it.
+            </span>
+          )}
         </p>
       )}
 
@@ -254,8 +277,8 @@ export function AnswerCard({
                 }
               >
                 {sentence.text}
-                {sentence.cites.map((cite) => (
-                  <Cite key={cite} n={cite} onHover={onHover} />
+                {[...new Set(sentence.cites)].map((cite) => (
+                  <Cite key={cite} n={cite} side={side} onHover={onHover} />
                 ))}{" "}
               </span>
             ))
@@ -274,12 +297,17 @@ export function AnswerCard({
           <p className="-mt-2 text-xs text-ink-faint">
             Written by {asked.model} from the {evidence.sources.length} passages
             below in {(asked.answerMs / 1000).toFixed(1)} s. Passages found in{" "}
-            {asked.evidenceMs} ms
+            {asked.evidenceMs} ms. The numbers are checked against the passage
+            each sentence cites. The wording is the model&apos;s
             {asked.sentences.some((sentence) => !sentence.supported) &&
               ". Dotted sentences cite no passage, or state a number that is not in the passage they cite, and should not be trusted"}
             .
           </p>
         )}
+
+      {evidence && (
+        <SqlDrawer sql={evidence.sql} title="SQL behind these passages" />
+      )}
 
       {evidence && evidence.sources.length > 0 && (
         <ol className="flex flex-col gap-3">
@@ -287,6 +315,7 @@ export function AnswerCard({
             <SourceCard
               key={`${source.pageId}-${source.hash}`}
               source={source}
+              side={side}
               at={at}
               lit={hovered === source.n}
               standing={standing?.[`${source.pageId}:${source.hash}`]}
@@ -294,10 +323,6 @@ export function AnswerCard({
             />
           ))}
         </ol>
-      )}
-
-      {evidence && (
-        <SqlDrawer sql={evidence.sql} title="SQL behind these passages" />
       )}
     </article>
   );

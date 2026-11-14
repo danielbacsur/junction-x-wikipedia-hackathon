@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+
+  // The demo is shown from the development server, without Next's badge.
+  devIndicators: false,
   partialPrefetching: true,
   poweredByHeader: false,
   reactCompiler: true,

@@ -2,7 +2,6 @@
 
 import type { Comparison } from "@wtt/package-engine";
 
-import { SqlDrawer } from "@/components/sql-drawer";
 import { day, number } from "@/lib/format";
 
 import { Words } from "./words";
@@ -11,7 +10,14 @@ const LABEL = {
   added: { text: "added", style: "bg-added-wash text-added" },
   removed: { text: "removed", style: "bg-removed-wash text-removed" },
   reworded: { text: "reworded", style: "bg-rubric-wash text-rubric" },
+  markup: { text: "same words", style: "bg-paper-sunk text-ink-faint" },
 };
+
+type Change = Comparison["changes"][number];
+
+/** A footnote or a link changed and a reader saw the same words. */
+const markupOnly = (change: Change) =>
+  change.change === "reworded" && change.before?.text === change.after?.text;
 
 /**
  * What changed in the article between two dates. That a wording was there
@@ -26,8 +32,11 @@ export function Changes({
   comparison: Comparison;
   onSelect: (hash: string) => void;
 }) {
-  const counts = { added: 0, removed: 0, reworded: 0 };
-  for (const change of comparison.changes) counts[change.change]++;
+  const counts = { added: 0, removed: 0, reworded: 0, markup: 0 };
+
+  for (const change of comparison.changes) {
+    counts[markupOnly(change) ? "markup" : change.change]++;
+  }
 
   return (
     <section className="flex flex-col gap-4">
@@ -39,13 +48,15 @@ export function Changes({
         <b className="font-medium text-ink">{number(comparison.edits)}</b> times
         by {number(comparison.editors)} editors, {number(comparison.reverts)} of
         them reverts. <b className="font-medium text-ink">{comparison.kept}</b>{" "}
-        blocks stand unchanged,{" "}
-        <b className="font-medium text-added">{counts.added}</b> paragraphs were
-        added, <b className="font-medium text-removed">{counts.removed}</b>{" "}
-        removed and <b className="font-medium text-rubric">{counts.reworded}</b>{" "}
-        reworded.
+        blocks of its wikitext stand unchanged. Of its paragraphs and headings,{" "}
+        <b className="font-medium text-added">{counts.added}</b> were added,{" "}
+        <b className="font-medium text-removed">{counts.removed}</b> removed and{" "}
+        <b className="font-medium text-rubric">{counts.reworded}</b> reworded
+        {counts.markup > 0 &&
+          `, and ${counts.markup} kept their words while a footnote, a link or markup changed`}
+        .
         {comparison.other.added + comparison.other.removed > 0 &&
-          ` ${comparison.other.added + comparison.other.removed} markup blocks (templates, tables, images) also changed.`}
+          ` ${comparison.other.added + comparison.other.removed} templates, tables and images also changed and are not shown.`}
       </p>
 
       {!comparison.exists.from && (
@@ -57,7 +68,7 @@ export function Changes({
 
       <ol className="flex flex-col gap-2">
         {comparison.changes.map((change, index) => {
-          const label = LABEL[change.change];
+          const label = LABEL[markupOnly(change) ? "markup" : change.change];
           const hash = (change.after ?? change.before)!.hash;
 
           return (
@@ -71,11 +82,17 @@ export function Changes({
                 >
                   {label.text}
                 </span>
-                {change.similarity !== null && (
+                {markupOnly(change) ? (
                   <span className="text-[11px] text-ink-faint">
-                    our reading: the same paragraph,{" "}
-                    {Math.round(change.similarity * 100)}% of its words shared
+                    only a footnote, a link or markup changed
                   </span>
+                ) : (
+                  change.similarity !== null && (
+                    <span className="text-[11px] text-ink-faint">
+                      our reading: the same paragraph,{" "}
+                      {Math.round(change.similarity * 100)}% of its words shared
+                    </span>
+                  )
                 )}
                 <button
                   type="button"
@@ -103,8 +120,6 @@ export function Changes({
           );
         })}
       </ol>
-
-      <SqlDrawer sql={comparison.sql} title="SQL behind this comparison" />
     </section>
   );
 }

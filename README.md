@@ -68,7 +68,7 @@ Search works on whatever is embedded so far, and paragraphs a question needs
 are embedded on the spot. To check everything against its sources:
 
 ```bash
-npm run validate               # seven checks against the parquet files and wikipedia's sha1
+npm run validate               # eight checks against the parquet files and wikipedia's sha1
 npm run evaluate               # MariaDB's own 37 test questions
 npm test                       # unit tests, and engine tests against the loaded database
 npm run e2e -w @wtt/app-web    # every journey in a real browser
@@ -184,12 +184,13 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
 | Terms of office from 17,845 versions of the presidents' articles          | 102               | 25 s                     |
 | Paragraph vectors with bge-m3 through Ollama                              | about 40 a second | hours, in the background |
 
-`npm run validate` passes seven checks: every row of the datasets is in the
+`npm run validate` passes eight checks: every row of the datasets is in the
 database, stored text hashes to Wikipedia's sha1, 500 random moments return
 the version an independent lookup says was live, same-second edits stay
 distinct, sampled versions rebuild from their passages inside MariaDB, a
-search pinned to a date never returns a wording outside its lifetime, and
-every cited passage stood in the version it links to.
+search pinned to a date never returns a wording outside its lifetime, every
+cited passage stood in the version it links to, and every stated term of
+office is written in the version cited for it.
 
 ## Labs
 

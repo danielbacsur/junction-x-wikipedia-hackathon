@@ -7,12 +7,12 @@ export const metadata = { title: "Method" };
 
 const PASSAGE_TABLE = `CREATE TABLE passage (
   page_id   INT UNSIGNED NOT NULL,
-  hash      BINARY(8)    NOT NULL,     -- the wording, stored once in passage_text
-  dup       SMALLINT UNSIGNED NOT NULL, -- nth copy within the article
-  ord       VARBINARY(255) NOT NULL,   -- sorts the article's blocks
-  gap       INT UNSIGNED NOT NULL,     -- empty lines right before it
-  born_rev  INT UNSIGNED NOT NULL,     -- the version that wrote the wording
-  slot      INT UNSIGNED NOT NULL,     -- our reading: which paragraph it is
+  hash      BINARY(8) NOT NULL,          -- the wording, in passage_text
+  dup       SMALLINT UNSIGNED NOT NULL,  -- nth copy in the article
+  ord       VARBINARY(255) NOT NULL,     -- sorts the article's blocks
+  gap       INT UNSIGNED NOT NULL,       -- empty lines before it
+  born_rev  INT UNSIGNED NOT NULL,       -- version that wrote it
+  slot      INT UNSIGNED NOT NULL,       -- our reading: which paragraph
   row_start TIMESTAMP(6) GENERATED ALWAYS AS ROW START INVISIBLE,
   row_end   TIMESTAMP(6) GENERATED ALWAYS AS ROW END INVISIBLE,
   PERIOD FOR SYSTEM_TIME (row_start, row_end),
@@ -66,7 +66,7 @@ const FINDINGS = [
   },
   {
     title: "One common word turns a 50 ms full-text search into 25 seconds.",
-    body: "Natural-language mode ranks every row that holds any word of the question, and “oli” or “suomen” are in most of 1.2 million wordings. A small table counts how many wordings each stem is in, so search sends only the rare stems and requires the rarest one.",
+    body: "Natural-language mode ranks every row that holds any word of the question, and “oli” or “suomen” are in most of 1.6 million wordings. A small table counts how many wordings each stem is in, so search sends only the rare stems and requires the rarest one.",
     source: "packages/engine/keywords.ts",
   },
   {
@@ -140,6 +140,12 @@ function Statement({
 }
 
 const percent = (share: number) => `${Math.round(share * 100)}%`;
+
+/** Which of the measured searches each page runs. */
+const USED_BY: Record<string, string> = {
+  "article hybrid": "the library on Read",
+  "passage evidence": "Ask and the agent",
+};
 
 export default function Method() {
   const { corpus, checks, tables } = validation;
@@ -226,7 +232,7 @@ export default function Method() {
           />
           <Statement
             title="What Wikipedia said about a question on a day"
-            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and drops anything that arrived through an edit that was reverted within thirty days by a revert that itself stood."
+            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and drops anything that arrived through an edit that was reverted within thirty days by a revert that itself stood. This pass is a first net: the index can miss true neighbours, as the first finding below measured. A second statement then compares the question with every passage that stood that day in the articles the first pass and the article vectors point to, exactly, and that is the pass with full recall."
             sql={SEARCH}
           />
           <Statement
@@ -318,6 +324,11 @@ export default function Method() {
                 <tr key={mode.mode}>
                   <td className="px-4 py-2.5">
                     <span className="font-serif text-lg">{mode.mode}</span>
+                    {USED_BY[mode.mode] && (
+                      <span className="ml-2 rounded-sm bg-paper-sunk px-1.5 py-px text-[10px] tracking-wide text-ink-soft uppercase">
+                        {USED_BY[mode.mode]}
+                      </span>
+                    )}
                     <span className="block text-xs text-ink-faint">
                       {mode.about}
                     </span>

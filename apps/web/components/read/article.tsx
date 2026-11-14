@@ -125,12 +125,17 @@ export function Article() {
   const marked = claim ?? anchor;
 
   useEffect(() => {
-    if (marked && ready) {
-      document
-        .getElementById(`p-${marked}`)
-        ?.scrollIntoView({ block: "center", behavior: "smooth" });
-    }
-  }, [marked, ready]);
+    if (!marked || !ready) return;
+
+    // On a narrow screen the life of a paragraph opens above the article,
+    // so that is where to go and not down to the paragraph.
+    const above = claim && !window.matchMedia("(min-width: 64rem)").matches;
+
+    document.getElementById(above ? "life" : `p-${marked}`)?.scrollIntoView({
+      block: above ? "start" : "center",
+      behavior: "smooth",
+    });
+  }, [claim, marked, ready]);
   const shown = (at ?? LATEST).slice(0, 10);
 
   return (
@@ -149,7 +154,7 @@ export function Article() {
         </div>
 
         {view?.exists && (
-          <p className="mt-2 text-sm text-ink-soft">
+          <p className="mt-2 text-sm wrap-anywhere text-ink-soft">
             The version a reader saw that day was saved by{" "}
             <b className="font-medium text-ink">
               {view.savedBy ?? "a hidden user"}
@@ -317,9 +322,25 @@ export function Article() {
       )}
 
       <div
-        className={`grid gap-10 ${claim ? "lg:grid-cols-[minmax(0,1fr)_26rem]" : ""}`}
+        className={`grid grid-cols-[minmax(0,1fr)] gap-10 ${claim ? "lg:grid-cols-[minmax(0,1fr)_26rem]" : ""}`}
       >
         <div className={`min-w-0 ${claim ? "" : "mx-auto w-full max-w-3xl"}`}>
+          {/* The statements sit above the article: under it they were thirty
+              screens down, where nobody would look for them. */}
+          <div className="mb-6 flex flex-col gap-3">
+            {from && comparison.data ? (
+              <SqlDrawer
+                sql={comparison.data.sql}
+                title="SQL behind this comparison"
+              />
+            ) : (
+              view && <SqlDrawer sql={view.sql} title="SQL behind this page" />
+            )}
+            {life.data && (
+              <SqlDrawer sql={life.data.sql} title="SQL behind the timeline" />
+            )}
+          </div>
+
           {from && comparison.data ? (
             <Changes
               comparison={comparison.data}
@@ -331,6 +352,12 @@ export function Article() {
             view?.exists && (
               <>
                 <p className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-ink-faint">
+                  <span className="w-full">
+                    Point at a paragraph to see who wrote it, and click the note
+                    for its life.
+                    {playing &&
+                      " While it replays, a green paragraph was written since the step before."}
+                  </span>
                   <span>
                     The mark beside a paragraph is the age of its wording that
                     day:
@@ -357,22 +384,19 @@ export function Article() {
                   article={view}
                   selected={marked}
                   fresh={fresh}
+                  noted={!claim}
                   onSelect={(hash) => go({ claim: hash })}
                 />
               </>
             )
           )}
-
-          <div className="mt-10 flex flex-col gap-3">
-            {view && <SqlDrawer sql={view.sql} title="SQL behind this page" />}
-            {life.data && (
-              <SqlDrawer sql={life.data.sql} title="SQL behind the timeline" />
-            )}
-          </div>
         </div>
 
         {claim && (
-          <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:self-start lg:overflow-y-auto">
+          <div
+            id="life"
+            className="order-first min-w-0 scroll-mt-4 lg:sticky lg:top-6 lg:order-none lg:max-h-[calc(100vh-3rem)] lg:self-start lg:overflow-y-auto"
+          >
             <Biography
               key={claim}
               title={name}
