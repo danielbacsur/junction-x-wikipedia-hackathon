@@ -1,4 +1,7 @@
 .env*
 .turbo
+__pycache__
 data
+labs/*/cache
+labs/*/data/runs.jsonl
 node_modules

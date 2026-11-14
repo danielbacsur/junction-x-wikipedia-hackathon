@@ -16,6 +16,19 @@ const nextConfig: NextConfig = {
 
   serverExternalPackages: ["mariadb"],
 
+  // The historian agent is its own server. In development the browser
+  // reaches it through the web app, so there is one origin and no CORS.
+  async rewrites() {
+    if (process.env.NODE_ENV !== "development") return [];
+
+    return [
+      {
+        source: "/eve/historian/v1/:path*",
+        destination: "http://localhost:3001/eve/v1/:path*",
+      },
+    ];
+  },
+
   turbopack: {
     rules: {
       "*.css": {

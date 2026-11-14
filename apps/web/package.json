@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@wtt/package-engine": "0.0.0",
+    "eve": "1.0.0-rc.17",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
