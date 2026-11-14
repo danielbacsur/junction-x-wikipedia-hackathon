@@ -32,6 +32,10 @@ statements.
   A reverted edit stays live for a median of 15 minutes.
 - **Agent**: a historian running on a local Gemma model that looks things up
   with the same queries and shows the SQL of every step.
+- **MCP**: the same queries as tools for any other assistant, at `/mcp`. An
+  assistant that cites Wikipedia cites it as of now; this lets it ask what
+  Wikipedia said on a day (`claude mcp add --transport http palimpsest
+http://localhost:3000/mcp`).
 - Every panel has a drawer with the SQL MariaDB ran for it, and its timing.
 
 ## Run it

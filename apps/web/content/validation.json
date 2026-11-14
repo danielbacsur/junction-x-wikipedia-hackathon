@@ -1,5 +1,5 @@
 {
-  "validatedAt": "2026-11-14T11:22:36.204Z",
+  "validatedAt": "2026-11-14T11:58:33.788Z",
   "deep": false,
   "passed": true,
   "checks": [
@@ -16,7 +16,7 @@
         "versionedArticles": 19742,
         "allFinnish": 568416
       },
-      "seconds": 1.688092833
+      "seconds": 1.080417375
     },
     {
       "name": "stored versions carry the text wikipedia hashed",
@@ -28,7 +28,7 @@
         "legacy": 1,
         "wrong": 0
       },
-      "seconds": 13.329469916999999
+      "seconds": 4.4324713330000005
     },
     {
       "name": "asking for a date returns the version live at that moment",
@@ -39,7 +39,7 @@
         "wrong": 0,
         "beforeFirstEdit": 0
       },
-      "seconds": 3.5530449169999994
+      "seconds": 0.6768407919999999
     },
     {
       "name": "two edits in one second stay two versions",
@@ -49,19 +49,19 @@
         "same": 0,
         "moved": 20
       },
-      "seconds": 0.9563277499999967
+      "seconds": 0.11563574999999947
     },
     {
       "name": "every version rebuilds from its passages",
       "ok": true,
-      "detail": "300 of 300 versions rebuilt byte for byte from their blocks, 300 match wikipedia's own sha1, 0 have a sha1 from before utf-8 (11.2 s)",
+      "detail": "300 of 300 versions rebuilt byte for byte inside MariaDB, 300 match wikipedia's own sha1, 0 were hashed before utf-8",
       "numbers": {
         "checked": 300,
         "different": 0,
         "matchWikipedia": 300,
         "legacy": 0
       },
-      "seconds": 11.178829333999998
+      "seconds": 3.1788125
     },
     {
       "name": "search pinned to a date never returns text from another time",
@@ -72,7 +72,7 @@
         "inside": 40,
         "leaked": 0
       },
-      "seconds": 25.876310667000002
+      "seconds": 26.37363275
     },
     {
       "name": "every cited passage stood in the cited version",
@@ -83,18 +83,20 @@
         "sources": 40,
         "wrong": 0
       },
-      "seconds": 12.990325667000004
+      "seconds": 9.681495666000002
     }
   ],
   "corpus": {
     "liveBlocks": 692910,
+    "lifetimes": 2972662,
     "wordings": 1630250,
     "searchableWordings": 960142,
-    "embeddedWordings": 84916,
+    "embeddedWordings": 140567,
     "wordingMb": 745,
     "wholeCopyMb": 12163,
     "reverts": 46334,
     "undone": 70176,
+    "reverted": 54505,
     "editors": 73430
   },
   "tables": [
@@ -115,12 +117,12 @@
     },
     {
       "name": "passage_vector",
-      "rows": 40326,
-      "mb": 851
+      "rows": 69340,
+      "mb": 1377
     },
     {
       "name": "passage",
-      "rows": 2959028,
+      "rows": 2880612,
       "mb": 784
     },
     {
@@ -130,7 +132,7 @@
     },
     {
       "name": "edit",
-      "rows": 837029,
+      "rows": 852927,
       "mb": 253
     },
     {
@@ -142,6 +144,11 @@
       "name": "article_category",
       "rows": 25788,
       "mb": 4
+    },
+    {
+      "name": "page_stats",
+      "rows": 20100,
+      "mb": 2
     },
     {
       "name": "category_link",

@@ -152,7 +152,7 @@ export const passageSearch = async (
      JOIN revision ${asOf(input.at)} AS r ON r.page_id = p.page_id
      JOIN passage_text AS t USING (hash)
      JOIN edit AS b ON b.rev_id = p.born_rev
-     WHERE b.undone_by IS NULL
+     WHERE b.reverted_by IS NULL
      ORDER BY score DESC
      LIMIT ${input.limit}`,
     [...params, ...when(input.at), ...when(input.at)],
@@ -187,7 +187,7 @@ export const passagesWithin = async (
      JOIN revision ${asOf(input.at)} AS r ON r.page_id = p.page_id
      JOIN edit AS b ON b.rev_id = p.born_rev
      WHERE p.page_id IN (${input.pages.map(() => "?").join(", ")})
-       AND b.undone_by IS NULL
+       AND b.reverted_by IS NULL
      ORDER BY distance
      LIMIT ${input.limit}`,
     [input.vector, ...when(input.at), ...when(input.at), ...input.pages],

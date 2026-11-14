@@ -251,7 +251,7 @@ await check(
      FROM passage FOR SYSTEM_TIME ALL AS p
      JOIN passage_vector AS v USING (hash)
      JOIN edit AS b ON b.rev_id = p.born_rev
-     WHERE b.undone_by IS NULL
+     WHERE b.reverted_by IS NULL
      GROUP BY p.hash
      HAVING COUNT(DISTINCT p.page_id) = 1 AND COUNT(DISTINCT p.born_rev) = 1
         AND died < NOW() AND TIMESTAMPDIFF(DAY, born, died) > 30
@@ -354,6 +354,7 @@ const corpus = await one<Record<string, number>>(
      (SELECT ROUND(SUM(bytes) / 1e6) FROM edit) AS wholeCopyMb,
      (SELECT COUNT(*) FROM edit WHERE restores IS NOT NULL) AS reverts,
      (SELECT COUNT(*) FROM edit WHERE undone_by IS NOT NULL) AS undone,
+     (SELECT COUNT(*) FROM edit WHERE reverted_by IS NOT NULL) AS reverted,
      (SELECT COUNT(DISTINCT user) FROM edit) AS editors`,
 );
 

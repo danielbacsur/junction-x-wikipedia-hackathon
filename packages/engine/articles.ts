@@ -128,7 +128,7 @@ export const searchArticles = async (
     lists.push(`
       t AS (
         SELECT lang, page_id,
-               ROW_NUMBER() OVER (ORDER BY relevance DESC, edits DESC) AS place
+               ROW_NUMBER() OVER (ORDER BY relevance DESC, edits DESC, page_id) AS place
         FROM (SELECT a.lang, a.page_id,
                      MATCH(a.title) AGAINST (? IN BOOLEAN MODE) AS relevance,
                      COALESCE(s.edits, 0) AS edits
@@ -138,7 +138,7 @@ export const searchArticles = async (
               WHERE MATCH(a.title) AGAINST (? IN BOOLEAN MODE)
                 ${options.everything ? "" : "AND a.history = 1"}
                 ${options.lang ? "AND a.lang = ?" : ""}
-              ORDER BY relevance DESC, edits DESC
+              ORDER BY relevance DESC, edits DESC, a.page_id
               LIMIT 60) AS titled)`);
     params.push(titles, titles, ...langParam);
   }
@@ -150,17 +150,19 @@ export const searchArticles = async (
     lists.push(`
       c AS (
         SELECT 'fi' AS lang, page_id,
-               ROW_NUMBER() OVER (ORDER BY relevance DESC) AS place
-        FROM (SELECT p.page_id, MAX(m.relevance) AS relevance
+               ROW_NUMBER() OVER (ORDER BY relevance DESC, edits DESC, page_id) AS place
+        FROM (SELECT p.page_id, MAX(m.relevance) AS relevance,
+                     COALESCE(MAX(s.edits), 0) AS edits
               FROM (SELECT hash,
                            MATCH(stems) AGAINST (? IN BOOLEAN MODE) AS relevance
                     FROM passage_text
                     WHERE MATCH(stems) AGAINST (? IN BOOLEAN MODE)
-                    ORDER BY relevance DESC
+                    ORDER BY relevance DESC, hash
                     LIMIT 300) AS m
               JOIN passage AS p USING (hash)
+              LEFT JOIN page_stats AS s USING (page_id)
               GROUP BY p.page_id
-              ORDER BY relevance DESC
+              ORDER BY relevance DESC, edits DESC, p.page_id
               LIMIT 60) AS pages)`);
     params.push(stems, stems);
   }
@@ -204,7 +206,7 @@ export const searchArticles = async (
        AS found
      ${names.map((name) => `LEFT JOIN ${name} USING (lang, page_id)`).join("\n     ")}
      JOIN article AS a USING (lang, page_id)
-     ORDER BY score DESC
+     ORDER BY score DESC, a.lang, a.page_id
      LIMIT ${limit * 3}`,
     params,
   );
@@ -295,6 +297,11 @@ export type ArticleView = {
   url: string;
 
   firstEdit: string;
+
+  /** Which version this is, counted from the first, and its neighbours. */
+  seq: number;
+  previousAt: string | null;
+  nextAt: string | null;
   blocks: Block[];
   sql: Shown[];
 };
@@ -349,10 +356,29 @@ export const readArticle = async (
       bytes: 0,
       url: "",
       firstEdit,
+      seq: 0,
+      previousAt: null,
+      nextAt: firstEdit,
       blocks: [],
       sql: database.statements.map(show),
     };
   }
+
+  // The versions on either side, so a reader can step edit by edit.
+  const [around] = await database.query<{
+    seq: number;
+    previous_at: string | null;
+    next_at: string | null;
+  }>(
+    `SELECT e.seq,
+            (SELECT saved_at FROM edit
+             WHERE page_id = e.page_id AND seq = e.seq - 1) AS previous_at,
+            (SELECT saved_at FROM edit
+             WHERE page_id = e.page_id AND seq = e.seq + 1) AS next_at
+     FROM edit AS e
+     WHERE e.rev_id = ?`,
+    [version.rev_id],
+  );
 
   const rows = await database.query<{
     hash: string;
@@ -370,7 +396,7 @@ export const readArticle = async (
   }>(
     `SELECT HEX(p.hash) AS hash, t.kind, t.wikitext,
             p.born_rev, b.saved_at AS born_at, b.user AS born_by,
-            b.editor AS born_editor, b.undone_by IS NOT NULL AS born_undone,
+            b.editor AS born_editor, b.reverted_by IS NOT NULL AS born_undone,
             p.slot, HEX(p.prev_hash) AS replaced, p.sim,
             v.hash IS NOT NULL AS embedded
      FROM passage ${asOf(at)} AS p
@@ -394,6 +420,9 @@ export const readArticle = async (
     bytes: version.bytes,
     url: `https://fi.wikipedia.org/?oldid=${version.rev_id}`,
     firstEdit,
+    seq: around.seq,
+    previousAt: around.previous_at,
+    nextAt: around.next_at,
     blocks: rows.map((row) => {
       const readable = READABLE.has(row.kind);
 
@@ -465,11 +494,11 @@ export const readTimeline = async (
     `SELECT DATE_FORMAT(e.saved_at, '%Y-%m') AS month,
             COUNT(*) AS edits,
             SUM(e.restores IS NOT NULL) AS reverts,
-            SUM(e.undone_by IS NOT NULL) AS undone,
+            SUM(e.reverted_by IS NOT NULL) AS undone,
             SUM(e.editor <> 'named') AS anonymous,
             SUM(e.restores IS NOT NULL AND e.editor = 'named' AND EXISTS (
               SELECT 1 FROM edit AS u
-              WHERE u.page_id = e.page_id AND u.undone_by = e.seq
+              WHERE u.page_id = e.page_id AND u.reverted_by = e.seq
                 AND u.editor = 'named' AND u.user <> e.user)) AS disputes,
             MAX(e.bytes) AS bytes
      FROM edit AS e
@@ -550,10 +579,10 @@ export const listVersions = async (
     delta: number;
     minor: number;
     restores: number | null;
-    undone_by: number | null;
+    reverted_by: number | null;
   }>(
     `SELECT rev_id, seq, saved_at, user, editor, comment, bytes, delta, minor,
-            restores, undone_by
+            restores, reverted_by
      FROM edit
      WHERE page_id = ? AND saved_at <= ?
      ORDER BY saved_at DESC
@@ -573,7 +602,7 @@ export const listVersions = async (
       delta: row.delta,
       minor: row.minor === 1,
       revert: row.restores !== null,
-      undone: row.undone_by !== null,
+      undone: row.reverted_by !== null,
     })),
     sql: database.statements.map(show),
   };

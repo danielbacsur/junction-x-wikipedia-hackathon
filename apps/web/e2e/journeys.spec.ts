@@ -55,7 +55,7 @@ test("an article can be read as it stood on a day", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText("31 Dec 2008").first()).toBeVisible();
   await expect(page.getByText(/saved by\s+QWerk/)).toBeVisible();
-  await expect(page.getByText(/2,143 versions by 742 editors/)).toBeVisible();
+  await expect(page.getByText(/of 2,143, by 742 editors/)).toBeVisible();
   await expect(
     page.getByRole("img", { name: /Edits per month of Talvisota/ }),
   ).toBeVisible();
@@ -65,9 +65,17 @@ test("an article can be read as it stood on a day", async ({ page }) => {
     page.getByText(/Talvisota oli 30\. marraskuuta 1939/),
   ).toBeVisible();
 
+  // Stepping one edit forward lands on the very next saved version.
+  await expect(page.getByText(/version 981 of 2,143/)).toBeVisible();
+  await page.getByRole("button", { name: "Next edit" }).click();
+  await expect(page).toHaveURL(/date=2009-01-01T/);
+  await expect(page.getByText(/version 982 of 2,143/)).toBeVisible();
+  await page.getByRole("button", { name: "Previous edit" }).click();
+  await expect(page).toHaveURL(/date=2008-12-28T10%3A25%3A51/);
+
   // Comparing with five years earlier lists what changed in between.
   await page.getByRole("button", { name: "5 years earlier" }).click();
-  await expect(page).toHaveURL(/from=2003-12-31/);
+  await expect(page).toHaveURL(/from=2003-12-28/);
   await expect(page.getByText(/the article\s+was saved/)).toBeVisible();
 
   // And every paragraph has a life that can be opened.
@@ -136,6 +144,50 @@ test("a bad date and an unknown article are refused, not guessed", async ({
 
   const unknown = await request.get("/api/article/No_such_article_anywhere");
   expect(unknown.status()).toBe(404);
+});
+
+test("another agent can ask what wikipedia said through mcp", async ({
+  request,
+}) => {
+  const call = async (method: string, params?: unknown) => {
+    const response = await request.post("/mcp", {
+      headers: { accept: "application/json, text/event-stream" },
+      data: { jsonrpc: "2.0", id: 1, method, params },
+    });
+
+    // The reply comes as one server-sent event.
+    const event = /^data: (.*)$/m.exec(await response.text());
+    return JSON.parse(event![1]).result;
+  };
+
+  const { tools } = await call("tools/list");
+
+  expect(tools.map((tool: { name: string }) => tool.name)).toEqual([
+    "search_wikipedia_as_of",
+    "read_article_as_of",
+    "compare_article",
+    "trace_claim",
+    "paragraph_life",
+    "article_timeline",
+  ]);
+
+  const found = await call("tools/call", {
+    name: "search_wikipedia_as_of",
+    arguments: {
+      question: "Kuinka monta suomalaista kaatui talvisodassa?",
+      date: "2007",
+    },
+  });
+
+  expect(found.structuredContent.asOf).toBe("2007-12-31 23:59:59");
+  expect(JSON.stringify(found.structuredContent.passages)).toContain("26 600");
+
+  const refused = await call("tools/call", {
+    name: "compare_article",
+    arguments: { article: "Talvisota", from: "yesterday" },
+  });
+
+  expect(refused.isError).toBe(true);
 });
 
 test("the historian looks both dates up before it answers", async ({

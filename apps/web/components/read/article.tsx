@@ -22,6 +22,9 @@ import { Changes } from "./changes";
 import { Reader } from "./reader";
 import { Timeline } from "./timeline";
 
+/** An edit's moment as the address carries it, to the microsecond. */
+const stamp = (at: string) => at.replace(" ", "T");
+
 const yearsBefore = (date: string, years: number) =>
   `${Number(date.slice(0, 4)) - years}${date.slice(4, 10)}`;
 
@@ -90,6 +93,16 @@ export function Article() {
 
   const view = article.data;
   const at = view?.at ?? null;
+  const ready = view?.revId;
+
+  // A link to a paragraph's life should land on the paragraph.
+  useEffect(() => {
+    if (claim && ready) {
+      document
+        .getElementById(`p-${claim}`)
+        ?.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+  }, [claim, ready]);
   const shown = (at ?? LATEST).slice(0, 10);
 
   return (
@@ -132,7 +145,7 @@ export function Article() {
             {life.data && (
               <span className="text-ink-faint">
                 {" "}
-                · {number(life.data.edits)} versions by{" "}
+                · version {number(view.seq)} of {number(life.data.edits)}, by{" "}
                 {number(life.data.editors)} editors since{" "}
                 {day(life.data.firstEdit)}
               </span>
@@ -168,6 +181,32 @@ export function Article() {
             className="bg-transparent text-ink outline-none"
           />
         </label>
+
+        <div className="flex overflow-hidden rounded border border-rule">
+          <button
+            type="button"
+            disabled={article.loading || !view?.previousAt}
+            onClick={() => {
+              setFresh(null);
+              go({ date: stamp(view!.previousAt!) });
+            }}
+            className="px-3 py-1.5 text-ink-soft hover:text-ink disabled:opacity-40"
+          >
+            ◂ Previous edit
+          </button>
+          <button
+            type="button"
+            disabled={article.loading || !view?.nextAt}
+            onClick={() => {
+              // What the next edit wrote is marked as newly arrived.
+              setFresh(view!.savedAt || null);
+              go({ date: stamp(view!.nextAt!) });
+            }}
+            className="border-l border-rule px-3 py-1.5 text-ink-soft hover:text-ink disabled:opacity-40"
+          >
+            Next edit ▸
+          </button>
+        </div>
 
         <button
           type="button"

@@ -68,7 +68,7 @@ type EditRow = {
   user: string | null;
   editor: string;
   comment: string | null;
-  undone_by: number | null;
+  reverted_by: number | null;
 };
 
 const editRef = (row: EditRow): EditRef => ({
@@ -77,7 +77,7 @@ const editRef = (row: EditRow): EditRef => ({
   user: row.user,
   editor: row.editor,
   comment: row.comment,
-  undone: row.undone_by !== null,
+  undone: row.reverted_by !== null,
 });
 
 const days = (from: string, to: string | null) =>
@@ -142,7 +142,7 @@ export const readBiography = async (
   const ends = stays.flatMap((stay) => (stay.to ? [stay.to] : []));
 
   const edits = await database.query<EditRow>(
-    `SELECT rev_id, saved_at, user, editor, comment, undone_by
+    `SELECT rev_id, saved_at, user, editor, comment, reverted_by
      FROM edit
      WHERE page_id = ? AND (
        rev_id IN (${stays.map(() => "?").join(", ")})
@@ -180,7 +180,7 @@ export const readBiography = async (
           `SELECT HEX(p.hash) AS hash, t.text,
                   MIN(p.row_start) AS first_seen, MAX(p.row_end) AS last_seen,
                   MAX(p.row_end) > NOW() AS current, MAX(p.sim) AS sim,
-                  b.rev_id, b.saved_at, b.user, b.editor, b.comment, b.undone_by
+                  b.rev_id, b.saved_at, b.user, b.editor, b.comment, b.reverted_by
            FROM passage FOR SYSTEM_TIME ALL AS p
            JOIN passage_text AS t USING (hash)
            JOIN edit AS b ON b.rev_id = (
@@ -397,7 +397,7 @@ export const traceClaim = async (
   }
 
   const writers = await database.query<EditRow>(
-    `SELECT rev_id, saved_at, user, editor, comment, undone_by
+    `SELECT rev_id, saved_at, user, editor, comment, reverted_by
      FROM edit WHERE rev_id IN (${lives.map(() => "?").join(", ")})`,
     lives.map((life) => life.first_rev),
   );
