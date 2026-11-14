@@ -69,6 +69,14 @@ const toHit = (row: PassageRow): PassageHit => ({
   score: Number(row.score),
 });
 
+/**
+ * How much a keyword match counts next to a match in meaning. Sharing a
+ * rare word with the question is weaker evidence than meaning the same, so
+ * a keyword match lifts a passage that is already near but rarely carries
+ * one to the top alone. Measured on MariaDB's 37 questions.
+ */
+export const KEYWORD_WEIGHT = 0.4;
+
 /** How many nearest wordings the vector index is asked for. */
 const CANDIDATES = 300;
 
@@ -132,7 +140,7 @@ export const passageSearch = async (
             ${input.vector ? "v.place" : "NULL"} AS vector_rank,
             ${match ? "k.place" : "NULL"} AS keyword_rank,
             ${input.vector ? "COALESCE(1 / (60 + v.place), 0)" : "0"} +
-            ${match ? "COALESCE(1 / (60 + k.place), 0)" : "0"} AS score
+            ${match ? `COALESCE(${KEYWORD_WEIGHT} / (60 + k.place), 0)` : "0"} AS score
      FROM (${
        both
          ? "SELECT hash FROM v UNION SELECT hash FROM k"

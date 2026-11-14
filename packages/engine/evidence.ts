@@ -39,8 +39,11 @@ export type Evidence = {
 };
 
 /** How many articles a question is routed to. */
-const ARTICLES = 6;
+const ARTICLES = 8;
 const SOURCES = 8;
+
+/** How much an article matching the question counts for its passages. */
+const ARTICLE_WEIGHT = 1;
 
 /**
  * Finds the Finnish articles a question is about, among those that existed
@@ -156,9 +159,15 @@ export const gatherEvidence = async (
     limit: SOURCES,
   });
 
-  // Two rankings again, merged by position: the exact one inside the
-  // routed articles, and the indexed one over every embedded passage.
+  // Three signals merged by position: how near a passage is among those of
+  // the routed articles, how near it is among every embedded passage, and
+  // how well its article matches the question as a whole. The last one
+  // keeps a good paragraph of the right article above a slightly nearer
+  // paragraph of a neighbouring one.
   const merged = new Map<string, PassageHit>();
+  const routedAt = new Map(
+    articles.map((article, place) => [article.pageId, place]),
+  );
 
   [within, everywhere].forEach((list) =>
     list.forEach((hit, place) => {
@@ -166,8 +175,20 @@ export const gatherEvidence = async (
       const seen = merged.get(key);
       const score = 1 / (60 + place + 1);
 
-      if (seen) seen.score += score;
-      else merged.set(key, { ...hit, score });
+      if (seen) {
+        seen.score += score;
+        seen.vectorRank ??= hit.vectorRank;
+        seen.keywordRank ??= hit.keywordRank;
+      } else {
+        const article = routedAt.get(hit.pageId);
+
+        merged.set(key, {
+          ...hit,
+          score:
+            score +
+            (article === undefined ? 0 : ARTICLE_WEIGHT / (60 + article + 1)),
+        });
+      }
     }),
   );
 

@@ -2,7 +2,7 @@ import { type Db, db, toVector } from "@wtt/package-db";
 import { embedOne } from "@wtt/package-models";
 import { type Inline, clean, inline, references } from "@wtt/package-wikitext";
 
-import { type Terms, pickTerms, prefixQuery } from "./keywords.ts";
+import { type Terms, pickTerms, prefixQuery, stemQuery } from "./keywords.ts";
 import { type Shown, show } from "./sql.ts";
 import { LAST_EDIT, asOf, moment, when } from "./time.ts";
 
@@ -56,6 +56,18 @@ export type ArticleHit = {
   also: { lang: string; title: string; url: string }[];
 };
 
+/**
+ * How much each list counts when they are fused. Meaning leads. A title
+ * that holds the words is good evidence when somebody types a name, and
+ * much weaker when they describe something in a sentence, where shared
+ * words are mostly chance. Words inside an article are the weakest.
+ */
+const weights = (terms: Terms): Record<string, number> => {
+  const naming = terms.rare.length + terms.common.length <= 3;
+
+  return naming ? { v: 1, t: 0.6, c: 0.3 } : { v: 1, t: 0.15, c: 0.1 };
+};
+
 export type ArticleSearch = {
   question: string;
   mode: "hybrid" | "vector" | "keyword";
@@ -65,16 +77,18 @@ export type ArticleSearch = {
 };
 
 /**
- * Finds articles for a question. Vectors find the meaning across three
- * languages, full-text search finds names and numbers, and reciprocal rank
- * fusion merges the two lists by position, all in one statement.
+ * Finds articles for a question in one statement. Vectors find the meaning
+ * across three languages, a full-text index over titles finds names, and
+ * the stemmed passages find words inside the articles. Reciprocal rank
+ * fusion merges the three lists by position, since their scores have
+ * nothing in common.
  */
 export const searchArticles = async (
   question: string,
   options: {
     mode?: "hybrid" | "vector" | "keyword";
     lang?: string;
-    /** Search all of Finnish Wikipedia by keyword, not only the history set. */
+    /** Match titles in all of Finnish Wikipedia, not only the history set. */
     everything?: boolean;
     limit?: number;
   } = {},
@@ -84,19 +98,19 @@ export const searchArticles = async (
   const limit = options.limit ?? 10;
   const terms = await pickTerms(database, question);
 
-  const match = prefixQuery(terms);
-  const useKeywords = mode !== "vector" && match !== "";
-  const useVectors = mode !== "keyword";
+  const titles = mode === "vector" ? "" : prefixQuery(terms);
+  const stems = mode === "vector" ? "" : stemQuery(terms);
+  const vector = mode === "keyword" ? null : toVector(await embedOne(question));
 
   const lang = options.lang ? "AND lang = ?" : "";
   const langParam = options.lang ? [options.lang] : [];
 
-  const vector = useVectors ? toVector(await embedOne(question)) : null;
-
   const lists: string[] = [];
+  const names: string[] = [];
   const params: unknown[] = [];
 
   if (vector) {
+    names.push("v");
     lists.push(`
       v AS (
         SELECT lang, page_id, ROW_NUMBER() OVER (ORDER BY distance) AS place
@@ -109,18 +123,46 @@ export const searchArticles = async (
     params.push(vector, ...langParam);
   }
 
-  if (useKeywords) {
+  if (titles) {
+    names.push("t");
     lists.push(`
-      k AS (
-        SELECT lang, page_id, ROW_NUMBER() OVER (ORDER BY relevance DESC) AS place
-        FROM (SELECT lang, page_id,
-                     MATCH(title, text) AGAINST (? IN BOOLEAN MODE) AS relevance
-              FROM article
-              WHERE MATCH(title, text) AGAINST (? IN BOOLEAN MODE)
-                ${options.everything ? "" : "AND history = 1"} ${lang}
+      t AS (
+        SELECT lang, page_id,
+               ROW_NUMBER() OVER (ORDER BY relevance DESC, edits DESC) AS place
+        FROM (SELECT a.lang, a.page_id,
+                     MATCH(a.title) AGAINST (? IN BOOLEAN MODE) AS relevance,
+                     COALESCE(s.edits, 0) AS edits
+              FROM article AS a
+              LEFT JOIN page_stats AS s
+                ON a.lang = 'fi' AND s.page_id = a.page_id
+              WHERE MATCH(a.title) AGAINST (? IN BOOLEAN MODE)
+                ${options.everything ? "" : "AND a.history = 1"}
+                ${options.lang ? "AND a.lang = ?" : ""}
+              ORDER BY relevance DESC, edits DESC
+              LIMIT 60) AS titled)`);
+    params.push(titles, titles, ...langParam);
+  }
+
+  // Only the Finnish history articles are cut into passages, so words
+  // inside an article are found for those, with Finnish stemming.
+  if (stems && (!options.lang || options.lang === "fi")) {
+    names.push("c");
+    lists.push(`
+      c AS (
+        SELECT 'fi' AS lang, page_id,
+               ROW_NUMBER() OVER (ORDER BY relevance DESC) AS place
+        FROM (SELECT p.page_id, MAX(m.relevance) AS relevance
+              FROM (SELECT hash,
+                           MATCH(stems) AGAINST (? IN BOOLEAN MODE) AS relevance
+                    FROM passage_text
+                    WHERE MATCH(stems) AGAINST (? IN BOOLEAN MODE)
+                    ORDER BY relevance DESC
+                    LIMIT 300) AS m
+              JOIN passage AS p USING (hash)
+              GROUP BY p.page_id
               ORDER BY relevance DESC
-              LIMIT 60) AS matched)`);
-    params.push(match, match, ...langParam);
+              LIMIT 60) AS pages)`);
+    params.push(stems, stems);
   }
 
   if (lists.length === 0) {
@@ -133,7 +175,9 @@ export const searchArticles = async (
     };
   }
 
-  const both = vector && useKeywords;
+  const weight = weights(terms);
+  const has = (name: string) => names.includes(name);
+  const rank = (name: string) => (has(name) ? `${name}.place` : "NULL");
 
   const rows = await database.query<{
     lang: string;
@@ -143,24 +187,22 @@ export const searchArticles = async (
     wikidata_id: string | null;
     history: number;
     vector_rank: number | null;
-    keyword_rank: number | null;
+    title_rank: number | null;
+    content_rank: number | null;
     score: number;
     snippet: string;
   }>(
     `WITH ${lists.join(",")}
      SELECT a.lang, a.page_id, a.title, a.url, a.wikidata_id, a.history,
-            ${vector ? "v.place" : "NULL"} AS vector_rank,
-            ${useKeywords ? "k.place" : "NULL"} AS keyword_rank,
-            ${vector ? "COALESCE(1 / (60 + v.place), 0)" : "0"} +
-            ${useKeywords ? "COALESCE(1 / (60 + k.place), 0)" : "0"} AS score,
+            ${rank("v")} AS vector_rank,
+            ${rank("t")} AS title_rank,
+            ${rank("c")} AS content_rank,
+            ${names.map((name) => `COALESCE(${weight[name]} / (60 + ${name}.place), 0)`).join(" + ")}
+              AS score,
             LEFT(a.text, 320) AS snippet
-     FROM (${
-       both
-         ? "SELECT lang, page_id FROM v UNION SELECT lang, page_id FROM k"
-         : `SELECT lang, page_id FROM ${vector ? "v" : "k"}`
-     }) AS found
-     ${vector ? "LEFT JOIN v USING (lang, page_id)" : ""}
-     ${useKeywords ? "LEFT JOIN k USING (lang, page_id)" : ""}
+     FROM (${names.map((name) => `SELECT lang, page_id FROM ${name}`).join(" UNION ")})
+       AS found
+     ${names.map((name) => `LEFT JOIN ${name} USING (lang, page_id)`).join("\n     ")}
      JOIN article AS a USING (lang, page_id)
      ORDER BY score DESC
      LIMIT ${limit * 3}`,
@@ -188,7 +230,10 @@ export const searchArticles = async (
       wikidataId: row.wikidata_id,
       history: row.history === 1,
       vectorRank: row.vector_rank,
-      keywordRank: row.keyword_rank,
+      keywordRank:
+        row.title_rank === null || row.content_rank === null
+          ? (row.title_rank ?? row.content_rank)
+          : Math.min(row.title_rank, row.content_rank),
       score: Number(row.score),
       snippet: row.snippet.replace(/\s+/g, " ").trim(),
       also: [],
@@ -207,6 +252,9 @@ export const searchArticles = async (
 export type Block = {
   hash: string;
   kind: string;
+
+  /** For a heading, how deep it is: 2 for a section, 3 for a subsection. */
+  level: number;
 
   /** Readable text with links, for prose, list items and headings. */
   nodes: Inline[];
@@ -352,6 +400,7 @@ export const readArticle = async (
       return {
         hash: row.hash,
         kind: row.kind,
+        level: row.kind === "heading" ? /^=+/.exec(row.wikitext)![0].length : 0,
         nodes: readable ? inline(row.wikitext) : [],
         text: readable ? clean(row.wikitext) : row.wikitext.slice(0, 160),
         references: references(row.wikitext),
@@ -525,6 +574,49 @@ export const listVersions = async (
       minor: row.minor === 1,
       revert: row.restores !== null,
       undone: row.undone_by !== null,
+    })),
+    sql: database.statements.map(show),
+  };
+};
+
+export type Featured = {
+  pageId: number;
+  title: string;
+  edits: number;
+  editors: number;
+  reverts: number;
+  firstEdit: string;
+};
+
+/** The articles with the longest histories, the ones worth opening first. */
+export const listFeatured = async (
+  limit = 18,
+): Promise<{ articles: Featured[]; sql: Shown[] }> => {
+  const database = db().traced();
+
+  const rows = await database.query<{
+    page_id: number;
+    title: string;
+    edits: number;
+    editors: number;
+    reverts: number;
+    first_edit: string;
+  }>(
+    `SELECT s.page_id, r.title, s.edits, s.editors, s.reverts, s.first_edit
+     FROM page_stats AS s
+     JOIN revision AS r USING (page_id)
+     ORDER BY s.edits DESC
+     LIMIT ${Math.min(limit, 100)}`,
+  );
+
+  return {
+    articles: rows.map((row) => ({
+      pageId: row.page_id,
+      title: row.title,
+      edits: row.edits,
+      editors: row.editors,
+      reverts: Number(row.reverts),
+      firstEdit: row.first_edit,
     })),
     sql: database.statements.map(show),
   };

@@ -10,10 +10,12 @@ export {
   type ArticleSearch,
   type ArticleView,
   type Block,
+  type Featured,
   type Month,
   type Page,
   type Timeline,
   type Version,
+  listFeatured,
   listVersions,
   readArticle,
   readTimeline,
@@ -34,6 +36,7 @@ export { type Evidence, type Source, gatherEvidence } from "./evidence.ts";
 export {
   type PassageHit,
   type PassageSearch,
+  passageSearch,
   searchPassages,
 } from "./passages.ts";
 export { type Shown } from "./sql.ts";

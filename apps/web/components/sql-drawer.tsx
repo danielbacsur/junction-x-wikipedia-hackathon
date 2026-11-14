@@ -3,31 +3,7 @@
 import type { Shown } from "@wtt/package-engine";
 import { useState } from "react";
 
-const KEYWORDS =
-  /\b(WITH|SELECT|FROM|JOIN|LEFT JOIN|USING|ON|WHERE|AND|OR|GROUP BY|ORDER BY|HAVING|LIMIT|AS|UNION ALL|UNION|IN|IS NOT NULL|IS NULL|NOT|OVER|DESC|ASC|INSERT IGNORE INTO|VALUES|FOR SYSTEM_TIME AS OF TIMESTAMP|FOR SYSTEM_TIME ALL|IN BOOLEAN MODE|AGAINST|MATCH|COALESCE|ROW_NUMBER|VEC_DISTANCE_COSINE|VEC_FromText|COUNT|SUM|MIN|MAX|HEX|DISTINCT|EXISTS)\b/g;
-
-/** Marks the words MariaDB reads as commands, and the time travel in red. */
-function Sql({ text }: { text: string }) {
-  const parts = text.split(KEYWORDS);
-
-  return (
-    <pre className="overflow-x-auto font-mono text-[12px] leading-relaxed whitespace-pre text-ink-soft">
-      {parts.map((part, index) =>
-        index % 2 === 0 ? (
-          part
-        ) : part.startsWith("FOR SYSTEM_TIME") || part.startsWith("VEC_") ? (
-          <b key={index} className="font-medium text-rubric">
-            {part}
-          </b>
-        ) : (
-          <b key={index} className="font-medium text-ink">
-            {part}
-          </b>
-        ),
-      )}
-    </pre>
-  );
-}
+import { Sql } from "./sql";
 
 /**
  * The SQL behind whatever is on the page. Every panel has one, because the

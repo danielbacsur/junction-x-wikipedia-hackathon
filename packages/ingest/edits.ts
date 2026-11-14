@@ -1,7 +1,7 @@
 /**
  * Derives the edit table from the revision table: one row per saved
  * version with its place in the article's history and what it reverted.
- * The work is two SQL statements, so MariaDB does all of it.
+ * The work is three SQL statements, so MariaDB does all of it.
  *
  *   node edits.ts
  */
@@ -62,6 +62,17 @@ await timed(
      GROUP BY r.page_id, r.restores + s.seq
    ) AS undone USING (page_id, seq)
    SET e.undone_by = undone.revert_seq`,
+);
+
+await db().query("TRUNCATE TABLE page_stats");
+
+await timed(
+  "page statistics",
+  `INSERT INTO page_stats (page_id, edits, editors, reverts, first_edit, last_edit)
+   SELECT page_id, COUNT(*), COUNT(DISTINCT user), SUM(restores IS NOT NULL),
+          MIN(saved_at), MAX(saved_at)
+   FROM edit
+   GROUP BY page_id`,
 );
 
 const [counts] = await db().query<Record<string, number>>(

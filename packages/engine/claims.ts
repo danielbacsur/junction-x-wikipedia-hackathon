@@ -4,6 +4,7 @@ import { diffWords } from "diff";
 
 import { resolvePage } from "./articles.ts";
 import { type Terms, pickTerms, stemQuery } from "./keywords.ts";
+import { KEYWORD_WEIGHT } from "./passages.ts";
 import { type Shown, show } from "./sql.ts";
 import { LAST_EDIT } from "./time.ts";
 
@@ -236,6 +237,9 @@ export type Trace = {
   alive: boolean;
   days: number;
   stays: number;
+
+  /** Each stretch it stood, oldest first. The last has no end while it stands. */
+  lifetimes: { from: string; to: string | null }[];
   writtenBy: EditRef;
   slot: number;
 };
@@ -259,6 +263,10 @@ export type Tracing = {
 
   /** The earliest moment any of them appeared. */
   earliest: Trace | null;
+
+  /** At most this many wordings are returned, none farther than this. */
+  limit: number;
+  farthest: number;
   sql: Shown[];
 };
 
@@ -303,7 +311,7 @@ export const traceClaim = async (
      }
      SELECT HEX(found.hash) AS hash, t.text, v.distance,
             COALESCE(1 / (60 + v.place), 0)
-            ${match ? "+ COALESCE(1 / (60 + k.place), 0)" : ""} AS score
+            ${match ? `+ COALESCE(${KEYWORD_WEIGHT} / (60 + k.place), 0)` : ""} AS score
      FROM v AS found
      JOIN v USING (hash)
      ${match ? "LEFT JOIN k USING (hash)" : ""}
@@ -320,6 +328,8 @@ export const traceClaim = async (
       terms,
       traces: [],
       earliest: null,
+      limit,
+      farthest: FARTHEST,
       sql: database.statements.map(show),
     };
   }
@@ -355,6 +365,37 @@ export const traceClaim = async (
     [LAST_EDIT, ...hashes],
   );
 
+  // The same rows one by one, to draw each stretch. A row also ends when
+  // a block only moves, so rows that touch are one stretch.
+  const rows = await database.query<{
+    hash: string;
+    page_id: number;
+    row_start: string;
+    row_end: string;
+    current: number;
+  }>(
+    `SELECT HEX(hash) AS hash, page_id, row_start, row_end,
+            row_end > NOW() AS current
+     FROM passage FOR SYSTEM_TIME ALL
+     WHERE hash IN (${marks})
+     ORDER BY hash, page_id, row_start`,
+    hashes,
+  );
+
+  const stretches = new Map<string, { from: string; to: string | null }[]>();
+
+  for (const row of rows) {
+    const key = `${row.hash}:${row.page_id}`;
+    const list = stretches.get(key) ?? [];
+    const last = list.at(-1);
+    const to = row.current ? null : row.row_end;
+
+    if (last && last.to === row.row_start) last.to = to;
+    else list.push({ from: row.row_start, to });
+
+    stretches.set(key, list);
+  }
+
   const writers = await database.query<EditRow>(
     `SELECT rev_id, saved_at, user, editor, comment, undone_by
      FROM edit WHERE rev_id IN (${lives.map(() => "?").join(", ")})`,
@@ -380,7 +421,9 @@ export const traceClaim = async (
         lastSeen: life.alive ? null : life.last_seen,
         alive: life.alive === 1,
         days: Number(life.seconds) / 86_400,
-        stays: life.stays,
+        stays:
+          stretches.get(`${life.hash}:${life.page_id}`)?.length ?? life.stays,
+        lifetimes: stretches.get(`${life.hash}:${life.page_id}`) ?? [],
         writtenBy: editRef(byRev.get(life.first_rev)!),
         slot: life.slot,
       };
@@ -394,5 +437,13 @@ export const traceClaim = async (
     null,
   );
 
-  return { claim, terms, traces, earliest, sql: database.statements.map(show) };
+  return {
+    claim,
+    terms,
+    traces,
+    earliest,
+    limit,
+    farthest: FARTHEST,
+    sql: database.statements.map(show),
+  };
 };

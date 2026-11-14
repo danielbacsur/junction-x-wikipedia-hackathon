@@ -1,24 +1,13 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
-const PAGES = [
-  { href: "/", label: "Ask" },
-  { href: "/read", label: "Read" },
-  { href: "/trace", label: "Trace" },
-  { href: "/atlas", label: "Atlas" },
-  { href: "/agent", label: "Agent" },
-  { href: "/method", label: "Method" },
-];
+import { SiteNav } from "./site-nav";
 
 export function SiteHeader() {
-  const pathname = usePathname();
-
   return (
     <header className="border-b border-rule">
-      <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-8 px-5">
-        <Link href="/" className="group flex items-baseline gap-2">
+      <div className="mx-auto flex min-h-14 w-full max-w-6xl flex-wrap items-center gap-x-8 px-5">
+        <Link href="/" className="group flex h-14 items-baseline gap-2 pt-4">
           {/* The mark is the name written twice, the older copy showing through. */}
           <span className="relative font-serif text-xl font-medium tracking-tight">
             <span
@@ -34,29 +23,11 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="ml-auto flex items-center gap-1 text-sm">
-          {PAGES.map((page) => {
-            const here =
-              page.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(page.href);
-
-            return (
-              <Link
-                key={page.href}
-                href={page.href}
-                aria-current={here ? "page" : undefined}
-                className={`rounded px-2.5 py-1.5 transition-colors ${
-                  here
-                    ? "bg-paper-sunk text-ink"
-                    : "text-ink-soft hover:text-ink"
-                }`}
-              >
-                {page.label}
-              </Link>
-            );
-          })}
-        </nav>
+        {/* Which page is current is only known per request, so the links
+            come without a mark first and gain it when the address is read. */}
+        <Suspense fallback={<SiteNav pathname="" />}>
+          <SiteNav />
+        </Suspense>
       </div>
     </header>
   );
