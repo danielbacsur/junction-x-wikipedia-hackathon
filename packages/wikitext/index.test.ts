@@ -2,7 +2,9 @@ import { describe, expect, it } from "vitest";
 
 import {
   clean,
+  inline,
   joinBlocks,
+  references,
   similarity,
   splitBlocks,
   stems,
@@ -104,6 +106,29 @@ describe("clean", () => {
     expect(
       clean("337&nbsp;000 miestä [https://example.org lähteen] mukaan"),
     ).toBe("337 000 miestä lähteen mukaan");
+  });
+});
+
+describe("inline", () => {
+  it("keeps links to other articles and drops the rest of the markup", () => {
+    const { blocks } = splitBlocks(article);
+
+    expect(inline(blocks[1].text)).toEqual([
+      "Talvisota käytiin ",
+      { link: "Suomi", text: "Suomen" },
+      " ja ",
+      { link: "Neuvostoliitto", text: "Neuvostoliiton" },
+      " välillä. Sota päättyi ",
+      { link: "Moskovan rauhansopimus (1940)", text: "Moskovan rauhaan" },
+      ".",
+    ]);
+  });
+
+  it("counts the references of a block", () => {
+    const { blocks } = splitBlocks(article);
+
+    expect(references(blocks[1].text)).toBe(1);
+    expect(references(blocks[2].text)).toBe(0);
   });
 });
 

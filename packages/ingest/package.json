@@ -12,6 +12,7 @@
   "dependencies": {
     "@duckdb/node-api": "2.0.0-r.1",
     "@wtt/package-db": "0.0.0",
+    "@wtt/package-models": "0.0.0",
     "@wtt/package-wikitext": "0.0.0",
     "fractional-indexing": "4.0.0"
   },

@@ -37,6 +37,14 @@ const config = (): PoolConfig => ({
   database: process.env.DB_NAME ?? "wtt",
   connectionLimit: Number(process.env.DB_POOL ?? 8),
 
+  // The default searches too few candidates for 1024 dimensions: MariaDB
+  // measured 79% recall at 20 and 100% at 80. A rebuilt article can also
+  // be far longer than the megabyte a concatenation is cut at by default.
+  initSql: [
+    "SET mhnsw_ef_search = 80",
+    "SET group_concat_max_len = 1073741824",
+  ],
+
   // Timestamps stay strings: wikipedia's edit times are stored to the
   // microsecond, and a JavaScript date would round two edits into one.
   dateStrings: true,
