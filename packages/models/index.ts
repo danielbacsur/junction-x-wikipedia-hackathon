@@ -73,3 +73,11 @@ const LONGEST_PASSAGE = 6_000;
  */
 export const passageInput = (title: string, text: string) =>
   `${title}\n${text.slice(0, LONGEST_PASSAGE)}`;
+
+export {
+  type ChatModel,
+  type Message,
+  chat,
+  chatModel,
+  streamChat,
+} from "./chat.ts";

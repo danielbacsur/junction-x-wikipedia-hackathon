@@ -2,7 +2,6 @@
   "name": "@wtt/app-web",
   "version": "0.0.0",
   "private": true,
-
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3000",
@@ -10,14 +9,14 @@
     "start": "next start --port 3000",
     "typecheck": "next typegen && tsc"
   },
-
   "dependencies": {
+    "@wtt/package-engine": "0.0.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
-
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^24",
     "@types/react": "^19",

@@ -1,0 +1,29 @@
+{
+  "name": "@wtt/package-engine",
+  "version": "0.0.0",
+  "private": true,
+
+  "type": "module",
+
+  "exports": {
+    ".": "./index.ts"
+  },
+
+  "scripts": {
+    "test": "vitest --run",
+    "typecheck": "tsc"
+  },
+
+  "dependencies": {
+    "@wtt/package-db": "0.0.0",
+    "@wtt/package-models": "0.0.0",
+    "@wtt/package-wikitext": "0.0.0",
+    "diff": "9.0.0"
+  },
+
+  "devDependencies": {
+    "@types/node": "^24",
+    "typescript": "^5",
+    "vitest": "^5"
+  }
+}

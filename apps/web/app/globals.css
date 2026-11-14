@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
+/*
+ * A palimpsest is a page written over many times, with the older writing
+ * still showing through. The interface is paper and ink: one warm surface,
+ * one ink in three strengths, and a red used the way a scribe used it, for
+ * dates and for whatever marks the time.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --paper: #f7f3ea;
+  --paper-raised: #fdfaf3;
+  --paper-sunk: #efe9db;
+  --ink: #1d1a16;
+  --ink-soft: #4d463c;
+  --ink-faint: #8a8172;
+  --rule: #ddd4c1;
+  --rubric: #b23a23;
+  --rubric-wash: #f3ddd4;
+  --added: #23695d;
+  --added-wash: #d9ebe5;
+  --removed: #9b3d2e;
+  --removed-wash: #f4dfd8;
+  --gold: #9a6f14;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #15120f;
+    --paper-raised: #1d1915;
+    --paper-sunk: #100e0b;
+    --ink: #ece5d6;
+    --ink-soft: #bcb3a2;
+    --ink-faint: #81786a;
+    --rule: #332d25;
+    --rubric: #e56a50;
+    --rubric-wash: #3a1d16;
+    --added: #6cc0b0;
+    --added-wash: #14302b;
+    --removed: #e08a78;
+    --removed-wash: #3a1e18;
+    --gold: #d2a441;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rubric: var(--rubric);
+  --color-rubric-wash: var(--rubric-wash);
+  --color-added: var(--added);
+  --color-added-wash: var(--added-wash);
+  --color-removed: var(--removed);
+  --color-removed-wash: var(--removed-wash);
+  --color-gold: var(--gold);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--rubric-wash);
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* The range input that every time dial is built on. */
+.dial {
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dial::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--rule);
+}
+
+.dial::-moz-range-track {
+  height: 2px;
+  background: var(--rule);
+}
+
+.dial::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 22px;
+  margin-top: -10px;
+  border-radius: 2px;
+  background: var(--rubric);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+
+.dial::-moz-range-thumb {
+  width: 14px;
+  height: 22px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--rubric);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.rise {
+  animation: rise 0.35s ease-out both;
+}
+
+@keyframes pulse-ink {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.writing::after {
+  content: "▍";
+  margin-left: 2px;
+  color: var(--rubric);
+  animation: pulse-ink 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .writing::after {
+    animation: none;
+  }
 }
