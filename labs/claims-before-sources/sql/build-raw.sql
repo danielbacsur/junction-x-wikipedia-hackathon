@@ -1,0 +1,1 @@
+CREATE TABLE raw AS SELECT p.page_id,p.slot,p.hash,p.dup,p.born_rev,p.rev_id,p.prev_hash,p.sim,p.row_start a,p.row_end b,f.kind,f.chars,f.has_ref FROM wtt.passage FOR SYSTEM_TIME ALL p JOIN flags f ON f.hash=p.hash WHERE p.slot>0;

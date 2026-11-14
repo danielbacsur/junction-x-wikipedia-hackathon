@@ -1,0 +1,78 @@
+Installed 1 package in 3ms
+database {'query': 'database', 'seconds': 0.0026, 'rows': 0}
+use {'query': 'use', 'seconds': 0.0003, 'rows': 0}
+timezone {'query': 'timezone', 'seconds': 0.0008, 'rows': 0}
+drop-raw {'query': 'drop-raw', 'seconds': 0.0082, 'rows': 0}
+drop-lifetimes {'query': 'drop-lifetimes', 'seconds': 0.001, 'rows': 0}
+drop-presence {'query': 'drop-presence', 'seconds': 0.0046, 'rows': 0}
+drop-firsts {'query': 'drop-firsts', 'seconds': 0.0008, 'rows': 0}
+drop-spread {'query': 'drop-spread', 'seconds': 0.0007, 'rows': 0}
+drop-ranked {'query': 'drop-ranked', 'seconds': 0.0008, 'rows': 0}
+drop-pairs {'query': 'drop-pairs', 'seconds': 0.0146, 'rows': 0}
+drop-edges {'query': 'drop-edges', 'seconds': 0.0027, 'rows': 0}
+drop-events {'query': 'drop-events', 'seconds': 0.0018, 'rows': 0}
+drop-titles {'query': 'drop-titles', 'seconds': 0.0023, 'rows': 0}
+drop-page_birth {'query': 'drop-page_birth', 'seconds': 0.0019, 'rows': 0}
+drop-all_spread {'query': 'drop-all_spread', 'seconds': 0.0009, 'rows': 0}
+titles {'query': 'titles', 'seconds': 0.3042, 'rows': 0}
+titles-index {'query': 'titles-index', 'seconds': 0.0845, 'rows': 0}
+page-birth {'query': 'page-birth', 'seconds': 0.4376, 'rows': 0}
+raw {'query': 'raw', 'seconds': 13.2396, 'rows': 0}
+raw-index {'query': 'raw-index', 'seconds': 0.9264, 'rows': 0}
+lifetimes {'query': 'lifetimes', 'seconds': 8.4247, 'rows': 0}
+presence {'query': 'presence', 'seconds': 8.317, 'rows': 0}
+presence-index {'query': 'presence-index', 'seconds': 1.249, 'rows': 0}
+firsts {'query': 'firsts', 'seconds': 1.4033, 'rows': 0}
+firsts-index {'query': 'firsts-index', 'seconds': 1.1066, 'rows': 0}
+spread {'query': 'spread', 'seconds': 1.3655, 'rows': 0}
+spread-index {'query': 'spread-index', 'seconds': 0.7649, 'rows': 0}
+ranked {'query': 'ranked', 'seconds': 0.4671, 'rows': 0}
+ranked-index {'query': 'ranked-index', 'seconds': 0.0239, 'rows': 0}
+pairs {'query': 'pairs', 'seconds': 0.0251, 'rows': 0}
+edges {'query': 'edges', 'seconds': 0.0664, 'rows': 0}
+events {'query': 'events', 'seconds': 0.0092, 'rows': 0}
+all-spread {'query': 'all-spread', 'seconds': 2.8161, 'rows': 0}
+summary {'query': 'summary', 'seconds': 0.4545, 'rows': 1}
+spread-distribution {'query': 'spread-distribution', 'seconds': 0.1404, 'rows': 11}
+delay-distribution {'query': 'delay-distribution', 'seconds': 0.0055, 'rows': 1}
+delay-bins {'query': 'delay-bins', 'seconds': 0.0052, 'rows': 4}
+journey-candidates {'query': 'journey-candidates', 'seconds': 0.1368, 'rows': 100}
+splits-and-merges {'query': 'splits-and-merges', 'seconds': 0.0152, 'rows': 30}
+event-summary {'query': 'event-summary', 'seconds': 0.0203, 'rows': 1}
+Traceback (most recent call last):
+  File "/Users/danielbacsur/Workspaces/mariadb/labs/sentence-journeys/run.py", line 69, in <module>
+    out('birth-summary',"""SELECT COUNT(DISTINCT f.page_id) any_reused_at_birth,COUNT(DISTINCT CASE WHEN n.paragraphs>=5 THEN f.page_id END) five_reused_at_birth FROM firsts f JOIN page_birth b ON b.page_id=f.page_id AND b.born_at=f.first_at JOIN (SELECT hash,MIN(first_at) first_at FROM firsts GROUP BY hash) g ON g.hash=f.hash AND g.first_at<f.first_at LEFT JOIN (SELECT d.page_id,COUNT(*) paragraphs FROM firsts d JOIN page_birth b ON b.page_id=d.page_id AND b.born_at=d.first_at JOIN (SELECT hash,MIN(first_at) first_at FROM firsts GROUP BY hash) x ON x.hash=d.hash AND x.first_at<d.first_at GROUP BY d.page_id) n ON n.page_id=f.page_id""",unit='articles')
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danielbacsur/Workspaces/mariadb/labs/sentence-journeys/run.py", line 24, in out
+    r=sql(name,s);save(name,title or name,unit,r);return r
+  File "/Users/danielbacsur/Workspaces/mariadb/labs/sentence-journeys/run.py", line 18, in sql
+    with c.cursor() as q:q.execute(s); r=q.fetchall() if q.description else []
+                         ~~~~~~~~~^^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/cursors.py", line 335, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 591, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 867, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 1307, in read
+    self._read_result_packet(first_packet)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 1383, in _read_result_packet
+    self._read_rowdata_packet()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 1430, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/connections.py", line 820, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/danielbacsur/.cache/uv/environments-v2/run-41aaad07335d046e/lib/python3.15/site-packages/pymysql/err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.OperationalError: (1317, 'Query execution was interrupted')

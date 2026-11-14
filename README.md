@@ -132,9 +132,10 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
    with real edit lifetimes it found 13 % of the true ten nearest at
    `mhnsw_ef_search` 80 and 23 % at 1,000, because the time filter is applied
    to what the index returns. A plain vector table joined to lifetimes
-   reached 46 % with 1,000 candidates, and 77 % of those answers were a full
-   page of wrong rows. Exact search over the passages alive in the routed
-   articles has 100 % recall in 20 ms, so that is what the product does.
+   reached 46 % with 1,000 candidates, and 76.8 % of its answers were a full
+   page with a true neighbour missing. Exact search over the passages alive in
+   the routed articles has 100 % recall in 20 ms, so that is what the product
+   does.
    ([labs/temporal-ann](labs/temporal-ann/README.md))
 2. **Full-text search skips history rows.** `MATCH … AGAINST` with
    `FOR SYSTEM_TIME ALL` returns current rows only. That is why wordings live
@@ -178,11 +179,13 @@ every cited passage stood in the version it links to.
 Separate agents explored ideas past the brief, each in its own folder with a
 README of what it measured, including when the answer was no.
 
-| Lab                                                     | What it found                                                                                                                  |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [temporal-ann](labs/temporal-ann/README.md)             | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                 |
-| [history-of-history](labs/history-of-history/README.md) | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about. |
-| [exposure-clock](labs/exposure-clock/README.md)         | How long reverted edits stayed live from 2004 to 2026, and what changed with temporary accounts in 2025.                       |
+| Lab                                                     | What it found                                                                                                                                                       |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [temporal-ann](labs/temporal-ann/README.md)             | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                                                      |
+| [history-of-history](labs/history-of-history/README.md) | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about.                                      |
+| [exposure-clock](labs/exposure-clock/README.md)         | How long reverted edits stayed live from 2004 to 2026, and what changed with temporary accounts in 2025.                                                            |
+| [paragraph-survival](labs/paragraph-survival/README.md) | An exact wording has a half-life of 238 days; one written by a named account lasts sixteen times longer than an anonymous one.                                      |
+| [bitemporal-offices](labs/bitemporal-offices/README.md) | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times. |
 
 ## Layout
 

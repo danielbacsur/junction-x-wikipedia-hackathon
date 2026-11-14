@@ -42,4 +42,4 @@ export {
 export { type Shown } from "./sql.ts";
 export { type Standing, readStanding } from "./standing.ts";
 export { FIRST_EDIT, LAST_EDIT, moment } from "./time.ts";
-export { type Terms } from "./keywords.ts";
+export { type Language, type Terms, languageOf } from "./keywords.ts";

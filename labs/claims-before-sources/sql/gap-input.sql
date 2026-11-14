@@ -1,0 +1,1 @@
+SELECT o.page_id,o.slot,COUNT(*) gaps,SUM(TIMESTAMPDIFF(SECOND,g.previous_end,g.a))/86400 absent_days FROM origins o JOIN slot_gaps g USING(page_id,slot) WHERE g.a<=o.referenced GROUP BY o.page_id,o.slot;

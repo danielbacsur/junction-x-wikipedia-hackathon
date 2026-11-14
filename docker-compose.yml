@@ -4,6 +4,9 @@ services:
   mariadb:
     image: mariadb:lts
 
+    # Come back by itself after a crash or a restart of the machine.
+    restart: unless-stopped
+
     environment:
       MARIADB_DATABASE: wtt
       MARIADB_USER: wtt
@@ -16,7 +19,10 @@ services:
 
       # Bulk loading 12 GB of article history wants a large redo log, and
       # losing the last second of a reloadable dataset is an easy trade.
-      - --innodb-buffer-pool-size=3G
+      # The pool and the vector cache below are sized for a VM with 8 GB:
+      # with a 3 GB pool and a 2 GB cache, a few heavy queries on top took
+      # the server to 7.7 GB and the kernel killed it.
+      - --innodb-buffer-pool-size=2G
       - --innodb-log-file-size=2G
       - --innodb-flush-log-at-trx-commit=2
 
@@ -24,7 +30,7 @@ services:
       - --max-allowed-packet=512M
 
       # The default 16 MB cache holds only a sliver of the vector graphs.
-      - --mhnsw-max-cache-size=2G
+      - --mhnsw-max-cache-size=1G
 
     ports:
       # 3310 stays clear of a local MariaDB and of MariaDB's own demos.

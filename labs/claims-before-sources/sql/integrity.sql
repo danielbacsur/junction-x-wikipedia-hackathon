@@ -1,0 +1,1 @@
+SELECT (SELECT COUNT(*) FROM raw) raw_rows,(SELECT COUNT(*) FROM stays) merged_stays,(SELECT COUNT(*) FROM flags) wording_count,(SELECT COUNT(*) FROM origins) historical_slots,(SELECT COUNT(*) FROM facts WHERE written IS NULL) missing_origin,(SELECT COUNT(*) FROM (SELECT page_id,slot,COUNT(*) n FROM current GROUP BY page_id,slot HAVING n>1) x) duplicate_current_slots;

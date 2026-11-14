@@ -98,6 +98,24 @@ const embedPage = async (pageId: number, history: boolean) => {
   await Promise.all(Array.from({ length: AT_ONCE }, work));
 };
 
+/**
+ * Embeds an article and, when the database or Ollama is briefly away,
+ * waits and tries again. The job runs for hours, and one restart of
+ * either should not end it.
+ */
+const patiently = async (pageId: number, history: boolean) => {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await embedPage(pageId, history);
+    } catch (error) {
+      if (attempt === 60) throw error;
+
+      console.log(`waiting to try again: ${(error as Error).message}`);
+      await new Promise((resolve) => setTimeout(resolve, 10_000));
+    }
+  }
+};
+
 const byEdits = async (limit?: number) =>
   (
     await db().query<{ page_id: number }>(
@@ -110,14 +128,14 @@ const only = argument("--pages");
 const deep = argument("--history");
 
 if (only) {
-  for (const page of only.split(",").map(Number)) await embedPage(page, true);
+  for (const page of only.split(",").map(Number)) await patiently(page, true);
 } else {
   if (deep) {
-    for (const page of await byEdits(Number(deep))) await embedPage(page, true);
+    for (const page of await byEdits(Number(deep))) await patiently(page, true);
     console.log(`history of the ${deep} most edited articles is embedded`);
   }
 
-  for (const page of await byEdits()) await embedPage(page, false);
+  for (const page of await byEdits()) await patiently(page, false);
 }
 
 report("the end", true);

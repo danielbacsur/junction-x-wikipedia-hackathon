@@ -1,0 +1,1 @@
+SELECT a.title source,b.title destination,v.*,e.user editor,e.editor editor_type,e.comment,CONCAT('https://fi.wikipedia.org/?oldid=',v.dst_rev) link FROM events v JOIN titles a ON a.page_id=v.src JOIN titles b ON b.page_id=v.dst LEFT JOIN wtt.edit e ON e.rev_id=v.dst_rev ORDER BY paragraphs DESC,at,src,dst LIMIT 30;

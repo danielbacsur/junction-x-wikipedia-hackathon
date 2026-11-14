@@ -1,0 +1,1 @@
+CREATE TABLE stays AS SELECT page_id,slot,hash,dup,island,MIN(a) a,MAX(b) b,MIN(born_rev) born_rev,MAX(has_ref) has_ref,MIN(kind) kind,MIN(chars) chars,COUNT(*) raw_rows FROM islands GROUP BY page_id,slot,hash,dup,island;

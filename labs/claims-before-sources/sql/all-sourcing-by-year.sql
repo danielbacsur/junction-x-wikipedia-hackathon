@@ -1,0 +1,1 @@
+SELECT YEAR(o.written) year,COUNT(*) paragraphs,SUM(COALESCE(o.referenced=o.written,0)) born_referenced,100*SUM(COALESCE(o.referenced=o.written,0))/COUNT(*) born_referenced_pct FROM origins o JOIN first_versions v USING(page_id,slot) WHERE v.kind='prose' AND v.chars>=80 GROUP BY YEAR(o.written);

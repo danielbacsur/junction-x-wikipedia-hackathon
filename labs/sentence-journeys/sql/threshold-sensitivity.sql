@@ -1,0 +1,1 @@
+SELECT n.threshold,COUNT(*) events FROM (SELECT 3 threshold UNION ALL SELECT 5 UNION ALL SELECT 10) n JOIN (SELECT src,dst,dst_rev,COUNT(*) paragraphs FROM edges GROUP BY src,dst,dst_rev) e ON e.paragraphs>=n.threshold GROUP BY n.threshold;

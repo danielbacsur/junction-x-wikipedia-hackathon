@@ -1,0 +1,1 @@
+SELECT r.page_id,HEX(r.hash) h,r.dup,r.a,r.b FROM raw r JOIN (SELECT page_id,hash,dup FROM stays GROUP BY page_id,hash,dup ORDER BY page_id,hash,dup LIMIT 200) k USING(page_id,hash,dup) WHERE r.b>r.a ORDER BY page_id,hash,dup,a,b;

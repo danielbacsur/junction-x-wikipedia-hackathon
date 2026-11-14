@@ -16,14 +16,30 @@ const ASKING = new Set(
    det att en ett`.split(/\s+/),
 );
 
-// Words only English or Swedish use. One of them in a question means the
-// question is not Finnish.
-const NOT_FINNISH = new Set(
+// Words only English or only Swedish use. One of them in a question means
+// the question is not Finnish, and says which language to answer in.
+const ENGLISH = new Set(
   `the of which what who whom whose when where why how did does was were is
-   are and for from with about that this in to by an
-   och vem vilka vad när varför hur många av på det den som för från med
-   att är`.split(/\s+/),
+   are and for from with about that this in to by an`.split(/\s+/),
 );
+
+const SWEDISH = new Set(
+  `och vem vilka vilken vad när varför hur många av på det den som för från
+   med att är var hände vilket`.split(/\s+/),
+);
+
+export type Language = "fi" | "sv" | "en";
+
+/** The language a question is written in, as far as its small words tell. */
+export const languageOf = (question: string): Language => {
+  const asked = words(question);
+
+  if (asked.some((word) => SWEDISH.has(word)) || /å/i.test(question))
+    return "sv";
+  if (asked.some((word) => ENGLISH.has(word))) return "en";
+
+  return "fi";
+};
 
 export type Terms = {
   /** The stems full-text search is asked for, rarest first. */
@@ -47,7 +63,7 @@ export type Terms = {
  */
 export const pickTerms = async (db: Db, question: string): Promise<Terms> => {
   const asked = words(question);
-  const foreign = asked.some((word) => NOT_FINNISH.has(word));
+  const foreign = languageOf(question) !== "fi";
 
   const content = asked.filter(
     // A short number is a quantity, not a name: "25" matches everything.

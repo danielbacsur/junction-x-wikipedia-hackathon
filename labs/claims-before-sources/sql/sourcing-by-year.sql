@@ -1,0 +1,1 @@
+SELECT YEAR(written) year,COUNT(*) paragraphs,SUM(referenced=written) born_referenced,100*SUM(COALESCE(referenced=written,0))/COUNT(*) born_referenced_pct FROM facts WHERE written IS NOT NULL GROUP BY YEAR(written);

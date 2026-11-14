@@ -1,0 +1,1 @@
+SELECT COUNT(*) events,SUM(moved>=5) move_events,SUM(retained>=5) copy_events,COUNT(DISTINCT dst) destinations,SUM(COALESCE(e.comment,'') REGEXP 'siirr|siirt|yhdist|kopio|jaett|eriyt|split|merg|mov|cop') corroborated FROM events v LEFT JOIN wtt.edit e ON e.rev_id=v.dst_rev;

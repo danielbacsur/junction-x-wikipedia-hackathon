@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT f.page_id) articles,COUNT(DISTINCT f.hash) hashes FROM firsts f JOIN wtt.passage_text t USING(hash) WHERE t.text=(SELECT text FROM wtt.passage_text WHERE hash=UNHEX('DC4E2656304FF854')) COLLATE utf8mb4_bin;

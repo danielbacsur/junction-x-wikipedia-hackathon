@@ -1,0 +1,1 @@
+CREATE TABLE km AS SELECT *,IF(SUM(deaths=at_risk) OVER w>0,0,EXP(SUM(IF(deaths<at_risk,LN(1-deaths*1e0/at_risk),0)) OVER w)) survival FROM risk WINDOW w AS (PARTITION BY endpoint,dimension,grp ORDER BY duration ROWS UNBOUNDED PRECEDING);

@@ -1,0 +1,1 @@
+ALTER TABLE titles ADD PRIMARY KEY(page_id);

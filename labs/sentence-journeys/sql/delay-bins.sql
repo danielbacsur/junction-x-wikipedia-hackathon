@@ -1,0 +1,1 @@
+SELECT CASE WHEN delay_seconds=0 THEN '0 tied' WHEN delay_seconds<=3600 THEN '1 within hour' WHEN delay_seconds<=86400 THEN '2 hour to day' WHEN delay_seconds<=31536000 THEN '3 day to year' ELSE '4 over year' END bin,COUNT(*) wordings FROM pairs GROUP BY bin ORDER BY bin;

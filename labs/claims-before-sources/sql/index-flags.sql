@@ -1,0 +1,1 @@
+ALTER TABLE flags ADD PRIMARY KEY(hash);

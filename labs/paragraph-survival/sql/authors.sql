@@ -1,0 +1,1 @@
+SELECT author,COUNT(*) wording_stays,SUM(duration)/86400 wording_days,SUM(standing) still_standing FROM facts WHERE kind='prose' AND editor='named' GROUP BY BINARY author ORDER BY wording_days DESC LIMIT 100;

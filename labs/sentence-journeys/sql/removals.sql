@@ -1,0 +1,1 @@
+CREATE TABLE removals AS SELECT DISTINCT v.src,v.dst,v.dst_rev,s.src_end,e.rev_id,e.user,e.comment FROM events v JOIN edges s ON s.src=v.src AND s.dst=v.dst AND s.dst_rev=v.dst_rev JOIN wtt.edit e ON e.page_id=v.src AND e.saved_at=s.src_end WHERE s.near_removal=1;

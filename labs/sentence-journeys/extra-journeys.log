@@ -1,0 +1,8 @@
+extra-use {'query': 'extra-use', 'seconds': 0.0003, 'rows': 0}
+extra-zone {'query': 'extra-zone', 'seconds': 0.0003, 'rows': 0}
+journey-paths {'query': 'journey-paths', 'seconds': 0.0052, 'rows': 123}
+drop-removals {'query': 'drop-removals', 'seconds': 0.0053, 'rows': 0}
+removals {'query': 'removals', 'seconds': 0.0142, 'rows': 0}
+removal-details {'query': 'removal-details', 'seconds': 0.0008, 'rows': 68}
+corroboration {'query': 'corroboration', 'seconds': 0.0018, 'rows': 1}
+threshold-sensitivity {'query': 'threshold-sensitivity', 'seconds': 0.0014, 'rows': 3}

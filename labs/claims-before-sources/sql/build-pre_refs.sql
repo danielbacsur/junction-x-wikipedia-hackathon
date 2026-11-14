@@ -1,0 +1,1 @@
+CREATE TABLE pre_refs AS SELECT * FROM (SELECT s.page_id,s.slot,s.hash,s.a,s.b,s.born_rev,ROW_NUMBER() OVER(PARTITION BY s.page_id,s.slot ORDER BY s.a DESC,s.born_rev DESC,s.hash) rn FROM stays s JOIN first_refs f ON f.page_id=s.page_id AND f.slot=s.slot WHERE s.a<f.a AND s.b>=f.a AND NOT s.has_ref) z WHERE rn=1;

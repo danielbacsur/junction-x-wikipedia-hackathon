@@ -1,0 +1,1 @@
+ALTER TABLE spread ADD PRIMARY KEY(hash);

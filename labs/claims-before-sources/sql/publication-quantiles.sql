@@ -1,0 +1,1 @@
+SELECT DISTINCT COUNT(*) OVER() n,PERCENTILE_CONT(.25) WITHIN GROUP(ORDER BY publication_year-written_year) OVER() p25,PERCENTILE_CONT(.5) WITHIN GROUP(ORDER BY publication_year-written_year) OVER() median,PERCENTILE_CONT(.75) WITHIN GROUP(ORDER BY publication_year-written_year) OVER() p75 FROM citation_dates WHERE publication_year IS NOT NULL;

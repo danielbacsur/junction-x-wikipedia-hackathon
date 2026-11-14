@@ -1,0 +1,14 @@
+database {'query': 'database', 'seconds': 0.0003, 'rows': 0}
+use {'query': 'use', 'seconds': 0.0003, 'rows': 0}
+timezone {'query': 'timezone', 'seconds': 0.0003, 'rows': 0}
+summary {'query': 'summary', 'seconds': 1.2692, 'rows': 1}
+spread-distribution {'query': 'spread-distribution', 'seconds': 0.0928, 'rows': 11}
+delay-distribution {'query': 'delay-distribution', 'seconds': 0.0102, 'rows': 1}
+delay-bins {'query': 'delay-bins', 'seconds': 0.0019, 'rows': 4}
+journey-candidates {'query': 'journey-candidates', 'seconds': 0.0858, 'rows': 100}
+splits-and-merges {'query': 'splits-and-merges', 'seconds': 0.0162, 'rows': 30}
+event-summary {'query': 'event-summary', 'seconds': 0.0266, 'rows': 1}
+birth-summary {'query': 'birth-summary', 'seconds': 1.6669, 'rows': 1}
+survival {'query': 'survival', 'seconds': 0.0253, 'rows': 1}
+boilerplate {'query': 'boilerplate', 'seconds': 8.4291, 'rows': 40}
+integrity {'query': 'integrity', 'seconds': 2.4122, 'rows': 1}

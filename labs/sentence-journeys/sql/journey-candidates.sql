@@ -1,0 +1,1 @@
+SELECT HEX(s.hash) hash,s.articles,s.current_articles,t.chars,LEFT(t.text,1500) text FROM spread s JOIN wtt.passage_text t USING(hash) WHERE s.articles>=2 ORDER BY s.articles DESC,t.chars DESC,hash LIMIT 100;

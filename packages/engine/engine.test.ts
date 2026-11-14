@@ -48,26 +48,63 @@ describe("moment", () => {
 });
 
 describe("checkAnswer", () => {
+  const sources = [
+    "Urho Kekkonen oli presidentti 1956–1982.",
+    "Suomalaisten tappiot olivat 26 662 sotatoimissa kuollutta.",
+    "Hän erosi 27. tammikuuta 1982 sairauden vuoksi.",
+  ];
+
   it("keeps the citations of each sentence and marks the ones without", () => {
-    const sentences = checkAnswer(
-      "Kekkonen oli presidentti 1956–1982. [1] Hän erosi sairauden vuoksi [2][3]. " +
+    const checked = checkAnswer(
+      "Kekkonen oli presidentti 1956–1982. [1] Hän erosi sairauden vuoksi [1, 3]. " +
         "Tätä ei sanota missään. Väite viittaa olemattomaan. [9]",
-      3,
+      sources,
     );
 
-    expect(sentences.map((sentence) => sentence.cites)).toEqual([
+    expect(checked.map((sentence) => sentence.cites)).toEqual([
       [1],
-      [2, 3],
+      [1, 3],
       [],
       [9],
     ]);
-    expect(sentences.map((sentence) => sentence.supported)).toEqual([
+    expect(checked.map((sentence) => sentence.supported)).toEqual([
       true,
       true,
       false,
       false,
     ]);
-    expect(sentences[0].text).toBe("Kekkonen oli presidentti 1956–1982.");
+    expect(checked[0].text).toBe("Kekkonen oli presidentti 1956–1982.");
+  });
+
+  it("does not end a sentence at the stop of a Finnish date", () => {
+    const checked = checkAnswer(
+      "Hän erosi 27. tammikuuta 1982 sairauden vuoksi [3].",
+      sources,
+    );
+
+    expect(checked).toHaveLength(1);
+    expect(checked[0].supported).toBe(true);
+  });
+
+  it("does not end a sentence at an initial", () => {
+    const checked = checkAnswer(
+      "K. J. Ståhlberg oli ensimmäinen presidentti [1].",
+      sources,
+    );
+
+    expect(checked.map((sentence) => sentence.text)).toEqual([
+      "K. J. Ståhlberg oli ensimmäinen presidentti.",
+    ]);
+  });
+
+  it("accepts a number however it is grouped, and catches one that is not there", () => {
+    const [right, wrong] = checkAnswer(
+      "Finnish losses were 26,662 killed [2]. Another source says 95,348 [2].",
+      sources,
+    );
+
+    expect(right).toMatchObject({ supported: true, missing: [] });
+    expect(wrong).toMatchObject({ supported: false, missing: ["95,348"] });
   });
 });
 

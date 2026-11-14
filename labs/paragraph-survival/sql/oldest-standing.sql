@@ -1,0 +1,1 @@
+SELECT r.title,f.page_id,HEX(f.hash) hash,f.dup,t.text,f.a written_at,f.birth_edit_at,f.author,f.born_rev,f.duration/86400 days,f.source_rows,CONCAT('https://fi.wikipedia.org/?oldid=',f.born_rev) url FROM facts f JOIN wtt.passage_text t ON t.hash=f.hash JOIN wtt.revision r ON r.page_id=f.page_id WHERE f.kind='prose' AND f.standing=1 ORDER BY f.a,f.page_id,f.hash LIMIT 25;

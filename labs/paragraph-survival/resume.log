@@ -1,0 +1,17 @@
+{'query': 'drop-km', 'seconds': 0.0053, 'rows': 0}
+{'query': 'build-km', 'seconds': 50.0657, 'rows': 0}
+{'query': 'index-km', 'seconds': 5.3326, 'rows': 0}
+{'query': 'medians', 'seconds': 3.0521, 'rows': 63}
+{'query': 'drop-ages', 'seconds': 0.0096, 'rows': 0}
+{'query': 'build-ages', 'seconds': 0.0102, 'rows': 0}
+{'query': 'drop-curve_groups', 'seconds': 0.0049, 'rows': 0}
+{'query': 'build-curve_groups', 'seconds': 3.204, 'rows': 0}
+{'query': 'survival-curves', 'seconds': 17.6969, 'rows': 1701}
+{'query': 'drop-bands', 'seconds': 0.0227, 'rows': 0}
+{'query': 'build-bands', 'seconds': 0.0239, 'rows': 0}
+{'query': 'hazard-by-age', 'seconds': 3.7218, 'rows': 10}
+{'query': 'oldest-standing', 'seconds': 0.6878, 'rows': 25}
+{'query': 'retraction-index', 'seconds': 2.996, 'rows': 30}
+{'query': 'authors', 'seconds': 1.4911, 'rows': 100}
+{'query': 'summary', 'seconds': 0.6964, 'rows': 1}
+{'query': 'integrity', 'seconds': 3.711, 'rows': 1}

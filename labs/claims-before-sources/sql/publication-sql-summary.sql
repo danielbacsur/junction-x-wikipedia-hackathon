@@ -1,0 +1,1 @@
+SELECT COUNT(*) references_n,COUNT(publication_year) parsed_n,100*COUNT(publication_year)/COUNT(*) parsed_pct,SUM(unresolved_named) unresolved_named,SUM(publication_year>2026) future_years,SUM(publication_year>written_year) positive_gap,SUM(publication_year=written_year) zero_gap,SUM(publication_year<written_year) negative_gap FROM citation_dates;

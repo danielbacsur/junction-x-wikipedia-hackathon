@@ -101,7 +101,7 @@ These are supplied-label results, not comparisons of editor quality. Named edits
 
 ### Temporary accounts: an observational before/after comparison
 
-First appearance in this sample: **2025-09-10 18:02:57 UTC**. This is a sample observation, not independently verified deployment timing. Before = March–August 2025; after = October 2025–March 2026; omit September's transition. The seasonal reference is October 2024–March 2025. All are six complete months; the seasonal reference overlaps the before window in March and is not an independent control.
+First appearance in this sample: **2025-09-10 18:02:57 UTC**. This is a sample observation, not independently verified deployment timing. Before = March–August 2025; after = October 2025–March 2026; omit September's transition. The seasonal reference is October 2024–February 2025: the query selects October–March, but its `CASE` gives March 2025 to the before window, so the reference holds five months (the monthly file confirms 1,910 edits and 490 undone from October to February). Before and after are six complete months each, and the reference is not an independent control.
 
 | Window | Editor | Edits | Observed undone, any lag/self | Nonself ≤7d | Share % | Conditional median seconds | Conditional p90 seconds |
 |---|---|---|---|---|---|---|---|

@@ -1,9 +1,20 @@
 import { type Message, chatModel, streamChat } from "@wtt/package-models";
 
 import type { Evidence } from "./evidence.ts";
+import { languageOf } from "./keywords.ts";
 import { LAST_EDIT } from "./time.ts";
 
 const day = (at: string) => at.slice(0, 10);
+
+const LANGUAGE = { fi: "Finnish", sv: "Swedish", en: "English" };
+
+// Said last and in the language itself, which a small model obeys more
+// often than an instruction in English at the top.
+const REMINDER = {
+  fi: "Vastaa suomeksi.",
+  sv: "Svara på svenska.",
+  en: "Answer in English.",
+};
 
 /**
  * What the model is told. It may only restate the numbered passages, and
@@ -12,6 +23,7 @@ const day = (at: string) => at.slice(0, 10);
  */
 export const answerPrompt = (evidence: Evidence): Message[] => {
   const date = day(evidence.at ?? LAST_EDIT);
+  const language = LANGUAGE[languageOf(evidence.question)];
 
   const sources = evidence.sources
     .map(
@@ -28,7 +40,7 @@ export const answerPrompt = (evidence: Evidence): Message[] => {
         `You answer questions about what Finnish Wikipedia said on ${date}. ` +
         `You are given numbered passages, in Finnish, that stood in Wikipedia ` +
         `on that date. Answer only from them, in two to four short sentences, ` +
-        `in the language of the question. Translate carefully: "kaatunut" and ` +
+        `in ${language}, the language of the question. Translate carefully: "kaatunut" and ` +
         `"menehtynyt" mean killed, "haavoittunut" means wounded. Copy every ` +
         `number and name exactly as the passage has it. End every sentence ` +
         `with the number of the passage it comes from, like [1] or [2][3]. Do ` +
@@ -39,35 +51,80 @@ export const answerPrompt = (evidence: Evidence): Message[] => {
     },
     {
       role: "user",
-      content: `Passages:\n\n${sources}\n\nQuestion: ${evidence.question}`,
+      content:
+        `Passages:\n\n${sources}\n\nQuestion: ${evidence.question}\n\n` +
+        REMINDER[languageOf(evidence.question)],
     },
   ];
 };
 
 /** One sentence of an answer with the passages it cites. */
-export type Sentence = { text: string; cites: number[]; supported: boolean };
+export type Sentence = {
+  text: string;
+  cites: number[];
+
+  /** It cites passages that were given, and its numbers are in them. */
+  supported: boolean;
+
+  /** Numbers in the sentence that none of its cited passages contain. */
+  missing: string[];
+};
+
+/** The digits of a text, so "26 662", "26,662" and "26.662" are one number. */
+const digits = (text: string) => text.replace(/\D/g, "");
 
 /**
- * Splits an answer into sentences and checks every citation in code. A
- * sentence that cites nothing, or a passage that was never given, is
- * marked as unsupported instead of being trusted.
+ * Where an answer's sentences end. A full stop ends a sentence only when a
+ * capital letter or the end of the text follows, because Finnish writes
+ * dates as "13. maaliskuuta" and those stops end nothing. Neither does the
+ * stop after an initial, as in "K. J. Ståhlberg".
  */
-export const checkAnswer = (answer: string, sources: number): Sentence[] =>
-  (answer.match(/[^.!?\n]+(?:[.!?]+|$)(?:\s*\[\d+\])*/g) ?? [])
-    .map((part) => part.trim())
-    .filter(Boolean)
-    .map((part) => {
-      const cites = [...part.matchAll(/\[(\d+)\]/g)].map((match) =>
-        Number(match[1]),
-      );
+const sentences = (answer: string): string[] => {
+  const found: string[] = [];
+  const stop =
+    /(?<!(?:^|[\s(])\p{Lu})[.!?]+(?:[\s,]*\[[\d,\s]+\])*(?=\s+[\p{Lu}"“”'(]|\s*$)/gu;
+  let from = 0;
 
-      return {
-        text: part.replace(/\s*\[\d+\]/g, "").trim(),
-        cites,
-        supported:
-          cites.length > 0 &&
-          cites.every((cite) => cite >= 1 && cite <= sources),
-      };
+  for (let match = stop.exec(answer); match; match = stop.exec(answer)) {
+    found.push(answer.slice(from, match.index + match[0].length));
+    from = match.index + match[0].length;
+  }
+
+  if (answer.slice(from).trim()) found.push(answer.slice(from));
+
+  return found.map((part) => part.trim()).filter(Boolean);
+};
+
+/**
+ * Splits an answer into sentences and checks each one in code. A sentence
+ * that cites nothing, cites a passage that was never given, or states a
+ * number that is not in the passages it cites is marked as unsupported
+ * instead of being trusted. A small model writes fluent sentences around
+ * wrong figures, and this is the check that catches them.
+ */
+export const checkAnswer = (answer: string, sources: string[]): Sentence[] =>
+  sentences(answer)
+    .map((part) => {
+      // A model writes [2][5] or [2, 5]; both cite passages 2 and 5.
+      const cites = [...part.matchAll(/\[([\d,\s]+)\]/g)].flatMap((match) =>
+        match[1].split(",").map(Number).filter(Boolean),
+      );
+      const text = part.replace(/\s*\[[\d,\s]+\]/g, "").trim();
+      const valid =
+        cites.length > 0 &&
+        cites.every((cite) => cite >= 1 && cite <= sources.length);
+
+      const cited = valid ? cites.map((cite) => digits(sources[cite - 1])) : [];
+
+      // Single digits are left alone: "one of the two" is not a figure.
+      const missing = valid
+        ? (text.match(/\d[\d\s.,\u00a0\u202f]*\d/g) ?? []).filter(
+            (number) =>
+              !cited.some((passage) => passage.includes(digits(number))),
+          )
+        : [];
+
+      return { text, cites, supported: valid && missing.length === 0, missing };
     })
     .filter((sentence) => sentence.text.length > 0);
 

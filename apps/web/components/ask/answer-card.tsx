@@ -236,7 +236,9 @@ export function AnswerCard({
                 title={
                   sentence.supported
                     ? undefined
-                    : "The model gave no valid passage for this sentence."
+                    : sentence.missing.length > 0
+                      ? `Not in the passage this sentence cites: ${sentence.missing.join(", ")}`
+                      : "The model gave no valid passage for this sentence."
                 }
                 className={
                   sentence.supported
@@ -267,7 +269,7 @@ export function AnswerCard({
             below in {(asked.answerMs / 1000).toFixed(1)} s. Passages found in{" "}
             {asked.evidenceMs} ms
             {asked.sentences.some((sentence) => !sentence.supported) &&
-              ". Dotted sentences cite no passage and should not be trusted"}
+              ". Dotted sentences cite no passage, or state a number that is not in the passage they cite, and should not be trusted"}
             .
           </p>
         )}

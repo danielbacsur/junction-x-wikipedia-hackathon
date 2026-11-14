@@ -56,7 +56,7 @@ const FINDINGS = [
   {
     title:
       "A versioned table can carry a vector index, and you should not search it as of a date.",
-    body: "FOR SYSTEM_TIME AS OF with ORDER BY VEC_DISTANCE_COSINE … LIMIT runs and uses the index. On 272,661 vectors with real edit lifetimes it found 13% of the true ten nearest at ef_search 80, and 23% at 1,000: the time filter is applied to what the index returns, and the index returns mostly dead rows. A plain vector table joined to lifetimes did no better (46% with 1,000 candidates, and 77% of those answers were a full page of wrong rows). So the product finds the articles first and then compares every passage that stood in them that day, exactly: 100% recall in 20 ms.",
+    body: "FOR SYSTEM_TIME AS OF with ORDER BY VEC_DISTANCE_COSINE … LIMIT runs and uses the index. On 272,661 vectors with real edit lifetimes it found 13% of the true ten nearest at ef_search 80, and 23% at 1,000: the time filter is applied to what the index returns, and the index returns mostly dead rows. A plain vector table joined to lifetimes did no better (46% with 1,000 candidates, and 76.8% of its answers were a full page with a true neighbour missing). So the product finds the articles first and then compares every passage that stood in them that day, exactly: 100% recall in 20 ms.",
     source: "labs/temporal-ann",
   },
   {

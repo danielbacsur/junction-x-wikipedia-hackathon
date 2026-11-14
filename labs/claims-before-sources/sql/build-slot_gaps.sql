@@ -1,0 +1,1 @@
+CREATE TABLE slot_gaps AS SELECT page_id,slot,a,previous_end FROM (SELECT page_id,slot,a,MAX(b) OVER(PARTITION BY page_id,slot ORDER BY a,b ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING) previous_end FROM stays) x WHERE a>previous_end;

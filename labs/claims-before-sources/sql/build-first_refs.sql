@@ -1,0 +1,1 @@
+CREATE TABLE first_refs AS SELECT * FROM (SELECT s.*,ROW_NUMBER() OVER(PARTITION BY s.page_id,s.slot ORDER BY s.a,s.born_rev,s.hash,s.dup) rn FROM stays s JOIN origins o ON o.page_id=s.page_id AND o.slot=s.slot WHERE s.a=o.referenced AND s.has_ref) z WHERE rn=1;

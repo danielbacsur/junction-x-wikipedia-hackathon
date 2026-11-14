@@ -47,7 +47,10 @@ export const GET = async (request: Request) => {
         send({
           type: "done",
           answer,
-          sentences: checkAnswer(answer, evidence.sources.length),
+          sentences: checkAnswer(
+            answer,
+            evidence.sources.map((source) => source.text),
+          ),
           model: answerModel(),
           ms: Math.round(performance.now() - found),
         });

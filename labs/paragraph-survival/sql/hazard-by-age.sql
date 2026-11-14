@@ -1,0 +1,1 @@
+SELECT lo/86400 from_days,hi/86400 to_days,COUNT(*) entering,SUM(event AND duration<hi) deaths,SUM(LEAST(duration,hi)-lo)/86400 at_risk_days,SUM(event AND duration<hi)/NULLIF(SUM(LEAST(duration,hi)-lo)/86400,0)*1000 deaths_per_1000_days FROM facts JOIN bands ON duration>=lo WHERE kind='prose' GROUP BY lo,hi ORDER BY lo;

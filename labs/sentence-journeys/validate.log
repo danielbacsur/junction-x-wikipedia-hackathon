@@ -1,0 +1,11 @@
+validate-use {'query': 'validate-use', 'seconds': 0.0003, 'rows': 0}
+validate-zone {'query': 'validate-zone', 'seconds': 0.0003, 'rows': 0}
+validate-raw {'query': 'validate-raw', 'seconds': 0.702, 'rows': 5028}
+validate-presence {'query': 'validate-presence', 'seconds': 0.5681, 'rows': 4499}
+validate-current {'query': 'validate-current', 'seconds': 1.1999, 'rows': 1}
+edge-audit {'query': 'edge-audit', 'seconds': 0.001, 'rows': 1}
+same-reading-text {'query': 'same-reading-text', 'seconds': 0.0448, 'rows': 1}
+evacuation-reading-text {'query': 'evacuation-reading-text', 'seconds': 0.5065, 'rows': 1}
+event-concentration {'query': 'event-concentration', 'seconds': 0.0055, 'rows': 1}
+list-scale {'query': 'list-scale', 'seconds': 0.7754, 'rows': 1}
+window-sensitivity {'query': 'window-sensitivity', 'seconds': 0.0123, 'rows': 178}

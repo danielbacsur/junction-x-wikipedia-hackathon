@@ -1,0 +1,2 @@
+SELECT COUNT(*) prose_wordings,SUM(articles>=2) shared,SUM(articles>=5) five_plus,SUM(articles>=20) twenty_plus,SUM(current_articles>=2) current_shared,MAX(articles) max_articles,
+ (SELECT COUNT(*) FROM titles) articles,(SELECT COUNT(*) FROM raw) raw_rows,(SELECT COUNT(*) FROM lifetimes) duplicate_lifetimes,(SELECT COUNT(*) FROM presence) page_lifetimes,(SELECT MAX(saved_at) FROM wtt.edit) cutoff FROM spread;

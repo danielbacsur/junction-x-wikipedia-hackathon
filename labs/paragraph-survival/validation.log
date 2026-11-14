@@ -1,0 +1,42 @@
+Installed 2 packages in 30ms
+[
+  {
+    "check": "km-wording",
+    "seconds": 2.419275457999902,
+    "max_absolute_error": 3.441691376337985e-14,
+    "n": 876011
+  },
+  {
+    "check": "km-wording_raw",
+    "seconds": 2.7760177919990383,
+    "max_absolute_error": 6.59472476627343e-14,
+    "n": 876011
+  },
+  {
+    "check": "km-slot",
+    "seconds": 0.7562570000009146,
+    "max_absolute_error": 5.662137425588298e-15,
+    "n": 181867
+  },
+  {
+    "check": "duration-conservation",
+    "seconds": 2.3516869580198545,
+    "equal": true
+  },
+  {
+    "check": "overlap",
+    "seconds": 5.817861500021536,
+    "violations": 0
+  },
+  {
+    "check": "merge-sample",
+    "seconds": 0.023573333979584277
+  },
+  {
+    "check": "merge-expected",
+    "seconds": 0.002430624997941777,
+    "keys": 200,
+    "merged_stays": 253,
+    "equal": true
+  }
+]

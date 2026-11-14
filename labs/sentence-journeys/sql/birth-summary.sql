@@ -1,0 +1,1 @@
+WITH reused AS (SELECT d.page_id,COUNT(*) paragraphs FROM ranked d JOIN page_birth b ON b.page_id=d.page_id AND b.born_at=d.first_at JOIN ranked a ON a.hash=d.hash AND a.pos=1 AND a.first_at<d.first_at GROUP BY d.page_id) SELECT COUNT(*) any_reused_at_birth,SUM(paragraphs>=5) five_reused_at_birth FROM reused;

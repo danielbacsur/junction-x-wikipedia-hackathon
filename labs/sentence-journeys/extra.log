@@ -1,0 +1,20 @@
+Installed 1 package in 2ms
+extra-use {'query': 'extra-use', 'seconds': 0.0005, 'rows': 0}
+extra-zone {'query': 'extra-zone', 'seconds': 0.0003, 'rows': 0}
+journey-paths {'query': 'journey-paths', 'seconds': 0.0223, 'rows': 123}
+drop-removals {'query': 'drop-removals', 'seconds': 0.0035, 'rows': 0}
+removals {'query': 'removals', 'seconds': 0.0652, 'rows': 0}
+removal-details {'query': 'removal-details', 'seconds': 0.0015, 'rows': 69}
+corroboration {'query': 'corroboration', 'seconds': 0.0124, 'rows': 1}
+threshold-sensitivity {'query': 'threshold-sensitivity', 'seconds': 0.0043, 'rows': 3}
+drop-sentence-map {'query': 'drop-sentence-map', 'seconds': 0.0037, 'rows': 0}
+sentence-map-schema {'query': 'sentence-map-schema', 'seconds': 0.0047, 'rows': 0}
+drop-sentence-text {'query': 'drop-sentence-text', 'seconds': 0.0068, 'rows': 0}
+sentence-text-schema {'query': 'sentence-text-schema', 'seconds': 0.0046, 'rows': 0}
+sentence-input {'query': 'sentence-input', 'seconds': 11.1252, 'rows': 848430}
+drop-hash-pages {'query': 'drop-hash-pages', 'seconds': 0.0058, 'rows': 0}
+hash-pages {'query': 'hash-pages', 'seconds': 12.4345, 'rows': 0}
+hash-pages-index {'query': 'hash-pages-index', 'seconds': 0.7558, 'rows': 0}
+drop-sentence-counts {'query': 'drop-sentence-counts', 'seconds': 0.0032, 'rows': 0}
+sentence-counts {'query': 'sentence-counts', 'seconds': 10.3949, 'rows': 0}
+boilerplate-sentences {'query': 'boilerplate-sentences', 'seconds': 4.1233, 'rows': 40}
