@@ -362,34 +362,56 @@ const loadShard = async (pages: number[], label: string) => {
     let current: unknown[][] = [];
     let texts: unknown[][] = [];
 
+    // Shards write the same wordings at the same time, and InnoDB settles
+    // a clash by rolling one of them back, so that one simply goes again.
+    const retrying = async (work: () => Promise<void>) => {
+      for (let attempt = 1; ; attempt++) {
+        try {
+          return await work();
+        } catch (error) {
+          const deadlock = (error as { errno?: number }).errno === 1213;
+          if (!deadlock || attempt === 10) throw error;
+        }
+      }
+    };
+
     const flush = async () => {
-      await session.query("START TRANSACTION");
+      // Wordings go first and on their own: they are shared between
+      // articles, and sorting them makes every shard lock in the same order.
+      texts.sort((a, b) => Buffer.compare(a[0] as Buffer, b[0] as Buffer));
 
-      for (let i = 0; i < texts.length; i += 5_000) {
-        await session.batch(
-          `INSERT IGNORE INTO passage_text (hash, kind, chars, wikitext, text, stems)
-           VALUES (?, ?, ?, ?, ?, ?)`,
-          texts.slice(i, i + 5_000),
+      for (let i = 0; i < texts.length; i += 2_000) {
+        await retrying(() =>
+          session.batch(
+            `INSERT IGNORE INTO passage_text (hash, kind, chars, wikitext, text, stems)
+             VALUES (?, ?, ?, ?, ?, ?)`,
+            texts.slice(i, i + 2_000),
+          ),
         );
       }
 
-      for (let i = 0; i < history.length; i += 10_000) {
-        await session.batch(
-          `INSERT INTO passage (${columns}, row_start, row_end)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-          history.slice(i, i + 10_000),
-        );
-      }
+      await retrying(async () => {
+        await session.query("START TRANSACTION");
 
-      for (let i = 0; i < current.length; i += 10_000) {
-        await session.batch(
-          `INSERT INTO passage (${columns}, row_start)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-          current.slice(i, i + 10_000),
-        );
-      }
+        for (let i = 0; i < history.length; i += 10_000) {
+          await session.batch(
+            `INSERT INTO passage (${columns}, row_start, row_end)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            history.slice(i, i + 10_000),
+          );
+        }
 
-      await session.query("COMMIT");
+        for (let i = 0; i < current.length; i += 10_000) {
+          await session.batch(
+            `INSERT INTO passage (${columns}, row_start)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            current.slice(i, i + 10_000),
+          );
+        }
+
+        await session.query("COMMIT");
+      });
+
       history = [];
       current = [];
       texts = [];
