@@ -11,11 +11,16 @@ const provider = createOpenAICompatible({
   baseURL: remote ?? `${process.env.OLLAMA_URL ?? "http://127.0.0.1:11434"}/v1`,
   apiKey: process.env.LLM_API_KEY,
   includeUsage: true,
+  transformRequestBody: remote
+    ? undefined
+    : (body) => ({ ...body, temperature: 0 }),
 });
 
 export default defineAgent({
   model: provider(process.env.LLM_MODEL ?? "gemma4:e2b"),
   defaultTools: false,
+  // Keep the small local model focused on tool calls and concise replies.
+  reasoning: remote ? "provider-default" : "none",
 
   // Ollama allocates this much for the model, and eve compacts before it.
   modelContextWindowTokens: 32_000,
