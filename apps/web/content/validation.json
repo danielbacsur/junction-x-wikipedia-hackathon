@@ -1,0 +1,152 @@
+{
+  "validatedAt": "2026-11-14T11:22:36.204Z",
+  "deep": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "every row of the datasets is in the database",
+      "ok": true,
+      "detail": "862,076 versions of 19,742 articles, 568,416 current articles, 29,460 article vectors",
+      "numbers": {
+        "articlesFi": 19285,
+        "articlesSv": 4921,
+        "articlesEn": 5254,
+        "vectors": 29460,
+        "versions": 862076,
+        "versionedArticles": 19742,
+        "allFinnish": 568416
+      },
+      "seconds": 1.688092833
+    },
+    {
+      "name": "stored versions carry the text wikipedia hashed",
+      "ok": true,
+      "detail": "299 of 300 match wikipedia's sha1, 1 are pre-2006 versions hashed before utf-8, 0 are wrong",
+      "numbers": {
+        "sampled": 300,
+        "match": 299,
+        "legacy": 1,
+        "wrong": 0
+      },
+      "seconds": 13.329469916999999
+    },
+    {
+      "name": "asking for a date returns the version live at that moment",
+      "ok": true,
+      "detail": "500 of 500 random moments return the right version, and nothing exists before the first edit",
+      "numbers": {
+        "moments": 500,
+        "wrong": 0,
+        "beforeFirstEdit": 0
+      },
+      "seconds": 3.5530449169999994
+    },
+    {
+      "name": "two edits in one second stay two versions",
+      "ok": true,
+      "detail": "20 versions were moved by microseconds to keep their order, and no two share a timestamp",
+      "numbers": {
+        "same": 0,
+        "moved": 20
+      },
+      "seconds": 0.9563277499999967
+    },
+    {
+      "name": "every version rebuilds from its passages",
+      "ok": true,
+      "detail": "300 of 300 versions rebuilt byte for byte from their blocks, 300 match wikipedia's own sha1, 0 have a sha1 from before utf-8 (11.2 s)",
+      "numbers": {
+        "checked": 300,
+        "different": 0,
+        "matchWikipedia": 300,
+        "legacy": 0
+      },
+      "seconds": 11.178829333999998
+    },
+    {
+      "name": "search pinned to a date never returns text from another time",
+      "ok": true,
+      "detail": "40 of 40 removed wordings are found inside their lifetime, 0 leaked outside it",
+      "numbers": {
+        "wordings": 40,
+        "inside": 40,
+        "leaked": 0
+      },
+      "seconds": 25.876310667000002
+    },
+    {
+      "name": "every cited passage stood in the cited version",
+      "ok": true,
+      "detail": "40 of 40 sources across 5 questions stood in the version they link to",
+      "numbers": {
+        "questions": 5,
+        "sources": 40,
+        "wrong": 0
+      },
+      "seconds": 12.990325667000004
+    }
+  ],
+  "corpus": {
+    "liveBlocks": 692910,
+    "wordings": 1630250,
+    "searchableWordings": 960142,
+    "embeddedWordings": 84916,
+    "wordingMb": 745,
+    "wholeCopyMb": 12163,
+    "reverts": 46334,
+    "undone": 70176,
+    "editors": 73430
+  },
+  "tables": [
+    {
+      "name": "revision",
+      "rows": 1566016,
+      "mb": 6537
+    },
+    {
+      "name": "article",
+      "rows": 483080,
+      "mb": 2293
+    },
+    {
+      "name": "passage_text",
+      "rows": 1472983,
+      "mb": 1408
+    },
+    {
+      "name": "passage_vector",
+      "rows": 40326,
+      "mb": 851
+    },
+    {
+      "name": "passage",
+      "rows": 2959028,
+      "mb": 784
+    },
+    {
+      "name": "article_vector",
+      "rows": 19252,
+      "mb": 258
+    },
+    {
+      "name": "edit",
+      "rows": 837029,
+      "mb": 253
+    },
+    {
+      "name": "term",
+      "rows": 188518,
+      "mb": 13
+    },
+    {
+      "name": "article_category",
+      "rows": 25788,
+      "mb": 4
+    },
+    {
+      "name": "category_link",
+      "rows": 1760,
+      "mb": 0
+    }
+  ]
+}

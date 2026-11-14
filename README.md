@@ -1,0 +1,215 @@
+# Palimpsest
+
+Ask what Wikipedia said on any day, and see how it got from there to here.
+
+A palimpsest is a page written over many times, with the older writing still
+showing through. This is Finnish Wikipedia's history of Finland as one: every
+paragraph of 862,076 article versions is a row in a MariaDB system-versioned
+table that lives exactly as long as its wording stood, and vector search and
+full-text search find the wordings by meaning and by word.
+
+Built at Junction 2026 for MariaDB's challenge _Wikipedia Through Time_, on
+the both-tracks path: vector search and system-versioned tables in the same
+statements.
+
+## What you can do with it
+
+- **Ask** a question in English, Finnish or Swedish with a year on a dial.
+  The answer is written only from paragraphs that stood in Wikipedia that
+  day, next to the answer from the latest version, and each cited paragraph
+  says whether it survived, was reworded or is gone, with the changed words
+  marked. In 2007 the Winter War article gave 26 600 Finnish dead; today the
+  same paragraph says 26 662.
+- **Read** any of 19,742 articles as it stood on any day since 2003. A mark
+  beside each paragraph shows how old its wording was that day, and who wrote
+  it. Compare two dates, replay the article's whole history, or open the life
+  of one paragraph.
+- **Trace** a claim: paste a sentence and see every wording that meant the
+  same across all of history, when each one stood and who wrote it. "When did
+  Wikipedia start saying this?"
+- **Atlas**: what the edits themselves say. An edit that renames the war of
+  1918 to the White side's name is undone 70 % of the time, the reverse 7 %.
+  A reverted edit stays live for a median of 15 minutes.
+- **Agent**: a historian running on a local Gemma model that looks things up
+  with the same queries and shows the SQL of every step.
+- Every panel has a drawer with the SQL MariaDB ran for it, and its timing.
+
+## Run it
+
+You need Node 24 or later, Docker, [Ollama](https://ollama.com) and the
+GitHub CLI for the dataset downloads. No account or API key.
+
+```bash
+npm install
+npm run db                     # MariaDB 12.3 (mariadb:lts) on port 3310
+
+# the three datasets MariaDB publishes for the challenge, 966 MB
+for set in s m l; do
+  mkdir -p data/$set
+  gh release download $set-2026-10 -R MariaDB/mariadb-wikipedia-datasets -D data/$set
+done
+
+npm run load                   # schema and every loader, about ten minutes
+ollama pull bge-m3 && ollama pull gemma4:e2b
+npm run embed                  # vectors for paragraphs, resumable, runs for hours
+npm run dev                    # web on :3000, the historian agent on :3001
+```
+
+Search works on whatever is embedded so far, and paragraphs a question needs
+are embedded on the spot. To check everything against its sources:
+
+```bash
+npm run validate               # seven checks against the parquet files and wikipedia's sha1
+npm run evaluate               # MariaDB's own 37 test questions
+npm test                       # unit tests, and engine tests against the loaded database
+npm run e2e -w @wtt/app-web    # every journey in a real browser
+```
+
+To answer with a hosted model instead of local Gemma, such as NVIDIA
+Nemotron, set `LLM_BASE_URL`, `LLM_API_KEY` and `LLM_MODEL` to any
+OpenAI-compatible endpoint. Retrieval and embeddings stay local either way.
+
+## How it works
+
+One table carries the idea:
+
+```sql
+CREATE TABLE passage (
+  page_id   INT UNSIGNED NOT NULL,
+  hash      BINARY(8)    NOT NULL,      -- the wording, stored once in passage_text
+  dup       SMALLINT UNSIGNED NOT NULL, -- nth copy within the article
+  ord       VARBINARY(255) NOT NULL,    -- sorts the article's blocks
+  gap       INT UNSIGNED NOT NULL,      -- empty lines right before it
+  born_rev  INT UNSIGNED NOT NULL,      -- the version that wrote the wording
+  slot      INT UNSIGNED NOT NULL,      -- our reading: which paragraph it is
+  row_start TIMESTAMP(6) GENERATED ALWAYS AS ROW START INVISIBLE,
+  row_end   TIMESTAMP(6) GENERATED ALWAYS AS ROW END INVISIBLE,
+  PERIOD FOR SYSTEM_TIME (row_start, row_end),
+  PRIMARY KEY (page_id, hash, dup)
+) WITH SYSTEM VERSIONING;
+```
+
+A loader walks every version of every article, cuts the wikitext into blocks
+and compares each version with the one before. A block's row starts with the
+edit that wrote its wording and ends with the edit that changed or removed
+it, written with Wikipedia's real timestamps through
+`system_versioning_insert_history`. Its history rows are its lifetimes. The
+words sit once per wording in `passage_text` with Finnish stems and a
+full-text index, the vectors in `passage_vector`, and time always comes from
+joining the versioned table:
+
+```sql
+-- the article exactly as saved, rebuilt from its blocks
+SELECT GROUP_CONCAT(CONCAT(REPEAT('\n', p.gap), t.wikitext)
+                    ORDER BY p.ord SEPARATOR '\n')
+FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP '2008-12-31 23:59:59' AS p
+JOIN passage_text AS t USING (hash)
+WHERE p.page_id = 1256;
+```
+
+Hashing that result gives the sha1 Wikipedia published for the version.
+
+The whole copies are kept too, in a system-versioned `revision` table like
+the one in MariaDB's own demo but for all 19,742 articles, as the
+authoritative source and as the baseline to compare against.
+
+What MariaDB returns (a wording, its dates, who saved it) is treated as
+evidence. What we infer (that two wordings are the same paragraph rewritten,
+that a passage means what a question asks) is labelled as our reading and
+shows its score. That line came out of an argument between two models
+reviewing the design, and it is kept on every page.
+
+## What we found
+
+Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
+
+1. **A versioned table can carry a vector index, and you should not search it
+   as of a date.** The query runs and uses the index, but on 272,661 vectors
+   with real edit lifetimes it found 13 % of the true ten nearest at
+   `mhnsw_ef_search` 80 and 23 % at 1,000, because the time filter is applied
+   to what the index returns. A plain vector table joined to lifetimes
+   reached 46 % with 1,000 candidates, and 77 % of those answers were a full
+   page of wrong rows. Exact search over the passages alive in the routed
+   articles has 100 % recall in 20 ms, so that is what the product does.
+   ([labs/temporal-ann](labs/temporal-ann/README.md))
+2. **Full-text search skips history rows.** `MATCH … AGAINST` with
+   `FOR SYSTEM_TIME ALL` returns current rows only. That is why wordings live
+   in a plain table and only their presence is versioned.
+3. **One common word turns a 50 ms full-text search into 25 seconds.** A
+   table of how many wordings each stem is in lets search send only the rare
+   stems and require the rarest.
+4. **Paragraphs with lifetimes are sixteen times smaller than whole copies:**
+   12.2 GB of wikitext in 862,076 versions is 0.75 GB as 1,630,250 distinct
+   wordings and 2,972,662 lifetimes, and every version still rebuilds byte
+   for byte.
+5. **All 862,076 versions load in 103 seconds** with their real timestamps,
+   about 8,000 a second. MariaDB's demo loaded 50 articles.
+6. **The sequence engine turned a ten minute update into five seconds:**
+   marking the versions a revert undid as a join on `seq_1_to_5000` instead
+   of a range join.
+7. **MariaDB has no Finnish stemmer,** so stems are a column, and
+   Mannerheim, Mannerheimin and Mannerheimille become one word.
+8. **Wikipedia's oldest sha1 values do not fit its own text:** a few
+   versions from 2003 to 2005 were hashed before conversion to UTF-8.
+
+| Step                                                                      | Rows              | Time                     |
+| ------------------------------------------------------------------------- | ----------------- | ------------------------ |
+| History of Finland articles, three languages, with vectors and HNSW index | 29,460            | 31 s                     |
+| All current Finnish articles with a full-text index                       | 568,416           | 222 s                    |
+| Every version into the system-versioned table                             | 862,076           | 103 s                    |
+| Slim edit table with reverts, derived in SQL                              | 862,076           | 22 s                     |
+| Passage lifetimes, six processes                                          | 2,972,662         | about 2 min              |
+| Stem counts                                                               | 205,939           | 17 s                     |
+| Paragraph vectors with bge-m3 through Ollama                              | about 40 a second | hours, in the background |
+
+`npm run validate` passes seven checks: every row of the datasets is in the
+database, stored text hashes to Wikipedia's sha1, 500 random moments return
+the version an independent lookup says was live, same-second edits stay
+distinct, sampled versions rebuild from their passages inside MariaDB, a
+search pinned to a date never returns a wording outside its lifetime, and
+every cited passage stood in the version it links to.
+
+## Labs
+
+Separate agents explored ideas past the brief, each in its own folder with a
+README of what it measured, including when the answer was no.
+
+| Lab                                                     | What it found                                                                                                                  |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [temporal-ann](labs/temporal-ann/README.md)             | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                 |
+| [history-of-history](labs/history-of-history/README.md) | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about. |
+| [exposure-clock](labs/exposure-clock/README.md)         | How long reverted edits stayed live from 2004 to 2026, and what changed with temporary accounts in 2025.                       |
+
+## Layout
+
+```
+apps/web            Next.js 16: the pages and the json routes under app/api
+agents/historian    eve agent on local Gemma with tools over the engine
+packages/db         connection pool that records its SQL, schema, migrations
+packages/wikitext   wikitext into blocks that rebuild exactly; cleaning; stems
+packages/ingest     loaders, embedding job, validate, evaluate
+packages/engine     search, time travel, comparison, tracing, evidence
+packages/models     bge-m3 embeddings and the chat model
+labs                experiments, one folder each
+```
+
+## What this is not
+
+- Live Wikipedia. Histories end on 1 October 2026 and current article text is
+  from August 2025.
+- Complete. Only Finnish articles on the history of Finland have their
+  history loaded, and vectors are still being computed for older wordings.
+- Free of hindsight. Which article a question is about is decided with
+  today's article vectors. What gets cited is decided from passages that
+  stood on the date.
+- A judge of intent. A revert is a revert, not an edit war, and a wording
+  that vanished is not a retraction until a person has read it.
+
+## Credits
+
+The datasets, and the two demos this builds on, are by the
+[MariaDB Foundation](https://github.com/MariaDB/mariadb-wikipedia-datasets).
+Wikipedia's text is under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); every row
+keeps the article's page id and revision id, so every result links back to
+the version it came from. The code is under the [MIT licence](LICENSE).

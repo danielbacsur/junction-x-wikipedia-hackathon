@@ -6,12 +6,17 @@
   "type": "module",
 
   "scripts": {
-    "typecheck": "tsc"
+    "embed": "node embed.ts",
+    "evaluate": "node evaluate.ts --out ../../apps/web/content/evaluation.json",
+    "load": "node articles.ts && node revisions.ts && node edits.ts && node passages.ts && node terms.ts",
+    "typecheck": "tsc",
+    "validate": "node validate.ts --out ../../apps/web/content/validation.json"
   },
 
   "dependencies": {
     "@duckdb/node-api": "2.0.0-r.1",
     "@wtt/package-db": "0.0.0",
+    "@wtt/package-engine": "0.0.0",
     "@wtt/package-models": "0.0.0",
     "@wtt/package-wikitext": "0.0.0",
     "fractional-indexing": "4.0.0"

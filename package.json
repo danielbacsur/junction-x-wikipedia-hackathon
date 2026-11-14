@@ -7,9 +7,13 @@
     "build": "turbo run build",
     "db": "docker compose up --detach --wait",
     "dev": "turbo run dev",
+    "embed": "npm run embed -w @wtt/package-ingest",
+    "evaluate": "npm run evaluate -w @wtt/package-ingest",
     "lint": "turbo run lint",
+    "load": "npm run migrate -w @wtt/package-db && npm run load -w @wtt/package-ingest",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "validate": "npm run validate -w @wtt/package-ingest"
   },
 
   "devDependencies": {
