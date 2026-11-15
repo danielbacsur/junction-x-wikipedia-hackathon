@@ -40,6 +40,7 @@ export type Wording = {
   /** How alike it is to the wording before it, from 0 to 1. */
   similarity: number | null;
   words: { text: string; added?: boolean; removed?: boolean }[];
+  lifetimes?: { from: string; to: string | null }[];
 };
 
 export type Biography = {
@@ -206,10 +207,14 @@ export const readBiography = async (
              WHERE page_id = p.page_id AND hash = p.hash)
            WHERE p.page_id = ? AND p.slot = ?
            GROUP BY p.hash
-           ORDER BY first_seen
-           LIMIT 200`,
+           ORDER BY first_seen`,
           [page.pageId, slot],
         );
+
+  const chainRows = slot === 0 ? [] : await database.query<{
+    hash: string; row_start: string; row_end: string; current: number; born_rev: number;
+  }>(`SELECT HEX(hash) AS hash, row_start, row_end, row_end > NOW() AS current, born_rev
+      FROM passage FOR SYSTEM_TIME ALL WHERE page_id = ? AND slot = ? ORDER BY row_start`, [page.pageId, slot]);
 
   return {
     pageId: page.pageId,
@@ -223,6 +228,7 @@ export const readBiography = async (
     slot,
     wordings: chain.map((row, index) => ({
       hash: row.hash,
+      lifetimes: stays(chainRows.filter(r => r.hash === row.hash)).map(({ from, to }) => ({ from, to })),
       text: row.text,
       firstSeen: row.first_seen,
       lastSeen: row.current ? null : row.last_seen,
@@ -325,6 +331,7 @@ export type Tracing = {
 
   /** How far beyond the closest wording "earliest" may be. */
   near: number;
+  coverage: { indexCandidates: number; candidates: number; matched: number; shown: number; exhaustive: boolean };
   sql: Shown[];
 };
 
@@ -348,10 +355,8 @@ export const traceClaim = async (
   const match = stemQuery(terms);
   const limit = count(options.limit, 24, 60);
 
-  // A number of one digit is left alone, as it is when an answer is checked.
-  const asked = figures(claim).filter(
-    (figure) => figure.written.replace(/\D/g, "").length > 1,
-  );
+  // Check every written figure, including single digits.
+  const asked = figures(claim);
 
   const nothing = {
     claim,
@@ -364,6 +369,7 @@ export const traceClaim = async (
     limit,
     farthest: FARTHEST,
     near: NEAR,
+    coverage: { indexCandidates: NEAREST, candidates: 0, matched: 0, shown: 0, exhaustive: false },
   };
 
   type Candidate = {
@@ -401,7 +407,7 @@ export const traceClaim = async (
      JOIN passage_text AS t USING (hash)
      WHERE v.distance <= ${FARTHEST}
      ORDER BY score DESC
-     LIMIT ${limit * 4}`,
+     LIMIT ${NEAREST}`,
       match ? [to, match, match] : [to],
     );
 
@@ -524,9 +530,21 @@ export const traceClaim = async (
               ),
       };
     })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+    .sort((a, b) => b.score - a.score);
 
+  const summary = summarizeTraces(traces, limit, NEAR);
+
+  return {
+    ...nothing,
+    subject,
+    ...summary,
+    coverage: { indexCandidates: NEAREST, candidates: candidates.length, matched: traces.length, shown: Math.min(limit, traces.length), exhaustive: false },
+    sql: database.statements.map(show),
+  };
+};
+
+/** Select oldest matches from all retrieved histories before limiting the display. */
+export const summarizeTraces = (traces: Trace[], limit: number, near: number) => {
   const first = (among: Trace[]) =>
     among.reduce<Trace | null>(
       (earliest, trace) =>
@@ -535,14 +553,7 @@ export const traceClaim = async (
     );
 
   const closest = Math.min(...traces.map((trace) => trace.distance!));
-  const close = traces.filter((trace) => trace.distance! <= closest + NEAR);
+  const close = traces.filter((trace) => trace.distance! <= closest + near);
 
-  return {
-    ...nothing,
-    subject,
-    traces,
-    earliest: first(close),
-    earliestSaying: first(close.filter((trace) => trace.saysFigures)),
-    sql: database.statements.map(show),
-  };
+  return { traces: traces.slice(0, limit), earliest: first(close), earliestSaying: first(close.filter(t => t.saysFigures)) };
 };
