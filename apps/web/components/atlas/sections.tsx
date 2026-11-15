@@ -10,10 +10,12 @@ import {
   exposure,
   journeys,
   names,
+  numbers,
   offices,
   peakOf,
   reading,
   readings,
+  scale,
   snapshots,
   sourcing,
   survival,
@@ -27,18 +29,24 @@ import { duration, fullDay, percent } from "./format";
 import { Journeys as JourneysChart, Transfers } from "./journeys";
 import { MainArticle } from "./main-article";
 import { NameSwaps } from "./name-swaps";
+import { Substitutions, Unsettled } from "./numbers";
 import { Offices as OfficesChart } from "./offices";
 import * as queries from "./queries";
 import {
   CANDIDATE_OVERLAP,
   EXACT_GLOBAL_1000,
+  FULL_FIWIKI,
   JOURNEY,
   ONE_ACCOUNT_2008,
   ONE_BOOK_1975,
   PLAN_AT_1000,
   REWRITE,
+  SCALE_SETUP,
+  WINTER_WAR,
   WORDING_AT_LEAST,
+  YEAR_SHAPED,
 } from "./quoted";
+import { Growth, Rows, Times, WrongAnswers, Yearly } from "./scale";
 import { Search as SearchChart, Shapes } from "./search";
 import { N, Section } from "./section";
 import { Audit, Sourcing } from "./sources";
@@ -55,6 +63,8 @@ const SURVIVAL = "labs/paragraph-survival";
 const OFFICES = "labs/bitemporal-offices";
 const JOURNEYS = "labs/sentence-journeys";
 const SOURCES = "labs/claims-before-sources";
+const NUMBERS = "labs/numbers-that-moved";
+const SCALE = "labs/history-at-scale";
 
 /* ── The name of the war ──────────────────────────────────────────────── */
 
@@ -817,6 +827,239 @@ function Sources() {
   );
 }
 
+/* ── Numbers that moved ───────────────────────────────────────────────── */
+
+const judged = (verdict: string) =>
+  numbers.audit.filter((row) => row.verdict === verdict).length;
+
+function Numbers() {
+  const { kinds, size, stood } = numbers;
+
+  return (
+    <Section
+      id="numbers"
+      lab="Numbers that moved · figures that changed while the words stayed"
+      title={
+        <>
+          Wikipedia replaced one number and left every other character of the
+          sentence alone <N>{number(numbers.all)}</N> times.{" "}
+          <N>{number(numbers.kept)}</N> remain when neither figure may have come
+          in with an edit that was reverted.
+        </>
+      }
+      figure={
+        <>
+          <Substitutions />
+          <Unsettled />
+        </>
+      }
+      facts={[
+        {
+          value: `${number(kinds.quantity)} / ${number(kinds.year)} / ${number(kinds.date)}`,
+          label: `quantities, year-shaped numbers and dates among the ${number(numbers.kept)}. ${kinds.mixed} more change from one kind to another. Year-shaped is an ungrouped integer from ${YEAR_SHAPED.from} to ${YEAR_SHAPED.to} with no unit after it: a rule of thumb, not a reading.`,
+        },
+        {
+          value: `${stood.old.medianDays.toFixed(1)} → ${stood.new.medianDays.toFixed(1)} days`,
+          label: `median observed stay of the figure that was replaced, then of the one that replaced it. ${stood.new.standing} of the new ones still stand, so theirs is a lower bound. With the reverted edits left in: ${stood.oldOfAll.medianDays.toFixed(1)} and ${stood.newOfAll.medianDays.toFixed(1)}.`,
+        },
+        {
+          value: `${number(size.kept.oneDigitReplaced.count)} of ${number(size.kept.quantities)}`,
+          label: `kept changes of a quantity differ in one digit at the same length. ${size.kept.oneDigitMore.count} add or drop a digit and ${size.kept.twoDigitsSwapped.count} swap two. A shape of the digits, not proof of a typo.`,
+        },
+        {
+          value: `${numbers.positions} positions`,
+          label: `changed at least twice without a reverted edit and held three values or came back to an earlier one. ${numbers.withReturn} came back.`,
+        },
+        {
+          value: `${number(numbers.formattingOnly)} + ${number(numbers.severalNumbers)}`,
+          label:
+            "changes the strict rule leaves out: the same number written another way, and edits that changed more than one number at once",
+        },
+      ]}
+      queries={queries.NUMBERS}
+      source={NUMBERS}
+    >
+      <p>
+        A substitution is two wordings of one paragraph, one straight after the
+        other, that differ in exactly one number and in nothing else, not a
+        comma and not a space. The lab read {number(numbers.proseRows)}{" "}
+        lifetimes of prose paragraphs in {number(numbers.scanned)} articles and
+        found {number(numbers.all)} of them in {number(numbers.articles)}{" "}
+        articles. The filter looks at the two edits that brought the old figure
+        and the new one. If either was later marked as reverted, the
+        substitution is set aside, and with it the repair that puts a vandalised
+        number back. {number(numbers.kept)} remain, among them{" "}
+        {WINTER_WAR.article} going from {WINTER_WAR.old} to {WINTER_WAR.new} on{" "}
+        {day(WINTER_WAR.at)}.
+      </p>
+      <p>
+        The lab does not decide which number is true. An edit that nobody
+        reverted is not an edit that was accepted: mistakes that survived,
+        partial reverts and disagreements are all among the{" "}
+        {number(numbers.kept)}. The rule is strict on purpose. It misses a
+        correction that came with any rewording, and when the prose around a
+        number is rephrased the stay of the figure ends here although the claim
+        lives on. The stays are observed lengths, not survival estimates. The
+        split by account is a description and not a judgement of quality:
+        nothing is adjusted for the year or the topic of the edit, and the first
+        temporary account edits on {day(corpus.firstTemporaryAccount)}, so those
+        figures have had the least time to be replaced.
+      </p>
+      <p>
+        Many of the least settled figures are counts that are meant to move:
+        infections, the population of a municipality, the date of a list of
+        shareholders. The lab read the first kept substitution of each of its{" "}
+        {numbers.audit.length} least settled figures, with both sentences, both
+        edit summaries and the wikitext of the paragraph.{" "}
+        {judged("update to newer data")} are updates to newer data,{" "}
+        {judged("unclear")} could not be told apart from a correction,{" "}
+        {judged("correction with a source")} is a correction with a source, and
+        none was read as a dispute between sources or as vandalism that
+        survived. These are the readings of a research agent, not of an
+        independent editor. No outside source was opened, the{" "}
+        {numbers.audit.length} are not a random sample, and no other change was
+        classified. A figure that changes often is not thereby disputed.
+      </p>
+    </Section>
+  );
+}
+
+/* ── History at scale ─────────────────────────────────────────────────── */
+
+const TALVISOTA = "talvisota";
+const HALONEN = "halonen";
+
+const mebibytes = (bytes: number) => number(Math.round(bytes / 2 ** 20));
+
+function Scale() {
+  const [early] = scale.moments;
+  const now = scale.moments[scale.moments.length - 1];
+
+  const [talvisota] = scale.indexes(TALVISOTA);
+  const [halonen] = scale.indexes(HALONEN);
+
+  /** The moments at which the optimizer stayed on the key it had at first. */
+  const stayed = scale
+    .indexes(HALONEN)
+    .filter((row) => row.chosen.key === halonen.chosen.key);
+  const moved = scale
+    .indexes(HALONEN)
+    .filter((row) => row.chosen.key !== halonen.chosen.key);
+
+  const flatToday = scale.inside("flat", HALONEN, now);
+  const twoToday = scale.inside("hc", HALONEN, now);
+  const [layoutsToday] = scale.layouts(HALONEN).slice(-1);
+  const [indexesToday] = scale.indexes(HALONEN).slice(-1);
+
+  const { search } = scale.yearly;
+  const count = scale.grown("primary", "global", null, scale.countedAt);
+  const read = scale.grown("primary", "blocks", TALVISOTA, early);
+  const [smallest] = scale.sizes;
+  const largest = scale.sizes[scale.sizes.length - 1];
+
+  return (
+    <Section
+      id="scale"
+      lab="History at scale · what a versioned table costs as its past grows"
+      title={
+        <>
+          To return the <N>{talvisota.primary.returned}</N> blocks of Talvisota
+          as of the end of {early.slice(0, 4)}, MariaDB read{" "}
+          <N>{number(talvisota.primary.read)}</N> rows: every row the article
+          ever had. With both ends of the period in one index it reads{" "}
+          <N>{talvisota.per.read}</N>.
+        </>
+      }
+      figure={
+        <>
+          <Rows />
+          <Times />
+          <Yearly />
+          <WrongAnswers />
+          <Growth />
+        </>
+      }
+      facts={[
+        {
+          value: `${(scale.rows / scale.current).toFixed(2)} rows`,
+          label: `over all time for each current one: ${number(scale.rows)} in passage, ${number(scale.current)} of them current. A current read through the primary key steps over the rest.`,
+        },
+        {
+          value: `${halonen.pe.ms.toFixed(1)} ms`,
+          label: `for Tarja Halonen as of ${day(early)} through KEY (page_id, row_end), against ${halonen.primary.ms.toFixed(2)} ms with no period index. It lacks row_start, so each of ${number(halonen.pe.checked)} entries costs a trip to the row. KEY (page_id, row_end, row_start) takes ${halonen.per.ms.toFixed(2)} ms.`,
+        },
+        {
+          value: `${halonen.chosen.key}`,
+          label: `is the key the optimizer kept for Tarja Halonen as of ${stayed.map((row) => day(row.asOf)).join(" and ")}, with every index present: ${halonen.chosen.ms.toFixed(2)} ms at the first, where the forced KEY (page_id, row_start) takes ${halonen.ps.ms.toFixed(2)}. From ${day(moved[0].asOf)} on, and for the current rows, it went to ${[...new Set(moved.map((row) => row.chosen.key?.split(",")[0]))].join(" or ")}.`,
+        },
+        {
+          value: `${number(flatToday.read)} → ${number(twoToday.read)}`,
+          label: `rows read for the current Tarja Halonen once history and current rows are two partitions: ${twoToday.pages} InnoDB pages in place of ${flatToday.pages}, ${twoToday.ms} ms inside the server in place of ${flatToday.ms}, ${layoutsToday.two.ms.toFixed(2)} ms at the client in place of ${layoutsToday.flat.ms.toFixed(2)}. Reads as of a date do not change.`,
+        },
+        {
+          value: `${number(search.yearly.read)} / ${number(search.flat.read)}`,
+          label: `rows read by the search join as of ${day(early)}, in yearly partitions and flat: each candidate wording is looked up in every partition that pruning leaves. ${search.yearly.ms.toFixed(1)} ms against ${search.flat.ms.toFixed(1)}.`,
+        },
+        {
+          value: `${(count[0].ms / 1000).toFixed(1)} s → ${(count[count.length - 1].ms / 1000).toFixed(1)} s`,
+          label: `to count every passage that stood on ${day(count[0].asOf)}, at ${smallest.times}× and at ${largest.times}× the rows. At ${largest.times}× the table holds ${mebibytes(scale.largest.dataBytes)} MiB of rows and ${mebibytes(scale.largest.indexBytes)} MiB of indexes, against a buffer pool of ${SCALE_SETUP.bufferPoolGiB} GiB.`,
+        },
+      ]}
+      queries={queries.SCALE}
+      source={SCALE}
+    >
+      <p>
+        The table is <Code>passage</Code>, {number(scale.rows)} rows over all
+        time for {number(corpus.articles)} articles, on MariaDB{" "}
+        {SCALE_SETUP.mariadb}. Its primary key is{" "}
+        <Code>(page_id, hash, dup)</Code> and MariaDB appends{" "}
+        <Code>row_end</Code> to it. With only <Code>page_id</Code> given, the
+        engine cannot skip inside the article, because <Code>hash</Code> and{" "}
+        <Code>dup</Code> stand between <Code>page_id</Code> and{" "}
+        <Code>row_end</Code>, and <Code>row_start</Code> is in no index at all.
+        The same <Code>row_end</Code> is the tail of every secondary index, so{" "}
+        <Code>KEY (page_id, row_end, row_start)</Code> holds both ends of the
+        period and the whole <Code>AS OF</Code> condition is checked inside the
+        index. The product has since adopted this, the lab’s first
+        recommendation: migration{" "}
+        <Code>packages/db/schema/012-passage-period.sql</Code> adds{" "}
+        <Code>KEY stood (page_id, row_end, row_start)</Code>, and the statements
+        that read one article name it with <Code>FORCE INDEX (stood)</Code>.
+      </p>
+      <p>
+        Measured: the counts of rows, index entries and partitions are exact and
+        come from one run of each statement. The times are the client’s, execute
+        plus fetch, as the median of {SCALE_SETUP.runs} runs after a warm-up, on
+        a laptop that was doing other work the whole time. The same flat read of
+        the current Tarja Halonen took {layoutsToday.flat.ms.toFixed(2)} ms in
+        run A and {indexesToday.primary.ms.toFixed(2)} ms in run B, so a time is
+        only comparable with the others of its run. The client time also hides
+        part of the gain, because it includes decoding the rows. Caches were
+        warm. There is no cold-cache series and no concurrent load. The lab’s
+        yearly copy, with every partition made before the load, agreed with the
+        real table on every answer.
+      </p>
+      <p>
+        The growth series repeats the real rows under shifted ids, on the flat
+        layout only. Measured: reading Talvisota as of {day(early)} took{" "}
+        {read.map((run) => run.ms.toFixed(2)).join(", ")} ms at{" "}
+        {read.map((run) => `${run.times}×`).join(", ")}, with the same{" "}
+        {number(read[0].read)} rows read each time, because the cost of such a
+        read is the article’s own history. Longer histories per article were not
+        modelled. Extrapolated by the lab, not measured: all of Finnish
+        Wikipedia would be at most about {FULL_FIWIKI.millionRows} million rows
+        and {FULL_FIWIKI.gigabytes.join(" to ")} GB,{" "}
+        {Math.round(FULL_FIWIKI.gigabytes[0] / SCALE_SETUP.bufferPoolGiB)} times
+        the buffer pool, and nothing here was run near that size.
+      </p>
+    </Section>
+  );
+}
+
+function Code({ children }: { children: React.ReactNode }) {
+  return <code className="font-mono text-[13px]">{children}</code>;
+}
+
 /* ── Temporal ANN ─────────────────────────────────────────────────────── */
 
 function Search() {
@@ -907,6 +1150,8 @@ export const SECTIONS = [
   { id: "journeys", Finding: Journeys },
   { id: "sources", Finding: Sources },
   { id: "offices", Finding: Offices },
+  { id: "numbers", Finding: Numbers },
+  { id: "scale", Finding: Scale },
   { id: "search", Finding: Search },
 ];
 

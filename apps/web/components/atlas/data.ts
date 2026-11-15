@@ -23,12 +23,25 @@ import exposureSummary from "../../../../labs/exposure-clock/data/summary.json";
 import tempComparison from "../../../../labs/exposure-clock/data/temp-comparison.json";
 import uncertainty from "../../../../labs/exposure-clock/data/uncertainty.json";
 import knownHashByYear from "../../../../labs/exposure-clock/data/valid-exposure-by-year.json";
+import scaleGrowth from "../../../../labs/history-at-scale/data/growth.json";
+import scaleIndexes from "../../../../labs/history-at-scale/data/indexes.json";
+import scaleInside from "../../../../labs/history-at-scale/data/inside-server.json";
+import rowsByEndYear from "../../../../labs/history-at-scale/data/rows-by-end-year.json";
+import scaleRowsRead from "../../../../labs/history-at-scale/data/rows-read.json";
+import scaleSizes from "../../../../labs/history-at-scale/data/sizes.json";
+import scaleLayouts from "../../../../labs/history-at-scale/data/timings.json";
 import mainArticle from "../../../../labs/history-of-history/data/main-article.json";
 import termShares from "../../../../labs/history-of-history/data/term-shares.json";
 import nameSwaps from "../../../../labs/history-of-history/data/war-name-swaps.json";
 import warNames from "../../../../labs/history-of-history/data/war-names.json";
 import yearsMentioned from "../../../../labs/history-of-history/data/year-heatmap-years.json";
 import decadesMentioned from "../../../../labs/history-of-history/data/year-heatmap.json";
+import numberDurations from "../../../../labs/numbers-that-moved/data/durations.json";
+import numberEditors from "../../../../labs/numbers-that-moved/data/editors.json";
+import numberAudit from "../../../../labs/numbers-that-moved/data/manual-audit.json";
+import numberSizes from "../../../../labs/numbers-that-moved/data/size-of-change.json";
+import numberSummary from "../../../../labs/numbers-that-moved/data/summary.json";
+import unsettledFigures from "../../../../labs/numbers-that-moved/data/unsettled.json";
 import removalsReread from "../../../../labs/paragraph-survival/data/containment.json";
 import survivalMedians from "../../../../labs/paragraph-survival/data/medians.json";
 import oldestStanding from "../../../../labs/paragraph-survival/data/oldest-standing.json";
@@ -646,6 +659,324 @@ export const offices = {
 
   flipMs: timed("a2-answer-that-flips"),
   changesMs: timed("c-term-changes"),
+};
+
+/* ── Numbers that moved ───────────────────────────────────────────────── */
+
+const substituted = (metric: string) =>
+  numberSummary.rows.find((row) => row.metric === metric)!.value;
+
+/**
+ * The lab's two populations. "all" is every substitution, "clean" the ones
+ * where neither the old nor the new wording came in with a reverted edit.
+ */
+const sized = (population: string) => {
+  const band = (name: string) => {
+    const row = numberSizes.rows.find(
+      (r) => r.population === population && r.band === name,
+    )!;
+
+    return { count: row.count, share: row.share };
+  };
+
+  return {
+    quantities: numberSizes.rows.find((r) => r.population === population)!
+      .denominator,
+    under1: band("under 1%"),
+    upTo10: band("1–10%"),
+    over10: band("over 10%"),
+
+    /** Counted inside "over 10 %": the larger value is ten times the smaller. */
+    tenfold: band("at least tenfold (overlapping)"),
+    fromZero: band("zero baseline"),
+
+    oneDigitReplaced: band("single digit replacement shape"),
+    oneDigitMore: band("single digit insertion/deletion shape"),
+    twoDigitsSwapped: band("digit transposition shape"),
+  };
+};
+
+/** How long a figure was observed in its exact sentence, in the lab's bands. */
+const observed = (population: string, side: string) => {
+  const row = numberDurations.rows.find(
+    (r) => r.population === population && r.side === side,
+  )!;
+
+  return {
+    n: row.n,
+    medianDays: row.median_observed_days,
+
+    /** Stays that reach the cutoff: their length is only a lower bound. */
+    standing: row.censored,
+    bands: Object.entries(row.bands).map(([band, count]) => ({
+      band,
+      count,
+      share: count / row.n,
+    })),
+  };
+};
+
+const readByHand = new Map(numberAudit.rows.map((row) => [row.figure_id, row]));
+
+/** The lab's 25 least settled figures, in its own order. */
+const unsettled = unsettledFigures.rows.map((row, index) => {
+  const read = readByHand.get(row.figure_id);
+  const from = seconds(row.timeline[0].a);
+  const to = seconds(row.timeline[row.timeline.length - 1].b);
+
+  return {
+    rank: index + 1,
+    id: row.figure_id,
+    article: row.article,
+    kind: row.kind,
+
+    /** One wording of the sentence the figure sits in. */
+    sentence: row.sentence,
+    values: row.distinct_values,
+    substitutions: row.flips,
+    returns: row.returns,
+
+    /** Every value the position held, with where its stay lies from 0 to 1. */
+    timeline: row.timeline.map((stay) => ({
+      from: stay.a,
+      to: stay.b,
+      value: stay.display,
+      standing: stay.censored,
+      starts: (seconds(stay.a) - from) / (to - from),
+      ends: (seconds(stay.b) - from) / (to - from),
+    })),
+
+    /** The one substitution of this figure that was read by hand. */
+    read: read && {
+      old: read.old,
+      new: read.new,
+      at: read.at,
+      verdict: read.classification,
+    },
+  };
+});
+
+export const numbers = {
+  all: substituted("all_substitutions"),
+
+  /** Neither wording came in with an edit that was later reverted. */
+  kept: substituted("both_endpoints_not_reverted"),
+
+  /** The new wording did not. The old one may have. */
+  newKept: substituted("new_endpoint_not_reverted"),
+
+  articles: substituted("articles_with_substitutions"),
+  scanned: substituted("pages_scanned"),
+  proseRows: substituted("prose_rows"),
+
+  /** Left out by the strict rule. */
+  formattingOnly: substituted("formatting_only_edges"),
+  severalNumbers: substituted("multiple_number_edges"),
+
+  kinds: {
+    quantity: substituted("clean_quantity"),
+    year: substituted("clean_year"),
+    date: substituted("clean_date"),
+    mixed: substituted("clean_mixed"),
+  },
+
+  size: { all: sized("all"), kept: sized("clean") },
+
+  stood: {
+    old: observed("clean", "old"),
+    new: observed("clean", "new"),
+    oldOfAll: observed("all", "old"),
+    newOfAll: observed("all", "new"),
+  },
+
+  /** Who made the kept substitutions, and whose value is there at the cutoff. */
+  editors: numberEditors.rows
+    .filter((row) => row.population === "clean" && row.n > 0)
+    .map((row) => ({
+      editor: row.editor,
+      changes: row.n,
+      standing: row.value_standing,
+      unbroken: row.uninterrupted_new_stay_at_cutoff,
+      share: row.standing_share ?? 0,
+    })),
+
+  positions: substituted("unsettled_figures"),
+  withReturn: substituted("figures_with_return"),
+  unsettled,
+
+  /** The same list with the highest-ranked figure of each article only. */
+  unsettledByArticle: unsettled.filter(
+    (figure, index) =>
+      unsettled.findIndex((other) => other.article === figure.article) ===
+      index,
+  ),
+
+  audit: numberAudit.rows.map((row) => ({
+    rank: row.rank,
+    article: row.article,
+    verdict: row.classification,
+  })),
+};
+
+/* ── History at scale ─────────────────────────────────────────────────── */
+
+type Run = {
+  layout: string;
+  statement: string;
+  page: string | null;
+  as_of: string;
+  rows_returned: number;
+  handler_reads: number;
+  icp_attempts: number | null;
+  median_ms: number;
+  min_ms: number;
+  max_ms: number;
+  key: string | null;
+  partitions: string | null;
+};
+
+/** One case of the lab: a statement, an article, a moment and a plan. */
+const ran = (
+  rows: Run[],
+  layout: string,
+  statement: string,
+  page: string | null,
+  asOf: string,
+) => {
+  const row = rows.find(
+    (r) =>
+      r.layout === layout &&
+      r.statement === statement &&
+      r.page === page &&
+      r.as_of === asOf,
+  )!;
+
+  return {
+    asOf,
+    returned: row.rows_returned,
+
+    /** The session's Handler_read_% counters, summed, for one run. */
+    read: row.handler_reads,
+
+    /** Index entries a pushed-down condition tested: Handler_icp_attempts. */
+    checked: row.icp_attempts ?? 0,
+
+    /** Client time: the median of the timed runs, the fastest, the slowest. */
+    ms: row.median_ms,
+    fastest: row.min_ms,
+    slowest: row.max_ms,
+
+    /** The key EXPLAIN names, or none for a scan of the whole table. */
+    key: row.key === "None" ? null : row.key,
+    partitions: row.partitions?.split(",") ?? [],
+  };
+};
+
+/** The moments every article was asked at. "now" is a read with no date. */
+const MOMENTS = [...new Set(scaleRowsRead.rows.map((row) => row.as_of))];
+
+/** The table at one, two and four times its rows. */
+const SIZES = [
+  ...new Map(
+    scaleGrowth.rows.map((row) => [row.scale, row.table_rows]),
+  ).entries(),
+].map(([times, rows]) => ({ times, rows }));
+
+const copy = (table: string, copies: number) =>
+  scaleSizes.rows.find((row) => row.table === table && row.copy === copies)!;
+
+/** The flat table after its last load, with four copies of the rows. */
+const largestCopy = scaleSizes.rows
+  .filter((row) => row.table === "p_flat")
+  .reduce((last, row) => (row.copy > last.copy ? row : last));
+
+export const scale = {
+  moments: MOMENTS,
+
+  /** `passage` over all time, and the rows that are current. */
+  rows: copy("p_flat", 0).rows_inserted,
+  current: rowsByEndYear.rows.find((row) => typeof row.ended !== "number")!
+    .rows,
+
+  /** Rows the article has over all time. */
+  allTime: (page: string) =>
+    scaleRowsRead.rows.find((row) => row.page === page)!.page_rows_all,
+
+  /** Run B: one flat table, read through its primary key and each index. */
+  indexes: (page: string) =>
+    MOMENTS.map((asOf) => ({
+      asOf,
+      primary: ran(scaleIndexes.rows, "flat", "blocks", page, asOf),
+      chosen: ran(scaleIndexes.rows, "idx", "blocks", page, asOf),
+      pe: ran(scaleIndexes.rows, "idx_pe", "blocks", page, asOf),
+      ps: ran(scaleIndexes.rows, "idx_ps", "blocks", page, asOf),
+      per: ran(scaleIndexes.rows, "idx_per", "blocks", page, asOf),
+    })),
+
+  /** Run A: the same rows flat, in two partitions and in yearly ones. */
+  layouts: (page: string) =>
+    MOMENTS.map((asOf) => ({
+      asOf,
+      flat: ran(scaleLayouts.rows, "flat", "blocks", page, asOf),
+      two: ran(scaleLayouts.rows, "hc", "blocks", page, asOf),
+      yearly: ran(scaleLayouts.rows, "year", "blocks", page, asOf),
+    })),
+
+  /** One ANALYZE run: what the server did, without sending the rows. */
+  inside: (layout: string, page: string, asOf: string) => {
+    const row = scaleInside.rows.find(
+      (r) => r.layout === layout && r.page === page && r.as_of === asOf,
+    )!;
+
+    return {
+      read: row.rows_read,
+      checked: row.index_entries_checked,
+      pages: row.pages_accessed,
+      ms: row.server_ms,
+    };
+  },
+
+  yearly: {
+    /** One partition per year a row can have ended in, and the current one. */
+    partitions: rowsByEndYear.rows.map((row, index, all) => ({
+      name: index === all.length - 1 ? "pn" : `p${index}`,
+      year: typeof row.ended === "number" ? row.ended : null,
+      rows: row.rows,
+    })),
+
+    /** The search join: 300 candidate wordings as of the earliest moment. */
+    search: {
+      flat: ran(scaleLayouts.rows, "flat", "search", null, MOMENTS[0]),
+      yearly: ran(scaleLayouts.rows, "year", "search", null, MOMENTS[0]),
+    },
+  },
+
+  sizes: SIZES,
+
+  /** The one moment the count over all articles has that no article has. */
+  countedAt: scaleGrowth.rows.find(
+    (row) => row.statement === "global" && !MOMENTS.includes(row.as_of),
+  )!.as_of,
+
+  /** One case at each size of the table. */
+  grown: (plan: string, statement: string, page: string | null, asOf: string) =>
+    SIZES.map(({ times, rows }) => ({
+      times,
+      rows,
+      ...ran(
+        scaleGrowth.rows.filter((row) => row.scale === times),
+        plan,
+        statement,
+        page,
+        asOf,
+      ),
+    })),
+
+  /** The largest table: its rows and its indexes on disk. */
+  largest: {
+    dataBytes: largestCopy.data_bytes,
+    indexBytes: largestCopy.index_bytes,
+  },
 };
 
 /* ── Sentence journeys ────────────────────────────────────────────────── */

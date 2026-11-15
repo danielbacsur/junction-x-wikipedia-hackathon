@@ -70,6 +70,7 @@ are embedded on the spot. To check everything against its sources:
 ```bash
 npm run validate               # eight checks against the parquet files and wikipedia's sha1
 npm run evaluate               # MariaDB's own 37 test questions
+npm run bench                  # how long each page's work takes
 npm test                       # unit tests, and engine tests against the loaded database
 npm run e2e -w @wtt/app-web    # every journey in a real browser
 ```
@@ -193,7 +194,24 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
 | Passage lifetimes, six processes                                          | 2,972,662         | about 2 min              |
 | Stem counts                                                               | 205,939           | 17 s                     |
 | Terms of office from 17,845 versions of the presidents' articles          | 102               | 25 s                     |
-| Paragraph vectors with bge-m3 through Ollama                              | about 40 a second | hours, in the background |
+| Paragraph vectors with bge-m3 through Ollama                              | 20 to 40 a second | hours, in the background |
+
+What the pages do, timed by `npm run bench` on the loaded database while the
+embedding job was running:
+
+| What a page does                     | Median | Slowest in 20 |
+| ------------------------------------ | ------ | ------------- |
+| Read an article on a date            | 9 ms   | 52 ms         |
+| An article's whole timeline          | 1 ms   | 7 ms          |
+| Compare two dates                    | 7 ms   | 23 ms         |
+| Find articles                        | 87 ms  | 431 ms        |
+| Gather evidence as of a date         | 108 ms | 365 ms        |
+| Trace a claim through all of history | 488 ms | 634 ms        |
+
+Gathering evidence is timed the second time a question is asked. The first
+time, passages nobody has asked about are embedded on the spot, which takes a
+second or two. Writing the answer is the local model's time, two to four
+seconds, and is not in the table.
 
 `npm run validate` passes eight checks: every row of the datasets is in the
 database, stored text hashes to Wikipedia's sha1, 500 random moments return

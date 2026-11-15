@@ -1,11 +1,11 @@
 {
-  "measuredAt": "2026-11-14T11:25:21.649Z",
+  "measuredAt": "2026-11-14T13:24:14.692Z",
   "questions": 37,
   "modes": [
     {
       "mode": "article vector",
       "about": "one bge-m3 vector per article, as in MariaDB's demo",
-      "medianMs": 76,
+      "medianMs": 53,
       "groups": {
         "all": {
           "n": 37,
@@ -65,42 +65,42 @@
     {
       "mode": "article keyword",
       "about": "full-text search with the rare stems of the question as prefixes",
-      "medianMs": 58,
+      "medianMs": 56,
       "groups": {
         "all": {
           "n": 37,
-          "hit1": 0.16216216216216217,
-          "hit5": 0.24324324324324326,
-          "hit10": 0.2972972972972973,
-          "mrr": 0.19440154440154442
+          "hit1": 0.1891891891891892,
+          "hit5": 0.2702702702702703,
+          "hit10": 0.35135135135135137,
+          "mrr": 0.22754182754182756
         },
         "in English": {
           "n": 13,
           "hit1": 0.3076923076923077,
           "hit5": 0.3076923076923077,
-          "hit10": 0.3076923076923077,
-          "mrr": 0.3076923076923077
+          "hit10": 0.38461538461538464,
+          "mrr": 0.31868131868131866
         },
         "in Swedish": {
           "n": 11,
-          "hit1": 0,
-          "hit5": 0.09090909090909091,
-          "hit10": 0.09090909090909091,
-          "mrr": 0.045454545454545456
+          "hit1": 0.09090909090909091,
+          "hit5": 0.18181818181818182,
+          "hit10": 0.18181818181818182,
+          "mrr": 0.13636363636363635
         },
         "in Finnish": {
           "n": 13,
           "hit1": 0.15384615384615385,
           "hit5": 0.3076923076923077,
           "hit10": 0.46153846153846156,
-          "mrr": 0.20714285714285716
+          "mrr": 0.21355311355311357
         },
         "answer only in Finnish": {
           "n": 4,
-          "hit1": 0.5,
-          "hit5": 0.5,
-          "hit10": 0.5,
-          "mrr": 0.5
+          "hit1": 0.75,
+          "hit5": 0.75,
+          "hit10": 0.75,
+          "mrr": 0.75
         },
         "about presidents": {
           "n": 3,
@@ -125,7 +125,6 @@
         "Avtalet om vänskap, samarbete och ömsesidigt bistånd med Sovjetunionen",
         "Kriget då Sverige förlorade Finland till Ryssland 1808–1809",
         "Det finska kavalleriet under trettioåriga kriget",
-        "Ståndslantdagen 1882",
         "Området nära Helsingfors som arrenderades ut till Sovjetunionen efter kriget",
         "Venäläistämisen ajat 1800-luvun lopulla ja 1900-luvun alussa",
         "Saksassa koulutetut suomalaiset vapaaehtoiset ensimmäisen maailmansodan aikana",
@@ -144,56 +143,54 @@
     {
       "mode": "article hybrid",
       "about": "both fused by reciprocal rank in one statement",
-      "medianMs": 23,
+      "medianMs": 12,
       "groups": {
         "all": {
           "n": 37,
-          "hit1": 0.40540540540540543,
-          "hit5": 0.7567567567567568,
-          "hit10": 0.8648648648648649,
-          "mrr": 0.5582046332046331
+          "hit1": 0.5405405405405406,
+          "hit5": 0.8108108108108109,
+          "hit10": 0.8918918918918919,
+          "mrr": 0.6507078507078506
         },
         "in English": {
           "n": 13,
-          "hit1": 0.38461538461538464,
-          "hit5": 0.6153846153846154,
-          "hit10": 0.7692307692307693,
-          "mrr": 0.48608058608058613
+          "hit1": 0.3076923076923077,
+          "hit5": 0.6923076923076923,
+          "hit10": 0.8461538461538461,
+          "mrr": 0.4738095238095238
         },
         "in Swedish": {
           "n": 11,
-          "hit1": 0.36363636363636365,
-          "hit5": 0.8181818181818182,
+          "hit1": 0.8181818181818182,
+          "hit5": 0.9090909090909091,
           "hit10": 1,
-          "mrr": 0.6001082251082251
+          "mrr": 0.8636363636363636
         },
         "in Finnish": {
           "n": 13,
-          "hit1": 0.46153846153846156,
+          "hit1": 0.5384615384615384,
           "hit5": 0.8461538461538461,
           "hit10": 0.8461538461538461,
-          "mrr": 0.5948717948717949
+          "mrr": 0.6474358974358974
         },
         "answer only in Finnish": {
           "n": 4,
           "hit1": 0.75,
-          "hit5": 0.75,
+          "hit5": 1,
           "hit10": 1,
-          "mrr": 0.7857142857142857
+          "mrr": 0.8333333333333334
         },
         "about presidents": {
           "n": 3,
           "hit1": 0,
           "hit5": 0.6666666666666666,
           "hit10": 0.6666666666666666,
-          "mrr": 0.27777777777777773
+          "mrr": 0.2222222222222222
         }
       },
       "misses": [
         "The 1918 war between the Reds and the Whites in Finland",
         "Finland as an autonomous part of the Russian Empire",
-        "Trial of electronic voting in the 2008 municipal elections",
-        "Kriget då Sverige förlorade Finland till Ryssland 1808–1809",
         "Området nära Helsingfors som arrenderades ut till Sovjetunionen efter kriget",
         "Keisarin julistus vuonna 1899, joka rajoitti Suomen autonomiaa",
         "Who was the president of Finland from 1956 to 1982?",
@@ -204,35 +201,35 @@
     {
       "mode": "passage evidence",
       "about": "the articles of the passages an answer would cite, in order",
-      "medianMs": 981,
+      "medianMs": 596,
       "groups": {
         "all": {
           "n": 37,
           "hit1": 0.4864864864864865,
           "hit5": 0.7567567567567568,
           "hit10": 0.7567567567567568,
-          "mrr": 0.590990990990991
+          "mrr": 0.5806306306306306
         },
         "in English": {
           "n": 13,
-          "hit1": 0.46153846153846156,
+          "hit1": 0.5384615384615384,
           "hit5": 0.7692307692307693,
           "hit10": 0.7692307692307693,
-          "mrr": 0.5961538461538461
+          "mrr": 0.6307692307692307
         },
         "in Swedish": {
           "n": 11,
-          "hit1": 0.7272727272727273,
+          "hit1": 0.6363636363636364,
           "hit5": 0.9090909090909091,
           "hit10": 0.9090909090909091,
-          "mrr": 0.8030303030303031
+          "mrr": 0.7196969696969696
         },
         "in Finnish": {
           "n": 13,
           "hit1": 0.3076923076923077,
           "hit5": 0.6153846153846154,
           "hit10": 0.6153846153846154,
-          "mrr": 0.4064102564102564
+          "mrr": 0.4128205128205128
         },
         "answer only in Finnish": {
           "n": 4,

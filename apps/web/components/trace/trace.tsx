@@ -150,6 +150,8 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
           What each wording says, when it stood and who saved it is what MariaDB
           returned. That it means what you wrote is our reading: a cosine
           distance of {tracing.farthest} or less, shown on every card.
+          {tracing.subject &&
+            ` Passages are stored under their article's title, so the claim was asked as one about ${tracing.subject}, the article of the nearest wording.`}{" "}
           “Earliest” is the oldest of the wordings within {tracing.near} of the
           closest one, and an older one may be missing: {COVERAGE}
           {traces.length === tracing.limit &&

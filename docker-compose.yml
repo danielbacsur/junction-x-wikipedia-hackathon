@@ -29,8 +29,10 @@ services:
       # One long article version can be megabytes, and a batch holds many.
       - --max-allowed-packet=512M
 
-      # The default 16 MB cache holds only a sliver of the vector graphs.
-      - --mhnsw-max-cache-size=1G
+      # The default 16 MB cache holds only a sliver of the vector graphs. A
+      # vector of 1,024 numbers takes about 2.5 KB in it with its neighbours,
+      # so this holds the half million wordings the embedding job reaches.
+      - --mhnsw-max-cache-size=1536M
 
     ports:
       # 3310 stays clear of a local MariaDB and of MariaDB's own demos.

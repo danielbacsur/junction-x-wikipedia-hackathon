@@ -112,6 +112,11 @@ const FINDINGS = [
     source: "labs/bitemporal-offices",
   },
   {
+    title: "A revert alone does not show that an edit was wrong.",
+    body: "Counting every version between a revert and the text it restored marked up to 96% of an often-vandalised article as undone, because the same vandal text returns and each return restores the last. Only a revert that itself stood, and came within thirty days, takes a version out of what Wikipedia said: 41,603 of 46,197 reverts stood.",
+    source: "packages/ingest/edits.ts",
+  },
+  {
     title: "Wikipedia’s oldest sha1 values do not fit its own text.",
     body: "A handful of versions from 2003 to 2005 were hashed before the text was converted to UTF-8, so their published sha1 matches no text in the dump. Everything later matches exactly.",
     source: "packages/ingest/validate.ts",
@@ -121,7 +126,7 @@ const FINDINGS = [
 const LIMITS = [
   "The latest version is 1 October 2026 for histories and August 2025 for current article text. Neither is live Wikipedia.",
   "Only Finnish articles on the history of Finland have their history loaded (19,742 of 568,416).",
-  "Vectors are computed on this laptop at about 40 paragraphs a second, most edited articles first, so not every wording has one yet. Passages a question needs are embedded on the spot.",
+  "Vectors are computed on this laptop at 20 to 40 paragraphs a second, most edited articles first, so not every wording has one yet. Passages a question needs are embedded on the spot.",
   "Which article a question is about is decided with today’s article vectors, which know things the past did not. What gets cited is decided from passages that stood on the date.",
   "Which wording replaced which is our reading of the edits, shown with a similarity score. Lifetimes and authors are not.",
   "The answer is written by a 5 billion parameter model running locally. It translates loosely, which is why every sentence must cite a passage and uncited ones are marked.",

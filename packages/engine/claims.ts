@@ -1,5 +1,5 @@
 import { db, toVector } from "@wtt/package-db";
-import { embedOne } from "@wtt/package-models";
+import { embedOne, passageInput } from "@wtt/package-models";
 import { diffWords } from "diff";
 
 import { figures } from "./answer.ts";
@@ -312,6 +312,13 @@ export type Tracing = {
   figures: string[];
   earliestSaying: Trace | null;
 
+  /**
+   * The article the claim was read as being about: our reading. Passages
+   * are embedded with their article's title in front, so the claim is
+   * asked a second time with the title of the nearest one.
+   */
+  subject: string | null;
+
   /** At most this many wordings are returned, none farther than this. */
   limit: number;
   farthest: number;
@@ -353,18 +360,22 @@ export const traceClaim = async (
     earliest: null,
     figures: asked.map((figure) => figure.written),
     earliestSaying: null,
+    subject: null,
     limit,
     farthest: FARTHEST,
     near: NEAR,
   };
 
-  const candidates = await database.query<{
+  type Candidate = {
     hash: string;
     text: string;
     distance: number;
     score: number;
-  }>(
-    `WITH v AS (
+  };
+
+  const nearest = (to: Buffer) =>
+    database.query<Candidate>(
+      `WITH v AS (
        SELECT hash, distance, ROW_NUMBER() OVER (ORDER BY distance) AS place
        FROM (SELECT hash, VEC_DISTANCE_COSINE(embedding, ?) AS distance
              FROM passage_vector
@@ -391,12 +402,39 @@ export const traceClaim = async (
      WHERE v.distance <= ${FARTHEST}
      ORDER BY score DESC
      LIMIT ${limit * 4}`,
-    match ? [vector, match, match] : [vector],
-  );
+      match ? [to, match, match] : [to],
+    );
 
-  if (candidates.length === 0) {
+  const unnamed = await nearest(vector);
+
+  if (unnamed.length === 0) {
     return { ...nothing, sql: database.statements.map(show) };
   }
+
+  // A paragraph rarely names its own subject, so passages were embedded
+  // with their article's title in front, and a claim that leaves the
+  // subject out sits farther from them than it should. The claim is asked
+  // again under the title of the nearest wording's article, and that
+  // second answer is the one that is used.
+  const nearby = unnamed.reduce((a, b) => (b.distance < a.distance ? b : a));
+
+  const [article] = await database.query<{ title: string }>(
+    `SELECT r.title
+     FROM passage FOR SYSTEM_TIME ALL AS p
+     JOIN revision AS r ON r.page_id = p.page_id
+     WHERE p.hash = ?
+     LIMIT 1`,
+    [Buffer.from(nearby.hash, "hex")],
+  );
+
+  const named = article
+    ? await nearest(
+        toVector(await embedOne(passageInput(article.title, claim))),
+      )
+    : [];
+
+  const candidates = named.length > 0 ? named : unnamed;
+  const subject = named.length > 0 ? article.title : null;
 
   const found = new Map(candidates.map((row) => [row.hash, row]));
 
@@ -501,6 +539,7 @@ export const traceClaim = async (
 
   return {
     ...nothing,
+    subject,
     traces,
     earliest: first(close),
     earliestSaying: first(close.filter((trace) => trace.saysFigures)),

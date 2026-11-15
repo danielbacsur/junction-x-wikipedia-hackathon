@@ -355,6 +355,172 @@ FROM stays GROUP BY page_id,slot;`,
   },
 ];
 
+export const NUMBERS: Query[] = [
+  {
+    about:
+      "sql/passages.sql, as the lab's README gives it: the only scan, run once per range of 100 articles. It reads every prose wording with its lifetime and nothing else. Finding the wordings that differ in one number, joining their stays and counting are Python, in run.py.",
+    text: String.raw`SELECT p.page_id,p.slot,HEX(p.hash),p.born_rev,p.row_start,
+       LEAST(p.row_end,'2026-10-01 10:59:12'),t.text
+FROM passage FOR SYSTEM_TIME ALL AS p
+JOIN passage_text AS t ON t.hash=p.hash
+WHERE p.page_id BETWEEN %s AND %s AND t.kind='prose'
+  AND p.row_start < '2026-10-01 10:59:12';`,
+  },
+  {
+    about:
+      "sql/edits.sql: who saved each version, with what summary, and whether a later edit reverted it. reverted_by is the flag the filter uses.",
+    text: String.raw`SELECT page_id,rev_id,saved_at,ended_at,user,editor,comment,reverted_by FROM edit WHERE page_id BETWEEN %s AND %s;`,
+  },
+  {
+    about:
+      "sql/audit.sql: the wikitext of one wording, for the substitutions that were read by hand.",
+    text: String.raw`SELECT wikitext FROM passage_text WHERE hash=UNHEX(%s);`,
+  },
+];
+
+/*
+ * The two wrong answers of yearly partitions, from the scripts that reproduce
+ * them. Shortened: the table is one comment, and the looks at
+ * information_schema and the control tables are left out. The results in
+ * the comments are the ones in data/raw/*.out.
+ */
+
+export const MISPLACED = String.raw`-- t_auto: WITH SYSTEM VERSIONING
+--   PARTITION BY SYSTEM_TIME INTERVAL 1 YEAR
+--   STARTS '2003-01-01 00:00:00' AUTO
+-- Right after CREATE it has one history partition, p0.
+
+-- A loader writes old history. No warning. All three
+-- rows go to p0, also the one that ended in 2010.
+SET system_versioning_insert_history = 1;
+INSERT INTO t_auto (id, v, row_start, row_end) VALUES
+  (1, 1, '2004-05-01', '2005-06-01'),
+  (2, 1, '2004-05-01', '2010-06-01'),
+  (3, 1, '2003-02-01', '2003-03-01');
+INSERT INTO t_auto (id, v, row_start) VALUES
+  (1, 2, '2005-06-01'), (4, 2, '2005-06-01');
+SET system_versioning_insert_history = 0;
+
+-- Correct so far: rows 1, 2 and 4.
+SELECT id FROM t_auto
+FOR SYSTEM_TIME AS OF TIMESTAMP '2008-12-31 00:00:00';
+
+-- One ordinary update today. AUTO now creates p1 … p23.
+UPDATE t_auto SET v = 3 WHERE id = 4;
+
+-- Wrong now: rows 1 and 4. Pruning reads p5 … pn.
+SELECT id FROM t_auto
+FOR SYSTEM_TIME AS OF TIMESTAMP '2008-12-31 00:00:00';
+
+-- Row 2 is still there.
+SELECT id FROM t_auto PARTITION (p0);`;
+
+export const LAST_SECOND = String.raw`-- t_edge: WITH SYSTEM VERSIONING
+--   PARTITION BY SYSTEM_TIME INTERVAL 1 YEAR
+--   STARTS '2003-01-01 00:00:00' PARTITIONS 25
+
+SET system_versioning_insert_history = 1;
+INSERT INTO t_edge (id, v, row_start, row_end) VALUES
+  (1, 1, '2005-01-01 00:00:00', '2006-12-31 23:59:59.500000'),
+  (2, 1, '2005-01-01 00:00:00', '2006-12-31 23:59:59.000000'),
+  (3, 1, '2005-01-01 00:00:00', '2006-07-01 00:00:00'),
+  (4, 1, '2005-01-01 00:00:00', '2007-03-01 00:00:00');
+SET system_versioning_insert_history = 0;
+
+-- Rows 1 and 4 stood at this moment. Returns row 4:
+-- the partitions read are p4 … pn, from 2007 on.
+SELECT id FROM t_edge
+FOR SYSTEM_TIME AS OF TIMESTAMP '2006-12-31 23:59:59';
+
+-- Row 1 is there.
+SELECT id FROM t_edge PARTITION (p3);
+
+-- The same rows without partitions: rows 1 and 4.
+SELECT id FROM t_edge_flat
+FOR SYSTEM_TIME AS OF TIMESTAMP '2006-12-31 23:59:59';
+
+-- One microsecond earlier, partitioned: rows 1, 2 and 4.
+SELECT id FROM t_edge
+FOR SYSTEM_TIME AS OF TIMESTAMP '2006-12-31 23:59:58.999999';`;
+
+export const SCALE: Query[] = [
+  {
+    about:
+      "sql/hot-statements.sql, blocks: every block of one article as of a moment, here Talvisota. This is the statement the first two charts time. The lab runs it on wtt.passage and on its copies p_flat, p_hc, p_year and p_idx.",
+    text: String.raw`SELECT p.hash, p.dup, p.ord, p.gap, p.rev_id, p.born_rev, p.slot
+FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP '2012-12-31 23:59:59' AS p
+WHERE p.page_id = 1256
+ORDER BY p.ord;`,
+  },
+  {
+    about:
+      "The same through an index that holds both ends of the period, forced with a hint after the alias, as bench.py does for every index.",
+    text: String.raw`SELECT p.hash, p.dup, p.ord, p.gap, p.rev_id, p.born_rev, p.slot
+FROM p_idx FOR SYSTEM_TIME AS OF TIMESTAMP '2012-12-31 23:59:59' AS p
+     FORCE INDEX (per)
+WHERE p.page_id = 1256
+ORDER BY p.ord;`,
+  },
+  {
+    about:
+      "The candidate indexes, from the lab's README. pe, ps and per are the three drawn above; se and es serve the count over all articles.",
+    text: String.raw`ALTER TABLE p_idx
+  ADD KEY pe  (page_id, row_end),             -- good today, a trap for early dates
+  ADD KEY ps  (page_id, row_start),           -- best for early dates
+  ADD KEY per (page_id, row_end, row_start),  -- exact today, bounded for dates
+  ADD KEY se  (row_start, row_end),           -- the global count, early dates
+  ADD KEY es  (row_end, row_start);           -- the global count, late dates, now`,
+  },
+  {
+    about:
+      "The two partitioned layouts, from the lab's README. Shortened as it is there: (…) stands for the columns of passage, which LAYOUTS in build.py spells out.",
+    text: String.raw`-- history and current apart
+CREATE TABLE p_hc (…) WITH SYSTEM VERSIONING
+  PARTITION BY SYSTEM_TIME (PARTITION p_hist HISTORY, PARTITION p_cur CURRENT);
+
+-- one history partition per year, all made before the load
+CREATE TABLE p_year (…) WITH SYSTEM VERSIONING
+  PARTITION BY SYSTEM_TIME INTERVAL 1 YEAR
+  STARTS '2003-01-01 00:00:00' PARTITIONS 25;`,
+  },
+  {
+    about:
+      "The load of a copy: history rows with both ends of their period, current rows with their start. One of eight chunks is shown.",
+    text: String.raw`SET system_versioning_insert_history = 1;
+INSERT INTO p_hc (page_id, hash, dup, ord, gap, rev_id, born_rev, slot,
+                  prev_hash, sim, row_start, row_end)
+SELECT page_id, hash, dup, ord, gap, rev_id, born_rev, slot, prev_hash, sim,
+       row_start, row_end
+FROM wtt.passage FOR SYSTEM_TIME ALL
+WHERE page_id BETWEEN 0 AND 30000 AND row_end < '2100-01-01';
+INSERT INTO p_hc (page_id, hash, dup, ord, gap, rev_id, born_rev, slot,
+                  prev_hash, sim, row_start)
+SELECT page_id, hash, dup, ord, gap, rev_id, born_rev, slot, prev_hash, sim,
+       row_start
+FROM wtt.passage WHERE page_id BETWEEN 0 AND 30000;`,
+  },
+  {
+    about:
+      "sql/hot-statements.sql, search and global: 300 candidate wordings joined to what stood at a moment, and the count of every passage that stood on a date. The second is the statement that falls off at four times the rows.",
+    text: String.raw`SELECT p.page_id, HEX(p.hash), p.born_rev, p.slot
+FROM cand AS c
+JOIN p_flat FOR SYSTEM_TIME AS OF TIMESTAMP '2012-12-31 23:59:59' AS p USING (hash);
+
+SELECT COUNT(*)
+FROM p_flat FOR SYSTEM_TIME AS OF TIMESTAMP '2010-12-31 23:59:59' AS p;`,
+  },
+  {
+    about:
+      "What the engine reports for Talvisota as of 31 Dec 2010 on the real table, from the lab's README (data/raw/analyze-core-blocks-talvisota-2010.json). Only page_id of the key is used, and both ends of the period are checked on the row.",
+    text: String.raw`{
+  "table_name": "p", "access_type": "ref", "key": "PRIMARY",
+  "used_key_parts": ["page_id"], "r_rows": 6462, "r_filtered": 4.95,
+  "attached_condition": "p.page_id <=> 1256 and p.row_end > TIMESTAMP'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP'2010-12-31 23:59:59'",
+  "r_engine_stats": { "pages_accessed": 80, "pages_read_count": 65, "pages_read_time_ms": 18.98 }
+}`,
+  },
+];
+
 /* The three designs of the search lab, as they were timed. */
 
 export const VERSIONED = String.raw`SET mhnsw_ef_search=80;

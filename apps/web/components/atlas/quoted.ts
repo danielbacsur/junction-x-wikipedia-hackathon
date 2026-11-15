@@ -30,3 +30,34 @@ export const JOURNEY = { atLeast: 120, paragraphs: 5 };
 
 /** labs/claims-before-sources/README.md, "Candidates": "multiset word Dice overlap at least 0.80". */
 export const CANDIDATE_OVERLAP = 0.8;
+
+/**
+ * labs/numbers-that-moved/README.md, "What we found": the Winter War death
+ * toll, "26 600 → 26662, 2009-08-22 10:30:30 UTC, revision 7215959". The
+ * days are the stays of the old and the new figure in that exact sentence.
+ */
+export const WINTER_WAR = {
+  article: "Talvisota",
+  old: "26 600",
+  new: "26662",
+  at: "2009-08-22 10:30:30",
+  revId: 7_215_959,
+  oldDays: 290.798125,
+  newDays: 1829.256863,
+};
+
+/** labs/history-at-scale/README.md, "What we found" and "How it was measured". */
+export const SCALE_SETUP = { mariadb: "12.3.3", runs: 7, bufferPoolGiB: 2 };
+
+/**
+ * labs/history-at-scale/README.md, "What the full Finnish Wikipedia would
+ * need", under "Inferred, not measured": "at most about 85 million rows",
+ * "20 to 22 GB".
+ */
+export const FULL_FIWIKI = { millionRows: 85, gigabytes: [20, 22] };
+
+/**
+ * labs/numbers-that-moved/README.md, "Number rules": "Standalone, ungrouped
+ * four-digit values in 1000–2099 are year-shaped".
+ */
+export const YEAR_SHAPED = { from: 1000, to: 2099 };
