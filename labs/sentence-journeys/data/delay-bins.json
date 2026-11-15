@@ -1,0 +1,23 @@
+{
+  "title": "delay-bins",
+  "unit": "wordings",
+  "source": "sql/delay-bins.sql",
+  "rows": [
+    {
+      "bin": "1 within hour",
+      "wordings": 361
+    },
+    {
+      "bin": "2 hour to day",
+      "wordings": 154
+    },
+    {
+      "bin": "3 day to year",
+      "wordings": 875
+    },
+    {
+      "bin": "4 over year",
+      "wordings": 509
+    }
+  ]
+}

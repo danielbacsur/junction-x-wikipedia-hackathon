@@ -4,7 +4,7 @@ import { type Inline, clean, inline, references } from "@wtt/package-wikitext";
 
 import { type Terms, pickTerms, prefixQuery, stemQuery } from "./keywords.ts";
 import { type Shown, count, show } from "./sql.ts";
-import { LAST_EDIT, asOf, moment, when } from "./time.ts";
+import { LAST_EDIT, STOOD, asOf, moment, when } from "./time.ts";
 
 export type Page = { pageId: number; title: string };
 
@@ -399,7 +399,7 @@ export const readArticle = async (
             b.editor AS born_editor, b.reverted_by IS NOT NULL AS born_undone,
             p.slot, HEX(p.prev_hash) AS replaced, p.sim,
             v.hash IS NOT NULL AS embedded
-     FROM passage ${asOf(at)} AS p
+     FROM passage ${asOf(at)} AS p ${STOOD}
      JOIN passage_text AS t USING (hash)
      JOIN edit AS b ON b.rev_id = p.born_rev
      LEFT JOIN passage_vector AS v USING (hash)

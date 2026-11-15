@@ -1,0 +1,13 @@
+{
+  "title": "Literal clean-text containment audit of the 30 slot-removal candidates",
+  "unit": "counts",
+  "source": "sql/containment.sql; binary case-sensitive substring, any successor block",
+  "rows": [
+    {
+      "candidates": 30,
+      "present_at_removal": 4,
+      "present_at_cutoff": 3,
+      "seconds": 0.6400319999956992
+    }
+  ]
+}

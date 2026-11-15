@@ -1,0 +1,17 @@
+{
+  "title": "SQL aggregation of parsed publication years",
+  "unit": "reference occurrences",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; publication-sql-summary",
+  "rows": [
+    {
+      "references_n": 195053,
+      "parsed_n": 48458,
+      "parsed_pct": 24.8435,
+      "unresolved_named": 72606.0,
+      "future_years": 5.0,
+      "positive_gap": 5455.0,
+      "zero_gap": 9387.0,
+      "negative_gap": 33616.0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Rows refused by PRIMARY KEY (page_id, office, valid_time WITHOUT OVERLAPS) on the system-versioned table",
+  "unit": "claim lifetime rows",
+  "source": "load.py, every claim lifetime row inserted one at a time in the order Wikipedia said them",
+  "key_used_for_office_term": "PRIMARY KEY (page_id, office, valid_time WITHOUT OVERLAPS)",
+  "offered": 102,
+  "loaded": 102,
+  "refused": 0,
+  "refused_with_a_clash_said_at_the_same_time": 0,
+  "rows": []
+}

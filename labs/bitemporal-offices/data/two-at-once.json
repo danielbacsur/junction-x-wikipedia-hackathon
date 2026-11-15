@@ -1,0 +1,117 @@
+{
+  "title": "Moments when two articles claimed the presidency for the same days",
+  "unit": "one pair of statements live at the same time",
+  "source": "lab_bitemporal_offices.office_term; sql/d3-two-at-once.sql",
+  "rows": [
+    {
+      "one": "Urho Kekkonen",
+      "one_from": "1956-03-01",
+      "one_to": "1982-02-19",
+      "other": "Mauno Koivisto",
+      "other_from": "1982-01-27",
+      "other_to": "1994-03-01",
+      "days_claimed_twice": 23,
+      "both_said_from": "2006-01-30 14:52:29",
+      "both_said_for_seconds": 70
+    },
+    {
+      "one": "Urho Kekkonen",
+      "one_from": "1956-03-01",
+      "one_to": "1982-02-27",
+      "other": "Mauno Koivisto",
+      "other_from": "1982-01-27",
+      "other_to": "1994-03-01",
+      "days_claimed_twice": 31,
+      "both_said_from": "2006-01-30 14:53:39",
+      "both_said_for_seconds": 445
+    },
+    {
+      "one": "Kyösti Kallio",
+      "one_from": "1937-03-01",
+      "one_to": "1940-11-27",
+      "other": "Risto Ryti",
+      "other_from": "1940-02-19",
+      "other_to": "1944-08-04",
+      "days_claimed_twice": 282,
+      "both_said_from": "2006-01-30 14:55:57",
+      "both_said_for_seconds": 35
+    },
+    {
+      "one": "Kyösti Kallio",
+      "one_from": "1937-03-01",
+      "one_to": "1940-12-19",
+      "other": "Risto Ryti",
+      "other_from": "1940-02-19",
+      "other_to": "1944-08-04",
+      "days_claimed_twice": 304,
+      "both_said_from": "2006-01-30 14:56:32",
+      "both_said_for_seconds": 349488
+    },
+    {
+      "one": "Lauri Kristian Relander",
+      "one_from": "1925-03-02",
+      "one_to": "1931-03-02",
+      "other": "P. E. Svinhufvud",
+      "other_from": "1931-03-01",
+      "other_to": "1937-03-01",
+      "days_claimed_twice": 1,
+      "both_said_from": "2007-08-08 08:58:54",
+      "both_said_for_seconds": 134
+    },
+    {
+      "one": "Lauri Kristian Relander",
+      "one_from": "1925-03-02",
+      "one_to": "1931-03-02",
+      "other": "Kyösti Kallio",
+      "other_from": "1925-03-02",
+      "other_to": "1931-03-02",
+      "days_claimed_twice": 2191,
+      "both_said_from": "2008-09-09 19:16:36",
+      "both_said_for_seconds": 210
+    },
+    {
+      "one": "Tarja Halonen",
+      "one_from": "2000-03-01",
+      "one_to": "9999-12-31",
+      "other": "Sauli Niinistö",
+      "other_from": "2012-03-01",
+      "other_to": "9999-12-31",
+      "days_claimed_twice": 2917496,
+      "both_said_from": "2012-02-05 21:01:41",
+      "both_said_for_seconds": 204
+    },
+    {
+      "one": "K. J. Ståhlberg",
+      "one_from": "1919-07-25",
+      "one_to": "1925-03-02",
+      "other": "Lauri Kristian Relander",
+      "other_from": "1925-03-01",
+      "other_to": "1931-03-01",
+      "days_claimed_twice": 1,
+      "both_said_from": "2013-11-05 19:36:27",
+      "both_said_for_seconds": 188
+    },
+    {
+      "one": "Lauri Kristian Relander",
+      "one_from": "1925-03-02",
+      "one_to": "1931-03-02",
+      "other": "P. E. Svinhufvud",
+      "other_from": "1931-03-01",
+      "other_to": "1937-03-01",
+      "days_claimed_twice": 1,
+      "both_said_from": "2013-11-05 19:39:35",
+      "both_said_for_seconds": 107
+    },
+    {
+      "one": "Sauli Niinistö",
+      "one_from": "2012-03-01",
+      "one_to": "9999-12-31",
+      "other": "Alexander Stubb",
+      "other_from": "2024-03-01",
+      "other_to": "9999-12-31",
+      "days_claimed_twice": 2913113,
+      "both_said_from": "2024-02-12 07:56:20",
+      "both_said_for_seconds": 1011
+    }
+  ]
+}

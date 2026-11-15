@@ -1,0 +1,17 @@
+{
+  "title": "First to second observed article",
+  "unit": "seconds and proportions",
+  "source": "sql/delay-distribution.sql",
+  "rows": [
+    {
+      "n": 1899,
+      "q25_seconds": 70391.0,
+      "median_seconds": 3002658.0,
+      "q75_seconds": 40409222.0,
+      "within_hour": 0.1901,
+      "within_day": 0.2712,
+      "within_year": 0.732,
+      "tied_first": 0.0
+    }
+  ]
+}

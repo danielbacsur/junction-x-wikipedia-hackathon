@@ -3,7 +3,7 @@ import { embed, embedOne, passageInput } from "@wtt/package-models";
 
 import { type Terms, pickTerms, stemQuery } from "./keywords.ts";
 import { type Shown, show } from "./sql.ts";
-import { asOf, moment, when } from "./time.ts";
+import { STOOD, asOf, moment, when } from "./time.ts";
 
 export type PassageHit = {
   pageId: number;
@@ -181,7 +181,7 @@ export const passagesWithin = async (
     `SELECT ${SELECTED},
             VEC_DISTANCE_COSINE(v.embedding, ?) AS distance,
             NULL AS vector_rank, NULL AS keyword_rank, 0 AS score
-     FROM passage ${asOf(input.at)} AS p
+     FROM passage ${asOf(input.at)} AS p ${STOOD}
      JOIN passage_vector AS v USING (hash)
      JOIN passage_text AS t USING (hash)
      JOIN revision ${asOf(input.at)} AS r ON r.page_id = p.page_id
@@ -213,7 +213,7 @@ export const embedMissing = async (
     text: string;
   }>(
     `SELECT t.hash, r.title, t.text
-     FROM passage ${asOf(input.at)} AS p
+     FROM passage ${asOf(input.at)} AS p ${STOOD}
      JOIN passage_text AS t USING (hash)
      JOIN revision AS r ON r.page_id = p.page_id
      LEFT JOIN passage_vector AS v USING (hash)

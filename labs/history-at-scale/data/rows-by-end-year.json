@@ -1,0 +1,32 @@
+{
+ "title": "Passage rows by the year their stretch ended",
+ "unit": "rows of wtt.passage; a yearly history partition holds one of these bars",
+ "source": "labs/history-at-scale: uv run bench.py, uv run build.py, uv run report.py",
+ "rows": [
+  {"ended":2003,"rows":241},
+  {"ended":2004,"rows":10314},
+  {"ended":2005,"rows":42620},
+  {"ended":2006,"rows":112686},
+  {"ended":2007,"rows":158027},
+  {"ended":2008,"rows":136877},
+  {"ended":2009,"rows":135958},
+  {"ended":2010,"rows":98446},
+  {"ended":2011,"rows":106105},
+  {"ended":2012,"rows":86923},
+  {"ended":2013,"rows":103132},
+  {"ended":2014,"rows":82695},
+  {"ended":2015,"rows":80133},
+  {"ended":2016,"rows":77095},
+  {"ended":2017,"rows":86192},
+  {"ended":2018,"rows":95798},
+  {"ended":2019,"rows":132718},
+  {"ended":2020,"rows":176562},
+  {"ended":2021,"rows":96568},
+  {"ended":2022,"rows":106744},
+  {"ended":2023,"rows":113692},
+  {"ended":2024,"rows":98281},
+  {"ended":2025,"rows":96208},
+  {"ended":2026,"rows":45737},
+  {"ended":"still standing","rows":692910}
+ ]
+}

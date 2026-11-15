@@ -53,5 +53,13 @@ export const moment = (input?: string | null): string | null => {
 export const asOf = (at: string | null) =>
   at ? "FOR SYSTEM_TIME AS OF TIMESTAMP ?" : "";
 
+/**
+ * Names the index that holds both ends of a passage's period next to its
+ * article. A statement that reads the passages of one article says this:
+ * MariaDB does not choose the index for early dates, and without it walks
+ * every row the article ever had to return the ones that stood that day.
+ */
+export const STOOD = "FORCE INDEX (stood)";
+
 /** The parameter that goes with asOf, when there is one. */
 export const when = (at: string | null) => (at ? [at] : []);

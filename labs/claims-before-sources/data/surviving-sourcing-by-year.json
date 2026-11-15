@@ -1,0 +1,151 @@
+{
+  "title": "Current surviving paragraph birth cohorts",
+  "unit": "paragraphs and percent",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; surviving-sourcing-by-year",
+  "rows": [
+    {
+      "year": 2003,
+      "paragraphs": 57,
+      "born_referenced": 0.0,
+      "born_referenced_pct": 0.0
+    },
+    {
+      "year": 2004,
+      "paragraphs": 1417,
+      "born_referenced": 0.0,
+      "born_referenced_pct": 0.0
+    },
+    {
+      "year": 2005,
+      "paragraphs": 4596,
+      "born_referenced": 0.0,
+      "born_referenced_pct": 0.0
+    },
+    {
+      "year": 2006,
+      "paragraphs": 6491,
+      "born_referenced": 281.0,
+      "born_referenced_pct": 4.3291
+    },
+    {
+      "year": 2007,
+      "paragraphs": 9853,
+      "born_referenced": 1802.0,
+      "born_referenced_pct": 18.2888
+    },
+    {
+      "year": 2008,
+      "paragraphs": 9255,
+      "born_referenced": 2230.0,
+      "born_referenced_pct": 24.0951
+    },
+    {
+      "year": 2009,
+      "paragraphs": 8473,
+      "born_referenced": 3425.0,
+      "born_referenced_pct": 40.4225
+    },
+    {
+      "year": 2010,
+      "paragraphs": 5258,
+      "born_referenced": 3087.0,
+      "born_referenced_pct": 58.7105
+    },
+    {
+      "year": 2011,
+      "paragraphs": 5425,
+      "born_referenced": 2898.0,
+      "born_referenced_pct": 53.4194
+    },
+    {
+      "year": 2012,
+      "paragraphs": 5489,
+      "born_referenced": 3239.0,
+      "born_referenced_pct": 59.0089
+    },
+    {
+      "year": 2013,
+      "paragraphs": 6100,
+      "born_referenced": 4014.0,
+      "born_referenced_pct": 65.8033
+    },
+    {
+      "year": 2014,
+      "paragraphs": 6103,
+      "born_referenced": 4299.0,
+      "born_referenced_pct": 70.4408
+    },
+    {
+      "year": 2015,
+      "paragraphs": 5657,
+      "born_referenced": 3798.0,
+      "born_referenced_pct": 67.1381
+    },
+    {
+      "year": 2016,
+      "paragraphs": 6220,
+      "born_referenced": 5066.0,
+      "born_referenced_pct": 81.4469
+    },
+    {
+      "year": 2017,
+      "paragraphs": 5849,
+      "born_referenced": 4624.0,
+      "born_referenced_pct": 79.0562
+    },
+    {
+      "year": 2018,
+      "paragraphs": 5723,
+      "born_referenced": 4518.0,
+      "born_referenced_pct": 78.9446
+    },
+    {
+      "year": 2019,
+      "paragraphs": 4753,
+      "born_referenced": 3709.0,
+      "born_referenced_pct": 78.0349
+    },
+    {
+      "year": 2020,
+      "paragraphs": 6093,
+      "born_referenced": 5064.0,
+      "born_referenced_pct": 83.1118
+    },
+    {
+      "year": 2021,
+      "paragraphs": 5707,
+      "born_referenced": 4819.0,
+      "born_referenced_pct": 84.4402
+    },
+    {
+      "year": 2022,
+      "paragraphs": 5461,
+      "born_referenced": 4651.0,
+      "born_referenced_pct": 85.1676
+    },
+    {
+      "year": 2023,
+      "paragraphs": 4813,
+      "born_referenced": 4157.0,
+      "born_referenced_pct": 86.3702
+    },
+    {
+      "year": 2024,
+      "paragraphs": 5325,
+      "born_referenced": 4648.0,
+      "born_referenced_pct": 87.2864
+    },
+    {
+      "year": 2025,
+      "paragraphs": 4807,
+      "born_referenced": 4050.0,
+      "born_referenced_pct": 84.2521
+    },
+    {
+      "year": 2026,
+      "paragraphs": 4276,
+      "born_referenced": 3866.0,
+      "born_referenced_pct": 90.4116
+    }
+  ]
+}

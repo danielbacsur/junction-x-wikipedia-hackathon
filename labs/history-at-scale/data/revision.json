@@ -1,0 +1,271 @@
+{
+ "title": "One version of an article as of a date, from the revision table",
+ "unit": "milliseconds (median of 7 after a warm-up); handler reads and pushed-down index checks for one run",
+ "source": "labs/history-at-scale: uv run revision_bench.py",
+ "rows": [
+  {
+   "page": "typical",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 28,
+   "icp_attempts": 0,
+   "median_ms": 0.813,
+   "min_ms": 0.704,
+   "max_ms": 1.636
+  },
+  {
+   "page": "typical",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 4,
+   "median_ms": 0.284,
+   "min_ms": 0.224,
+   "max_ms": 0.326
+  },
+  {
+   "page": "typical",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 17,
+   "icp_attempts": 0,
+   "median_ms": 0.262,
+   "min_ms": 0.221,
+   "max_ms": 0.297
+  },
+  {
+   "page": "typical",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 15,
+   "median_ms": 0.271,
+   "min_ms": 0.211,
+   "max_ms": 0.301
+  },
+  {
+   "page": "typical",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 9,
+   "icp_attempts": 0,
+   "median_ms": 0.303,
+   "min_ms": 0.237,
+   "max_ms": 0.583
+  },
+  {
+   "page": "typical",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 23,
+   "median_ms": 0.238,
+   "min_ms": 0.229,
+   "max_ms": 0.261
+  },
+  {
+   "page": "typical",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 2,
+   "icp_attempts": 0,
+   "median_ms": 0.232,
+   "min_ms": 0.208,
+   "max_ms": 0.278
+  },
+  {
+   "page": "typical",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 30,
+   "median_ms": 0.262,
+   "min_ms": 0.215,
+   "max_ms": 0.271
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 1593,
+   "icp_attempts": 0,
+   "median_ms": 0.493,
+   "min_ms": 0.44,
+   "max_ms": 1.188
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 552,
+   "median_ms": 0.297,
+   "min_ms": 0.278,
+   "max_ms": 0.438
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 761,
+   "icp_attempts": 0,
+   "median_ms": 0.602,
+   "min_ms": 0.455,
+   "max_ms": 0.732
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 1384,
+   "median_ms": 0.404,
+   "min_ms": 0.322,
+   "max_ms": 0.499
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 292,
+   "icp_attempts": 0,
+   "median_ms": 0.461,
+   "min_ms": 0.282,
+   "max_ms": 0.755
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 1853,
+   "median_ms": 0.569,
+   "min_ms": 0.43,
+   "max_ms": 0.961
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 2,
+   "icp_attempts": 0,
+   "median_ms": 0.338,
+   "min_ms": 0.287,
+   "max_ms": 0.484
+  },
+  {
+   "page": "talvisota",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 2143,
+   "median_ms": 0.621,
+   "min_ms": 0.375,
+   "max_ms": 2.053
+  },
+  {
+   "page": "halonen",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 2271,
+   "icp_attempts": 0,
+   "median_ms": 1.022,
+   "min_ms": 0.996,
+   "max_ms": 2.199
+  },
+  {
+   "page": "halonen",
+   "as_of": "2006-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 809,
+   "median_ms": 0.563,
+   "min_ms": 0.478,
+   "max_ms": 0.649
+  },
+  {
+   "page": "halonen",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 691,
+   "icp_attempts": 0,
+   "median_ms": 0.391,
+   "min_ms": 0.364,
+   "max_ms": 0.55
+  },
+  {
+   "page": "halonen",
+   "as_of": "2012-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 2389,
+   "median_ms": 0.744,
+   "min_ms": 0.508,
+   "max_ms": 1.189
+  },
+  {
+   "page": "halonen",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 197,
+   "icp_attempts": 0,
+   "median_ms": 0.411,
+   "min_ms": 0.345,
+   "max_ms": 0.513
+  },
+  {
+   "page": "halonen",
+   "as_of": "2019-12-31 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 2883,
+   "median_ms": 0.691,
+   "min_ms": 0.59,
+   "max_ms": 1.116
+  },
+  {
+   "page": "halonen",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "chosen",
+   "key": "PRIMARY",
+   "handler_reads": 2,
+   "icp_attempts": 0,
+   "median_ms": 0.499,
+   "min_ms": 0.453,
+   "max_ms": 0.645
+  },
+  {
+   "page": "halonen",
+   "as_of": "2026-09-30 23:59:59",
+   "plan": "page_id_row_start",
+   "key": "page_id",
+   "handler_reads": 2,
+   "icp_attempts": 3078,
+   "median_ms": 0.738,
+   "min_ms": 0.616,
+   "max_ms": 1.459
+  }
+ ]
+}

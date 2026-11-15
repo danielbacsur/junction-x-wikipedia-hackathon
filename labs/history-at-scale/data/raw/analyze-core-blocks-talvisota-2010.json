@@ -1,0 +1,52 @@
+{
+  "query_optimization": {
+    "r_total_time_ms": 11.76395931
+  },
+  "query_block": {
+    "select_id": 1,
+    "cost": 2.45699557,
+    "r_loops": 1,
+    "r_total_time_ms": 16.32697317,
+    "nested_loop": [
+      {
+        "read_sorted_file": {
+          "r_rows": 320,
+          "filesort": {
+            "sort_key": "p.ord",
+            "r_loops": 1,
+            "r_total_time_ms": 16.28196256,
+            "r_used_priority_queue": false,
+            "r_output_rows": 320,
+            "r_buffer_size": "2047KiB",
+            "r_sort_mode": "packed_sort_key,packed_addon_fields",
+            "table": {
+              "table_name": "p",
+              "access_type": "ref",
+              "possible_keys": ["PRIMARY", "page_id"],
+              "key": "PRIMARY",
+              "key_length": "4",
+              "used_key_parts": ["page_id"],
+              "ref": ["const"],
+              "loops": 1,
+              "r_loops": 1,
+              "rows": 14298,
+              "r_rows": 6462,
+              "cost": 2.45699557,
+              "r_table_time_ms": 14.40030132,
+              "r_other_time_ms": 1.624648951,
+              "r_engine_stats": {
+                "pages_accessed": 80,
+                "pages_read_count": 65,
+                "pages_read_time_ms": 18.98414723
+              },
+              "filtered": 90.19443512,
+              "r_total_filtered": 4.952027236,
+              "attached_condition": "p.page_id <=> 1256 and p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+              "r_filtered": 4.952027236
+            }
+          }
+        }
+      }
+    ]
+  }
+}

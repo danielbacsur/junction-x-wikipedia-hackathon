@@ -1,0 +1,8 @@
+Installed 2 packages in 26ms
+a_rows ((272661,),)
+b_rows ((272661,),)
+life_rows ((272661,),)
+lifetime_mismatch ((0,),)
+vector_mismatch ((0,),)
+version (('12.3.3-MariaDB-ubu2404',),)
+settings (('innodb_buffer_pool_size', '3221225472'), ('mhnsw_default_m', '6'), ('mhnsw_ef_search', '20'), ('mhnsw_max_cache_size', '2147483648'), ('version_compile_machine', 'aarch64'))

@@ -3,7 +3,7 @@ import { similarity, words } from "@wtt/package-wikitext";
 import { diffWords } from "diff";
 
 import { type Shown, show } from "./sql.ts";
-import { asOf, moment, when } from "./time.ts";
+import { STOOD, asOf, moment, when } from "./time.ts";
 
 export type Standing = {
   /**
@@ -131,7 +131,7 @@ export const readStanding = async (
       `SELECT HEX(p.hash) AS hash, t.text,
               VEC_DISTANCE_COSINE(v.embedding, mine.embedding) AS distance
        FROM passage_vector AS mine
-       JOIN passage ${asOf(at)} AS p ON p.page_id = ?
+       JOIN passage ${asOf(at)} AS p ${STOOD} ON p.page_id = ?
        JOIN passage_vector AS v ON v.hash = p.hash
        JOIN passage_text AS t ON t.hash = p.hash
        WHERE mine.hash = ?

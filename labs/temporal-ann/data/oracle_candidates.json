@@ -1,0 +1,9283 @@
+{
+  "title": "Exact global candidates followed by lifetime filtering",
+  "unit": "fraction",
+  "source": "uv run labs/temporal-ann/controls.py; first 10 held-out queries \u00d7 20 dates",
+  "rows": [
+    {
+      "query": 0,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196649
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196649
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196649,
+        207978
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196646
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196646,
+        213127
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.8,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196646,
+        213127,
+        207973,
+        213102,
+        226615,
+        86981,
+        65900,
+        143108
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196643
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196643,
+        179676,
+        213124
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196643,
+        179676,
+        213124,
+        207973,
+        213094,
+        226614,
+        86977,
+        238196,
+        65893,
+        143102
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196637
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196637,
+        179667,
+        213121,
+        269683
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196637,
+        179667,
+        213121,
+        269683,
+        207965,
+        213081,
+        206193,
+        226606,
+        86967,
+        238178
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196636
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196636,
+        179658,
+        213120,
+        269675
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196636,
+        179658,
+        213120,
+        269675,
+        207963,
+        206186,
+        213077,
+        226602,
+        86964,
+        238173
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196630
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196630,
+        179657,
+        239233,
+        213119
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196630,
+        179657,
+        239233,
+        213119,
+        269669,
+        206184,
+        213072,
+        207957,
+        226597,
+        86961
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196628
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196628,
+        179653,
+        239229,
+        213118
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196628,
+        179653,
+        239229,
+        213118,
+        269669,
+        206184,
+        207957,
+        213070,
+        226596,
+        86959
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196624
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196624,
+        179652,
+        239227,
+        213116
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196624,
+        179652,
+        239227,
+        213116,
+        269669,
+        206184,
+        207953,
+        213067,
+        226594,
+        86947
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196624
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196624,
+        179652,
+        239224,
+        213116
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196624,
+        179652,
+        239224,
+        213116,
+        269669,
+        206184,
+        207952,
+        213066,
+        86945,
+        226593
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196621
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196621,
+        179652,
+        239222,
+        213116
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196621,
+        179652,
+        239222,
+        213116,
+        269669,
+        206183,
+        207951,
+        213066,
+        86945,
+        226585
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196620
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196620,
+        179651,
+        239221,
+        213115
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196620,
+        179651,
+        239221,
+        213115,
+        269669,
+        207950,
+        206183,
+        213066,
+        86945,
+        226582
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196619
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196619,
+        179647,
+        239219,
+        213114
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196619,
+        179647,
+        239219,
+        213114,
+        269667,
+        207950,
+        206182,
+        213066,
+        226582,
+        86932
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196618
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196618,
+        179647,
+        239219,
+        213114
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196618,
+        179647,
+        239219,
+        213114,
+        269667,
+        207950,
+        206181,
+        213066,
+        86930,
+        226582
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196616
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196616,
+        179646,
+        239218,
+        213114
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196616,
+        179646,
+        239218,
+        213114,
+        269667,
+        86922,
+        207949,
+        206179,
+        213064,
+        226581
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196615
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196615,
+        179645,
+        239217,
+        213113
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196615,
+        179645,
+        239217,
+        213113,
+        269667,
+        86921,
+        207948,
+        206171,
+        213064,
+        226580
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196613
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196613,
+        179644,
+        239216,
+        213112
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196613,
+        179644,
+        239216,
+        213112,
+        269667,
+        86918,
+        207948,
+        206170,
+        213062,
+        226580
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196611
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196611,
+        179644,
+        239214,
+        213112
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196611,
+        179644,
+        239214,
+        213112,
+        269667,
+        206168,
+        86917,
+        207948,
+        213062,
+        226580
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196611
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196611,
+        179644,
+        239211,
+        213112
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196611,
+        179644,
+        239211,
+        213112,
+        269667,
+        138017,
+        86917,
+        206166,
+        207946,
+        213062
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196610
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196610,
+        179644,
+        239210,
+        213112
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196610,
+        179644,
+        239210,
+        213112,
+        269665,
+        206165,
+        138001,
+        207946,
+        86910,
+        213061
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196607
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196607,
+        179644,
+        239206,
+        213105
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 0,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196607,
+        179644,
+        239206,
+        213105,
+        269664,
+        137993,
+        206162,
+        86903,
+        207942,
+        213060
+      ],
+      "global_exact_ms": 3884.4945000018924
+    },
+    {
+      "query": 1,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221996
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221996
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221996,
+        50998,
+        172704,
+        171862,
+        240982,
+        188896
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221990
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221990,
+        204554
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221990,
+        204554,
+        158981,
+        218940,
+        50987,
+        218096,
+        242269,
+        150916,
+        237601,
+        172699
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221986
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221986,
+        198347,
+        204549
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221986,
+        198347,
+        204549,
+        158978,
+        218938,
+        50974,
+        218087,
+        242264,
+        237596,
+        150910
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221983
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221983,
+        198337,
+        204546,
+        253295
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221983,
+        198337,
+        204546,
+        253295,
+        50943,
+        158978,
+        218936,
+        218086,
+        242261,
+        237594
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221982
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221982,
+        198332,
+        204544,
+        253287
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221982,
+        198332,
+        204544,
+        253287,
+        50934,
+        158975,
+        218932,
+        218085,
+        248871,
+        242259
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204542,
+        253286
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204542,
+        253286,
+        50931,
+        158971,
+        218930,
+        218084,
+        248868,
+        242253
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204541,
+        253285
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204541,
+        253285,
+        50929,
+        158968,
+        218927,
+        218081,
+        248868,
+        242253
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204538,
+        253284
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204538,
+        253284,
+        50927,
+        158968,
+        218926,
+        218081,
+        248867,
+        242251
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204538,
+        253284
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221980,
+        198330,
+        204538,
+        253284,
+        50926,
+        158968,
+        218923,
+        218080,
+        248865,
+        242250
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198330,
+        204535,
+        253282
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198330,
+        204535,
+        253282,
+        50923,
+        158966,
+        218923,
+        218078,
+        248860,
+        242247
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198330,
+        204532,
+        253282
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198330,
+        204532,
+        253282,
+        50921,
+        158963,
+        218922,
+        218078,
+        248859,
+        242246
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198328,
+        204532,
+        253281
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221977,
+        198328,
+        204532,
+        253281,
+        50920,
+        158962,
+        218910,
+        218078,
+        248859,
+        242245
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221976
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221976,
+        198327,
+        204529,
+        253281
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221976,
+        198327,
+        204529,
+        253281,
+        50916,
+        158962,
+        218909,
+        218077,
+        248858,
+        244315
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221975
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221975,
+        198327,
+        204526,
+        253280
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221975,
+        198327,
+        204526,
+        253280,
+        50912,
+        158960,
+        218905,
+        218077,
+        248857,
+        244314
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221974
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221974,
+        198327,
+        204524,
+        253279,
+        50909
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221974,
+        198327,
+        204524,
+        253279,
+        50909,
+        158955,
+        218899,
+        218074,
+        248851,
+        244311
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221970
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221970,
+        198327,
+        204522,
+        253279,
+        50909
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221970,
+        198327,
+        204522,
+        253279,
+        50909,
+        158955,
+        218898,
+        218072,
+        248851,
+        244311
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221969
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221969,
+        198327,
+        204521,
+        253278,
+        50909
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221969,
+        198327,
+        204521,
+        253278,
+        50909,
+        158949,
+        218898,
+        248844,
+        218068,
+        244311
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221967,
+        198326
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221967,
+        198326,
+        204520,
+        253275,
+        50909,
+        158943
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221967,
+        198326,
+        204520,
+        253275,
+        50909,
+        158943,
+        218898,
+        248840,
+        218065,
+        244308
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221966,
+        198323
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221966,
+        198323,
+        204519,
+        253275,
+        158937,
+        50908
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221966,
+        198323,
+        204519,
+        253275,
+        158937,
+        50908,
+        218898,
+        248837,
+        218063,
+        242234
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221964,
+        198322
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        221964,
+        198322,
+        204516,
+        253273,
+        158928
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 1,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        221964,
+        198322,
+        204516,
+        253273,
+        158928,
+        50905,
+        218898,
+        248836,
+        218061,
+        244299
+      ],
+      "global_exact_ms": 12122.882333991583
+    },
+    {
+      "query": 2,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196649,
+        75499,
+        185010,
+        211977,
+        226234
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.7,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196646,
+        213127,
+        211971,
+        75491,
+        185005,
+        226224,
+        93181
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258950
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258950,
+        196643,
+        213124,
+        211969,
+        75486,
+        226221,
+        190476,
+        166004,
+        185002,
+        242576
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258930
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258930,
+        156427,
+        196637,
+        213121,
+        75478,
+        211963,
+        166149,
+        190471,
+        166000,
+        226221
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156399,
+        258924
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156399,
+        258924,
+        196636,
+        213120,
+        75474,
+        211956,
+        93160,
+        190471,
+        226220,
+        166142
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        258922,
+        196630,
+        213119,
+        75460,
+        211951,
+        93158,
+        166136,
+        190469,
+        165992
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        258922,
+        196628,
+        213118,
+        211949,
+        75457,
+        93152,
+        166136,
+        190467,
+        165992
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196624,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196624,
+        258922,
+        75452,
+        211948,
+        213116,
+        93148,
+        190466,
+        166136,
+        184976
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196624,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196624,
+        258922,
+        211948,
+        213116,
+        75450,
+        93147,
+        190465,
+        166136,
+        184975
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196621,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196621,
+        258922,
+        211948,
+        213116,
+        93146,
+        190461,
+        166135,
+        75442,
+        184975
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196620,
+        258922
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156397,
+        196620,
+        258922,
+        213115,
+        211944,
+        93145,
+        190461,
+        75441,
+        184972,
+        166131
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156395,
+        196619
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156395,
+        196619,
+        258920,
+        213114,
+        211944,
+        75440,
+        190461,
+        184970,
+        93142,
+        166128
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        156394,
+        196618
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        156394,
+        196618,
+        258919,
+        213114,
+        190453,
+        211944,
+        75437,
+        184970,
+        93141,
+        165992
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196616,
+        156394
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196616,
+        156394,
+        258919,
+        213114,
+        190451,
+        211943,
+        75436,
+        184969,
+        93137,
+        165992
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196615,
+        156394,
+        88485
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196615,
+        156394,
+        88485,
+        258919,
+        213113,
+        190450,
+        75434,
+        211941,
+        184969,
+        93135
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88477,
+        196613,
+        156394
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        88477,
+        196613,
+        156394,
+        258919,
+        190439,
+        213112,
+        75434,
+        211940,
+        184966,
+        191760
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88474,
+        196611,
+        156394
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        88474,
+        196611,
+        156394,
+        258919,
+        126881,
+        190438,
+        213112,
+        211937,
+        75433,
+        191758
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88426
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88426,
+        196611,
+        156392,
+        126827
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        88426,
+        196611,
+        156392,
+        126827,
+        258919,
+        211936,
+        190435,
+        213112,
+        75431,
+        184964
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88417
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        88417,
+        196610,
+        156391,
+        126818
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        88417,
+        196610,
+        156391,
+        126818,
+        258918,
+        211936,
+        213112,
+        190433,
+        184960,
+        75429
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        196607,
+        88415,
+        126817,
+        156390
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 2,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        196607,
+        88415,
+        126817,
+        156390,
+        258917,
+        190430,
+        75424,
+        213105,
+        184960,
+        211935
+      ],
+      "global_exact_ms": 12747.401874978095
+    },
+    {
+      "query": 3,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        225775
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        225775,
+        50099,
+        188896
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        225771
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.9,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        225771,
+        232079,
+        82467,
+        257544,
+        50085,
+        237281,
+        232737,
+        188892,
+        263354
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        225767,
+        82458
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        225767,
+        82458,
+        232074,
+        194655,
+        257541,
+        169649,
+        252902,
+        263693,
+        50075,
+        237274
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269340
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269340,
+        225763,
+        82449
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269340,
+        225763,
+        82449,
+        232070,
+        194653,
+        257540,
+        252899,
+        169644,
+        263684,
+        50073
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269332
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269332,
+        225760,
+        82429
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269332,
+        225760,
+        82429,
+        232067,
+        194652,
+        257536,
+        252896,
+        169641,
+        263678,
+        50065
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225756,
+        82419
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225756,
+        82419,
+        232066,
+        194650,
+        252894,
+        50038,
+        169635,
+        257530,
+        263674
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225756,
+        82417
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225756,
+        82417,
+        232066,
+        194650,
+        50036,
+        252892,
+        169628,
+        257530,
+        263674
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225755,
+        82416
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225755,
+        82416,
+        232065,
+        194648,
+        169627,
+        252892,
+        50035,
+        257529,
+        263673
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225755,
+        82416
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225755,
+        82416,
+        232061,
+        194648,
+        169627,
+        252891,
+        50035,
+        257528,
+        263673
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225754,
+        82415
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225754,
+        82415,
+        232057,
+        194644,
+        257525,
+        252886,
+        50034,
+        169625,
+        263673
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225753
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225753,
+        82411
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269330,
+        225753,
+        82411,
+        232057,
+        194644,
+        252885,
+        257525,
+        169624,
+        50032,
+        263673
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269329,
+        225752
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269329,
+        225752,
+        82411,
+        232053
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269329,
+        225752,
+        82411,
+        232053,
+        194641,
+        50024,
+        252881,
+        257525,
+        169623,
+        237251
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225752
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225752,
+        82410,
+        50022
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225752,
+        82410,
+        50022,
+        232052,
+        194640,
+        252881,
+        257522,
+        169621,
+        237251
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225750
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225750,
+        82408,
+        50014,
+        232050,
+        194635
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225750,
+        82408,
+        50014,
+        232050,
+        194635,
+        252877,
+        257517,
+        169620,
+        237251
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225748
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225748,
+        82404,
+        50014,
+        194631,
+        232049
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225748,
+        82404,
+        50014,
+        194631,
+        232049,
+        252876,
+        169620,
+        257516,
+        263672
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225746
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225746,
+        82403,
+        50011,
+        232048,
+        194628
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225746,
+        82403,
+        50011,
+        232048,
+        194628,
+        169616,
+        252876,
+        257516,
+        263672
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225745,
+        82402,
+        50009,
+        232047,
+        194627
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269328,
+        225745,
+        82402,
+        50009,
+        232047,
+        194627,
+        169614,
+        252874,
+        257515,
+        263672
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269327,
+        225744
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.7,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269327,
+        225744,
+        82401,
+        50007,
+        194623,
+        232047,
+        169600
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269327,
+        225744,
+        82401,
+        50007,
+        194623,
+        232047,
+        169600,
+        252869,
+        257515,
+        237249
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269325,
+        225744
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.7,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269325,
+        225744,
+        82400,
+        50007,
+        194623,
+        232044,
+        169600
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269325,
+        225744,
+        82400,
+        50007,
+        194623,
+        232044,
+        169600,
+        252867,
+        257514,
+        237245
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269324,
+        225740
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.7,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        269324,
+        225740,
+        82397,
+        50005,
+        169598,
+        194615,
+        232041
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 3,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        269324,
+        225740,
+        82397,
+        50005,
+        169598,
+        194615,
+        232041,
+        252866,
+        257513,
+        237243
+      ],
+      "global_exact_ms": 7265.60254098149
+    },
+    {
+      "query": 4,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160773,
+        83935
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97194
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.7,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97194,
+        54605,
+        160771,
+        82467,
+        200702,
+        218940,
+        83929
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97185,
+        54600
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.8,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97185,
+        54600,
+        160767,
+        162961,
+        82458,
+        200701,
+        218938,
+        83922
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97183,
+        54599
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        97183,
+        54599,
+        160763,
+        162956,
+        82449,
+        166272,
+        83911,
+        218936,
+        200698,
+        253269
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        97145,
+        54598
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        97145,
+        54598,
+        160760,
+        202380,
+        162955,
+        82429,
+        83888,
+        166258,
+        218932,
+        253267
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265202,
+        97143
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265202,
+        97143,
+        234331
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265202,
+        97143,
+        234331,
+        54596,
+        160755,
+        202371,
+        260347,
+        82419,
+        162953,
+        83879
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265198,
+        97142
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265198,
+        97142,
+        234319
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265198,
+        97142,
+        234319,
+        54596,
+        160748,
+        202368,
+        260342,
+        82417,
+        162951,
+        83873
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265195,
+        97139
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265195,
+        97139,
+        234318,
+        54587
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265195,
+        97139,
+        234318,
+        54587,
+        160744,
+        234662,
+        202364,
+        260341,
+        82416,
+        162945
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97139
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97139,
+        234318,
+        54586
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97139,
+        234318,
+        54586,
+        160743,
+        234662,
+        202357,
+        260340,
+        82416,
+        162944
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97136
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97136,
+        54584,
+        234317
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265193,
+        97136,
+        54584,
+        234317,
+        160743,
+        234662,
+        202356,
+        260339,
+        82415,
+        162944
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265192
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265192,
+        97134,
+        54584,
+        234316
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265192,
+        97134,
+        54584,
+        234316,
+        160742,
+        234662,
+        202356,
+        260339,
+        82411,
+        162944
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265192,
+        97130
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265192,
+        97130,
+        54581,
+        234315
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265192,
+        97130,
+        54581,
+        234315,
+        160740,
+        234662,
+        202355,
+        260339,
+        82411,
+        162944
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265191,
+        97129
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265191,
+        97129,
+        54581,
+        234315
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265191,
+        97129,
+        54581,
+        234315,
+        160740,
+        234662,
+        202355,
+        260337,
+        82410,
+        162944
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265189
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265189,
+        97126,
+        54575,
+        234314
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265189,
+        97126,
+        54575,
+        234314,
+        160739,
+        234662,
+        202352,
+        260336,
+        82408,
+        162942
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265182
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265182,
+        97126,
+        54571,
+        234314
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265182,
+        97126,
+        54571,
+        234314,
+        160737,
+        234658,
+        202352,
+        260336,
+        82404,
+        162942
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54567,
+        234305
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54567,
+        234305,
+        160735,
+        234644,
+        202347,
+        260336,
+        162939,
+        82403
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54566
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54566,
+        234304,
+        160735,
+        234642,
+        202346,
+        260336,
+        162939,
+        82402
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54564,
+        234302
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265176,
+        97122,
+        54564,
+        234302,
+        160733,
+        234638,
+        202343,
+        162938,
+        260327,
+        82401
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265175
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265175,
+        97121,
+        54556
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265175,
+        97121,
+        54556,
+        234296,
+        160723,
+        234636,
+        202339,
+        162936,
+        88417,
+        260325
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265175
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        265175,
+        97119,
+        54553
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 4,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        265175,
+        97119,
+        54553,
+        234296,
+        160721,
+        234624,
+        202339,
+        162904,
+        260321,
+        88415
+      ],
+      "global_exact_ms": 4748.2731670024805
+    },
+    {
+      "query": 5,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160773
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160773,
+        221874,
+        51489,
+        172647
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160771
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.9,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160771,
+        209595,
+        221868,
+        51478,
+        186049,
+        102457,
+        82303,
+        172642,
+        52684
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160767
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.9,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        160767,
+        209590,
+        221867,
+        51472,
+        186040,
+        102455,
+        82294,
+        71840,
+        172637
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        215061,
+        269308,
+        160763
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        215061,
+        269308,
+        160763,
+        209588,
+        221865,
+        51465,
+        186036,
+        102448,
+        82276,
+        52663
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        215057,
+        269299,
+        160760
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        215057,
+        269299,
+        160760,
+        209584,
+        221859,
+        51459,
+        186032,
+        102443,
+        82276,
+        52640
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        215057,
+        160755,
+        269297,
+        209579
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        215057,
+        160755,
+        269297,
+        209579,
+        221857,
+        51456,
+        186029,
+        102439,
+        82270,
+        71814
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        215056,
+        160748,
+        269297,
+        209579
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        215056,
+        160748,
+        269297,
+        209579,
+        221856,
+        51450,
+        186029,
+        102432,
+        82269,
+        71808
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199295
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199295,
+        215054,
+        160744,
+        269296,
+        209578
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199295,
+        215054,
+        160744,
+        269296,
+        209578,
+        221855,
+        51449,
+        186026,
+        102411,
+        82267
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199286
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199286,
+        215054,
+        160743,
+        269296
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199286,
+        215054,
+        160743,
+        269296,
+        209577,
+        221855,
+        51448,
+        186026,
+        102407,
+        82263
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199285
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199285,
+        215053,
+        160743,
+        269296
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199285,
+        215053,
+        160743,
+        269296,
+        209577,
+        221854,
+        51441,
+        186024,
+        102403,
+        82260
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199271
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199271,
+        215053,
+        160742,
+        269296,
+        209574
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199271,
+        215053,
+        160742,
+        269296,
+        209574,
+        221854,
+        186017,
+        51438,
+        102401,
+        82258
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199269
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199269,
+        215049,
+        160740,
+        269295,
+        209573
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199269,
+        215049,
+        160740,
+        269295,
+        209573,
+        221852,
+        186017,
+        51437,
+        102398,
+        82255
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199268
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199268,
+        215049,
+        160740,
+        269294,
+        209573
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199268,
+        215049,
+        160740,
+        269294,
+        209573,
+        221851,
+        186015,
+        51437,
+        102397,
+        82254
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199268
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199268,
+        215047,
+        160739,
+        269294
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199268,
+        215047,
+        160739,
+        269294,
+        209572,
+        221848,
+        186012,
+        51434,
+        102395,
+        82251
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199267
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199267,
+        215047,
+        160737,
+        269294
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199267,
+        215047,
+        160737,
+        269294,
+        209572,
+        221848,
+        186009,
+        51430,
+        102390,
+        82248
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199264
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199264,
+        215046,
+        160735,
+        269294
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199264,
+        215046,
+        160735,
+        269294,
+        209572,
+        221839,
+        186009,
+        51426,
+        102388,
+        82247
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199264
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199264,
+        215046,
+        160735,
+        269294
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199264,
+        215046,
+        160735,
+        269294,
+        209556,
+        221839,
+        51415,
+        186008,
+        102388,
+        82238
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199261
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199261,
+        215046,
+        160733,
+        269293,
+        209552
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199261,
+        215046,
+        160733,
+        269293,
+        209552,
+        221837,
+        51409,
+        186007,
+        102385,
+        82237
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199254
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199254,
+        215042,
+        160723,
+        269292,
+        209551
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199254,
+        215042,
+        160723,
+        269292,
+        209551,
+        221836,
+        51409,
+        186004,
+        102384,
+        82228
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199253,
+        215040
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        199253,
+        215040,
+        160721,
+        269290,
+        209551
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 5,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        199253,
+        215040,
+        160721,
+        269290,
+        209551,
+        51400,
+        221835,
+        186001,
+        82223,
+        102382
+      ],
+      "global_exact_ms": 4486.23087501619
+    },
+    {
+      "query": 6,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        172704
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        172704,
+        119482
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        102124,
+        172699
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        102124,
+        172699,
+        246284,
+        232079,
+        246056,
+        237476,
+        242309,
+        186049,
+        119473,
+        268062
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        102118,
+        258734,
+        172692,
+        246280
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        102118,
+        258734,
+        172692,
+        246280,
+        232074,
+        247688,
+        246054,
+        237469,
+        242303,
+        219067
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258733,
+        102111,
+        172691,
+        246278
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258733,
+        102111,
+        172691,
+        246278,
+        253419,
+        232070,
+        247680,
+        246049,
+        242302,
+        237468
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258733,
+        102102,
+        172689,
+        246277
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258733,
+        102102,
+        172689,
+        246277,
+        253418,
+        232067,
+        247680,
+        246049,
+        237464,
+        190516
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102099,
+        172685,
+        246275
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102099,
+        172685,
+        246275,
+        253417,
+        232066,
+        247678,
+        246048,
+        237463,
+        242300
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102097,
+        172685,
+        246273
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102097,
+        172685,
+        246273,
+        253417,
+        232066,
+        247677,
+        254559,
+        246047,
+        242297
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102095,
+        172684,
+        246273
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102095,
+        172684,
+        246273,
+        253417,
+        232065,
+        247676,
+        254557,
+        246046,
+        242297
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102092,
+        172684,
+        246273
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258732,
+        102092,
+        172684,
+        246273,
+        253417,
+        232061,
+        247676,
+        254557,
+        246046,
+        242297
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258731
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258731,
+        102087,
+        172684
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258731,
+        102087,
+        172684,
+        246270,
+        253415,
+        232057,
+        247674,
+        254557,
+        246044,
+        242297
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258722,
+        102086
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258722,
+        102086,
+        172682
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258722,
+        102086,
+        172682,
+        246270,
+        253415,
+        232057,
+        247674,
+        254554,
+        246043,
+        242293
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258714
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258714,
+        102083,
+        172681
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258714,
+        102083,
+        172681,
+        246270,
+        253414,
+        232053,
+        247674,
+        254551,
+        246042,
+        237460
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258712
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258712,
+        102081,
+        172678,
+        246268
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258712,
+        102081,
+        172678,
+        246268,
+        253405,
+        232052,
+        247673,
+        254550,
+        246039,
+        237456
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258710
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258710,
+        102079,
+        172674,
+        246265
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258710,
+        102079,
+        172674,
+        246265,
+        253404,
+        232050,
+        247671,
+        254547,
+        246036,
+        237456
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258705
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258705,
+        102078,
+        172669,
+        246265
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258705,
+        102078,
+        172669,
+        246265,
+        253402,
+        232049,
+        247671,
+        254545,
+        246034,
+        237453
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258705,
+        102074
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258705,
+        102074,
+        172663,
+        246264
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258705,
+        102074,
+        172663,
+        246264,
+        253399,
+        232048,
+        247671,
+        254541,
+        246033,
+        237453
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258704,
+        102072
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258704,
+        102072,
+        172662,
+        246263
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258704,
+        102072,
+        172662,
+        246263,
+        253395,
+        232047,
+        247668,
+        254540,
+        246031,
+        237450
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258703,
+        102070
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258703,
+        102070,
+        172657,
+        246258
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258703,
+        102070,
+        172657,
+        246258,
+        253386,
+        247661,
+        232047,
+        254535,
+        246027,
+        242283
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258702,
+        102067
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258702,
+        102067,
+        172655,
+        246256
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258702,
+        102067,
+        172655,
+        246256,
+        253385,
+        247658,
+        232044,
+        254533,
+        246027,
+        242283
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258701,
+        102066
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        258701,
+        102066,
+        172651,
+        246252
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 6,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        258701,
+        102066,
+        172651,
+        246252,
+        253384,
+        247657,
+        232041,
+        254531,
+        242271,
+        219029
+      ],
+      "global_exact_ms": 3466.7809999955352
+    },
+    {
+      "query": 7,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61570
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61570,
+        56985,
+        162132,
+        237361,
+        267722,
+        61484
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61565,
+        56983
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61565,
+        56983,
+        162128,
+        237359,
+        267719
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61562,
+        56983
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.8,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61562,
+        56983,
+        140700,
+        180221,
+        162127,
+        237358,
+        159641,
+        267718
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61559,
+        56978
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.9,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61559,
+        56978,
+        140700,
+        187191,
+        180219,
+        162121,
+        237357,
+        159638,
+        267711
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61557,
+        56976
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.9,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61557,
+        56976,
+        140700,
+        187190,
+        180217,
+        162119,
+        237357,
+        159637,
+        267711
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61555,
+        56973
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61555,
+        56973,
+        140700,
+        265264,
+        187184,
+        180217,
+        191536,
+        162117,
+        237357,
+        159635
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61543,
+        56971
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61543,
+        56971,
+        140697,
+        265262,
+        191639,
+        187182,
+        191524,
+        180216,
+        162111,
+        237354
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61537
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61537,
+        56937,
+        140695,
+        191637,
+        265260,
+        191519,
+        187182,
+        180213,
+        162110,
+        237350
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61528
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61528,
+        56932,
+        140695,
+        265259,
+        191635,
+        187176,
+        191513,
+        180212,
+        162109,
+        237350
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61521,
+        56907
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61521,
+        56907,
+        140656,
+        265259,
+        191633,
+        187174,
+        191509,
+        180209,
+        162108,
+        237350
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61515
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        61515,
+        56907
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        61515,
+        56907,
+        140652,
+        265257,
+        191632,
+        187174,
+        191509,
+        180208,
+        162108,
+        237350
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255337
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255337,
+        61512,
+        56902
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255337,
+        61512,
+        56902,
+        140652,
+        191630,
+        265257,
+        191507,
+        187174,
+        180207,
+        162107
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255336
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255336,
+        61511,
+        56900
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255336,
+        61511,
+        56900,
+        140649,
+        191629,
+        265252,
+        191507,
+        187172,
+        180206,
+        162106
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255334
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255334,
+        61508,
+        56899
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255334,
+        61508,
+        56899,
+        140649,
+        191627,
+        265252,
+        191505,
+        187170,
+        180196,
+        162104
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255331
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255331,
+        61506,
+        56899
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255331,
+        61506,
+        56899,
+        140648,
+        191621,
+        265252,
+        191504,
+        180195,
+        162097,
+        187169
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255329
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255329,
+        61505,
+        56898
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255329,
+        61505,
+        56898,
+        140645,
+        191618,
+        265252,
+        191503,
+        162093,
+        180195,
+        187166
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255324
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255324,
+        61501,
+        56896
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255324,
+        61501,
+        56896,
+        140641,
+        191614,
+        265250,
+        187153,
+        191503,
+        162087,
+        180193
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255318,
+        61499
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255318,
+        61499,
+        56896,
+        140637
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255318,
+        61499,
+        56896,
+        140637,
+        191614,
+        265250,
+        187152,
+        191502,
+        162085,
+        180189
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255310,
+        61495
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        255310,
+        61495,
+        56894,
+        140635
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 7,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        255310,
+        61495,
+        56894,
+        140635,
+        191604,
+        265245,
+        187145,
+        191501,
+        180185,
+        162079
+      ],
+      "global_exact_ms": 2248.910166992573
+    },
+    {
+      "query": 8,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        250495,
+        217484
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        250495,
+        217484,
+        181898,
+        65140,
+        200317
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        250492,
+        217483
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        250492,
+        217483,
+        251826,
+        181897,
+        65134,
+        258040,
+        200315,
+        267175,
+        92289,
+        138911
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        250491
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        250491,
+        217482
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        250491,
+        217482,
+        251819,
+        140428,
+        181889,
+        258034,
+        65133,
+        200305,
+        267172,
+        92286
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220141,
+        250490
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220141,
+        250490,
+        217479
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220141,
+        250490,
+        217479,
+        251819,
+        181881,
+        140424,
+        87799,
+        65129,
+        258030,
+        138879
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220137
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.6,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220137,
+        250487,
+        251816,
+        217472,
+        181878,
+        140421
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220137,
+        250487,
+        251816,
+        217472,
+        181878,
+        140421,
+        87796,
+        253925,
+        65129,
+        210649
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220135
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220135,
+        251816,
+        250486,
+        181876,
+        217472
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220135,
+        251816,
+        250486,
+        181876,
+        217472,
+        140416,
+        253919,
+        87793,
+        65117,
+        210642
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220135
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220135,
+        251815,
+        250486,
+        217470,
+        140412
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220135,
+        251815,
+        250486,
+        217470,
+        140412,
+        181866,
+        253919,
+        87791,
+        65109,
+        210640
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251808,
+        250473,
+        217469,
+        140409
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251808,
+        250473,
+        217469,
+        140409,
+        181865,
+        253919,
+        87790,
+        65105,
+        210639
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251808,
+        250469,
+        217468
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251808,
+        250469,
+        217468,
+        181864,
+        140403,
+        87773,
+        253918,
+        65102,
+        271053
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251801,
+        250468,
+        217460
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251801,
+        250468,
+        217460,
+        181864,
+        140402,
+        87772,
+        253916,
+        271047,
+        210635
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251801,
+        250468,
+        217458
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251801,
+        250468,
+        217458,
+        181862,
+        140402,
+        210632,
+        87771,
+        253916,
+        65098
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251799,
+        250468,
+        217457
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251799,
+        250468,
+        217457,
+        181862,
+        140390,
+        210632,
+        87769,
+        253916,
+        65097
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251797,
+        250468,
+        217456
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251797,
+        250468,
+        217456,
+        181862,
+        140389,
+        210629,
+        87768,
+        253914,
+        65096
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251796
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251796,
+        250468,
+        217456,
+        140387
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220134,
+        251796,
+        250468,
+        217456,
+        140387,
+        181854,
+        87767,
+        210629,
+        253914,
+        271037
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250467,
+        217450,
+        140386
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250467,
+        217450,
+        140386,
+        181853,
+        87762,
+        253914,
+        65090,
+        271037
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250466,
+        140379,
+        217450
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250466,
+        140379,
+        217450,
+        181850,
+        253913,
+        210615,
+        271036,
+        65088
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250466,
+        140378,
+        217450
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220133,
+        251796,
+        250466,
+        140378,
+        217450,
+        181848,
+        271035,
+        253911,
+        210615,
+        87758
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220132
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220132,
+        251795,
+        140373,
+        217449,
+        250462
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220132,
+        251795,
+        140373,
+        217449,
+        250462,
+        181848,
+        271033,
+        253905,
+        210614,
+        87755
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220129
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220129,
+        251795,
+        217448,
+        140373,
+        250462
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220129,
+        251795,
+        217448,
+        140373,
+        250462,
+        181848,
+        271033,
+        87749,
+        253904,
+        65072
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220129
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        220129,
+        251795,
+        140371,
+        217445,
+        250461
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 8,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        220129,
+        251795,
+        140371,
+        217445,
+        250461,
+        181847,
+        271024,
+        87745,
+        253902,
+        65067
+      ],
+      "global_exact_ms": 2074.7102910245303
+    },
+    {
+      "query": 9,
+      "date": "2006-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2006-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2006-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2007-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2007-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2007-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        139558,
+        119822,
+        213505,
+        256607
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2008-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2008-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        169531
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2008-06-01 00:00:00",
+      "K": 1000,
+      "recall": 0.8,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        169531,
+        139554,
+        143559,
+        228123,
+        119810,
+        213501,
+        256596,
+        130562
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2009-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2009-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238879,
+        169521
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2009-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238879,
+        169521,
+        139550,
+        143551,
+        170042,
+        228118,
+        119807,
+        213499,
+        256596,
+        130553
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2010-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2010-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238867,
+        169508
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2010-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238867,
+        169508,
+        139546,
+        143551,
+        170042,
+        228118,
+        119806,
+        213497,
+        256593,
+        130551
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2011-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2011-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238865,
+        169502
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2011-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238865,
+        169502,
+        139544,
+        143549,
+        170040,
+        228114,
+        119806,
+        256592,
+        213493,
+        177474
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2012-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2012-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238863,
+        169499
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2012-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238863,
+        169499,
+        139544,
+        143549,
+        170037,
+        119804,
+        228113,
+        256588,
+        213488,
+        130532
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2013-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2013-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238859,
+        169497
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2013-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238859,
+        169497,
+        139540,
+        170035,
+        143545,
+        228113,
+        119803,
+        213485,
+        256583,
+        130527
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2014-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2014-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238857,
+        169497
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2014-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238857,
+        169497,
+        139539,
+        170031,
+        143545,
+        228112,
+        119803,
+        213483,
+        256582,
+        215936
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2015-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.0,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2015-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238857,
+        169496
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2015-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238857,
+        169496,
+        139539,
+        170024,
+        143544,
+        228110,
+        119803,
+        213482,
+        256582,
+        215930
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2016-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238855
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2016-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.2,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        238855,
+        169495
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2016-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        238855,
+        169495,
+        139535,
+        170024,
+        143544,
+        228109,
+        119801,
+        213480,
+        256582,
+        215918
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2017-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230144
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2017-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230144,
+        238851,
+        169494
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2017-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230144,
+        238851,
+        169494,
+        139534,
+        170013,
+        143544,
+        228108,
+        119799,
+        213477,
+        256582
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2018-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230141
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2018-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230141,
+        238850,
+        169493
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2018-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230141,
+        238850,
+        169493,
+        139533,
+        170013,
+        143540,
+        228106,
+        119796,
+        213477,
+        256581
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2019-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230138
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2019-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.3,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230138,
+        238849,
+        169493
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2019-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230138,
+        238849,
+        169493,
+        139527,
+        170010,
+        143534,
+        228105,
+        119789,
+        213469,
+        256581
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2020-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230119
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2020-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230119,
+        238849,
+        169493,
+        139523
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2020-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230119,
+        238849,
+        169493,
+        139523,
+        170008,
+        143533,
+        228104,
+        119787,
+        213469,
+        256581
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2021-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230114
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2021-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230114,
+        238849,
+        169492,
+        196180,
+        139523
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2021-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230114,
+        238849,
+        169492,
+        196180,
+        139523,
+        170008,
+        143532,
+        228103,
+        119787,
+        256581
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2022-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230113
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2022-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230113,
+        238849,
+        169492,
+        196180,
+        139523
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2022-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230113,
+        238849,
+        169492,
+        196180,
+        139523,
+        170005,
+        143530,
+        228096,
+        119787,
+        256580
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2023-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230111
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2023-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230111,
+        238846,
+        169490,
+        196175,
+        139521
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2023-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230111,
+        238846,
+        169490,
+        196175,
+        139521,
+        143511,
+        170002,
+        228092,
+        119786,
+        256579
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2024-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230106
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2024-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.5,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230106,
+        238845,
+        169484,
+        196170,
+        139521
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2024-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230106,
+        238845,
+        169484,
+        196170,
+        139521,
+        143508,
+        170001,
+        228092,
+        119786,
+        202774
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2026-06-01 00:00:00",
+      "K": 50,
+      "recall": 0.1,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230106
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2026-06-01 00:00:00",
+      "K": 200,
+      "recall": 0.4,
+      "underfilled": true,
+      "full_but_wrong": false,
+      "ids": [
+        230106,
+        238844,
+        169484,
+        196165
+      ],
+      "global_exact_ms": 345.31583299394697
+    },
+    {
+      "query": 9,
+      "date": "2026-06-01 00:00:00",
+      "K": 1000,
+      "recall": 1.0,
+      "underfilled": false,
+      "full_but_wrong": false,
+      "ids": [
+        230106,
+        238844,
+        169484,
+        196165,
+        139518,
+        169998,
+        143507,
+        228091,
+        119782,
+        202771
+      ],
+      "global_exact_ms": 345.31583299394697
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "title": "Most repeated sentence-like spans in prose",
+  "unit": "distinct articles",
+  "source": "sql/boilerplate-sentences.sql",
+  "rows": [
+    {
+      "hash": "86378C414109D003663A4F269681844C46557F14",
+      "articles": 242,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella, Riianlahdella ja Aa-joella."
+    },
+    {
+      "hash": "C3485E301026B000EBD64A8DB6EAAC0F681A22F6",
+      "articles": 101,
+      "sentence": "Hän oli sotilaskoulutuksensa ensimmäisen maailmansodan aikana Saksassa saanut jääkäri, joka sai tulikasteensa Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "hash": "40265551DFC81D5B7BB5BBDF4EB7CA05FCCCE744",
+      "articles": 73,
+      "sentence": "Hän oli sotilaskoulutuksensa ensimmäisen maailmansodan aikana Saksassa saanut jääkäri."
+    },
+    {
+      "hash": "61713841B2E386A4EFF2BC4C021D92734604373C",
+      "articles": 60,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella, Riianlahdella ja Schmardenissa sekä Aa-joella."
+    },
+    {
+      "hash": "CB74DCD83A38DAE02850C6D737348E4493A7DD0B",
+      "articles": 32,
+      "sentence": "Hänet sijoitettiin joukon 1. komppaniaan."
+    },
+    {
+      "hash": "7B2F01528B862C5746138B37B2729487967139DD",
+      "articles": 30,
+      "sentence": "Tulikasteensa hän sai Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "hash": "E08A4748550B6B8132157941C6F4DF6C5094D7B6",
+      "articles": 28,
+      "sentence": "Moskovan rauhassa 1940 alue luovutettiin Neuvostoliitolle, mutta Suomi valtasi alueen takaisin jatkosodan alussa 1941 ja kylän asukkaat pääsivät palaamaan raunioituneeseen kotikyläänsä."
+    },
+    {
+      "hash": "BDEE9D56193B2EB73FA8CBF8AE08F5946613FC2F",
+      "articles": 27,
+      "sentence": "Rauhanteossa kylä jäi taas Neuvostoliiton puolelle."
+    },
+    {
+      "hash": "B25A7272D77B4E9910025630656FD6614CD8522D",
+      "articles": 26,
+      "sentence": "Jälleenrakennus keskeytyi vuonna 1944 Neuvostoliiton suurhyökkäyksen alettua ja kylän asukkaat evakuoitiin uudelleen."
+    },
+    {
+      "hash": "3CE46298E8A6A0E74C35F15D3CE52B7B986ABACB",
+      "articles": 26,
+      "sentence": "Kunnassa asuu ihmistä, ja sen pinta-ala on km2, josta km2 on vesistöjä."
+    },
+    {
+      "hash": "76D5C203AC3C3071B900727A4872616574A9587E",
+      "articles": 25,
+      "sentence": "Muinaislinnaa on tutkittu vähän, mutta selviä merkkejä linnoittamisesta ei olla saatu."
+    },
+    {
+      "hash": "97ED6A2B9E065BAFA7628DB671514AE520DCA1E4",
+      "articles": 24,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Riianlahdella ja Aa-joella."
+    },
+    {
+      "hash": "745F8C7E0FBB0A139763D880A771B91B3C3E3A67",
+      "articles": 24,
+      "sentence": "Käytetty aluejako on 1.1.2013 tilanteen mukainen."
+    },
+    {
+      "hash": "0CF35D5819DFBB71F4C35969259103557E35AF98",
+      "articles": 23,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella Riianlahdella ja Aa-joella."
+    },
+    {
+      "hash": "E2B1A0DEED03DB623ADB0E227EFC4D77C6DFF400",
+      "articles": 22,
+      "sentence": "Hän oli edustaja aatelissäädyssä Porvoon valtiopäivillä 1809."
+    },
+    {
+      "hash": "3D20172C18C865DFF6B4A122B119DDF8633E8A53",
+      "articles": 21,
+      "sentence": "Hän sai tulikasteensa Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "hash": "E51F66155BD1745015BC6DF4F18EAD2E4DE2E844",
+      "articles": 21,
+      "sentence": "Hänet sijoitettiin joukon 2. komppaniaan."
+    },
+    {
+      "hash": "B54E4D532086DA51F67762A66888C0D31609360E",
+      "articles": 20,
+      "sentence": "Hänen puolueensa oli Ruotsalainen kansanpuolue."
+    },
+    {
+      "hash": "F000F2A3FDB44F5B09A079B34FF6DE2E477DDFCD",
+      "articles": 20,
+      "sentence": "Jänisjärvi laskee vuorostaan Laatokkaan, jonka laskujoki Neva laskee Pietarissa Itämeren Suomenlahteen."
+    },
+    {
+      "hash": "D801CFB05737C81219ABE89137E01D7962110C80",
+      "articles": 20,
+      "sentence": "Kunnassa asuu ihmistä ja sen pinta-ala on km2, josta km2 on vesistöjä."
+    },
+    {
+      "hash": "296B52532F2861375D3E1BDCE4E7A65832463262",
+      "articles": 19,
+      "sentence": "Leirille hän ilmoittautui 25. helmikuuta 1915."
+    },
+    {
+      "hash": "433C2BD9FA1407EB256182D418978FFD8AD3E5DC",
+      "articles": 19,
+      "sentence": "Myöhemmin hän osallistui Suomen sisällissotaan joukkueenjohtajana."
+    },
+    {
+      "hash": "6C81CCDA275EF2D4FEB596024E4D27AC02627EFE",
+      "articles": 18,
+      "sentence": "B-osastoilla hoidettiin lievemmin haavoittuneita ja järjestettiin kirurgisten potilaiden kuntoutus."
+    },
+    {
+      "hash": "4EF93F514A835C14B88C5416A626A9A32E07A77D",
+      "articles": 18,
+      "sentence": "Hän oli kansanedustajana Keski-Suomen läänin vaalipiiristä."
+    },
+    {
+      "hash": "FCCB37C9C3FDC06C7B5FC4FE43A1439BEC94A148",
+      "articles": 18,
+      "sentence": "Hän osallistui vuonna 1917 Polangenissa järjestetyille erikoiskursseille (pommarikurssi)."
+    },
+    {
+      "hash": "8BD46273033D25836CC74513E17FFB9524FB9D5B",
+      "articles": 18,
+      "sentence": "Lisäksi siellä hoidettiin sisätautien potilaita ja tartuntatauteja sairastavia."
+    },
+    {
+      "hash": "B44282524699D18698DCCBE706708D2F5356B514",
+      "articles": 18,
+      "sentence": "Muinaislinnassa on suoritettu arkeologinen inventointi ja sen puolustusrakenteita on kartoitettu pintapuolisesti."
+    },
+    {
+      "hash": "D5FD9FA8ED930C853EB0F5BE907AE6834644EBF5",
+      "articles": 18,
+      "sentence": "Perihämäläinen murrealue on hämäläismurteiden keskeisin alue."
+    },
+    {
+      "hash": "0E8901BA256DD5A45362C8C3DCCC3BA698623328",
+      "articles": 18,
+      "sentence": "Perihämäläisellä murteella on 19 tyypillistä hämäläistä murrepiirrettä."
+    },
+    {
+      "hash": "A994A57E1BB0F27DDD6C1A9F98C471E74386A4EF",
+      "articles": 17,
+      "sentence": "Hänen puolueensa oli Kansallinen Kokoomus."
+    },
+    {
+      "hash": "66BB7BAF4A07C9572432294B4A9304A64D1ED1D4",
+      "articles": 17,
+      "sentence": "Hänet haudattiin Helsingin Hietaniemen hautausmaalle."
+    },
+    {
+      "hash": "4B63084C321DEB30BC581BB27E070F2939C25DD6",
+      "articles": 17,
+      "sentence": "Hänet on haudattu Hietaniemen hautausmaalle."
+    },
+    {
+      "hash": "752BFD0B69DF71989F55A863C8540E44CAE65BFF",
+      "articles": 17,
+      "sentence": "Seuraavassa kuvaajassa on esitetty kunnan väestönkehitys viiden vuoden välein vuodesta 1980 lähtien."
+    },
+    {
+      "hash": "CE1DB9AA06AB1A4FEC2109AA306A0C2BF17B5C68",
+      "articles": 16,
+      "sentence": "Hänet komennettiin Suomen sisällissotaan joukkueenjohtajaksi 1."
+    },
+    {
+      "hash": "C95DFA4CCF985BE4450D59570F6EC5FF8EBA8435",
+      "articles": 16,
+      "sentence": "Naisäänestäjien äänestysaktiivisuus ylitti kunnallisvaaleissa miesäänestäjien äänestysaktiivisuuden ensimmäistä kertaa 1984 kunnallisvaaleissa."
+    },
+    {
+      "hash": "05084DB1D1CEA5DF75D6AAF45008F0D5F96CF4F6",
+      "articles": 16,
+      "sentence": "Suojeluskuntajärjestö lakkautettiin eduskunnan päätöksellä 3.11.1944."
+    },
+    {
+      "hash": "FB5A70F955A303AD63FD3D9AE02B2A6FABE469C7",
+      "articles": 16,
+      "sentence": "Talvisodan alussa kylästä evakuoitiin alaikäiset lapset äiteineen."
+    },
+    {
+      "hash": "D8AFF0FEAEB241CB43843195B553B19F65037213",
+      "articles": 15,
+      "sentence": "Hän oli ensimmäisen maailmansodan aikana Saksassa sotilaskoulutuksen saanut jääkäri."
+    },
+    {
+      "hash": "13E82BD581BB236C8C5ED9E56975FB5912C7A242",
+      "articles": 15,
+      "sentence": "Hän otti osaa sisällissodan taisteluihin Tampereella ja Viipurissa."
+    },
+    {
+      "hash": "F28FE90355970D935A962A207D7B3ECF5424D822",
+      "articles": 15,
+      "sentence": "Hän otti osaa sisällissodan taisteluihin Viipurissa."
+    }
+  ]
+}

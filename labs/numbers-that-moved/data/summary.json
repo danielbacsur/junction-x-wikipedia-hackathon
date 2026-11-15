@@ -1,0 +1,87 @@
+{
+  "title": "Number substitutions in prose",
+  "unit": "count",
+  "source": "wtt; run.py; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "metric": "all_substitutions",
+      "value": 6840
+    },
+    {
+      "metric": "both_endpoints_not_reverted",
+      "value": 5110
+    },
+    {
+      "metric": "new_endpoint_not_reverted",
+      "value": 5896
+    },
+    {
+      "metric": "articles_with_substitutions",
+      "value": 3011
+    },
+    {
+      "metric": "all_date",
+      "value": 1140
+    },
+    {
+      "metric": "all_mixed",
+      "value": 872
+    },
+    {
+      "metric": "all_quantity",
+      "value": 2510
+    },
+    {
+      "metric": "all_year",
+      "value": 2318
+    },
+    {
+      "metric": "clean_date",
+      "value": 725
+    },
+    {
+      "metric": "clean_mixed",
+      "value": 715
+    },
+    {
+      "metric": "clean_quantity",
+      "value": 1918
+    },
+    {
+      "metric": "clean_year",
+      "value": 1752
+    },
+    {
+      "metric": "unsettled_figures",
+      "value": 373
+    },
+    {
+      "metric": "figures_with_return",
+      "value": 138
+    },
+    {
+      "metric": "formatting_only_edges",
+      "value": 2399
+    },
+    {
+      "metric": "multiple_number_edges",
+      "value": 2184
+    },
+    {
+      "metric": "numeric_only_same_skeleton_edges",
+      "value": 63
+    },
+    {
+      "metric": "pages_scanned",
+      "value": 19742
+    },
+    {
+      "metric": "prose_rows",
+      "value": 1001410
+    },
+    {
+      "metric": "slot_zero_rows",
+      "value": 41
+    }
+  ]
+}

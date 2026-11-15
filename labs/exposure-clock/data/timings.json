@@ -1,0 +1,152 @@
+{
+  "title": "Sequential SQL wall-clock timings",
+  "unit": "seconds",
+  "source": "run.py; local MariaDB",
+  "rows": [
+    {
+      "query": "setup",
+      "seconds": 0.8509,
+      "rows": 0
+    },
+    {
+      "query": "timezone",
+      "seconds": 0.0087,
+      "rows": 0
+    },
+    {
+      "query": "summary",
+      "seconds": 0.2032,
+      "rows": 1
+    },
+    {
+      "query": "exposure-by-year",
+      "seconds": 0.4612,
+      "rows": 24
+    },
+    {
+      "query": "exposure-by-editor",
+      "seconds": 0.5853,
+      "rows": 31
+    },
+    {
+      "query": "exposure-by-population",
+      "seconds": 0.557,
+      "rows": 6
+    },
+    {
+      "query": "exposure-year-population",
+      "seconds": 0.5113,
+      "rows": 137
+    },
+    {
+      "query": "integrity",
+      "seconds": 0.1304,
+      "rows": 1
+    },
+    {
+      "query": "exposure-union-by-year",
+      "seconds": 0.6591,
+      "rows": 24
+    },
+    {
+      "query": "temp-accounts",
+      "seconds": 0.3519,
+      "rows": 68
+    },
+    {
+      "query": "temp-comparison",
+      "seconds": 0.179,
+      "rows": 7
+    },
+    {
+      "query": "local-time-setup",
+      "seconds": 0.3725,
+      "rows": 0
+    },
+    {
+      "query": "exposure-by-hour",
+      "seconds": 0.0992,
+      "rows": 24
+    },
+    {
+      "query": "exposure-by-weekday",
+      "seconds": 0.0944,
+      "rows": 7
+    },
+    {
+      "query": "longest-lived",
+      "seconds": 0.0087,
+      "rows": 20
+    },
+    {
+      "query": "event-edges-setup",
+      "seconds": 8.3969,
+      "rows": 0
+    },
+    {
+      "query": "revert-clusters",
+      "seconds": 0.1611,
+      "rows": 252
+    },
+    {
+      "query": "cluster-summary",
+      "seconds": 0.0048,
+      "rows": 1
+    },
+    {
+      "query": "source-audit",
+      "seconds": 0.1365,
+      "rows": 1
+    },
+    {
+      "query": "overall",
+      "seconds": 0.5779,
+      "rows": 1
+    },
+    {
+      "query": "editor-summary",
+      "seconds": 0.5152,
+      "rows": 7
+    },
+    {
+      "query": "patrol-year",
+      "seconds": 0.1214,
+      "rows": 23
+    },
+    {
+      "query": "long-range-events",
+      "seconds": 0.5562,
+      "rows": 20
+    },
+    {
+      "query": "comparison-observations",
+      "seconds": 0.028,
+      "rows": 3923
+    },
+    {
+      "query": "identity-sensitivity",
+      "seconds": 0.5199,
+      "rows": 2
+    },
+    {
+      "query": "blank-restore-audit",
+      "seconds": 0.1134,
+      "rows": 1
+    },
+    {
+      "query": "cluster-validity",
+      "seconds": 0.0157,
+      "rows": 1
+    },
+    {
+      "query": "valid-exposure-by-year",
+      "seconds": 0.4272,
+      "rows": 24
+    },
+    {
+      "query": "valid-exposure-by-editor",
+      "seconds": 0.5414,
+      "rows": 31
+    }
+  ]
+}

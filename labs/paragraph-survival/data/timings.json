@@ -1,0 +1,312 @@
+{
+  "title": "Sequential SQL timings",
+  "unit": "seconds",
+  "source": "run.py wall clock",
+  "rows": [
+    {
+      "query": "create-db",
+      "seconds": 0.0107,
+      "rows": 0
+    },
+    {
+      "query": "use-db",
+      "seconds": 0.0034,
+      "rows": 0
+    },
+    {
+      "query": "timezone",
+      "seconds": 0.0102,
+      "rows": 0
+    },
+    {
+      "query": "drop-raw",
+      "seconds": 0.0439,
+      "rows": 0
+    },
+    {
+      "query": "build-raw",
+      "seconds": 255.1001,
+      "rows": 0
+    },
+    {
+      "query": "index-raw",
+      "seconds": 13.5675,
+      "rows": 0
+    },
+    {
+      "query": "drop-islands",
+      "seconds": 0.0131,
+      "rows": 0
+    },
+    {
+      "query": "build-islands",
+      "seconds": 90.0814,
+      "rows": 0
+    },
+    {
+      "query": "drop-stays",
+      "seconds": 0.0149,
+      "rows": 0
+    },
+    {
+      "query": "build-stays",
+      "seconds": 66.3406,
+      "rows": 0
+    },
+    {
+      "query": "index-stays",
+      "seconds": 10.0215,
+      "rows": 0
+    },
+    {
+      "query": "drop-end_edit",
+      "seconds": 0.0343,
+      "rows": 0
+    },
+    {
+      "query": "build-end_edit",
+      "seconds": 9.6355,
+      "rows": 0
+    },
+    {
+      "query": "index-end_edit",
+      "seconds": 4.5802,
+      "rows": 0
+    },
+    {
+      "query": "drop-facts",
+      "seconds": 0.0099,
+      "rows": 0
+    },
+    {
+      "query": "build-facts",
+      "seconds": 20.8239,
+      "rows": 0
+    },
+    {
+      "query": "index-facts",
+      "seconds": 4.8861,
+      "rows": 0
+    },
+    {
+      "query": "drop-slots",
+      "seconds": 0.0191,
+      "rows": 0
+    },
+    {
+      "query": "build-slots",
+      "seconds": 9.8918,
+      "rows": 0
+    },
+    {
+      "query": "index-slots",
+      "seconds": 0.6926,
+      "rows": 0
+    },
+    {
+      "query": "drop-slot_origin",
+      "seconds": 0.0079,
+      "rows": 0
+    },
+    {
+      "query": "build-slot_origin",
+      "seconds": 7.9781,
+      "rows": 0
+    },
+    {
+      "query": "index-slot_origin",
+      "seconds": 0.7099,
+      "rows": 0
+    },
+    {
+      "query": "drop-slot_facts",
+      "seconds": 0.0035,
+      "rows": 0
+    },
+    {
+      "query": "build-slot_facts",
+      "seconds": 7.3416,
+      "rows": 0
+    },
+    {
+      "query": "drop-event_counts",
+      "seconds": 0.0063,
+      "rows": 0
+    },
+    {
+      "query": "build-event_counts",
+      "seconds": 48.4137,
+      "rows": 0
+    },
+    {
+      "query": "drop-risk",
+      "seconds": 0.0038,
+      "rows": 0
+    },
+    {
+      "query": "build-risk",
+      "seconds": 46.7313,
+      "rows": 0
+    },
+    {
+      "query": "drop-km",
+      "seconds": 0.0114,
+      "rows": 0
+    },
+    {
+      "query": "build-km",
+      "seconds": 48.4419,
+      "rows": 0
+    },
+    {
+      "query": "index-km",
+      "seconds": 7.9366,
+      "rows": 0
+    },
+    {
+      "query": "medians",
+      "seconds": 3.9548,
+      "rows": 63
+    },
+    {
+      "query": "drop-ages",
+      "seconds": 0.0039,
+      "rows": 0
+    },
+    {
+      "query": "build-ages",
+      "seconds": 0.005,
+      "rows": 0
+    },
+    {
+      "query": "survival-curves",
+      "seconds": 71.362,
+      "rows": 1701
+    },
+    {
+      "query": "drop-bands",
+      "seconds": 0.0078,
+      "rows": 0
+    },
+    {
+      "query": "build-bands",
+      "seconds": 0.0066,
+      "rows": 0
+    },
+    {
+      "query": "hazard-by-age",
+      "seconds": 2.39,
+      "rows": 10
+    },
+    {
+      "query": "oldest-standing",
+      "seconds": 0.37,
+      "rows": 25
+    },
+    {
+      "query": "retraction-index",
+      "seconds": 2.4649,
+      "rows": 30
+    },
+    {
+      "query": "authors",
+      "seconds": 1.4058,
+      "rows": 100
+    },
+    {
+      "query": "summary",
+      "seconds": 0.6397,
+      "rows": 1
+    },
+    {
+      "query": "integrity",
+      "seconds": 2.6903,
+      "rows": 1
+    },
+    {
+      "query": "drop-km",
+      "seconds": 0.0053,
+      "rows": 0
+    },
+    {
+      "query": "build-km",
+      "seconds": 50.0657,
+      "rows": 0
+    },
+    {
+      "query": "index-km",
+      "seconds": 5.3326,
+      "rows": 0
+    },
+    {
+      "query": "medians",
+      "seconds": 3.0521,
+      "rows": 63
+    },
+    {
+      "query": "drop-ages",
+      "seconds": 0.0096,
+      "rows": 0
+    },
+    {
+      "query": "build-ages",
+      "seconds": 0.0102,
+      "rows": 0
+    },
+    {
+      "query": "drop-curve_groups",
+      "seconds": 0.0049,
+      "rows": 0
+    },
+    {
+      "query": "build-curve_groups",
+      "seconds": 3.204,
+      "rows": 0
+    },
+    {
+      "query": "survival-curves",
+      "seconds": 17.6969,
+      "rows": 1701
+    },
+    {
+      "query": "drop-bands",
+      "seconds": 0.0227,
+      "rows": 0
+    },
+    {
+      "query": "build-bands",
+      "seconds": 0.0239,
+      "rows": 0
+    },
+    {
+      "query": "hazard-by-age",
+      "seconds": 3.7218,
+      "rows": 10
+    },
+    {
+      "query": "oldest-standing",
+      "seconds": 0.6878,
+      "rows": 25
+    },
+    {
+      "query": "retraction-index",
+      "seconds": 2.996,
+      "rows": 30
+    },
+    {
+      "query": "authors",
+      "seconds": 1.4911,
+      "rows": 100
+    },
+    {
+      "query": "summary",
+      "seconds": 0.6964,
+      "rows": 1
+    },
+    {
+      "query": "integrity",
+      "seconds": 3.711,
+      "rows": 1
+    }
+  ]
+}

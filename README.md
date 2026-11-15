@@ -172,6 +172,17 @@ Measured on a MacBook with an M5 and 24 GB, MariaDB 12.3.3 in Docker.
     between a revert and the text it restored marked up to 96 % of an
     often-vandalised article as undone. Only a revert that itself stood, and
     came within thirty days, takes a version out of what Wikipedia said.
+11. **Reading an article as of a date walked every row it ever had.** MariaDB
+    appends `row_end` to the primary key, so 6,463 rows were read for the 172
+    blocks of Talvisota at the end of 2006. With both ends of the period in
+    one key, `KEY (page_id, row_end, row_start)`, the same read fetches 173.
+    The optimizer does not choose it for early dates, so the statements name
+    it. ([labs/history-at-scale](labs/history-at-scale/README.md))
+12. **Yearly `SYSTEM_TIME` partitions next to a history loader returned two
+    wrong answers:** rows loaded before the partitions existed stopped being
+    found, and `AS OF` the last second of a year skipped that year. One
+    history and one current partition had neither problem. Both are
+    reproduced by a script in the same lab.
 
 | Step                                                                      | Rows              | Time                     |
 | ------------------------------------------------------------------------- | ----------------- | ------------------------ |
@@ -206,6 +217,8 @@ README of what it measured, including when the answer was no.
 | [bitemporal-offices](labs/bitemporal-offices/README.md)       | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times. |
 | [sentence-journeys](labs/sentence-journeys/README.md)         | Paragraphs that travel: 1,899 stood in more than one article, 85 bulk moves show articles being split, and a copy usually outlives its source.                      |
 | [claims-before-sources](labs/claims-before-sources/README.md) | 191 paragraphs cite a first source published after the claim already stood. A manual audit of the top fifteen found no confirmed circular sourcing.                 |
+| [numbers-that-moved](labs/numbers-that-moved/README.md)       | 6,840 times one number replaced another while the words around it stayed. The twenty least settled, read by hand, were updates to newer data and not disputes.      |
+| [history-at-scale](labs/history-at-scale/README.md)           | What a versioned table costs as its past grows: which index makes an as-of read touch only the rows it returns, and what partitioning by year gets wrong.           |
 
 ## Layout
 

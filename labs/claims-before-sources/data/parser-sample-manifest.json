@@ -1,0 +1,257 @@
+{
+  "title": "Frozen identities of the original random sample",
+  "unit": "reference occurrences",
+  "source": "Seed 20261114, initial SQL extraction order; freeze identities to make reruns independent of query plan ordering",
+  "rows": [
+    {
+      "page_id": 346014,
+      "slot": 15,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1787840,
+      "slot": 1,
+      "reference_index": 0
+    },
+    {
+      "page_id": 12639,
+      "slot": 58,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1917824,
+      "slot": 6,
+      "reference_index": 1
+    },
+    {
+      "page_id": 11396,
+      "slot": 991,
+      "reference_index": 0
+    },
+    {
+      "page_id": 595739,
+      "slot": 7,
+      "reference_index": 5
+    },
+    {
+      "page_id": 875398,
+      "slot": 37,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1445320,
+      "slot": 5,
+      "reference_index": 3
+    },
+    {
+      "page_id": 1580639,
+      "slot": 1,
+      "reference_index": 0
+    },
+    {
+      "page_id": 42057,
+      "slot": 30,
+      "reference_index": 4
+    },
+    {
+      "page_id": 72257,
+      "slot": 21,
+      "reference_index": 1
+    },
+    {
+      "page_id": 57119,
+      "slot": 42,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1786501,
+      "slot": 3,
+      "reference_index": 4
+    },
+    {
+      "page_id": 1326171,
+      "slot": 2,
+      "reference_index": 1
+    },
+    {
+      "page_id": 152134,
+      "slot": 2,
+      "reference_index": 0
+    },
+    {
+      "page_id": 571033,
+      "slot": 2,
+      "reference_index": 1
+    },
+    {
+      "page_id": 107980,
+      "slot": 28,
+      "reference_index": 3
+    },
+    {
+      "page_id": 832579,
+      "slot": 1,
+      "reference_index": 1
+    },
+    {
+      "page_id": 106023,
+      "slot": 19,
+      "reference_index": 3
+    },
+    {
+      "page_id": 940444,
+      "slot": 1,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1469452,
+      "slot": 30,
+      "reference_index": 0
+    },
+    {
+      "page_id": 641120,
+      "slot": 6,
+      "reference_index": 0
+    },
+    {
+      "page_id": 11179,
+      "slot": 41,
+      "reference_index": 4
+    },
+    {
+      "page_id": 402200,
+      "slot": 8,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1407478,
+      "slot": 3,
+      "reference_index": 2
+    },
+    {
+      "page_id": 198761,
+      "slot": 26,
+      "reference_index": 0
+    },
+    {
+      "page_id": 451659,
+      "slot": 30,
+      "reference_index": 0
+    },
+    {
+      "page_id": 84775,
+      "slot": 4,
+      "reference_index": 2
+    },
+    {
+      "page_id": 292683,
+      "slot": 13,
+      "reference_index": 1
+    },
+    {
+      "page_id": 302244,
+      "slot": 1,
+      "reference_index": 1
+    },
+    {
+      "page_id": 1324139,
+      "slot": 2,
+      "reference_index": 2
+    },
+    {
+      "page_id": 1778743,
+      "slot": 54,
+      "reference_index": 0
+    },
+    {
+      "page_id": 776005,
+      "slot": 1,
+      "reference_index": 2
+    },
+    {
+      "page_id": 1864203,
+      "slot": 2,
+      "reference_index": 4
+    },
+    {
+      "page_id": 551983,
+      "slot": 35,
+      "reference_index": 0
+    },
+    {
+      "page_id": 48833,
+      "slot": 43,
+      "reference_index": 0
+    },
+    {
+      "page_id": 11396,
+      "slot": 1008,
+      "reference_index": 1
+    },
+    {
+      "page_id": 1179103,
+      "slot": 1,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1577934,
+      "slot": 177,
+      "reference_index": 1
+    },
+    {
+      "page_id": 362491,
+      "slot": 14,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1746230,
+      "slot": 2,
+      "reference_index": 1
+    },
+    {
+      "page_id": 1133435,
+      "slot": 1,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1004047,
+      "slot": 4,
+      "reference_index": 4
+    },
+    {
+      "page_id": 1095,
+      "slot": 28,
+      "reference_index": 0
+    },
+    {
+      "page_id": 1694593,
+      "slot": 67,
+      "reference_index": 1
+    },
+    {
+      "page_id": 1412042,
+      "slot": 4,
+      "reference_index": 1
+    },
+    {
+      "page_id": 827530,
+      "slot": 7,
+      "reference_index": 6
+    },
+    {
+      "page_id": 1564489,
+      "slot": 10,
+      "reference_index": 0
+    },
+    {
+      "page_id": 30803,
+      "slot": 62,
+      "reference_index": 1
+    },
+    {
+      "page_id": 166717,
+      "slot": 1,
+      "reference_index": 0
+    }
+  ]
+}

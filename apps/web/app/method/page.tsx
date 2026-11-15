@@ -1,5 +1,6 @@
 import { Sql } from "@/components/sql";
 import evaluation from "@/content/evaluation.json";
+import latency from "@/content/latency.json";
 import validation from "@/content/validation.json";
 import { number } from "@/lib/format";
 
@@ -91,6 +92,24 @@ const FINDINGS = [
       "A range join took ten minutes; the sequence engine took five seconds.",
     body: "Marking every version undone by a revert joined edits on seq BETWEEN two columns, and the optimizer read every edit of the page for every revert. Joining seq_1_to_5000 turns each undone version into a primary key lookup.",
     source: "packages/ingest/edits.ts",
+  },
+  {
+    title:
+      "Reading an article as of a date walked every row it ever had, until one index.",
+    body: "MariaDB appends row_end to the primary key of a versioned table, so an article’s rows lie together whatever their time: 6,463 rows were read for the 172 blocks of Talvisota at the end of 2006. KEY (page_id, row_end, row_start) holds both ends of the period, and the same read now fetches 173. The optimizer does not choose it for early dates, so the statements name it. The obvious KEY (page_id, row_end) was slower than no index.",
+    source: "labs/history-at-scale",
+  },
+  {
+    title:
+      "Yearly partitions next to a history loader returned two wrong answers.",
+    body: "With INTERVAL 1 YEAR … AUTO, a load through system_versioning_insert_history puts every history row into the one partition that exists. After the first ordinary UPDATE creates the rest, AS OF 2008 no longer returns a row that stood from 2004 to 2010. And AS OF the last second of a year skips that year’s partition. Both are reproduced by a script in the lab. One history and one current partition had neither problem.",
+    source: "labs/history-at-scale",
+  },
+  {
+    title:
+      "One table can hold when something was true and when Wikipedia said so.",
+    body: "The terms of office in the presidents’ infoboxes are rows with an application-time period inside a system-versioned table: 25,715 repeated statements are 102 rows. WITHOUT OVERLAPS on such a table compares only rows with the same row_end, so the key guards what is stated today and leaves history as it was.",
+    source: "labs/bitemporal-offices",
   },
   {
     title: "Wikipedia’s oldest sha1 values do not fit its own text.",
@@ -296,6 +315,62 @@ export default function Method() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="font-serif text-3xl">How long it takes</h2>
+        <p className="mt-2 max-w-3xl text-ink-soft">
+          <code className="font-mono text-[13px]">npm run bench</code> times
+          what the pages do on the loaded database, on a laptop, each over many
+          articles, dates and questions. Last run{" "}
+          {latency.measuredAt.slice(0, 10)}. Gathering evidence is timed the
+          second time a question is asked: the first time, passages nobody has
+          asked about are embedded on the spot, which takes a second or two.
+        </p>
+        <div className="mt-5 overflow-x-auto rounded border border-rule bg-paper-raised">
+          <table className="w-full text-sm">
+            <thead className="text-left text-xs tracking-wide text-ink-faint uppercase">
+              <tr className="border-b border-rule">
+                <th className="px-4 py-2 font-normal">What a page does</th>
+                <th className="px-4 py-2 text-right font-normal">Runs</th>
+                <th className="px-4 py-2 text-right font-normal">Median</th>
+                <th className="px-4 py-2 text-right font-normal">
+                  Slowest in 20
+                </th>
+                <th className="px-4 py-2 text-right font-normal">
+                  Of which SQL
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-rule tabular-nums">
+              {latency.operations.map((operation) => (
+                <tr key={operation.name}>
+                  <td className="px-4 py-2.5">
+                    <span className="font-serif text-lg">{operation.name}</span>
+                    <span className="block text-xs text-ink-faint">
+                      {operation.about}
+                    </span>
+                  </td>
+                  <td className="px-4 py-2.5 text-right">{operation.runs}</td>
+                  <td className="px-4 py-2.5 text-right">
+                    {number(operation.medianMs)} ms
+                  </td>
+                  <td className="px-4 py-2.5 text-right">
+                    {number(operation.p95Ms)} ms
+                  </td>
+                  <td className="px-4 py-2.5 text-right">
+                    {number(operation.sqlMedianMs)} ms
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-ink-faint">
+          Writing an answer is not in the table. The local model takes two to
+          four seconds for it, and that time is the model&apos;s, not
+          MariaDB&apos;s.
+        </p>
       </section>
 
       <section className="mt-16">

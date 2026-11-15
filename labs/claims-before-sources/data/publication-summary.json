@@ -1,0 +1,18 @@
+{
+  "title": "Publication date coverage",
+  "unit": "reference occurrences",
+  "source": "wtt snapshot 2026-10-01; parse.py; conservative explicit template dates",
+  "rows": [
+    {
+      "current_reference_occurrences": 195053,
+      "current_unresolved_named": 72606,
+      "current_parseable_occurrences": 48458,
+      "paragraphs_with_parseable_current_date": 29893,
+      "gained_slots_with_observation_gaps": 1727,
+      "dated_first_attached_occurrences_in_gained_slots": 4005,
+      "later_published_first_occurrences": 1154,
+      "candidate_paragraphs": 191,
+      "current_paragraphs_parsed": 99415
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "title": "Sequential SQL wall times",
+  "unit": "seconds",
+  "source": "run.py",
+  "rows": [
+    {
+      "query": "database",
+      "seconds": 0.0026,
+      "rows": 0
+    },
+    {
+      "query": "use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "timezone",
+      "seconds": 0.0008,
+      "rows": 0
+    },
+    {
+      "query": "drop-raw",
+      "seconds": 0.0082,
+      "rows": 0
+    },
+    {
+      "query": "drop-lifetimes",
+      "seconds": 0.001,
+      "rows": 0
+    },
+    {
+      "query": "drop-presence",
+      "seconds": 0.0046,
+      "rows": 0
+    },
+    {
+      "query": "drop-firsts",
+      "seconds": 0.0008,
+      "rows": 0
+    },
+    {
+      "query": "drop-spread",
+      "seconds": 0.0007,
+      "rows": 0
+    },
+    {
+      "query": "drop-ranked",
+      "seconds": 0.0008,
+      "rows": 0
+    },
+    {
+      "query": "drop-pairs",
+      "seconds": 0.0146,
+      "rows": 0
+    },
+    {
+      "query": "drop-edges",
+      "seconds": 0.0027,
+      "rows": 0
+    },
+    {
+      "query": "drop-events",
+      "seconds": 0.0018,
+      "rows": 0
+    },
+    {
+      "query": "drop-titles",
+      "seconds": 0.0023,
+      "rows": 0
+    },
+    {
+      "query": "drop-page_birth",
+      "seconds": 0.0019,
+      "rows": 0
+    },
+    {
+      "query": "drop-all_spread",
+      "seconds": 0.0009,
+      "rows": 0
+    },
+    {
+      "query": "titles",
+      "seconds": 0.3042,
+      "rows": 0
+    },
+    {
+      "query": "titles-index",
+      "seconds": 0.0845,
+      "rows": 0
+    },
+    {
+      "query": "page-birth",
+      "seconds": 0.4376,
+      "rows": 0
+    },
+    {
+      "query": "raw",
+      "seconds": 13.2396,
+      "rows": 0
+    },
+    {
+      "query": "raw-index",
+      "seconds": 0.9264,
+      "rows": 0
+    },
+    {
+      "query": "lifetimes",
+      "seconds": 8.4247,
+      "rows": 0
+    },
+    {
+      "query": "presence",
+      "seconds": 8.317,
+      "rows": 0
+    },
+    {
+      "query": "presence-index",
+      "seconds": 1.249,
+      "rows": 0
+    },
+    {
+      "query": "firsts",
+      "seconds": 1.4033,
+      "rows": 0
+    },
+    {
+      "query": "firsts-index",
+      "seconds": 1.1066,
+      "rows": 0
+    },
+    {
+      "query": "spread",
+      "seconds": 1.3655,
+      "rows": 0
+    },
+    {
+      "query": "spread-index",
+      "seconds": 0.7649,
+      "rows": 0
+    },
+    {
+      "query": "ranked",
+      "seconds": 0.4671,
+      "rows": 0
+    },
+    {
+      "query": "ranked-index",
+      "seconds": 0.0239,
+      "rows": 0
+    },
+    {
+      "query": "pairs",
+      "seconds": 0.0251,
+      "rows": 0
+    },
+    {
+      "query": "edges",
+      "seconds": 0.0664,
+      "rows": 0
+    },
+    {
+      "query": "events",
+      "seconds": 0.0092,
+      "rows": 0
+    },
+    {
+      "query": "all-spread",
+      "seconds": 2.8161,
+      "rows": 0
+    },
+    {
+      "query": "summary",
+      "seconds": 0.4545,
+      "rows": 1
+    },
+    {
+      "query": "spread-distribution",
+      "seconds": 0.1404,
+      "rows": 11
+    },
+    {
+      "query": "delay-distribution",
+      "seconds": 0.0055,
+      "rows": 1
+    },
+    {
+      "query": "delay-bins",
+      "seconds": 0.0052,
+      "rows": 4
+    },
+    {
+      "query": "journey-candidates",
+      "seconds": 0.1368,
+      "rows": 100
+    },
+    {
+      "query": "splits-and-merges",
+      "seconds": 0.0152,
+      "rows": 30
+    },
+    {
+      "query": "event-summary",
+      "seconds": 0.0203,
+      "rows": 1
+    },
+    {
+      "query": "database",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "timezone",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "summary",
+      "seconds": 0.4792,
+      "rows": 1
+    },
+    {
+      "query": "spread-distribution",
+      "seconds": 0.1234,
+      "rows": 11
+    },
+    {
+      "query": "delay-distribution",
+      "seconds": 0.006,
+      "rows": 1
+    },
+    {
+      "query": "delay-bins",
+      "seconds": 0.0029,
+      "rows": 4
+    },
+    {
+      "query": "journey-candidates",
+      "seconds": 0.1151,
+      "rows": 100
+    },
+    {
+      "query": "splits-and-merges",
+      "seconds": 0.0063,
+      "rows": 30
+    },
+    {
+      "query": "event-summary",
+      "seconds": 0.0082,
+      "rows": 1
+    },
+    {
+      "query": "birth-summary",
+      "seconds": 2.0707,
+      "rows": 1
+    },
+    {
+      "query": "survival",
+      "seconds": 0.0776,
+      "rows": 1
+    },
+    {
+      "query": "boilerplate",
+      "seconds": 15.3854,
+      "rows": 40
+    },
+    {
+      "query": "integrity",
+      "seconds": 6.7833,
+      "rows": 1
+    },
+    {
+      "query": "extra-use",
+      "seconds": 0.0005,
+      "rows": 0
+    },
+    {
+      "query": "extra-zone",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "journey-paths",
+      "seconds": 0.0223,
+      "rows": 123
+    },
+    {
+      "query": "drop-removals",
+      "seconds": 0.0035,
+      "rows": 0
+    },
+    {
+      "query": "removals",
+      "seconds": 0.0652,
+      "rows": 0
+    },
+    {
+      "query": "removal-details",
+      "seconds": 0.0015,
+      "rows": 69
+    },
+    {
+      "query": "corroboration",
+      "seconds": 0.0124,
+      "rows": 1
+    },
+    {
+      "query": "threshold-sensitivity",
+      "seconds": 0.0043,
+      "rows": 3
+    },
+    {
+      "query": "drop-sentence-map",
+      "seconds": 0.0037,
+      "rows": 0
+    },
+    {
+      "query": "sentence-map-schema",
+      "seconds": 0.0047,
+      "rows": 0
+    },
+    {
+      "query": "drop-sentence-text",
+      "seconds": 0.0068,
+      "rows": 0
+    },
+    {
+      "query": "sentence-text-schema",
+      "seconds": 0.0046,
+      "rows": 0
+    },
+    {
+      "query": "sentence-input",
+      "seconds": 11.1252,
+      "rows": 848430
+    },
+    {
+      "query": "sentence-mapping-python-and-inserts",
+      "seconds": 33.8669,
+      "rows": 2908082
+    },
+    {
+      "query": "drop-hash-pages",
+      "seconds": 0.0058,
+      "rows": 0
+    },
+    {
+      "query": "hash-pages",
+      "seconds": 12.4345,
+      "rows": 0
+    },
+    {
+      "query": "hash-pages-index",
+      "seconds": 0.7558,
+      "rows": 0
+    },
+    {
+      "query": "drop-sentence-counts",
+      "seconds": 0.0032,
+      "rows": 0
+    },
+    {
+      "query": "sentence-counts",
+      "seconds": 10.3949,
+      "rows": 0
+    },
+    {
+      "query": "boilerplate-sentences",
+      "seconds": 4.1233,
+      "rows": 40
+    },
+    {
+      "query": "validate-use",
+      "seconds": 0.0006,
+      "rows": 0
+    },
+    {
+      "query": "validate-zone",
+      "seconds": 0.0004,
+      "rows": 0
+    },
+    {
+      "query": "validate-raw",
+      "seconds": 1.4588,
+      "rows": 5028
+    },
+    {
+      "query": "validate-presence",
+      "seconds": 0.7681,
+      "rows": 4499
+    },
+    {
+      "query": "validate-current",
+      "seconds": 5.2224,
+      "rows": 1
+    },
+    {
+      "query": "edge-audit",
+      "seconds": 0.0047,
+      "rows": 1
+    },
+    {
+      "query": "same-reading-text",
+      "seconds": 0.0494,
+      "rows": 1
+    },
+    {
+      "query": "evacuation-reading-text",
+      "seconds": 0.7331,
+      "rows": 1
+    },
+    {
+      "query": "event-concentration",
+      "seconds": 0.007,
+      "rows": 1
+    },
+    {
+      "query": "list-scale",
+      "seconds": 1.2493,
+      "rows": 1
+    },
+    {
+      "query": "window-sensitivity",
+      "seconds": 0.2524,
+      "rows": 178
+    },
+    {
+      "query": "repair-use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "repair-drop-events",
+      "seconds": 0.0048,
+      "rows": 0
+    },
+    {
+      "query": "repair-drop-edges",
+      "seconds": 0.0013,
+      "rows": 0
+    },
+    {
+      "query": "edges",
+      "seconds": 0.0425,
+      "rows": 0
+    },
+    {
+      "query": "events",
+      "seconds": 0.0043,
+      "rows": 0
+    },
+    {
+      "query": "database",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "timezone",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "summary",
+      "seconds": 1.2692,
+      "rows": 1
+    },
+    {
+      "query": "spread-distribution",
+      "seconds": 0.0928,
+      "rows": 11
+    },
+    {
+      "query": "delay-distribution",
+      "seconds": 0.0102,
+      "rows": 1
+    },
+    {
+      "query": "delay-bins",
+      "seconds": 0.0019,
+      "rows": 4
+    },
+    {
+      "query": "journey-candidates",
+      "seconds": 0.0858,
+      "rows": 100
+    },
+    {
+      "query": "splits-and-merges",
+      "seconds": 0.0162,
+      "rows": 30
+    },
+    {
+      "query": "event-summary",
+      "seconds": 0.0266,
+      "rows": 1
+    },
+    {
+      "query": "birth-summary",
+      "seconds": 1.6669,
+      "rows": 1
+    },
+    {
+      "query": "survival",
+      "seconds": 0.0253,
+      "rows": 1
+    },
+    {
+      "query": "boilerplate",
+      "seconds": 8.4291,
+      "rows": 40
+    },
+    {
+      "query": "integrity",
+      "seconds": 2.4122,
+      "rows": 1
+    },
+    {
+      "query": "extra-use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "extra-zone",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "journey-paths",
+      "seconds": 0.0052,
+      "rows": 123
+    },
+    {
+      "query": "drop-removals",
+      "seconds": 0.0053,
+      "rows": 0
+    },
+    {
+      "query": "removals",
+      "seconds": 0.0142,
+      "rows": 0
+    },
+    {
+      "query": "removal-details",
+      "seconds": 0.0008,
+      "rows": 68
+    },
+    {
+      "query": "corroboration",
+      "seconds": 0.0018,
+      "rows": 1
+    },
+    {
+      "query": "threshold-sensitivity",
+      "seconds": 0.0014,
+      "rows": 3
+    },
+    {
+      "query": "validate-use",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "validate-zone",
+      "seconds": 0.0003,
+      "rows": 0
+    },
+    {
+      "query": "validate-raw",
+      "seconds": 0.702,
+      "rows": 5028
+    },
+    {
+      "query": "validate-presence",
+      "seconds": 0.5681,
+      "rows": 4499
+    },
+    {
+      "query": "validate-current",
+      "seconds": 1.1999,
+      "rows": 1
+    },
+    {
+      "query": "edge-audit",
+      "seconds": 0.001,
+      "rows": 1
+    },
+    {
+      "query": "same-reading-text",
+      "seconds": 0.0448,
+      "rows": 1
+    },
+    {
+      "query": "evacuation-reading-text",
+      "seconds": 0.5065,
+      "rows": 1
+    },
+    {
+      "query": "event-concentration",
+      "seconds": 0.0055,
+      "rows": 1
+    },
+    {
+      "query": "list-scale",
+      "seconds": 0.7754,
+      "rows": 1
+    },
+    {
+      "query": "window-sensitivity",
+      "seconds": 0.0123,
+      "rows": 178
+    }
+  ]
+}

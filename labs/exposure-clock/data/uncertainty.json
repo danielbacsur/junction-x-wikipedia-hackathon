@@ -1,0 +1,25 @@
+{
+  "title": "Article-cluster bootstrap 95% percentile intervals; descriptive, not causal",
+  "unit": "percentage points; seconds",
+  "source": "validate.py; SQL results from run.py",
+  "rows": [
+    {
+      "metric": "seven_day_undo_share_difference_percentage_points",
+      "estimate": 7.105030366152223,
+      "lower": 1.4861826712037451,
+      "upper": 12.654357302293734,
+      "articles": 1549,
+      "replicates": 2000,
+      "seed": 20261114
+    },
+    {
+      "metric": "conditional_median_difference_seconds",
+      "estimate": 334.5,
+      "lower": -479.05,
+      "upper": 1090.0499999999997,
+      "articles": 1549,
+      "replicates": 2000,
+      "seed": 20261114
+    }
+  ]
+}

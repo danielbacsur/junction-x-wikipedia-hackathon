@@ -1,0 +1,607 @@
+{
+  "title": "Named authors by observed prose wording-days (overlapping wordings count separately)",
+  "unit": "wording-days",
+  "source": "MariaDB wtt; sql/authors.sql; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "author": "Vesteri",
+      "wording_stays": 11657,
+      "wording_days": 19892664.70899306,
+      "still_standing": 2077.0
+    },
+    {
+      "author": "Risukarhi",
+      "wording_stays": 21196,
+      "wording_days": 18060958.74549769,
+      "still_standing": 5163.0
+    },
+    {
+      "author": "Tjp",
+      "wording_stays": 13082,
+      "wording_days": 16331977.11951389,
+      "still_standing": 3000.0
+    },
+    {
+      "author": "Esamatti1",
+      "wording_stays": 6922,
+      "wording_days": 14476768.67353009,
+      "still_standing": 2028.0
+    },
+    {
+      "author": "Pihamies",
+      "wording_stays": 15623,
+      "wording_days": 14367000.87809028,
+      "still_standing": 5315.0
+    },
+    {
+      "author": "Abc10",
+      "wording_stays": 14458,
+      "wording_days": 11778178.29023148,
+      "still_standing": 4146.0
+    },
+    {
+      "author": "InternetArchiveBot",
+      "wording_stays": 14320,
+      "wording_days": 11202377.74777778,
+      "still_standing": 7855.0
+    },
+    {
+      "author": "Haltiamieli",
+      "wording_stays": 6181,
+      "wording_days": 10714539.5590625,
+      "still_standing": 1311.0
+    },
+    {
+      "author": "Anr",
+      "wording_stays": 9470,
+      "wording_days": 9471662.87405093,
+      "still_standing": 1365.0
+    },
+    {
+      "author": "Tureku",
+      "wording_stays": 19036,
+      "wording_days": 9157238.87658565,
+      "still_standing": 1927.0
+    },
+    {
+      "author": "Ap4k",
+      "wording_stays": 6728,
+      "wording_days": 8684724.6556713,
+      "still_standing": 1100.0
+    },
+    {
+      "author": "Kotivalo",
+      "wording_stays": 10800,
+      "wording_days": 8328752.93752315,
+      "still_standing": 2140.0
+    },
+    {
+      "author": "J Hokkanen",
+      "wording_stays": 6768,
+      "wording_days": 7892274.9422338,
+      "still_standing": 1834.0
+    },
+    {
+      "author": "SeppVei",
+      "wording_stays": 5453,
+      "wording_days": 6521693.9780787,
+      "still_standing": 1658.0
+    },
+    {
+      "author": "Jesper Vire",
+      "wording_stays": 8709,
+      "wording_days": 6317492.84005787,
+      "still_standing": 3126.0
+    },
+    {
+      "author": "Hermis",
+      "wording_stays": 5822,
+      "wording_days": 6103513.04496528,
+      "still_standing": 774.0
+    },
+    {
+      "author": "Kyzyl",
+      "wording_stays": 4027,
+      "wording_days": 5852401.56414352,
+      "still_standing": 389.0
+    },
+    {
+      "author": "Mlang.Finn",
+      "wording_stays": 4633,
+      "wording_days": 5805944.75696759,
+      "still_standing": 977.0
+    },
+    {
+      "author": "Kospo75",
+      "wording_stays": 5774,
+      "wording_days": 5790753.66988426,
+      "still_standing": 1512.0
+    },
+    {
+      "author": "SeeggeAWBBot",
+      "wording_stays": 2666,
+      "wording_days": 5424898.19679398,
+      "still_standing": 714.0
+    },
+    {
+      "author": "Urjanhai",
+      "wording_stays": 7066,
+      "wording_days": 5198615.59525463,
+      "still_standing": 477.0
+    },
+    {
+      "author": "KLS",
+      "wording_stays": 4546,
+      "wording_days": 4721757.27071759,
+      "still_standing": 622.0
+    },
+    {
+      "author": "Pxos",
+      "wording_stays": 2927,
+      "wording_days": 4585599.91678241,
+      "still_standing": 656.0
+    },
+    {
+      "author": "Raksa123",
+      "wording_stays": 2420,
+      "wording_days": 4468876.07020833,
+      "still_standing": 655.0
+    },
+    {
+      "author": "Arla",
+      "wording_stays": 3521,
+      "wording_days": 4388957.31116898,
+      "still_standing": 567.0
+    },
+    {
+      "author": "Jmk",
+      "wording_stays": 5121,
+      "wording_days": 4271522.59952546,
+      "still_standing": 963.0
+    },
+    {
+      "author": "Thi",
+      "wording_stays": 5798,
+      "wording_days": 4112962.69884259,
+      "still_standing": 794.0
+    },
+    {
+      "author": "Juha Kämäräinen",
+      "wording_stays": 4938,
+      "wording_days": 4075847.78300926,
+      "still_standing": 546.0
+    },
+    {
+      "author": "Ulrika",
+      "wording_stays": 5628,
+      "wording_days": 4015803.18784722,
+      "still_standing": 187.0
+    },
+    {
+      "author": "Omitti86",
+      "wording_stays": 3347,
+      "wording_days": 3925509.36274306,
+      "still_standing": 969.0
+    },
+    {
+      "author": "Palosirkka",
+      "wording_stays": 2305,
+      "wording_days": 3921424.29392361,
+      "still_standing": 481.0
+    },
+    {
+      "author": "PtG",
+      "wording_stays": 3674,
+      "wording_days": 3850276.55484954,
+      "still_standing": 686.0
+    },
+    {
+      "author": "Htm",
+      "wording_stays": 5559,
+      "wording_days": 3811779.03318287,
+      "still_standing": 818.0
+    },
+    {
+      "author": "Svallis",
+      "wording_stays": 1861,
+      "wording_days": 3794406.63891204,
+      "still_standing": 628.0
+    },
+    {
+      "author": "Nironen",
+      "wording_stays": 2713,
+      "wording_days": 3749111.31885417,
+      "still_standing": 314.0
+    },
+    {
+      "author": "Jepse",
+      "wording_stays": 2675,
+      "wording_days": 3357375.07388889,
+      "still_standing": 343.0
+    },
+    {
+      "author": "Solsken1",
+      "wording_stays": 4577,
+      "wording_days": 3241912.12512731,
+      "still_standing": 2827.0
+    },
+    {
+      "author": "Apalsola",
+      "wording_stays": 3059,
+      "wording_days": 3107724.66045139,
+      "still_standing": 545.0
+    },
+    {
+      "author": "Putsari",
+      "wording_stays": 2316,
+      "wording_days": 2944293.18422454,
+      "still_standing": 667.0
+    },
+    {
+      "author": "Tve4",
+      "wording_stays": 2706,
+      "wording_days": 2933111.93400463,
+      "still_standing": 185.0
+    },
+    {
+      "author": "Velma",
+      "wording_stays": 2822,
+      "wording_days": 2858139.76008102,
+      "still_standing": 197.0
+    },
+    {
+      "author": "Toveri",
+      "wording_stays": 2425,
+      "wording_days": 2829132.3375,
+      "still_standing": 90.0
+    },
+    {
+      "author": "Riisipuuro",
+      "wording_stays": 5149,
+      "wording_days": 2808476.00008102,
+      "still_standing": 115.0
+    },
+    {
+      "author": "Kotlas",
+      "wording_stays": 1998,
+      "wording_days": 2748189.74717593,
+      "still_standing": 202.0
+    },
+    {
+      "author": "Jjkankila",
+      "wording_stays": 1605,
+      "wording_days": 2631935.75012731,
+      "still_standing": 492.0
+    },
+    {
+      "author": "GEbot",
+      "wording_stays": 1514,
+      "wording_days": 2449003.39136574,
+      "still_standing": 229.0
+    },
+    {
+      "author": "Kuohatti",
+      "wording_stays": 2935,
+      "wording_days": 2416054.27282407,
+      "still_standing": 311.0
+    },
+    {
+      "author": "Kippari10",
+      "wording_stays": 4750,
+      "wording_days": 2342904.71068287,
+      "still_standing": 143.0
+    },
+    {
+      "author": "Ipr1Bot",
+      "wording_stays": 4287,
+      "wording_days": 2336074.83327546,
+      "still_standing": 3068.0
+    },
+    {
+      "author": "Talvipäivänseisaus",
+      "wording_stays": 4241,
+      "wording_days": 2251178.51440972,
+      "still_standing": 2142.0
+    },
+    {
+      "author": "AtraieBOT",
+      "wording_stays": 2077,
+      "wording_days": 2179351.57987269,
+      "still_standing": 1141.0
+    },
+    {
+      "author": "Wähäwiisas",
+      "wording_stays": 2106,
+      "wording_days": 2107403.43993056,
+      "still_standing": 576.0
+    },
+    {
+      "author": "Savir",
+      "wording_stays": 3225,
+      "wording_days": 2064812.36012731,
+      "still_standing": 457.0
+    },
+    {
+      "author": "KielimiliisiBot",
+      "wording_stays": 1843,
+      "wording_days": 2064085.20188657,
+      "still_standing": 67.0
+    },
+    {
+      "author": "Wgn",
+      "wording_stays": 1022,
+      "wording_days": 1996929.29806713,
+      "still_standing": 229.0
+    },
+    {
+      "author": "Drefer",
+      "wording_stays": 1303,
+      "wording_days": 1981056.97295139,
+      "still_standing": 283.0
+    },
+    {
+      "author": "Msaynevirta",
+      "wording_stays": 1802,
+      "wording_days": 1962966.10491898,
+      "still_standing": 418.0
+    },
+    {
+      "author": "Paju",
+      "wording_stays": 2052,
+      "wording_days": 1941265.68959491,
+      "still_standing": 368.0
+    },
+    {
+      "author": "LKFbot",
+      "wording_stays": 1555,
+      "wording_days": 1855737.71087963,
+      "still_standing": 782.0
+    },
+    {
+      "author": "Anna O",
+      "wording_stays": 2852,
+      "wording_days": 1814553.92423611,
+      "still_standing": 62.0
+    },
+    {
+      "author": "Ville Siliämaa",
+      "wording_stays": 2355,
+      "wording_days": 1762046.53699074,
+      "still_standing": 240.0
+    },
+    {
+      "author": "THautala",
+      "wording_stays": 990,
+      "wording_days": 1752233.55280093,
+      "still_standing": 178.0
+    },
+    {
+      "author": "CeleGia",
+      "wording_stays": 903,
+      "wording_days": 1714352.57944444,
+      "still_standing": 296.0
+    },
+    {
+      "author": "Faidros",
+      "wording_stays": 2005,
+      "wording_days": 1676740.03814815,
+      "still_standing": 562.0
+    },
+    {
+      "author": "IA",
+      "wording_stays": 2854,
+      "wording_days": 1664708.74284722,
+      "still_standing": 88.0
+    },
+    {
+      "author": "Linkkerpar",
+      "wording_stays": 2135,
+      "wording_days": 1562461.19763889,
+      "still_standing": 712.0
+    },
+    {
+      "author": "August-54",
+      "wording_stays": 1486,
+      "wording_days": 1557956.25804398,
+      "still_standing": 309.0
+    },
+    {
+      "author": "Mikko Paananen",
+      "wording_stays": 4316,
+      "wording_days": 1552519.35709491,
+      "still_standing": 69.0
+    },
+    {
+      "author": "Crt",
+      "wording_stays": 2850,
+      "wording_days": 1548464.87001157,
+      "still_standing": 345.0
+    },
+    {
+      "author": "Soppakanuuna",
+      "wording_stays": 2058,
+      "wording_days": 1536277.88658565,
+      "still_standing": 99.0
+    },
+    {
+      "author": "Makele-90",
+      "wording_stays": 1243,
+      "wording_days": 1524330.24684028,
+      "still_standing": 202.0
+    },
+    {
+      "author": "Tappinen",
+      "wording_stays": 2886,
+      "wording_days": 1503934.3231713,
+      "still_standing": 264.0
+    },
+    {
+      "author": "Gopase+f",
+      "wording_stays": 1491,
+      "wording_days": 1488062.0828125,
+      "still_standing": 110.0
+    },
+    {
+      "author": "Jtaramaa",
+      "wording_stays": 2234,
+      "wording_days": 1480799.281875,
+      "still_standing": 125.0
+    },
+    {
+      "author": "Matthäus Gehägeberg",
+      "wording_stays": 2443,
+      "wording_days": 1471789.1340625,
+      "still_standing": 663.0
+    },
+    {
+      "author": "Arkke",
+      "wording_stays": 2171,
+      "wording_days": 1456119.76702546,
+      "still_standing": 396.0
+    },
+    {
+      "author": "Ppntori",
+      "wording_stays": 1876,
+      "wording_days": 1424729.29075231,
+      "still_standing": 79.0
+    },
+    {
+      "author": "Phiitola",
+      "wording_stays": 1162,
+      "wording_days": 1417891.84423611,
+      "still_standing": 134.0
+    },
+    {
+      "author": "Kulkevi16",
+      "wording_stays": 1148,
+      "wording_days": 1346462.22797454,
+      "still_standing": 429.0
+    },
+    {
+      "author": "Otrfan",
+      "wording_stays": 2363,
+      "wording_days": 1340272.79943287,
+      "still_standing": 66.0
+    },
+    {
+      "author": "Petri Krohn",
+      "wording_stays": 2531,
+      "wording_days": 1336162.94958333,
+      "still_standing": 31.0
+    },
+    {
+      "author": "SilvonenBot",
+      "wording_stays": 1267,
+      "wording_days": 1315764.26907407,
+      "still_standing": 603.0
+    },
+    {
+      "author": "Hautala",
+      "wording_stays": 2671,
+      "wording_days": 1314326.99200231,
+      "still_standing": 46.0
+    },
+    {
+      "author": "Jjanhone",
+      "wording_stays": 3482,
+      "wording_days": 1313826.52709491,
+      "still_standing": 626.0
+    },
+    {
+      "author": "Markus Laakso",
+      "wording_stays": 4870,
+      "wording_days": 1301800.62265046,
+      "still_standing": 1223.0
+    },
+    {
+      "author": "Kuriuss",
+      "wording_stays": 727,
+      "wording_days": 1301577.51108796,
+      "still_standing": 137.0
+    },
+    {
+      "author": "Velivieras",
+      "wording_stays": 2585,
+      "wording_days": 1288408.44519676,
+      "still_standing": 220.0
+    },
+    {
+      "author": "Puppe100",
+      "wording_stays": 1381,
+      "wording_days": 1257822.6921412,
+      "still_standing": 655.0
+    },
+    {
+      "author": "Farma3110",
+      "wording_stays": 3229,
+      "wording_days": 1253340.09501157,
+      "still_standing": 2380.0
+    },
+    {
+      "author": "Dušan Kreheľ (bot)",
+      "wording_stays": 1436,
+      "wording_days": 1217783.49702546,
+      "still_standing": 622.0
+    },
+    {
+      "author": "Aulis Eskola",
+      "wording_stays": 1836,
+      "wording_days": 1161117.85577546,
+      "still_standing": 336.0
+    },
+    {
+      "author": "OITi",
+      "wording_stays": 823,
+      "wording_days": 1143103.54259259,
+      "still_standing": 66.0
+    },
+    {
+      "author": "MsaynevirtaBOT",
+      "wording_stays": 738,
+      "wording_days": 1142541.7349537,
+      "still_standing": 200.0
+    },
+    {
+      "author": "Silvonen",
+      "wording_stays": 1175,
+      "wording_days": 1136135.06803241,
+      "still_standing": 134.0
+    },
+    {
+      "author": "Sullay",
+      "wording_stays": 1605,
+      "wording_days": 1123618.89478009,
+      "still_standing": 416.0
+    },
+    {
+      "author": "Kulttuurinavigaattori",
+      "wording_stays": 2369,
+      "wording_days": 1123065.68003472,
+      "still_standing": 215.0
+    },
+    {
+      "author": "Kahkonen",
+      "wording_stays": 3149,
+      "wording_days": 1121533.45908565,
+      "still_standing": 40.0
+    },
+    {
+      "author": "Sananiekka57",
+      "wording_stays": 928,
+      "wording_days": 1102753.83353009,
+      "still_standing": 312.0
+    },
+    {
+      "author": "Nitraus",
+      "wording_stays": 2744,
+      "wording_days": 1096368.87303241,
+      "still_standing": 340.0
+    },
+    {
+      "author": "Cuprum",
+      "wording_stays": 1226,
+      "wording_days": 1093732.09012731,
+      "still_standing": 206.0
+    }
+  ]
+}

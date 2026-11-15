@@ -1,0 +1,103 @@
+{
+  "title": "Union of undone-to-revert intervals, allocated to calendar year",
+  "unit": "article-hours",
+  "source": "wtt.edit; sql/exposure-union-by-year.sql",
+  "rows": [
+    {
+      "year": 2003,
+      "article_hours": 710.915
+    },
+    {
+      "year": 2004,
+      "article_hours": 22127.0847
+    },
+    {
+      "year": 2005,
+      "article_hours": 51268.8394
+    },
+    {
+      "year": 2006,
+      "article_hours": 148520.0781
+    },
+    {
+      "year": 2007,
+      "article_hours": 175026.0061
+    },
+    {
+      "year": 2008,
+      "article_hours": 228864.6197
+    },
+    {
+      "year": 2009,
+      "article_hours": 383070.6081
+    },
+    {
+      "year": 2010,
+      "article_hours": 495214.5583
+    },
+    {
+      "year": 2011,
+      "article_hours": 650034.4903
+    },
+    {
+      "year": 2012,
+      "article_hours": 1290666.7922
+    },
+    {
+      "year": 2013,
+      "article_hours": 757068.2997
+    },
+    {
+      "year": 2014,
+      "article_hours": 374003.0758
+    },
+    {
+      "year": 2015,
+      "article_hours": 324871.535
+    },
+    {
+      "year": 2016,
+      "article_hours": 409444.4194
+    },
+    {
+      "year": 2017,
+      "article_hours": 481206.4389
+    },
+    {
+      "year": 2018,
+      "article_hours": 480490.6131
+    },
+    {
+      "year": 2019,
+      "article_hours": 659950.6964
+    },
+    {
+      "year": 2020,
+      "article_hours": 707545.7614
+    },
+    {
+      "year": 2021,
+      "article_hours": 425472.0392
+    },
+    {
+      "year": 2022,
+      "article_hours": 300096.6803
+    },
+    {
+      "year": 2023,
+      "article_hours": 334233.0281
+    },
+    {
+      "year": 2024,
+      "article_hours": 330381.3308
+    },
+    {
+      "year": 2025,
+      "article_hours": 199120.5011
+    },
+    {
+      "year": 2026,
+      "article_hours": 84342.2603
+    }
+  ]
+}

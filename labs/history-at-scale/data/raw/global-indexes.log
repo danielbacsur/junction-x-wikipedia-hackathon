@@ -1,0 +1,17 @@
+global      -         2006-12-31 flat       rows=    1 reads= 2972663 median=   343.53 ms  [318.32, 395.30] key=None
+global      -         2006-12-31 idx        rows=    1 reads=  257491 median=    28.68 ms  [28.46, 30.40] key=se
+global      -         2006-12-31 idx_se     rows=    1 reads=  257491 median=    33.76 ms  [31.03, 34.84] key=se
+global      -         2006-12-31 idx_es     rows=    1 reads= 2806802 median=   351.62 ms  [313.37, 399.52] key=es
+global      -         2010-12-31 flat       rows=    1 reads= 2972663 median=   335.87 ms  [294.51, 482.43] key=None
+global      -         2010-12-31 idx        rows=    1 reads=  958857 median=   130.39 ms  [116.54, 153.85] key=se
+global      -         2010-12-31 idx_se     rows=    1 reads=  958857 median=   106.74 ms  [104.74, 129.24] key=se
+global      -         2010-12-31 idx_es     rows=    1 reads= 2277494 median=   300.88 ms  [268.38, 359.20] key=es
+global      -         2019-12-31 flat       rows=    1 reads= 2972663 median=   425.26 ms  [334.23, 506.04] key=None
+global      -         2019-12-31 idx        rows=    1 reads= 1426703 median=   177.08 ms  [165.60, 207.79] key=es
+global      -         2019-12-31 idx_se     rows=    1 reads= 2044590 median=   234.86 ms  [225.94, 249.40] key=se
+global      -         2019-12-31 idx_es     rows=    1 reads= 1426703 median=   179.23 ms  [165.17, 195.02] key=es
+global      -         now        flat       rows=    1 reads= 2972663 median=   263.30 ms  [253.04, 371.81] key=born_rev
+global      -         now        idx        rows=    1 reads=  692911 median=    52.88 ms  [51.60, 54.68] key=es
+global      -         now        idx_se     rows=    1 reads= 2972663 median=   313.23 ms  [277.78, 388.45] key=se
+global      -         now        idx_es     rows=    1 reads=  692911 median=    51.88 ms  [48.30, 59.67] key=es
+wrote /Users/danielbacsur/Workspaces/mariadb/labs/history-at-scale/data/raw/global-indexes.json

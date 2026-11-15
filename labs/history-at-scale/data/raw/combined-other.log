@@ -1,0 +1,33 @@
+wording     small     now        core       rows=    2 reads=       3 icp=     0 median=     0.28 ms  [0.27, 0.32] key=PRIMARY
+wording     small     now        hc_auto    rows=    2 reads=       4 icp=     0 median=     0.34 ms  [0.31, 0.37] key=PRIMARY
+wording     typical   now        core       rows=    2 reads=       3 icp=     0 median=     0.28 ms  [0.26, 0.31] key=PRIMARY
+wording     typical   now        hc_auto    rows=    2 reads=       4 icp=     0 median=     0.32 ms  [0.28, 0.35] key=PRIMARY
+wording     p95       now        core       rows=    5 reads=       6 icp=     0 median=     0.33 ms  [0.28, 0.36] key=PRIMARY
+wording     p95       now        hc_auto    rows=    5 reads=       7 icp=     0 median=     0.33 ms  [0.28, 0.40] key=PRIMARY
+wording     p99       now        core       rows=   88 reads=     177 icp=     0 median=     0.69 ms  [0.63, 0.73] key=hash,PRIMARY
+wording     p99       now        hc_auto    rows=   88 reads=      90 icp=     0 median=     0.72 ms  [0.68, 0.74] key=PRIMARY
+wording     talvisota now        core       rows=   28 reads=      29 icp=     0 median=     0.44 ms  [0.41, 0.52] key=PRIMARY
+wording     talvisota now        hc_auto    rows=   28 reads=      30 icp=     0 median=     0.43 ms  [0.40, 0.73] key=PRIMARY
+wording     halonen   now        core       rows= 1563 reads=    3127 icp=     0 median=     6.80 ms  [6.52, 7.16] key=hash,PRIMARY
+wording     halonen   now        hc_auto    rows= 1563 reads=    3128 icp=     0 median=     6.74 ms  [6.61, 7.22] key=hash,PRIMARY
+wording     largest   now        core       rows=44797 reads=   44798 icp=     0 median=   182.75 ms  [171.05, 223.83] key=PRIMARY
+wording     largest   now        hc_auto    rows=44797 reads=   44799 icp=     0 median=   210.47 ms  [194.63, 247.44] key=PRIMARY
+search      -         2006-12-31 core       rows=   19 reads=    1105 icp=   541 median=     3.27 ms  [2.07, 4.13] key=hash
+search      -         2006-12-31 hc_auto    rows=   19 reads=    1405 icp=   541 median=     3.90 ms  [3.22, 4.47] key=hash
+search      -         2012-12-31 core       rows=   87 reads=     980 icp=   541 median=     2.65 ms  [2.16, 3.30] key=hash
+search      -         2012-12-31 hc_auto    rows=   87 reads=    1280 icp=   541 median=     2.73 ms  [2.07, 2.91] key=hash
+search      -         2019-12-31 core       rows=  131 reads=     863 icp=   541 median=     1.40 ms  [1.23, 1.54] key=hash
+search      -         2019-12-31 hc_auto    rows=  131 reads=    1163 icp=   541 median=     3.01 ms  [1.91, 4.04] key=hash
+search      -         2026-09-30 core       rows=  168 reads=     769 icp=   541 median=     2.09 ms  [1.75, 4.19] key=hash
+search      -         2026-09-30 hc_auto    rows=  168 reads=    1069 icp=   541 median=     1.32 ms  [1.17, 2.00] key=hash
+search      -         now        core       rows=  168 reads=     769 icp=   541 median=     1.40 ms  [1.04, 2.45] key=hash
+search      -         now        hc_auto    rows=  168 reads=     769 icp=   168 median=     1.21 ms  [1.03, 2.13] key=hash
+global      -         2006-12-31 core       rows=    1 reads= 2972663 icp=     0 median=   467.77 ms  [345.63, 498.73] key=None
+global      -         2006-12-31 hc_auto    rows=    1 reads= 2972664 icp=     0 median=   478.75 ms  [395.31, 529.06] key=ps
+global      -         2010-12-31 core       rows=    1 reads= 2972663 icp=     0 median=   296.92 ms  [278.12, 314.93] key=None
+global      -         2010-12-31 hc_auto    rows=    1 reads= 2972664 icp=     0 median=   457.28 ms  [396.81, 538.71] key=ps
+global      -         2019-12-31 core       rows=    1 reads= 2972663 icp=     0 median=   270.25 ms  [258.54, 277.17] key=None
+global      -         2019-12-31 hc_auto    rows=    1 reads= 2972664 icp=     0 median=   388.77 ms  [379.52, 391.38] key=ps
+global      -         now        core       rows=    1 reads= 2972663 icp=     0 median=   279.36 ms  [247.21, 312.53] key=born_rev
+global      -         now        hc_auto    rows=    1 reads=  692911 icp=     0 median=    77.81 ms  [72.44, 106.27] key=born_rev
+wrote /Users/danielbacsur/Workspaces/mariadb/labs/history-at-scale/data/raw/combined-other.json

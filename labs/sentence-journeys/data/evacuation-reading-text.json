@@ -1,0 +1,11 @@
+{
+  "title": "evacuation-reading-text",
+  "unit": "articles",
+  "source": "sql/evacuation-reading-text.sql",
+  "rows": [
+    {
+      "articles": 13,
+      "hashes": 2
+    }
+  ]
+}

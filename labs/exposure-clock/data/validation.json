@@ -1,0 +1,15 @@
+{
+  "title": "Independent NumPy quantile cross-check",
+  "unit": "checks",
+  "source": "validate.py; SQL results from run.py",
+  "rows": [
+    {
+      "years_checked": 24,
+      "percentiles_per_year": 4,
+      "matched": true,
+      "union_years_checked": 24,
+      "union_matched": true,
+      "sql_read_seconds": 0.2286
+    }
+  ]
+}

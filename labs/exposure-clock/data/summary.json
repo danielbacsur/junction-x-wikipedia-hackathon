@@ -1,0 +1,22 @@
+{
+  "title": "Dataset and exposure audit",
+  "unit": "counts; hours; days",
+  "source": "wtt.edit; sql/summary.sql",
+  "rows": [
+    {
+      "edits": 862076,
+      "pages": 19742,
+      "first_edit": "2003-02-21 13:15:35",
+      "last_edit": "2026-10-01 10:59:12",
+      "first_temp": "2025-09-10 18:02:57",
+      "revert_events": 46334.0,
+      "undone_versions": 70176,
+      "self_reverts": 5147.0,
+      "negative_durations": 0.0,
+      "over_one_year": 5117.0,
+      "version_hours": 238455491.0931,
+      "exact_version_hours": 9313730.6703,
+      "longest_days": 5557.9052
+    }
+  ]
+}

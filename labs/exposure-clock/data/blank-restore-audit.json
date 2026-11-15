@@ -1,0 +1,19 @@
+{
+  "title": "The longest undo spans arise from repeating an empty page",
+  "unit": "revision metadata",
+  "source": "wtt.edit; sql/blank-restore-audit.sql",
+  "rows": [
+    {
+      "page_id": 11594,
+      "rev_id": 19772752,
+      "saved_at": "2021-05-14 11:42:21",
+      "bytes": 0,
+      "sha1": "phoiac9h4m842xq45sp7s6u21eteeq1",
+      "comment": "Ak: Sivu tyhjennettiin",
+      "target_rev_id": 831633,
+      "target_bytes": 0,
+      "target_sha": "phoiac9h4m842xq45sp7s6u21eteeq1",
+      "target_at": "2006-02-24 13:57:38"
+    }
+  ]
+}

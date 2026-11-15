@@ -1,0 +1,168 @@
+{
+ "title": "How the article Suomen sisällissota (page 1150) opens, and which side its infobox lists first",
+ "unit": "rows: the opening text as it stood at each date; opening_names and infobox_belligerent_1: versions and days per value over all 3,357 versions",
+ "source": "wtt.revision FOR SYSTEM_TIME AS OF / ALL WHERE page_id = 1150 (labs/history-of-history/lead-sentence.sql, lead-name-history.sql)",
+ "opening_names": [
+  {
+   "opening_name": "'''Suomen sisällissota'''",
+   "versions": 3188,
+   "first_seen": "2003-08-26 14:35:35",
+   "last_seen": "2026-10-01 23:59:59",
+   "days": 7931.8
+  },
+  {
+   "opening_name": "'''Suomen vuoden 1918 sota'''",
+   "versions": 123,
+   "first_seen": "2004-04-04 17:50:13",
+   "last_seen": "2005-08-22 13:21:46",
+   "days": 504.8
+  },
+  {
+   "opening_name": "",
+   "versions": 22,
+   "first_seen": "2006-04-06 11:32:23",
+   "last_seen": "2023-08-14 08:26:37",
+   "days": 0.2
+  },
+  {
+   "opening_name": "'''Suomen vapaussota'''",
+   "versions": 13,
+   "first_seen": "2006-09-30 11:13:57",
+   "last_seen": "2026-06-28 18:21:38",
+   "days": 0.2
+  },
+  {
+   "opening_name": "'''Sisällissota puhkesi vuonna 1918 tammikuussa 26-27 välisenä yönä. Sodan alussa punainen lyhty nostettiin työväentalon torniin Helsingin Hakaniemessä. Suomen sisällissota'''",
+   "versions": 1,
+   "first_seen": "2024-04-29 07:38:31",
+   "last_seen": "2024-04-29 12:04:50",
+   "days": 0.2
+  },
+  {
+   "opening_name": "'''kansalaissota'''",
+   "versions": 1,
+   "first_seen": "2007-01-30 19:19:19",
+   "last_seen": "2007-01-30 21:51:58",
+   "days": 0.1
+  },
+  {
+   "opening_name": "'''Kansalaissota tai Suomen sisällissota'''",
+   "versions": 1,
+   "first_seen": "2024-01-25 13:00:33",
+   "last_seen": "2024-01-25 14:49:51",
+   "days": 0.1
+  },
+  {
+   "opening_name": "'''sisällissota'''",
+   "versions": 1,
+   "first_seen": "2004-05-05 15:03:17",
+   "last_seen": "2004-05-05 15:33:26",
+   "days": 0
+  },
+  {
+   "opening_name": "'''Suomen sisussota'''",
+   "versions": 1,
+   "first_seen": "2015-12-11 08:16:18",
+   "last_seen": "2015-12-11 08:19:30",
+   "days": 0
+  },
+  {
+   "opening_name": "'''Suomen vessasota'''",
+   "versions": 1,
+   "first_seen": "2015-12-11 08:25:32",
+   "last_seen": "2015-12-11 08:39:29",
+   "days": 0
+  },
+  {
+   "opening_name": "'''Suomen Feministinensota'''",
+   "versions": 1,
+   "first_seen": "2017-12-13 11:48:03",
+   "last_seen": "2017-12-13 11:52:12",
+   "days": 0
+  },
+  {
+   "opening_name": "'''Suomen jonnesota'''",
+   "versions": 1,
+   "first_seen": "2018-09-05 11:00:24",
+   "last_seen": "2018-09-05 11:00:39",
+   "days": 0
+  }
+ ],
+ "infobox_belligerent_1": [
+  {
+   "belligerent_1": "no infobox",
+   "versions": 816,
+   "first_seen": "2003-08-26 14:35:35",
+   "last_seen": "2023-08-14 08:26:37",
+   "days": 851
+  },
+  {
+   "belligerent_1": "Reds",
+   "versions": 1576,
+   "first_seen": "2005-12-24 12:53:07",
+   "last_seen": "2012-06-03 16:51:24",
+   "days": 2353
+  },
+  {
+   "belligerent_1": "other",
+   "versions": 1,
+   "first_seen": "2008-02-07 14:18:06",
+   "last_seen": "2008-02-07 14:19:03",
+   "days": 0
+  },
+  {
+   "belligerent_1": "Whites",
+   "versions": 964,
+   "first_seen": "2012-06-03 16:51:24",
+   "last_seen": "2026-10-01 23:59:59",
+   "days": 5233
+  }
+ ],
+ "infobox_side_switches": [
+  {
+   "rev_id": 11715096,
+   "row_start": "2012-06-03 16:51:24",
+   "user": "Nor1980",
+   "side_before": "Reds",
+   "side": "Whites",
+   "comment": null
+  }
+ ],
+ "rows": [
+  {
+   "as_of": "2003-12-31",
+   "rev_id": 6298,
+   "lead_text": "'''Suomen sisällissota''' - jota myös '''Vapaussodaksi''' ja '''Kansalaissodaksi''' kutsutaan - käytiin punaisten ja valkoisten välillä. Punaiset olivat vasemmistolaisia, valkoiset taas keskustalaisia. Punaisten johtaja oli Kullervo Manner, valkoisten taas kenraali Mannerheim. Sodan ensimmäisiä taisteluita käytiin mm. Viipurin lähistöllä. Sodassa oli sekä punaista että valkoista terroria. Punaisten merkittä-"
+  },
+  {
+   "as_of": "2004-12-31",
+   "rev_id": 111753,
+   "lead_text": "'''Suomen vuoden 1918 sota''' - joka tunnetaan myös nimillä '''kansalaissota''', '''sisällissota''', '''vapaussota''', '''veljessota''', '''punakapina''', '''torpparikapina''', '''luokkasota''' ja neutraaleimmillaan vain '''vuoden 1918 tapahtumat''' - käytiin [[punakaarti|punaisten]] ja [[suojeluskunta|valkoisten]] välillä keväällä [[1918]]."
+  },
+  {
+   "as_of": "2005-12-31",
+   "rev_id": 657107,
+   "lead_text": "'''Suomen sisällissota''' käytiin [[Suomen kansanvaltuuskunta|Suomen kansanvaltuuskunnan]] johtamien [[punakaarti]]en ja [[Suomen senaatti|Suomen senaatin]] johtamien [[valkoiset|suojeluskuntien]] välillä [[27. tammikuuta]] – [[14. toukokuuta]] [[1918]]. Ulkovalloista [[Neuvosto-Venäjä]] tuki punakaarteja, [[Saksa]] ja [[Ruotsi]] valkokaarteja. Sota oli osa Euroopan suurvaltojen (ja Yhdysvaltojen) välillä käytyä ensimmäistä maailmansotaa ja "
+  },
+  {
+   "as_of": "2007-12-31",
+   "rev_id": 4016240,
+   "lead_text": "'''Suomen sisällissota''' käytiin [[Suomen senaatti|Suomen senaatin]] ja [[Suomen kansanvaltuuskunta|Suomen kansanvaltuuskunnan]]  johtamien joukkojen välillä [[27. tammikuuta]] &ndash; [[15. toukokuuta]] [[1918]]. Senaatin joukkoja kutsuttiin  [[valkoiset|valkoisiksi]] ja kansanvaltuuskunnan joukkoja [[punaiset|punaisiksi]]. Ulkovalloista [[Saksan keisarikunta]] tuki valkoisia ja [[Neuvosto-Venäjä]] avusti punaisia. Valkoiset saivat tukea m"
+  },
+  {
+   "as_of": "2010-12-31",
+   "rev_id": 9556664,
+   "lead_text": "'''Suomen sisällissota''' käytiin [[Svinhufvudin I hallitus|Suomen senaatin]] eli hallituksen ja sitä vastustaneen [[Suomen kansanvaltuuskunta|Suomen kansanvaltuuskunnan]] johtamien joukkojen välillä [[27. tammikuuta]] – [[16. toukokuuta]] [[1918]]. Senaatin joukkoja kutsuttiin [[valkoiset|valkoisiksi]] ja kansanvaltuuskunnan joukkoja [[punakaarti|punaisiksi]]. Ulkovalloista [[neuvosto-Venäjä]] tuki punaisia ja [[Saksan keisarikunta]] avusti"
+  },
+  {
+   "as_of": "2017-12-31",
+   "rev_id": 16987818,
+   "lead_text": "'''Suomen sisällissota''' käytiin [[Suomi|Suomen]] [[Suomen valtioneuvosto|senaatin]] eli [[Svinhufvudin I hallitus|hallituksen]] ja sitä vastaan [[kapina|kapinoineen]] [[Suomen kansanvaltuuskunta|Suomen kansanvaltuuskunnan]] johtamien joukkojen välillä 27. tammikuuta – 15. toukokuuta 1918. Senaatin [[asevoimat|asevoimina]] olivat [[valkoiset]] joukot ja kansanvaltuuskunnan joukkoina [[punakaarti|Suomen punainen kaarti]], punaiset. Ulkovallo"
+  },
+  {
+   "as_of": "2026-10-01",
+   "rev_id": 24234990,
+   "lead_text": "'''Suomen sisällissota''' käytiin [[Suomi|Suomen]] [[Svinhufvudin I hallitus|senaatin]] ja [[Suomen kansanvaltuuskunta|Suomen kansanvaltuuskunnan]] johtamien joukkojen välillä 27. tammikuuta – 15. toukokuuta 1918. Senaatin [[asevoimat|asevoimina]] olivat [[valkoiset]] joukot ja kansanvaltuuskunnan joukkoina [[Suomen Punainen Kaarti]] eli [[punakaarti|punaiset]]. [[Saksan keisarikunta|Saksan keisarikunnan]] armeija tuki valkoisia valtaamalla "
+  }
+ ]
+}

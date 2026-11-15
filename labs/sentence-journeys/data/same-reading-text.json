@@ -1,0 +1,11 @@
+{
+  "title": "same-reading-text",
+  "unit": "wordings",
+  "source": "sql/same-reading-text.sql",
+  "rows": [
+    {
+      "hashes": 1899,
+      "clean_texts": 1809
+    }
+  ]
+}

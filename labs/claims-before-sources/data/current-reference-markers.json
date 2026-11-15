@@ -1,0 +1,12 @@
+{
+  "title": "Current inline marker coverage diagnostics",
+  "unit": "paragraphs",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; current-reference-markers",
+  "rows": [
+    {
+      "n": 33786,
+      "sfn": 0.0,
+      "harv": 0.0
+    }
+  ]
+}

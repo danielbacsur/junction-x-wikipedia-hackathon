@@ -1,0 +1,21 @@
+{
+  "title": "Overall observed undo exposure",
+  "unit": "seconds; fractions; version-hours",
+  "source": "wtt.edit; sql/overall.sql",
+  "rows": [
+    {
+      "all_edits": "all",
+      "n": 70176,
+      "median_seconds": 1480.5,
+      "p75_seconds": 102964.0,
+      "p90_seconds": 15717032.5,
+      "p99_seconds": 303985048.75,
+      "within_minute": 0.1727,
+      "within_hour": 0.5581,
+      "within_day": 0.7416,
+      "within_week": 0.8109,
+      "version_hours": 238455491.0931,
+      "exact_version_hours": 9313730.6703
+    }
+  ]
+}

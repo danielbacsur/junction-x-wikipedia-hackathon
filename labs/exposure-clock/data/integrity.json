@@ -1,0 +1,17 @@
+{
+  "title": "Integrity checks",
+  "unit": "versions",
+  "source": "wtt.edit; sql/integrity.sql",
+  "rows": [
+    {
+      "source_undone": 70176,
+      "joined_undone": 70176,
+      "nonforward_reverts": 0.0,
+      "outside_restore_span": 0.0,
+      "ends_after_revert": 0.0,
+      "replaced_before_revert": 23842.0,
+      "zero_duration": 3.0,
+      "missing_restore": 0
+    }
+  ]
+}

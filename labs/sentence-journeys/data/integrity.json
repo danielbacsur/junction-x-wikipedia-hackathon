@@ -1,0 +1,14 @@
+{
+  "title": "integrity",
+  "unit": "rows",
+  "source": "sql/integrity.sql",
+  "rows": [
+    {
+      "negative_intervals": 0,
+      "zero_intervals": 0,
+      "missing_born_edits": 0,
+      "mismatched_births": 0,
+      "negative_delays": 0
+    }
+  ]
+}

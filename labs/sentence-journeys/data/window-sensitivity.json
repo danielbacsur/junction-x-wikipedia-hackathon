@@ -1,0 +1,19 @@
+{
+  "title": "Removal-window sensitivity among baseline candidate edges",
+  "unit": "events",
+  "source": "sql/window-sensitivity.sql; validate.py counts qualifying groups",
+  "rows": [
+    {
+      "hours": 1,
+      "events": 57
+    },
+    {
+      "hours": 24,
+      "events": 59
+    },
+    {
+      "hours": 168,
+      "events": 62
+    }
+  ]
+}

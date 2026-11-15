@@ -1,0 +1,298 @@
+{
+  "title": "Bitemporal office terms: what was read, parsed, skipped and loaded",
+  "unit": "count (seconds where the measure says so)",
+  "source": "wtt.revision FOR SYSTEM_TIME ALL and wtt.edit for 13 president articles; extract.py + load.py",
+  "rows": [
+    {
+      "measure": "articles read",
+      "value": 13
+    },
+    {
+      "measure": "versions read",
+      "value": 17845
+    },
+    {
+      "measure": "seconds to read them (extract.py)",
+      "value": 31.6
+    },
+    {
+      "measure": "distinct office infoboxes among them",
+      "value": 929
+    },
+    {
+      "measure": "versions skipped as reverted within 30 days",
+      "value": 4087
+    },
+    {
+      "measure": "versions accepted",
+      "value": 13758
+    },
+    {
+      "measure": "accepted versions without an office infobox",
+      "value": 1253
+    },
+    {
+      "measure": "accepted versions with an office infobox",
+      "value": 12505
+    },
+    {
+      "measure": "of those, every loaded office field parsed",
+      "value": 12395
+    },
+    {
+      "measure": "of those, at least one field unparsed",
+      "value": 110
+    },
+    {
+      "measure": "stated terms read (version x term)",
+      "value": 25715
+    },
+    {
+      "measure": "stated terms refused (version x field)",
+      "value": 111
+    },
+    {
+      "measure": "unparsed: end date not understood",
+      "value": 23
+    },
+    {
+      "measure": "unparsed: end not after start",
+      "value": 13
+    },
+    {
+      "measure": "unparsed: no date range found",
+      "value": 2
+    },
+    {
+      "measure": "unparsed: term field empty",
+      "value": 1
+    },
+    {
+      "measure": "unparsed: years only, no day",
+      "value": 72
+    },
+    {
+      "measure": "claim lifetime rows loaded (office_term, all system time)",
+      "value": 102
+    },
+    {
+      "measure": "of those, current statements",
+      "value": 35
+    },
+    {
+      "measure": "unparsed lifetime rows loaded (office_unparsed)",
+      "value": 17
+    },
+    {
+      "measure": "seconds to insert the claim rows",
+      "value": 0.06
+    },
+    {
+      "measure": "none: claim rows",
+      "value": 586
+    },
+    {
+      "measure": "none: versions skipped",
+      "value": 0
+    },
+    {
+      "measure": "undone_by: claim rows",
+      "value": 88
+    },
+    {
+      "measure": "undone_by: versions skipped",
+      "value": 8399
+    },
+    {
+      "measure": "window_1d: claim rows",
+      "value": 103
+    },
+    {
+      "measure": "window_1d: versions skipped",
+      "value": 3979
+    },
+    {
+      "measure": "window_30d: claim rows",
+      "value": 102
+    },
+    {
+      "measure": "window_30d: versions skipped",
+      "value": 4087
+    },
+    {
+      "measure": "window_365d: claim rows",
+      "value": 102
+    },
+    {
+      "measure": "window_365d: versions skipped",
+      "value": 4098
+    }
+  ],
+  "by_office": [
+    {
+      "office": "Suomen pääministeri",
+      "claim_rows": 37,
+      "current": 19
+    },
+    {
+      "office": "Suomen tasavallan presidentti",
+      "claim_rows": 55,
+      "current": 13
+    },
+    {
+      "office": "Suomen tasavallan presidentti (vt.)",
+      "claim_rows": 4,
+      "current": 1
+    },
+    {
+      "office": "Suomen valtionhoitaja",
+      "claim_rows": 6,
+      "current": 2
+    }
+  ],
+  "by_article": [
+    {
+      "page_id": 7650,
+      "person": "K. J. Ståhlberg",
+      "versions_read": 588,
+      "skipped_by_undone_by": 431,
+      "skipped_by_window_30d": 108,
+      "accepted_with_office_infobox": 445,
+      "accepted_with_unparsed_field": 15,
+      "claim_rows": 5,
+      "unparsed_rows": 2
+    },
+    {
+      "page_id": 11443,
+      "person": "Lauri Kristian Relander",
+      "versions_read": 386,
+      "skipped_by_undone_by": 68,
+      "skipped_by_window_30d": 61,
+      "accepted_with_office_infobox": 300,
+      "accepted_with_unparsed_field": 3,
+      "claim_rows": 4,
+      "unparsed_rows": 1
+    },
+    {
+      "page_id": 11444,
+      "person": "P. E. Svinhufvud",
+      "versions_read": 573,
+      "skipped_by_undone_by": 75,
+      "skipped_by_window_30d": 68,
+      "accepted_with_office_infobox": 446,
+      "accepted_with_unparsed_field": 3,
+      "claim_rows": 11,
+      "unparsed_rows": 1
+    },
+    {
+      "page_id": 11445,
+      "person": "Kyösti Kallio",
+      "versions_read": 623,
+      "skipped_by_undone_by": 90,
+      "skipped_by_window_30d": 86,
+      "accepted_with_office_infobox": 497,
+      "accepted_with_unparsed_field": 7,
+      "claim_rows": 9,
+      "unparsed_rows": 1
+    },
+    {
+      "page_id": 11398,
+      "person": "Risto Ryti",
+      "versions_read": 739,
+      "skipped_by_undone_by": 103,
+      "skipped_by_window_30d": 94,
+      "accepted_with_office_infobox": 553,
+      "accepted_with_unparsed_field": 8,
+      "claim_rows": 8,
+      "unparsed_rows": 1
+    },
+    {
+      "page_id": 6021,
+      "person": "Carl Gustaf Emil Mannerheim",
+      "versions_read": 2400,
+      "skipped_by_undone_by": 736,
+      "skipped_by_window_30d": 381,
+      "accepted_with_office_infobox": 1893,
+      "accepted_with_unparsed_field": 9,
+      "claim_rows": 8,
+      "unparsed_rows": 1
+    },
+    {
+      "page_id": 11446,
+      "person": "Juho Kusti Paasikivi",
+      "versions_read": 730,
+      "skipped_by_undone_by": 99,
+      "skipped_by_window_30d": 93,
+      "accepted_with_office_infobox": 604,
+      "accepted_with_unparsed_field": 19,
+      "claim_rows": 5,
+      "unparsed_rows": 2
+    },
+    {
+      "page_id": 1275,
+      "person": "Urho Kekkonen",
+      "versions_read": 2384,
+      "skipped_by_undone_by": 993,
+      "skipped_by_window_30d": 558,
+      "accepted_with_office_infobox": 1710,
+      "accepted_with_unparsed_field": 17,
+      "claim_rows": 19,
+      "unparsed_rows": 4
+    },
+    {
+      "page_id": 752,
+      "person": "Mauno Koivisto",
+      "versions_read": 1057,
+      "skipped_by_undone_by": 157,
+      "skipped_by_window_30d": 141,
+      "accepted_with_office_infobox": 825,
+      "accepted_with_unparsed_field": 22,
+      "claim_rows": 14,
+      "unparsed_rows": 2
+    },
+    {
+      "page_id": 5901,
+      "person": "Martti Ahtisaari",
+      "versions_read": 1484,
+      "skipped_by_undone_by": 340,
+      "skipped_by_window_30d": 326,
+      "accepted_with_office_infobox": 1115,
+      "accepted_with_unparsed_field": 7,
+      "claim_rows": 3,
+      "unparsed_rows": 2
+    },
+    {
+      "page_id": 1187,
+      "person": "Tarja Halonen",
+      "versions_read": 3078,
+      "skipped_by_undone_by": 2970,
+      "skipped_by_window_30d": 1169,
+      "accepted_with_office_infobox": 1624,
+      "accepted_with_unparsed_field": 0,
+      "claim_rows": 5,
+      "unparsed_rows": 0
+    },
+    {
+      "page_id": 1137,
+      "person": "Sauli Niinistö",
+      "versions_read": 2257,
+      "skipped_by_undone_by": 1329,
+      "skipped_by_window_30d": 655,
+      "accepted_with_office_infobox": 1399,
+      "accepted_with_unparsed_field": 0,
+      "claim_rows": 5,
+      "unparsed_rows": 0
+    },
+    {
+      "page_id": 11396,
+      "person": "Alexander Stubb",
+      "versions_read": 1546,
+      "skipped_by_undone_by": 1008,
+      "skipped_by_window_30d": 347,
+      "accepted_with_office_infobox": 1094,
+      "accepted_with_unparsed_field": 0,
+      "claim_rows": 6,
+      "unparsed_rows": 0
+    }
+  ]
+}

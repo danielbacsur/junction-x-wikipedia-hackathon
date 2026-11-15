@@ -1,0 +1,11 @@
+{
+  "title": "birth-summary",
+  "unit": "articles",
+  "source": "sql/birth-summary.sql",
+  "rows": [
+    {
+      "any_reused_at_birth": 174,
+      "five_reused_at_birth": 46.0
+    }
+  ]
+}

@@ -1,0 +1,979 @@
+{
+  "title": "Kaplan–Meier survival: kind",
+  "unit": "probability",
+  "source": "sql/survival-curves.sql; sql/build-km.sql; censor undone removals; wording_raw sensitivity; null beyond observed follow-up",
+  "rows": [
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 26648.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 3600,
+      "survival": 0.9743696351469833,
+      "at_risk": 25461.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 86400,
+      "survival": 0.959932161874987,
+      "at_risk": 25062.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 604800,
+      "survival": 0.9424883210745181,
+      "at_risk": 24563.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 2592000,
+      "survival": 0.9232111760837083,
+      "at_risk": 24006.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 7776000,
+      "survival": 0.9062518215171107,
+      "at_risk": 23432.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 15552000,
+      "survival": 0.8912479966762743,
+      "at_risk": 22903.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 31557600,
+      "survival": 0.8653454390100825,
+      "at_risk": 21957.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 63115200,
+      "survival": 0.8342308869348876,
+      "at_risk": 20480.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 94672800,
+      "survival": 0.8200511078463455,
+      "at_risk": 19247.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 126230400,
+      "survival": 0.805455507896211,
+      "at_risk": 18185.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 157788000,
+      "survival": 0.7976502766166605,
+      "at_risk": 16681.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 189345600,
+      "survival": 0.7882803446752269,
+      "at_risk": 15533.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 220903200,
+      "survival": 0.781255658789372,
+      "at_risk": 14742.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 252460800,
+      "survival": 0.7756601464617109,
+      "at_risk": 13846.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 284018400,
+      "survival": 0.7699907566627174,
+      "at_risk": 12837.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 315576000,
+      "survival": 0.763484365091092,
+      "at_risk": 11658.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 347133600,
+      "survival": 0.7597890364619682,
+      "at_risk": 10729.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 378691200,
+      "survival": 0.7546986055864044,
+      "at_risk": 9849.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 410248800,
+      "survival": 0.7475106712899641,
+      "at_risk": 8896.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 441806400,
+      "survival": 0.7430074299454349,
+      "at_risk": 8053.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 473364000,
+      "survival": 0.7394608547172896,
+      "at_risk": 7138.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 504921600,
+      "survival": 0.7370032305714205,
+      "at_risk": 6167.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 536479200,
+      "survival": 0.7341620275734961,
+      "at_risk": 5182.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 568036800,
+      "survival": 0.7289707156479572,
+      "at_risk": 3644.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 599594400,
+      "survival": 0.7208685187331586,
+      "at_risk": 2100.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 631152000,
+      "survival": 0.7152557920928977,
+      "at_risk": 1073.0,
+      "n": 26648.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 181867.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 3600,
+      "survival": 0.9334468305441371,
+      "at_risk": 165702.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 86400,
+      "survival": 0.9099142012874729,
+      "at_risk": 161303.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 604800,
+      "survival": 0.8937528512417425,
+      "at_risk": 158288.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 2592000,
+      "survival": 0.8814322899444662,
+      "at_risk": 155557.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 7776000,
+      "survival": 0.8697248830892034,
+      "at_risk": 152663.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 15552000,
+      "survival": 0.8598126252664542,
+      "at_risk": 149539.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 31557600,
+      "survival": 0.8444904406914936,
+      "at_risk": 144122.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 63115200,
+      "survival": 0.8252499924799894,
+      "at_risk": 135739.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 94672800,
+      "survival": 0.8113519904651398,
+      "at_risk": 128372.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 126230400,
+      "survival": 0.8014660768435546,
+      "at_risk": 122197.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 157788000,
+      "survival": 0.7925470319216623,
+      "at_risk": 115380.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 189345600,
+      "survival": 0.7834347738072411,
+      "at_risk": 107772.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 220903200,
+      "survival": 0.7758023809050956,
+      "at_risk": 101281.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 252460800,
+      "survival": 0.7690214680592151,
+      "at_risk": 95392.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 284018400,
+      "survival": 0.762749748284611,
+      "at_risk": 88949.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 315576000,
+      "survival": 0.7556261502156678,
+      "at_risk": 82410.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 347133600,
+      "survival": 0.7490331035851592,
+      "at_risk": 75501.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 378691200,
+      "survival": 0.7434451865172313,
+      "at_risk": 69452.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 410248800,
+      "survival": 0.7360974202494895,
+      "at_risk": 62430.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 441806400,
+      "survival": 0.7303826199091289,
+      "at_risk": 56032.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 473364000,
+      "survival": 0.7249613706879232,
+      "at_risk": 50267.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 504921600,
+      "survival": 0.717405665649852,
+      "at_risk": 44504.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 536479200,
+      "survival": 0.7107895349660012,
+      "at_risk": 38623.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 568036800,
+      "survival": 0.7049623684552545,
+      "at_risk": 29637.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 599594400,
+      "survival": 0.6980980802187375,
+      "at_risk": 20360.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 631152000,
+      "survival": 0.6916872070758906,
+      "at_risk": 10840.0,
+      "n": 181867.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 69547.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 3600,
+      "survival": 0.9095108671309595,
+      "at_risk": 61659.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 86400,
+      "survival": 0.8604740421511494,
+      "at_risk": 57793.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 604800,
+      "survival": 0.8175133726409077,
+      "at_risk": 54297.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 2592000,
+      "survival": 0.7759964709709355,
+      "at_risk": 50774.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 7776000,
+      "survival": 0.7290043035123307,
+      "at_risk": 46835.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 15552000,
+      "survival": 0.6836347621506785,
+      "at_risk": 42985.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 31557600,
+      "survival": 0.6195925378112592,
+      "at_risk": 37896.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 63115200,
+      "survival": 0.5455678164837733,
+      "at_risk": 29892.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 94672800,
+      "survival": 0.49352456089180896,
+      "at_risk": 25483.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 126230400,
+      "survival": 0.45303529242586543,
+      "at_risk": 21949.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 157788000,
+      "survival": 0.4220093935947778,
+      "at_risk": 18499.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 189345600,
+      "survival": 0.39479549006080544,
+      "at_risk": 16130.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 220903200,
+      "survival": 0.36690938826275676,
+      "at_risk": 13994.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 252460800,
+      "survival": 0.34098672993651463,
+      "at_risk": 11950.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 284018400,
+      "survival": 0.3190551498720316,
+      "at_risk": 10210.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 315576000,
+      "survival": 0.2970425844348392,
+      "at_risk": 8465.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 347133600,
+      "survival": 0.28223255138569125,
+      "at_risk": 7228.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 378691200,
+      "survival": 0.2643428666624079,
+      "at_risk": 6096.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 410248800,
+      "survival": 0.24733320128760267,
+      "at_risk": 5080.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 441806400,
+      "survival": 0.23354367966445594,
+      "at_risk": 4283.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 473364000,
+      "survival": 0.21623890728200326,
+      "at_risk": 3501.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 504921600,
+      "survival": 0.19225444680195197,
+      "at_risk": 2701.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 536479200,
+      "survival": 0.15846685700430385,
+      "at_risk": 1827.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 568036800,
+      "survival": 0.14702391134089732,
+      "at_risk": 1064.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 599594400,
+      "survival": 0.13513061654660685,
+      "at_risk": 462.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "age_seconds": 631152000,
+      "survival": 0.12280994701632554,
+      "at_risk": 150.0,
+      "n": 69547.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 0,
+      "survival": 0.9999942923091149,
+      "at_risk": 876011.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 3600,
+      "survival": 0.843314151467646,
+      "at_risk": 717623.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 86400,
+      "survival": 0.7616549136510194,
+      "at_risk": 639348.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 604800,
+      "survival": 0.7056503809969096,
+      "at_risk": 583687.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 2592000,
+      "survival": 0.6527570649003719,
+      "at_risk": 529690.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 7776000,
+      "survival": 0.5885035353872541,
+      "at_risk": 465609.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 15552000,
+      "survival": 0.5293256609054412,
+      "at_risk": 407420.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 31557600,
+      "survival": 0.44772235256451287,
+      "at_risk": 330124.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 63115200,
+      "survival": 0.35482009796909125,
+      "at_risk": 239775.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 94672800,
+      "survival": 0.2956196784520416,
+      "at_risk": 183842.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 126230400,
+      "survival": 0.252243965287034,
+      "at_risk": 142437.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 157788000,
+      "survival": 0.21897768987247562,
+      "at_risk": 112240.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 189345600,
+      "survival": 0.19211664240073154,
+      "at_risk": 89950.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 220903200,
+      "survival": 0.16974058089677585,
+      "at_risk": 72016.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 252460800,
+      "survival": 0.15076827166243187,
+      "at_risk": 58400.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 284018400,
+      "survival": 0.1337869560065185,
+      "at_risk": 47278.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 315576000,
+      "survival": 0.12045513987829803,
+      "at_risk": 38364.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 347133600,
+      "survival": 0.10908692071582518,
+      "at_risk": 30156.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 378691200,
+      "survival": 0.09941830518872381,
+      "at_risk": 23353.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 410248800,
+      "survival": 0.09087874826143723,
+      "at_risk": 17951.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 441806400,
+      "survival": 0.08359015054288045,
+      "at_risk": 13962.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 473364000,
+      "survival": 0.07677060091301227,
+      "at_risk": 11017.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 504921600,
+      "survival": 0.07091308888430545,
+      "at_risk": 8125.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 536479200,
+      "survival": 0.06641056672653718,
+      "at_risk": 5237.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 568036800,
+      "survival": 0.06149980231506396,
+      "at_risk": 2635.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 599594400,
+      "survival": 0.057206572580091805,
+      "at_risk": 1279.0,
+      "n": 876011.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "age_seconds": 631152000,
+      "survival": 0.05431175701791164,
+      "at_risk": 428.0,
+      "n": 876011.0
+    }
+  ]
+}

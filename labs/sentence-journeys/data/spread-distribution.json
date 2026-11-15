@@ -1,0 +1,62 @@
+{
+  "title": "Articles per prose wording",
+  "unit": "wordings",
+  "source": "sql/spread-distribution.sql",
+  "rows": [
+    {
+      "articles": 1,
+      "wordings": 742667,
+      "currently_shared": 0.0
+    },
+    {
+      "articles": 2,
+      "wordings": 1781,
+      "currently_shared": 78.0
+    },
+    {
+      "articles": 3,
+      "wordings": 80,
+      "currently_shared": 6.0
+    },
+    {
+      "articles": 4,
+      "wordings": 16,
+      "currently_shared": 7.0
+    },
+    {
+      "articles": 5,
+      "wordings": 6,
+      "currently_shared": 3.0
+    },
+    {
+      "articles": 6,
+      "wordings": 7,
+      "currently_shared": 3.0
+    },
+    {
+      "articles": 7,
+      "wordings": 3,
+      "currently_shared": 0.0
+    },
+    {
+      "articles": 9,
+      "wordings": 2,
+      "currently_shared": 2.0
+    },
+    {
+      "articles": 10,
+      "wordings": 2,
+      "currently_shared": 0.0
+    },
+    {
+      "articles": 11,
+      "wordings": 1,
+      "currently_shared": 0.0
+    },
+    {
+      "articles": 17,
+      "wordings": 1,
+      "currently_shared": 1.0
+    }
+  ]
+}

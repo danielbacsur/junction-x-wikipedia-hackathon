@@ -1,0 +1,11 @@
+{
+  "title": "Sentence extraction inventory",
+  "unit": "rows",
+  "source": "extra.py",
+  "rows": [
+    {
+      "mapping_rows": 2908082,
+      "distinct_sentences": 1029596
+    }
+  ]
+}

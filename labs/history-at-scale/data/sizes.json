@@ -1,0 +1,16 @@
+{
+ "title": "Load time and size of each copy of passage",
+ "unit": "seconds to insert with system_versioning_insert_history, bytes from information_schema",
+ "source": "labs/history-at-scale: uv run bench.py, uv run build.py, uv run report.py",
+ "note": "copy 0 is the real table; copies 1 to 3 repeat it under shifted page ids. Sizes are read right after each load, so a row of copy n holds the table with n + 1 copies.",
+ "rows": [
+  {"table":"p_flat","copy":0,"rows_inserted":2972662,"load_seconds":68.8,"rows_per_second":43207,"data_bytes":503316480,"index_bytes":461258752,"file_bytes":985661440,"files":1},
+  {"table":"p_hc","copy":0,"rows_inserted":2972662,"load_seconds":82.6,"rows_per_second":35989,"data_bytes":230146048,"index_bytes":453263360,"file_bytes":708837376,"files":2},
+  {"table":"p_year","copy":0,"rows_inserted":2972662,"load_seconds":57.8,"rows_per_second":51430,"data_bytes":239878144,"index_bytes":501760000,"file_bytes":962740224,"files":25},
+  {"table":"p_idx","copy":0,"rows_inserted":2972662,"load_seconds":81.9,"rows_per_second":36296,"data_bytes":503316480,"index_bytes":1110228992,"file_bytes":1639972864,"files":1},
+  {"table":"p_flat","copy":1,"rows_inserted":2972662,"load_seconds":64.6,"rows_per_second":46016,"data_bytes":1001390080,"index_bytes":1438646272,"file_bytes":2478833664,"files":1},
+  {"table":"p_flat","copy":2,"rows_inserted":2972662,"load_seconds":56.0,"rows_per_second":53083,"data_bytes":1499463680,"index_bytes":2206203904,"file_bytes":3762290688,"files":1},
+  {"table":"p_flat","copy":3,"rows_inserted":2972662,"load_seconds":58.3,"rows_per_second":50989,"data_bytes":1997537280,"index_bytes":2973728768,"file_bytes":5045747712,"files":1},
+  {"table":"p_hcp","copy":0,"rows_inserted":2972662,"load_seconds":37.5,"rows_per_second":79271,"data_bytes":230146048,"index_bytes":827604992,"file_bytes":1086324736,"files":2}
+ ]
+}

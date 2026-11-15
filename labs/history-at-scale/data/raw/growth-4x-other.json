@@ -1,0 +1,904 @@
+{
+ "started": "2026-11-14T15:02:46",
+ "finished": "2026-11-14T15:09:37",
+ "runs": 7,
+ "labels": [
+  {
+   "label": "primary",
+   "table": "lab_history_at_scale.p_flat",
+   "hint": "IGNORE INDEX (ps, per)"
+  }
+ ],
+ "records": [
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "small",
+   "page_id": 80770,
+   "as_of": "now",
+   "page_rows_all": 14,
+   "page_rows_now": 5,
+   "rows": 2,
+   "median_ms": 0.306,
+   "min_ms": 0.277,
+   "max_ms": 0.411,
+   "q1_ms": 0.279,
+   "q3_ms": 0.342,
+   "handler_reads": 3,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 2
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "PRIMARY",
+     "key_len": "12",
+     "rows": "2",
+     "extra": "Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.008868262,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "PRIMARY",
+      "partitions": null,
+      "r_rows": 2,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 12,
+      "attached": "p.page_id <=> 80770 and p.`hash` <=> '\\R\u0016\n\u0017???' and p.`hash` = '\\R\u0016\n\u0017???'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "typical",
+   "page_id": 43853,
+   "as_of": "now",
+   "page_rows_all": 44,
+   "page_rows_now": 12,
+   "rows": 2,
+   "median_ms": 0.398,
+   "min_ms": 0.339,
+   "max_ms": 1.198,
+   "q1_ms": 0.355,
+   "q3_ms": 0.979,
+   "handler_reads": 3,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 2
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "PRIMARY",
+     "key_len": "12",
+     "rows": "2",
+     "extra": "Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.009788554,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "PRIMARY",
+      "partitions": null,
+      "r_rows": 2,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 12,
+      "attached": "p.page_id <=> 43853 and p.`hash` <=> '0vm\u00071\u001b\u000e\u001b' and p.`hash` = '0vm\u00071\u001b\u000e\u001b'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "p95",
+   "page_id": 8631,
+   "as_of": "now",
+   "page_rows_all": 402,
+   "page_rows_now": 52,
+   "rows": 5,
+   "median_ms": 0.365,
+   "min_ms": 0.32,
+   "max_ms": 0.437,
+   "q1_ms": 0.335,
+   "q3_ms": 0.416,
+   "handler_reads": 6,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 5
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "PRIMARY",
+     "key_len": "12",
+     "rows": "5",
+     "extra": "Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.007111343,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "PRIMARY",
+      "partitions": null,
+      "r_rows": 5,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 13,
+      "attached": "p.page_id <=> 8631 and p.`hash` <=> 'U\u0002??\u000b\u00c75' and p.`hash` = 'U\u0002??\u000b\u00c75'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "p99",
+   "page_id": 7649,
+   "as_of": "now",
+   "page_rows_all": 1000,
+   "page_rows_now": 245,
+   "rows": 88,
+   "median_ms": 0.793,
+   "min_ms": 0.751,
+   "max_ms": 0.949,
+   "q1_ms": 0.769,
+   "q3_ms": 0.868,
+   "handler_reads": 177,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 88,
+    "Handler_read_rnd": 88
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index_merge",
+     "key": "hash,PRIMARY",
+     "key_len": "12,12",
+     "rows": "1",
+     "extra": "Using intersect(hash,PRIMARY); Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.084081168,
+    "tables": [
+     {
+      "table": "p",
+      "access": "index_merge",
+      "key": null,
+      "partitions": null,
+      "r_rows": 88,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 279,
+      "attached": "p.page_id = 7649 and p.`hash` = '??\u0016?\u5d56?'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "talvisota",
+   "page_id": 1256,
+   "as_of": "now",
+   "page_rows_all": 6462,
+   "page_rows_now": 363,
+   "rows": 28,
+   "median_ms": 0.434,
+   "min_ms": 0.404,
+   "max_ms": 0.611,
+   "q1_ms": 0.41,
+   "q3_ms": 0.48,
+   "handler_reads": 29,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 28
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "PRIMARY",
+     "key_len": "12",
+     "rows": "28",
+     "extra": "Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.013386057,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "PRIMARY",
+      "partitions": null,
+      "r_rows": 28,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 23,
+      "attached": "p.page_id <=> 1256 and p.`hash` <=> '??&zr???' and p.`hash` = '??&zr???'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "halonen",
+   "page_id": 1187,
+   "as_of": "now",
+   "page_rows_all": 23974,
+   "page_rows_now": 435,
+   "rows": 1563,
+   "median_ms": 9.526,
+   "min_ms": 6.987,
+   "max_ms": 20.408,
+   "q1_ms": 8.101,
+   "q3_ms": 16.728,
+   "handler_reads": 3127,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 1563,
+    "Handler_read_rnd": 1563
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index_merge",
+     "key": "hash,PRIMARY",
+     "key_len": "12,12",
+     "rows": "1",
+     "extra": "Using intersect(hash,PRIMARY); Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 1.11652261,
+    "tables": [
+     {
+      "table": "p",
+      "access": "index_merge",
+      "key": null,
+      "partitions": null,
+      "r_rows": 1563,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 4742,
+      "attached": "p.page_id = 1187 and p.`hash` = '?\u0013\b?XaYV'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "wording",
+   "page": "largest",
+   "page_id": 1420428,
+   "as_of": "now",
+   "page_rows_all": 66302,
+   "page_rows_now": 2834,
+   "rows": 44797,
+   "median_ms": 276.537,
+   "min_ms": 235.386,
+   "max_ms": 444.891,
+   "q1_ms": 245.633,
+   "q3_ms": 363.349,
+   "handler_reads": 89595,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 44797,
+    "Handler_read_rnd": 44797
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index_merge",
+     "key": "hash,PRIMARY",
+     "key_len": "12,12",
+     "rows": "1181",
+     "extra": "Using intersect(hash,PRIMARY); Using where; Using filesort"
+    }
+   ],
+   "analyze": {
+    "unparsed": true
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "search",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 19,
+   "median_ms": 2.199,
+   "min_ms": 1.622,
+   "max_ms": 4.487,
+   "q1_ms": 1.94,
+   "q3_ms": 3.249,
+   "handler_reads": 1105,
+   "icp_attempts": 541,
+   "handler_detail": {
+    "Handler_icp_attempts": 541,
+    "Handler_icp_match": 504,
+    "Handler_read_key": 300,
+    "Handler_read_next": 504,
+    "Handler_read_rnd_next": 301
+   },
+   "plan": [
+    {
+     "table": "c",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "300",
+     "extra": ""
+    },
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "hash",
+     "key_len": "8",
+     "rows": "1",
+     "extra": "Using index condition; Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 2.171720349,
+    "tables": [
+     {
+      "table": "c",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 300,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 1,
+      "attached": null,
+      "index_condition": null
+     },
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "hash",
+      "partitions": null,
+      "r_rows": 1.68,
+      "r_loops": 300,
+      "r_filtered": 3.76984127,
+      "pages": 2418,
+      "attached": "p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'"
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "search",
+   "page": null,
+   "page_id": null,
+   "as_of": "2012-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 87,
+   "median_ms": 3.814,
+   "min_ms": 2.592,
+   "max_ms": 4.471,
+   "q1_ms": 2.657,
+   "q3_ms": 4.4,
+   "handler_reads": 980,
+   "icp_attempts": 541,
+   "handler_detail": {
+    "Handler_icp_attempts": 541,
+    "Handler_icp_match": 379,
+    "Handler_read_key": 300,
+    "Handler_read_next": 379,
+    "Handler_read_rnd_next": 301
+   },
+   "plan": [
+    {
+     "table": "c",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "300",
+     "extra": ""
+    },
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "hash",
+     "key_len": "8",
+     "rows": "1",
+     "extra": "Using index condition; Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 1.403235209,
+    "tables": [
+     {
+      "table": "c",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 300,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 1,
+      "attached": null,
+      "index_condition": null
+     },
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "hash",
+      "partitions": null,
+      "r_rows": 1.263333333,
+      "r_loops": 300,
+      "r_filtered": 22.95514512,
+      "pages": 2043,
+      "attached": "p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2012-12-31 23:59:59'",
+      "index_condition": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2012-12-31 23:59:59'"
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "search",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 131,
+   "median_ms": 2.615,
+   "min_ms": 1.915,
+   "max_ms": 5.549,
+   "q1_ms": 2.256,
+   "q3_ms": 3.898,
+   "handler_reads": 863,
+   "icp_attempts": 541,
+   "handler_detail": {
+    "Handler_icp_attempts": 541,
+    "Handler_icp_match": 262,
+    "Handler_read_key": 300,
+    "Handler_read_next": 262,
+    "Handler_read_rnd_next": 301
+   },
+   "plan": [
+    {
+     "table": "c",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "300",
+     "extra": ""
+    },
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "hash",
+     "key_len": "8",
+     "rows": "1",
+     "extra": "Using index condition; Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 1.469747178,
+    "tables": [
+     {
+      "table": "c",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 300,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 1,
+      "attached": null,
+      "index_condition": null
+     },
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "hash",
+      "partitions": null,
+      "r_rows": 0.873333333,
+      "r_loops": 300,
+      "r_filtered": 50,
+      "pages": 1692,
+      "attached": "p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'"
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "search",
+   "page": null,
+   "page_id": null,
+   "as_of": "2026-09-30 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 168,
+   "median_ms": 1.351,
+   "min_ms": 1.169,
+   "max_ms": 1.656,
+   "q1_ms": 1.267,
+   "q3_ms": 1.621,
+   "handler_reads": 769,
+   "icp_attempts": 541,
+   "handler_detail": {
+    "Handler_icp_attempts": 541,
+    "Handler_icp_match": 168,
+    "Handler_read_key": 300,
+    "Handler_read_next": 168,
+    "Handler_read_rnd_next": 301
+   },
+   "plan": [
+    {
+     "table": "c",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "300",
+     "extra": ""
+    },
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "hash",
+     "key_len": "8",
+     "rows": "1",
+     "extra": "Using index condition; Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 0.475414165,
+    "tables": [
+     {
+      "table": "c",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 300,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 1,
+      "attached": null,
+      "index_condition": null
+     },
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "hash",
+      "partitions": null,
+      "r_rows": 0.56,
+      "r_loops": 300,
+      "r_filtered": 100,
+      "pages": 1410,
+      "attached": "p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2026-09-30 23:59:59'",
+      "index_condition": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2026-09-30 23:59:59'"
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "search",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 168,
+   "median_ms": 1.691,
+   "min_ms": 1.486,
+   "max_ms": 2.078,
+   "q1_ms": 1.549,
+   "q3_ms": 1.887,
+   "handler_reads": 769,
+   "icp_attempts": 541,
+   "handler_detail": {
+    "Handler_icp_attempts": 541,
+    "Handler_icp_match": 168,
+    "Handler_read_key": 300,
+    "Handler_read_next": 168,
+    "Handler_read_rnd_next": 301
+   },
+   "plan": [
+    {
+     "table": "c",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "300",
+     "extra": ""
+    },
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "hash",
+     "key_len": "8",
+     "rows": "1",
+     "extra": "Using index condition"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 1.814605459,
+    "tables": [
+     {
+      "table": "c",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 300,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 1,
+      "attached": null,
+      "index_condition": null
+     },
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "hash",
+      "partitions": null,
+      "r_rows": 0.56,
+      "r_loops": 300,
+      "r_filtered": 100,
+      "pages": 1410,
+      "attached": null,
+      "index_condition": "p.row_end = TIMESTAMP'2106-02-07 06:28:15.999999'"
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 14201.224,
+   "min_ms": 7515.107,
+   "max_ms": 19093.1,
+   "q1_ms": 10218.123,
+   "q3_ms": 15154.084,
+   "handler_reads": 11890649,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_rnd_next": 11890649
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "7279020",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 9342.521202,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 11890648,
+      "r_loops": 1,
+      "r_filtered": 3.082388782,
+      "pages": 121218,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2010-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 12412.743,
+   "min_ms": 10614.647,
+   "max_ms": 18134.809,
+   "q1_ms": 10996.81,
+   "q3_ms": 14165.628,
+   "handler_reads": 11890649,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_rnd_next": 11890649
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "7279020",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 10197.00138,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 11890648,
+      "r_loops": 1,
+      "r_filtered": 8.870399662,
+      "pages": 121218,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 13333.302,
+   "min_ms": 10605.936,
+   "max_ms": 18121.223,
+   "q1_ms": 11924.754,
+   "q3_ms": 14714.709,
+   "handler_reads": 11890649,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_rnd_next": 11890649
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "7279020",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 17625.01426,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 11890648,
+      "r_loops": 1,
+      "r_filtered": 16.77382091,
+      "pages": 121218,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "primary",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 1264.197,
+   "min_ms": 1047.574,
+   "max_ms": 1517.668,
+   "q1_ms": 1098.509,
+   "q3_ms": 1346.048,
+   "handler_reads": 11890649,
+   "icp_attempts": 0,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 11890648
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index",
+     "key": "born_rev",
+     "key_len": "4",
+     "rows": "7279020",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 1218.090444,
+    "tables": [
+     {
+      "table": "p",
+      "access": "index",
+      "key": "born_rev",
+      "partitions": null,
+      "r_rows": 11890648,
+      "r_loops": 1,
+      "r_filtered": 23.30941089,
+      "pages": 38902,
+      "attached": "p.row_end = TIMESTAMP'2106-02-07 06:28:15.999999'",
+      "index_condition": null
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Paired uninterrupted survival from second appearance",
+  "unit": "wordings",
+  "source": "sql/survival.sql",
+  "rows": [
+    {
+      "overlapping_first_second": 1553,
+      "both_censored": 87.0,
+      "destination_outlives": 1130.0,
+      "source_outlives": 336.0,
+      "same_end": 0.0,
+      "both_ended": 1149.0,
+      "eligible_year": 1521.0,
+      "source_survives_year": 353.0,
+      "destination_survives_year": 756.0
+    }
+  ]
+}

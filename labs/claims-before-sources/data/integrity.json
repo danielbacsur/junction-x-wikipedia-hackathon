@@ -1,0 +1,15 @@
+{
+  "title": "Extraction integrity",
+  "unit": "rows",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; integrity",
+  "rows": [
+    {
+      "raw_rows": 1419241,
+      "merged_stays": 1364007,
+      "wording_count": 1630250,
+      "historical_slots": 423634,
+      "missing_origin": 0,
+      "duplicate_current_slots": 0
+    }
+  ]
+}

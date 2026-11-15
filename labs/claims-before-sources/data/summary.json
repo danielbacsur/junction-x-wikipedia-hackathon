@@ -1,0 +1,35 @@
+{
+  "title": "Current prose sourcing coverage",
+  "unit": "paragraphs",
+  "source": "wtt snapshot 2026-10-01; run.py, publication_sql.py, parse.py, audit.py; README definitions",
+  "rows": [
+    {
+      "current_paragraphs": 133201,
+      "zero_slot": 0.0,
+      "referenced_today": 99415.0,
+      "born_with_reference": 77539.0,
+      "gained_reference": 21876.0,
+      "no_reference_today": 33786.0,
+      "never_referenced": 32279.0,
+      "reference_removed": 1507.0,
+      "unsourced_5_years": 30952.0,
+      "unsourced_10_years": 26860.0,
+      "unsourced_15_years": 19963.0,
+      "publication_reference_occurrences": 195053,
+      "publication_year_parsed": 48458,
+      "publication_year_parsed_pct": 24.8435,
+      "candidate_paragraphs": 191,
+      "top_candidates_delivered": 50,
+      "gained_wait_p25_days": 231.011,
+      "gained_wait_median_days": 976.7521,
+      "gained_wait_p75_days": 3027.3039,
+      "top15_audit_mix": {
+        "later better source for an old true claim": 6,
+        "claim was updated with new information": 8,
+        "possible circular sourcing worth a human look": 1
+      },
+      "parser_year_field_precision_pct": 100,
+      "confirmed_circular_sourcing": 0
+    }
+  ]
+}

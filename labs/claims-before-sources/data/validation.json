@@ -1,0 +1,15 @@
+{
+  "title": "Independent arithmetic and artifact verification",
+  "unit": "checks",
+  "source": "validate.py; Python quantiles independently compared to MariaDB",
+  "rows": [
+    {
+      "coverage_reconciles": true,
+      "sql_quantiles_match": true,
+      "publication_denominators_match": true,
+      "top50_unique_ranked_and_pass_filters": true,
+      "all_json_envelopes_valid": true,
+      "manual_audits_present": true
+    }
+  ]
+}

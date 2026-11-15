@@ -1,0 +1,25 @@
+{
+  "title": "Manual triage and parser audit results",
+  "unit": "counts and percent",
+  "source": "Manual reading by research agent, 2026-11-14; frozen judgments in audit.py; not an independent human audit",
+  "rows": [
+    {
+      "top_candidates_audited": 15,
+      "mix": {
+        "later better source for an old true claim": 6,
+        "claim was updated with new information": 8,
+        "possible circular sourcing worth a human look": 1
+      },
+      "parser_errors_in_top15": 0,
+      "parser_sample_size": 50,
+      "correct_year_field_extractions": 50,
+      "year_field_precision_pct": 100,
+      "precision_wilson95_low_pct": 92.865,
+      "precision_wilson95_high_pct": 100,
+      "future_year_data_errors": 1,
+      "archival_date_semantics_flags": 1,
+      "publication_truth_precision": null,
+      "confirmed_circular_sourcing": 0
+    }
+  ]
+}

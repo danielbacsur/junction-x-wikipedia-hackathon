@@ -1,0 +1,175 @@
+{
+  "title": "Handovers between presidents that do not meet, as Wikipedia stood at each year end",
+  "unit": "counts and days per year end (2026 = now)",
+  "source": "lab_bitemporal_offices.office_term; sql/d2-gaps-by-year.sql",
+  "rows": [
+    {
+      "year_end": 2006,
+      "stated_terms": 11,
+      "gaps": 0,
+      "gap_days": 0,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2007,
+      "stated_terms": 11,
+      "gaps": 0,
+      "gap_days": 0,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2008,
+      "stated_terms": 11,
+      "gaps": 1,
+      "gap_days": 1,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2009,
+      "stated_terms": 11,
+      "gaps": 1,
+      "gap_days": 1,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2010,
+      "stated_terms": 11,
+      "gaps": 0,
+      "gap_days": 0,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2011,
+      "stated_terms": 11,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2012,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2013,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2014,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2015,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2016,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2017,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2018,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2019,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2020,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2021,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2022,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2023,
+      "stated_terms": 12,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2024,
+      "stated_terms": 13,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2025,
+      "stated_terms": 13,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    },
+    {
+      "year_end": 2026,
+      "stated_terms": 13,
+      "gaps": 2,
+      "gap_days": 10,
+      "overlaps": 0,
+      "overlap_days": 0
+    }
+  ]
+}

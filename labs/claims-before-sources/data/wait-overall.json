@@ -1,0 +1,21 @@
+{
+  "title": "Time to first reference, including born referenced; and gained only",
+  "unit": "days",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; wait-overall",
+  "rows": [
+    {
+      "population": "all",
+      "n": 99415,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "population": "gained",
+      "n": 21876,
+      "p25": 231.011,
+      "median": 976.7521,
+      "p75": 3027.3039
+    }
+  ]
+}

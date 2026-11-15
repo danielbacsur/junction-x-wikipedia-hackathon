@@ -1,0 +1,71 @@
+{
+  "title": "Introducing editor type; standing means same value in same text skeleton",
+  "unit": "substitution",
+  "source": "wtt; run.py; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "population": "all",
+      "editor": "named",
+      "n": 4288,
+      "value_standing": 950,
+      "uninterrupted_new_stay_at_cutoff": 841,
+      "standing_share": 0.22154850746268656
+    },
+    {
+      "population": "all",
+      "editor": "ip",
+      "n": 2508,
+      "value_standing": 195,
+      "uninterrupted_new_stay_at_cutoff": 161,
+      "standing_share": 0.07775119617224881
+    },
+    {
+      "population": "all",
+      "editor": "temp",
+      "n": 44,
+      "value_standing": 21,
+      "uninterrupted_new_stay_at_cutoff": 21,
+      "standing_share": 0.4772727272727273
+    },
+    {
+      "population": "all",
+      "editor": "hidden",
+      "n": 0,
+      "value_standing": 0,
+      "uninterrupted_new_stay_at_cutoff": 0,
+      "standing_share": null
+    },
+    {
+      "population": "clean",
+      "editor": "named",
+      "n": 3423,
+      "value_standing": 781,
+      "uninterrupted_new_stay_at_cutoff": 736,
+      "standing_share": 0.22816243061641836
+    },
+    {
+      "population": "clean",
+      "editor": "ip",
+      "n": 1660,
+      "value_standing": 161,
+      "uninterrupted_new_stay_at_cutoff": 146,
+      "standing_share": 0.09698795180722891
+    },
+    {
+      "population": "clean",
+      "editor": "temp",
+      "n": 27,
+      "value_standing": 21,
+      "uninterrupted_new_stay_at_cutoff": 21,
+      "standing_share": 0.7777777777777778
+    },
+    {
+      "population": "clean",
+      "editor": "hidden",
+      "n": 0,
+      "value_standing": 0,
+      "uninterrupted_new_stay_at_cutoff": 0,
+      "standing_share": null
+    }
+  ]
+}

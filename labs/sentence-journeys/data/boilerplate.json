@@ -1,0 +1,567 @@
+{
+  "title": "Repeated sentences, list items and raw block artifacts",
+  "unit": "distinct articles",
+  "source": "sql/boilerplate.sql; sql/boilerplate-sentences.sql",
+  "rows": [
+    {
+      "category": "sentence_like_span",
+      "hash": "86378C414109D003663A4F269681844C46557F14",
+      "articles": 242,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella, Riianlahdella ja Aa-joella."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "C3485E301026B000EBD64A8DB6EAAC0F681A22F6",
+      "articles": 101,
+      "sentence": "Hän oli sotilaskoulutuksensa ensimmäisen maailmansodan aikana Saksassa saanut jääkäri, joka sai tulikasteensa Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "40265551DFC81D5B7BB5BBDF4EB7CA05FCCCE744",
+      "articles": 73,
+      "sentence": "Hän oli sotilaskoulutuksensa ensimmäisen maailmansodan aikana Saksassa saanut jääkäri."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "61713841B2E386A4EFF2BC4C021D92734604373C",
+      "articles": 60,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella, Riianlahdella ja Schmardenissa sekä Aa-joella."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "CB74DCD83A38DAE02850C6D737348E4493A7DD0B",
+      "articles": 32,
+      "sentence": "Hänet sijoitettiin joukon 1. komppaniaan."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "7B2F01528B862C5746138B37B2729487967139DD",
+      "articles": 30,
+      "sentence": "Tulikasteensa hän sai Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "E08A4748550B6B8132157941C6F4DF6C5094D7B6",
+      "articles": 28,
+      "sentence": "Moskovan rauhassa 1940 alue luovutettiin Neuvostoliitolle, mutta Suomi valtasi alueen takaisin jatkosodan alussa 1941 ja kylän asukkaat pääsivät palaamaan raunioituneeseen kotikyläänsä."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "BDEE9D56193B2EB73FA8CBF8AE08F5946613FC2F",
+      "articles": 27,
+      "sentence": "Rauhanteossa kylä jäi taas Neuvostoliiton puolelle."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "B25A7272D77B4E9910025630656FD6614CD8522D",
+      "articles": 26,
+      "sentence": "Jälleenrakennus keskeytyi vuonna 1944 Neuvostoliiton suurhyökkäyksen alettua ja kylän asukkaat evakuoitiin uudelleen."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "3CE46298E8A6A0E74C35F15D3CE52B7B986ABACB",
+      "articles": 26,
+      "sentence": "Kunnassa asuu ihmistä, ja sen pinta-ala on km2, josta km2 on vesistöjä."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "76D5C203AC3C3071B900727A4872616574A9587E",
+      "articles": 25,
+      "sentence": "Muinaislinnaa on tutkittu vähän, mutta selviä merkkejä linnoittamisesta ei olla saatu."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "97ED6A2B9E065BAFA7628DB671514AE520DCA1E4",
+      "articles": 24,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Riianlahdella ja Aa-joella."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "745F8C7E0FBB0A139763D880A771B91B3C3E3A67",
+      "articles": 24,
+      "sentence": "Käytetty aluejako on 1.1.2013 tilanteen mukainen."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "0CF35D5819DFBB71F4C35969259103557E35AF98",
+      "articles": 23,
+      "sentence": "Hän otti osaa taisteluihin ensimmäisessä maailmansodassa Saksan itärintamalla Misse-joella Riianlahdella ja Aa-joella."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "E2B1A0DEED03DB623ADB0E227EFC4D77C6DFF400",
+      "articles": 22,
+      "sentence": "Hän oli edustaja aatelissäädyssä Porvoon valtiopäivillä 1809."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "3D20172C18C865DFF6B4A122B119DDF8633E8A53",
+      "articles": 21,
+      "sentence": "Hän sai tulikasteensa Saksan itärintamalla Misse-joella vuonna 1916."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "E51F66155BD1745015BC6DF4F18EAD2E4DE2E844",
+      "articles": 21,
+      "sentence": "Hänet sijoitettiin joukon 2. komppaniaan."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "B54E4D532086DA51F67762A66888C0D31609360E",
+      "articles": 20,
+      "sentence": "Hänen puolueensa oli Ruotsalainen kansanpuolue."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "F000F2A3FDB44F5B09A079B34FF6DE2E477DDFCD",
+      "articles": 20,
+      "sentence": "Jänisjärvi laskee vuorostaan Laatokkaan, jonka laskujoki Neva laskee Pietarissa Itämeren Suomenlahteen."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "D801CFB05737C81219ABE89137E01D7962110C80",
+      "articles": 20,
+      "sentence": "Kunnassa asuu ihmistä ja sen pinta-ala on km2, josta km2 on vesistöjä."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "296B52532F2861375D3E1BDCE4E7A65832463262",
+      "articles": 19,
+      "sentence": "Leirille hän ilmoittautui 25. helmikuuta 1915."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "433C2BD9FA1407EB256182D418978FFD8AD3E5DC",
+      "articles": 19,
+      "sentence": "Myöhemmin hän osallistui Suomen sisällissotaan joukkueenjohtajana."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "6C81CCDA275EF2D4FEB596024E4D27AC02627EFE",
+      "articles": 18,
+      "sentence": "B-osastoilla hoidettiin lievemmin haavoittuneita ja järjestettiin kirurgisten potilaiden kuntoutus."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "4EF93F514A835C14B88C5416A626A9A32E07A77D",
+      "articles": 18,
+      "sentence": "Hän oli kansanedustajana Keski-Suomen läänin vaalipiiristä."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "FCCB37C9C3FDC06C7B5FC4FE43A1439BEC94A148",
+      "articles": 18,
+      "sentence": "Hän osallistui vuonna 1917 Polangenissa järjestetyille erikoiskursseille (pommarikurssi)."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "8BD46273033D25836CC74513E17FFB9524FB9D5B",
+      "articles": 18,
+      "sentence": "Lisäksi siellä hoidettiin sisätautien potilaita ja tartuntatauteja sairastavia."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "B44282524699D18698DCCBE706708D2F5356B514",
+      "articles": 18,
+      "sentence": "Muinaislinnassa on suoritettu arkeologinen inventointi ja sen puolustusrakenteita on kartoitettu pintapuolisesti."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "D5FD9FA8ED930C853EB0F5BE907AE6834644EBF5",
+      "articles": 18,
+      "sentence": "Perihämäläinen murrealue on hämäläismurteiden keskeisin alue."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "0E8901BA256DD5A45362C8C3DCCC3BA698623328",
+      "articles": 18,
+      "sentence": "Perihämäläisellä murteella on 19 tyypillistä hämäläistä murrepiirrettä."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "A994A57E1BB0F27DDD6C1A9F98C471E74386A4EF",
+      "articles": 17,
+      "sentence": "Hänen puolueensa oli Kansallinen Kokoomus."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "66BB7BAF4A07C9572432294B4A9304A64D1ED1D4",
+      "articles": 17,
+      "sentence": "Hänet haudattiin Helsingin Hietaniemen hautausmaalle."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "4B63084C321DEB30BC581BB27E070F2939C25DD6",
+      "articles": 17,
+      "sentence": "Hänet on haudattu Hietaniemen hautausmaalle."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "752BFD0B69DF71989F55A863C8540E44CAE65BFF",
+      "articles": 17,
+      "sentence": "Seuraavassa kuvaajassa on esitetty kunnan väestönkehitys viiden vuoden välein vuodesta 1980 lähtien."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "CE1DB9AA06AB1A4FEC2109AA306A0C2BF17B5C68",
+      "articles": 16,
+      "sentence": "Hänet komennettiin Suomen sisällissotaan joukkueenjohtajaksi 1."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "C95DFA4CCF985BE4450D59570F6EC5FF8EBA8435",
+      "articles": 16,
+      "sentence": "Naisäänestäjien äänestysaktiivisuus ylitti kunnallisvaaleissa miesäänestäjien äänestysaktiivisuuden ensimmäistä kertaa 1984 kunnallisvaaleissa."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "05084DB1D1CEA5DF75D6AAF45008F0D5F96CF4F6",
+      "articles": 16,
+      "sentence": "Suojeluskuntajärjestö lakkautettiin eduskunnan päätöksellä 3.11.1944."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "FB5A70F955A303AD63FD3D9AE02B2A6FABE469C7",
+      "articles": 16,
+      "sentence": "Talvisodan alussa kylästä evakuoitiin alaikäiset lapset äiteineen."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "D8AFF0FEAEB241CB43843195B553B19F65037213",
+      "articles": 15,
+      "sentence": "Hän oli ensimmäisen maailmansodan aikana Saksassa sotilaskoulutuksen saanut jääkäri."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "13E82BD581BB236C8C5ED9E56975FB5912C7A242",
+      "articles": 15,
+      "sentence": "Hän otti osaa sisällissodan taisteluihin Tampereella ja Viipurissa."
+    },
+    {
+      "category": "sentence_like_span",
+      "hash": "F28FE90355970D935A962A207D7B3ECF5424D822",
+      "articles": 15,
+      "sentence": "Hän otti osaa sisällissodan taisteluihin Viipurissa."
+    },
+    {
+      "hash": "B858CB282617FB09",
+      "kind": "prose",
+      "chars": 0,
+      "articles": 1900,
+      "text": "",
+      "category": "raw_block"
+    },
+    {
+      "hash": "1A260E1D7017E658",
+      "kind": "list",
+      "chars": 13,
+      "articles": 482,
+      "text": "Jääkärimerkki",
+      "category": "raw_block"
+    },
+    {
+      "hash": "2CE3A4124B65BD35",
+      "kind": "list",
+      "chars": 13,
+      "articles": 341,
+      "text": "Jääkärimerkki",
+      "category": "raw_block"
+    },
+    {
+      "hash": "14F9634C8F2E0904",
+      "kind": "list",
+      "chars": 114,
+      "articles": 321,
+      "text": "Puolustusministeriön Sotahistoriallisen toimiston julkaisuja IV, Suomen jääkärien elämäkerrasto, WSOY Porvoo 1938.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "49C7D92B12DD587E",
+      "kind": "list",
+      "chars": 36,
+      "articles": 320,
+      "text": "Vapaussodan muistomitali soljen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "710C573FEB41B47B",
+      "kind": "list",
+      "chars": 105,
+      "articles": 292,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 ISBN 951-99046-8-9.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "E71430EFE06732E7",
+      "kind": "list",
+      "chars": 36,
+      "articles": 261,
+      "text": "Vapaussodan muistomitali soljen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "976D5860DAD6FFC9",
+      "kind": "list",
+      "chars": 36,
+      "articles": 234,
+      "text": "Vapaussodan muistomitali soljen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "82BB80263EA28032",
+      "kind": "list",
+      "chars": 35,
+      "articles": 231,
+      "text": "Vapaudenristi 4. lk. miekkojen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "239F385ADADB27B5",
+      "kind": "list",
+      "chars": 105,
+      "articles": 209,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 ISBN 951-99046-8-9.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "099600A10A944114",
+      "kind": "prose",
+      "chars": 0,
+      "articles": 196,
+      "text": "",
+      "category": "raw_block"
+    },
+    {
+      "hash": "A398F74E7E57B77D",
+      "kind": "list",
+      "chars": 105,
+      "articles": 192,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 ISBN 951-99046-8-9.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "C3E29889E81DCCE2",
+      "kind": "list",
+      "chars": 35,
+      "articles": 189,
+      "text": "Vapaudenristi 4. lk. miekkojen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "5D23BE0307B82F0C",
+      "kind": "list",
+      "chars": 23,
+      "articles": 189,
+      "text": "Talvisodan muistomitali",
+      "category": "raw_block"
+    },
+    {
+      "hash": "60012CB931D8994B",
+      "kind": "list",
+      "chars": 49,
+      "articles": 188,
+      "text": "Saksan maailmansotaan osallistuneiden kunniaristi",
+      "category": "raw_block"
+    },
+    {
+      "hash": "32E826E79C298B70",
+      "kind": "list",
+      "chars": 49,
+      "articles": 179,
+      "text": "Saksan maailmansotaan osallistuneiden kunniaristi",
+      "category": "raw_block"
+    },
+    {
+      "hash": "91C93F26BAA3810C",
+      "kind": "list",
+      "chars": 87,
+      "articles": 178,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 .",
+      "category": "raw_block"
+    },
+    {
+      "hash": "10001E2AF33F25B3",
+      "kind": "list",
+      "chars": 23,
+      "articles": 175,
+      "text": "Talvisodan muistomitali",
+      "category": "raw_block"
+    },
+    {
+      "hash": "A80771DC96348A31",
+      "kind": "list",
+      "chars": 114,
+      "articles": 166,
+      "text": "Puolustusministeriön Sotahistoriallisen toimiston julkaisuja IV, Suomen jääkärien elämäkerrasto, WSOY Porvoo 1938.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "CDD52C79EABDED85",
+      "kind": "list",
+      "chars": 87,
+      "articles": 159,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 .",
+      "category": "raw_block"
+    },
+    {
+      "hash": "20D3D5AA5B9A2539",
+      "kind": "list",
+      "chars": 35,
+      "articles": 156,
+      "text": "Vapaudenristi 4. lk. miekkojen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "FF20FB498F678500",
+      "kind": "list",
+      "chars": 31,
+      "articles": 155,
+      "text": "Katso myös: Suomen sisällissota",
+      "category": "raw_block"
+    },
+    {
+      "hash": "9CFB62EDF0FED1B1",
+      "kind": "list",
+      "chars": 87,
+      "articles": 140,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 .",
+      "category": "raw_block"
+    },
+    {
+      "hash": "0B50C3A4D596F88E",
+      "kind": "list",
+      "chars": 35,
+      "articles": 138,
+      "text": "Vapaussodanmuistomitali soljen kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "DF58248C414F342C",
+      "kind": "list",
+      "chars": 0,
+      "articles": 132,
+      "text": "",
+      "category": "raw_block"
+    },
+    {
+      "hash": "EDEBF93822FB0FF1",
+      "kind": "list",
+      "chars": 49,
+      "articles": 131,
+      "text": "Saksan maailmansotaan osallistuneiden kunniaristi",
+      "category": "raw_block"
+    },
+    {
+      "hash": "42232AEE6E363FB0",
+      "kind": "list",
+      "chars": 114,
+      "articles": 128,
+      "text": "Puolustusministeriön Sotahistoriallisen toimiston julkaisuja IV, Suomen jääkärien elämäkerrasto, WSOY Porvoo 1938.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "AF8207AECE6AB93D",
+      "kind": "prose",
+      "chars": 4,
+      "articles": 120,
+      "text": "----",
+      "category": "raw_block"
+    },
+    {
+      "hash": "4B988AE36873294D",
+      "kind": "list",
+      "chars": 30,
+      "articles": 117,
+      "text": "Aliupseeri 11. helmikuuta 1918",
+      "category": "raw_block"
+    },
+    {
+      "hash": "D522FFB13F68F978",
+      "kind": "list",
+      "chars": 23,
+      "articles": 113,
+      "text": "Talvisodan muistomitali",
+      "category": "raw_block"
+    },
+    {
+      "hash": "66CFA553352E174D",
+      "kind": "list",
+      "chars": 20,
+      "articles": 109,
+      "text": "Vapaudenristi 3. lk.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "7BFF06ECB19129BF",
+      "kind": "list",
+      "chars": 114,
+      "articles": 97,
+      "text": "Puolustusministeriön Sotahistoriallisen toimiston julkaisuja IV, Suomen jääkärien elämäkerrasto, WSOY Porvoo 1938.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "9998F63D5B220072",
+      "kind": "list",
+      "chars": 105,
+      "articles": 95,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 ISBN 951-99046-8-9.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "AB90D23F7402359D",
+      "kind": "prose",
+      "chars": 0,
+      "articles": 94,
+      "text": "",
+      "category": "raw_block"
+    },
+    {
+      "hash": "89156A25FDF32238",
+      "kind": "list",
+      "chars": 0,
+      "articles": 93,
+      "text": "",
+      "category": "raw_block"
+    },
+    {
+      "hash": "D94C8A62A3EE063B",
+      "kind": "list",
+      "chars": 32,
+      "articles": 90,
+      "text": "Vapaudenristi 4. lk. miekan kera",
+      "category": "raw_block"
+    },
+    {
+      "hash": "3061230E89FC2FAB",
+      "kind": "list",
+      "chars": 87,
+      "articles": 86,
+      "text": "Sotatieteen Laitoksen Julkaisuja XIV, Suomen jääkärien elämäkerrasto 1975, Vaasa 1975 .",
+      "category": "raw_block"
+    },
+    {
+      "hash": "652ECAAA92F9BEA8",
+      "kind": "list",
+      "chars": 21,
+      "articles": 86,
+      "text": "Vapaudenmitali 1. lk.",
+      "category": "raw_block"
+    },
+    {
+      "hash": "C2B564B3A56DF9DB",
+      "kind": "list",
+      "chars": 45,
+      "articles": 82,
+      "text": "Luettelo Suomen keskiaikaisista kivikirkoista",
+      "category": "raw_block"
+    },
+    {
+      "hash": "5FC9711C77B75767",
+      "kind": "list",
+      "chars": 22,
+      "articles": 81,
+      "text": "Talvisodanmuistomitali",
+      "category": "raw_block"
+    }
+  ]
+}

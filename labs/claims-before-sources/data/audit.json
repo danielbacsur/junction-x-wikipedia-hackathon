@@ -1,0 +1,196 @@
+{
+  "title": "Manual triage of the 15 longest waits",
+  "unit": "candidates",
+  "source": "Manual reading by research agent, 2026-11-14; frozen judgments in audit.py; not an independent human audit",
+  "rows": [
+    {
+      "rank": 1,
+      "page_id": 68679,
+      "slot": 3,
+      "article": "Herman Klaunpoika Fleming",
+      "classification": "later better source for an old true claim",
+      "rationale": "Identical before/after description of Louhisaari architecture; 2025 magazine article added in 2026 to a 2006 lineage. Ordinary retrospective sourcing is plausible; magazine contents and historical truth not independently verified.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=1321285",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23942278",
+      "external_sources": []
+    },
+    {
+      "rank": 2,
+      "page_id": 319982,
+      "slot": 2,
+      "article": "Maria Tschetschulin",
+      "classification": "later better source for an old true claim",
+      "rationale": "Family relationships and occupations retained; removes summer 1852 and changes punctuation. A 2017 biographical retrospective is attached in 2026. Low concern; publisher contents not independently read.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2527505",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=24252727",
+      "external_sources": []
+    },
+    {
+      "rank": 3,
+      "page_id": 41617,
+      "slot": 25,
+      "article": "Esko Seppänen",
+      "classification": "claim was updated with new information",
+      "rationale": "Citation accompanies the newly appended comparison with Jörg Haider. High paragraph overlap hides a new claim; old political-orientation text is not evidence that the new comparison preceded its source.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=210097",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=22664387",
+      "external_sources": []
+    },
+    {
+      "rank": 4,
+      "page_id": 176654,
+      "slot": 1,
+      "article": "Pohjanmaan maanjäristys 1626",
+      "classification": "later better source for an old true claim",
+      "rationale": "Identical text at attachment. University seismology page supports the old earthquake/magnitude/damage account. Its fetched page shows no publication date: template year 2025 is unverified, potentially an update/access-year mistake. Do not present as confirmed later publication.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=1188912",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23375538",
+      "external_sources": [
+        "https://www.helsinki.fi/fi/seismologian-instituutti/maanjaristykset/perustietoa-maanjaristyksista"
+      ]
+    },
+    {
+      "rank": 5,
+      "page_id": 346752,
+      "slot": 4,
+      "article": "Laatokan Karjalan valtaus 1941",
+      "classification": "claim was updated with new information",
+      "rationale": "First sentence is localized from Korpiselkä to Ristikangas northeast of Korpiselkä at attachment. The 2021 book can support that new precision, even though the long paragraph is mostly unchanged.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2782585",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23955923",
+      "external_sources": []
+    },
+    {
+      "rank": 6,
+      "page_id": 335293,
+      "slot": 1,
+      "article": "Pirkko Ikonen",
+      "classification": "claim was updated with new information",
+      "rationale": "The 2026 obituary arrives with a newly added 9 January 2026 death date and present-to-past tense. This is a new event, not evidence of copying a 2007 death claim.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2677624",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23770838",
+      "external_sources": []
+    },
+    {
+      "rank": 7,
+      "page_id": 405795,
+      "slot": 4,
+      "article": "Valter Valli",
+      "classification": "claim was updated with new information",
+      "rationale": "Adds the specific regiment number 126 when citing a 2014 book. Much older battle narrative remains, but citation scope may be the newly specified unit.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=3427930",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23627529",
+      "external_sources": []
+    },
+    {
+      "rank": 8,
+      "page_id": 339293,
+      "slot": 1,
+      "article": "Venäjän kenttälinnoitukset Suomessa ensimmäisen maailmansodan aikana",
+      "classification": "later better source for an old true claim",
+      "rationale": "Word-identical rationale for Russian wartime fortifications; later 2018 history book attached in 2025. Ordinary historical sourcing is plausible; book text not independently verified.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2715110",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23224768",
+      "external_sources": []
+    },
+    {
+      "rank": 9,
+      "page_id": 357960,
+      "slot": 1,
+      "article": "Outokummun rata",
+      "classification": "claim was updated with new information",
+      "rationale": "Changes demolition year from 2004 to 2005, removes the 2000 closure claim, and qualifies opening of the complete route. The 2009 railway reference accompanies factual corrections.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2901023",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=23258029",
+      "external_sources": []
+    },
+    {
+      "rank": 10,
+      "page_id": 37030,
+      "slot": 41,
+      "article": "Suomen ensimmäiset tietokoneet",
+      "classification": "later better source for an old true claim",
+      "rationale": "Unchanged 2005 paragraph includes the sauna-origin anecdote. Archived Sitra article confirms 24 October 2017 and has a source list naming Sarmanto/Tunkelo interviews, 1971/1972 records and older material. Evidence favors a later researched retrospective; direct dependence of this individual anecdote is not fully traced.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=141175",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=21185452",
+      "external_sources": [
+        "https://arkisto.sitra.fi/caset/data-sitra/",
+        "https://arkisto.sitra.fi/artikkelit/tarinoita-tulevaisuudesta-lahdeluettelo/"
+      ]
+    },
+    {
+      "rank": 11,
+      "page_id": 217576,
+      "slot": 5,
+      "article": "Nailonsukkamurhat",
+      "classification": "claim was updated with new information",
+      "rationale": "Adds exact death day/month at attachment; older crime narrative remains. The template says 23 June 2023, accessed 24 June 2023, but attachment is 24 June 2024. Access dates cannot substitute for observed attachment times; source metadata could also contain a typo.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=1544374",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=22471914",
+      "external_sources": []
+    },
+    {
+      "rank": 12,
+      "page_id": 106689,
+      "slot": 4,
+      "article": "Sinikka Hurskainen",
+      "classification": "claim was updated with new information",
+      "rationale": "Changes spouse from secretary general to former secretary general; cited 2014 article announces a successor. Also removes child name. New status update explains why a later source is relevant.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=1618123",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=22382594",
+      "external_sources": []
+    },
+    {
+      "rank": 13,
+      "page_id": 678502,
+      "slot": 1,
+      "article": "Lauri Nurminen",
+      "classification": "later better source for an old true claim",
+      "rationale": "Rephrases last surviving into longest lived while preserving identity/date claim. The dated 2023 association report cites its own anniversary book and describes a grave visit. Evidence favors later retrospective sourcing; does not prove every detail independently.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=6694092",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=24248750",
+      "external_sources": [
+        "https://vapaussodanperinne.yhdistysavain.fi/uutiset/yhdistys-laski-havukukat-viimeisen/"
+      ]
+    },
+    {
+      "rank": 14,
+      "page_id": 221888,
+      "slot": 6,
+      "article": "Laitaatsillan taistelu",
+      "classification": "possible circular sourcing worth a human look",
+      "rationale": "Unchanged, detailed earthwork dimensions and trench account predates a 2015 tourism thesis by eight years. Theseus confirms thesis year; PDF fetch was blocked, so its page 20 and bibliography remain unchecked. A focused provenance check is worthwhile; no evidence that the thesis copied Wikipedia has been established.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=2774891",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=22579810",
+      "external_sources": [
+        "https://www.theseus.fi/handle/10024/99666"
+      ]
+    },
+    {
+      "rank": 15,
+      "page_id": 64466,
+      "slot": 13,
+      "article": "Hietamäki (Inkeri)",
+      "classification": "claim was updated with new information",
+      "rationale": "Changes the historical church village and memorial location from Alakylä to Jälkylä while attaching a 2017 church magazine. This is a substantive location correction despite 93% origin overlap.",
+      "provisional": true,
+      "written_oldid": "https://fi.wikipedia.org/?oldid=834474",
+      "reference_oldid": "https://fi.wikipedia.org/?oldid=21318876",
+      "external_sources": []
+    }
+  ]
+}

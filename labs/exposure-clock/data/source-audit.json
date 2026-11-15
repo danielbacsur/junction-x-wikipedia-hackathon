@@ -1,0 +1,14 @@
+{
+  "title": "Source identity-revert limitations",
+  "unit": "counts",
+  "source": "wtt.edit; sql/source-audit.sql",
+  "rows": [
+    {
+      "max_restore_span": 1106,
+      "spans_beyond_ingest_cap": 0.0,
+      "null_sha_reverts": 285.0,
+      "empty_text_reverts": 34.0,
+      "missing_hash_edits": 483.0
+    }
+  ]
+}

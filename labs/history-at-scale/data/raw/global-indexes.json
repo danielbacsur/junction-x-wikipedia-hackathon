@@ -1,0 +1,794 @@
+{
+ "started": "2026-11-14T14:55:19",
+ "finished": "2026-11-14T14:56:03",
+ "runs": 7,
+ "labels": [
+  {
+   "label": "flat",
+   "table": "lab_history_at_scale.p_flat",
+   "hint": ""
+  },
+  {
+   "label": "idx",
+   "table": "lab_history_at_scale.p_idx",
+   "hint": ""
+  },
+  {
+   "label": "idx_se",
+   "table": "lab_history_at_scale.p_idx",
+   "hint": "FORCE INDEX (se)"
+  },
+  {
+   "label": "idx_es",
+   "table": "lab_history_at_scale.p_idx",
+   "hint": "FORCE INDEX (es)"
+  }
+ ],
+ "records": [
+  {
+   "layout": "flat",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 343.534,
+   "min_ms": 318.319,
+   "max_ms": 395.298,
+   "q1_ms": 335.157,
+   "q3_ms": 379.868,
+   "handler_reads": 2972663,
+   "handler_detail": {
+    "Handler_read_rnd_next": 2972663
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "1425448",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 321.5091507,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 2972662,
+      "r_loops": 1,
+      "r_filtered": 3.082388782,
+      "pages": 30363,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 28.682,
+   "min_ms": 28.462,
+   "max_ms": 30.402,
+   "q1_ms": 28.521,
+   "q3_ms": 29.604,
+   "handler_reads": 257491,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 257490
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "se",
+     "key_len": "7",
+     "rows": "583474",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 27.76109169,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 257490,
+      "r_loops": 1,
+      "r_filtered": 35.58545963,
+      "pages": 918,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_se",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 33.764,
+   "min_ms": 31.029,
+   "max_ms": 34.839,
+   "q1_ms": 32.116,
+   "q3_ms": 33.915,
+   "handler_reads": 257491,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 257490
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "se",
+     "key_len": "7",
+     "rows": "583474",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 36.60856393,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 257490,
+      "r_loops": 1,
+      "r_filtered": 35.58545963,
+      "pages": 895,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_es",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2006-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 351.618,
+   "min_ms": 313.373,
+   "max_ms": 399.523,
+   "q1_ms": 322.332,
+   "q3_ms": 365.198,
+   "handler_reads": 2806802,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 2806801
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "es",
+     "key_len": "7",
+     "rows": "2488083",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 342.2868622,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 2806801,
+      "r_loops": 1,
+      "r_filtered": 3.264534963,
+      "pages": 9835,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2006-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "flat",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2010-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 335.874,
+   "min_ms": 294.515,
+   "max_ms": 482.431,
+   "q1_ms": 307.411,
+   "q3_ms": 382.559,
+   "handler_reads": 2972663,
+   "handler_detail": {
+    "Handler_read_rnd_next": 2972663
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "1425448",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 523.8603948,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 2972662,
+      "r_loops": 1,
+      "r_filtered": 8.870399662,
+      "pages": 30363,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2010-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 130.39,
+   "min_ms": 116.542,
+   "max_ms": 153.851,
+   "q1_ms": 118.291,
+   "q3_ms": 135.447,
+   "handler_reads": 958857,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 958856
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "se",
+     "key_len": "7",
+     "rows": "2180862",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 123.7478181,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 958856,
+      "r_loops": 1,
+      "r_filtered": 27.50016687,
+      "pages": 3289,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_se",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2010-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 106.742,
+   "min_ms": 104.744,
+   "max_ms": 129.242,
+   "q1_ms": 105.47,
+   "q3_ms": 114.647,
+   "handler_reads": 958857,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 958856
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "se",
+     "key_len": "7",
+     "rows": "2180862",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 111.6414267,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 958856,
+      "r_loops": 1,
+      "r_filtered": 27.50016687,
+      "pages": 3266,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_es",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2010-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 300.88,
+   "min_ms": 268.381,
+   "max_ms": 359.202,
+   "q1_ms": 281.07,
+   "q3_ms": 320.546,
+   "handler_reads": 2277494,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 2277493
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "es",
+     "key_len": "7",
+     "rows": "2488083",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 437.0309024,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 2277493,
+      "r_loops": 1,
+      "r_filtered": 11.57794997,
+      "pages": 8010,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2010-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "flat",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 425.261,
+   "min_ms": 334.227,
+   "max_ms": 506.039,
+   "q1_ms": 384.471,
+   "q3_ms": 454.758,
+   "handler_reads": 2972663,
+   "handler_detail": {
+    "Handler_read_rnd_next": 2972663
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ALL",
+     "key": null,
+     "key_len": null,
+     "rows": "1425448",
+     "extra": "Using where"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 461.092088,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ALL",
+      "key": null,
+      "partitions": null,
+      "r_rows": 2972662,
+      "r_loops": 1,
+      "r_filtered": 16.77382091,
+      "pages": 30363,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 177.078,
+   "min_ms": 165.597,
+   "max_ms": 207.794,
+   "q1_ms": 175.536,
+   "q3_ms": 183.915,
+   "handler_reads": 1426703,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 1426702
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "es",
+     "key_len": "7",
+     "rows": "2453500",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 163.1109396,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 1426702,
+      "r_loops": 1,
+      "r_filtered": 34.94976526,
+      "pages": 5147,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_se",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 234.859,
+   "min_ms": 225.942,
+   "max_ms": 249.402,
+   "q1_ms": 230.279,
+   "q3_ms": 239.175,
+   "handler_reads": 2044590,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 2044589
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "se",
+     "key_len": "7",
+     "rows": "2488083",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 260.8122944,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 2044589,
+      "r_loops": 1,
+      "r_filtered": 24.38773758,
+      "pages": 6999,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_es",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "2019-12-31 23:59:59",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 179.231,
+   "min_ms": 165.172,
+   "max_ms": 195.024,
+   "q1_ms": 169.035,
+   "q3_ms": 194.743,
+   "handler_reads": 1426703,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 1426702
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "range",
+     "key": "es",
+     "key_len": "7",
+     "rows": "2453500",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 187.5674741,
+    "tables": [
+     {
+      "table": "p",
+      "access": "range",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 1426702,
+      "r_loops": 1,
+      "r_filtered": 34.94976526,
+      "pages": 5124,
+      "attached": "p.row_end > TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59' and p.row_start <= TIMESTAMP/*WITH LOCAL TIME ZONE*/'2019-12-31 23:59:59'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "flat",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 263.296,
+   "min_ms": 253.038,
+   "max_ms": 371.81,
+   "q1_ms": 263.006,
+   "q3_ms": 269.904,
+   "handler_reads": 2972663,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 2972662
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index",
+     "key": "born_rev",
+     "key_len": "4",
+     "rows": "1425448",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 280.858416,
+    "tables": [
+     {
+      "table": "p",
+      "access": "index",
+      "key": "born_rev",
+      "partitions": null,
+      "r_rows": 2972662,
+      "r_loops": 1,
+      "r_filtered": 23.30941089,
+      "pages": 9738,
+      "attached": "p.row_end = TIMESTAMP'2106-02-07 06:28:15.999999'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 52.884,
+   "min_ms": 51.605,
+   "max_ms": 54.678,
+   "q1_ms": 51.661,
+   "q3_ms": 53.667,
+   "handler_reads": 692911,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 692910
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "es",
+     "key_len": "7",
+     "rows": "1158510",
+     "extra": "Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 52.77549006,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 692910,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 2557,
+      "attached": null,
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_se",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 313.225,
+   "min_ms": 277.778,
+   "max_ms": 388.452,
+   "q1_ms": 285.417,
+   "q3_ms": 378.567,
+   "handler_reads": 2972663,
+   "handler_detail": {
+    "Handler_read_first": 1,
+    "Handler_read_next": 2972662
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "index",
+     "key": "se",
+     "key_len": "14",
+     "rows": "2488083",
+     "extra": "Using where; Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 286.1223154,
+    "tables": [
+     {
+      "table": "p",
+      "access": "index",
+      "key": "se",
+      "partitions": null,
+      "r_rows": 2972662,
+      "r_loops": 1,
+      "r_filtered": 23.30941089,
+      "pages": 10280,
+      "attached": "p.row_end = TIMESTAMP'2106-02-07 06:28:15.999999'",
+      "index_condition": null
+     }
+    ]
+   }
+  },
+  {
+   "layout": "idx_es",
+   "statement": "global",
+   "page": null,
+   "page_id": null,
+   "as_of": "now",
+   "page_rows_all": null,
+   "page_rows_now": null,
+   "rows": 1,
+   "median_ms": 51.882,
+   "min_ms": 48.298,
+   "max_ms": 59.675,
+   "q1_ms": 50.406,
+   "q3_ms": 56.594,
+   "handler_reads": 692911,
+   "handler_detail": {
+    "Handler_read_key": 1,
+    "Handler_read_next": 692910
+   },
+   "plan": [
+    {
+     "table": "p",
+     "partitions": null,
+     "type": "ref",
+     "key": "es",
+     "key_len": "7",
+     "rows": "1158510",
+     "extra": "Using index"
+    }
+   ],
+   "analyze": {
+    "r_total_time_ms": 55.45048431,
+    "tables": [
+     {
+      "table": "p",
+      "access": "ref",
+      "key": "es",
+      "partitions": null,
+      "r_rows": 692910,
+      "r_loops": 1,
+      "r_filtered": 100,
+      "pages": 2557,
+      "attached": null,
+      "index_condition": null
+     }
+    ]
+   }
+  }
+ ]
+}

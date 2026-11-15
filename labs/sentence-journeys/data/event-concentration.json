@@ -1,0 +1,10 @@
+{
+  "title": "event-concentration",
+  "unit": "wordings",
+  "source": "sql/event-concentration.sql",
+  "rows": [
+    {
+      "shared_wordings_in_bulk_events": 1238
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import { diffWords } from "diff";
 
 import { resolvePage } from "./articles.ts";
 import { type Shown, show } from "./sql.ts";
-import { LAST_EDIT, asOf, moment, when } from "./time.ts";
+import { LAST_EDIT, STOOD, asOf, moment, when } from "./time.ts";
 
 export type Change = {
   /** What happened to the paragraph between the two moments. */
@@ -80,10 +80,12 @@ export const compareArticle = async (
             MAX(u.slot) AS slot, MAX(u.born_rev) AS born_rev
      FROM (
        SELECT 'from' AS side, hash, dup, slot, born_rev, ord
-       FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ? WHERE page_id = ?
+       FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ? ${STOOD}
+       WHERE page_id = ?
        UNION ALL
        SELECT 'to', hash, dup, slot, born_rev, ord
-       FROM passage ${asOf(to)} WHERE page_id = ?
+       FROM passage ${asOf(to)} ${STOOD}
+       WHERE page_id = ?
      ) AS u
      JOIN passage_text AS t USING (hash)
      GROUP BY u.hash, u.dup
@@ -106,9 +108,10 @@ export const compareArticle = async (
 
   const [sizes] = await database.query<{ at_from: number; at_to: number }>(
     `SELECT
-       (SELECT COUNT(*) FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ?
+       (SELECT COUNT(*) FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ? ${STOOD}
         WHERE page_id = ?) AS at_from,
-       (SELECT COUNT(*) FROM passage ${asOf(to)} WHERE page_id = ?) AS at_to`,
+       (SELECT COUNT(*) FROM passage ${asOf(to)} ${STOOD}
+        WHERE page_id = ?) AS at_to`,
     [from, page.pageId, ...when(to), page.pageId],
   );
 

@@ -1,0 +1,14 @@
+{
+  "title": "event-summary",
+  "unit": "events",
+  "source": "sql/event-summary.sql",
+  "rows": [
+    {
+      "events": 85,
+      "move_events": 57.0,
+      "copy_events": 27.0,
+      "destinations": 75,
+      "corroborated": 27.0
+    }
+  ]
+}

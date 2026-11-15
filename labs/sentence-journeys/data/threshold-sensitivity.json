@@ -1,0 +1,19 @@
+{
+  "title": "threshold-sensitivity",
+  "unit": "events",
+  "source": "sql/threshold-sensitivity.sql",
+  "rows": [
+    {
+      "threshold": 3,
+      "events": 151
+    },
+    {
+      "threshold": 5,
+      "events": 85
+    },
+    {
+      "threshold": 10,
+      "events": 34
+    }
+  ]
+}

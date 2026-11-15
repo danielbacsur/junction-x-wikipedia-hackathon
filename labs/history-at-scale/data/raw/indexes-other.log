@@ -1,0 +1,25 @@
+wording     small     now        flat       rows=    2 reads=       3 median=     0.53 ms  [0.40, 0.57] key=PRIMARY
+wording     small     now        idx        rows=    2 reads=       3 median=     0.59 ms  [0.45, 2.57] key=PRIMARY
+wording     typical   now        flat       rows=    2 reads=       3 median=     0.43 ms  [0.27, 0.46] key=PRIMARY
+wording     typical   now        idx        rows=    2 reads=       3 median=     0.35 ms  [0.23, 0.48] key=PRIMARY
+wording     p95       now        flat       rows=    5 reads=       6 median=     0.31 ms  [0.28, 0.39] key=PRIMARY
+wording     p95       now        idx        rows=    5 reads=       6 median=     0.45 ms  [0.27, 0.51] key=PRIMARY
+wording     p99       now        flat       rows=   88 reads=     177 median=     0.67 ms  [0.61, 0.84] key=hash,PRIMARY
+wording     p99       now        idx        rows=   88 reads=     177 median=     1.23 ms  [0.66, 2.77] key=hash,PRIMARY
+wording     talvisota now        flat       rows=   28 reads=      29 median=     0.43 ms  [0.37, 0.49] key=PRIMARY
+wording     talvisota now        idx        rows=   28 reads=      29 median=     0.42 ms  [0.38, 0.48] key=PRIMARY
+wording     halonen   now        flat       rows= 1563 reads=    3127 median=     8.09 ms  [6.59, 10.59] key=hash,PRIMARY
+wording     halonen   now        idx        rows= 1563 reads=    3127 median=     8.03 ms  [7.41, 8.78] key=hash,PRIMARY
+wording     largest   now        flat       rows=44797 reads=   44798 median=   182.81 ms  [163.80, 241.48] key=PRIMARY
+wording     largest   now        idx        rows=44797 reads=   89595 median=   224.55 ms  [187.52, 263.27] key=hash,PRIMARY
+search      -         2006-12-31 flat       rows=   19 reads=    1105 median=     1.08 ms  [0.85, 1.44] key=hash
+search      -         2006-12-31 idx        rows=   19 reads=    1105 median=     0.87 ms  [0.84, 1.09] key=hash
+search      -         2012-12-31 flat       rows=   87 reads=     980 median=     1.01 ms  [0.88, 1.09] key=hash
+search      -         2012-12-31 idx        rows=   87 reads=     980 median=     0.93 ms  [0.89, 0.97] key=hash
+search      -         2019-12-31 flat       rows=  131 reads=     863 median=     0.89 ms  [0.86, 1.54] key=hash
+search      -         2019-12-31 idx        rows=  131 reads=     863 median=     1.00 ms  [0.94, 1.05] key=hash
+search      -         2026-09-30 flat       rows=  168 reads=     769 median=     0.96 ms  [0.91, 1.25] key=hash
+search      -         2026-09-30 idx        rows=  168 reads=     769 median=     1.26 ms  [1.07, 2.16] key=hash
+search      -         now        flat       rows=  168 reads=     769 median=     0.93 ms  [0.90, 1.12] key=hash
+search      -         now        idx        rows=  168 reads=     769 median=     0.91 ms  [0.88, 0.96] key=hash
+wrote /Users/danielbacsur/Workspaces/mariadb/labs/history-at-scale/data/raw/indexes-other.json

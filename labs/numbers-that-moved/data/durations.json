@@ -1,0 +1,63 @@
+{
+  "title": "Observed contiguous figure stays; new durations include right censoring",
+  "unit": "days",
+  "source": "wtt; run.py; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "population": "all",
+      "side": "old",
+      "n": 6840,
+      "median_observed_days": 32.1384835,
+      "censored": 0,
+      "bands": {
+        "<1 day": 2303,
+        "1–30 days": 1064,
+        "30–365 days": 1684,
+        "1–5 years": 1319,
+        "5+ years": 470
+      }
+    },
+    {
+      "population": "all",
+      "side": "new",
+      "n": 6840,
+      "median_observed_days": 103.9311115,
+      "censored": 1023,
+      "bands": {
+        "<1 day": 1780,
+        "1–30 days": 879,
+        "30–365 days": 1696,
+        "1–5 years": 1512,
+        "5+ years": 973
+      }
+    },
+    {
+      "population": "clean",
+      "side": "old",
+      "n": 5110,
+      "median_observed_days": 60.094462,
+      "censored": 0,
+      "bands": {
+        "<1 day": 1340,
+        "1–30 days": 864,
+        "30–365 days": 1410,
+        "1–5 years": 1085,
+        "5+ years": 411
+      }
+    },
+    {
+      "population": "clean",
+      "side": "new",
+      "n": 5110,
+      "median_observed_days": 225.2272915,
+      "censored": 903,
+      "bands": {
+        "<1 day": 792,
+        "1–30 days": 692,
+        "30–365 days": 1440,
+        "1–5 years": 1299,
+        "5+ years": 887
+      }
+    }
+  ]
+}

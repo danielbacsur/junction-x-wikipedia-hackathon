@@ -1,0 +1,574 @@
+{
+  "title": "Kaplan–Meier medians (null = not reached)",
+  "unit": "days",
+  "source": "MariaDB wtt; sql/medians.sql; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2004",
+      "n": 2560.0,
+      "deaths": 1196.0,
+      "median_days": null,
+      "max_followup_days": 8308.75936343
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2005",
+      "n": 8014.0,
+      "deaths": 3374.0,
+      "median_days": null,
+      "max_followup_days": 7942.8577662
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2006",
+      "n": 10882.0,
+      "deaths": 4262.0,
+      "median_days": null,
+      "max_followup_days": 7578.35831019
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2007",
+      "n": 18778.0,
+      "deaths": 6940.0,
+      "median_days": null,
+      "max_followup_days": 7213.04883102
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2008",
+      "n": 13116.0,
+      "deaths": 3890.0,
+      "median_days": null,
+      "max_followup_days": 6848.42978009
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2009",
+      "n": 12673.0,
+      "deaths": 4256.0,
+      "median_days": null,
+      "max_followup_days": 6482.425625
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2010",
+      "n": 7466.0,
+      "deaths": 2156.0,
+      "median_days": null,
+      "max_followup_days": 6117.00446759
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2011",
+      "n": 7269.0,
+      "deaths": 1900.0,
+      "median_days": null,
+      "max_followup_days": 5752.11152778
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2012",
+      "n": 7147.0,
+      "deaths": 1651.0,
+      "median_days": null,
+      "max_followup_days": 5387.37179398
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2013",
+      "n": 7687.0,
+      "deaths": 1601.0,
+      "median_days": null,
+      "max_followup_days": 5021.30766204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2014",
+      "n": 7487.0,
+      "deaths": 1396.0,
+      "median_days": null,
+      "max_followup_days": 4656.43900463
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2015",
+      "n": 7842.0,
+      "deaths": 1203.0,
+      "median_days": null,
+      "max_followup_days": 4291.04706019
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2016",
+      "n": 7213.0,
+      "deaths": 992.0,
+      "median_days": null,
+      "max_followup_days": 3926.02959491
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2017",
+      "n": 6880.0,
+      "deaths": 1006.0,
+      "median_days": null,
+      "max_followup_days": 3560.13900463
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2018",
+      "n": 9165.0,
+      "deaths": 3408.0,
+      "median_days": null,
+      "max_followup_days": 3195.40644676
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2019",
+      "n": 5806.0,
+      "deaths": 1054.0,
+      "median_days": null,
+      "max_followup_days": 2830.08082176
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2020",
+      "n": 7382.0,
+      "deaths": 1316.0,
+      "median_days": null,
+      "max_followup_days": 2465.18703704
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2021",
+      "n": 6342.0,
+      "deaths": 644.0,
+      "median_days": null,
+      "max_followup_days": 2099.16612269
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2022",
+      "n": 6954.0,
+      "deaths": 786.0,
+      "median_days": null,
+      "max_followup_days": 1734.35256944
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2023",
+      "n": 5432.0,
+      "deaths": 601.0,
+      "median_days": null,
+      "max_followup_days": 1369.25810185
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "cohort",
+      "grp": "2024",
+      "n": 5801.0,
+      "deaths": 477.0,
+      "median_days": null,
+      "max_followup_days": 1003.76833333
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "editor",
+      "grp": "anonymous",
+      "n": 34131.0,
+      "deaths": 16462.0,
+      "median_days": 2027.77018519,
+      "max_followup_days": 8300.57322917
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "editor",
+      "grp": "hidden_or_missing",
+      "n": 2.0,
+      "deaths": 0.0,
+      "median_days": null,
+      "max_followup_days": 5916.83959491
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "editor",
+      "grp": "named",
+      "n": 147734.0,
+      "deaths": 28478.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "list",
+      "n": 26648.0,
+      "deaths": 6172.0,
+      "median_days": null,
+      "max_followup_days": 8538.9196875
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "kind",
+      "grp": "prose",
+      "n": 181867.0,
+      "deaths": 44940.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "n": 5723.0,
+      "deaths": 1289.0,
+      "median_days": null,
+      "max_followup_days": 8224.99663194
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "n": 83258.0,
+      "deaths": 17137.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "n": 36078.0,
+      "deaths": 4702.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "n": 56808.0,
+      "deaths": 21812.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "overall",
+      "grp": "all",
+      "n": 181867.0,
+      "deaths": 44940.0,
+      "median_days": null,
+      "max_followup_days": 8616.86016204
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2004",
+      "n": 6385.0,
+      "deaths": 5884.0,
+      "median_days": 56.9891088,
+      "max_followup_days": 8267.98818287
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2005",
+      "n": 24790.0,
+      "deaths": 22064.0,
+      "median_days": 40.61096065,
+      "max_followup_days": 7928.00394676
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2006",
+      "n": 46724.0,
+      "deaths": 39536.0,
+      "median_days": 64.46405093,
+      "max_followup_days": 7577.73990741
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2007",
+      "n": 72750.0,
+      "deaths": 61100.0,
+      "median_days": 52.41603009,
+      "max_followup_days": 7212.81212963
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2008",
+      "n": 57040.0,
+      "deaths": 49129.0,
+      "median_days": 115.30400463,
+      "max_followup_days": 6848.20961806
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2009",
+      "n": 54243.0,
+      "deaths": 47296.0,
+      "median_days": 160.3224537,
+      "max_followup_days": 6481.98854167
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2010",
+      "n": 39633.0,
+      "deaths": 34260.0,
+      "median_days": 162.80268519,
+      "max_followup_days": 6117.06690972
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2011",
+      "n": 38680.0,
+      "deaths": 33695.0,
+      "median_days": 170.99976852,
+      "max_followup_days": 5752.30896991
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2012",
+      "n": 37418.0,
+      "deaths": 30342.0,
+      "median_days": 238.79341435,
+      "max_followup_days": 5386.76354167
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2013",
+      "n": 37073.0,
+      "deaths": 28940.0,
+      "median_days": 404.50818287,
+      "max_followup_days": 5021.30766204
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2014",
+      "n": 34552.0,
+      "deaths": 27121.0,
+      "median_days": 392.33505787,
+      "max_followup_days": 4656.43127315
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2015",
+      "n": 38911.0,
+      "deaths": 29287.0,
+      "median_days": 510.16539352,
+      "max_followup_days": 4291.34759259
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2016",
+      "n": 33039.0,
+      "deaths": 24857.0,
+      "median_days": 606.7134838,
+      "max_followup_days": 3926.02959491
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2017",
+      "n": 33828.0,
+      "deaths": 26532.0,
+      "median_days": 426.27684028,
+      "max_followup_days": 3560.13900463
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2018",
+      "n": 34461.0,
+      "deaths": 26349.0,
+      "median_days": 289.09974537,
+      "max_followup_days": 3195.24768519
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2019",
+      "n": 35827.0,
+      "deaths": 26022.0,
+      "median_days": 399.23717593,
+      "max_followup_days": 2830.08146991
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2020",
+      "n": 40984.0,
+      "deaths": 28239.0,
+      "median_days": 479.3109838,
+      "max_followup_days": 2465.24201389
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2021",
+      "n": 34040.0,
+      "deaths": 23674.0,
+      "median_days": 459.39612269,
+      "max_followup_days": 2099.41871528
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2022",
+      "n": 44399.0,
+      "deaths": 27963.0,
+      "median_days": 523.96857639,
+      "max_followup_days": 1734.35256944
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2023",
+      "n": 36555.0,
+      "deaths": 21513.0,
+      "median_days": 522.70959491,
+      "max_followup_days": 1369.38619213
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "cohort",
+      "grp": "2024",
+      "n": 38670.0,
+      "deaths": 19443.0,
+      "median_days": 676.58800926,
+      "max_followup_days": 1004.44357639
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "editor",
+      "grp": "anonymous",
+      "n": 152364.0,
+      "deaths": 120873.0,
+      "median_days": 19.05010417,
+      "max_followup_days": 8267.98818287
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "editor",
+      "grp": "hidden_or_missing",
+      "n": 7.0,
+      "deaths": 5.0,
+      "median_days": 719.80601852,
+      "max_followup_days": 5916.83959491
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "editor",
+      "grp": "named",
+      "n": 723640.0,
+      "deaths": 534180.0,
+      "median_days": 313.22015046,
+      "max_followup_days": 8094.58280093
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "list",
+      "n": 69547.0,
+      "deaths": 42988.0,
+      "median_days": 1039.87545139,
+      "max_followup_days": 8052.12247685
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "kind",
+      "grp": "prose",
+      "n": 876011.0,
+      "deaths": 655058.0,
+      "median_days": 238.10209491,
+      "max_followup_days": 8267.98818287
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "n": 45750.0,
+      "deaths": 36390.0,
+      "median_days": 67.09490741,
+      "max_followup_days": 7191.14197917
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "n": 419683.0,
+      "deaths": 312006.0,
+      "median_days": 273.75769676,
+      "max_followup_days": 8094.58280093
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "n": 250514.0,
+      "deaths": 187891.0,
+      "median_days": 202.03381944,
+      "max_followup_days": 7887.93053241
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "n": 160064.0,
+      "deaths": 118771.0,
+      "median_days": 274.59072917,
+      "max_followup_days": 8267.98818287
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "overall",
+      "grp": "all",
+      "n": 876011.0,
+      "deaths": 655058.0,
+      "median_days": 238.10209491,
+      "max_followup_days": 8267.98818287
+    },
+    {
+      "endpoint": "wording_raw",
+      "dimension": "overall",
+      "grp": "all",
+      "n": 876011.0,
+      "deaths": 742810.0,
+      "median_days": 140.18231481,
+      "max_followup_days": 8267.98818287
+    }
+  ]
+}

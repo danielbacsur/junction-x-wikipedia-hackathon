@@ -1,0 +1,87 @@
+{
+  "title": "Exact wording age-specific hazard",
+  "unit": "deaths per 1000 wording-days",
+  "source": "MariaDB wtt; sql/hazard-by-age.sql; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "from_days": 0.0,
+      "to_days": 0.0417,
+      "entering": 876011,
+      "deaths": 134890.0,
+      "at_risk_days": 31016.96938657,
+      "deaths_per_1000_days": 4348.9097
+    },
+    {
+      "from_days": 0.0417,
+      "to_days": 1.0,
+      "entering": 717623,
+      "deaths": 69031.0,
+      "at_risk_days": 637355.04344907,
+      "deaths_per_1000_days": 108.3085
+    },
+    {
+      "from_days": 1.0,
+      "to_days": 7.0,
+      "entering": 639348,
+      "deaths": 46703.0,
+      "at_risk_days": 3622926.8809838,
+      "deaths_per_1000_days": 12.891
+    },
+    {
+      "from_days": 7.0,
+      "to_days": 30.0,
+      "entering": 583687,
+      "deaths": 43366.0,
+      "at_risk_days": 12707102.91614583,
+      "deaths_per_1000_days": 3.4127
+    },
+    {
+      "from_days": 30.0,
+      "to_days": 90.0,
+      "entering": 529690,
+      "deaths": 51492.0,
+      "at_risk_days": 29658097.97261574,
+      "deaths_per_1000_days": 1.7362
+    },
+    {
+      "from_days": 90.0,
+      "to_days": 365.25,
+      "entering": 465609,
+      "deaths": 107758.0,
+      "at_risk_days": 106911861.12171295,
+      "deaths_per_1000_days": 1.0079
+    },
+    {
+      "from_days": 365.25,
+      "to_days": 1826.25,
+      "entering": 330124,
+      "deaths": 148330.0,
+      "at_risk_days": 285143297.8355324,
+      "deaths_per_1000_days": 0.5202
+    },
+    {
+      "from_days": 1826.25,
+      "to_days": 3652.5,
+      "entering": 112240,
+      "deaths": 41737.0,
+      "at_risk_days": 124911496.69297454,
+      "deaths_per_1000_days": 0.3341
+    },
+    {
+      "from_days": 3652.5,
+      "to_days": 7305.0,
+      "entering": 38364,
+      "deaths": 11743.0,
+      "at_risk_days": 48258904.85819444,
+      "deaths_per_1000_days": 0.2433
+    },
+    {
+      "from_days": 7305.0,
+      "to_days": 36525.0,
+      "entering": 428,
+      "deaths": 8.0,
+      "at_risk_days": 90245.81146991,
+      "deaths_per_1000_days": 0.0886
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Current parsed publication-year gap quantiles",
+  "unit": "years",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; publication-quantiles",
+  "rows": [
+    {
+      "n": 48458,
+      "p25": -28.0,
+      "median": -5.0,
+      "p75": 0.0
+    }
+  ]
+}

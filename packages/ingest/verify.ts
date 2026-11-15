@@ -18,7 +18,7 @@ export const wikipediaSha1 = (hex: string) =>
 export const REBUILD = `
   SELECT GROUP_CONCAT(CONCAT(REPEAT('\\n', p.gap), t.wikitext)
                       ORDER BY p.ord SEPARATOR '\\n')
-  FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ? AS p
+  FROM passage FOR SYSTEM_TIME AS OF TIMESTAMP ? AS p FORCE INDEX (stood)
   JOIN passage_text AS t USING (hash)
   WHERE p.page_id = ?`;
 

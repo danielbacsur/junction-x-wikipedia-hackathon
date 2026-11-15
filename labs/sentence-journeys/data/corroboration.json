@@ -1,0 +1,12 @@
+{
+  "title": "corroboration",
+  "unit": "events",
+  "source": "sql/corroboration.sql",
+  "rows": [
+    {
+      "events": 85,
+      "destination_comment_matches": 28.0,
+      "either_comment_matches": 44.0
+    }
+  ]
+}

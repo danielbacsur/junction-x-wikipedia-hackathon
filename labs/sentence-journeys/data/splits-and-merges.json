@@ -1,0 +1,761 @@
+{
+  "title": "Thirty largest exact-text transfer candidates",
+  "unit": "paragraphs",
+  "source": "sql/splits-and-merges.sql; sql/removal-details.sql",
+  "rows": [
+    {
+      "source": "Sortovuodet",
+      "destination": "Ensimmäinen sortokausi",
+      "src": 11113,
+      "dst": 137930,
+      "at": "2009-03-07T17:24:50",
+      "dst_rev": 6377012.0,
+      "paragraphs": 86,
+      "moved": 86.0,
+      "retained": 0.0,
+      "editor": "Kahkonen",
+      "editor_type": "named",
+      "comment": "siirto tänne",
+      "link": "https://fi.wikipedia.org/?oldid=6377012",
+      "source_removal_edits": [
+        {
+          "src": 11113,
+          "dst": 137930,
+          "dst_rev": 6377012.0,
+          "src_end": "2009-03-07T17:25:04",
+          "rev_id": 6377014,
+          "user": "Kahkonen",
+          "comment": "toinen omaansa myös"
+        }
+      ]
+    },
+    {
+      "source": "Mäkiluoto",
+      "destination": "Mäkiluodon historia",
+      "src": 57389,
+      "dst": 1482772,
+      "at": "2018-11-16T21:37:52",
+      "dst_rev": 17713010.0,
+      "paragraphs": 77,
+      "moved": 0.0,
+      "retained": 77.0,
+      "editor": "Msaynevirta",
+      "editor_type": "named",
+      "comment": "Ak: Uusi sivu: '''Mäkiluoto''' ({{k-sv|Makilo}}) on noin kuusi kilometriä [[Porkkalanniemi|Porkkalanniemestä]] lounaaseen [[Suomenlahti|Suomenlahdella]] sijaitseva kallioinen ulkosaari, joka o...",
+      "link": "https://fi.wikipedia.org/?oldid=17713010",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Artjärvi",
+      "destination": "Artjärven historia",
+      "src": 8377,
+      "dst": 1283062,
+      "at": "2015-09-21T12:10:32",
+      "dst_rev": 15227165.0,
+      "paragraphs": 74,
+      "moved": 74.0,
+      "retained": 0.0,
+      "editor": "Raksa123",
+      "editor_type": "named",
+      "comment": "Siirretty pitkä ja lähdeviitteetön osio omaksi artikkelista sivulta [[Artjärvi]]",
+      "link": "https://fi.wikipedia.org/?oldid=15227165",
+      "source_removal_edits": [
+        {
+          "src": 8377,
+          "dst": 1283062,
+          "dst_rev": 15227165.0,
+          "src_end": "2015-09-21T12:13:45",
+          "rev_id": 15227169,
+          "user": "Raksa123",
+          "comment": "Siirretty pitkä ja lähdeviitteetön osio artikkeliksi [[Artjärven historia]]"
+        }
+      ]
+    },
+    {
+      "source": "Koronaviruspandemia Suomessa",
+      "destination": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+      "src": 1562418,
+      "dst": 1577934,
+      "at": "2020-05-20T07:42:26",
+      "dst_rev": 18936402.0,
+      "paragraphs": 53,
+      "moved": 0.0,
+      "retained": 53.0,
+      "editor": "87.95.219.17",
+      "editor_type": "ip",
+      "comment": "tekstin siirto uuteen artikkelinn",
+      "link": "https://fi.wikipedia.org/?oldid=18936402",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Talvisota",
+      "destination": "Talvisodan tausta",
+      "src": 1256,
+      "dst": 727489,
+      "at": "2009-09-18T17:49:01",
+      "dst_rev": 7340849.0,
+      "paragraphs": 49,
+      "moved": 47.0,
+      "retained": 2.0,
+      "editor": "Peltimikko",
+      "editor_type": "named",
+      "comment": "Ak: Uusi sivu: [[File:Paasikivi october 1939 kajander hakkila.jpg|thumb|right|250px|Suomen neuvottelija [[Juho Kusti Paasikivi|J.K. Paasikivi]] lähdössä [[Moskova]]n neuvotteluihin 9. lokakuuta 1...",
+      "link": "https://fi.wikipedia.org/?oldid=7340849",
+      "source_removal_edits": [
+        {
+          "src": 1256,
+          "dst": 727489,
+          "dst_rev": 7340849.0,
+          "src_end": "2009-09-18T18:34:31",
+          "rev_id": 7341047,
+          "user": "Peltimikko",
+          "comment": "Materiaali siirretty sellaisenaan omaksi artikkeliksi . Lisäksi lyhennetty reilusti."
+        }
+      ]
+    },
+    {
+      "source": "Sortovuodet",
+      "destination": "Toinen sortokausi",
+      "src": 11113,
+      "dst": 137931,
+      "at": "2009-03-07T09:11:57",
+      "dst_rev": 6374467.0,
+      "paragraphs": 48,
+      "moved": 48.0,
+      "retained": 0.0,
+      "editor": "Anna O",
+      "editor_type": "named",
+      "comment": "artikkelin jakaminen kahteen osaan.",
+      "link": "https://fi.wikipedia.org/?oldid=6374467",
+      "source_removal_edits": [
+        {
+          "src": 11113,
+          "dst": 137931,
+          "dst_rev": 6374467.0,
+          "src_end": "2009-03-07T09:08:26",
+          "rev_id": 6374454,
+          "user": "Anna O",
+          "comment": "Artikkelin jakaminen kahteen osaan"
+        }
+      ]
+    },
+    {
+      "source": "Lestadiolaisuus",
+      "destination": "Lestadiolaisuuden historia",
+      "src": 5759,
+      "dst": 1842966,
+      "at": "2025-03-06T19:59:13",
+      "dst_rev": 23092617.0,
+      "paragraphs": 41,
+      "moved": 0.0,
+      "retained": 41.0,
+      "editor": "Weisself",
+      "editor_type": "named",
+      "comment": "Siirto artikkelista Lestadiolaisuus",
+      "link": "https://fi.wikipedia.org/?oldid=23092617",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Lestadiolaisuus",
+      "destination": "Lestadiolaisuuteen liittyvät kiistat",
+      "src": 5759,
+      "dst": 227799,
+      "at": "2007-08-09T11:30:29",
+      "dst_rev": 3289457.0,
+      "paragraphs": 36,
+      "moved": 36.0,
+      "retained": 0.0,
+      "editor": "Mattiasmeikäläinen",
+      "editor_type": "named",
+      "comment": "--> Naiset sananjulistajina lestadiolaisuudessa 1800-luvulla",
+      "link": "https://fi.wikipedia.org/?oldid=3289457",
+      "source_removal_edits": [
+        {
+          "src": 5759,
+          "dst": 227799,
+          "dst_rev": 3289457.0,
+          "src_end": "2007-08-09T11:28:29",
+          "rev_id": 3289450,
+          "user": "Mattiasmeikäläinen",
+          "comment": "--> Siirrettiin kappale \"Naiset sananjulistajina lestadiolaisuudessa\" sivulle \"Lestadiolaisuuden kritiikki\""
+        }
+      ]
+    },
+    {
+      "source": "Lestadiolaisuus",
+      "destination": "Lestadiolaisuuden historia",
+      "src": 5759,
+      "dst": 1842966,
+      "at": "2025-03-06T21:37:07",
+      "dst_rev": 23092866.0,
+      "paragraphs": 36,
+      "moved": 36.0,
+      "retained": 0.0,
+      "editor": "Weisself",
+      "editor_type": "named",
+      "comment": "Hajaannusten siirto Lestadiolaisuus-artikkelista",
+      "link": "https://fi.wikipedia.org/?oldid=23092866",
+      "source_removal_edits": [
+        {
+          "src": 5759,
+          "dst": 1842966,
+          "dst_rev": 23092866.0,
+          "src_end": "2025-03-06T21:36:36",
+          "rev_id": 23092865,
+          "user": "Weisself",
+          "comment": "/* Hajaannukset */ Hajaannusten siirto osaksi kirkkohistoriallista Lestadiolaisuuden historia-artikkelia"
+        }
+      ]
+    },
+    {
+      "source": "Ahtium",
+      "destination": "Talvivaaran kaivos",
+      "src": 385579,
+      "dst": 996256,
+      "at": "2017-08-07T11:14:00",
+      "dst_rev": 16672034.0,
+      "paragraphs": 34,
+      "moved": 34.0,
+      "retained": 0.0,
+      "editor": "Wähäwiisas",
+      "editor_type": "named",
+      "comment": "Vesi- ja ympäristöongelmat siirretty yhtiöartikkelista Talvivaara",
+      "link": "https://fi.wikipedia.org/?oldid=16672034",
+      "source_removal_edits": [
+        {
+          "src": 385579,
+          "dst": 996256,
+          "dst_rev": 16672034.0,
+          "src_end": "2017-08-07T11:14:05",
+          "rev_id": 16672035,
+          "user": "Wähäwiisas",
+          "comment": "/* Vesi- ja ympäristöongelmat */ Siirretty artikkeliin Talvivaaran kaivos"
+        }
+      ]
+    },
+    {
+      "source": "Terrorismi Suomessa",
+      "destination": "Lahden uusnatsiterroristit",
+      "src": 1401989,
+      "dst": 1775140,
+      "at": "2023-11-01T15:58:48",
+      "dst_rev": 21959770.0,
+      "paragraphs": 25,
+      "moved": 25.0,
+      "retained": 0.0,
+      "editor": "Inehmo",
+      "editor_type": "named",
+      "comment": "Tulkoon artikkeli!",
+      "link": "https://fi.wikipedia.org/?oldid=21959770",
+      "source_removal_edits": [
+        {
+          "src": 1401989,
+          "dst": 1775140,
+          "dst_rev": 21959770.0,
+          "src_end": "2023-11-01T16:55:31",
+          "rev_id": 21959868,
+          "user": "Inehmo",
+          "comment": "/* Lahden uusnatsiterroristit */ Siirtyy omaan artikkeliinsa."
+        }
+      ]
+    },
+    {
+      "source": "HL Kuru",
+      "destination": "HL Kurun uppoaminen",
+      "src": 58266,
+      "dst": 1351948,
+      "at": "2016-11-01T21:13:23",
+      "dst_rev": 16040113.0,
+      "paragraphs": 24,
+      "moved": 23.0,
+      "retained": 1.0,
+      "editor": "Aulis Eskola",
+      "editor_type": "named",
+      "comment": "Kurun uppoamisesta oma artikkeli, materiaali tuotu artikkelista [[HL Kuru]]",
+      "link": "https://fi.wikipedia.org/?oldid=16040113",
+      "source_removal_edits": [
+        {
+          "src": 58266,
+          "dst": 1351948,
+          "dst_rev": 16040113.0,
+          "src_end": "2016-11-01T21:12:44",
+          "rev_id": 16040110,
+          "user": "Aulis Eskola",
+          "comment": "Uppoaminen toiseen artikkeliin - tässä vain pääkohdat onnettomuudesta"
+        }
+      ]
+    },
+    {
+      "source": "Saloinen",
+      "destination": "Saloisten historia",
+      "src": 69844,
+      "dst": 545814,
+      "at": "2008-07-03T12:01:28",
+      "dst_rev": 5047933.0,
+      "paragraphs": 22,
+      "moved": 21.0,
+      "retained": 1.0,
+      "editor": "130.234.68.211",
+      "editor_type": "ip",
+      "comment": "Ak: Uusi sivu: '''Saloinen''' eli '''Salo''' on yksi Pohjanmaan vanhoista emäpitäjistä. Salo tarkoittaan isoa saarta, nimensä pitäjä sai siitä että seurakunnan perustamisaikoihin vanhimmat k...",
+      "link": "https://fi.wikipedia.org/?oldid=5047933",
+      "source_removal_edits": [
+        {
+          "src": 69844,
+          "dst": 545814,
+          "dst_rev": 5047933.0,
+          "src_end": "2008-07-03T12:04:37",
+          "rev_id": 5047950,
+          "user": "130.234.68.211",
+          "comment": "/* Historia */ lyhentelyä"
+        },
+        {
+          "src": 69844,
+          "dst": 545814,
+          "dst_rev": 5047933.0,
+          "src_end": "2008-07-03T12:06:48",
+          "rev_id": 5047960,
+          "user": "130.234.68.211",
+          "comment": "/* Historia */"
+        },
+        {
+          "src": 69844,
+          "dst": 545814,
+          "dst_rev": 5047933.0,
+          "src_end": "2008-07-03T12:34:19",
+          "rev_id": 5048108,
+          "user": "130.234.68.211",
+          "comment": "/* Historia */"
+        }
+      ]
+    },
+    {
+      "source": "Sotatalous Suomessa toisen maailmansodan aikana",
+      "destination": "Sotatalous Suomessa talvisodan aikana",
+      "src": 962165,
+      "dst": 963794,
+      "at": "2011-09-23T16:06:08",
+      "dst_rev": 10709167.0,
+      "paragraphs": 22,
+      "moved": 0.0,
+      "retained": 22.0,
+      "editor": "Janis",
+      "editor_type": "named",
+      "comment": "irroitettu toisesta artikkelista ns. pullataikina-efektin vuoksi",
+      "link": "https://fi.wikipedia.org/?oldid=10709167",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Laivalatomus",
+      "destination": "Luettelo laivalatomuksista",
+      "src": 1080703,
+      "dst": 1153467,
+      "at": "2014-02-22T13:03:40",
+      "dst_rev": 13880451.0,
+      "paragraphs": 20,
+      "moved": 20.0,
+      "retained": 0.0,
+      "editor": "Tanár",
+      "editor_type": "named",
+      "comment": "siirretään tämä laivalatomus-artikkelista omaksi luettelokseen",
+      "link": "https://fi.wikipedia.org/?oldid=13880451",
+      "source_removal_edits": [
+        {
+          "src": 1080703,
+          "dst": 1153467,
+          "dst_rev": 13880451.0,
+          "src_end": "2014-02-22T13:14:43",
+          "rev_id": 13880490,
+          "user": "Tanár",
+          "comment": "loppupätkä luetteloon"
+        }
+      ]
+    },
+    {
+      "source": "Koronaviruspandemia Suomessa",
+      "destination": "Suomen koronaviruspandemian aikajana",
+      "src": 1562418,
+      "dst": 1577657,
+      "at": "2020-05-18T13:17:27",
+      "dst_rev": 18933041.0,
+      "paragraphs": 20,
+      "moved": 20.0,
+      "retained": 0.0,
+      "editor": "87.95.175.6",
+      "editor_type": "ip",
+      "comment": "tekstin siirtoa uuteen artikkeliin",
+      "link": "https://fi.wikipedia.org/?oldid=18933041",
+      "source_removal_edits": [
+        {
+          "src": 1562418,
+          "dst": 1577657,
+          "dst_rev": 18933041.0,
+          "src_end": "2020-05-18T13:31:12",
+          "rev_id": 18933113,
+          "user": "87.95.175.6",
+          "comment": "/* 1. huhtikuuta alkaen */  Taulukon korjaus, muokkausta"
+        },
+        {
+          "src": 1562418,
+          "dst": 1577657,
+          "dst_rev": 18933041.0,
+          "src_end": "2020-05-18T14:08:25",
+          "rev_id": 18933212,
+          "user": "87.95.175.6",
+          "comment": "tekstin järkeistämistä"
+        }
+      ]
+    },
+    {
+      "source": "Koronaviruspandemia Suomessa",
+      "destination": "Suomen koronavirusepidemiaa ennustavat mallit",
+      "src": 1562418,
+      "dst": 1577930,
+      "at": "2020-05-20T07:25:05",
+      "dst_rev": 18936374.0,
+      "paragraphs": 19,
+      "moved": 0.0,
+      "retained": 19.0,
+      "editor": "87.95.219.17",
+      "editor_type": "ip",
+      "comment": "Artikkelin perustaminen",
+      "link": "https://fi.wikipedia.org/?oldid=18936374",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Sininen eduskuntaryhmä",
+      "destination": "Perussuomalaisten puoluekokous 2017",
+      "src": 1389479,
+      "dst": 1390025,
+      "at": "2017-06-17T14:51:04",
+      "dst_rev": 16553523.0,
+      "paragraphs": 18,
+      "moved": 18.0,
+      "retained": 0.0,
+      "editor": "J. Sketter",
+      "editor_type": "named",
+      "comment": "Pääartikkeliksi",
+      "link": "https://fi.wikipedia.org/?oldid=16553523",
+      "source_removal_edits": [
+        {
+          "src": 1389479,
+          "dst": 1390025,
+          "dst_rev": 16553523.0,
+          "src_end": "2017-06-17T15:04:54",
+          "rev_id": 16553536,
+          "user": "J. Sketter",
+          "comment": "uusi päärtikkeli luotu, vähennetään tästä"
+        },
+        {
+          "src": 1389479,
+          "dst": 1390025,
+          "dst_rev": 16553523.0,
+          "src_end": "2017-06-17T15:30:27",
+          "rev_id": 16553559,
+          "user": "J. Sketter",
+          "comment": null
+        },
+        {
+          "src": 1389479,
+          "dst": 1390025,
+          "dst_rev": 16553523.0,
+          "src_end": "2017-06-17T15:38:08",
+          "rev_id": 16553567,
+          "user": "J. Sketter",
+          "comment": "osion lähde"
+        }
+      ]
+    },
+    {
+      "source": "Talvisota",
+      "destination": "Talvisodan ulkomainen apu",
+      "src": 1256,
+      "dst": 756035,
+      "at": "2009-12-04T22:24:57",
+      "dst_rev": 7684707.0,
+      "paragraphs": 17,
+      "moved": 16.0,
+      "retained": 1.0,
+      "editor": "Peltimikko",
+      "editor_type": "named",
+      "comment": "Ak: Uusi sivu: [[Tiedosto:Imre Kemeri Nagy and Oscar Enckell.png|thumb|right|250px|Kenraaliluutnantti [[Oscar Enckell]] suoritti unkarilaisten vapaaehtoisten lähtötarkastuksen.]] '''Talvisodan ulk...",
+      "link": "https://fi.wikipedia.org/?oldid=7684707",
+      "source_removal_edits": [
+        {
+          "src": 1256,
+          "dst": 756035,
+          "dst_rev": 7684707.0,
+          "src_end": "2009-12-04T22:32:03",
+          "rev_id": 7684721,
+          "user": "Peltimikko",
+          "comment": "radikaali lyhentäminen ja asian siirtäminen omaksi ala-artikkelikseen"
+        }
+      ]
+    },
+    {
+      "source": "Helsingin Vesi",
+      "destination": "Helsingin seudun ympäristöpalvelut",
+      "src": 309050,
+      "dst": 747121,
+      "at": "2009-12-23T17:42:17",
+      "dst_rev": 7766415.0,
+      "paragraphs": 16,
+      "moved": 0.0,
+      "retained": 16.0,
+      "editor": "August-54",
+      "editor_type": "named",
+      "comment": null,
+      "link": "https://fi.wikipedia.org/?oldid=7766415",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+      "destination": "Suomen koronavirusstrategia",
+      "src": 1577934,
+      "dst": 1582912,
+      "at": "2020-06-19T07:39:39",
+      "dst_rev": 18996712.0,
+      "paragraphs": 16,
+      "moved": 2.0,
+      "retained": 14.0,
+      "editor": "87.95.157.224",
+      "editor_type": "ip",
+      "comment": "Artikkelin perustaminen",
+      "link": "https://fi.wikipedia.org/?oldid=18996712",
+      "source_removal_edits": [
+        {
+          "src": 1577934,
+          "dst": 1582912,
+          "dst_rev": 18996712.0,
+          "src_end": "2020-06-19T08:28:35",
+          "rev_id": 18996781,
+          "user": "87.95.157.224",
+          "comment": "/* Suomen strategia ja kritiikki */"
+        },
+        {
+          "src": 1577934,
+          "dst": 1582912,
+          "dst_rev": 18996712.0,
+          "src_end": "2020-06-19T08:30:47",
+          "rev_id": 18996789,
+          "user": "87.95.157.224",
+          "comment": "/* Suomen strategia ja kritiikki */"
+        }
+      ]
+    },
+    {
+      "source": "Kakskerta",
+      "destination": "Kakskerta (kunta)",
+      "src": 64385,
+      "dst": 1921209,
+      "at": "2026-09-18T07:24:11",
+      "dst_rev": 24246623.0,
+      "paragraphs": 16,
+      "moved": 6.0,
+      "retained": 10.0,
+      "editor": "Lax",
+      "editor_type": "named",
+      "comment": "Artikkelin [[Kakskerta]] sisällön kopiointi saari- ja kunta-artikkelien erottamisen aluksi (kts. [[Keskustelu:Kakskerta]]).",
+      "link": "https://fi.wikipedia.org/?oldid=24246623",
+      "source_removal_edits": [
+        {
+          "src": 64385,
+          "dst": 1921209,
+          "dst_rev": 24246623.0,
+          "src_end": "2026-09-18T07:46:01",
+          "rev_id": 24246656,
+          "user": "Lax",
+          "comment": "Karsittu pikaisesti saareen ja kaupunginosaan liittymätöntä, jota on siirretty uuteen artikkeliin [[Kakskerta (kunta)]]."
+        }
+      ]
+    },
+    {
+      "source": "Äärioikeisto Suomessa (kirja)",
+      "destination": "Jyväskylän kirjastopuukotus",
+      "src": 1072791,
+      "dst": 1073024,
+      "at": "2013-02-01T11:38:56",
+      "dst_rev": 12646457.0,
+      "paragraphs": 15,
+      "moved": 15.0,
+      "retained": 0.0,
+      "editor": "Thi",
+      "editor_type": "named",
+      "comment": "Ak: Uusi sivu: [[Kuva:JyväskyläCityLibrary.jpg|thumb|Jyväskylän pääkirjasto- ja kansalaisopistontalo.]] '''Puukotusvälikohtaus Jyväskylän kaupunginkirjastossa''' tapahtui 30. tammikuut...",
+      "link": "https://fi.wikipedia.org/?oldid=12646457",
+      "source_removal_edits": [
+        {
+          "src": 1072791,
+          "dst": 1073024,
+          "dst_rev": 12646457.0,
+          "src_end": "2013-02-01T11:38:49",
+          "rev_id": 12646456,
+          "user": "Thi",
+          "comment": "{{Pääartikkeli|[[Puukotusvälikohtaus Jyväskylän kaupunginkirjastossa]]}}, jonne siirto"
+        }
+      ]
+    },
+    {
+      "source": "Valmet",
+      "destination": "Valmetin historia",
+      "src": 11392,
+      "dst": 1446907,
+      "at": "2018-04-21T05:24:03",
+      "dst_rev": 17252112.0,
+      "paragraphs": 15,
+      "moved": 13.0,
+      "retained": 2.0,
+      "editor": "Jjanhone",
+      "editor_type": "named",
+      "comment": "siirretään Valmet-artikkelin historia omaksi artikkelikseen",
+      "link": "https://fi.wikipedia.org/?oldid=17252112",
+      "source_removal_edits": [
+        {
+          "src": 11392,
+          "dst": 1446907,
+          "dst_rev": 17252112.0,
+          "src_end": "2018-04-21T05:34:26",
+          "rev_id": 17252121,
+          "user": "Jjanhone",
+          "comment": "/* Historia */"
+        }
+      ]
+    },
+    {
+      "source": "Ahlstrom (entinen yritys)",
+      "destination": "Ahlstrom",
+      "src": 154753,
+      "dst": 1272394,
+      "at": "2018-08-12T01:23:47",
+      "dst_rev": 17494631.0,
+      "paragraphs": 14,
+      "moved": 0.0,
+      "retained": 14.0,
+      "editor": "J. Sketter",
+      "editor_type": "named",
+      "comment": "Vaikka onkin osin lähteetöntä, siirretään tänne asiaankuuluva tieto artikkelista Ahlström. Munksjöstä ei ole ollut artikkelia, mutta ruotsinkielinen löytyy lähtökohdaksi -> AM",
+      "link": "https://fi.wikipedia.org/?oldid=17494631",
+      "source_removal_edits": []
+    },
+    {
+      "source": "Viikingit",
+      "destination": "Viikinkiaika",
+      "src": 1302,
+      "dst": 67110,
+      "at": "2005-09-20T21:42:51",
+      "dst_rev": 433491.0,
+      "paragraphs": 12,
+      "moved": 12.0,
+      "retained": 0.0,
+      "editor": "Rdnk",
+      "editor_type": "named",
+      "comment": "iso klöntti tekstiä siirretty sivulta viikingit",
+      "link": "https://fi.wikipedia.org/?oldid=433491",
+      "source_removal_edits": [
+        {
+          "src": 1302,
+          "dst": 67110,
+          "dst_rev": 433491.0,
+          "src_end": "2005-09-20T21:48:25",
+          "rev_id": 433495,
+          "user": "Rdnk",
+          "comment": "asutus ja retket siirretty pääartikkeliin viikinkiaika"
+        }
+      ]
+    },
+    {
+      "source": "Karjalaiset (heimo)",
+      "destination": "Karjalan historia",
+      "src": 35351,
+      "dst": 138007,
+      "at": "2006-03-06T14:13:03",
+      "dst_rev": 864704.0,
+      "paragraphs": 12,
+      "moved": 12.0,
+      "retained": 0.0,
+      "editor": "217.30.179.130",
+      "editor_type": "ip",
+      "comment": null,
+      "link": "https://fi.wikipedia.org/?oldid=864704",
+      "source_removal_edits": [
+        {
+          "src": 35351,
+          "dst": 138007,
+          "dst_rev": 864704.0,
+          "src_end": "2006-03-06T14:12:23",
+          "rev_id": 864698,
+          "user": "217.30.179.130",
+          "comment": "siirto erilliseen Karjalan historia -artikkeliin"
+        }
+      ]
+    },
+    {
+      "source": "Kalevala",
+      "destination": "Kalevalainen runous",
+      "src": 498,
+      "dst": 19873,
+      "at": "2006-03-11T12:43:34",
+      "dst_rev": 883119.0,
+      "paragraphs": 12,
+      "moved": 12.0,
+      "retained": 0.0,
+      "editor": "Tuohirulla",
+      "editor_type": "named",
+      "comment": null,
+      "link": "https://fi.wikipedia.org/?oldid=883119",
+      "source_removal_edits": [
+        {
+          "src": 498,
+          "dst": 19873,
+          "dst_rev": 883119.0,
+          "src_end": "2006-03-11T12:38:13",
+          "rev_id": 883074,
+          "user": "Tuohirulla",
+          "comment": "kansanruno-referaatti pois ja siirretään [[kalevalainen runous]]-artikkeliin"
+        }
+      ]
+    },
+    {
+      "source": "Suomen sisällissota",
+      "destination": "Suomen sisällissodan nimet",
+      "src": 1150,
+      "dst": 250972,
+      "at": "2006-11-05T07:43:36",
+      "dst_rev": 1849954.0,
+      "paragraphs": 11,
+      "moved": 11.0,
+      "retained": 0.0,
+      "editor": "Ilummeen",
+      "editor_type": "named",
+      "comment": "Sisällissodan nimille oma linkkisivu",
+      "link": "https://fi.wikipedia.org/?oldid=1849954",
+      "source_removal_edits": [
+        {
+          "src": 1150,
+          "dst": 250972,
+          "dst_rev": 1849954.0,
+          "src_end": "2006-11-05T08:07:20",
+          "rev_id": 1850027,
+          "user": "Ilummeen",
+          "comment": "Sisällissodan nimet-osio poistettu pääartikkelista ja nimille oma linkkisivu"
+        }
+      ]
+    },
+    {
+      "source": "Saamelaiset",
+      "destination": "Saamelaisten historia",
+      "src": 7283,
+      "dst": 997401,
+      "at": "2012-02-21T14:18:29",
+      "dst_rev": 11299541.0,
+      "paragraphs": 11,
+      "moved": 0.0,
+      "retained": 11.0,
+      "editor": "Thi",
+      "editor_type": "named",
+      "comment": "Artikkelista [[saamelaiset]]",
+      "link": "https://fi.wikipedia.org/?oldid=11299541",
+      "source_removal_edits": []
+    }
+  ]
+}

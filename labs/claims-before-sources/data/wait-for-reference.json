@@ -1,0 +1,175 @@
+{
+  "title": "Time to first inline reference among current referenced paragraphs",
+  "unit": "days",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; wait-for-reference",
+  "rows": [
+    {
+      "year": 2003,
+      "paragraphs": 38,
+      "p25": 2138.52815,
+      "median": 3304.5821,
+      "p75": 4309.1357
+    },
+    {
+      "year": 2004,
+      "paragraphs": 738,
+      "p25": 1371.89495,
+      "median": 2598.14475,
+      "p75": 4218.3793
+    },
+    {
+      "year": 2005,
+      "paragraphs": 2119,
+      "p25": 1268.44725,
+      "median": 2726.3553,
+      "p75": 4194.35075
+    },
+    {
+      "year": 2006,
+      "paragraphs": 2748,
+      "p25": 474.981125,
+      "median": 1790.84525,
+      "p75": 3743.06465
+    },
+    {
+      "year": 2007,
+      "paragraphs": 5103,
+      "p25": 0.0,
+      "median": 664.291,
+      "p75": 3040.71515
+    },
+    {
+      "year": 2008,
+      "paragraphs": 6131,
+      "p25": 0.0,
+      "median": 297.1549,
+      "p75": 561.3772
+    },
+    {
+      "year": 2009,
+      "paragraphs": 5955,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 242.1074
+    },
+    {
+      "year": 2010,
+      "paragraphs": 3817,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2011,
+      "paragraphs": 3812,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.001725
+    },
+    {
+      "year": 2012,
+      "paragraphs": 3866,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2013,
+      "paragraphs": 4566,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2014,
+      "paragraphs": 4732,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2015,
+      "paragraphs": 4337,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2016,
+      "paragraphs": 5379,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2017,
+      "paragraphs": 4909,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2018,
+      "paragraphs": 4802,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2019,
+      "paragraphs": 3993,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2020,
+      "paragraphs": 5286,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2021,
+      "paragraphs": 5028,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2022,
+      "paragraphs": 4863,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2023,
+      "paragraphs": 4293,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2024,
+      "paragraphs": 4775,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2025,
+      "paragraphs": 4199,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    },
+    {
+      "year": 2026,
+      "paragraphs": 3926,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0
+    }
+  ]
+}

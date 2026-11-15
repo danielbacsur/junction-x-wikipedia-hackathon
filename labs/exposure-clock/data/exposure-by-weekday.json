@@ -1,0 +1,56 @@
+{
+  "title": "Anonymous nonself short-local undo exposure by Finnish local weekday",
+  "unit": "seconds; fractions; weekday 0=Monday",
+  "source": "wtt.edit; sql/exposure-by-weekday.sql",
+  "rows": [
+    {
+      "local_weekday": 0,
+      "n": 2867,
+      "median_seconds": 144.0,
+      "p90_seconds": 13243.8,
+      "within_hour": 0.8375
+    },
+    {
+      "local_weekday": 1,
+      "n": 2709,
+      "median_seconds": 164.0,
+      "p90_seconds": 14959.8,
+      "within_hour": 0.8331
+    },
+    {
+      "local_weekday": 2,
+      "n": 2555,
+      "median_seconds": 144.0,
+      "p90_seconds": 17400.8,
+      "within_hour": 0.8172
+    },
+    {
+      "local_weekday": 3,
+      "n": 2682,
+      "median_seconds": 157.0,
+      "p90_seconds": 14907.7,
+      "within_hour": 0.8158
+    },
+    {
+      "local_weekday": 4,
+      "n": 2409,
+      "median_seconds": 175.0,
+      "p90_seconds": 15292.2,
+      "within_hour": 0.824
+    },
+    {
+      "local_weekday": 5,
+      "n": 1510,
+      "median_seconds": 304.5,
+      "p90_seconds": 25720.1,
+      "within_hour": 0.7563
+    },
+    {
+      "local_weekday": 6,
+      "n": 1556,
+      "median_seconds": 326.0,
+      "p90_seconds": 22749.5,
+      "within_hour": 0.7404
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Two manually read coordinate positions labelled prose",
+  "unit": "paragraph fragment",
+  "source": "wtt; run.py; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "article": "Kyllikki Saaren murha",
+      "rev_id": 17100425,
+      "side": "old",
+      "hash": "51B711D9437FB1E1",
+      "core_kind": "prose",
+      "text": "21.952667,",
+      "wikitext": "          21.952667,",
+      "interpretation": "Map coordinate fragment, not narrative prose. Period decimal was split by the Finnish-number parser. Excluded by the final surrounding-letter gate."
+    },
+    {
+      "article": "Kyllikki Saaren murha",
+      "rev_id": 17100425,
+      "side": "new",
+      "hash": "07C866C1EC05DE3C",
+      "core_kind": "prose",
+      "text": "21.95167064666748,",
+      "wikitext": "          21.95167064666748,",
+      "interpretation": "Map coordinate fragment, not narrative prose. Period decimal was split by the Finnish-number parser. Excluded by the final surrounding-letter gate."
+    },
+    {
+      "article": "Kyllikki Saaren murha",
+      "rev_id": 17100425,
+      "side": "old",
+      "hash": "4B6FCA7AA2A91E89",
+      "core_kind": "prose",
+      "text": "62.144611",
+      "wikitext": "          62.144611",
+      "interpretation": "Map coordinate fragment, not narrative prose. Period decimal was split by the Finnish-number parser. Excluded by the final surrounding-letter gate."
+    },
+    {
+      "article": "Kyllikki Saaren murha",
+      "rev_id": 17100425,
+      "side": "new",
+      "hash": "E1A8F4512AA26BB8",
+      "core_kind": "prose",
+      "text": "62.144996089124675",
+      "wikitext": "          62.144996089124675",
+      "interpretation": "Map coordinate fragment, not narrative prose. Period decimal was split by the Finnish-number parser. Excluded by the final surrounding-letter gate."
+    }
+  ]
+}

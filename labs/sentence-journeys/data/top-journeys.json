@@ -1,0 +1,1630 @@
+{
+  "title": "Thirty most-travelled substantive paragraphs after explicit screening",
+  "unit": "articles",
+  "source": "sql/journey-candidates.sql; sql/journey-paths.sql; data/journey-exclusions.json",
+  "rows": [
+    {
+      "hash": "DC4E2656304FF854",
+      "articles": 11,
+      "current_articles": 0.0,
+      "chars": 270,
+      "path": [
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 565862,
+          "title": "Näpinlahti",
+          "first_at": "2008-08-14T17:45:55",
+          "born_rev": 5283833.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Näpinlahti''' on [[kylä]] ja rautatiepysäkki [[Norsjoki|Norsjoen]] kylähallintoasutuksen eteläosassa [[Käkisalmen piiri]]ssä [[Leningradin alue]]ella [[Venäjä]]llä. Näpi...",
+          "link": "https://fi.wikipedia.org/?oldid=5283833"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 565866,
+          "title": "Sakkali",
+          "first_at": "2008-08-14T17:56:07",
+          "born_rev": 5283919.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Sakkali''' on [[kylä]] [[Norsjoki|Norsjoen]] kylähallintoasutuksen eteläosassa [[Käkisalmen piiri]]ssä [[Leningradin alue]]ella [[Venäjä]]llä. Sakkali sijaitsee [[Suomi|Suo...",
+          "link": "https://fi.wikipedia.org/?oldid=5283919"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 566163,
+          "title": "Joensuu (Käkisalmen mlk)",
+          "first_at": "2008-08-15T14:33:09",
+          "born_rev": 5288045.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Joensuu''' (v:sta 1948 {{K-ru|Боицово|Boitsovo}})<ref name=\"Karjalan kannas 1938 ja 2001\">{{Karttaviite | Tekijä = | Nimeke = Karjalan kannas, historia ja nykyaika, 1938-20...",
+          "link": "https://fi.wikipedia.org/?oldid=5288045"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 566745,
+          "title": "Vuohensalo",
+          "first_at": "2008-08-16T17:20:58",
+          "born_rev": 5294422.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "alkua...",
+          "link": "https://fi.wikipedia.org/?oldid=5294422"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 567671,
+          "title": "Marjalanniemi",
+          "first_at": "2008-08-18T14:03:35",
+          "born_rev": 5305881.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Marjolanniemi'''({{K-ru|Марьино|Marino}}) on [[kylä]] [[Norsjoki|Norsjoen]] kunnallishallintoalueen eteläosassa [[Käkisalmen piiri]]ssä [[Leningradin alue]]ella [[Venäj...",
+          "link": "https://fi.wikipedia.org/?oldid=5305881"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 567707,
+          "title": "Kapeasalmi",
+          "first_at": "2008-08-18T14:53:21",
+          "born_rev": 5306284.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Kapeasalmi''' (myös '''Kapiasalmi''') on [[kylä]] ja [[rautatieasema]] [[Käkisalmen piiri]]ssä [[Leningradin alue]]ella [[Venäjä]]llä. Kapeasalmi sijaitsee [[Suomi|Suomen]] ...",
+          "link": "https://fi.wikipedia.org/?oldid=5306284"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 569879,
+          "title": "Hirvisaari (Käkisalmen mlk)",
+          "first_at": "2008-08-24T08:26:42",
+          "born_rev": 5335869.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Hirvisaari''' oli [[kylä]] [[Käkisalmen maalaiskunta|Käkisalmen maalaiskunnassa]] [[Suomi|Suomen]] [[Neuvostoliitto|Neuvostoliitolle]] [[luovutettu Karjala|luovuttamassa Karjala...",
+          "link": "https://fi.wikipedia.org/?oldid=5335869"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 569939,
+          "title": "Pärnä",
+          "first_at": "2008-08-24T10:19:00",
+          "born_rev": 5336430.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Pärnä''' (v:sta 1948 {{K-ru|Бригадное|Brigadnoje}})<ref name=\"Karjalan kannas 1938 ja 2001\">{{Karttaviite | Tekijä = | Nimeke = Karjalan kannas, historia ja nykyaika, 1...",
+          "link": "https://fi.wikipedia.org/?oldid=5336430"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 569978,
+          "title": "Suotniemi",
+          "first_at": "2008-08-24T11:48:40",
+          "born_rev": 5336892.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Suotniemi''' (v:sta 1948 {{K-ru|Яркое|Jarkoje}})<ref name=\"Karjalan kannas 1938 ja 2001\">{{Karttaviite | Tekijä = | Nimeke = Karjalan kannas, historia ja nykyaika, 1938-2001 ...",
+          "link": "https://fi.wikipedia.org/?oldid=5336892"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 570544,
+          "title": "Tenkalahti",
+          "first_at": "2008-08-25T15:13:07",
+          "born_rev": 5344943.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Tenkalahti''' oli [[kylä]] ja [[Käkisalmi|Käkisalmen]] [[esikaupunkialue]] [[Käkisalmen maalaiskunta|Käkisalmen maalaiskunnassa]] [[Suomi|Suomen]] [[Neuvostoliitto|Neuvostolii...",
+          "link": "https://fi.wikipedia.org/?oldid=5344943"
+        },
+        {
+          "hash": "DC4E2656304FF854",
+          "page_id": 571033,
+          "title": "Porkanniemi",
+          "first_at": "2008-08-26T14:39:03",
+          "born_rev": 5350691.0,
+          "current": 0,
+          "editor": "Kyzyl",
+          "comment": "Ak: Uusi sivu: '''Porkanniemi''' oli [[Käkisalmi|Käkisalmen]] [[esikaupunki]]alue [[Käkisalmen maalaiskunta]]an kuuluneen [[Tenkalahti|Tenkalahden]] kylän itäosassa [[Suomi|Suomen]] [[Neuvostol...",
+          "link": "https://fi.wikipedia.org/?oldid=5350691"
+        }
+      ],
+      "excerpt": "Talvisodan alussa kylästä evakuoitiin alaikäiset lapset äiteineen. Muu väestö evakuotiin rauhan tultua, kun selvisi että Käkisalmen maalaiskunta kuului luovutettaviin alueisiin. Jatkosodan aikana asukkaita palasi koteihinsa, mutta uusi evakuointi oli edessä vuonna 1944."
+    },
+    {
+      "hash": "173B3C202DBA03B4",
+      "articles": 9,
+      "current_articles": 9.0,
+      "chars": 271,
+      "path": [
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 565862,
+          "title": "Näpinlahti",
+          "first_at": "2017-04-01T00:50:18",
+          "born_rev": 16388413.0,
+          "current": 1,
+          "editor": "2001:14BA:8300:0:0:0:0:BF9B",
+          "comment": "kirjoitusvirhe",
+          "link": "https://fi.wikipedia.org/?oldid=16388413"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 569879,
+          "title": "Hirvisaari (Käkisalmen mlk)",
+          "first_at": "2017-04-01T05:00:12",
+          "born_rev": 16388519.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388519"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 565866,
+          "title": "Sakkali",
+          "first_at": "2017-04-01T05:00:20",
+          "born_rev": 16388520.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388520"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 567707,
+          "title": "Kapeasalmi",
+          "first_at": "2017-04-01T05:00:40",
+          "born_rev": 16388523.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388523"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 571033,
+          "title": "Porkanniemi",
+          "first_at": "2017-04-01T05:00:48",
+          "born_rev": 16388524.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388524"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 569939,
+          "title": "Pärnä",
+          "first_at": "2017-04-01T05:00:58",
+          "born_rev": 16388525.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388525"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 569978,
+          "title": "Suotniemi",
+          "first_at": "2017-04-01T05:01:06",
+          "born_rev": 16388526.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388526"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 567671,
+          "title": "Marjalanniemi",
+          "first_at": "2017-04-01T05:01:13",
+          "born_rev": 16388527.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388527"
+        },
+        {
+          "hash": "173B3C202DBA03B4",
+          "page_id": 566163,
+          "title": "Joensuu (Käkisalmen mlk)",
+          "first_at": "2017-04-01T05:02:08",
+          "born_rev": 16388529.0,
+          "current": 1,
+          "editor": "Jmk",
+          "comment": "typo",
+          "link": "https://fi.wikipedia.org/?oldid=16388529"
+        }
+      ],
+      "excerpt": "Talvisodan alussa kylästä evakuoitiin alaikäiset lapset äiteineen. Muu väestö evakuoitiin rauhan tultua, kun selvisi että Käkisalmen maalaiskunta kuului luovutettaviin alueisiin. Jatkosodan aikana asukkaita palasi koteihinsa, mutta uusi evakuointi oli edessä vuonna 1944."
+    },
+    {
+      "hash": "C794BF272254E50C",
+      "articles": 6,
+      "current_articles": 4.0,
+      "chars": 433,
+      "path": [
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1845240,
+          "title": "13. sotasairaala",
+          "first_at": "2025-03-30T08:30:49",
+          "born_rev": 23140438.0,
+          "current": 0,
+          "editor": "MailariX",
+          "comment": "/* Jatkosota */ Lähdeviitteen korjaus",
+          "link": "https://fi.wikipedia.org/?oldid=23140438"
+        },
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1849776,
+          "title": "47. sotasairaala",
+          "first_at": "2025-04-20T23:57:45",
+          "born_rev": 23184647.0,
+          "current": 0,
+          "editor": "MailariX",
+          "comment": "/* Jatkosota */ Lisätty kappale \"Sotasairaala muodostui osastoista, joiden toimintaan vaikuttivat hoidettavat sairaudet ja niiden vaikeusaste. A-osastot ja sairaalat oli tarkoitettu vaikeille kirurgisille tapauksille, joiden hoitoon tarvittiin leikkaussalia, röntgeniä ja laboratoriota. B-osastoilla hoidettiin lievemmin haavoittuneita ja järjestettiin kirurgisten potilaiden kuntoutus. Lisäksi siellä hoidettiin sisätautien potilaita ja tartuntatauteja sairastavia\" lähdeviitteineen",
+          "link": "https://fi.wikipedia.org/?oldid=23184647"
+        },
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1852541,
+          "title": "53. sotasairaala",
+          "first_at": "2025-05-09T23:32:52",
+          "born_rev": 23224465.0,
+          "current": 1,
+          "editor": "MailariX",
+          "comment": "Lähdeviitteen korjaus",
+          "link": "https://fi.wikipedia.org/?oldid=23224465"
+        },
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1852756,
+          "title": "1. sotasairaala",
+          "first_at": "2025-05-09T23:43:50",
+          "born_rev": 23224484.0,
+          "current": 1,
+          "editor": "MailariX",
+          "comment": "Luotu perustiedot \"1. sotasairaala\" lähdeviitteineen, jää kesken. Jatketaan myöhemmin...",
+          "link": "https://fi.wikipedia.org/?oldid=23224484"
+        },
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1853007,
+          "title": "72. sotasairaala",
+          "first_at": "2025-05-11T20:39:31",
+          "born_rev": 23227986.0,
+          "current": 1,
+          "editor": "MailariX",
+          "comment": "Lisätty lause \"Pastorin tehtävässä toimi sotilaspastori Martti Nortia\" ja \"Ilmapommitukset vaurioittivat jaostosairaaloiden 1, 3, 4 ja 5 ikkunoita ja tämä vaikeutti huomattavasti sotasairaalan toimintaa\". Lisätty taulukkoon myös esikunta ja Kirurgin suojasairaala lähdeviitteineen",
+          "link": "https://fi.wikipedia.org/?oldid=23227986"
+        },
+        {
+          "hash": "C794BF272254E50C",
+          "page_id": 1845967,
+          "title": "57. sotasairaala",
+          "first_at": "2026-08-29T21:15:46",
+          "born_rev": 24207211.0,
+          "current": 1,
+          "editor": "MailariX",
+          "comment": "/* Jatkosota */ Lisätty kappale \"Sotasairaala muodostui osastoista, joiden toimintaan vaikuttivat hoidettavat sairaudet ja niiden vaikeusaste. A-osastot ja sairaalat oli tarkoitettu vaikeille kirurgisille tapauksille, joiden hoitoon tarvittiin leikkaussalia, röntgeniä ja laboratoriota. B-osastoilla hoidettiin lievemmin haavoittuneita ja järjestettiin kirurgisten potilaiden kuntoutus. Lisäksi siellä hoidettiin sisätautien potilaita ja tartuntatauteja sairastavia\" lähdeviitteineen",
+          "link": "https://fi.wikipedia.org/?oldid=24207211"
+        }
+      ],
+      "excerpt": "Sotasairaala muodostui osastoista, joiden toimintaan vaikuttivat hoidettavat sairaudet ja niiden vaikeusaste. A-osastot ja sairaalat oli tarkoitettu vaikeille kirurgisille tapauksille, joiden hoitoon tarvittiin leikkaussalia, röntgeniä ja laboratoriota. B-osastoilla hoidettiin lievemmin haavoittuneita ja järjestettiin kirurgisten potilaiden kuntoutus. Lisäksi siellä hoidettiin sisätautien potilaita ja tartuntatauteja sairastavia."
+    },
+    {
+      "hash": "DC700E10130C116E",
+      "articles": 6,
+      "current_articles": 6.0,
+      "chars": 314,
+      "path": [
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1775141,
+          "title": "Pääsölä",
+          "first_at": "2023-11-01T15:59:25",
+          "born_rev": 21959773.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=21959773"
+        },
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1776570,
+          "title": "Vanhamoisio",
+          "first_at": "2023-11-12T09:14:29",
+          "born_rev": 21981967.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "entinen kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=21981967"
+        },
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1776571,
+          "title": "Sakoska",
+          "first_at": "2023-11-12T09:47:16",
+          "born_rev": 21982025.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "entinen kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=21982025"
+        },
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1799824,
+          "title": "Kuttusi",
+          "first_at": "2024-04-19T07:50:12",
+          "born_rev": 22335736.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=22335736"
+        },
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1799957,
+          "title": "Saklina",
+          "first_at": "2024-04-20T10:28:45",
+          "born_rev": 22338330.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=22338330"
+        },
+        {
+          "hash": "DC700E10130C116E",
+          "page_id": 1801151,
+          "title": "Uusi Poru",
+          "first_at": "2024-04-28T07:05:52",
+          "born_rev": 22354954.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=22354954"
+        }
+      ],
+      "excerpt": "Toisen maailmansodan aikana kylä oli saksalaisjoukkojen miehittämä. Vuosina 1943-1944 inkeriläisiä vietiin Viron kautta Suomeen. Sodan jälkeen osa heistä jäi Suomeen, jotkut pakenivat Ruotsiin. Neuvostoliittoon palanneet eivät vastoin lupauksia päässeet kotikyläänsä, vaan heidät karkotettiin eri puolille Venäjää."
+    },
+    {
+      "hash": "4318E57D7B6F25BF",
+      "articles": 6,
+      "current_articles": 0.0,
+      "chars": 277,
+      "path": [
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 947145,
+          "title": "Kunnallisvaalit 1947",
+          "first_at": "2015-12-19T03:29:13",
+          "born_rev": 15402730.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": "/* Tulokset */",
+          "link": "https://fi.wikipedia.org/?oldid=15402730"
+        },
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 321502,
+          "title": "Kunnallisvaalit 1950",
+          "first_at": "2015-12-19T03:31:15",
+          "born_rev": 15402732.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=15402732"
+        },
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 321506,
+          "title": "Kunnallisvaalit 1953",
+          "first_at": "2015-12-19T03:35:45",
+          "born_rev": 15402733.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": "/* Tulokset */",
+          "link": "https://fi.wikipedia.org/?oldid=15402733"
+        },
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 321511,
+          "title": "Kunnallisvaalit 1956",
+          "first_at": "2015-12-19T03:37:40",
+          "born_rev": 15402734.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": "/* Tulokset */",
+          "link": "https://fi.wikipedia.org/?oldid=15402734"
+        },
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 321517,
+          "title": "Kunnallisvaalit 1960",
+          "first_at": "2015-12-19T03:49:05",
+          "born_rev": 15402736.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": "/* Tulokset */",
+          "link": "https://fi.wikipedia.org/?oldid=15402736"
+        },
+        {
+          "hash": "4318E57D7B6F25BF",
+          "page_id": 321552,
+          "title": "Kunnallisvaalit 1964",
+          "first_at": "2015-12-19T03:50:18",
+          "born_rev": 15402737.0,
+          "current": 0,
+          "editor": "85.76.86.28",
+          "comment": "/* Tulokset */",
+          "link": "https://fi.wikipedia.org/?oldid=15402737"
+        }
+      ],
+      "excerpt": "Kunnallisvaalien yleinen äänestysprosentti ylitti 50% ensimmäistä kertaa vuoden 1945 kunnallisvaaleissa. Edelliset kunnallisvaalit oli sotien vuoksi järjestetty yhdeksän vuotta aikaisemmin 1936. 1930, 1933 ja 1936 eivät kommunistisiksi epäillyt ehdokkaat olleet vaalikelpoisia."
+    },
+    {
+      "hash": "86B3D75756CD1381",
+      "articles": 6,
+      "current_articles": 0.0,
+      "chars": 266,
+      "path": [
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 107598,
+          "title": "Riitta Myller",
+          "first_at": "2022-04-13T15:48:03",
+          "born_rev": 20420995.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20420995"
+        },
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 101724,
+          "title": "Ilkka Taipale",
+          "first_at": "2022-04-13T15:53:16",
+          "born_rev": 20421006.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421006"
+        },
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 50194,
+          "title": "Jouko Kajanoja",
+          "first_at": "2022-04-13T15:57:36",
+          "born_rev": 20421017.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421017"
+        },
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 41624,
+          "title": "Eero Heinäluoma",
+          "first_at": "2022-04-13T16:00:43",
+          "born_rev": 20421027.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421027"
+        },
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 124522,
+          "title": "Ulpu Iivari",
+          "first_at": "2022-04-13T16:03:22",
+          "born_rev": 20421037.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421037"
+        },
+        {
+          "hash": "86B3D75756CD1381",
+          "page_id": 942,
+          "title": "Paavo Lipponen",
+          "first_at": "2022-04-13T16:09:42",
+          "born_rev": 20421061.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421061"
+        }
+      ],
+      "excerpt": "Nykyhetken kannalta keskeisin ongelma liittyy siihen, että Stasin tiedusteluasema koordinoi läheisesti toimintaansa Neuvostoliiton KGB:n kanssa. Näin ollen myös Venäjä saattaa kyetä edelleen käyttämään hyväksi itäsaksalaisten kautta muodostettuja riippuvuussuhteita."
+    },
+    {
+      "hash": "F9520AFAAAEA6E60",
+      "articles": 5,
+      "current_articles": 0.0,
+      "chars": 266,
+      "path": [
+        {
+          "hash": "F9520AFAAAEA6E60",
+          "page_id": 101145,
+          "title": "Veijo Puhjo",
+          "first_at": "2022-04-13T15:49:17",
+          "born_rev": 20420997.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20420997"
+        },
+        {
+          "hash": "F9520AFAAAEA6E60",
+          "page_id": 43394,
+          "title": "Ilkka-Christian Björklund",
+          "first_at": "2022-04-13T15:53:27",
+          "born_rev": 20421007.0,
+          "current": 0,
+          "editor": "2001:14BA:A075:2300:258F:790C:BB1E:8C10",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=20421007"
+        },
+        {
+          "hash": "F9520AFAAAEA6E60",
+          "page_id": 5255,
+          "title": "Kalevi Sorsa",
+          "first_at": "2022-04-13T16:02:03",
+          "born_rev": 20421031.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421031"
+        },
+        {
+          "hash": "F9520AFAAAEA6E60",
+          "page_id": 43201,
+          "title": "Kirsti Lintonen",
+          "first_at": "2022-04-13T16:04:11",
+          "born_rev": 20421040.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421040"
+        },
+        {
+          "hash": "F9520AFAAAEA6E60",
+          "page_id": 986494,
+          "title": "Jaakko Blomberg",
+          "first_at": "2022-04-13T16:10:40",
+          "born_rev": 20421064.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421064"
+        }
+      ],
+      "excerpt": "Nykyhetken kannalta keskeisin ongelma liittyy siihen, että Stasin tiedusteluasema koordinoi läheisesti toimintaansa Neuvostoliiton KGB:n kanssa. Näin ollen myös Venäjä saattaa kyetä edelleen käyttämään hyväksi itäsaksalaisten kautta muodostettuja riippuvuussuhteita."
+    },
+    {
+      "hash": "37F201A358090759",
+      "articles": 4,
+      "current_articles": 4.0,
+      "chars": 386,
+      "path": [
+        {
+          "hash": "37F201A358090759",
+          "page_id": 1917352,
+          "title": "Pohja-Suomi (historiallinen alue)",
+          "first_at": "2026-08-18T07:03:48",
+          "born_rev": 24184079.0,
+          "current": 1,
+          "editor": "Pavelxpetrov",
+          "comment": "Päivitin käsitteen määritelmän ja historian käyttäen Anthonin ja Salmisen tutkimusta.",
+          "link": "https://fi.wikipedia.org/?oldid=24184079"
+        },
+        {
+          "hash": "37F201A358090759",
+          "page_id": 1917354,
+          "title": "Etelä-Suomi (historiallinen alue)",
+          "first_at": "2026-08-18T07:09:05",
+          "born_rev": 24184095.0,
+          "current": 1,
+          "editor": "Pavelxpetrov",
+          "comment": "Päivitin käsitteen määritelmän ja historian käyttäen Anthonin ja Salmisen tutkimusta.",
+          "link": "https://fi.wikipedia.org/?oldid=24184095"
+        },
+        {
+          "hash": "37F201A358090759",
+          "page_id": 1540105,
+          "title": "Pohja-Suomen laamannikunta",
+          "first_at": "2026-08-18T07:20:47",
+          "born_rev": 24184128.0,
+          "current": 1,
+          "editor": "Pavelxpetrov",
+          "comment": "Päivitin johdannon, sekä Nimityksen ja historian käyttäen Anthonin ja Salmisen tutkimusta.",
+          "link": "https://fi.wikipedia.org/?oldid=24184128"
+        },
+        {
+          "hash": "37F201A358090759",
+          "page_id": 1917349,
+          "title": "Etelä-Suomen laamannikunta",
+          "first_at": "2026-08-18T07:27:56",
+          "born_rev": 24184149.0,
+          "current": 1,
+          "editor": "Pavelxpetrov",
+          "comment": "Päivitin johdannon, sekä Nimityksen ja historian käyttäen Anthonin ja Salmisen tutkimusta.",
+          "link": "https://fi.wikipedia.org/?oldid=24184149"
+        }
+      ],
+      "excerpt": "Tutkimuksessa on esitetty eriäviä tulkintoja tämän aluejaon synnystä. Aiempi tulkinta ajoitti sen 1300-luvun alkuun, mutta tätä on kritisoitu sillä perusteella, että Varsinais-Suomi oli todennäköisesti vielä yhtenäinen 1300-luvun puolivälissä. Tämän myöhemmän tulkinnan mukaan jako ajoittuu sen sijaan mecklenburgilaiselle ajalle (1360-luvun jälkeen), mahdollisesti Bo Jonssonin aikana."
+    },
+    {
+      "hash": "39D59C200556B9C7",
+      "articles": 4,
+      "current_articles": 3.0,
+      "chars": 316,
+      "path": [
+        {
+          "hash": "39D59C200556B9C7",
+          "page_id": 1435576,
+          "title": "Savota (Järvisaari)",
+          "first_at": "2018-02-23T13:12:55",
+          "born_rev": 17107490.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "Ak: Uusi sivu: '''Savota'''<ref name=Easton2013>{{Verkkoviite | Osoite = http://docplayer.fi/2284559-Jarvisaaren-suomalaiset-1702-1943-robin-easton.html | Tekijä = Robin Easton | Nimeke = Järvi...",
+          "link": "https://fi.wikipedia.org/?oldid=17107490"
+        },
+        {
+          "hash": "39D59C200556B9C7",
+          "page_id": 1435839,
+          "title": "Korkka",
+          "first_at": "2018-02-24T16:08:26",
+          "born_rev": 17110065.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "Ak: Uusi sivu: '''Korkka'''<ref name=Easton2013>{{Verkkoviite | Osoite = http://docplayer.fi/2284559-Jarvisaaren-suomalaiset-1702-1943-robin-easton.html | Tekijä = Robin Easton | Nimeke = Järvi...",
+          "link": "https://fi.wikipedia.org/?oldid=17110065"
+        },
+        {
+          "hash": "39D59C200556B9C7",
+          "page_id": 1436359,
+          "title": "Pitkäjärvi (Inkeri)",
+          "first_at": "2018-02-26T17:57:57",
+          "born_rev": 17115286.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "Ak: Uusi sivu: '''Pitkäjärvi'''<ref name=Easton2013>{{Verkkoviite | Osoite = http://docplayer.fi/2284559-Jarvisaaren-suomalaiset-1702-1943-robin-easton.html | Tekijä = Robin Easton | Nimeke =...",
+          "link": "https://fi.wikipedia.org/?oldid=17115286"
+        },
+        {
+          "hash": "39D59C200556B9C7",
+          "page_id": 1584118,
+          "title": "Muja (Inkeri)",
+          "first_at": "2020-06-29T13:13:39",
+          "born_rev": 19013002.0,
+          "current": 0,
+          "editor": "Boråslahti",
+          "comment": "Ak: Uusi sivu: '''Muja'''<ref name=Easton2013>{{Verkkoviite | Osoite = http://docplayer.fi/2284559-Jarvisaaren-suomalaiset-1702-1943-robin-easton.html | Tekijä = Robin Easton | Nimeke = Järvisa...",
+          "link": "https://fi.wikipedia.org/?oldid=19013002"
+        }
+      ],
+      "excerpt": "Toisen maailmansodan aikana kylä oli miehitetty saksalaisjoukoilla. Inkeriläisiä oli viety vuosina 1943-1944 Viron kautta Suomeen. Sodan jälkeen osa niistä jäi Suomeen, jotkut pakenivat Ruotsiin. Neuvostoliittoon palanneet eivät vastoin lupauksia päässeet kotikylälle, vaan heidät karkotettiin eri puolille Venäjää.."
+    },
+    {
+      "hash": "5B7B3BF97C327681",
+      "articles": 4,
+      "current_articles": 3.0,
+      "chars": 308,
+      "path": [
+        {
+          "hash": "5B7B3BF97C327681",
+          "page_id": 1793484,
+          "title": "Luukkasi",
+          "first_at": "2024-03-08T11:05:50",
+          "born_rev": 22244908.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=22244908"
+        },
+        {
+          "hash": "5B7B3BF97C327681",
+          "page_id": 1794848,
+          "title": "Rönölä",
+          "first_at": "2024-03-17T14:06:07",
+          "born_rev": 22265318.0,
+          "current": 0,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=22265318"
+        },
+        {
+          "hash": "5B7B3BF97C327681",
+          "page_id": 1849834,
+          "title": "Poru",
+          "first_at": "2025-04-21T09:26:18",
+          "born_rev": 23185223.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=23185223"
+        },
+        {
+          "hash": "5B7B3BF97C327681",
+          "page_id": 1920682,
+          "title": "Valasniekka",
+          "first_at": "2026-09-15T10:41:03",
+          "born_rev": 24240859.0,
+          "current": 1,
+          "editor": "Boråslahti",
+          "comment": "kylä Inkerissä",
+          "link": "https://fi.wikipedia.org/?oldid=24240859"
+        }
+      ],
+      "excerpt": "Toisen maailmansodan aikana kylä oli saksalaisjoukkojen miehittämä. Vuonna 1943 inkeriläisiä vietiin Viron kautta Suomeen. Sodan jälkeen osa heistä jäi Suomeen, jotkut pakenivat Ruotsiin. Neuvostoliittoon palanneet eivät vastoin lupauksia päässeet kotikyläänsä, vaan heidät karkotettiin eri puolille Venäjää."
+    },
+    {
+      "hash": "FDA4AE5F4E1514FA",
+      "articles": 4,
+      "current_articles": 0.0,
+      "chars": 266,
+      "path": [
+        {
+          "hash": "FDA4AE5F4E1514FA",
+          "page_id": 662930,
+          "title": "Osmo Kock",
+          "first_at": "2022-04-13T15:42:43",
+          "born_rev": 20420981.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20420981"
+        },
+        {
+          "hash": "FDA4AE5F4E1514FA",
+          "page_id": 29547,
+          "title": "Ulf Sundqvist",
+          "first_at": "2022-04-13T15:51:59",
+          "born_rev": 20421001.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421001"
+        },
+        {
+          "hash": "FDA4AE5F4E1514FA",
+          "page_id": 293979,
+          "title": "Vappu Taipale",
+          "first_at": "2022-04-13T15:59:33",
+          "born_rev": 20421025.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421025"
+        },
+        {
+          "hash": "FDA4AE5F4E1514FA",
+          "page_id": 1349051,
+          "title": "Arto Mansala",
+          "first_at": "2022-04-13T16:05:01",
+          "born_rev": 20421046.0,
+          "current": 0,
+          "editor": "Enkeksiparempaa",
+          "comment": "Lisäys Alpo Rusin listasta",
+          "link": "https://fi.wikipedia.org/?oldid=20421046"
+        }
+      ],
+      "excerpt": "Nykyhetken kannalta keskeisin ongelma liittyy siihen, että Stasin tiedusteluasema koordinoi läheisesti toimintaansa Neuvostoliiton KGB:n kanssa. Näin ollen myös Venäjä saattaa kyetä edelleen käyttämään hyväksi itäsaksalaisten kautta muodostettuja riippuvuussuhteita."
+    },
+    {
+      "hash": "EFE87464A796E9E1",
+      "articles": 4,
+      "current_articles": 3.0,
+      "chars": 143,
+      "path": [
+        {
+          "hash": "EFE87464A796E9E1",
+          "page_id": 1138782,
+          "title": "Säätyvaltiopäivät 1891",
+          "first_at": "2021-03-25T10:32:37",
+          "born_rev": 19660627.0,
+          "current": 1,
+          "editor": "SeppVei",
+          "comment": "Porvarissäädyn jäsenet ja sihteeri",
+          "link": "https://fi.wikipedia.org/?oldid=19660627"
+        },
+        {
+          "hash": "EFE87464A796E9E1",
+          "page_id": 1138786,
+          "title": "Säätyvaltiopäivät 1894",
+          "first_at": "2021-03-25T12:52:03",
+          "born_rev": 19660957.0,
+          "current": 1,
+          "editor": "SeppVei",
+          "comment": "Porvarissäädyn jäsenet ja sihteeri",
+          "link": "https://fi.wikipedia.org/?oldid=19660957"
+        },
+        {
+          "hash": "EFE87464A796E9E1",
+          "page_id": 500212,
+          "title": "Säätyvaltiopäivät 1897",
+          "first_at": "2021-03-25T16:22:56",
+          "born_rev": 19661293.0,
+          "current": 1,
+          "editor": "SeppVei",
+          "comment": "Porvarissäädyn jäsenet ja sihteeri",
+          "link": "https://fi.wikipedia.org/?oldid=19661293"
+        },
+        {
+          "hash": "EFE87464A796E9E1",
+          "page_id": 561687,
+          "title": "Säätyvaltiopäivät 1899",
+          "first_at": "2021-03-25T16:40:32",
+          "born_rev": 19661319.0,
+          "current": 0,
+          "editor": "SeppVei",
+          "comment": "Porvarissäädyn jäsenet ja sihteeri",
+          "link": "https://fi.wikipedia.org/?oldid=19661319"
+        }
+      ],
+      "excerpt": "Porvarissäädyn puhemies oli Anders Joachim Kurtén ja sihteeri Axel Valdemar Lindberg. Säädyn jäsenet olivat puhemies mukaan luettuna seuraavat:"
+    },
+    {
+      "hash": "B422501F92C80E2B",
+      "articles": 3,
+      "current_articles": 1.0,
+      "chars": 1162,
+      "path": [
+        {
+          "hash": "B422501F92C80E2B",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "B422501F92C80E2B",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "B422501F92C80E2B",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 1,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "Oulun yliopiston kansanterveystieteen professori Jouni Jaakkola kritisoi THL:n lukuja. Hänen mukaansa tuhkarokossa laumasuojaan on tarvittu yli 90 prosentin rokotusaste, ja vaikka luku ei olisikaan koronaviruksessa yhtä suuri, se olisi todennäköisesti suurempi kuin THL:n pahin skenaario, jossa virukseen sairastuisi 60 prosenttia väestöstä. Jaakkolan mukaan 60 prosenttia oli alakanttiin vedetty ja liian optimistinen luku. Hän ei olisi jäänyt odottamaan laumaimmuniteetin muodostumista. Hänen mukaansa laskelmat laumasuojastrategian seurauksista ovat \"aikamoisia\". THL:n mukaan enintään 40 prosenttia kansasta saisi viruksen nykyisillä rajoitustoim"
+    },
+    {
+      "hash": "E5604A609D32B713",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 1084,
+      "path": [
+        {
+          "hash": "E5604A609D32B713",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "E5604A609D32B713",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "E5604A609D32B713",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 0,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "Suomessa ei THL:n ohjeiden mukaan testata kaikkia koronavirusepäilyjä. Suomessa tehtiin joihinkin muihin maihin verrattuna melko vähän testejä. 15. maaliskuuta kriteerit testeihin tiukentuivat entisestään. Annettiin ohjeita, että terveyskeskuksiin ei pidä soittaa tartuntaepäilyn takia, eikä hakeutua koronavirustesteihin, mikäli pärjää oireiden kanssa kotona. 15.3. tiukat ohjeet johtivat siihen, että iso osa oireisista jäi kotiin niin, ettei tieto tartunnasta kantautunut viranomaisille. Runsas testaaminen, kontaktien jäljitys, sosiaalinen etäisyydenotto ja yhteisöjen aktivointi estää tartuntoja ja pelastaa henkiä. THL perusteli testaamisen väh"
+    },
+    {
+      "hash": "E838FDD06BDE2C18",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 1011,
+      "path": [
+        {
+          "hash": "E838FDD06BDE2C18",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "E838FDD06BDE2C18",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "E838FDD06BDE2C18",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 0,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "Maailman terveysjärjestö WHO:n mukaan ei riitä, että maat sulkevat kaiken. Ihmisten eristäytyminen hidastaa viruksen leviämistä ja antaa lisäaikaa, mutta tarvitaan enemmän toimenpiteitä. WHO:n mukaan viruksen voittaminen vaatii aggressiivisia ja kohdennettuja toimia. Jokainen epäilty koronatapaus olisi testattava ja jokainen tartunnan saanut asetettava karanteeniin, sekä jokainen mahdollisesti virukselle altistunut jäljitettävä. THL:n Mika Salminen ei ymmärtänyt WHO:n suositusta, koska Suomessa ei testata lieväoireisia, vaikka testauskapasiteettia jääkin yli. Britannian hallitus oli aikeissa antaa viruksen levitä väestöön ilman suuria rajoitu"
+    },
+    {
+      "hash": "45B2AD1C470A4B2D",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 993,
+      "path": [
+        {
+          "hash": "45B2AD1C470A4B2D",
+          "page_id": 278427,
+          "title": "Jatkosodan hyökkäysvaihe",
+          "first_at": "2018-07-30T20:45:11",
+          "born_rev": 17468081.0,
+          "current": 0,
+          "editor": "CB550F1",
+          "comment": "/* Sota alkaa */",
+          "link": "https://fi.wikipedia.org/?oldid=17468081"
+        },
+        {
+          "hash": "45B2AD1C470A4B2D",
+          "page_id": 636526,
+          "title": "Suomen ja Saksan sotilasyhteistyö 1940–1941",
+          "first_at": "2018-08-29T08:55:06",
+          "born_rev": 17537081.0,
+          "current": 0,
+          "editor": "CB550F1",
+          "comment": "/* ”Kolmen päivän puolueettomuus” */  Lisätty Neuvostoliiton sodanaloitus",
+          "link": "https://fi.wikipedia.org/?oldid=17537081"
+        },
+        {
+          "hash": "45B2AD1C470A4B2D",
+          "page_id": 631505,
+          "title": "Suomen ja Saksan lähentyminen 1940–1941",
+          "first_at": "2018-09-02T09:11:47",
+          "born_rev": 17545835.0,
+          "current": 0,
+          "editor": "CB550F1",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=17545835"
+        }
+      ],
+      "excerpt": "Kesäkuun 22 päivän aamulla ryhtyi Neuvostoliitto hyökkäykseen Suomen alueelle pommittaen ja tulittaen puhtaasti suomalaisia kohteita. Klo 6.05 aamulla sanottuna päivänä Neuvostoliiton ilmavoimat pommittivat suomalaisia panssarilaivoja Sottungan luona, klo 6.15 Alskärin linnaketta Turun saaristossa, klo 6.45 suomalaisia kuljetusaluksia Korppoon luona ja klo 7.55 Puna-armeijan tykistö avasi tulen Hangon vuokra-alueelta ampuen Porsöhön, Storholmaan ja mantereelle. Samana päivänä avattiin Hirsilammen luona, noin 14 km Imatran itäpuolella, Neuvostoliiton alueelta tuli suomalaisia rajavartioita kohden ja Pummangista Petsamossa ammuttiin useita kymm"
+    },
+    {
+      "hash": "00B71683D18C27FC",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 876,
+      "path": [
+        {
+          "hash": "00B71683D18C27FC",
+          "page_id": 962165,
+          "title": "Sotatalous Suomessa toisen maailmansodan aikana",
+          "first_at": "2011-10-13T19:13:20",
+          "born_rev": 10793701.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Talvisodan aika */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10793701"
+        },
+        {
+          "hash": "00B71683D18C27FC",
+          "page_id": 963794,
+          "title": "Sotatalous Suomessa talvisodan aikana",
+          "first_at": "2011-10-13T19:14:26",
+          "born_rev": 10793706.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Sotatalous talvisodan aikana */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10793706"
+        },
+        {
+          "hash": "00B71683D18C27FC",
+          "page_id": 975887,
+          "title": "Sotatalouden rahoittaminen Suomessa toisen maailmansodan aikana",
+          "first_at": "2011-11-17T18:35:45",
+          "born_rev": 10928689.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "text",
+          "link": "https://fi.wikipedia.org/?oldid=10928689"
+        }
+      ],
+      "excerpt": "Valtion lainanotto Suomen pankista tarkoitti käytännössä sitä, että valtio otti kasvaneiden puolustusmenojensa rahoittamiseksi lainaa Suomen pankilta, joka taas painoi lisää rahaa menojen kattamiseksi. Kyseessä oli siis tyypillinen setelirahoitus, joka johti nopeasti inflaation kasvuun, joka ei kuitenkaan vielä talvisodan aikana johtanut merkittäviin ongelmiin. Vallitsevissa oloissa ei käytettävissä ollut muita rahapoliittisia keinoja sotatalouden rahoittamiseksi. Suomen valtio rahoitti sodankäyntiään myös muulla, kotimaisella lainanotolla. Suomen pankista ja yksityisiltä markkkinoilta otetuilla lainoilla kerättiin vuonna 1939 noin 800 miljoo"
+    },
+    {
+      "hash": "05EEB3B62E887B4D",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 874,
+      "path": [
+        {
+          "hash": "05EEB3B62E887B4D",
+          "page_id": 5759,
+          "title": "Lestadiolaisuus",
+          "first_at": "2012-08-21T20:40:38",
+          "born_rev": 12021833.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": "/* 1840-1850-luvut */",
+          "link": "https://fi.wikipedia.org/?oldid=12021833"
+        },
+        {
+          "hash": "05EEB3B62E887B4D",
+          "page_id": 399816,
+          "title": "Koutokeinon kansannousu",
+          "first_at": "2012-08-21T20:53:21",
+          "born_rev": 12021880.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": "/* Tausta */",
+          "link": "https://fi.wikipedia.org/?oldid=12021880"
+        },
+        {
+          "hash": "05EEB3B62E887B4D",
+          "page_id": 507255,
+          "title": "Koutokeinon hurmos",
+          "first_at": "2012-08-21T21:24:30",
+          "born_rev": 12021976.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=12021976"
+        }
+      ],
+      "excerpt": "Lestadiolaisuus sai jo vuonna 1847 paljon saamelaisia kannattajia myös Koutokeinossa Norjassa. Keväällä 1849 Laestadius muutti Kaaresuvannosta Pajalaan, joka oli paljon kauempana Koutokeinosta. Niinpä Koutokeinolaiset lestadiolaiset alkoivat sen jälkeen käydä kuuntelemassa juuri lestadiolaistuneen Muonion kirkkoherran J. F. Liljebladin saarnoja, koska Muonioon oli Koutokeinosta paljon lyhyempi matka kuin Pajalaan. Mutta jo talvella 1849-1850 alkoi Koutokeinon saamelaisten lestadiolaisten käytöksessä ja uskonelämässä näkyä huolestuttavia piirteitä, kuten hurmahenkisyyttä, röyhkeyttä ja agressiivisuutta. Ilmiötä esiintyi myös Kuttasen kylässä. "
+    },
+    {
+      "hash": "CB96494B14AB4A6C",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 855,
+      "path": [
+        {
+          "hash": "CB96494B14AB4A6C",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "CB96494B14AB4A6C",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "CB96494B14AB4A6C",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 0,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "Lentoyhtiöt lennättivät epidemia-alueelta helmikuun 24. päivän jälkeen yli kahden viikon ajan tuhansia matkustajia eri puolille Suomea. Hallitus ei määrännyt lentoja keskeytettäväksi tai suositellut vapaaehtoista karanteenia. Sosiaali- ja terveysministeri Aino-Kaisa Pekonen tyynnytteli mielialoja hallituksen tiedotustilaisuudessa 27. helmikuuta sanomalla, että Suomessa ei ole epidemiaa. Helsingin yliopiston ekologian ja evoluutiobiologian tutkijatohtori Tuomas Aivelo olisi toivonut, että hallitus olisi kertonut tiedotustilaisuudessa, että Suomessa tulee esiintymään koronavirustapauksia ja viruksen leviämistä pyritään estämään erilaisin toimen"
+    },
+    {
+      "hash": "112DE68249D63609",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 780,
+      "path": [
+        {
+          "hash": "112DE68249D63609",
+          "page_id": 440,
+          "title": "Jatkosota",
+          "first_at": "2008-09-25T15:59:05",
+          "born_rev": 5530321.0,
+          "current": 0,
+          "editor": "Joensuu 77~fiwiki",
+          "comment": "/* Suur-Suomea rakentamassa */",
+          "link": "https://fi.wikipedia.org/?oldid=5530321"
+        },
+        {
+          "hash": "112DE68249D63609",
+          "page_id": 24094,
+          "title": "Suur-Suomi",
+          "first_at": "2008-09-25T16:05:27",
+          "born_rev": 5530336.0,
+          "current": 0,
+          "editor": "Joensuu 77~fiwiki",
+          "comment": "/* Keskitysleirit */",
+          "link": "https://fi.wikipedia.org/?oldid=5530336"
+        },
+        {
+          "hash": "112DE68249D63609",
+          "page_id": 319344,
+          "title": "Itä-Karjalan keskitysleirit",
+          "first_at": "2008-09-26T20:26:22",
+          "born_rev": 5539982.0,
+          "current": 0,
+          "editor": "Joensuu 77~fiwiki",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=5539982"
+        }
+      ],
+      "excerpt": "Äänisniemen, Syvärinlaakson ja Maanselänkannaksen väestöä, joka perinteisesti sattuu puhumaan venäjää, siirrettiin etulinjasta taemmaksi leireihin paitsi neuvostopartisaanien hyökkäysten ehkäisemiseksi myös siviilien itsensä suojelemiseksi. Äänisniemelle oli tätä paitsi pakkautunut ei-suomensukuista syntyperää olevia pakolaisia eri puolilta Karjalais-suomalaista sosialistista neuvostotasavaltaa; odottaessaan turhaan kuljetusta Äänisjärven ylitse he jäivät Suomen puolustusvoimien käsiin. Tutkimuskirjallisuuden perusteella voi arvioida, että rintamien läheltä evakuoituja taikka pakolaisia saattoi olla jopa 16.600 Itä-Karjalan leireihin sijoitet"
+    },
+    {
+      "hash": "EED532A656816842",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 760,
+      "path": [
+        {
+          "hash": "EED532A656816842",
+          "page_id": 370593,
+          "title": "Turun historia",
+          "first_at": "2007-06-20T22:30:01",
+          "born_rev": 3044387.0,
+          "current": 0,
+          "editor": "Lehmankukka",
+          "comment": "Historia-osuus siirretty artikkelista [[Turku]] [[Keskustelu:Turku|keskustelusivun]] kommenttien perusteella",
+          "link": "https://fi.wikipedia.org/?oldid=3044387"
+        },
+        {
+          "hash": "EED532A656816842",
+          "page_id": 710072,
+          "title": "Turku 1300-luvulla",
+          "first_at": "2009-07-31T02:42:39",
+          "born_rev": 7108488.0,
+          "current": 0,
+          "editor": "Jontts",
+          "comment": "Ak: Uusi sivu: {{Turun historia artikkelit}} '''1300-luvulla Turun''' asema kaupunkina vahvistui. [[Turun tuomiokirkko]] vihittiin käyttöön kesäkuussa [[1300]], on tosin epäselvää, missä mä...",
+          "link": "https://fi.wikipedia.org/?oldid=7108488"
+        },
+        {
+          "hash": "EED532A656816842",
+          "page_id": 710074,
+          "title": "Turku 1400-luvulla",
+          "first_at": "2009-07-31T03:07:20",
+          "born_rev": 7108521.0,
+          "current": 0,
+          "editor": "Jontts",
+          "comment": "Ak: Uusi sivu: {{Turun historia artikkelit}} '''1400-luvulla Turku''' oli selkästi suomen tärkein keskus. Siellä sijaitsivat [[Turun linna]], vireä kaupunkiyhteisö, dominikaaniveljien luostari ...",
+          "link": "https://fi.wikipedia.org/?oldid=7108521"
+        }
+      ],
+      "excerpt": "Keskiajan kaupungissa rakennukset olivat valtaosaltaan puuta, vaikka kivi- ja tiilitalojakin oli. Kadut olivat ahtaita ja tulipalot yleisiä. Keskiaikainen kaupunki oli keskittynyt suurin piirtein Tuomiokirkon, Kerttulinmäen ja Kaskenmäen väliselle alueelle Aurajoen eteläpuolelle. Joen pohjoispuolella keskiaikaista kaupunkiasutusta oli lähinnä Aninkaistenmäellä. Kaupungin asukasluku lienee keskiajalla noussut kahdentuhannen tienoille, mikä keskieurooppalaisella mittapuulla tarkoitti keskikokoista ja pohjoismaisella mittapuulla suurta kaupunkia. Useimmat Turun nykyisistä kaupunginosista olivat keskiajalla maalaiskyliä, jotka kuuluivat Kaarinan,"
+    },
+    {
+      "hash": "355F57AA05A8A845",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 738,
+      "path": [
+        {
+          "hash": "355F57AA05A8A845",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "355F57AA05A8A845",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "355F57AA05A8A845",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 0,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "THL:n johtaja Mika Salminen piti Italiassa epidemian puhjettua tehtyjä rajoituksia ja ylimitoitettuna, ja vähätteli niiden merkitystä, vaikka tilanne Euroopassa oli muuttunut. THL:n johdossa on vain yksi lääkäri, ja laitoksesta on irtisanottu lukuisia asiantuntijoita 2000-luvun aikana useissa yt-neuvotteluissa. Salmisen mukaan testejä ei tehty päivässä niin montaa kuin on mahdollista, vaan tarpeen mukaan. Siihenkään ei olla aina ylletty, sillä kaikkia karanteeniin ohjattuja terveydenhuollon työntekijöitä ei testattu, vaikka THL ja valtionjohto ovat painottaneet terveydenhuollon henkilökunnan testaamista matalla kynnyksellä. Terveydenhuollon t"
+    },
+    {
+      "hash": "4B98ED9BCBC19C5C",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 737,
+      "path": [
+        {
+          "hash": "4B98ED9BCBC19C5C",
+          "page_id": 399816,
+          "title": "Koutokeinon kansannousu",
+          "first_at": "2012-08-21T21:03:54",
+          "born_rev": 12021919.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=12021919"
+        },
+        {
+          "hash": "4B98ED9BCBC19C5C",
+          "page_id": 5759,
+          "title": "Lestadiolaisuus",
+          "first_at": "2012-08-21T21:05:03",
+          "born_rev": 12021925.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": "/* 1840-1850-luvut */",
+          "link": "https://fi.wikipedia.org/?oldid=12021925"
+        },
+        {
+          "hash": "4B98ED9BCBC19C5C",
+          "page_id": 507255,
+          "title": "Koutokeinon hurmos",
+          "first_at": "2012-08-21T21:24:30",
+          "born_rev": 12021976.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=12021976"
+        }
+      ],
+      "excerpt": "Aslak Hættan johtama hurmahenkinen saamelaisryhmä oli ennen Koutokeinon murhatöitä selvästi erkaantunut Laestadiuksen opista ja myös lestadiolaisesta seurakuntayhteydestä omaksi uskonnolliseksi ryhmäkseen, jolla oli lähemmät suhteet kirkkoherra Liljebladiin kuin Laestadiukseen. Aslak Hætta oli jopa suunnitellut Lars Levi Laestadiuksen surmaamista, joka on yksi todiste siitä että hänen johtamansa lestadiolaissuuntaus oli erkaantunut muusta lestadiolaisuudesta erilliseksi hurmahenkiseksi lahkokseen, vaikka osa heistä arvostikin yhä Laestadiusta ja jopa vetosivat häneen oikeudenkäynnissä. Laestadius puolestaan syytti Koutokeinon ristiriidoista m"
+    },
+    {
+      "hash": "3BB8B6A539444B84",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 726,
+      "path": [
+        {
+          "hash": "3BB8B6A539444B84",
+          "page_id": 13461,
+          "title": "Riimukirjoitus",
+          "first_at": "2005-08-26T12:46:52",
+          "born_rev": 390972.0,
+          "current": 0,
+          "editor": "Rdnk",
+          "comment": "typofix",
+          "link": "https://fi.wikipedia.org/?oldid=390972"
+        },
+        {
+          "hash": "3BB8B6A539444B84",
+          "page_id": 1302,
+          "title": "Viikingit",
+          "first_at": "2005-09-19T22:36:58",
+          "born_rev": 432019.0,
+          "current": 0,
+          "editor": "Rdnk",
+          "comment": "riimut",
+          "link": "https://fi.wikipedia.org/?oldid=432019"
+        },
+        {
+          "hash": "3BB8B6A539444B84",
+          "page_id": 79763,
+          "title": "Skandinaavinen muinaisusko",
+          "first_at": "2005-09-22T22:18:21",
+          "born_rev": 437051.0,
+          "current": 0,
+          "editor": "Rdnk",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=437051"
+        }
+      ],
+      "excerpt": "Viikinkien magiaa harjoittivat pohjanmiesten kulttuurissa ennustajat, joita kutsuttiin myös riimumestareiksi, maagikot ja berserkit (maagiset soturit). Riimuilla ennustaminen tapahtui seuraavasti: muutama kivi johon oli kaiverrettu riimuja nostettiin sattumanvaraisesti säkistä, ja järjestettiin kuvioon josta ilmeni menneisyys, nykyaika ja tulevaisuus. Kuvion tulkintaa käytettiin silloin apuna päätöksenteossa. Viikingit kunnioittivat syvästi oppineita riimumestareita, ja heidän uskottiin olevan Odinin verisukulaisia. Riimumestarin perinteisen asusteen kerrotaan olleen sininen viitta ja messinkikärkinen puusauva, Odinin viitan ja sauvan mukaan."
+    },
+    {
+      "hash": "D75FA1BE85F1AC08",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 713,
+      "path": [
+        {
+          "hash": "D75FA1BE85F1AC08",
+          "page_id": 502116,
+          "title": "Pudasjärven välikohtaus",
+          "first_at": "2008-03-27T13:20:59",
+          "born_rev": 4536992.0,
+          "current": 0,
+          "editor": "Riisipuuro",
+          "comment": "/* Taustaa */",
+          "link": "https://fi.wikipedia.org/?oldid=4536992"
+        },
+        {
+          "hash": "D75FA1BE85F1AC08",
+          "page_id": 504105,
+          "title": "Olhavan taistelu",
+          "first_at": "2008-03-30T21:39:24",
+          "born_rev": 4556096.0,
+          "current": 0,
+          "editor": "Riisipuuro",
+          "comment": "Ak: Uusi sivu: '''Olhavan taistelu''' oli  [[toinen maailmansota|toisen maailmansodan]] aikaan [[Lapin sota|Lapin sodan]] alkuvaiheessa [[28. syyskuuta]] [[1944]] [[Ii]]ssä tapahtunut lyhyt aseelli...",
+          "link": "https://fi.wikipedia.org/?oldid=4556096"
+        },
+        {
+          "hash": "D75FA1BE85F1AC08",
+          "page_id": 753758,
+          "title": "Tornion kaappaus",
+          "first_at": "2010-04-11T05:15:33",
+          "born_rev": 8310237.0,
+          "current": 0,
+          "editor": "Riisipuuro",
+          "comment": "yhdistettävä-malline pois (aika lailla erillinen kahakka), kh, w, jäsentelyä, määrittely, taustaa,  lähteet ja viitteet eroteltu",
+          "link": "https://fi.wikipedia.org/?oldid=8310237"
+        }
+      ],
+      "excerpt": "Suomi katkaisi suhteensa Saksaan 2. syyskuuta 1944. Neuvostoliiton kanssa tehtävän rauhansopimuksen ennakkoehdot edellyttivät suomalaisten vaativan saksalaisjoukkojen poistumista maasta 15. syyskuuta mennessä. Pohjois-Suomen rintamaosuutta hoitanut 200 000 miehen vahvuinen saksalainen 20. Vuoristoarmeijakunta lähti ennalta laaditun suunnitelman, Operaatio Birken mukaisesti vetäytymään pohjoiseen uusiin puolustusasemiin heti syyskuun alussa. Uudet asemat oli linnoitettu valmiiksi Karesuvanto-Ivalo -linjalle eteläisemmästä Suomesta kohdistuvaa hyökkäystä vastaan. Asemat turvasivat idässä Petsamon nikkelituotannon saksalaisille, ja toisaalta suo"
+    },
+    {
+      "hash": "CAB0430E5040DA55",
+      "articles": 3,
+      "current_articles": 1.0,
+      "chars": 691,
+      "path": [
+        {
+          "hash": "CAB0430E5040DA55",
+          "page_id": 962165,
+          "title": "Sotatalous Suomessa toisen maailmansodan aikana",
+          "first_at": "2011-10-07T12:42:28",
+          "born_rev": 10764810.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Talvisodan aika */ fix",
+          "link": "https://fi.wikipedia.org/?oldid=10764810"
+        },
+        {
+          "hash": "CAB0430E5040DA55",
+          "page_id": 963794,
+          "title": "Sotatalous Suomessa talvisodan aikana",
+          "first_at": "2011-10-11T16:37:54",
+          "born_rev": 10785732.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Kotimainen sotatarviketuotanto */ fix",
+          "link": "https://fi.wikipedia.org/?oldid=10785732"
+        },
+        {
+          "hash": "CAB0430E5040DA55",
+          "page_id": 967841,
+          "title": "Suomen sotatarvikehankinnat talvisodan aikana",
+          "first_at": "2011-10-11T16:39:34",
+          "born_rev": 10785736.0,
+          "current": 1,
+          "editor": "Janis",
+          "comment": "/* Kotimainen sotatarviketuotanto */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10785736"
+        }
+      ],
+      "excerpt": "Ampumatarvikkeissa käsiaseiden ammusten tuotantomäärät olivat merkittäviä, mutta suurikaliberisempien aseiden ammusten tuotanto ei missään vaiheessa vastannut edes kulutusta. Suurimmat tuotannon ongelmat kohdistuivat etenkin tykistön ampumatarvikkeiden valmistukseen. Hankalimmiksi osoittautuivat mm. tykistön hylsyjen, sytyttimien ja ns. pohjanallien valmistus. Kriittisimmillään esim. kranaatinheittimien ammusten valmistuskapasiteettia ei pystytty juurikaan käyttämään hyväksi, koska sytyttimien valmistus laahasi pahasti jäljessä. Sodan loppuvaiheissa pystyttiin valmistamaan noin 6 000 heittimen kranaattia vuorokaudessa, mutta sytyttimiä valmis"
+    },
+    {
+      "hash": "207D5E795A918F62",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 677,
+      "path": [
+        {
+          "hash": "207D5E795A918F62",
+          "page_id": 5759,
+          "title": "Lestadiolaisuus",
+          "first_at": "2012-08-21T20:43:59",
+          "born_rev": 12021842.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": "/* 1840-1850-luvut */",
+          "link": "https://fi.wikipedia.org/?oldid=12021842"
+        },
+        {
+          "hash": "207D5E795A918F62",
+          "page_id": 399816,
+          "title": "Koutokeinon kansannousu",
+          "first_at": "2012-08-21T20:53:21",
+          "born_rev": 12021880.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": "/* Tausta */",
+          "link": "https://fi.wikipedia.org/?oldid=12021880"
+        },
+        {
+          "hash": "207D5E795A918F62",
+          "page_id": 507255,
+          "title": "Koutokeinon hurmos",
+          "first_at": "2012-08-21T21:24:30",
+          "born_rev": 12021976.0,
+          "current": 0,
+          "editor": "109.240.208.152",
+          "comment": null,
+          "link": "https://fi.wikipedia.org/?oldid=12021976"
+        }
+      ],
+      "excerpt": "Saamelaisilla yleisesti Koutokeinossa oli tuohon aikaan vaikeat olot. Mainittakoon parina esimerkkinä että Venäjä lakkautti syksyllä 1852Norjan saamelaisten oikeudet talvilaiduntamiseen ja kalastukseen Suomen puolella, ja Norjassakin jokien varteen muuttaneet talonpojat estivät saamelaisia kalastamasta Jäämereen laskevien jokien parhailla kalapaikoilla. Tuollainen muiden etnisten ryhmien ja viranomaistenkin syrjivä ja ankara toiminta Norjan saamelaisia kohtaan oli omiaan herättämään ja provosoimaan Koutokeinon saamelaisissa hurmahenkisyyttä ja agressiota. Lisäksi porvarien ja talonpoikien harjoittama vastuuton viinakauppa tuotti paljon ongelm"
+    },
+    {
+      "hash": "0750FD5747D9421E",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 654,
+      "path": [
+        {
+          "hash": "0750FD5747D9421E",
+          "page_id": 370593,
+          "title": "Turun historia",
+          "first_at": "2009-06-24T20:47:03",
+          "born_rev": 6934563.0,
+          "current": 0,
+          "editor": "Jontts",
+          "comment": "/* Keskiaika */",
+          "link": "https://fi.wikipedia.org/?oldid=6934563"
+        },
+        {
+          "hash": "0750FD5747D9421E",
+          "page_id": 710072,
+          "title": "Turku 1300-luvulla",
+          "first_at": "2009-07-31T02:42:39",
+          "born_rev": 7108488.0,
+          "current": 0,
+          "editor": "Jontts",
+          "comment": "Ak: Uusi sivu: {{Turun historia artikkelit}} '''1300-luvulla Turun''' asema kaupunkina vahvistui. [[Turun tuomiokirkko]] vihittiin käyttöön kesäkuussa [[1300]], on tosin epäselvää, missä mä...",
+          "link": "https://fi.wikipedia.org/?oldid=7108488"
+        },
+        {
+          "hash": "0750FD5747D9421E",
+          "page_id": 710074,
+          "title": "Turku 1400-luvulla",
+          "first_at": "2009-07-31T03:07:20",
+          "born_rev": 7108521.0,
+          "current": 0,
+          "editor": "Jontts",
+          "comment": "Ak: Uusi sivu: {{Turun historia artikkelit}} '''1400-luvulla Turku''' oli selkästi suomen tärkein keskus. Siellä sijaitsivat [[Turun linna]], vireä kaupunkiyhteisö, dominikaaniveljien luostari ...",
+          "link": "https://fi.wikipedia.org/?oldid=7108521"
+        }
+      ],
+      "excerpt": "Kaupunki oli pitkään Suomen merkittävin myös kaupankäynnin saralla. Se lukeutui keskiajalla Hansaliiton kaupan ja merenkulun piiriin. 1300-luvulla kaksi kolmasosaa kaupungin porvareista oli saksalaisia , mutta vähitellen kotimaisten porvarien osuus kasvoi. Kauppiailla oli useita yhteisöjä, kiltoja, joiden kiltataloissa juhlinta saattoi yltyä varsin riehakkaaksi. Vilkkaat kauppasuhteet kohdistuivat etenkin Tukholmaan ja Tallinnaan, mutta myös Pohjanmaalle, Novgorodiin ja Itämeren etelärannikon suurin hansakaupunkeihin. Hämeeseen kulki Turusta tunnettu maantie, Hämeen Härkätie. Viipuriin vei Suuri Rantatie, joka sittemmin tunnettiin Kuninkaanti"
+    },
+    {
+      "hash": "F2DC727B22346779",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 628,
+      "path": [
+        {
+          "hash": "F2DC727B22346779",
+          "page_id": 1562418,
+          "title": "Koronaviruspandemia Suomessa",
+          "first_at": "2020-05-15T12:30:33",
+          "born_rev": 18926690.0,
+          "current": 0,
+          "editor": "Kulttuurinavigaattori",
+          "comment": "kh, poistettu lähteettömiä ja olennaisia ja päällekkäisiä, tiivistetty triviaa",
+          "link": "https://fi.wikipedia.org/?oldid=18926690"
+        },
+        {
+          "hash": "F2DC727B22346779",
+          "page_id": 1577934,
+          "title": "Suomen toimenpiteet koronaviruspandemiaa vastaan",
+          "first_at": "2020-05-20T07:42:26",
+          "born_rev": 18936402.0,
+          "current": 0,
+          "editor": "87.95.219.17",
+          "comment": "tekstin siirto uuteen artikkelinn",
+          "link": "https://fi.wikipedia.org/?oldid=18936402"
+        },
+        {
+          "hash": "F2DC727B22346779",
+          "page_id": 1582912,
+          "title": "Suomen koronavirusstrategia",
+          "first_at": "2020-06-19T07:39:39",
+          "born_rev": 18996712.0,
+          "current": 0,
+          "editor": "87.95.157.224",
+          "comment": "Artikkelin perustaminen",
+          "link": "https://fi.wikipedia.org/?oldid=18996712"
+        }
+      ],
+      "excerpt": "Helsingin yliopiston zoonoosivirologian professori Olli Vapalahden mukaan virus pitäisi pyrkiä tukahduttamaan kaikin keinoin sen sijaan, että virusta yritettäisiin vain hidastaa. Etelä-Koreassa, Singaporessa, Taiwanissa, Japanissa ja Kiinassa on ollut ajattelutapa, että virus tukahdutetaan, eikä sen anneta levitä hiljalleen väestöön. Sen jälkeen massiivisella testaamisella ja tartuntaketjujen jäljittämisellä, sekä kohdennetuilla karanteeneilla huolehditaan siitä, ettei se enää palaa väestöön, kunnes rokote saadaan kehitettyä. Vapaalahden mukaan Suomi heräsi tilanteeseen paljon hitaammin kuin Kaakkois- ja Itä-Aasian maat."
+    },
+    {
+      "hash": "9FD4923B72E8E4E3",
+      "articles": 3,
+      "current_articles": 0.0,
+      "chars": 604,
+      "path": [
+        {
+          "hash": "9FD4923B72E8E4E3",
+          "page_id": 975887,
+          "title": "Sotatalouden rahoittaminen Suomessa toisen maailmansodan aikana",
+          "first_at": "2011-11-20T16:15:31",
+          "born_rev": 10938559.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Valtion menot lähes kolminkertaistuvat */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10938559"
+        },
+        {
+          "hash": "9FD4923B72E8E4E3",
+          "page_id": 962165,
+          "title": "Sotatalous Suomessa toisen maailmansodan aikana",
+          "first_at": "2011-11-20T16:21:01",
+          "born_rev": 10938575.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Välirauhan aika */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10938575"
+        },
+        {
+          "hash": "9FD4923B72E8E4E3",
+          "page_id": 963795,
+          "title": "Sotatalous Suomessa välirauhan aikana",
+          "first_at": "2011-11-20T16:23:10",
+          "born_rev": 10938583.0,
+          "current": 0,
+          "editor": "Janis",
+          "comment": "/* Siirtoväen asema ja toimeentulo välirauhan aikana */ text",
+          "link": "https://fi.wikipedia.org/?oldid=10938583"
+        }
+      ],
+      "excerpt": "Suomen valtion aloitettua sodankäynnin rahoittamisen lainaamalla rahaa keskuspankiltaan eli Suomen Pankilta oli sen seurauksena nopeasti kiihtynyt hintojen nousu eli inflaatio. Jo välirauhan aikana työtätekevän kansanosan palkkoja oli vastaavasti nostettava, jotta tyytymättömyys elintason laskuun ei olisi aiheuttanut levottomuutta. Kyseessä oli siis tyypillinen ns. setelirahoituksen aikaansaama kierre, jossa hintojen nousua seurasi palkkojen nousu, joka taas nosti hintoja entisestään. Sodan rahoittamiseen ei toisaalta ollut juuri muita mahdollisuuksia, joten kyse oli ns. välttämättömyyden pakosta."
+    }
+  ]
+}

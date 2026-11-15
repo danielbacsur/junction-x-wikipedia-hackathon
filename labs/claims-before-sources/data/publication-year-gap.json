@@ -1,0 +1,883 @@
+{
+  "title": "Publication year minus slot birth year, current dated refs",
+  "unit": "reference occurrences",
+  "source": "wtt snapshot 2026-10-01; parse.py; conservative explicit template dates",
+  "rows": [
+    {
+      "year_gap": -690,
+      "references": 1
+    },
+    {
+      "year_gap": -454,
+      "references": 1
+    },
+    {
+      "year_gap": -363,
+      "references": 1
+    },
+    {
+      "year_gap": -311,
+      "references": 1
+    },
+    {
+      "year_gap": -300,
+      "references": 1
+    },
+    {
+      "year_gap": -267,
+      "references": 1
+    },
+    {
+      "year_gap": -255,
+      "references": 1
+    },
+    {
+      "year_gap": -254,
+      "references": 2
+    },
+    {
+      "year_gap": -247,
+      "references": 1
+    },
+    {
+      "year_gap": -245,
+      "references": 1
+    },
+    {
+      "year_gap": -232,
+      "references": 1
+    },
+    {
+      "year_gap": -226,
+      "references": 1
+    },
+    {
+      "year_gap": -225,
+      "references": 1
+    },
+    {
+      "year_gap": -219,
+      "references": 1
+    },
+    {
+      "year_gap": -200,
+      "references": 1
+    },
+    {
+      "year_gap": -196,
+      "references": 1
+    },
+    {
+      "year_gap": -194,
+      "references": 1
+    },
+    {
+      "year_gap": -185,
+      "references": 1
+    },
+    {
+      "year_gap": -184,
+      "references": 9
+    },
+    {
+      "year_gap": -183,
+      "references": 1
+    },
+    {
+      "year_gap": -181,
+      "references": 1
+    },
+    {
+      "year_gap": -180,
+      "references": 1
+    },
+    {
+      "year_gap": -179,
+      "references": 1
+    },
+    {
+      "year_gap": -178,
+      "references": 3
+    },
+    {
+      "year_gap": -177,
+      "references": 5
+    },
+    {
+      "year_gap": -176,
+      "references": 4
+    },
+    {
+      "year_gap": -174,
+      "references": 1
+    },
+    {
+      "year_gap": -173,
+      "references": 4
+    },
+    {
+      "year_gap": -172,
+      "references": 9
+    },
+    {
+      "year_gap": -169,
+      "references": 2
+    },
+    {
+      "year_gap": -168,
+      "references": 2
+    },
+    {
+      "year_gap": -167,
+      "references": 1
+    },
+    {
+      "year_gap": -165,
+      "references": 1
+    },
+    {
+      "year_gap": -164,
+      "references": 1
+    },
+    {
+      "year_gap": -163,
+      "references": 1
+    },
+    {
+      "year_gap": -160,
+      "references": 5
+    },
+    {
+      "year_gap": -159,
+      "references": 11
+    },
+    {
+      "year_gap": -158,
+      "references": 16
+    },
+    {
+      "year_gap": -157,
+      "references": 29
+    },
+    {
+      "year_gap": -156,
+      "references": 20
+    },
+    {
+      "year_gap": -155,
+      "references": 11
+    },
+    {
+      "year_gap": -154,
+      "references": 1
+    },
+    {
+      "year_gap": -153,
+      "references": 49
+    },
+    {
+      "year_gap": -152,
+      "references": 17
+    },
+    {
+      "year_gap": -151,
+      "references": 18
+    },
+    {
+      "year_gap": -150,
+      "references": 29
+    },
+    {
+      "year_gap": -149,
+      "references": 28
+    },
+    {
+      "year_gap": -148,
+      "references": 36
+    },
+    {
+      "year_gap": -147,
+      "references": 9
+    },
+    {
+      "year_gap": -146,
+      "references": 12
+    },
+    {
+      "year_gap": -145,
+      "references": 15
+    },
+    {
+      "year_gap": -144,
+      "references": 11
+    },
+    {
+      "year_gap": -143,
+      "references": 14
+    },
+    {
+      "year_gap": -142,
+      "references": 9
+    },
+    {
+      "year_gap": -141,
+      "references": 16
+    },
+    {
+      "year_gap": -140,
+      "references": 4
+    },
+    {
+      "year_gap": -139,
+      "references": 6
+    },
+    {
+      "year_gap": -138,
+      "references": 4
+    },
+    {
+      "year_gap": -137,
+      "references": 5
+    },
+    {
+      "year_gap": -136,
+      "references": 4
+    },
+    {
+      "year_gap": -135,
+      "references": 17
+    },
+    {
+      "year_gap": -134,
+      "references": 5
+    },
+    {
+      "year_gap": -133,
+      "references": 5
+    },
+    {
+      "year_gap": -132,
+      "references": 16
+    },
+    {
+      "year_gap": -131,
+      "references": 8
+    },
+    {
+      "year_gap": -130,
+      "references": 9
+    },
+    {
+      "year_gap": -129,
+      "references": 6
+    },
+    {
+      "year_gap": -128,
+      "references": 11
+    },
+    {
+      "year_gap": -127,
+      "references": 20
+    },
+    {
+      "year_gap": -126,
+      "references": 12
+    },
+    {
+      "year_gap": -125,
+      "references": 16
+    },
+    {
+      "year_gap": -124,
+      "references": 21
+    },
+    {
+      "year_gap": -123,
+      "references": 22
+    },
+    {
+      "year_gap": -122,
+      "references": 21
+    },
+    {
+      "year_gap": -121,
+      "references": 23
+    },
+    {
+      "year_gap": -120,
+      "references": 35
+    },
+    {
+      "year_gap": -119,
+      "references": 46
+    },
+    {
+      "year_gap": -118,
+      "references": 55
+    },
+    {
+      "year_gap": -117,
+      "references": 56
+    },
+    {
+      "year_gap": -116,
+      "references": 85
+    },
+    {
+      "year_gap": -115,
+      "references": 94
+    },
+    {
+      "year_gap": -114,
+      "references": 90
+    },
+    {
+      "year_gap": -113,
+      "references": 103
+    },
+    {
+      "year_gap": -112,
+      "references": 114
+    },
+    {
+      "year_gap": -111,
+      "references": 86
+    },
+    {
+      "year_gap": -110,
+      "references": 108
+    },
+    {
+      "year_gap": -109,
+      "references": 117
+    },
+    {
+      "year_gap": -108,
+      "references": 157
+    },
+    {
+      "year_gap": -107,
+      "references": 176
+    },
+    {
+      "year_gap": -106,
+      "references": 207
+    },
+    {
+      "year_gap": -105,
+      "references": 191
+    },
+    {
+      "year_gap": -104,
+      "references": 207
+    },
+    {
+      "year_gap": -103,
+      "references": 189
+    },
+    {
+      "year_gap": -102,
+      "references": 260
+    },
+    {
+      "year_gap": -101,
+      "references": 191
+    },
+    {
+      "year_gap": -100,
+      "references": 169
+    },
+    {
+      "year_gap": -99,
+      "references": 192
+    },
+    {
+      "year_gap": -98,
+      "references": 256
+    },
+    {
+      "year_gap": -97,
+      "references": 170
+    },
+    {
+      "year_gap": -96,
+      "references": 266
+    },
+    {
+      "year_gap": -95,
+      "references": 236
+    },
+    {
+      "year_gap": -94,
+      "references": 162
+    },
+    {
+      "year_gap": -93,
+      "references": 141
+    },
+    {
+      "year_gap": -92,
+      "references": 139
+    },
+    {
+      "year_gap": -91,
+      "references": 146
+    },
+    {
+      "year_gap": -90,
+      "references": 144
+    },
+    {
+      "year_gap": -89,
+      "references": 161
+    },
+    {
+      "year_gap": -88,
+      "references": 162
+    },
+    {
+      "year_gap": -87,
+      "references": 192
+    },
+    {
+      "year_gap": -86,
+      "references": 115
+    },
+    {
+      "year_gap": -85,
+      "references": 217
+    },
+    {
+      "year_gap": -84,
+      "references": 111
+    },
+    {
+      "year_gap": -83,
+      "references": 99
+    },
+    {
+      "year_gap": -82,
+      "references": 98
+    },
+    {
+      "year_gap": -81,
+      "references": 76
+    },
+    {
+      "year_gap": -80,
+      "references": 65
+    },
+    {
+      "year_gap": -79,
+      "references": 57
+    },
+    {
+      "year_gap": -78,
+      "references": 61
+    },
+    {
+      "year_gap": -77,
+      "references": 69
+    },
+    {
+      "year_gap": -76,
+      "references": 44
+    },
+    {
+      "year_gap": -75,
+      "references": 61
+    },
+    {
+      "year_gap": -74,
+      "references": 61
+    },
+    {
+      "year_gap": -73,
+      "references": 56
+    },
+    {
+      "year_gap": -72,
+      "references": 58
+    },
+    {
+      "year_gap": -71,
+      "references": 71
+    },
+    {
+      "year_gap": -70,
+      "references": 46
+    },
+    {
+      "year_gap": -69,
+      "references": 78
+    },
+    {
+      "year_gap": -68,
+      "references": 55
+    },
+    {
+      "year_gap": -67,
+      "references": 71
+    },
+    {
+      "year_gap": -66,
+      "references": 120
+    },
+    {
+      "year_gap": -65,
+      "references": 58
+    },
+    {
+      "year_gap": -64,
+      "references": 68
+    },
+    {
+      "year_gap": -63,
+      "references": 42
+    },
+    {
+      "year_gap": -62,
+      "references": 62
+    },
+    {
+      "year_gap": -61,
+      "references": 56
+    },
+    {
+      "year_gap": -60,
+      "references": 80
+    },
+    {
+      "year_gap": -59,
+      "references": 85
+    },
+    {
+      "year_gap": -58,
+      "references": 200
+    },
+    {
+      "year_gap": -57,
+      "references": 80
+    },
+    {
+      "year_gap": -56,
+      "references": 100
+    },
+    {
+      "year_gap": -55,
+      "references": 81
+    },
+    {
+      "year_gap": -54,
+      "references": 109
+    },
+    {
+      "year_gap": -53,
+      "references": 95
+    },
+    {
+      "year_gap": -52,
+      "references": 70
+    },
+    {
+      "year_gap": -51,
+      "references": 92
+    },
+    {
+      "year_gap": -50,
+      "references": 98
+    },
+    {
+      "year_gap": -49,
+      "references": 99
+    },
+    {
+      "year_gap": -48,
+      "references": 107
+    },
+    {
+      "year_gap": -47,
+      "references": 90
+    },
+    {
+      "year_gap": -46,
+      "references": 91
+    },
+    {
+      "year_gap": -45,
+      "references": 112
+    },
+    {
+      "year_gap": -44,
+      "references": 97
+    },
+    {
+      "year_gap": -43,
+      "references": 98
+    },
+    {
+      "year_gap": -42,
+      "references": 142
+    },
+    {
+      "year_gap": -41,
+      "references": 109
+    },
+    {
+      "year_gap": -40,
+      "references": 129
+    },
+    {
+      "year_gap": -39,
+      "references": 133
+    },
+    {
+      "year_gap": -38,
+      "references": 183
+    },
+    {
+      "year_gap": -37,
+      "references": 133
+    },
+    {
+      "year_gap": -36,
+      "references": 185
+    },
+    {
+      "year_gap": -35,
+      "references": 183
+    },
+    {
+      "year_gap": -34,
+      "references": 199
+    },
+    {
+      "year_gap": -33,
+      "references": 255
+    },
+    {
+      "year_gap": -32,
+      "references": 196
+    },
+    {
+      "year_gap": -31,
+      "references": 167
+    },
+    {
+      "year_gap": -30,
+      "references": 274
+    },
+    {
+      "year_gap": -29,
+      "references": 277
+    },
+    {
+      "year_gap": -28,
+      "references": 325
+    },
+    {
+      "year_gap": -27,
+      "references": 267
+    },
+    {
+      "year_gap": -26,
+      "references": 322
+    },
+    {
+      "year_gap": -25,
+      "references": 325
+    },
+    {
+      "year_gap": -24,
+      "references": 234
+    },
+    {
+      "year_gap": -23,
+      "references": 348
+    },
+    {
+      "year_gap": -22,
+      "references": 301
+    },
+    {
+      "year_gap": -21,
+      "references": 265
+    },
+    {
+      "year_gap": -20,
+      "references": 332
+    },
+    {
+      "year_gap": -19,
+      "references": 297
+    },
+    {
+      "year_gap": -18,
+      "references": 477
+    },
+    {
+      "year_gap": -17,
+      "references": 391
+    },
+    {
+      "year_gap": -16,
+      "references": 408
+    },
+    {
+      "year_gap": -15,
+      "references": 444
+    },
+    {
+      "year_gap": -14,
+      "references": 473
+    },
+    {
+      "year_gap": -13,
+      "references": 627
+    },
+    {
+      "year_gap": -12,
+      "references": 739
+    },
+    {
+      "year_gap": -11,
+      "references": 640
+    },
+    {
+      "year_gap": -10,
+      "references": 791
+    },
+    {
+      "year_gap": -9,
+      "references": 852
+    },
+    {
+      "year_gap": -8,
+      "references": 811
+    },
+    {
+      "year_gap": -7,
+      "references": 1068
+    },
+    {
+      "year_gap": -6,
+      "references": 975
+    },
+    {
+      "year_gap": -5,
+      "references": 1171
+    },
+    {
+      "year_gap": -4,
+      "references": 1323
+    },
+    {
+      "year_gap": -3,
+      "references": 1631
+    },
+    {
+      "year_gap": -2,
+      "references": 2248
+    },
+    {
+      "year_gap": -1,
+      "references": 3447
+    },
+    {
+      "year_gap": 0,
+      "references": 9387
+    },
+    {
+      "year_gap": 1,
+      "references": 1088
+    },
+    {
+      "year_gap": 2,
+      "references": 707
+    },
+    {
+      "year_gap": 3,
+      "references": 547
+    },
+    {
+      "year_gap": 4,
+      "references": 435
+    },
+    {
+      "year_gap": 5,
+      "references": 392
+    },
+    {
+      "year_gap": 6,
+      "references": 307
+    },
+    {
+      "year_gap": 7,
+      "references": 259
+    },
+    {
+      "year_gap": 8,
+      "references": 262
+    },
+    {
+      "year_gap": 9,
+      "references": 219
+    },
+    {
+      "year_gap": 10,
+      "references": 205
+    },
+    {
+      "year_gap": 11,
+      "references": 183
+    },
+    {
+      "year_gap": 12,
+      "references": 166
+    },
+    {
+      "year_gap": 13,
+      "references": 151
+    },
+    {
+      "year_gap": 14,
+      "references": 118
+    },
+    {
+      "year_gap": 15,
+      "references": 93
+    },
+    {
+      "year_gap": 16,
+      "references": 91
+    },
+    {
+      "year_gap": 17,
+      "references": 78
+    },
+    {
+      "year_gap": 18,
+      "references": 62
+    },
+    {
+      "year_gap": 19,
+      "references": 57
+    },
+    {
+      "year_gap": 20,
+      "references": 21
+    },
+    {
+      "year_gap": 21,
+      "references": 10
+    },
+    {
+      "year_gap": 22,
+      "references": 1
+    },
+    {
+      "year_gap": 39,
+      "references": 3
+    }
+  ]
+}

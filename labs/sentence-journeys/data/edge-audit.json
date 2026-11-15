@@ -1,0 +1,11 @@
+{
+  "title": "edge-audit",
+  "unit": "edges",
+  "source": "sql/edge-audit.sql",
+  "rows": [
+    {
+      "edges": 2560,
+      "ambiguous_removal": 0.0
+    }
+  ]
+}

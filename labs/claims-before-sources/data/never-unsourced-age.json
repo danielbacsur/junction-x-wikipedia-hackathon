@@ -1,0 +1,12 @@
+{
+  "title": "No current reference and no reference in observed slot history",
+  "unit": "paragraphs",
+  "source": "wtt snapshot 2026-10-01; labs/claims-before-sources; never-unsourced-age",
+  "rows": [
+    {
+      "years5": 29551.0,
+      "years10": 25631.0,
+      "years15": 19021.0
+    }
+  ]
+}

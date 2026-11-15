@@ -1,0 +1,151 @@
+{
+  "title": "Quantity substitutions only; tenfold overlaps percentage bins",
+  "unit": "substitution",
+  "source": "wtt; run.py; cutoff 2026-10-01 10:59:12 UTC",
+  "rows": [
+    {
+      "population": "all",
+      "classification": "relative change",
+      "band": "1–10%",
+      "count": 765,
+      "denominator": 2510,
+      "share": 0.3047808764940239
+    },
+    {
+      "population": "all",
+      "classification": "relative change",
+      "band": "at least tenfold (overlapping)",
+      "count": 211,
+      "denominator": 2510,
+      "share": 0.08406374501992032
+    },
+    {
+      "population": "all",
+      "classification": "relative change",
+      "band": "over 10%",
+      "count": 1131,
+      "denominator": 2510,
+      "share": 0.450597609561753
+    },
+    {
+      "population": "all",
+      "classification": "relative change",
+      "band": "under 1%",
+      "count": 611,
+      "denominator": 2510,
+      "share": 0.24342629482071712
+    },
+    {
+      "population": "all",
+      "classification": "relative change",
+      "band": "zero baseline",
+      "count": 3,
+      "denominator": 2510,
+      "share": 0.001195219123505976
+    },
+    {
+      "population": "all",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "digit transposition shape",
+      "count": 11,
+      "denominator": 2510,
+      "share": 0.004382470119521913
+    },
+    {
+      "population": "all",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "other",
+      "count": 1046,
+      "denominator": 2510,
+      "share": 0.41673306772908364
+    },
+    {
+      "population": "all",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "single digit insertion/deletion shape",
+      "count": 138,
+      "denominator": 2510,
+      "share": 0.0549800796812749
+    },
+    {
+      "population": "all",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "single digit replacement shape",
+      "count": 1315,
+      "denominator": 2510,
+      "share": 0.5239043824701195
+    },
+    {
+      "population": "clean",
+      "classification": "relative change",
+      "band": "1–10%",
+      "count": 629,
+      "denominator": 1918,
+      "share": 0.32794577685088633
+    },
+    {
+      "population": "clean",
+      "classification": "relative change",
+      "band": "at least tenfold (overlapping)",
+      "count": 57,
+      "denominator": 1918,
+      "share": 0.029718456725755994
+    },
+    {
+      "population": "clean",
+      "classification": "relative change",
+      "band": "over 10%",
+      "count": 725,
+      "denominator": 1918,
+      "share": 0.37799791449426484
+    },
+    {
+      "population": "clean",
+      "classification": "relative change",
+      "band": "under 1%",
+      "count": 561,
+      "denominator": 1918,
+      "share": 0.2924921793534932
+    },
+    {
+      "population": "clean",
+      "classification": "relative change",
+      "band": "zero baseline",
+      "count": 3,
+      "denominator": 1918,
+      "share": 0.0015641293013555788
+    },
+    {
+      "population": "clean",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "digit transposition shape",
+      "count": 11,
+      "denominator": 1918,
+      "share": 0.005735140771637122
+    },
+    {
+      "population": "clean",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "other",
+      "count": 773,
+      "denominator": 1918,
+      "share": 0.4030239833159541
+    },
+    {
+      "population": "clean",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "single digit insertion/deletion shape",
+      "count": 71,
+      "denominator": 1918,
+      "share": 0.0370177267987487
+    },
+    {
+      "population": "clean",
+      "classification": "digit pattern (not inferred intent)",
+      "band": "single digit replacement shape",
+      "count": 1063,
+      "denominator": 1918,
+      "share": 0.5542231491136601
+    }
+  ]
+}

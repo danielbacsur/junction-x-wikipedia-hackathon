@@ -1,0 +1,84 @@
+{
+  "title": "Six-month before/after comparison with prior-year seasonal reference",
+  "unit": "edits; fractions; seconds",
+  "source": "wtt.edit; sql/temp-comparison.sql",
+  "rows": [
+    {
+      "period": "after",
+      "editor_group": "anonymous",
+      "edits": 1573,
+      "observed_undone": 554.0,
+      "other_undone_7d": 502.0,
+      "other_undone_7d_share": 0.3191,
+      "valid_other_undone_7d": 502.0,
+      "median_7d_seconds": 974.5,
+      "p90_7d_seconds": 76928.2
+    },
+    {
+      "period": "after",
+      "editor_group": "named",
+      "edits": 9976,
+      "observed_undone": 291.0,
+      "other_undone_7d": 167.0,
+      "other_undone_7d_share": 0.0167,
+      "valid_other_undone_7d": 161.0,
+      "median_7d_seconds": 8381.0,
+      "p90_7d_seconds": 172960.0000000001
+    },
+    {
+      "period": "before",
+      "editor_group": "anonymous",
+      "edits": 2350,
+      "observed_undone": 658.0,
+      "other_undone_7d": 583.0,
+      "other_undone_7d_share": 0.2481,
+      "valid_other_undone_7d": 583.0,
+      "median_7d_seconds": 640.0,
+      "p90_7d_seconds": 218750.6
+    },
+    {
+      "period": "before",
+      "editor_group": "hidden",
+      "edits": 1,
+      "observed_undone": 1.0,
+      "other_undone_7d": 1.0,
+      "other_undone_7d_share": 1.0,
+      "valid_other_undone_7d": 1.0,
+      "median_7d_seconds": 19.0,
+      "p90_7d_seconds": 19.0
+    },
+    {
+      "period": "before",
+      "editor_group": "named",
+      "edits": 15603,
+      "observed_undone": 692.0,
+      "other_undone_7d": 426.0,
+      "other_undone_7d_share": 0.0273,
+      "valid_other_undone_7d": 416.0,
+      "median_7d_seconds": 68313.5,
+      "p90_7d_seconds": 441658.5
+    },
+    {
+      "period": "seasonal_baseline",
+      "editor_group": "anonymous",
+      "edits": 1910,
+      "observed_undone": 537.0,
+      "other_undone_7d": 490.0,
+      "other_undone_7d_share": 0.2565,
+      "valid_other_undone_7d": 490.0,
+      "median_7d_seconds": 933.5,
+      "p90_7d_seconds": 62906.4
+    },
+    {
+      "period": "seasonal_baseline",
+      "editor_group": "named",
+      "edits": 18123,
+      "observed_undone": 377.0,
+      "other_undone_7d": 211.0,
+      "other_undone_7d_share": 0.0116,
+      "valid_other_undone_7d": 205.0,
+      "median_7d_seconds": 5394.0,
+      "p90_7d_seconds": 215093.0
+    }
+  ]
+}

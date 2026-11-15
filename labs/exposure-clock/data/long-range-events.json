@@ -1,0 +1,207 @@
+{
+  "title": "Events contributing most version-hours",
+  "unit": "version-hours; counts",
+  "source": "wtt.edit; sql/long-range-events.sql",
+  "rows": [
+    {
+      "page_id": 11594,
+      "title": "Vanhoillislestadiolaisuus",
+      "revert_rev_id": 19772752,
+      "revert_at": "2021-05-14 11:42:21",
+      "revert_comment": "Ak: Sivu tyhjennettiin",
+      "span_edits": 1106,
+      "undone_versions": 998,
+      "version_hours": 88644178.7758
+    },
+    {
+      "page_id": 926229,
+      "title": "Juha Sipilä",
+      "revert_rev_id": 23792497,
+      "revert_at": "2026-01-18 01:20:09",
+      "revert_comment": null,
+      "span_edits": 507,
+      "undone_versions": 345,
+      "version_hours": 20760970.5106
+    },
+    {
+      "page_id": 11396,
+      "title": "Alexander Stubb",
+      "revert_rev_id": 23792494,
+      "revert_at": "2026-01-18 01:19:39",
+      "revert_comment": null,
+      "span_edits": 810,
+      "undone_versions": 586,
+      "version_hours": 18440657.3719
+    },
+    {
+      "page_id": 7650,
+      "title": "K. J. Ståhlberg",
+      "revert_rev_id": 14990842,
+      "revert_at": "2015-06-06 05:53:02",
+      "revert_comment": "Artikkeliin sisältö on siirretty aikaisempaan ohjaussivuun [[Kaarlo Juho Ståhlberg]]. Siirrä-komentoa ei voitu käyttää, koska ohjaussivua muokattu.",
+      "span_edits": 382,
+      "undone_versions": 312,
+      "version_hours": 16477479.4375
+    },
+    {
+      "page_id": 1345597,
+      "title": "Helsingin Asema-aukion pahoinpitely",
+      "revert_rev_id": 22575501,
+      "revert_at": "2024-08-15 17:53:58",
+      "revert_comment": "/* Taustaa */Tarkennus.",
+      "span_edits": 304,
+      "undone_versions": 252,
+      "version_hours": 15299398.6606
+    },
+    {
+      "page_id": 41622,
+      "title": "Timo Soini",
+      "revert_rev_id": 17997690,
+      "revert_at": "2019-03-12 12:35:11",
+      "revert_comment": "kaikkea vaan",
+      "span_edits": 454,
+      "undone_versions": 296,
+      "version_hours": 7653437.0706
+    },
+    {
+      "page_id": 41622,
+      "title": "Timo Soini",
+      "revert_rev_id": 23792489,
+      "revert_at": "2026-01-18 01:16:52",
+      "revert_comment": null,
+      "span_edits": 216,
+      "undone_versions": 145,
+      "version_hours": 4647764.8014
+    },
+    {
+      "page_id": 436339,
+      "title": "Jokelan koulusurmat",
+      "revert_rev_id": 24219526,
+      "revert_at": "2026-09-04 20:09:39",
+      "revert_comment": "/* */",
+      "span_edits": 130,
+      "undone_versions": 110,
+      "version_hours": 3688923.2433
+    },
+    {
+      "page_id": 5759,
+      "title": "Lestadiolaisuus",
+      "revert_rev_id": 4598367,
+      "revert_at": "2008-04-08 09:47:36",
+      "revert_comment": "Ak: Sivu tyhjennettiin",
+      "span_edits": 391,
+      "undone_versions": 323,
+      "version_hours": 3596156.3625
+    },
+    {
+      "page_id": 8643,
+      "title": "Kuivaniemi",
+      "revert_rev_id": 22368218,
+      "revert_at": "2024-05-04 21:54:59",
+      "revert_comment": null,
+      "span_edits": 81,
+      "undone_versions": 58,
+      "version_hours": 3518283.4906
+    },
+    {
+      "page_id": 1187,
+      "title": "Tarja Halonen",
+      "revert_rev_id": 1759690,
+      "revert_at": "2006-10-17 09:50:53",
+      "revert_comment": null,
+      "span_edits": 685,
+      "undone_versions": 446,
+      "version_hours": 3070609.3619
+    },
+    {
+      "page_id": 62410,
+      "title": "Jari Sillanpää",
+      "revert_rev_id": 18535881,
+      "revert_at": "2019-11-15 09:15:41",
+      "revert_comment": null,
+      "span_edits": 190,
+      "undone_versions": 140,
+      "version_hours": 2938379.8697
+    },
+    {
+      "page_id": 1187,
+      "title": "Tarja Halonen",
+      "revert_rev_id": 10323724,
+      "revert_at": "2011-06-19 13:30:39",
+      "revert_comment": null,
+      "span_edits": 508,
+      "undone_versions": 290,
+      "version_hours": 2878977.2497
+    },
+    {
+      "page_id": 1122968,
+      "title": "Maria Ohisalo",
+      "revert_rev_id": 23540777,
+      "revert_at": "2025-09-07 00:51:51",
+      "revert_comment": "vaihdoin asiat vähän realistisemmaksi",
+      "span_edits": 135,
+      "undone_versions": 108,
+      "version_hours": 2714752.7947
+    },
+    {
+      "page_id": 942,
+      "title": "Paavo Lipponen",
+      "revert_rev_id": 9846481,
+      "revert_at": "2011-02-26 03:14:29",
+      "revert_comment": "Ak: Sivun sisältö korvattiin sisällöllä ”Paavo Lipponen on eduskunnassa istuva läski, joka ei gravitaation takia kykene seisomaan.”",
+      "span_edits": 230,
+      "undone_versions": 182,
+      "version_hours": 2689541.3433
+    },
+    {
+      "page_id": 1508261,
+      "title": "Riikka Purra",
+      "revert_rev_id": 23645634,
+      "revert_at": "2025-10-28 14:35:19",
+      "revert_comment": "Lisätty lähteistettyjä tietoja Purran toiminnasta valtiovarainministerinä.",
+      "span_edits": 258,
+      "undone_versions": 165,
+      "version_hours": 2680808.0922
+    },
+    {
+      "page_id": 18561,
+      "title": "Pekka Haavisto",
+      "revert_rev_id": 22431973,
+      "revert_at": "2024-06-06 20:05:26",
+      "revert_comment": null,
+      "span_edits": 294,
+      "undone_versions": 210,
+      "version_hours": 2481547.7081
+    },
+    {
+      "page_id": 18561,
+      "title": "Pekka Haavisto",
+      "revert_rev_id": 18976311,
+      "revert_at": "2020-06-08 15:10:07",
+      "revert_comment": "/* Lähteet */",
+      "span_edits": 240,
+      "undone_versions": 181,
+      "version_hours": 2223127.9106
+    },
+    {
+      "page_id": 1275,
+      "title": "Urho Kekkonen",
+      "revert_rev_id": 2091441,
+      "revert_at": "2006-12-24 15:37:09",
+      "revert_comment": "Tyhjensi sivun",
+      "span_edits": 409,
+      "undone_versions": 333,
+      "version_hours": 2160140.3367
+    },
+    {
+      "page_id": 10858,
+      "title": "Jyrki Katainen",
+      "revert_rev_id": 18017630,
+      "revert_at": "2019-03-20 18:48:21",
+      "revert_comment": "/* Lähteet */",
+      "span_edits": 116,
+      "undone_versions": 84,
+      "version_hours": 2150032.7739
+    }
+  ]
+}

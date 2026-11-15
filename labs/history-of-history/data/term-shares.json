@@ -1,0 +1,2089 @@
+{
+ "title": "Share of history-of-Finland articles that mention a word, by snapshot date",
+ "unit": "articles mentioning the word at least once; share = articles / articles that existed on that date",
+ "source": "wtt.revision FOR SYSTEM_TIME AS OF each date (labs/history-of-history/term-shares.sql); rows with engine duckdb come from the same patterns on data/m/versions-*.parquet",
+ "patterns": {
+  "neuvostoliitto": "neuvostoliit",
+  "venaja": "venäjä",
+  "ruotsi": "ruotsi",
+  "saksa": "saksa",
+  "nato": "[^a-zåäö]nato",
+  "suomettuminen": "suomettu",
+  "talvisota": "talviso[dt]",
+  "jatkosota": "jatkoso[dt]",
+  "saamelainen": "saamelai",
+  "lappalainen": "lappalai"
+ },
+ "rows": [
+  {
+   "date": "2004-12-31",
+   "term": "neuvostoliitto",
+   "articles": 67,
+   "articles_total": 706,
+   "share": 0.0949,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "venaja",
+   "articles": 105,
+   "articles_total": 706,
+   "share": 0.1487,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "ruotsi",
+   "articles": 153,
+   "articles_total": 706,
+   "share": 0.2167,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "saksa",
+   "articles": 54,
+   "articles_total": 706,
+   "share": 0.0765,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "nato",
+   "articles": 2,
+   "articles_total": 706,
+   "share": 0.0028,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "suomettuminen",
+   "articles": 4,
+   "articles_total": 706,
+   "share": 0.0057,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "talvisota",
+   "articles": 40,
+   "articles_total": 706,
+   "share": 0.0567,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "jatkosota",
+   "articles": 41,
+   "articles_total": 706,
+   "share": 0.0581,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "saamelainen",
+   "articles": 9,
+   "articles_total": 706,
+   "share": 0.0127,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2004-12-31",
+   "term": "lappalainen",
+   "articles": 8,
+   "articles_total": 706,
+   "share": 0.0113,
+   "engine": "mariadb",
+   "seconds": 32.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "neuvostoliitto",
+   "articles": 218,
+   "articles_total": 2193,
+   "share": 0.0994,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "venaja",
+   "articles": 400,
+   "articles_total": 2193,
+   "share": 0.1824,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "ruotsi",
+   "articles": 412,
+   "articles_total": 2193,
+   "share": 0.1879,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "saksa",
+   "articles": 189,
+   "articles_total": 2193,
+   "share": 0.0862,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "nato",
+   "articles": 15,
+   "articles_total": 2193,
+   "share": 0.0068,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "suomettuminen",
+   "articles": 10,
+   "articles_total": 2193,
+   "share": 0.0046,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "talvisota",
+   "articles": 111,
+   "articles_total": 2193,
+   "share": 0.0506,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "jatkosota",
+   "articles": 118,
+   "articles_total": 2193,
+   "share": 0.0538,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "saamelainen",
+   "articles": 36,
+   "articles_total": 2193,
+   "share": 0.0164,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2005-12-31",
+   "term": "lappalainen",
+   "articles": 28,
+   "articles_total": 2193,
+   "share": 0.0128,
+   "engine": "mariadb",
+   "seconds": 34.8
+  },
+  {
+   "date": "2006-12-31",
+   "term": "neuvostoliitto",
+   "articles": 422,
+   "articles_total": 3735,
+   "share": 0.113,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "venaja",
+   "articles": 679,
+   "articles_total": 3735,
+   "share": 0.1818,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "ruotsi",
+   "articles": 680,
+   "articles_total": 3735,
+   "share": 0.1821,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "saksa",
+   "articles": 349,
+   "articles_total": 3735,
+   "share": 0.0934,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "nato",
+   "articles": 20,
+   "articles_total": 3735,
+   "share": 0.0054,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "suomettuminen",
+   "articles": 16,
+   "articles_total": 3735,
+   "share": 0.0043,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "talvisota",
+   "articles": 258,
+   "articles_total": 3735,
+   "share": 0.0691,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "jatkosota",
+   "articles": 299,
+   "articles_total": 3735,
+   "share": 0.0801,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "saamelainen",
+   "articles": 55,
+   "articles_total": 3735,
+   "share": 0.0147,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2006-12-31",
+   "term": "lappalainen",
+   "articles": 42,
+   "articles_total": 3735,
+   "share": 0.0112,
+   "engine": "mariadb",
+   "seconds": 30.3
+  },
+  {
+   "date": "2007-12-31",
+   "term": "neuvostoliitto",
+   "articles": 661,
+   "articles_total": 5815,
+   "share": 0.1137,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "venaja",
+   "articles": 998,
+   "articles_total": 5815,
+   "share": 0.1716,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "ruotsi",
+   "articles": 996,
+   "articles_total": 5815,
+   "share": 0.1713,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "saksa",
+   "articles": 682,
+   "articles_total": 5815,
+   "share": 0.1173,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "nato",
+   "articles": 25,
+   "articles_total": 5815,
+   "share": 0.0043,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "suomettuminen",
+   "articles": 18,
+   "articles_total": 5815,
+   "share": 0.0031,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "talvisota",
+   "articles": 412,
+   "articles_total": 5815,
+   "share": 0.0709,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "jatkosota",
+   "articles": 481,
+   "articles_total": 5815,
+   "share": 0.0827,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "saamelainen",
+   "articles": 71,
+   "articles_total": 5815,
+   "share": 0.0122,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2007-12-31",
+   "term": "lappalainen",
+   "articles": 68,
+   "articles_total": 5815,
+   "share": 0.0117,
+   "engine": "mariadb",
+   "seconds": 31.8
+  },
+  {
+   "date": "2008-12-31",
+   "term": "neuvostoliitto",
+   "articles": 840,
+   "articles_total": 7464,
+   "share": 0.1125,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "venaja",
+   "articles": 1412,
+   "articles_total": 7464,
+   "share": 0.1892,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "ruotsi",
+   "articles": 1308,
+   "articles_total": 7464,
+   "share": 0.1752,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "saksa",
+   "articles": 1200,
+   "articles_total": 7464,
+   "share": 0.1608,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "nato",
+   "articles": 27,
+   "articles_total": 7464,
+   "share": 0.0036,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "suomettuminen",
+   "articles": 20,
+   "articles_total": 7464,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "talvisota",
+   "articles": 710,
+   "articles_total": 7464,
+   "share": 0.0951,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "jatkosota",
+   "articles": 799,
+   "articles_total": 7464,
+   "share": 0.107,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "saamelainen",
+   "articles": 78,
+   "articles_total": 7464,
+   "share": 0.0105,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2008-12-31",
+   "term": "lappalainen",
+   "articles": 94,
+   "articles_total": 7464,
+   "share": 0.0126,
+   "engine": "mariadb",
+   "seconds": 32.7
+  },
+  {
+   "date": "2009-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1045,
+   "articles_total": 8788,
+   "share": 0.1189,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "venaja",
+   "articles": 1680,
+   "articles_total": 8788,
+   "share": 0.1912,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "ruotsi",
+   "articles": 1547,
+   "articles_total": 8788,
+   "share": 0.176,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "saksa",
+   "articles": 1532,
+   "articles_total": 8788,
+   "share": 0.1743,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "nato",
+   "articles": 39,
+   "articles_total": 8788,
+   "share": 0.0044,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "suomettuminen",
+   "articles": 24,
+   "articles_total": 8788,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "talvisota",
+   "articles": 932,
+   "articles_total": 8788,
+   "share": 0.1061,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "jatkosota",
+   "articles": 1035,
+   "articles_total": 8788,
+   "share": 0.1178,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "saamelainen",
+   "articles": 108,
+   "articles_total": 8788,
+   "share": 0.0123,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2009-12-31",
+   "term": "lappalainen",
+   "articles": 112,
+   "articles_total": 8788,
+   "share": 0.0127,
+   "engine": "mariadb",
+   "seconds": 33.8
+  },
+  {
+   "date": "2010-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1167,
+   "articles_total": 9612,
+   "share": 0.1214,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "venaja",
+   "articles": 1867,
+   "articles_total": 9612,
+   "share": 0.1942,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "ruotsi",
+   "articles": 1759,
+   "articles_total": 9612,
+   "share": 0.183,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "saksa",
+   "articles": 1677,
+   "articles_total": 9612,
+   "share": 0.1745,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "nato",
+   "articles": 38,
+   "articles_total": 9612,
+   "share": 0.004,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "suomettuminen",
+   "articles": 25,
+   "articles_total": 9612,
+   "share": 0.0026,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "talvisota",
+   "articles": 1086,
+   "articles_total": 9612,
+   "share": 0.113,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "jatkosota",
+   "articles": 1180,
+   "articles_total": 9612,
+   "share": 0.1228,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "saamelainen",
+   "articles": 116,
+   "articles_total": 9612,
+   "share": 0.0121,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2010-12-31",
+   "term": "lappalainen",
+   "articles": 131,
+   "articles_total": 9612,
+   "share": 0.0136,
+   "engine": "mariadb",
+   "seconds": 35.6
+  },
+  {
+   "date": "2011-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1276,
+   "articles_total": 10392,
+   "share": 0.1228,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "venaja",
+   "articles": 2027,
+   "articles_total": 10392,
+   "share": 0.1951,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "ruotsi",
+   "articles": 2012,
+   "articles_total": 10392,
+   "share": 0.1936,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "saksa",
+   "articles": 1796,
+   "articles_total": 10392,
+   "share": 0.1728,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "nato",
+   "articles": 44,
+   "articles_total": 10392,
+   "share": 0.0042,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "suomettuminen",
+   "articles": 29,
+   "articles_total": 10392,
+   "share": 0.0028,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "talvisota",
+   "articles": 1165,
+   "articles_total": 10392,
+   "share": 0.1121,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "jatkosota",
+   "articles": 1262,
+   "articles_total": 10392,
+   "share": 0.1214,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "saamelainen",
+   "articles": 123,
+   "articles_total": 10392,
+   "share": 0.0118,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2011-12-31",
+   "term": "lappalainen",
+   "articles": 139,
+   "articles_total": 10392,
+   "share": 0.0134,
+   "engine": "mariadb",
+   "seconds": 66.5
+  },
+  {
+   "date": "2012-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1360,
+   "articles_total": 11137,
+   "share": 0.1221,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "venaja",
+   "articles": 2188,
+   "articles_total": 11137,
+   "share": 0.1965,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "ruotsi",
+   "articles": 2210,
+   "articles_total": 11137,
+   "share": 0.1984,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "saksa",
+   "articles": 1887,
+   "articles_total": 11137,
+   "share": 0.1694,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "nato",
+   "articles": 49,
+   "articles_total": 11137,
+   "share": 0.0044,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "suomettuminen",
+   "articles": 30,
+   "articles_total": 11137,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "talvisota",
+   "articles": 1230,
+   "articles_total": 11137,
+   "share": 0.1104,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "jatkosota",
+   "articles": 1341,
+   "articles_total": 11137,
+   "share": 0.1204,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "saamelainen",
+   "articles": 142,
+   "articles_total": 11137,
+   "share": 0.0128,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2012-12-31",
+   "term": "lappalainen",
+   "articles": 152,
+   "articles_total": 11137,
+   "share": 0.0136,
+   "engine": "mariadb",
+   "seconds": 128.6
+  },
+  {
+   "date": "2013-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1448,
+   "articles_total": 12073,
+   "share": 0.1199,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "venaja",
+   "articles": 2388,
+   "articles_total": 12073,
+   "share": 0.1978,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "ruotsi",
+   "articles": 2427,
+   "articles_total": 12073,
+   "share": 0.201,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "saksa",
+   "articles": 1992,
+   "articles_total": 12073,
+   "share": 0.165,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "nato",
+   "articles": 51,
+   "articles_total": 12073,
+   "share": 0.0042,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "suomettuminen",
+   "articles": 31,
+   "articles_total": 12073,
+   "share": 0.0026,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "talvisota",
+   "articles": 1303,
+   "articles_total": 12073,
+   "share": 0.1079,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "jatkosota",
+   "articles": 1422,
+   "articles_total": 12073,
+   "share": 0.1178,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "saamelainen",
+   "articles": 163,
+   "articles_total": 12073,
+   "share": 0.0135,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2013-12-31",
+   "term": "lappalainen",
+   "articles": 161,
+   "articles_total": 12073,
+   "share": 0.0133,
+   "engine": "mariadb",
+   "seconds": 35.5
+  },
+  {
+   "date": "2014-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1533,
+   "articles_total": 12930,
+   "share": 0.1186,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "venaja",
+   "articles": 2565,
+   "articles_total": 12930,
+   "share": 0.1984,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "ruotsi",
+   "articles": 2657,
+   "articles_total": 12930,
+   "share": 0.2055,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "saksa",
+   "articles": 2112,
+   "articles_total": 12930,
+   "share": 0.1633,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "nato",
+   "articles": 58,
+   "articles_total": 12930,
+   "share": 0.0045,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "suomettuminen",
+   "articles": 33,
+   "articles_total": 12930,
+   "share": 0.0026,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "talvisota",
+   "articles": 1371,
+   "articles_total": 12930,
+   "share": 0.106,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "jatkosota",
+   "articles": 1487,
+   "articles_total": 12930,
+   "share": 0.115,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "saamelainen",
+   "articles": 175,
+   "articles_total": 12930,
+   "share": 0.0135,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2014-12-31",
+   "term": "lappalainen",
+   "articles": 207,
+   "articles_total": 12930,
+   "share": 0.016,
+   "engine": "mariadb",
+   "seconds": 36.9
+  },
+  {
+   "date": "2015-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1615,
+   "articles_total": 13734,
+   "share": 0.1176,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "venaja",
+   "articles": 2705,
+   "articles_total": 13734,
+   "share": 0.197,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "ruotsi",
+   "articles": 2824,
+   "articles_total": 13734,
+   "share": 0.2056,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "saksa",
+   "articles": 2206,
+   "articles_total": 13734,
+   "share": 0.1606,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "nato",
+   "articles": 66,
+   "articles_total": 13734,
+   "share": 0.0048,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "suomettuminen",
+   "articles": 37,
+   "articles_total": 13734,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "talvisota",
+   "articles": 1472,
+   "articles_total": 13734,
+   "share": 0.1072,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "jatkosota",
+   "articles": 1553,
+   "articles_total": 13734,
+   "share": 0.1131,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "saamelainen",
+   "articles": 186,
+   "articles_total": 13734,
+   "share": 0.0135,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2015-12-31",
+   "term": "lappalainen",
+   "articles": 233,
+   "articles_total": 13734,
+   "share": 0.017,
+   "engine": "mariadb",
+   "seconds": 38.6
+  },
+  {
+   "date": "2016-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1706,
+   "articles_total": 14681,
+   "share": 0.1162,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "venaja",
+   "articles": 2861,
+   "articles_total": 14681,
+   "share": 0.1949,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "ruotsi",
+   "articles": 3046,
+   "articles_total": 14681,
+   "share": 0.2075,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "saksa",
+   "articles": 2335,
+   "articles_total": 14681,
+   "share": 0.159,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "nato",
+   "articles": 74,
+   "articles_total": 14681,
+   "share": 0.005,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "suomettuminen",
+   "articles": 39,
+   "articles_total": 14681,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "talvisota",
+   "articles": 1537,
+   "articles_total": 14681,
+   "share": 0.1047,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "jatkosota",
+   "articles": 1610,
+   "articles_total": 14681,
+   "share": 0.1097,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "saamelainen",
+   "articles": 197,
+   "articles_total": 14681,
+   "share": 0.0134,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2016-12-31",
+   "term": "lappalainen",
+   "articles": 252,
+   "articles_total": 14681,
+   "share": 0.0172,
+   "engine": "mariadb",
+   "seconds": 104.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1763,
+   "articles_total": 15449,
+   "share": 0.1141,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "venaja",
+   "articles": 3010,
+   "articles_total": 15449,
+   "share": 0.1948,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "ruotsi",
+   "articles": 3211,
+   "articles_total": 15449,
+   "share": 0.2078,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "saksa",
+   "articles": 2452,
+   "articles_total": 15449,
+   "share": 0.1587,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "nato",
+   "articles": 80,
+   "articles_total": 15449,
+   "share": 0.0052,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "suomettuminen",
+   "articles": 40,
+   "articles_total": 15449,
+   "share": 0.0026,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "talvisota",
+   "articles": 1577,
+   "articles_total": 15449,
+   "share": 0.1021,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "jatkosota",
+   "articles": 1653,
+   "articles_total": 15449,
+   "share": 0.107,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "saamelainen",
+   "articles": 208,
+   "articles_total": 15449,
+   "share": 0.0135,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2017-12-31",
+   "term": "lappalainen",
+   "articles": 270,
+   "articles_total": 15449,
+   "share": 0.0175,
+   "engine": "mariadb",
+   "seconds": 42.8
+  },
+  {
+   "date": "2018-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1817,
+   "articles_total": 15965,
+   "share": 0.1138,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "venaja",
+   "articles": 3132,
+   "articles_total": 15965,
+   "share": 0.1962,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "ruotsi",
+   "articles": 3368,
+   "articles_total": 15965,
+   "share": 0.211,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "saksa",
+   "articles": 2558,
+   "articles_total": 15965,
+   "share": 0.1602,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "nato",
+   "articles": 85,
+   "articles_total": 15965,
+   "share": 0.0053,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "suomettuminen",
+   "articles": 44,
+   "articles_total": 15965,
+   "share": 0.0028,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "talvisota",
+   "articles": 1623,
+   "articles_total": 15965,
+   "share": 0.1017,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "jatkosota",
+   "articles": 1703,
+   "articles_total": 15965,
+   "share": 0.1067,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "saamelainen",
+   "articles": 220,
+   "articles_total": 15965,
+   "share": 0.0138,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2018-12-31",
+   "term": "lappalainen",
+   "articles": 298,
+   "articles_total": 15965,
+   "share": 0.0187,
+   "engine": "mariadb",
+   "seconds": 40.9
+  },
+  {
+   "date": "2019-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1879,
+   "articles_total": 16508,
+   "share": 0.1138,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "venaja",
+   "articles": 3250,
+   "articles_total": 16508,
+   "share": 0.1969,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "ruotsi",
+   "articles": 3503,
+   "articles_total": 16508,
+   "share": 0.2122,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "saksa",
+   "articles": 2645,
+   "articles_total": 16508,
+   "share": 0.1602,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "nato",
+   "articles": 89,
+   "articles_total": 16508,
+   "share": 0.0054,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "suomettuminen",
+   "articles": 44,
+   "articles_total": 16508,
+   "share": 0.0027,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "talvisota",
+   "articles": 1673,
+   "articles_total": 16508,
+   "share": 0.1013,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "jatkosota",
+   "articles": 1754,
+   "articles_total": 16508,
+   "share": 0.1063,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "saamelainen",
+   "articles": 230,
+   "articles_total": 16508,
+   "share": 0.0139,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2019-12-31",
+   "term": "lappalainen",
+   "articles": 319,
+   "articles_total": 16508,
+   "share": 0.0193,
+   "engine": "mariadb",
+   "seconds": 38.5
+  },
+  {
+   "date": "2020-12-31",
+   "term": "neuvostoliitto",
+   "articles": 1992,
+   "articles_total": 17188,
+   "share": 0.1159,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "venaja",
+   "articles": 3442,
+   "articles_total": 17188,
+   "share": 0.2003,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "ruotsi",
+   "articles": 3694,
+   "articles_total": 17188,
+   "share": 0.2149,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "saksa",
+   "articles": 2741,
+   "articles_total": 17188,
+   "share": 0.1595,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "nato",
+   "articles": 91,
+   "articles_total": 17188,
+   "share": 0.0053,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "suomettuminen",
+   "articles": 53,
+   "articles_total": 17188,
+   "share": 0.0031,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "talvisota",
+   "articles": 1715,
+   "articles_total": 17188,
+   "share": 0.0998,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "jatkosota",
+   "articles": 1818,
+   "articles_total": 17188,
+   "share": 0.1058,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "saamelainen",
+   "articles": 239,
+   "articles_total": 17188,
+   "share": 0.0139,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2020-12-31",
+   "term": "lappalainen",
+   "articles": 344,
+   "articles_total": 17188,
+   "share": 0.02,
+   "engine": "mariadb",
+   "seconds": 44.7
+  },
+  {
+   "date": "2021-12-31",
+   "term": "neuvostoliitto",
+   "articles": 2057,
+   "articles_total": 17860,
+   "share": 0.1152,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "venaja",
+   "articles": 3576,
+   "articles_total": 17860,
+   "share": 0.2002,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "ruotsi",
+   "articles": 3880,
+   "articles_total": 17860,
+   "share": 0.2172,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "saksa",
+   "articles": 2833,
+   "articles_total": 17860,
+   "share": 0.1586,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "nato",
+   "articles": 96,
+   "articles_total": 17860,
+   "share": 0.0054,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "suomettuminen",
+   "articles": 59,
+   "articles_total": 17860,
+   "share": 0.0033,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "talvisota",
+   "articles": 1763,
+   "articles_total": 17860,
+   "share": 0.0987,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "jatkosota",
+   "articles": 1873,
+   "articles_total": 17860,
+   "share": 0.1049,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "saamelainen",
+   "articles": 258,
+   "articles_total": 17860,
+   "share": 0.0144,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2021-12-31",
+   "term": "lappalainen",
+   "articles": 355,
+   "articles_total": 17860,
+   "share": 0.0199,
+   "engine": "mariadb",
+   "seconds": 162.6
+  },
+  {
+   "date": "2022-12-31",
+   "term": "neuvostoliitto",
+   "articles": 2121,
+   "articles_total": 18426,
+   "share": 0.1151,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "venaja",
+   "articles": 3753,
+   "articles_total": 18426,
+   "share": 0.2037,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "ruotsi",
+   "articles": 4044,
+   "articles_total": 18426,
+   "share": 0.2195,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "saksa",
+   "articles": 2900,
+   "articles_total": 18426,
+   "share": 0.1574,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "nato",
+   "articles": 120,
+   "articles_total": 18426,
+   "share": 0.0065,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "suomettuminen",
+   "articles": 67,
+   "articles_total": 18426,
+   "share": 0.0036,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "talvisota",
+   "articles": 1814,
+   "articles_total": 18426,
+   "share": 0.0984,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "jatkosota",
+   "articles": 1937,
+   "articles_total": 18426,
+   "share": 0.1051,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "saamelainen",
+   "articles": 268,
+   "articles_total": 18426,
+   "share": 0.0145,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2022-12-31",
+   "term": "lappalainen",
+   "articles": 373,
+   "articles_total": 18426,
+   "share": 0.0202,
+   "engine": "mariadb",
+   "seconds": 83.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "neuvostoliitto",
+   "articles": 2182,
+   "articles_total": 18853,
+   "share": 0.1157,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "venaja",
+   "articles": 3863,
+   "articles_total": 18853,
+   "share": 0.2049,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "ruotsi",
+   "articles": 4192,
+   "articles_total": 18853,
+   "share": 0.2224,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "saksa",
+   "articles": 2963,
+   "articles_total": 18853,
+   "share": 0.1572,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "nato",
+   "articles": 157,
+   "articles_total": 18853,
+   "share": 0.0083,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "suomettuminen",
+   "articles": 73,
+   "articles_total": 18853,
+   "share": 0.0039,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "talvisota",
+   "articles": 1866,
+   "articles_total": 18853,
+   "share": 0.099,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "jatkosota",
+   "articles": 1985,
+   "articles_total": 18853,
+   "share": 0.1053,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "saamelainen",
+   "articles": 277,
+   "articles_total": 18853,
+   "share": 0.0147,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2023-12-31",
+   "term": "lappalainen",
+   "articles": 382,
+   "articles_total": 18853,
+   "share": 0.0203,
+   "engine": "mariadb",
+   "seconds": 60.5
+  },
+  {
+   "date": "2024-12-31",
+   "term": "neuvostoliitto",
+   "articles": 2241,
+   "articles_total": 19248,
+   "share": 0.1164,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "venaja",
+   "articles": 4003,
+   "articles_total": 19248,
+   "share": 0.208,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "ruotsi",
+   "articles": 4359,
+   "articles_total": 19248,
+   "share": 0.2265,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "saksa",
+   "articles": 3041,
+   "articles_total": 19248,
+   "share": 0.158,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "nato",
+   "articles": 174,
+   "articles_total": 19248,
+   "share": 0.009,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "suomettuminen",
+   "articles": 89,
+   "articles_total": 19248,
+   "share": 0.0046,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "talvisota",
+   "articles": 1908,
+   "articles_total": 19248,
+   "share": 0.0991,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "jatkosota",
+   "articles": 2038,
+   "articles_total": 19248,
+   "share": 0.1059,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "saamelainen",
+   "articles": 290,
+   "articles_total": 19248,
+   "share": 0.0151,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2024-12-31",
+   "term": "lappalainen",
+   "articles": 394,
+   "articles_total": 19248,
+   "share": 0.0205,
+   "engine": "mariadb",
+   "seconds": 47.9
+  },
+  {
+   "date": "2025-12-31",
+   "term": "neuvostoliitto",
+   "articles": 2299,
+   "articles_total": 19550,
+   "share": 0.1176,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "venaja",
+   "articles": 4093,
+   "articles_total": 19550,
+   "share": 0.2094,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "ruotsi",
+   "articles": 4495,
+   "articles_total": 19550,
+   "share": 0.2299,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "saksa",
+   "articles": 3114,
+   "articles_total": 19550,
+   "share": 0.1593,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "nato",
+   "articles": 181,
+   "articles_total": 19550,
+   "share": 0.0093,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "suomettuminen",
+   "articles": 93,
+   "articles_total": 19550,
+   "share": 0.0048,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "talvisota",
+   "articles": 1974,
+   "articles_total": 19550,
+   "share": 0.101,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "jatkosota",
+   "articles": 2118,
+   "articles_total": 19550,
+   "share": 0.1083,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "saamelainen",
+   "articles": 296,
+   "articles_total": 19550,
+   "share": 0.0151,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2025-12-31",
+   "term": "lappalainen",
+   "articles": 399,
+   "articles_total": 19550,
+   "share": 0.0204,
+   "engine": "mariadb",
+   "seconds": 89.6
+  },
+  {
+   "date": "2026-10-01",
+   "term": "neuvostoliitto",
+   "articles": 2346,
+   "articles_total": 19742,
+   "share": 0.1188,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "venaja",
+   "articles": 4183,
+   "articles_total": 19742,
+   "share": 0.2119,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "ruotsi",
+   "articles": 4584,
+   "articles_total": 19742,
+   "share": 0.2322,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "saksa",
+   "articles": 3170,
+   "articles_total": 19742,
+   "share": 0.1606,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "nato",
+   "articles": 189,
+   "articles_total": 19742,
+   "share": 0.0096,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "suomettuminen",
+   "articles": 94,
+   "articles_total": 19742,
+   "share": 0.0048,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "talvisota",
+   "articles": 2012,
+   "articles_total": 19742,
+   "share": 0.1019,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "jatkosota",
+   "articles": 2182,
+   "articles_total": 19742,
+   "share": 0.1105,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "saamelainen",
+   "articles": 303,
+   "articles_total": 19742,
+   "share": 0.0153,
+   "engine": "mariadb",
+   "seconds": 709.4
+  },
+  {
+   "date": "2026-10-01",
+   "term": "lappalainen",
+   "articles": 416,
+   "articles_total": 19742,
+   "share": 0.0211,
+   "engine": "mariadb",
+   "seconds": 709.4
+  }
+ ]
+}

@@ -1,0 +1,1951 @@
+{
+  "title": "Kaplan–Meier survival: length",
+  "unit": "probability",
+  "source": "sql/survival-curves.sql; sql/build-km.sql; censor undone removals; wording_raw sensitivity; null beyond observed follow-up",
+  "rows": [
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 5723.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 3600,
+      "survival": 0.8531463374173295,
+      "at_risk": 4445.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 86400,
+      "survival": 0.8420128620170186,
+      "at_risk": 4385.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 604800,
+      "survival": 0.8299125365372182,
+      "at_risk": 4320.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 2592000,
+      "survival": 0.8237568979186326,
+      "at_risk": 4272.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 7776000,
+      "survival": 0.8183438423197378,
+      "at_risk": 4220.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 15552000,
+      "survival": 0.812097604293494,
+      "at_risk": 4140.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 31557600,
+      "survival": 0.8018436590746968,
+      "at_risk": 4029.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 63115200,
+      "survival": 0.7926574290134574,
+      "at_risk": 3790.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 94672800,
+      "survival": 0.7873253717946819,
+      "at_risk": 3596.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 126230400,
+      "survival": 0.785063843303615,
+      "at_risk": 3422.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 157788000,
+      "survival": 0.7817325792415271,
+      "at_risk": 3197.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 189345600,
+      "survival": 0.7797276622647322,
+      "at_risk": 2934.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 220903200,
+      "survival": 0.7769699591366674,
+      "at_risk": 2700.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 252460800,
+      "survival": 0.7743171645396841,
+      "at_risk": 2533.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 284018400,
+      "survival": 0.7720357083670926,
+      "at_risk": 2273.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 315576000,
+      "survival": 0.768894584297095,
+      "at_risk": 2014.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 347133600,
+      "survival": 0.7660992071330622,
+      "at_risk": 1797.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 378691200,
+      "survival": 0.7633861568550928,
+      "at_risk": 1566.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 410248800,
+      "survival": 0.742742170972247,
+      "at_risk": 1394.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 441806400,
+      "survival": 0.7394292654806811,
+      "at_risk": 1265.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 473364000,
+      "survival": 0.7370047299257234,
+      "at_risk": 1113.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 504921600,
+      "survival": 0.7348623535802415,
+      "at_risk": 917.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 536479200,
+      "survival": 0.7330720405809256,
+      "at_risk": 773.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 568036800,
+      "survival": 0.7317745679427292,
+      "at_risk": 549.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 599594400,
+      "survival": 0.7262875687755365,
+      "at_risk": 315.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 631152000,
+      "survival": 0.7212086347281551,
+      "at_risk": 138.0,
+      "n": 5723.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 83258.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 3600,
+      "survival": 0.95556461650321,
+      "at_risk": 78567.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 86400,
+      "survival": 0.9362093500990555,
+      "at_risk": 76868.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 604800,
+      "survival": 0.9229176760357078,
+      "at_risk": 75703.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 2592000,
+      "survival": 0.912576288440277,
+      "at_risk": 74589.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 7776000,
+      "survival": 0.9029471978295528,
+      "at_risk": 73393.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 15552000,
+      "survival": 0.8951030290961783,
+      "at_risk": 72095.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 31557600,
+      "survival": 0.8829211647101655,
+      "at_risk": 69789.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 63115200,
+      "survival": 0.8670514574806617,
+      "at_risk": 66060.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 94672800,
+      "survival": 0.8543324177566409,
+      "at_risk": 62702.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 126230400,
+      "survival": 0.845351355546959,
+      "at_risk": 59807.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 157788000,
+      "survival": 0.837599435216485,
+      "at_risk": 56724.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 189345600,
+      "survival": 0.8290835126261556,
+      "at_risk": 53443.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 220903200,
+      "survival": 0.8216520485203742,
+      "at_risk": 50552.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 252460800,
+      "survival": 0.8161527447080317,
+      "at_risk": 47991.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 284018400,
+      "survival": 0.8105172683608005,
+      "at_risk": 45028.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 315576000,
+      "survival": 0.8039193566100086,
+      "at_risk": 42071.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 347133600,
+      "survival": 0.7971926236940892,
+      "at_risk": 38889.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 378691200,
+      "survival": 0.7917389359841456,
+      "at_risk": 36032.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 410248800,
+      "survival": 0.7849401187499531,
+      "at_risk": 32514.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 441806400,
+      "survival": 0.7787301969268925,
+      "at_risk": 29230.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 473364000,
+      "survival": 0.773537904477879,
+      "at_risk": 26290.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 504921600,
+      "survival": 0.7651074726347713,
+      "at_risk": 23427.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 536479200,
+      "survival": 0.7586876076466683,
+      "at_risk": 20477.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 568036800,
+      "survival": 0.7523395197512974,
+      "at_risk": 15774.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 599594400,
+      "survival": 0.7456424133953771,
+      "at_risk": 10837.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 631152000,
+      "survival": 0.738901099190906,
+      "at_risk": 5915.0,
+      "n": 83258.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 36078.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 3600,
+      "survival": 0.9668144336190739,
+      "at_risk": 33433.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 86400,
+      "survival": 0.9542889058955355,
+      "at_risk": 32978.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 604800,
+      "survival": 0.9432025126719071,
+      "at_risk": 32571.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 2592000,
+      "survival": 0.9354905932958893,
+      "at_risk": 32164.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 7776000,
+      "survival": 0.9285746592157101,
+      "at_risk": 31706.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 15552000,
+      "survival": 0.9238968159071396,
+      "at_risk": 31248.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 31557600,
+      "survival": 0.9159521188711441,
+      "at_risk": 30355.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 63115200,
+      "survival": 0.9070886805023407,
+      "at_risk": 28843.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 94672800,
+      "survival": 0.900687712720786,
+      "at_risk": 27467.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 126230400,
+      "survival": 0.8956654664915993,
+      "at_risk": 26209.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 157788000,
+      "survival": 0.8915821640396016,
+      "at_risk": 24689.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 189345600,
+      "survival": 0.8862565444024383,
+      "at_risk": 22978.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 220903200,
+      "survival": 0.8822110524694733,
+      "at_risk": 21377.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 252460800,
+      "survival": 0.8777755241529243,
+      "at_risk": 20069.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 284018400,
+      "survival": 0.8743824896174348,
+      "at_risk": 18531.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 315576000,
+      "survival": 0.8687176259458896,
+      "at_risk": 16798.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 347133600,
+      "survival": 0.8649601065190429,
+      "at_risk": 15156.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 378691200,
+      "survival": 0.8616058745100699,
+      "at_risk": 13732.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 410248800,
+      "survival": 0.8555091300786605,
+      "at_risk": 12360.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 441806400,
+      "survival": 0.851906154888142,
+      "at_risk": 11096.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 473364000,
+      "survival": 0.8483463411479194,
+      "at_risk": 9879.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 504921600,
+      "survival": 0.84360174636937,
+      "at_risk": 8678.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 536479200,
+      "survival": 0.8390423141360611,
+      "at_risk": 7385.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 568036800,
+      "survival": 0.8351112558437018,
+      "at_risk": 5413.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 599594400,
+      "survival": 0.8275567286207927,
+      "at_risk": 3519.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 631152000,
+      "survival": 0.8201524032873239,
+      "at_risk": 1756.0,
+      "n": 36078.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 56808.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 3600,
+      "survival": 0.8878857486283372,
+      "at_risk": 49257.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 86400,
+      "survival": 0.8501157423554673,
+      "at_risk": 47072.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 604800,
+      "survival": 0.8261397801458008,
+      "at_risk": 45694.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 2592000,
+      "survival": 0.807420465156143,
+      "at_risk": 44532.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 7776000,
+      "survival": 0.789057484099372,
+      "at_risk": 43344.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 15552000,
+      "survival": 0.7724895046805639,
+      "at_risk": 42056.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 31557600,
+      "survival": 0.7474627347817338,
+      "at_risk": 39949.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 63115200,
+      "survival": 0.7158839571684568,
+      "at_risk": 37046.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 94672800,
+      "survival": 0.6948631002096469,
+      "at_risk": 34607.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 126230400,
+      "survival": 0.6799898352549065,
+      "at_risk": 32759.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 157788000,
+      "survival": 0.665955910150531,
+      "at_risk": 30770.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 189345600,
+      "survival": 0.6531038279066993,
+      "at_risk": 28417.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 220903200,
+      "survival": 0.642671714262631,
+      "at_risk": 26652.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 252460800,
+      "survival": 0.6322922183278776,
+      "at_risk": 24799.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 284018400,
+      "survival": 0.6230964133737783,
+      "at_risk": 23117.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 315576000,
+      "survival": 0.6141033070286267,
+      "at_risk": 21527.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 347133600,
+      "survival": 0.6059456432827203,
+      "at_risk": 19659.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 378691200,
+      "survival": 0.5988192538486179,
+      "at_risk": 18122.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 410248800,
+      "survival": 0.5909783627517128,
+      "at_risk": 16162.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 441806400,
+      "survival": 0.5848010550918961,
+      "at_risk": 14441.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 473364000,
+      "survival": 0.5779093358672792,
+      "at_risk": 12985.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 504921600,
+      "survival": 0.5699701983237146,
+      "at_risk": 11482.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 536479200,
+      "survival": 0.5618377933496193,
+      "at_risk": 9988.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 568036800,
+      "survival": 0.5557593168226953,
+      "at_risk": 7901.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 599594400,
+      "survival": 0.5491344005400499,
+      "at_risk": 5689.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "slot",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 631152000,
+      "survival": 0.5437660530161873,
+      "at_risk": 3031.0,
+      "n": 56808.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 45750.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 3600,
+      "survival": 0.8022593584151342,
+      "at_risk": 35546.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 86400,
+      "survival": 0.6936758347559789,
+      "at_risk": 30327.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 604800,
+      "survival": 0.6134753958874282,
+      "at_risk": 26325.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 2592000,
+      "survival": 0.5474375018210454,
+      "at_risk": 22974.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 7776000,
+      "survival": 0.4775129105263681,
+      "at_risk": 19450.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 15552000,
+      "survival": 0.4168860199603518,
+      "at_risk": 16443.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 31557600,
+      "survival": 0.34043856623721847,
+      "at_risk": 12848.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 63115200,
+      "survival": 0.2583098979056504,
+      "at_risk": 8756.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 94672800,
+      "survival": 0.2048831457971164,
+      "at_risk": 6244.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 126230400,
+      "survival": 0.16551976393508422,
+      "at_risk": 4462.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 157788000,
+      "survival": 0.13649174897585023,
+      "at_risk": 3199.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 189345600,
+      "survival": 0.1137657137279459,
+      "at_risk": 2344.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 220903200,
+      "survival": 0.09721584948712896,
+      "at_risk": 1737.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 252460800,
+      "survival": 0.08178987291875524,
+      "at_risk": 1305.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 284018400,
+      "survival": 0.07025149860733179,
+      "at_risk": 987.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 315576000,
+      "survival": 0.060583888963385166,
+      "at_risk": 709.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 347133600,
+      "survival": 0.052417174298910664,
+      "at_risk": 512.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 378691200,
+      "survival": 0.04462311575034178,
+      "at_risk": 341.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 410248800,
+      "survival": 0.04007069037670905,
+      "at_risk": 263.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 441806400,
+      "survival": 0.03741188929249221,
+      "at_risk": 200.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 473364000,
+      "survival": 0.033278829291705454,
+      "at_risk": 152.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 504921600,
+      "survival": 0.03223393942787855,
+      "at_risk": 87.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 536479200,
+      "survival": 0.031859126178717175,
+      "at_risk": 33.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 568036800,
+      "survival": 0.029735184433469355,
+      "at_risk": 6.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 599594400,
+      "survival": 0.029735184433469355,
+      "at_risk": 3.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "1000+",
+      "age_seconds": 631152000,
+      "survival": null,
+      "at_risk": 0.0,
+      "n": 45750.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 0,
+      "survival": 0.9999976172492095,
+      "at_risk": 419683.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 3600,
+      "survival": 0.8526597715831744,
+      "at_risk": 348353.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 86400,
+      "survival": 0.775746909826733,
+      "at_risk": 312488.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 604800,
+      "survival": 0.7231903577213195,
+      "at_risk": 287137.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 2592000,
+      "survival": 0.6719384362859885,
+      "at_risk": 261705.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 7776000,
+      "survival": 0.6069143467176814,
+      "at_risk": 230476.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 15552000,
+      "survival": 0.5466971627336442,
+      "at_risk": 202060.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 31557600,
+      "survival": 0.4630306781340109,
+      "at_risk": 164011.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 63115200,
+      "survival": 0.36786589788368496,
+      "at_risk": 119620.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 94672800,
+      "survival": 0.3072541302657927,
+      "at_risk": 92347.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 126230400,
+      "survival": 0.26300150433392816,
+      "at_risk": 72100.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 157788000,
+      "survival": 0.22888963316260574,
+      "at_risk": 57235.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 189345600,
+      "survival": 0.20108408103452008,
+      "at_risk": 46285.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 220903200,
+      "survival": 0.17788378983111136,
+      "at_risk": 37302.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 252460800,
+      "survival": 0.15846641522284363,
+      "at_risk": 30525.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 284018400,
+      "survival": 0.14074121694538214,
+      "at_risk": 24878.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 315576000,
+      "survival": 0.1268150880065017,
+      "at_risk": 20300.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 347133600,
+      "survival": 0.11486525217586135,
+      "at_risk": 16072.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 378691200,
+      "survival": 0.10477625046573392,
+      "at_risk": 12510.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 410248800,
+      "survival": 0.09580707061289745,
+      "at_risk": 9688.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 441806400,
+      "survival": 0.08862514041322715,
+      "at_risk": 7593.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 473364000,
+      "survival": 0.08175349904593125,
+      "at_risk": 6056.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 504921600,
+      "survival": 0.07549846759158396,
+      "at_risk": 4468.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 536479200,
+      "survival": 0.07070053235308606,
+      "at_risk": 2882.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 568036800,
+      "survival": 0.06535474004940899,
+      "at_risk": 1431.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 599594400,
+      "survival": 0.06148031687176179,
+      "at_risk": 708.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "200-499",
+      "age_seconds": 631152000,
+      "survival": 0.05849426370156409,
+      "at_risk": 230.0,
+      "n": 419683.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 0,
+      "survival": 1.0,
+      "at_risk": 250514.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 3600,
+      "survival": 0.8394504787691616,
+      "at_risk": 203886.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 86400,
+      "survival": 0.7534956802619088,
+      "at_risk": 180596.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 604800,
+      "survival": 0.6936332218672602,
+      "at_risk": 163597.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 2592000,
+      "survival": 0.6369904869902262,
+      "at_risk": 147014.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 7776000,
+      "survival": 0.5719266700742169,
+      "at_risk": 128268.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 15552000,
+      "survival": 0.5116816891799897,
+      "at_risk": 111255.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 31557600,
+      "survival": 0.4287960376895477,
+      "at_risk": 88996.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 63115200,
+      "survival": 0.33501659863217936,
+      "at_risk": 63015.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 94672800,
+      "survival": 0.2741827312153618,
+      "at_risk": 46852.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 126230400,
+      "survival": 0.23046754773057768,
+      "at_risk": 35165.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 157788000,
+      "survival": 0.19675325283090445,
+      "at_risk": 26877.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 189345600,
+      "survival": 0.17103488090127453,
+      "at_risk": 21060.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 220903200,
+      "survival": 0.1494009120809952,
+      "at_risk": 16415.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 252460800,
+      "survival": 0.13016538813000617,
+      "at_risk": 12776.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 284018400,
+      "survival": 0.11411423020158135,
+      "at_risk": 10041.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 315576000,
+      "survival": 0.10148155294065944,
+      "at_risk": 7804.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 347133600,
+      "survival": 0.09088274440042043,
+      "at_risk": 5928.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 378691200,
+      "survival": 0.08257546282744674,
+      "at_risk": 4387.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 410248800,
+      "survival": 0.07514092707367157,
+      "at_risk": 3320.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 441806400,
+      "survival": 0.06843028069908967,
+      "at_risk": 2529.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 473364000,
+      "survival": 0.06175131049930541,
+      "at_risk": 1942.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 504921600,
+      "survival": 0.05715595616346924,
+      "at_risk": 1368.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 536479200,
+      "survival": 0.05333981272209719,
+      "at_risk": 799.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 568036800,
+      "survival": 0.0472956687154494,
+      "at_risk": 337.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 599594400,
+      "survival": 0.04141824068210262,
+      "at_risk": 140.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "500-999",
+      "age_seconds": 631152000,
+      "survival": 0.037747428127241835,
+      "at_risk": 38.0,
+      "n": 250514.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 0,
+      "survival": 0.9999750099960016,
+      "at_risk": 160064.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 3600,
+      "survival": 0.8364810979652242,
+      "at_risk": 129838.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 86400,
+      "survival": 0.7567460445105533,
+      "at_risk": 115937.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 604800,
+      "survival": 0.7045907965975123,
+      "at_risk": 106628.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 2592000,
+      "survival": 0.6569332881096418,
+      "at_risk": 97997.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 7776000,
+      "survival": 0.5974885448045272,
+      "at_risk": 87415.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 15552000,
+      "survival": 0.5429689057091722,
+      "at_risk": 77662.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 31557600,
+      "survival": 0.46709013058577936,
+      "at_risk": 64269.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 63115200,
+      "survival": 0.3781074485167651,
+      "at_risk": 48384.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 94672800,
+      "survival": 0.322967108224675,
+      "at_risk": 38399.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 126230400,
+      "survival": 0.2807764915262532,
+      "at_risk": 30710.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 157788000,
+      "survival": 0.24860202644928656,
+      "at_risk": 24929.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 189345600,
+      "survival": 0.22094641426220124,
+      "at_risk": 20261.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 220903200,
+      "survival": 0.19764930825160296,
+      "at_risk": 16562.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 252460800,
+      "survival": 0.17863822252524672,
+      "at_risk": 13794.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 284018400,
+      "survival": 0.1604336403066137,
+      "at_risk": 11372.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 315576000,
+      "survival": 0.14624160737366018,
+      "at_risk": 9551.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 347133600,
+      "survival": 0.13401333997767928,
+      "at_risk": 7644.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 378691200,
+      "survival": 0.12268766709130756,
+      "at_risk": 6115.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 410248800,
+      "survival": 0.11255031620309314,
+      "at_risk": 4680.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 441806400,
+      "survival": 0.1029321425259369,
+      "at_risk": 3640.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 473364000,
+      "survival": 0.09495866916919726,
+      "at_risk": 2867.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 504921600,
+      "survival": 0.08743264375319834,
+      "at_risk": 2202.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 536479200,
+      "survival": 0.081920092566115,
+      "at_risk": 1523.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 568036800,
+      "survival": 0.07745900874362494,
+      "at_risk": 861.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 599594400,
+      "survival": 0.07222010416241093,
+      "at_risk": 428.0,
+      "n": 160064.0
+    },
+    {
+      "endpoint": "wording",
+      "dimension": "length",
+      "grp": "80-199",
+      "age_seconds": 631152000,
+      "survival": 0.06907839440776811,
+      "at_risk": 160.0,
+      "n": 160064.0
+    }
+  ]
+}

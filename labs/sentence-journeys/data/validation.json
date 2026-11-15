@@ -1,0 +1,13 @@
+{
+  "title": "Independent interval and current-row crosschecks",
+  "unit": "checks",
+  "source": "sql/validate-raw.sql; sql/validate-presence.sql; sql/validate-current.sql; validate.py",
+  "rows": [
+    {
+      "shared_raw_rows": 5028,
+      "shared_presence_intervals": 4499,
+      "independent_interval_merge_matches": true,
+      "current_shared_direct": 100
+    }
+  ]
+}

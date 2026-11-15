@@ -1,0 +1,12 @@
+{
+  "title": "Named nonself revert totals",
+  "unit": "counts",
+  "source": "wtt.edit; sql/cluster-summary.sql",
+  "rows": [
+    {
+      "named_nonself_revert_events": 10930,
+      "named_nonself_undo_associations": 16234.0,
+      "article_months": 8020
+    }
+  ]
+}

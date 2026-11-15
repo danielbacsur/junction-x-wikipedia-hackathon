@@ -1,0 +1,140 @@
+{
+  "title": "Wall time of each showcase statement",
+  "unit": "milliseconds (median of 7 runs for SELECTs, single run for DDL and DML)",
+  "source": "report.py over sql/*.sql on lab_bitemporal_offices, MariaDB 12.3.3",
+  "rows": [
+    {
+      "query": "a-who-held-office",
+      "statement": 1,
+      "ms": 0.73,
+      "rows": 1
+    },
+    {
+      "query": "a2-answer-that-flips",
+      "statement": 1,
+      "ms": 0.88,
+      "rows": 4
+    },
+    {
+      "query": "a3-nobody",
+      "statement": 1,
+      "ms": 0.83,
+      "rows": 21
+    },
+    {
+      "query": "b-list-as-of",
+      "statement": 1,
+      "ms": 2.38,
+      "rows": 13
+    },
+    {
+      "query": "b2-list-as-of-long",
+      "statement": 1,
+      "ms": 0.85,
+      "rows": 48
+    },
+    {
+      "query": "b3-terms-now",
+      "statement": 1,
+      "ms": 1.46,
+      "rows": 35
+    },
+    {
+      "query": "c-term-changes",
+      "statement": 1,
+      "ms": 2.27,
+      "rows": 45
+    },
+    {
+      "query": "c2-change-summary",
+      "statement": 1,
+      "ms": 1.2,
+      "rows": 5
+    },
+    {
+      "query": "c3-short-lived",
+      "statement": 1,
+      "ms": 1.88,
+      "rows": 19
+    },
+    {
+      "query": "d-gaps-and-overlaps",
+      "statement": 1,
+      "ms": 1.73,
+      "rows": 3
+    },
+    {
+      "query": "d2-gaps-by-year",
+      "statement": 1,
+      "ms": 1.36,
+      "rows": 21
+    },
+    {
+      "query": "d3-two-at-once",
+      "statement": 1,
+      "ms": 1.85,
+      "rows": 10
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 1,
+      "ms": 13.56,
+      "rows": 0
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 2,
+      "ms": 0.94,
+      "rows": 13
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 3,
+      "ms": 1.08,
+      "rows": null,
+      "refused": "1062: Duplicate entry 'Suomen tasavallan presidentti-1982-01-27-1981-09-11' for key 'PRIMARY'"
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 4,
+      "ms": 0.57,
+      "rows": 1
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 5,
+      "ms": 0.52,
+      "rows": 1
+    },
+    {
+      "query": "e-for-portion-of",
+      "statement": 6,
+      "ms": 0.39,
+      "rows": 5
+    },
+    {
+      "query": "e2-portion-history",
+      "statement": 1,
+      "ms": 0.49,
+      "rows": 3
+    },
+    {
+      "query": "f-office-holder-function",
+      "statement": 1,
+      "ms": 5.2,
+      "rows": 0
+    },
+    {
+      "query": "f2-office-holder-calls",
+      "statement": 1,
+      "ms": 1.39,
+      "rows": 4
+    },
+    {
+      "query": "g-lifetimes",
+      "statement": 1,
+      "ms": 0.88,
+      "rows": 5
+    }
+  ]
+}

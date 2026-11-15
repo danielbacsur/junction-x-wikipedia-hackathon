@@ -1,0 +1,10 @@
+{
+  "title": "Named cluster events with missing restore hashes",
+  "unit": "events",
+  "source": "wtt.edit; sql/cluster-validity.sql",
+  "rows": [
+    {
+      "invalid_hash_named_revert_events": 26
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+Installed 2 packages in 24ms
+insert 0 3357 1.4
+insert 100 56407 21.9
+insert 200 65903 25.6
+insert 300 74979 29.2
+insert 400 83682 32.6
+insert 500 92058 36.0
+insert 600 100162 41.2
+insert 700 108002 47.8
+insert 800 115580 51.6
+insert 900 122889 55.2
+insert 1000 129962 58.7
+insert 1100 136785 62.3
+insert 1200 143376 68.0
+insert 1300 149747 73.0
+insert 1400 155901 76.4
+insert 1500 161900 79.5
+insert 1600 167716 82.4
+insert 1700 173377 85.3
+insert 1800 178887 88.0
+insert 1900 184231 90.6
+insert 2000 189409 93.2
+insert 2100 194464 95.7
+insert 2200 199399 98.0
+insert 2300 204186 100.2
+insert 2400 208860 102.4
+insert 2500 213419 104.6
+insert 2600 217884 106.8
+insert 2700 222264 109.0
+insert 2800 226535 110.9
+insert 2900 230728 112.8
+insert 3000 234828 114.7
+insert 3100 238842 116.5
+insert 3200 242777 118.4
+insert 3300 246630 120.1
+insert 3400 250423 121.9
+insert 3500 254123 123.8
+insert 3600 257764 125.6
+insert 3700 261359 127.3
+insert 3800 264859 128.8
+insert 3900 268303 130.4
+insert 4000 271703 132.0
+index start a
+index done a 132.73487633399782
+index start b
+index done b 84.55430308298673
+(('lab_temporal_ann.a', 'analyze', 'status', 'OK'), ('lab_temporal_ann.b', 'analyze', 'status', 'OK'), ('lab_temporal_ann.life', 'analyze', 'status', 'OK'))

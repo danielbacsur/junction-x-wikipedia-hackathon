@@ -1,0 +1,35 @@
+{
+  "title": "Supplied undo labels split by known restore hash",
+  "unit": "seconds; fractions; version-hours",
+  "source": "wtt.edit; sql/identity-sensitivity.sql",
+  "rows": [
+    {
+      "identity_valid": 0,
+      "n": 5354,
+      "median_seconds": 35915941.0,
+      "p75_seconds": 91984072.25,
+      "p90_seconds": 100000000.0,
+      "p99_seconds": 313049030.0800001,
+      "within_minute": 0.0032,
+      "within_hour": 0.0194,
+      "within_day": 0.0303,
+      "within_week": 0.0583,
+      "version_hours": 104560564.0483,
+      "exact_version_hours": 1317264.7444
+    },
+    {
+      "identity_valid": 1,
+      "n": 64822,
+      "median_seconds": 914.0,
+      "p75_seconds": 36914.75,
+      "p90_seconds": 1594253.9000000001,
+      "p99_seconds": 277204773.61,
+      "within_minute": 0.1867,
+      "within_hour": 0.6026,
+      "within_day": 0.8004,
+      "within_week": 0.8731,
+      "version_hours": 133894927.0447,
+      "exact_version_hours": 7996465.9258
+    }
+  ]
+}

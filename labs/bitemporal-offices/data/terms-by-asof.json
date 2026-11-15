@@ -1,0 +1,439 @@
+{
+  "title": "The presidents of Finland and their terms as Wikipedia stated them at the end of 2006, 2012, 2020 and now",
+  "unit": "one stated term per president per as-of date",
+  "source": "lab_bitemporal_offices.office_term; sql/b2-list-as-of-long.sql",
+  "rows": [
+    {
+      "as_of": "2006-12-31",
+      "person": "K. J. Ståhlberg",
+      "valid_from": "1919-07-26",
+      "valid_to": "1925-03-01",
+      "open_ended": 0,
+      "rev_id": 750824,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Lauri Kristian Relander",
+      "valid_from": "1925-03-01",
+      "valid_to": "1931-03-01",
+      "open_ended": 0,
+      "rev_id": 748942,
+      "said_since": "2006-01-29"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "P. E. Svinhufvud",
+      "valid_from": "1931-03-01",
+      "valid_to": "1937-03-01",
+      "open_ended": 0,
+      "rev_id": 748947,
+      "said_since": "2006-01-29"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Kyösti Kallio",
+      "valid_from": "1937-03-01",
+      "valid_to": "1940-12-19",
+      "open_ended": 0,
+      "rev_id": 752127,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Risto Ryti",
+      "valid_from": "1940-12-19",
+      "valid_to": "1944-08-04",
+      "open_ended": 0,
+      "rev_id": 766276,
+      "said_since": "2006-02-03"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Carl Gustaf Emil Mannerheim",
+      "valid_from": "1944-08-04",
+      "valid_to": "1946-03-11",
+      "open_ended": 0,
+      "rev_id": 1226241,
+      "said_since": "2006-06-07"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Juho Kusti Paasikivi",
+      "valid_from": "1946-03-11",
+      "valid_to": "1956-03-01",
+      "open_ended": 0,
+      "rev_id": 752115,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Urho Kekkonen",
+      "valid_from": "1956-03-01",
+      "valid_to": "1982-01-27",
+      "open_ended": 0,
+      "rev_id": 752136,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Mauno Koivisto",
+      "valid_from": "1982-01-27",
+      "valid_to": "1994-03-01",
+      "open_ended": 0,
+      "rev_id": 752110,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Martti Ahtisaari",
+      "valid_from": "1994-03-01",
+      "valid_to": "2000-03-01",
+      "open_ended": 0,
+      "rev_id": 706849,
+      "said_since": "2006-01-16"
+    },
+    {
+      "as_of": "2006-12-31",
+      "person": "Tarja Halonen",
+      "valid_from": "2000-03-01",
+      "valid_to": null,
+      "open_ended": 1,
+      "rev_id": 706840,
+      "said_since": "2006-01-16"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "K. J. Ståhlberg",
+      "valid_from": "1919-07-25",
+      "valid_to": "1925-03-01",
+      "open_ended": 0,
+      "rev_id": 11386714,
+      "said_since": "2012-03-14"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Lauri Kristian Relander",
+      "valid_from": "1925-03-01",
+      "valid_to": "1931-03-01",
+      "open_ended": 0,
+      "rev_id": 11386769,
+      "said_since": "2012-03-14"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "P. E. Svinhufvud",
+      "valid_from": "1931-03-01",
+      "valid_to": "1937-03-01",
+      "open_ended": 0,
+      "rev_id": 11386772,
+      "said_since": "2012-03-14"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Kyösti Kallio",
+      "valid_from": "1937-03-01",
+      "valid_to": "1940-12-19",
+      "open_ended": 0,
+      "rev_id": 9458959,
+      "said_since": "2010-11-30"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Risto Ryti",
+      "valid_from": "1940-12-19",
+      "valid_to": "1944-08-01",
+      "open_ended": 0,
+      "rev_id": 10528602,
+      "said_since": "2011-08-09"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Carl Gustaf Emil Mannerheim",
+      "valid_from": "1944-08-04",
+      "valid_to": "1946-03-04",
+      "open_ended": 0,
+      "rev_id": 10528644,
+      "said_since": "2011-08-09"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Juho Kusti Paasikivi",
+      "valid_from": "1946-03-11",
+      "valid_to": "1956-03-01",
+      "open_ended": 0,
+      "rev_id": 752115,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Urho Kekkonen",
+      "valid_from": "1956-03-01",
+      "valid_to": "1982-01-27",
+      "open_ended": 0,
+      "rev_id": 8566442,
+      "said_since": "2010-05-31"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Mauno Koivisto",
+      "valid_from": "1982-01-27",
+      "valid_to": "1994-03-01",
+      "open_ended": 0,
+      "rev_id": 752110,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Martti Ahtisaari",
+      "valid_from": "1994-03-01",
+      "valid_to": "2000-03-01",
+      "open_ended": 0,
+      "rev_id": 4682498,
+      "said_since": "2008-04-24"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Tarja Halonen",
+      "valid_from": "2000-03-01",
+      "valid_to": "2012-03-01",
+      "open_ended": 0,
+      "rev_id": 11237988,
+      "said_since": "2012-02-05"
+    },
+    {
+      "as_of": "2012-12-31",
+      "person": "Sauli Niinistö",
+      "valid_from": "2012-03-01",
+      "valid_to": null,
+      "open_ended": 1,
+      "rev_id": 11237979,
+      "said_since": "2012-02-05"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "K. J. Ståhlberg",
+      "valid_from": "1919-07-25",
+      "valid_to": "1925-03-02",
+      "open_ended": 0,
+      "rev_id": 13641376,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Lauri Kristian Relander",
+      "valid_from": "1925-03-02",
+      "valid_to": "1931-03-02",
+      "open_ended": 0,
+      "rev_id": 13641380,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "P. E. Svinhufvud",
+      "valid_from": "1931-03-02",
+      "valid_to": "1937-03-01",
+      "open_ended": 0,
+      "rev_id": 13641383,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Kyösti Kallio",
+      "valid_from": "1937-03-01",
+      "valid_to": "1940-12-19",
+      "open_ended": 0,
+      "rev_id": 9458959,
+      "said_since": "2010-11-30"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Risto Ryti",
+      "valid_from": "1940-12-19",
+      "valid_to": "1944-08-01",
+      "open_ended": 0,
+      "rev_id": 14921881,
+      "said_since": "2015-05-03"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Carl Gustaf Emil Mannerheim",
+      "valid_from": "1944-08-04",
+      "valid_to": "1946-03-04",
+      "open_ended": 0,
+      "rev_id": 10528644,
+      "said_since": "2011-08-09"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Juho Kusti Paasikivi",
+      "valid_from": "1946-03-11",
+      "valid_to": "1956-03-01",
+      "open_ended": 0,
+      "rev_id": 752115,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Urho Kekkonen",
+      "valid_from": "1956-03-01",
+      "valid_to": "1982-01-27",
+      "open_ended": 0,
+      "rev_id": 8566442,
+      "said_since": "2010-05-31"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Mauno Koivisto",
+      "valid_from": "1982-01-27",
+      "valid_to": "1994-03-01",
+      "open_ended": 0,
+      "rev_id": 16367808,
+      "said_since": "2017-03-23"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Martti Ahtisaari",
+      "valid_from": "1994-03-01",
+      "valid_to": "2000-03-01",
+      "open_ended": 0,
+      "rev_id": 16517190,
+      "said_since": "2017-05-30"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Tarja Halonen",
+      "valid_from": "2000-03-01",
+      "valid_to": "2012-03-01",
+      "open_ended": 0,
+      "rev_id": 17056694,
+      "said_since": "2018-01-29"
+    },
+    {
+      "as_of": "2020-12-31",
+      "person": "Sauli Niinistö",
+      "valid_from": "2012-03-01",
+      "valid_to": null,
+      "open_ended": 1,
+      "rev_id": 17055897,
+      "said_since": "2018-01-29"
+    },
+    {
+      "as_of": "now",
+      "person": "K. J. Ståhlberg",
+      "valid_from": "1919-07-25",
+      "valid_to": "1925-03-02",
+      "open_ended": 0,
+      "rev_id": 13641376,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "now",
+      "person": "Lauri Kristian Relander",
+      "valid_from": "1925-03-02",
+      "valid_to": "1931-03-02",
+      "open_ended": 0,
+      "rev_id": 13641380,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "now",
+      "person": "P. E. Svinhufvud",
+      "valid_from": "1931-03-02",
+      "valid_to": "1937-03-01",
+      "open_ended": 0,
+      "rev_id": 13641383,
+      "said_since": "2013-11-05"
+    },
+    {
+      "as_of": "now",
+      "person": "Kyösti Kallio",
+      "valid_from": "1937-03-01",
+      "valid_to": "1940-12-19",
+      "open_ended": 0,
+      "rev_id": 9458959,
+      "said_since": "2010-11-30"
+    },
+    {
+      "as_of": "now",
+      "person": "Risto Ryti",
+      "valid_from": "1940-12-19",
+      "valid_to": "1944-08-01",
+      "open_ended": 0,
+      "rev_id": 14921881,
+      "said_since": "2015-05-03"
+    },
+    {
+      "as_of": "now",
+      "person": "Carl Gustaf Emil Mannerheim",
+      "valid_from": "1944-08-04",
+      "valid_to": "1946-03-04",
+      "open_ended": 0,
+      "rev_id": 10528644,
+      "said_since": "2011-08-09"
+    },
+    {
+      "as_of": "now",
+      "person": "Juho Kusti Paasikivi",
+      "valid_from": "1946-03-11",
+      "valid_to": "1956-03-01",
+      "open_ended": 0,
+      "rev_id": 752115,
+      "said_since": "2006-01-30"
+    },
+    {
+      "as_of": "now",
+      "person": "Urho Kekkonen",
+      "valid_from": "1956-03-01",
+      "valid_to": "1982-01-27",
+      "open_ended": 0,
+      "rev_id": 8566442,
+      "said_since": "2010-05-31"
+    },
+    {
+      "as_of": "now",
+      "person": "Mauno Koivisto",
+      "valid_from": "1982-01-27",
+      "valid_to": "1994-03-01",
+      "open_ended": 0,
+      "rev_id": 16367808,
+      "said_since": "2017-03-23"
+    },
+    {
+      "as_of": "now",
+      "person": "Martti Ahtisaari",
+      "valid_from": "1994-03-01",
+      "valid_to": "2000-03-01",
+      "open_ended": 0,
+      "rev_id": 16517190,
+      "said_since": "2017-05-30"
+    },
+    {
+      "as_of": "now",
+      "person": "Tarja Halonen",
+      "valid_from": "2000-03-01",
+      "valid_to": "2012-03-01",
+      "open_ended": 0,
+      "rev_id": 17056694,
+      "said_since": "2018-01-29"
+    },
+    {
+      "as_of": "now",
+      "person": "Sauli Niinistö",
+      "valid_from": "2012-03-01",
+      "valid_to": "2024-03-01",
+      "open_ended": 0,
+      "rev_id": 22229850,
+      "said_since": "2024-03-01"
+    },
+    {
+      "as_of": "now",
+      "person": "Alexander Stubb",
+      "valid_from": "2024-03-01",
+      "valid_to": null,
+      "open_ended": 1,
+      "rev_id": 22229894,
+      "said_since": "2024-03-01"
+    }
+  ]
+}

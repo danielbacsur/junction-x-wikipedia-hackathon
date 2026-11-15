@@ -1,0 +1,131 @@
+{
+  "title": "Editorial exclusions from substantive ranking",
+  "unit": "wordings",
+  "source": "extra.py explicit screen",
+  "rows": [
+    {
+      "hash": "0DBFFD3517F997BF",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "3BF651D34D522BF7",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "13759AA786686C34",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "12FFE54C46256791",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "FC05E7E659561FD2",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "63FFE880BE7EF322",
+      "reason": "bibliography"
+    },
+    {
+      "hash": "B0D464E2A8311558",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "1CC5C8B619A89AD7",
+      "reason": "repeated hoof text unrelated to articles"
+    },
+    {
+      "hash": "947DE933E72F8167",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "8412B70DA1EC387F",
+      "reason": "list introduction"
+    },
+    {
+      "hash": "324B060D135AC77E",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "43991FDC6D1FEBAF",
+      "reason": "list instructions"
+    },
+    {
+      "hash": "096ACE29204E279B",
+      "reason": "list introduction"
+    },
+    {
+      "hash": "B01257D09173EBD1",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "4308997987152707",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "E595FE7F938EDFB9",
+      "reason": "repeated noise"
+    },
+    {
+      "hash": "625EAFEEDFF03AB8",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "0FED0DF0329A2009",
+      "reason": "list introduction"
+    },
+    {
+      "hash": "D309343EB03FD4C6",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "027E5EC011B1E903",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "443D88FCD3B7DEB1",
+      "reason": "list introduction"
+    },
+    {
+      "hash": "2400E0D3B1CEF82A",
+      "reason": "bibliography"
+    },
+    {
+      "hash": "407F3EA76124BFAE",
+      "reason": "bibliography"
+    },
+    {
+      "hash": "2CE791AEBBB5983C",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "AD668402F015CCB8",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "ED0444D69235396E",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "7C07BEB4DFCB7E95",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "4C4C099EB68BE00C",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "DB5AB8445F761EAA",
+      "reason": "markup/navigation"
+    },
+    {
+      "hash": "557C08CEC9C4FA0F",
+      "reason": "boilerplate/instructions"
+    },
+    {
+      "hash": "6F056276289EC325",
+      "reason": "boilerplate/instructions"
+    }
+  ]
+}

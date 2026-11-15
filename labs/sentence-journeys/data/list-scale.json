@@ -1,0 +1,13 @@
+{
+  "title": "list-scale",
+  "unit": "wordings",
+  "source": "sql/list-scale.sql",
+  "rows": [
+    {
+      "list_wordings": 319909,
+      "shared": 10030.0,
+      "twenty_plus": 113.0,
+      "max_articles": 482
+    }
+  ]
+}

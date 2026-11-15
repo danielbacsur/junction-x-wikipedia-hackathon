@@ -1,0 +1,175 @@
+{
+  "title": "Anonymous nonself short-local undo exposure by Finnish local hour",
+  "unit": "seconds; fractions; weekday 0=Monday",
+  "source": "wtt.edit; sql/exposure-by-hour.sql",
+  "rows": [
+    {
+      "local_hour": 0,
+      "n": 421,
+      "median_seconds": 547.0,
+      "p90_seconds": 39795.0,
+      "within_hour": 0.6627
+    },
+    {
+      "local_hour": 1,
+      "n": 338,
+      "median_seconds": 749.5,
+      "p90_seconds": 41625.0,
+      "within_hour": 0.6509
+    },
+    {
+      "local_hour": 2,
+      "n": 294,
+      "median_seconds": 1094.5,
+      "p90_seconds": 37092.3,
+      "within_hour": 0.5986
+    },
+    {
+      "local_hour": 3,
+      "n": 137,
+      "median_seconds": 3552.0,
+      "p90_seconds": 44066.2,
+      "within_hour": 0.5036
+    },
+    {
+      "local_hour": 4,
+      "n": 118,
+      "median_seconds": 3249.0,
+      "p90_seconds": 39959.0,
+      "within_hour": 0.5169
+    },
+    {
+      "local_hour": 5,
+      "n": 78,
+      "median_seconds": 4873.0,
+      "p90_seconds": 36620.9,
+      "within_hour": 0.4103
+    },
+    {
+      "local_hour": 6,
+      "n": 79,
+      "median_seconds": 7316.0,
+      "p90_seconds": 42941.0,
+      "within_hour": 0.3544
+    },
+    {
+      "local_hour": 7,
+      "n": 164,
+      "median_seconds": 7368.0,
+      "p90_seconds": 41945.6,
+      "within_hour": 0.439
+    },
+    {
+      "local_hour": 8,
+      "n": 518,
+      "median_seconds": 412.0,
+      "p90_seconds": 19879.9,
+      "within_hour": 0.7529
+    },
+    {
+      "local_hour": 9,
+      "n": 1021,
+      "median_seconds": 100.0,
+      "p90_seconds": 3060.0,
+      "within_hour": 0.906
+    },
+    {
+      "local_hour": 10,
+      "n": 1237,
+      "median_seconds": 103.0,
+      "p90_seconds": 2878.8,
+      "within_hour": 0.9062
+    },
+    {
+      "local_hour": 11,
+      "n": 1182,
+      "median_seconds": 97.5,
+      "p90_seconds": 4105.9,
+      "within_hour": 0.8968
+    },
+    {
+      "local_hour": 12,
+      "n": 1397,
+      "median_seconds": 96.0,
+      "p90_seconds": 4663.0,
+      "within_hour": 0.889
+    },
+    {
+      "local_hour": 13,
+      "n": 1305,
+      "median_seconds": 100.0,
+      "p90_seconds": 4182.4,
+      "within_hour": 0.8927
+    },
+    {
+      "local_hour": 14,
+      "n": 1082,
+      "median_seconds": 117.5,
+      "p90_seconds": 7792.3,
+      "within_hour": 0.8614
+    },
+    {
+      "local_hour": 15,
+      "n": 834,
+      "median_seconds": 221.5,
+      "p90_seconds": 12382.2,
+      "within_hour": 0.807
+    },
+    {
+      "local_hour": 16,
+      "n": 857,
+      "median_seconds": 226.0,
+      "p90_seconds": 20695.6,
+      "within_hour": 0.8086
+    },
+    {
+      "local_hour": 17,
+      "n": 824,
+      "median_seconds": 208.0,
+      "p90_seconds": 15541.0,
+      "within_hour": 0.7973
+    },
+    {
+      "local_hour": 18,
+      "n": 839,
+      "median_seconds": 196.0,
+      "p90_seconds": 20146.4,
+      "within_hour": 0.77
+    },
+    {
+      "local_hour": 19,
+      "n": 774,
+      "median_seconds": 166.0,
+      "p90_seconds": 16016.7,
+      "within_hour": 0.7933
+    },
+    {
+      "local_hour": 20,
+      "n": 782,
+      "median_seconds": 207.5,
+      "p90_seconds": 20961.6,
+      "within_hour": 0.8031
+    },
+    {
+      "local_hour": 21,
+      "n": 710,
+      "median_seconds": 176.0,
+      "p90_seconds": 39249.5,
+      "within_hour": 0.8
+    },
+    {
+      "local_hour": 22,
+      "n": 704,
+      "median_seconds": 283.5,
+      "p90_seconds": 42416.5,
+      "within_hour": 0.7472
+    },
+    {
+      "local_hour": 23,
+      "n": 593,
+      "median_seconds": 306.0,
+      "p90_seconds": 37603.4,
+      "within_hour": 0.7352
+    }
+  ]
+}
