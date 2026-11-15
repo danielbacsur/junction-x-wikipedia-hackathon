@@ -36,6 +36,14 @@ import nameSwaps from "../../../../labs/history-of-history/data/war-name-swaps.j
 import warNames from "../../../../labs/history-of-history/data/war-names.json";
 import yearsMentioned from "../../../../labs/history-of-history/data/year-heatmap-years.json";
 import decadesMentioned from "../../../../labs/history-of-history/data/year-heatmap.json";
+import infoboxRates from "../../../../labs/infobox-time-machine/data/change-rates.json";
+import infoboxDateChanges from "../../../../labs/infobox-time-machine/data/date-changes.json";
+import infoboxDurations from "../../../../labs/infobox-time-machine/data/durations.json";
+import infoboxIndex from "../../../../labs/infobox-time-machine/data/index-experiment.json";
+import infoboxAudit from "../../../../labs/infobox-time-machine/data/manual-audit.json";
+import infoboxSamples from "../../../../labs/infobox-time-machine/data/query-samples.json";
+import infoboxTimings from "../../../../labs/infobox-time-machine/data/query-timings.json";
+import infoboxSummary from "../../../../labs/infobox-time-machine/data/summary.json";
 import numberDurations from "../../../../labs/numbers-that-moved/data/durations.json";
 import numberEditors from "../../../../labs/numbers-that-moved/data/editors.json";
 import numberAudit from "../../../../labs/numbers-that-moved/data/manual-audit.json";
@@ -56,6 +64,16 @@ import annCorpus from "../../../../labs/temporal-ann/data/corpus.json";
 import annLatency from "../../../../labs/temporal-ann/data/latency.json";
 import annRecall from "../../../../labs/temporal-ann/data/recall.json";
 import annUnfiltered from "../../../../labs/temporal-ann/data/unfiltered.json";
+import leadPairs from "../../../../labs/three-wikipedias/data/by-language-pair.json";
+import leadDistances from "../../../../labs/three-wikipedias/data/distance-and-facts.json";
+import editorsList from "../../../../labs/three-wikipedias/data/editors-list.json";
+import finnishLeads from "../../../../labs/three-wikipedias/data/finnish-history.json";
+import leadAudit from "../../../../labs/three-wikipedias/data/manual-audit.json";
+import leadShapes from "../../../../labs/three-wikipedias/data/shape-of-difference.json";
+import leadSizes from "../../../../labs/three-wikipedias/data/size-of-difference.json";
+import leadSummary from "../../../../labs/three-wikipedias/data/summary.json";
+import widerNet from "../../../../labs/three-wikipedias/data/wider-net.json";
+import { MOVING_FIELDS } from "./quoted";
 
 const sum = (values: number[]) => values.reduce((a, b) => a + b, 0);
 
@@ -1091,6 +1109,435 @@ export const sourcing = {
   })),
 
   confirmedCircular: sourced.confirmed_circular_sourcing,
+};
+
+/* ── Three Wikipedias ─────────────────────────────────────────────────── */
+
+const led = (metric: string) =>
+  leadSummary.rows.find((row) => row.metric === metric)!.value;
+
+const rebuilt = (metric: string) =>
+  finnishLeads.rows.find((row) => row.metric === metric)!.value;
+
+const whoMoved = (reading: string) =>
+  editorsList.who_moved.find((row) => row.reading === reading)!.facts;
+
+const LANGUAGES = ["fi", "sv", "en"] as const;
+
+/** The lab's list for an editor, in its own order, each with its timeline. */
+const disputed = editorsList.rows.map((row, index) => {
+  const { finnish, values } = row;
+  const last = finnish.timeline[finnish.timeline.length - 1];
+  const from = seconds(finnish.article_created);
+  const to = seconds(last.end);
+
+  /** What the other leads give, where it is not what the Finnish one gives. */
+  const theirs = [values.sv.iso, values.en.iso].filter(
+    (iso) => iso !== values.fi.iso,
+  );
+
+  /** Whose value a stretch of the Finnish lead stated. */
+  const says = (value: string | null) =>
+    value === finnish.value
+      ? ("today" as const)
+      : value !== null && theirs.includes(value)
+        ? ("theirs" as const)
+        : ("other" as const);
+
+  /** A version that was reverted stays in the bar and names no value. */
+  const kept = finnish.timeline.filter((stay) => !stay.reverted);
+
+  return {
+    rank: index + 1,
+    id: `${row.qid} ${row.field}`,
+    title: values.fi.title,
+    field: row.field,
+    readByHand: row.read_by_hand,
+
+    /** The language whose date the other two do not share, if there is one. */
+    alone: row.odd_one_out,
+    gapDays: row.largest_gap_days,
+
+    /** Each lead's date in its own words, and whether Finnish gives another. */
+    values: LANGUAGES.map((language) => ({
+      language,
+      shown: values[language].shown.replace(/\s+/g, " "),
+      url: values[language].url,
+      differs: values[language].iso !== values.fi.iso,
+    })),
+
+    /** What the Finnish lead says, since when, and what it said before. */
+    value: finnish.value,
+    since: finnish.standing_since,
+    sinceAt: (seconds(finnish.standing_since) - from) / (to - from),
+    revId: finnish.set_in_revision,
+    before: finnish.said_before,
+    onceAgreed: finnish.once_agreed_with_other,
+    created: finnish.article_created,
+    until: last.end,
+
+    /** Every stretch the lead was read in, with where it lies from 0 to 1. */
+    timeline: finnish.timeline.map((stay) => ({
+      from: stay.start,
+      to: stay.end,
+      value: stay.value,
+      says: says(stay.value),
+      starts: (seconds(stay.start) - from) / (to - from),
+      ends: (seconds(stay.end) - from) / (to - from),
+    })),
+
+    /** The values in order, each with the moment it arrived. */
+    said: kept
+      .filter((stay, at) => at === 0 || stay.value !== kept[at - 1].value)
+      .map((stay) => ({
+        value: stay.value,
+        from: stay.start,
+        says: says(stay.value),
+      })),
+  };
+});
+
+const sizes = [...new Set(leadSizes.rows.map((row) => row.size))].map(
+  (size) => {
+    const rows = leadSizes.rows.filter((row) => row.size === size);
+
+    return {
+      size,
+      pairs: sum(rows.map((row) => row.pairs)),
+
+      /** A date of the pair is hedged: "noin", "c.", "omkring". */
+      hedged: sum(rows.map((row) => row.marked_approximate)),
+
+      /** The gap is the Julian offset of the century, to the day. */
+      julian: sum(rows.map((row) => row.julian_gap_exactly)),
+    };
+  },
+);
+
+const net = (kind: string) => {
+  const row = widerNet.rows.find((r) => r.kind.startsWith(kind))!;
+
+  return {
+    topics: row.comparable_topics,
+    pairs: row.comparable_pairs,
+    sharing: row.pairs_sharing_a_value,
+    nearMisses: row.near_miss_pairs,
+  };
+};
+
+const everyPair = leadDistances.rows.find((row) => row.pair === "all")!;
+
+/** A language that stands alone, and what the Finnish history says of it. */
+const alone = [
+  {
+    language: "sv",
+    facts: editorsList.odd_one_out.sv,
+    never: whoMoved("Finnish never had the sv value"),
+    left: whoMoved("Finnish used to have the sv value and left it"),
+  },
+  {
+    language: "en",
+    facts: editorsList.odd_one_out.en,
+    never: whoMoved("Finnish never had the en value"),
+    left: whoMoved("Finnish used to have the en value and left it"),
+  },
+  {
+    language: "fi",
+    facts: editorsList.odd_one_out.fi,
+    never: whoMoved("Finnish never had the value the other two share"),
+    left: whoMoved("Finnish left the value the other two share"),
+  },
+];
+
+export const languages = {
+  /** Topics that open with a birth or a death in Finnish and one more. */
+  topics: led("topics_compared"),
+  agree: led("agree_everywhere"),
+  differ: led("disagree_somewhere"),
+  onBirth: led("disagree_on_birth"),
+  onDeath: led("disagree_on_death"),
+  onBoth: led("topics_disagreeing_on_birth_and_death"),
+  hedgedOnly: led("only_where_a_date_is_marked_approximate"),
+  exact: led("disagree_on_a_date_given_as_exact"),
+
+  /** Two languages stating one field of one topic. */
+  pairs: led("pairs_compared"),
+  pairsDiffering: led("pairs_disagreeing"),
+
+  /** A birth or a death of one topic. */
+  factsDiffering: led("facts_disagreeing"),
+
+  sizes,
+  shapes: leadShapes.rows.map((row) => ({
+    shape: row.shape,
+    pairs: row.pairs,
+    julian: row.julian_gap_exactly,
+  })),
+
+  byPair: [...new Set(leadPairs.rows.map((row) => row.pair))].map((pair) => {
+    const of = (field: string) => {
+      const row = leadPairs.rows.find(
+        (r) => r.pair === pair && r.field === field,
+      )!;
+
+      return {
+        compared: row.compared,
+        differ: row.disagree,
+        share: row.disagree / row.compared,
+      };
+    };
+
+    return { pair, birth: of("birth"), death: of("death") };
+  }),
+
+  /** Cases read by hand in one of the lab's sets, all or with one label. */
+  read: (set: string, label?: string) =>
+    leadAudit.rows.filter(
+      (row) => row.set === set && (label === undefined || row.label === label),
+    ).length,
+  readInAll: leadAudit.rows.length,
+
+  /** The Finnish side, rebuilt from passage FOR SYSTEM_TIME ALL. */
+  history: {
+    pairs: rebuilt("disagreeing pairs with Finnish on one side"),
+    matching: rebuilt(
+      "of those, Finnish history rebuilt and matching the snapshot",
+    ),
+    facts: rebuilt("Finnish facts behind them (topic and field)"),
+    first: rebuilt("current value is the first value the lead ever stated"),
+    replaced: rebuilt("current value replaced an earlier one"),
+    asPrecise: rebuilt(
+      "of those, the earlier one was as precise (a change, not a refinement)",
+    ),
+    early: rebuilt(
+      "current value first stated within 30 days of the first version",
+    ),
+    recent: rebuilt("current value standing only since 1 August 2023 or later"),
+    onceAgreed: rebuilt(
+      "Finnish lead once agreed with the other language (not counting reverted versions)",
+    ),
+    changedSince: rebuilt(
+      "Finnish value changed between the snapshot and 1 October 2026",
+    ),
+    agreesNow: rebuilt(
+      "Finnish agrees with the other language on 1 October 2026",
+    ),
+    since: finnishLeads.standing_since.map((row) => ({
+      years: row.standing_since,
+      facts: row.facts,
+    })),
+    setBy: (editor: string) =>
+      finnishLeads.set_by.find((row) => row.editor === editor)!.facts,
+  },
+
+  /** All three give a full date and two agree against the third. */
+  alone,
+  twoAgainstOne: sum(alone.map((row) => row.facts)),
+  historyKnown: sum(alone.map((row) => row.never + row.left)),
+
+  /** Facts that pass the lab's rule for its list, and the rows it wrote out. */
+  candidates: led("editors_list_candidates"),
+  disputed,
+
+  /**
+   * Two against one, and the Finnish lead once gave the date it now differs
+   * from. Those where Finnish stands alone come first, then the lab's order.
+   */
+  moved: disputed
+    .filter(
+      (row) =>
+        alone.some(({ language }) => language === row.alone) && row.onceAgreed,
+    )
+    .sort((a, b) => Number(b.alone === "fi") - Number(a.alone === "fi")),
+
+  /** Opening paragraphs of the articles that are not lifespans. */
+  wider: { dates: net("full dates"), quantities: net("quantities") },
+
+  /** Cosine distance between the two articles of a lifespan topic. */
+  distance: {
+    pairs: everyPair.pairs,
+    agreeing: everyPair.median_distance_agreeing,
+    differing: everyPair.median_distance_disagreeing,
+    byQuarter: everyPair.disagreeing_share_by_distance_quarter,
+  },
+};
+
+/* ── Infobox time machine ─────────────────────────────────────────────── */
+
+const boxes = infoboxSummary.rows[0];
+
+/** The fields the lab ranks: seen often enough, and in enough places. */
+const ranked = infoboxRates.rows
+  .filter(
+    (row) =>
+      row.observations >= MOVING_FIELDS.observations &&
+      row.field_slots >= MOVING_FIELDS.slots,
+  )
+  .map((row) => ({
+    field: row.field,
+    slots: row.field_slots,
+    observations: row.observations,
+
+    /** One raw value straight after another in the same field. */
+    replacements: row.direct_replacements,
+
+    /** Of those, the ones in which the reading text changed too. */
+    cleaned: row.clean_changes,
+    rawOnly: row.raw_only_changes,
+    per1000: row.changes_per_1000_observations,
+  }));
+
+const shifts = [...new Set(infoboxDateChanges.rows.map((row) => row.bucket))]
+  .map((bin) => {
+    const rows = infoboxDateChanges.rows.filter((row) => row.bucket === bin);
+
+    return {
+      bin,
+      events: rows.length,
+      smallest: Math.min(...rows.map((row) => row.absolute_days)),
+    };
+  })
+  .sort((a, b) => a.smallest - b.smallest);
+
+/** b-field-history.sql: every row one field of one article ever had. */
+const oneField = infoboxSamples.rows[0]["b-field-history.sql"];
+
+export const infobox = {
+  versions: boxes.versions_read,
+  skipped: boxes.reverted_versions_skipped,
+  accepted: boxes.accepted_versions,
+  withBox: boxes.accepted_versions_with_recognized_infobox,
+  articles: boxes.articles_read,
+  articlesWithBox: boxes.articles_with_recognized_infobox,
+
+  /** Non-empty fields, one for every accepted version that states it. */
+  statements: boxes.nonempty_field_observations,
+  emptyFields: boxes.empty_fields,
+
+  /** A raw value with the stretch of time it stood: a row of the table. */
+  rows: boxes.statement_lifetimes,
+  current: boxes.load.current_rows,
+  perRow: boxes.nonempty_field_observations / boxes.statement_lifetimes,
+
+  fields: boxes.distinct_fields,
+  templates: boxes.distinct_templates,
+
+  /** One field of one infobox of one article. */
+  slots: boxes.field_slots,
+  rowsPerSlot: boxes.lifetimes_per_field_slot,
+  medianRowsPerSlot: boxes.median_lifetimes_per_field_slot,
+
+  /** A raw value, then another, then the first again, without a break. */
+  returns: boxes.raw_aba,
+
+  /** Statements that hold a template the lab does not expand. */
+  unexpanded: boxes.unexpanded_template_observations,
+  positional: boxes.refusals.positional_parameter,
+  typed: boxes.typed_lifetimes,
+
+  parseSeconds: boxes.parse_seconds,
+  loadSeconds: boxes.load.load_seconds,
+  bytes: boxes.load.data_bytes + boxes.load.index_bytes,
+
+  checked: {
+    overlaps: boxes.validation.overlapping_field_periods,
+    badPeriods: boxes.validation.bad_periods,
+    atCutoff: boxes.validation.rows_at_cutoff,
+    server: boxes.validation.server_version,
+    currentEnd: boxes.validation.current_end_sentinel[0],
+  },
+
+  ranked: ranked.length,
+  mostReplaced: [...ranked].sort((a, b) => b.replacements - a.replacements),
+  leastReplaced: [...ranked].sort(
+    (a, b) => a.per1000 - b.per1000 || b.slots - a.slots,
+  ),
+
+  /** Completed lifetimes of the fields seen most often, in days. */
+  stands: infoboxDurations.rows.map((row) => ({
+    field: row.field,
+    completed: row.closed,
+    current: row.right_censored,
+    p25: row.p25_days,
+    median: row.median_days,
+    p75: row.p75_days,
+    p90: row.p90_days,
+  })),
+
+  /** A birth or death field whose parsed full date was replaced. */
+  dates: {
+    events: infoboxDateChanges.rows.length,
+    slots: boxes.date_fields_changed,
+    articles: boxes.date_articles_changed,
+    shifts,
+
+    /** The largest shifts, read by hand, with both raw values. */
+    read: infoboxAudit.rows.map((row, index) => {
+      const after = row.evidence.find((one) => one.rev_id === row.rev_id)!;
+      const before = row.evidence.find(
+        (one) => one.row_end === after.row_start,
+      )!;
+
+      return {
+        rank: index + 1,
+        id: `${row.page_id} ${row.field}`,
+        article: row.title,
+        field: row.field,
+        verdict: row.classification,
+        reason: row.reason,
+        at: row.transition.changed_at,
+        revId: row.rev_id,
+        summary: row.transition.comment,
+        days: row.transition.absolute_days,
+        old: {
+          date: row.transition.before,
+          raw: before.raw_value,
+          from: before.row_start,
+          seconds: seconds(after.row_start) - seconds(before.row_start),
+        },
+        new: { date: row.transition.after, raw: after.raw_value },
+      };
+    }),
+  },
+
+  /** The showcase statements: client time over the timed runs, in ms. */
+  asked: infoboxTimings.rows.map((row) => ({
+    query: row.query,
+    ms: row.median_ms,
+    fastest: Math.min(...row.runs_ms),
+    slowest: Math.max(...row.runs_ms),
+    runs: row.runs_ms.length,
+    returned: row.result_rows,
+  })),
+
+  /** The same statement with the period index forced and ignored. */
+  index: infoboxIndex.rows.map((row) => ({
+    hint: row.hint,
+    ms: row.median_ms,
+    key: row.explain[0].key,
+    expected: Number(row.explain[0].rows),
+  })),
+
+  /** One field over all time. The row that still stands ends at the cutoff. */
+  oneField: oneField.map((row) => {
+    const from = seconds(oneField[0].row_start);
+    const to = seconds(corpus.lastEdit);
+    const standing = row.row_end > corpus.lastEdit;
+    const end = standing ? corpus.lastEdit : row.row_end;
+
+    return {
+      title: row.title,
+      template: row.template,
+      field: row.field,
+      value: row.value,
+      revId: row.rev_id,
+      from: row.row_start,
+      to: end,
+      standing,
+      starts: (seconds(row.row_start) - from) / (to - from),
+      ends: (seconds(end) - from) / (to - from),
+    };
+  }),
 };
 
 /* ── Temporal ANN ─────────────────────────────────────────────────────── */

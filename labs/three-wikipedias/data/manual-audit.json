@@ -1,0 +1,1651 @@
+{
+ "title": "Disagreements read by hand, three leads side by side",
+ "unit": "case read",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "counts": {
+  "lifespan": {
+   "real": 25,
+   "calendar": 2,
+   "convention": 2,
+   "different topic": 1
+  },
+  "date": {
+   "real": 5,
+   "unclear": 1,
+   "calendar": 3,
+   "extraction error": 1
+  },
+  "quantity": {
+   "rounding": 6,
+   "unclear": 1,
+   "different year": 2,
+   "real": 1
+  },
+  "living": {
+   "real": 1,
+   "extraction error": 5,
+   "convention": 1,
+   "unclear": 1
+  },
+  "recent": {
+   "real": 7,
+   "extraction error": 5
+  }
+ },
+ "sets": {
+  "lifespan": "30 random lifespan disagreements (seed 2026)",
+  "date": "10 random date near misses",
+  "quantity": "10 random quantity near misses",
+  "living": "8 random \"still living\" cases",
+  "recent": "every \"still living\" case with a death from 2000 on"
+ },
+ "note": "Labels typed by the research agent after reading the three leads printed by audit.py. No outside source was read. 'real' means the leads state different values for the same fact, not that either is right.",
+ "rows": [
+  {
+   "id": "lifespan:Q12356153:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and en: 1 August 1977. sv: 1 augusti 1979.",
+   "qid": "Q12356153",
+   "values": {
+    "en": "1 August 1977",
+    "sv": "1 augusti 1979",
+    "fi": "1. elokuuta 1977"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Tyyne_Leivo-Larsson",
+     "opening": "Tyyne Lilja Leivo-Larsson (vuoteen 1906 Lindroos, 3. maaliskuuta 1902 Uusikirkko – 1. elokuuta 1977 Helsinki) oli suomalainen poliitikko ja diplomaatti, joka toimi SDP:n ja TPSL:n kansanedustajana vuosina 1948–1958 ja 1966–1970. Hän oli sosiaaliministerinä useissa hallituksissa 1940–1950-luvuilla ja"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Tyyne_Leivo-Larsson",
+     "opening": "Tyyne Lilja Leivo-Larsson, född 3 mars 1902 i Nykyrka, död 1 augusti 1979 i Helsingfors, var en finländsk politiker och diplomat."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Tyyne_Leivo-Larsson",
+     "opening": "Tyyne Lilja Leivo-Larsson (née Leivo; 3 March 1902 Uusikirkko – 1 August 1977 Helsinki) was a Finnish Ambassador and MP. She was the first Finnish woman to serve as Ambassador in Oslo from 1958 to 1966 and as Envoy to Reykjavík in 1958–1964 (Ambassador 1964–1965) and the first Nordic woman, who led "
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q2634365:death",
+   "set": "lifespan",
+   "label": "calendar",
+   "note": "fi gives 11 November with the Julian 30 October in brackets, en gives 30 October alone.",
+   "qid": "Q2634365",
+   "values": {
+    "en": "30 October 1812",
+    "fi": "11. marraskuuta                    1812"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Nikolai_Tut%C5%A1kov",
+     "opening": "Nikolai Aleksejevitš Tutškov (ven. Никола́й Алексе́евич Тучко́в, 27. huhtikuuta (J: 16. huhtikuuta) 1761 – 11. marraskuuta (J: 30. lokakuuta) 1812 Jaroslavl) oli venäläinen kenraaliluutnantti, joka osallistui Suomen sotaan. Hän kuului keskiaikaiseen venäläiseen aatelissukuun, jolla saattaa olla saks"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Nikolaj_Tutjkov",
+     "opening": "Nikolaj Aleksejevitj Tutjkov, född den 16 april (g.s.) / 27 april (n.s.) 1761, död den 30 oktober (g.s.) / 11 november (n.s.) 1812, var en rysk general under två svensk-ryska krig samt Napoleonkrigen."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Nikolay_Tuchkov",
+     "opening": "Nikolay Alexeyevich Tuchkov (16 April 1765 – 30 October 1812, Yaroslavl) was a Russian general of the Russo-Swedish War (1788–1790), the suppression of the Kościuszko Uprising and the opposition to the French invasion of Russia. He rose to the rank of lieutenant general and commander of an infantry "
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q56867321:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 27 November 1667. sv: 1669.",
+   "qid": "Q56867321",
+   "values": {
+    "fi": "27. marraskuuta 1667",
+    "sv": "1669"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Bo%C3%ABtius_Murenius",
+     "opening": "Boëtius Olai Murenius (Muur) (n. 1600 Ruotsi – 27. marraskuuta 1667 Saltvik) oli opettaja, rehtori ja pappi, joka toimi Ahvenanmaan lääninrovastina."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Boetius_Murenius",
+     "opening": "Boetius Murenius, född omkring 1600 i Romfartuna socken, Västmanland, död 1669 i Saltvik på Åland, var en svensk-finländsk prästman och folkbildare, ofta kallad \"Ålands Gezelius\"."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q57233:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and en: 17 January 1885. sv: 17 juni 1885.",
+   "qid": "Q57233",
+   "values": {
+    "en": "17 January 1885",
+    "sv": "17 juni 1885",
+    "fi": "17. tammikuuta 1885"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Nikolaus_von_Falkenhorst",
+     "opening": "Paul Nikolaus von Falkenhorst (17. tammikuuta 1885 Breslau, Sleesia – 18. kesäkuuta 1968 Holzminden, Ala-Saksi) oli saksalainen kenraalieversti (Generaloberst), joka suunnitteli Tanskan ja Norjan valloituksen, operaatio Weserübungin, vuonna 1940. Invaasion jälkeen von Falkenhorst oli Saksan joukkoje"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Nikolaus_von_Falkenhorst",
+     "opening": "Nikolaus von Falkenhorst, född 17 juni 1885 Breslau, död 18  juni 1968 i Holzminden, Niedersachsen, var en tysk militär och befälhavare under andra världskriget."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Nikolaus_von_Falkenhorst",
+     "opening": "Paul Nikolaus von Falkenhorst (17 January 1885 – 18 June 1968) was a German general and war criminal during World War II. He planned and commanded the German invasion of Denmark and Norway in 1940, and was commander of German troops during the occupation of Norway from 1940 to 1944."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q723881:death",
+   "set": "lifespan",
+   "label": "convention",
+   "note": "fi says after 1491, en says about 1493. Both hedge.",
+   "qid": "Q723881",
+   "values": {
+    "en": "1493",
+    "fi": "1491"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/J%C3%B6ns_Budde",
+     "opening": "Jöns Andersinpoika Budde (myös Jöns Raek tai Räk, Johannes Andreas Budde; s. mahd. noin 1437, k. 1491 jälkeen) oli Naantalin luostarin munkki ja uskonnollinen kirjailija. Hän on Suomen kirjallisuuden ensimmäisiä nimeltä tunnettuja henkilöitä ja keskiajan tunnetuimpia suomalaisia. Budden syntymä- tai"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/J%C3%B6ns_Budde",
+     "opening": "Jöns Andersson Budde, även Jönes Ræk, var en svenskbirgittinmunk i Nådendals kloster, dåvarande svenska Finland, och författare. Budde var verksam vid klostret mellan 1462 och 1491."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/J%C3%B6ns_Budde",
+     "opening": "Jöns Budde, OSsS (sometimes spelled as Joens Budde or Jønes Budde) (c. 1435 – c. 1493) was a Bridgettine monk from the Bridgettine convent Vallis gratiae, the first convent for women in Finland, located in Naantali, near Turku, Finland – at the time part of the Kalmar Union (1397–1523)."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q11889714:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 25 March 1982. en: 1981.",
+   "qid": "Q11889714",
+   "values": {
+    "en": "1981",
+    "fi": "25. maaliskuuta 1982"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Ragnar_Smedslund",
+     "opening": "Ragnar Smedslund (13. huhtikuuta 1900 Helsinki – 25. maaliskuuta 1982) oli suomalainen diplomaatti. Hän oli filosofian maisteri ja toimi pääkonsulina Tokiossa 1952–1957, lähettiläänä 1957–1962. Ulkoministeriön neuvotteleva virkamies hän oli vuodesta 1962, jolloin hän sai erikoislähettilään ja täysiv"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Ragnar_Smedslund",
+     "opening": "Ragnar Smedslund (13 April 1900, in Helsinki – 1981) was a Finnish diplomat. He was Master of Philosophy and served as Consul General in Tokyo 1952–1957, as Ambassador 1957–1962. He was a negotiating officer of the Ministry for Foreign Affairs since 1962, when he received the Special Envoy and the v"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q18156764:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 17 February 1961. en: 17 October 1961.",
+   "qid": "Q18156764",
+   "values": {
+    "en": "17 October 1961",
+    "fi": "17. helmikuuta 1961"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Paavo_Aarniokoski",
+     "opening": "Paavo Paatrikki Aarniokoski (5. huhtikuuta 1893 Kankaanpää – 17. helmikuuta 1961 Kankaanpää) oli suomalainen maanviljelijä ja poliitikko, joka toimi SDP:n kansanedustajana vuosina 1933–1945."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Paavo_Aarniokoski",
+     "opening": "Paavo Paatrikki Aarniokoski (5 April 1893 – 17 October 1961) was a Finnish farmer and politician, born in Kankaanpää. He was a member of the Parliament of Finland from 1933 to 1945, representing the Social Democratic Party of Finland (SDP)."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q621331:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi 1657 and en 17 April 1657. sv: 1658.",
+   "qid": "Q621331",
+   "values": {
+    "en": "17 April 1657",
+    "sv": "1658",
+    "fi": "1657"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Heinrich_Stahl",
+     "opening": "Henrik (Henricus, Heinrich) Stahl (noin 1599 Tallinna – 1657 Narva) oli baltiansaksalainen pappi ja kirjailija, syntynyt luultavasti 1500-luvun lopulla Tallinnassa. Hän opiskeli ensin Tallinnassa, sitten useissa Saksan yliopistoissa ja sai maisterin arvon. Hän toimi vuodesta 1623 pappina eräissä Vir"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Henrik_Stahl",
+     "opening": "Henrik Stahl (även Stahell, Stahlius), död 1658 i Narva, var en svensk superintendent."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Heinrich_Stahl",
+     "opening": "Heinrich Stahl (circa 1598/1600 Tallinn – 17 April 1657 Narva) was a Baltic-German prelate who worked in Estonia. He is mostly known by his first grammar of Estonian language."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q64952323:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 11 August 1732. sv: 12 augusti 1732.",
+   "qid": "Q64952323",
+   "values": {
+    "fi": "11. elokuuta 1732",
+    "sv": "12 augusti 1732"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Karl_Efraim_Carpelan",
+     "opening": "Karl (Carl) Efraim (Ephraim) Carpelan (11. elokuuta 1732 Raisio – 29. maaliskuuta 1819 Rymättylä) oli suomalainen vapaaherra, sotilas ja valtiopäivämies."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Carl_Efraim_Carpelan",
+     "opening": "Carl Efraim Carpelan, född 12 augusti 1732 på Metsäkylä i Reso, död 29 mars 1819 i Rimito socken, var en svensk  friherre och militär. Han var brorson till Wilhelm Carpelan samt bror till Simon Wilhelm Carpelan och Johan Fredrik Carpelan."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q5962186:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 19 March 1742 in Turku. sv: 10 mars 1742 in Letala. Nine days is not the calendar gap.",
+   "qid": "Q5962186",
+   "values": {
+    "fi": "19. maaliskuuta 1742",
+    "sv": "10 mars 1742"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/J%C3%B6ran_Wilhelm_Lode",
+     "opening": "Jöran (Göran) Wilhelm Lode (19. maaliskuuta 1742 Turku – 11. syyskuuta 1799 Turku) oli Lode -sukuun kuulunut lakimies ja poliitikko, joka toimi Vaasan ja Turun hovioikeuden presidenttinä."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/G%C3%B6ran_Wilhelm_Lode",
+     "opening": "Göran Wilhelm Lode (döpt till Georg Wilhelm, den tyska namnformen), född 10 mars 1742 i Letala, död 11 september 1799 i Åbo, var en svensk ämbetsman."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q4753808:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and en: 25 November 1772. sv: 15 november 1772.",
+   "qid": "Q4753808",
+   "values": {
+    "en": "25 November 1772",
+    "sv": "15 november 1772",
+    "fi": "25. marraskuuta 1772"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Anders_Henrik_Falck",
+     "opening": "Anders Henrik Falck (25. marraskuuta 1772 Kerimäki – 30. marraskuuta 1851 Eura) oli suomalainen tuomari ja senaattori, joka toimi senaatin talousosaston varapuheenjohtajana eli Suomen suuriruhtinaskunnan ”pääministerinä” vuosina 1828–1833 sekä samalla senaatin finanssitoimituskunnan päällikkönä vuos"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Anders_Henrik_Falck",
+     "opening": "Anders Henrik Falck, född 15 november 1772 i Kerimäki, död 30 november 1851 i Eura, var en finländsk ämbetsman."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Anders_Henrik_Falck",
+     "opening": "Anders Henrik Falck  (25 November 1772 – 30 November 1851) was a Finnish politician."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q6062616:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 2 December 1782. sv: 22 december 1782.",
+   "qid": "Q6062616",
+   "values": {
+    "fi": "2. joulukuuta 1782",
+    "sv": "22 december 1782"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Anders_Henrik_Ramsay",
+     "opening": "Anders Henrik Ramsay (15. helmikuuta 1707 Somero – 2. joulukuuta 1782 Espoo) oli suomalainen kenraaliluutnantti, valtiopäiväpoliitikko, kartanonomistaja ja 1765–1774 Kymenkartanon ja Savon läänin sekä 1774–1776 Uudenmaan ja Hämeen läänin maaherra. Ramsay omisti Jakkarilan, Kalaxin, Bergstadin, Hornh"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Anders_Henrik_Ramsay",
+     "opening": "Anders Henrik Ramsay, född den 15 februari 1707 på Ihamäki gård i Somero socken, Finland, död den 22 december 1782, var en svensk friherre, krigare och ämbetsman. Han var far till Sofia Lovisa Ramsay och svärfar till Otto Wilhelm Ramsay."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q5926634:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and sv: 30 May 1630. en: 30 March 1630.",
+   "qid": "Q5926634",
+   "values": {
+    "en": "30 March 1630",
+    "fi": "30. toukokuuta 1630",
+    "sv": "30 maj 1630"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Axel_Kurck",
+     "opening": "Axel Kurck eli Aksel(i) Kurki (1555 – 30. toukokuuta 1630, Nakkila) oli suomalainen ylhäisaateliin kuulunut sotapäällikkö, joka oli Suomen sotaväen ylipäällikkönä 1598–1599. Hänen isänsä oli valtaneuvos Jöns Knuutinpoika Kurki (noin 1502 – noin 1577) ja veli Knut Jönsson till Laukko; Kurck-nimi otet"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Axel_Kurck",
+     "opening": "Axel Kurck (skrev sig själv Kurke) till Aniela, född 1555 och död 30 maj 1630, var en svensk/finländsk militär och inflytelserik adelsman. Han var son till Jöns Knutsson (Kurck) och hans andra hustru Ingeborg Tönnesdotter Tott."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Axel_Kurck",
+     "opening": "Axel Jönsson Kurck (also known as Akseli Kurki in Finnish), born 1555, died 30 March 1630 in Nakkila) was a colonel in the Swedish army and nobleman. He was a member of the Kurki of Laukko family."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q5607017:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 9 March 1949. sv: 19 mars 1949.",
+   "qid": "Q5607017",
+   "values": {
+    "fi": "9. maaliskuuta 1949",
+    "sv": "19 mars 1949"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Axel_Charpentier",
+     "opening": "Axel Fredrik Charpentier (4. heinäkuuta 1865 Hamina – 9. maaliskuuta 1949 Hauho) oli suomalainen juristi, joka toimi oikeuskanslerina 1920-luvulla. Hän oli toiminut jo Suomen suuriruhtinaskunnan aikana senaatissa. Charpentier oli vastustanut venäläistämistoimia, minkä takia hänet oli erotettu prokur"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Axel_Charpentier",
+     "opening": "Axel Fredrik Charpentier, född 4 juli 1865 i Fredrikshamn, död 19 mars 1949 i Hauho, var en finländsk jurist."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q6182980:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and en: 3 November 1860. sv: 3 november 1869.",
+   "qid": "Q6182980",
+   "values": {
+    "en": "3 November 1860",
+    "sv": "3 november 1869",
+    "fi": "3. marraskuuta 1860"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Mikael_Soininen",
+     "opening": "August Mikael Soininen (vuoteen 1907 Johnsson; 3. marraskuuta 1860 Kuhmoniemi – 12. maaliskuuta 1924 Helsinki) oli suomalainen kasvatustieteilijä ja kouluasioihin erikoistunut poliitikko, jonka tärkein saavutus oli oppivelvollisuuden toteuttaminen. Hän toimi kouluylihallituksen ylijohtajana vuosina "
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Mikael_Soininen",
+     "opening": "August Mikael Soininen (till 1907 Johnsson), född den 3 november 1869 i Kuhmoniemi, Kajanaland, död den 12 mars 1924 i Helsingfors, var en finländsk folkbildningsman, son till Johan Viktor Johnsson, bror till Eliel Johnsson, adlad Soisalon-Soininen."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Mikael_Soininen",
+     "opening": "August Mikael Soininen (3 November 1860 – 12 March 1924; surname until 1906 Johnsson) was a Finnish professor of Education theory (at the University of Helsinki) and politician, born in Kuhmoniemi. He was Minister of Education from 27 November 1918 to 15 March 1920 and a member of the Parliament of "
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q527037:birth",
+   "set": "lifespan",
+   "label": "calendar",
+   "note": "sv leads with the Julian 1 January and gives 12 January as new style. fi and en lead with 12 January.",
+   "qid": "Q527037",
+   "values": {
+    "en": "12 January 1772",
+    "sv": "1 januari                  1772",
+    "fi": "12. tammikuuta                    1772"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Mihail_Speranski",
+     "opening": "Mihail Mihailovitš Speranski (ven. Михаи́л Миха́йлович Спера́нский; 12. tammikuuta (J: 1. tammikuuta) 1772 Tšerkutino, Vladimirin kuvernementti – 23. helmikuuta (J: 11. helmikuuta) 1839 Pietari) oli venäläinen kreivi ja valtiosihteeri, joka toimi keisari Aleksanteri I:n uudistusmielisenä neuvonantaj"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Michail_Speranskij",
+     "opening": "Michail Michailovitj Speranskij (Ryska: Михаи́л Миха́йлович Спера́нский) född 1 januari (NS: 12 januari) 1772 i Tjerkutino, guvernementet Vladimir, död 11 april (NS: 23 april) 1839 i Sankt Petersburg var en rysk greve troligen den störste ryske reformatorn under perioden mellan Peter den store och A"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Mikhail_Speransky",
+     "opening": "Count Mikhail Mikhailovich Speransky (Russian: Михаи́л Миха́йлович Спера́нский; 12 January 1772 – 23 February 1839) was a Russian statesman and reformist during the reign of Alexander I of Russia, to whom he was a close advisor. Honorary member of the Free Economic Society (1801) and the St. Petersb"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q19187248:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 5 December 2000. en: 2001.",
+   "qid": "Q19187248",
+   "values": {
+    "en": "2001",
+    "fi": "5. joulukuuta 2000"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Olli_Bergman",
+     "opening": "Olli Oleg Bergman (5. marraskuuta 1919 Helsinki – 5. joulukuuta 2000 Heinola) oli suomalainen upseeri, diplomaatti ja ortodoksisen kirkon rovasti. Koulutukseltaan hän oli valtiotieteiden maisteri."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Olli_Bergman",
+     "opening": "Olli Oleg Bergman (5 November 1919 Helsinki – 2001) was a Finnish officer, a diplomat and an Orthodox church dean. By his education he was a master of political science."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q104376663:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 16 January 1874. sv: 15 januari 1874.",
+   "qid": "Q104376663",
+   "values": {
+    "fi": "16. tammikuuta 1874",
+    "sv": "15 januari 1874"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Karl_Ludvig_von_Zansen",
+     "opening": "Karl Ludvig von Zansen (1. syyskuuta 1807 – 16. tammikuuta 1874 Siuntio) oli suomalainen upseeri ja valtiopäivämies."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Karl_Ludvig_von_Zansen",
+     "opening": "Karl Ludvig von Zansen, född 1 september 1807 i Alberga i Sverige, död 15 januari 1874 i Sjundeå i Storfurstendömet Finland, var en finländsk officer och riksdagsledamot."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q6338167:death",
+   "set": "lifespan",
+   "label": "different topic",
+   "note": "fi is about a physician in Turku (1666 to 1704), sv and en about a philosopher (1706 to 1764). Same name, same Wikidata id.",
+   "qid": "Q6338167",
+   "values": {
+    "en": "16 August 1764",
+    "fi": "11. kesäkuuta 1704",
+    "sv": "16 augusti 1764"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Nils_Wallerius",
+     "opening": "Nils Wallerius (18. helmikuuta 1666 Linköping Ruotsi – 11. kesäkuuta 1704 Turku) oli ruotsalainen lääkäri, joka toimi Turun akatemian professorina."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Nils_Wallerius",
+     "opening": "Nils Wallerius, född 1 januari 1706 i Stora Mellösa socken, död 16 augusti 1764 i Funbo socken, var en svensk filosof, teolog och fysiker, och en av Christian von Wolffs första och viktigaste företrädare i Sverige."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Nils_Wallerius",
+     "opening": "Nils Wallerius (1 January 1706 –  16 August 1764) was a Swedish physicist, philosopher and theologian. He was one of the first scientists to investigate and document the characteristics of evaporation using modern scientific methods. He was also among the first and most notable adherents of the phil"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q11875411:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 27 August 1882. en: 28 August 1882.",
+   "qid": "Q11875411",
+   "values": {
+    "en": "28 August 1882",
+    "fi": "27. elokuuta 1882"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Lempi_Tuomi",
+     "opening": "Lempi Maria Tuomi (o.s. Kuusela, 27. elokuuta 1882 Virrat – 24. maaliskuuta 1958 Jyväskylä) oli suomalainen poliitikko, joka toimi SSTP:n kansanedustajana 1922–1923. Vuosina 1923–1924 hän oli vankilassa poliittisen toimintansa vuoksi."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Lempi_Tuomi",
+     "opening": "Lempi Maria Tuomi (28 August 1882 in Virrat - 24 March 1958) was a Finnish seamstress and politician. She was a member of the Parliament of Finland from 1922 to 1923, representing the Socialist Workers' Party of Finland (SSTP). She was imprisoned from 1923 to 1924 on sedition charges. She was marrie"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q11900092:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 16 October 1926. en: 19 October 1926.",
+   "qid": "Q11900092",
+   "values": {
+    "en": "19 October 1926",
+    "fi": "16. lokakuuta 1926"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Valentin_Annala",
+     "opening": "Valentin Annala (18. marraskuuta 1859 Ilmajoki – 16. lokakuuta 1926 Maaria) oli suomalainen poliitikko, joka toimi SDP:n kansanedustajana vuosina 1909–1918 ja 1924–1926. Hän oli Turun seudun johtavia sosialidemokraatteja ja vanhan työväenliikkeen veteraani, jota tituleerattiin muun muassa ”Raunistul"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Valentin_Annala",
+     "opening": "Valentin Annala (18 November 1859 in Ilmajoki – 19 October 1926) was a Finnish railway guard, noncommissioned officer and politician. He was a member of the Parliament of Finland from 1909 to 1918 and again from 1924 until his death in 1926, representing the Social Democratic Party of Finland (SDP)."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q2478781:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and sv: 29 April 1749. en: 28 April 1749.",
+   "qid": "Q2478781",
+   "values": {
+    "en": "28 April 1749",
+    "fi": "29. huhtikuuta 1749",
+    "sv": "29 april 1749"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Adolf_Fredrik_Munck",
+     "opening": "Adolf Fredrik Munck af Fulkila (29. huhtikuuta 1749 Mikkelin pitäjä, Ruotsin kuningaskunta – 18. heinäkuuta 1831 Massa, Italia) oli suomalaissyntyinen everstiluutnantti ja kreivi, joka palveli Ruotsin hovissa kuningas Kustaa III:n aikana."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Adolf_Fredrik_Munck",
+     "opening": "Adolf Fredrik Munck af Fulkila, född 29 april 1749 i S:t Michel i Finland, död 18 juli 1831 i Massa i Italien, var en svensk greve och hovman."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Adolf_Fredrik_Munck",
+     "opening": "Adolf Fredrik, Count Munck (Mikkeli, Finland, 28 April 1749 – Massa, Italy, 18 July 1831), was a Swedish and Finnish noble during the Gustavian era. His family name is sometimes inaccurately given as \"Munck af Fulkila\" because his father usurped this family's title in the Swedish Diet but, as a matt"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q11886962:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 23 October 1906 to 22 June 1990. en: 27 April 1906 to 17 November 1990. Both dates differ.",
+   "qid": "Q11886962",
+   "values": {
+    "en": "27 April 1906",
+    "fi": "23. lokakuuta 1906"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Paula_Ruutu",
+     "opening": "Hertta Paulina (Paula) Ruutu, ent. Ruuth, o.s. Vannila, ent. Gran (23. lokakuuta 1906 Värtsilä – 22. kesäkuuta 1990 Joensuu) oli suomalainen opettaja ja kansanedustaja."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Paula_Ruutu",
+     "opening": "Hertta Paulina (Paula) Ruutu (27 April 1906 – 17 November 1990; née Gran, which was finnicized to Vannila) was a Finnish educator and politician, born in Värtsilä. She was a member of the Parliament of Finland from 1962 to 1966 and from 1967 to 1970, representing the Agrarian League, which changed i"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q5398175:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 20 April 1923. en: 20 August 1923.",
+   "qid": "Q5398175",
+   "values": {
+    "en": "20 August 1923",
+    "fi": "20. huhtikuuta 1923"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Olli_Pajari",
+     "opening": "Olli Pajari (1. helmikuuta 1860 Rautjärvi – 20. huhtikuuta 1923 Helsinki) oli suomalainen poliitikko, joka toimi Suomalaisen puolueen kansanedustajana Viipurin läänin itäisestä vaalipiiristä 1907–1908."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Olli_Pajari",
+     "opening": "Olli Pajari (1 February 1860, in Rautjärvi – 20 August 1923) was a Finnish schoolteacher and politician. He was a Member of the Parliament of Finland from 1907 to 1908, representing the Finnish Party. Olli Pajari was the father of general Aaro Pajari. General Pajari's greatest military achievement w"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q1175557:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "Three values: fi 30 December, en 19 December, sv 12 December 1769. fi against en is the 11-day calendar gap, sv fits neither.",
+   "qid": "Q1175557",
+   "values": {
+    "en": "December 19, 1769",
+    "fi": "30. joulukuuta 1769",
+    "sv": "12 december 1769"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Frans_David_Alopaeus",
+     "opening": "Frans David Alopeus (30. joulukuuta 1769 Viipuri – 13. kesäkuuta 1831 Berliini) oli suomalais-venäläinen diplomaatti, kreivi ja todellinen salaneuvos."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/David_Alopaeus",
+     "opening": "Frans David Alopaeus, född 12 december 1769, död 13 juni 1831, var en rysk adelsman och diplomat. Han var bror till Magnus Alopaeus."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/David_Alopaeus",
+     "opening": "Count Frans David von Alopaeus  (also Alopeus; December 19, 1769 – June 13, 1831) was a Russian diplomat from the Finnish Alopaeus noble family."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q2628567:death",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and sv: 4 August 1945. en: 3 August 1945. He died in California.",
+   "qid": "Q2628567",
+   "values": {
+    "en": "3 August 1945",
+    "fi": "4. elokuuta 1945",
+    "sv": "4 augusti 1945"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Rudolf_Holsti",
+     "opening": "Eino Rudolf Woldemar Holsti (8. lokakuuta 1881 Jyväskylä – 4. elokuuta 1945 Palo Alto, Kalifornia, Yhdysvallat) oli suomalainen poliitikko, toimittaja ja diplomaatti, oppiarvoltaan filosofian tohtori. Holsti toimi Suomen ulkoasiainministerinä vuosina 1919–1922 ja 1937–1938, senaattorina 1917 sekä ka"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Rudolf_Holsti",
+     "opening": "Eino Rudolf Waldemar Holsti, född 8 oktober 1881 i Jyväskylä, död 4 augusti 1945 i Palo Alto, var en finländsk politiker."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Rudolf_Holsti",
+     "opening": "Eino Rudolf  Woldemar Holsti (8 October 1881 in Jyväskylä – 3 August 1945 in Palo Alto, California) was a Finnish politician, journalist and diplomat. He was the Minister of Foreign Affairs in 1919–1922 and in 1936–1938 and a member of the Finnish Parliament in 1913–1918 representing the Young Finni"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q17384389:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 12 May 1866. en: 12 April 1866.",
+   "qid": "Q17384389",
+   "values": {
+    "en": "12 April 1866",
+    "fi": "12. toukokuuta 1866"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Lauri_Tuunanen",
+     "opening": "Lauri Tuunanen (12. toukokuuta 1866 Uukuniemi – 26. kesäkuuta 1939 Uukuniemi) oli suomalainen maanviljelijä ja Maalaisliiton kansanedustaja ensimmäisissä eduskunnissa."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Lauri_Tuunanen",
+     "opening": "Lauri Tuunanen (12 April 1866 – 26 June 1939) was a Finnish farmer and politician, born in Uukuniemi. He was a member of the Parliament of Finland from 1907 to 1910, representing the Agrarian League."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q4355133:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi and en: 27 September 1837. sv: 27 oktober 1837.",
+   "qid": "Q4355133",
+   "values": {
+    "en": "27 September 1837",
+    "sv": "27 oktober 1837",
+    "fi": "27. syyskuuta 1837"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/K._E._F._Ignatius",
+     "opening": "Karl Emil Ferdinand (K. F. tai K. E. F.) Ignatius (27. syyskuuta 1837 Pori – 11. syyskuuta 1909 Helsinki) oli suomalainen historiantutkija ja maantieteilijä, valtiopäivämies, Tilastollisen päätoimiston johtaja ja senaattori."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Karl_Ferdinand_Ignatius",
+     "opening": "Karl Emil Ferdinand Ignatius, född den 27 oktober 1837 i Björneborg, död den 11 september 1909 i Helsingfors, var en finländsk historiker, statistiker, senator 1885-1900 och 1905-08. Han var far till Kaarlo, Hannes Ignatius och Katri Bergholm."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Karl_Ferdinand_Ignatius",
+     "opening": "Karl Emil Ferdinand Ignatius (27 September 1837 – 11 September 1909) was a Finnish historian, the head of the Main Office of Statistics and a Senator."
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q203501:birth",
+   "set": "lifespan",
+   "label": "convention",
+   "note": "All three hedge: fi about 878, sv and en about 877.",
+   "qid": "Q203501",
+   "values": {
+    "en": "877",
+    "fi": "878",
+    "sv": "877"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Igor_(Kiova)",
+     "opening": "Igor (ven. Игорь, muinaisnorjaksi Ingvar, ukr. Ігор, Ihor); (n. 878–945) oli Kiovan Rusin ruhtinas vuosina 912–945."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Igor_I",
+     "opening": "Igor (Ingvar) föddes omkring 877 och dog 945 i Iskorosten. Igor var en varjagisk storfurste av Kievriket (Velikij Kniaz) från 912 till 945. Hans nordiska namn var Ingvar, men i östslaviska skrifter kallas han Igor."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Igor_of_Kiev",
+     "opening": "Igor (Church Slavonic: Игорь; Old Norse: Ingvarr; c. 877 – 945) was Prince of Kiev from 912 to 945. Traditionally, he is considered to be the son of Rurik, who established himself at Novgorod and died in 879 while Igor was an infant. According to the Primary Chronicle, Rurik was succeeded by Oleg, w"
+    }
+   }
+  },
+  {
+   "id": "lifespan:Q3195304:birth",
+   "set": "lifespan",
+   "label": "real",
+   "note": "fi: 10 September 1878. sv and en: 19 September 1878.",
+   "qid": "Q3195304",
+   "values": {
+    "en": "19 September 1878",
+    "fi": "10. syyskuuta 1878",
+    "sv": "19 september 1878"
+   },
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Bertel_Gripenberg",
+     "opening": "Bertel Johan Sebastian Gripenberg (10. syyskuuta 1878 Pietari – 5. toukokuuta 1947 Sävsjö, Ruotsi) oli suomenruotsalainen runoilija ja aatelismies."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Bertel_Gripenberg",
+     "opening": "Bertel Johan Sebastian Gripenberg, född 19 september 1878 i Sankt Petersburg, död 6 maj 1947 i Sävsjö, var en finlandssvensk friherre och poet."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Bertel_Gripenberg",
+     "opening": "Bertel Johan Sebastian, Baron Gripenberg, born 19 September 1878 in Saint Petersburg, died 6 May 1947, was a Finland-Swedish poet. He was nominated for the Nobel Prize in Literature fourteen times."
+    }
+   }
+  },
+  {
+   "id": "date:Q2138526",
+   "set": "date",
+   "label": "real",
+   "note": "Treaty of Knäred: fi and sv 20 January 1613, en 21 January 1613.",
+   "qid": "Q2138526",
+   "values": [
+    "en 21 January 1613 / fi 20. tammikuuta 1613",
+    "en 21 January 1613 / sv 20 januari 1613"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kn%C3%A4redin_rauha",
+     "opening": "Knäredin rauha 20. tammikuuta 1613 päätti Ruotsin ja Tanska-Norjan välillä käydyn Kalmarin sodan. Rauhanehdot olivat pääpiirteissään seuraavat:"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Freden_i_Kn%C3%A4red",
+     "opening": "Freden i Knäred slöts den 20 januari 1613 mellan Danmark under Kristian IV av Danmark, som vid tiden bodde dels på Halmstads slott, dels på Lagaholms slott vid Laholm, och Sverige under Gustav II Adolf, som å sin sida vid tiden vistades i Värnamo."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Treaty_of_Kn%C3%A4red",
+     "opening": "The Treaty of Knäred (Danish: Freden i Knærød, Swedish: Freden i Knäred) was signed on 21 January 1613 and ended the Kalmar War (1611–1613) between Denmark-Norway and Sweden. The peace negotiations came about under an English initiative. The peace was guaranteed by King James I of England and VI of "
+    }
+   }
+  },
+  {
+   "id": "date:Q7813408",
+   "set": "date",
+   "label": "unclear",
+   "note": "Kivimäki cabinet: en ends it on October 10, 1936, sv has 7 oktober 1936 further down the paragraph. Not read in full.",
+   "qid": "Q7813408",
+   "values": [
+    "en October 10, 1936 / sv 7 oktober 1936"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kivim%C3%A4en_hallitus",
+     "opening": "Kivimäen hallitus oli Suomen tasavallan 20. hallitus. Se oli porvarillinen vähemmistöhallitus, jonka muodostivat aluksi Maalaisliitto, Edistyspuolue ja RKP. Sosialidemokraatit jätettiin pois hallitusneuvotteluista presidentti P. E. Svinhufvudin asenteen vuoksi. RKP erosi hallituksesta keväällä 1936."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Regeringen_Kivim%C3%A4ki",
+     "opening": "Regeringen Kivimäki var den 20:e regeringen i det självständiga Finland. I den borgerliga minoritetsregeringen ingick ursprungligen Framstegspartiet, Agrarförbundet och Svenska folkpartiet. I slutet av februari 1936 lämnade Svenska folkpartiet regeringen. Även opolitiska fackministrar ingick i T.M. "
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kivim%C3%A4ki_cabinet",
+     "opening": "Toivo Kivimäki's cabinet was the 20th government of the Republic of Finland. Cabinet's time period was from December 14, 1932 to October 10, 1936. It was Minority government. Many of the neutral ministers were members of the National Coalition Party without formal support of the party. Cabinet fell "
+    }
+   }
+  },
+  {
+   "id": "date:Q27839492",
+   "set": "date",
+   "label": "real",
+   "note": "Battle of Rautu: fi starts it on 20 February 1918, en on 21 February.",
+   "qid": "Q27839492",
+   "values": [
+    "en 21 February to … 1918 / fi 20. helmikuuta – … 1918"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Raudun_taistelu",
+     "opening": "Raudun taistelu oli Suomen sisällissodan aikainen taistelu, joka käytiin Karjalankannaksella sijainneessa Raudun pitäjässä 20. helmikuuta – 5. huhtikuuta 1918. Pietarin läheisyyden vuoksi enemmistö punaisten puolella taisteluun osallistuneista joukoista oli venäläisiä. Valkoisten voittoon päättynyt "
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Slaget_vid_Rautus",
+     "opening": "Slaget vid Rautus utkämpades under finska inbördeskriget 1918 och sammanföll tidsmässigt med erövringen av Tammerfors och den tyska framryckningen mot Helsingfors. Under befäl av Aarne Sihvo belägrades ryska trupper från tre håll vid Rautus järnvägsstation den 25 mars."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Rautu",
+     "opening": "Battle of Rautu was a 1918 Finnish Civil War battle, fought in Rautu, Finland (now Sosnovo, Leningrad Oblast, Russia) from 21 February to 5 April 1918 between the Finnish Whites and the Finnish Reds supported by the Russian Bolsheviks."
+    }
+   }
+  },
+  {
+   "id": "date:Q705409",
+   "set": "date",
+   "label": "calendar",
+   "note": "Helsingborg: fi and sv use the Swedish calendar (28 February 1710), en the Gregorian (10 March).",
+   "qid": "Q705409",
+   "values": [
+    "en 10 March 1710 / fi 28. helmikuuta 1710",
+    "en 10 March 1710 / sv 28 februari 1710"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Helsingborgin_taistelu",
+     "opening": "Helsingborgin taistelu käytiin 28. helmikuuta 1710 Ruotsin ja Tanskan välillä. Se oli osa suurta Pohjan sotaa. Taistelussa Magnus Stenbockin johtamat ruotsalaiset voittivat tanskalaisten armeijan ja karkottivat heidät Skånesta."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Slaget_vid_Helsingborg",
+     "opening": "Slaget vid Helsingborg stod den 28 februari 1710 (enligt den svenska kalendern; 27 februari enligt den julianska och 10 mars enligt den gregorianska) vid Ringstorpshöjden nordöst om dåvarande Helsingborg. De stridande parterna var den danska invasionsarmén på 14 000 man, ledd av generallöjtnant Jørg"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Helsingborg",
+     "opening": "The Battle of Helsingborg was the last major engagement of the Great Northern War to take place on Swedish soil. It resulted in a decisive victory of a Swedish force of 14,000 men under the command of Magnus Stenbock against a Danish force of equal strength under the command of Jørgen Rantzau, ensur"
+    }
+   }
+  },
+  {
+   "id": "date:Q4411911",
+   "set": "date",
+   "label": "real",
+   "note": "Battle of Viipuri: fi 24 to 29 April 1918, sv 23 to 29 April.",
+   "qid": "Q4411911",
+   "values": [
+    "fi 24.– … 1918 / sv 23 och … 1918"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Viipurin_taistelu_(Suomen_sis%C3%A4llissota)",
+     "opening": "Viipurin taistelu oli Suomen sisällissodan viimeinen suuri taistelu, joka käytiin Viipurin kaupungin hallinnasta 24.–29. huhtikuuta 1918 punakaartin ja valkoisten välillä. Taistelu päättyi valkoisten vallatessa Viipurin."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Slaget_om_Viborg",
+     "opening": "Slaget om Viborg var en viktig operation i finska inbördeskriget och ägde rum mellan 23 och 29 april 1918."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Viipuri",
+     "opening": "The Battle of Viipuri was a 1918 Finnish Civil War battle, fought 24–29 April between the Finnish Whites and the Finnish Reds in Viipuri. Together with the Battle of Tampere and Battle of Helsinki, it was one of the three major urban battles of the Finnish Civil War. The battle is also remembered be"
+    }
+   }
+  },
+  {
+   "id": "date:Q638374",
+   "set": "date",
+   "label": "calendar",
+   "note": "Pälkäne: fi and sv 6 October 1713, en 17 October. Eleven days.",
+   "qid": "Q638374",
+   "values": [
+    "en 17 October 1713 / fi 6. lokakuuta 1713",
+    "en 17 October 1713 / sv 6 oktober 1713"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kostianvirran_taistelu",
+     "opening": "Kostianvirran taistelu oli osa suurta Pohjan sotaa ja se käytiin 6. lokakuuta 1713 Pälkäneellä Kostianvirran luona."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Slaget_vid_P%C3%A4lk%C3%A4ne",
+     "opening": "Slaget vid Pälkäne, även känt som Slaget vid Kostianvirta eller Slaget vid Pälkäne kyrka, var ett fältslag vid Pälkäne den 6 oktober 1713, mellan svenska och ryska trupper under stora nordiska kriget där de sistnämnda segrade."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_P%C3%A4lk%C3%A4ne",
+     "opening": "The Battle of Pälkäne, sometimes called the Battle at Kostianvirta or Battle on the Pialkiane River (Russian: Битва на реке Пялькяне) was fought between the Russian army under Admiral Fyodor Apraksin and the defending Finnish army of the Sweden under General Carl Gustaf Armfeldt on 17 October 1713, "
+    }
+   }
+  },
+  {
+   "id": "date:Q11885366",
+   "set": "date",
+   "label": "real",
+   "note": "Olhava: fi 29 September 1944, en 28 September.",
+   "qid": "Q11885366",
+   "values": [
+    "en 28 September 1944 / fi 29. syyskuuta 1944"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Olhavan_taistelu",
+     "opening": "Olhavan taistelu oli Lapin sodan alkuvaiheessa 29. syyskuuta 1944 Iin Olhavassa käyty lyhyt aseellinen taistelu Pohjois-Suomesta vetäytyvien saksalaisjoukkojen ja pohjoiseen etenevien suomalaisjoukkojen välillä. Edellisenä päivänä oli Pudasjärvellä käyty ensimmäinen laukaustenvaihto saksalaisten ja "
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Olhava",
+     "opening": "The Battle of Olhava occurred during the Lapland War on 28 September 1944. A brief armed struggle occurred in Northern Finland between retreating German troops and north of the advancement of the Finnish troops. The previous day the first skirmish between German and Finnish troops in Pudasjärvi. In "
+    }
+   }
+  },
+  {
+   "id": "date:Q701663",
+   "set": "date",
+   "label": "calendar",
+   "note": "Traventhal: sv 8 augusti 1700 marked Swedish style, en 18 August.",
+   "qid": "Q701663",
+   "values": [
+    "en 18 August 1700 / sv 8 augusti 1700"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Traventhalin_rauha",
+     "opening": "Traventhalin rauha oli suuren Pohjan sodan alkuvaiheessa vuonna 1700 solmittu Ruotsin ja Tanskan välinen erillisrauha."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Freden_i_Traventhal",
+     "opening": "Freden i Traventhal var ett fredsfördrag under stora nordiska kriget. Freden slöts den 8 augusti 1700 (ss) mellan Danmark-Norge, Sverige och Holstein-Gottorp i Traventhal, väster om Lübeck. Holstein-Gottorp var allierad med Sverige."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Peace_of_Travendal",
+     "opening": "The Peace of Travendal was a peace treaty concluded at the outset of the Great Northern War on 18 August 1700 between the Swedish Empire, Denmark–Norway and Holstein-Gottorp in Traventhal.   Denmark had to return Holstein-Gottorp to its duke, a Swedish ally, and to leave the anti-Swedish alliance. T"
+    }
+   }
+  },
+  {
+   "id": "date:Q212234",
+   "set": "date",
+   "label": "extraction error",
+   "note": "Roskilde: en gives both 26 February (OS) and 8 March 1658 (NS). Only the second was read.",
+   "qid": "Q212234",
+   "values": [
+    "en 8 March 1658 / fi 26. helmikuuta 1658",
+    "en 8 March 1658 / sv 26 februari 1658"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Roskilden_rauha",
+     "opening": "Roskilden rauha solmittiin Pohjan sodan aikana Ruotsin ja Tanska-Norjan välillä käydyn sodan päätteeksi 26. helmikuuta 1658. Siinä Tanska luovutti Ruotsille Skånen, Blekingen, Hallandin ja Bohuslänin maakunnat, Bornholmin ja Venin saaret sekä Trondheimin läänin."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Freden_i_Roskilde",
+     "opening": "Freden i Roskilde är det fredsfördrag mellan Sverige och Danmark-Norge som slöts i den danska staden Roskilde den 26 februari 1658. Det avslutade det av Danmark påbörjade Karl X Gustavs första danska krig. Under kriget hade Karl X Gustav med den svenska armén från Jylland tågat på isen över Bälten m"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Treaty_of_Roskilde",
+     "opening": "The Treaty of Roskilde was negotiated at Høje Taastrup Church  and was concluded on 26 February (OS) or 8 March 1658 (NS) during the Second Northern War between Frederick III of Denmark–Norway and Karl X Gustav of Sweden in the Danish city of Roskilde. After a devastating defeat, Denmark–Norway was "
+    }
+   }
+  },
+  {
+   "id": "date:Q1338746",
+   "set": "date",
+   "label": "real",
+   "note": "Kekkonen V cabinet: fi ends it on 15 February 1956, sv and en on 3 March 1956.",
+   "qid": "Q1338746",
+   "values": [
+    "fi 15. helmikuuta 1956 / sv 3 mars 1956"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kekkosen_V_hallitus",
+     "opening": "Kekkosen V hallitus oli Suomen tasavallan 39. hallitus, joka toimi 501 päivän ajan 20. lokakuuta 1954 - 15. helmikuuta 1956. Se oli Maalaisliiton ja SDP:n muodostama punamultahallitus. Pääministeri Kekkonen valittiin tasavallan presidentiksi 15. helmikuuta 1956, minkä jälkeen hän erosi pääministerin"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Regeringen_Kekkonen_V",
+     "opening": "Regeringen Kekkonen V var Republiken Finlands 39:e regering bestående av Agrarförbundet och Socialdemokraterna. Ministären regerade från 20 oktober 1954 till 3 mars 1956. Från och med den 6 november 1954 ingick även en opolitisk minister i regeringen."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kekkonen_V_cabinet",
+     "opening": "Kekkonen's fifth cabinet was the 39th government of Finland. The cabinet existed from 20 October 1954 to 3 March 1956. It was a majority government. Prime Minister Urho Kekkonen was elected the President of Finland on February 15 February 1956, resigning as Prime Minister and dissolving the cabinet "
+    }
+   }
+  },
+  {
+   "id": "quantity:Q6305099",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "en: more than 600,000 viewers. fi: 607 939.",
+   "qid": "Q6305099",
+   "values": [
+    "en 600,000 / fi 607 939"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Uuno_Epsanjassa",
+     "opening": "Uuno Epsanjassa on vuonna 1985 ensi-iltansa saanut, järjestyksessä kymmenes Uuno Turhapuro -elokuva. Elokuva oli vuoden 1985 katsotuin kotimainen elokuva; se ohitti Rauni Mollbergin Tuntemattoman sotilaan ja ylti kolmanneksi menestyneimmäksi Turhapuro-elokuvaksi. Elokuvateattereissa sen kävi katsoma"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Uuno_Epsanjassa",
+     "opening": "Uuno Epsanjassa (Uuno i Psanien) är en finsk komedifilm från 1985."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Uuno_Epsanjassa",
+     "opening": "Uuno Epsanjassa (an intentional misspelling of \"Uuno in Spain\") is a Finnish 1985 comedy film directed by Ere Kokkonen. It is the tenth film in the Uuno Turhapuro series. It was seen by more than 600,000 people in the theatres, making it the third highest-grossing film in the series; the film was an"
+    }
+   }
+  },
+  {
+   "id": "quantity:Q569477",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "en and sv: 1,408 volunteers. fi: 1 400. The 255 against 256 dead was not read in context.",
+   "qid": "Q569477",
+   "values": [
+    "en 1,408 / fi 1 400",
+    "fi 256 / sv 255"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Suomalainen_Waffen-SS-vapaaehtoispataljoona",
+     "opening": "Suomalainen Waffen-SS-vapaaehtoispataljoona (saks. Finnisches Freiwilligen-Bataillon der Waffen-SS, alkujaan SS Freiwilligen-Bataillon Nordost) oli vuosina 1941–1943 toisen maailmansodan itärintamalla toiminut suomalaisista vapaaehtoisista koottu Saksan Waffen-SS:n joukkoyksikkö. Pataljoona oli osa "
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Finl%C3%A4ndska_frivilligbataljonen_i_Waffen-SS",
+     "opening": "Finländska frivilligbataljonen i Waffen-SS-divisionen SS-Wiking var en bataljon i Waffen-SS mellan 1941 och 1943, som bestod av 1408 frivilligsoldater från Finland. Bataljonen förlorade under deras 2-åriga kontrakt 255 män i strid, 686 sårade och 14 försvunna."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Finnish_volunteers_in_the_Waffen-SS",
+     "opening": "From 1941 to 1943, 1,408 Finns volunteered for service on the Eastern Front of World War II in the Waffen-SS, in units of the SS Division Wiking. Most served as motorized infantry in the Finnish Volunteer Battalion of the Waffen-SS (German: Finnisches Freiwilligen-Bataillon der Waffen-SS; Finnish: S"
+    }
+   }
+  },
+  {
+   "id": "quantity:Q1978178",
+   "set": "quantity",
+   "label": "unclear",
+   "note": "1,700 against 1 800. The sentences were past the part printed.",
+   "qid": "Q1978178",
+   "values": [
+    "en 1,700 / fi 1 800"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Revonlahden_taistelu",
+     "opening": "Revonlahden taistelu oli 27. huhtikuuta 1808 käyty Suomen sodan taistelu Ruotsin ja Venäjän välillä. Ruotsalaisten voitettua yhdeksän päivää aikaisemmin Siikajoen taistelun Klingspor jatkoi vetäytymistä kohti Oulua venäläisten tiukasti seuraamana. Venäläiset olivat leiriytyneet Revonlahdelle kenraal"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Slaget_vid_Revolax",
+     "opening": "Slaget vid Revolax utkämpades den 27 april 1808 mellan Sverige och Ryssland. Svenskarna segrade."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Revolax",
+     "opening": "The Battle of Revolax (Finnish: Revonlahden taistelu) took place on 27 April 1808 at Revonlahti, (now part of Siikajoki) in Northern Ostrobothnia, Finland, when the Swedish supreme commander Wilhelm Mauritz Klingspor and the Savolax brigade under Colonel Johan Adam Cronstedt, a total of about 2,250 "
+    }
+   }
+  },
+  {
+   "id": "quantity:Q196397",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "en: 19,215. sv: about 19 000.",
+   "qid": "Q196397",
+   "values": [
+    "en 19,215 / sv 19 000"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Sortavala",
+     "opening": "Sortavala (ven.   Сортавала) on kaupunki Sortavalan piirissä Karjalan tasavallassa Venäjällä. Kaupunki sijaitsee Laatokan pohjoisrannalla noin 190 kilometriä Petroskoista länteen ja runsaat 30 kilometriä Suomen rajasta. Kaupunki on Sortavalan piirin hallinnollinen keskus. Kaupungissa asui yhteensä 1"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Sordavala",
+     "opening": "Sordavala (finska Sortavala och ryska Сортавала, före 1918 Сердоболь, Serdobol) är en stad i Karelska republiken i Ryssland. Sordavala ligger vid Vakkobukten, en del av sjön Ladoga, nära gränsen till Finland. Centralorten har cirka 19 000 invånare."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Sortavala",
+     "opening": "Sortavala (Russian: Сортавала; Finnish and Karelian: Sortavala; Swedish: Sordavala), previously known as Serdobol (Сердоболь) until 1918, is a town in the Republic of Karelia, Russia, located at the northern tip of Lake Ladoga near the Finnish border, 246 kilometres (153 mi) west of Petrozavodsk, th"
+    }
+   }
+  },
+  {
+   "id": "quantity:Q3366540",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "fi: 8 721 inhabitants, 650,9 km². sv: about 8 700, 650.",
+   "qid": "Q3366540",
+   "values": [
+    "fi 650,9 / sv 650",
+    "fi 8 721 / sv 8 700"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kirvu",
+     "opening": "Kirvu (ruots. Kirvus) on Karjalankannaksen länsiosassa sijainnut entinen suomalainen kunta, jonka kirkonkylän nimi on venäjäksi nykyään erisnimeä tarkoittava adjektiiviattribuutti Svobodnoje (Svobodnoje selo, Vapaa kylä). Kirvu sijaitsee Neuvostoliitolle viime sotien seurauksena luovutetulla alueell"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Kirvus",
+     "opening": "Kirvus (finska Kirvu, ryska Svobodnoje) var en kommun i Karelen, i Viborgs län. Kommunen låg i norra delen av Karelska näset och den gränsade mot S:t Andree i sydväst, Jäskis i väster, Rautjärvi i norr, Hiitola, Kaukola och Räisälä i öster samt Vuoksenranta i söder. Kirvus hade cirka 8 700 invånare "
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Svobodnoye,_Leningrad_Oblast",
+     "opening": "Svobodnoye (Russian: Свобо́дное; Finnish: Kirvu) is a rural locality on Karelian Isthmus, in Vyborgsky District, Leningrad Oblast in Russia. Until the Winter War and Continuation War, it was the administrative center of the Kirvu municipality of the Viipuri province of Finland."
+    }
+   }
+  },
+  {
+   "id": "quantity:Q14504750",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "en: about 170 swords. sv: 171.",
+   "qid": "Q14504750",
+   "values": [
+    "en 170 / sv 171"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Ulfberht-miekka",
+     "opening": "Ulfberht-miekoiksi kutsutaan 900–1000-luvuilta peräisin olevia taidokkaasti valmistettuja miekkoja, joita käyttivät erityisesti viikingit."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Ulfberht",
+     "opening": "Ulfberht är en typ av svärd som användes i Skandinavien under vikingatiden. Ulfberht-svärd var tillverkade av degelstål med en relativt hög kolhalt och därmed både starkare och böjligare än andra europeiska svärd under vikingatiden och medeltiden. Totalt 171 sådana svärd har återfunnits."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Ulfberht_swords",
+     "opening": "The Ulfberht swords are a group of about 170 medieval swords found primarily in Northern Europe, dated to the 9th to 11th centuries, with blades inlaid with the inscription +VLFBERH+T or +VLFBERHT+. The word \"Ulfberht\" is a Frankish personal name, possibly indicating the origin of the blades."
+    }
+   }
+  },
+  {
+   "id": "quantity:Q979535",
+   "set": "quantity",
+   "label": "different year",
+   "note": "Population of a municipality at two dates: fi 1 527, sv 1 644.",
+   "qid": "Q979535",
+   "values": [
+    "fi 454,17 / sv 454,19",
+    "fi 1 527 / sv 1 644"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Pertunmaa",
+     "opening": "Pertunmaa on entinen Suomen kunta, joka sijaitsi Etelä-Savon maakunnassa. Kunnassa asui 1 527 ihmistä, ja sen pinta-ala oli 454,17 km², josta 79,73 km² oli vesistöjä. Väestötiheys oli 4,08 asukasta/km². Väkiluvullisesti Pertunmaa oli Etelä-Savon maakunnan toiseksi pienin kunta Enonkosken ollessa väk"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Pertunmaa",
+     "opening": "Pertunmaa var fram till 2025 en kommun i landskapet Södra Savolax i Finland. Pertunmaa hade 1 644 invånare och hade en yta på 454,19 km². Grannkommuner var Gustav Adolfs, Heinola, Hirvensalmi, Mäntyharju och Joutsa."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Pertunmaa",
+     "opening": "Pertunmaa (Finnish: [ˈpertumˌmɑː]) is a former municipality of Finland located in the Southern Savonia region. The municipality was merged to the municipality of Mäntyharju on 1 January 2025."
+    }
+   }
+  },
+  {
+   "id": "quantity:Q732856",
+   "set": "quantity",
+   "label": "rounding",
+   "note": "Island area: fi 142 km², en about 150.",
+   "qid": "Q732856",
+   "values": [
+    "en 150 / fi 142"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Raippaluoto",
+     "opening": "Raippaluoto (ruots. Replot) on entinen Suomen kunta ja 142 neliökilometrin saari Merenkurkun rannikolla Mustasaaren kunnassa Pohjanmaalla. Kunta oli itsenäinen vuodesta 1872 vuoteen 1973 asti. Raippaluoto on Suomen merialueiden neljänneksi suurin saari Ahvenanmantereen, Kemiönsaaren ja Hailuodon jäl"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Replot",
+     "opening": "Replot (finska: Raippaluoto) är en ö och kyrkby i Korsholms kommun, nära Vasa. Kyrkbyn är den största av byarna i Korsholm skärgård. Tidigare fanns endast färjeförbindelse till ön, men genom Replotbron knöts förbindelserna mellan ön och fastlandet ihop ordentligt. Replot har ungefär 2 100 invånare, "
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Replot",
+     "opening": "Replot (Finnish: Raippaluoto) is an island in the Kvarken (\"The Throat\"), the narrowest part of the Gulf of Bothnia in the northern part of the Baltic Sea. It has about 2,100 inhabitants, almost only Swedish-speaking. The size is about 150 square kilometres (58 sq mi), one of the largest islands of "
+    }
+   }
+  },
+  {
+   "id": "quantity:Q201835",
+   "set": "quantity",
+   "label": "different year",
+   "note": "sv gives the population at two dates (2 001, 1 980), fi at a third (1 987).",
+   "qid": "Q201835",
+   "values": [
+    "fi 1 987 / sv 1 980",
+    "fi 1 987 / sv 2 001"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kuivaniemi",
+     "opening": "Kuivaniemi on Pohjois-Pohjanmaan pohjoisosassa sijainnut entinen Suomen kunta. Kuivaniemen lakatessa olemasta itsenäisenä kuntana sen väkiluku oli 1 987, ja  väestötiheys 2,1 asukasta/km². Kunnan pinta-ala oli 1 149,58 km², josta 34,51 km² oli sisävesistöjä ja 187,86 km² merialueita.  Kuivaniemen na"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Kuivaniemi",
+     "opening": "Kuivaniemi är en före detta kommun i landskapet Norra Österbotten i Uleåborgs län. Kuivaniemi hade 2 001 resp. 1 980 invånare (per 31.12.2005 resp. 30.11.2006) och hade en yta på 960,11 km², varav 927,21 km² var landområden."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kuivaniemi",
+     "opening": "Kuivaniemi is a former municipality of Finland."
+    }
+   }
+  },
+  {
+   "id": "quantity:Q1025697",
+   "set": "quantity",
+   "label": "real",
+   "note": "Population at the end of 2010: fi 1 041, sv 1 040.",
+   "qid": "Q1025697",
+   "values": [
+    "fi 1 041 / sv 1 040"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kuhmalahti",
+     "opening": "Kuhmalahti (epävirallisesti ruots. Kuhmalax; aiemmin  suom. Pento ) on entinen Suomen kunta Pirkanmaan maakunnassa. Se liitettiin Kangasalaan vuonna 2011. Kunnassa asui lakkautushetkellä vuoden 2010 lopussa 1 041 ihmistä, ja sen pinta-ala oli 220,67 km², josta 52,17 km² oli vesistöjä. Väestötiheys o"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Kuhmalahti",
+     "opening": "Kuhmalahti (föråldrat svenskt namn: Kuhmalax) var en kommun i landskapet Birkaland i Finland. Kommunen hade 1 040 invånare (2010), på en yta av 220,67 km²."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kuhmalahti",
+     "opening": "Kuhmalahti (Swedish: Kuhmalahti, also Kuhmalax) is a former municipality of Finland. It was consolidated with the municipality of Kangasala on January 1, 2011."
+    }
+   }
+  },
+  {
+   "id": "living:Q5401949",
+   "set": "living",
+   "label": "real",
+   "note": "en opens '(born 20 June 1857)' with no death. fi gives 25 February 1927.",
+   "qid": "Q5401949",
+   "values": [
+    "fi died 25. helmikuuta 1927 / en born 20 June 1857 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kaarlo_Saari",
+     "opening": "Kaarlo Saari (vuoteen 1878 Lystman, 20. kesäkuuta 1857 Karjala Tl – 25. helmikuuta 1927 Helsinki) oli suomalainen opettaja ja poliitikko, joka toimi SDP:n kansanedustajana vuosina 1910–1918 ja 1924–1927."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kaarlo_Saari",
+     "opening": "Kaarlo Saari (born 20 June 1857) was a Finnish teacher and politician who served as a member of the Eduskunta from 1910-1918 and from 1924-1927. Saari was a member of the Social Democratic Party of Finland (SDP)."
+    }
+   }
+  },
+  {
+   "id": "living:Q4115626",
+   "set": "living",
+   "label": "extraction error",
+   "note": "sv says 'mördad 6 februari 1905'. The reader does not know 'mördad'.",
+   "qid": "Q4115626",
+   "values": [
+    "fi died 6. helmikuuta 1905 / sv born 26 maj 1856 only",
+    "en died 6 February 1905 / sv born 26 maj 1856 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Eliel_Soisalon-Soininen",
+     "opening": "Johan Mårten Eliel Soisalon-Soininen (vuoteen 1904 Johnsson; 26. toukokuuta 1856 Pielisjärvi – 6. helmikuuta 1905 Helsinki) oli suomalainen juristi, valtioneuvos ja Suomen suuriruhtinaskunnan keisarillisen senaatin prokuraattori."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Eliel_Soisalon-Soininen",
+     "opening": "Johan Mårten Eliel Soisalon-Soininen, född 26 maj 1856 i Pielisjärvi, Karelen, mördad 6 februari 1905 i sitt hem i Helsingfors, var en finländsk ämbetsman. Eliel Soisalon-Soininen hette fram till adlandet 1904 Johnsson. Han var son till biskopen i Borgå stift vid namn Johan Viktor Johnsson (1832–188"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Eliel_Soisalon-Soininen",
+     "opening": "Johan Mårten Eliel Soisalon-Soininen (born Johnsson, raised to the nobility as Soisalon-Soininen; 26 May 1856 – 6 February 1905) was a Chancellor of Justice of Finland. Soisalon-Soininen was assassinated in 1905 when a young student called Lennart Hohenthal murdered him at his apartment in Helsinki."
+    }
+   }
+  },
+  {
+   "id": "living:Q17383584",
+   "set": "living",
+   "label": "extraction error",
+   "note": "sv says 'död (avrättad) 26 februari 1938'. The bracket stopped the reader.",
+   "qid": "Q17383584",
+   "values": [
+    "fi died 26. helmikuuta 1938 / sv born 4 april 1891 only",
+    "en died 26 February 1938 / sv born 4 april 1891 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Tyyne_Salomaa",
+     "opening": "Tyyne Siviä Salomaa (synt. Eriksson, vuodesta 1913 Eloranta, ven. Тюне Генриховна Саломаа, 4. huhtikuuta 1891 Orivesi – 26. helmikuuta 1938 Petroskoi) oli suomalainen poliitikko, joka toimi SDP:n kansanedustajana vuonna 1917. Sisällissodan jälkeen Salomaa pakeni Neuvosto-Venäjälle, ja hänet teloitet"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Tyyne_Salomaa",
+     "opening": "Tyyne Siviä Salomaa, född Eloranta 4 april 1891 i Juupajoki, död (avrättad) 26 februari 1938 i Petrozavodsk, var en finländsk politiker (SDP)."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Tyyne_Salomaa",
+     "opening": "Tyyne Siviä Salomaa (née Eriksson; 4 April 1891, Kuorevesi - 26 February 1938, Petrozavodsk; name as Soviet citizen Тюне Генриховна Саломаа) was a Finnish seamstress and politician. She was a member of the Parliament of Finland from 1916 to 1917. During the Finnish Civil War in 1918, she sided with "
+    }
+   }
+  },
+  {
+   "id": "living:Q63681510",
+   "set": "living",
+   "label": "convention",
+   "note": "Medieval: sv gives only 'död efter 1502', fi and en only 'born about 1430'.",
+   "qid": "Q63681510",
+   "values": [
+    "sv died 1502 / en born 1430 only",
+    "sv died 1502 / fi born 1430 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Lars_Skalm",
+     "opening": "Lars (Lasse) Skalm (alkujaan muodossa Lorentz Skallme; syntynyt n. 1430, mahdollisesti Paraisilla) oli keskiajalla elänyt Rövarnäsin kartanon herra, kauppias ja Turun pormestari. Hän kuului Skalmin sukuun, joka oli aateloitu hänestä alkaen."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Lars_Skalm",
+     "opening": "Lars Skalm, död efter 1502, var en finländsk köpman och borgmästare."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Lars_Skalm",
+     "opening": "Lars Skalm (born Lorentz Skallman, circa 1430 in Pargas) was a Finnish noble, having been granted hereditary nobility by King Christian I of Denmark in 1461 for helping his army against rebels in Sweden. He served as Mayor of Turku from 1501 to 1502."
+    }
+   }
+  },
+  {
+   "id": "living:Q2027592",
+   "set": "living",
+   "label": "extraction error",
+   "note": "sv says 'död (avrättad) 16 december 1520'.",
+   "qid": "Q2027592",
+   "values": [
+    "fi died 1520 / sv born 1450 only",
+    "en died 16 December 1520 / sv born 1450 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Hemming_Gadh",
+     "opening": "Hemming Gadh (1450–1520) oli ruotsalainen poliitikko ja katolinen piispa, joka eli vaiheikkaan elämän ja teloitettiin Raaseporin linnan Hirsipuunmäellä nykyisessä Raaseporin kaupungissa."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Hemming_Gadh",
+     "opening": "Hemming Gadh, Hemming Olofsson, född omkring 1450 eventuellt i Hossmo socken, död (avrättad) 16 december 1520 vid Raseborgs slott i Nyland i Finland, var en svensk kyrkoman, diplomat och krigare."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Hemming_Gadh",
+     "opening": "Hemming Gadh (c. 1450 – 16 December 1520) was a Swedish Roman Catholic priest and Bishop of the Diocese of Linköping."
+    }
+   }
+  },
+  {
+   "id": "living:Q1990943",
+   "set": "living",
+   "label": "extraction error",
+   "note": "en writes '(born 3 September 1838 ... – 9 December 1929 ...)'. The reader stopped at 'born'.",
+   "qid": "Q1990943",
+   "values": [
+    "fi died 9. joulukuuta 1929 / en born 3 September 1838 only",
+    "sv died 9 december 1929 / en born 3 September 1838 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Nikolai_Gerard",
+     "opening": "Nikolai Nikolajevitš Gerard tai Gerhard (ven. Никола́й Никола́евич Ге́рард; 3. syyskuuta 1838 Homelin piirikunta, Mogiljovin kuvernementti, Venäjän keisarikunta – 9. joulukuuta 1929 Uusikirkko, Suomi) oli venäläinen todellinen salaneuvos."
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Nikolaj_Gerhard",
+     "opening": "Nikolaj Nikolajevitj Gerhard (ryska: Николай Николаевич Герард), eller Gerard, född (22 augusti g.s.) 3 september 1838 i Dziamjanki i guvernementet Mohilev i Kejsardömet Ryssland (nu Mahiljoŭs voblast i Belarus), död 9 december 1929, på Halila sanatorium i Nykyrka, Karelen i Finland (nu Poljany i Le"
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Nikolai_Gerhard",
+     "opening": "Nikolai Nikolaevich Gerhard (Russian: Николай Николаевич Герард; born 3 September 1838 in Mogilev Governorate – 9 December 1929 in Halila sanatorium, Viipuri province, Finland) was a Russian general and politician. He served as the Governor-General of Finland from 6 December 1905 to 2 February 1908."
+    }
+   }
+  },
+  {
+   "id": "living:Q11858115",
+   "set": "living",
+   "label": "unclear",
+   "note": "The sv paragraph breaks off after the birth place.",
+   "qid": "Q11858115",
+   "values": [
+    "fi died 22. syyskuuta 1936 / sv born 17 maj 1884 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Eric_J._Serlachius",
+     "opening": "Eric Johan Serlachius (17. toukokuuta 1884 Viipuri – 22. syyskuuta 1936) oli suomalainen lakimies, joka toimi oikeusministerinä Kivimäen hallituksessa vuosina 1933–1936. Hallituksessa Serlachius edusti Ruotsalaista kansanpuoluetta. Serlachius erosi Kivimäen hallituksesta Helsingin yliopiston opetusk"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Eric_J._Serlachius",
+     "opening": "Eric Johan Serlachius, född 17 maj 1884 i Viborg, Kejsardömet Ryssland"
+    }
+   }
+  },
+  {
+   "id": "living:Q1794614",
+   "set": "living",
+   "label": "extraction error",
+   "note": "en uses 'born Källberg' for the birth name and then gives both dates.",
+   "qid": "Q1794614",
+   "values": [
+    "fi died 13. huhtikuuta 1973 / en born 17 November 1887 only",
+    "sv died 13 april 1973 / en born 17 November 1887 only"
+   ],
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Kusti_Kulo",
+     "opening": "Gustaf Ludvik (Kustaa, Kusti) Kulo (vuoteen 1906 Källberg, 17. marraskuuta 1887 Hämeenlinna – 13. huhtikuuta 1973 Helsinki) oli suomalainen poliitikko, joka toimi SKDL:n puheenjohtajana vuosina 1948–1966. Ennen sisällissotaa ammattiyhdistysliikkeessä vaikuttanut Kulo aloitti poliittisen uransa 1920-"
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Kusti_Kulo",
+     "opening": "Gustaf (Kusti) Ludvig Kulo (till 1906 Källberg), född 17 november 1887 i Tavastehus, död 13 april 1973 i Helsingfors, var en finländsk politiker."
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Kusti_Kulo",
+     "opening": "Gustav (Kusti) Ludvig Kulo (born Källberg, 17 November 1887 – 13 April 1973) was a Finnish politician who was the chairman of the Finnish People's Democratic League 1948–1966."
+    }
+   }
+  },
+  {
+   "id": "recent:Q26922029",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 9 February 2025. en: '(born. 1939) Is a Finnish diplomat'.",
+   "qid": "Q26922029",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Johannes_B%C3%A4ckstr%C3%B6m",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Johannes_B%C3%A4ckstr%C3%B6m",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q26922046",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 8 October 2024. en: '(born April 3, 1933) is a Finnish diplomat'.",
+   "qid": "Q26922046",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Mauri_Eggert",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Mauri_Eggert",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q11853476",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 20 November 2023. en: 'born 23 July 1936 ... is a Finnish market gardener and politician'.",
+   "qid": "Q11853476",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Aune_M%C3%A4ntt%C3%A4ri",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Aune_M%C3%A4ntt%C3%A4ri",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q11885293",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 18 October 2022. en: 'born 25 July 1941 ... is a Finnish farmer and politician'.",
+   "qid": "Q11885293",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Olavi_Martikainen",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Olavi_Martikainen",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q11889760",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 14 June 2022. en: 'born 31 October 1937 ... is a Finnish office worker and politician'.",
+   "qid": "Q11889760",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Raila_Aho",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Raila_Aho",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q11875064",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 30 August 2021. en: '(born 28 April 1946) has served as Finnish Ambassador'.",
+   "qid": "Q11875064",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Lauri_Korpinen_(diplomaatti)",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Lauri_Korpinen",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q3735752",
+   "set": "recent",
+   "label": "extraction error",
+   "note": "sv: 'till hans död 2021' is her husband's death.",
+   "qid": "Q3735752",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Eva-Riitta_Siitonen",
+     "opening": null
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Eva-Riitta_Siitonen",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Eva-Riitta_Siitonen",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q11899448",
+   "set": "recent",
+   "label": "extraction error",
+   "note": "en gives the death after 'born ... in Kuorevesi–25 June 2019'.",
+   "qid": "Q11899448",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Ulla_Juurola",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Ulla_Juurola",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q4354820",
+   "set": "recent",
+   "label": "extraction error",
+   "note": "fi writes '(s. 16. helmikuuta 1944 – 23. toukokuuta 2013)'. The reader stopped at 's.'.",
+   "qid": "Q4354820",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Olof_Erland",
+     "opening": null
+    },
+    "sv": {
+     "url": "https://sv.wikipedia.org/wiki/Olof_Erland",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Olof_Erland",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q23040749",
+   "set": "recent",
+   "label": "real",
+   "note": "fi: died 2 November 2011. en: '(s. 30 October 1929 Kurikka) is a Finnish diplomat'.",
+   "qid": "Q23040749",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Pauli_Opas",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Pauli_Opas",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q26818557",
+   "set": "recent",
+   "label": "extraction error",
+   "note": "fi writes '(s. 13. huhtikuuta 1923 Suomenlinna – 17. tammikuuta 2011 Helsinki)'. The reader stopped at 's.'.",
+   "qid": "Q26818557",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Klaus_Castr%C3%A9n",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Klaus_Castr%C3%A9n",
+     "opening": null
+    }
+   }
+  },
+  {
+   "id": "recent:Q3181233",
+   "set": "recent",
+   "label": "extraction error",
+   "note": "en writes '(born 12 November 1918 in Rovaniemi, Finland - 25 October 2005 in Rovaniemi)'.",
+   "qid": "Q3181233",
+   "values": null,
+   "leads": {
+    "fi": {
+     "url": "https://fi.wikipedia.org/wiki/Martti_Huhtala",
+     "opening": null
+    },
+    "en": {
+     "url": "https://en.wikipedia.org/wiki/Martti_Huhtala",
+     "opening": null
+    }
+   }
+  }
+ ]
+}

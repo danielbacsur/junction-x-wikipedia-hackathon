@@ -1,0 +1,555 @@
+{
+  "title": "Showcase query samples and plans",
+  "unit": "rows",
+  "source": "uv run benchmark.py",
+  "rows": [
+    {
+      "a-asof.sql": [
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "ammatti",
+          "value": "juristi",
+          "raw_value": "juristi",
+          "rev_id": 9536925,
+          "editor": "Ashoka",
+          "row_start": "2010-12-19 11:25:09"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "arvo",
+          "value": "Suomen tasavallan 8. presidentti",
+          "raw_value": "[[Suomen tasavallan  presidentti|Suomen tasavallan 8. presidentti]]",
+          "rev_id": 6557802,
+          "editor": "Bodiroga~fiwiki",
+          "row_start": "2009-04-12 06:41:19"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "arvo2",
+          "value": "Suomen pääministeri",
+          "raw_value": "[[Suomen pääministeri]]",
+          "rev_id": 4585589,
+          "editor": "Jvuollo",
+          "row_start": "2008-04-05 19:27:03"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "arvo3",
+          "value": "Sisäasiainministeri",
+          "raw_value": "[[Suomen sisäasiainministeri|Sisäasiainministeri]]",
+          "rev_id": 8508007,
+          "editor": "Ashoka",
+          "row_start": "2010-05-19 20:23:52"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "arvo4",
+          "value": "Oikeusministeri",
+          "raw_value": "[[Suomen oikeusministeri|Oikeusministeri]]",
+          "rev_id": 8566459,
+          "editor": "Ashoka",
+          "row_start": "2010-05-31 19:33:15"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "arvo5",
+          "value": "Eduskunnan puhemies",
+          "raw_value": "[[Eduskunnan puhemies]]",
+          "rev_id": 8508007,
+          "editor": "Ashoka",
+          "row_start": "2010-05-19 20:23:52"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "edeltäjä",
+          "value": "J. K. Paasikivi",
+          "raw_value": "[[Juho Kusti Paasikivi|J. K. Paasikivi]]",
+          "rev_id": 3206773,
+          "editor": "George Esayas",
+          "row_start": "2007-07-23 18:50:19"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "edeltäjä2",
+          "value": "K.-A. Fagerholm (I)Ralf Törngren (h)",
+          "raw_value": "[[K.-A. Fagerholm]] ([[Fagerholmin I hallitus|I]])<br />[[Ralf Törngren]] ([[Törngrenin hallitus|h]])",
+          "rev_id": 4760350,
+          "editor": "Crt",
+          "row_start": "2008-05-10 13:34:35"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "edeltäjä3",
+          "value": "Yrjö PuhakkaAarre Simonen",
+          "raw_value": "[[Yrjö Puhakka]]<br />[[Aarre Simonen]]",
+          "rev_id": 9037985,
+          "editor": "Apalsola",
+          "row_start": "2010-09-12 10:48:15"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "edeltäjä4",
+          "value": "Emil Jatkola Ernst von Born Teuvo Aura",
+          "raw_value": "[[Emil Jatkola]]<br /> [[Ernst von Born]]<br /> [[Teuvo Aura]]",
+          "rev_id": 9037985,
+          "editor": "Apalsola",
+          "row_start": "2010-09-12 10:48:15"
+        }
+      ],
+      "a-asof.sql_explain": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "statement",
+          "type": "range",
+          "possible_keys": "article_asof",
+          "key": "article_asof",
+          "key_len": "11",
+          "ref": null,
+          "rows": "164",
+          "Extra": "Using index condition; Using filesort"
+        }
+      ],
+      "b-field-history.sql": [
+        {
+          "title": "Urho Kekkonen",
+          "template": "hallitsija",
+          "slot": 1,
+          "field": "syntymäaika",
+          "value": "3. syyskuuta 1900",
+          "rev_id": 706859,
+          "editor": "Kahkonen",
+          "comment": "malline",
+          "row_start": "2006-01-16 13:02:19",
+          "row_end": "2007-01-19 19:02:59"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "hallitsija",
+          "slot": 1,
+          "field": "syntymäaika",
+          "value": "3. syyskuuta 1900",
+          "rev_id": 2223268,
+          "editor": "ML",
+          "comment": null,
+          "row_start": "2007-01-19 19:04:12",
+          "row_end": "2007-07-23 18:50:19"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "syntymäaika",
+          "value": "3. syyskuuta 1900",
+          "rev_id": 3206773,
+          "editor": "George Esayas",
+          "comment": "[[Wikipedia:Wikiprojekti Mallineet/Uudelleenohjaavat mallineet|Uudelleenohjaavan mallineen korjaus]], Replaced: {{Hallitsija → {{Valtionjohto  [[Wikipedia:AutoWikiBrowser|AWB]]",
+          "row_start": "2007-07-23 18:50:19",
+          "row_end": "2017-09-03 15:46:03"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "syntymäaika",
+          "value": "⟦Syntymäaika ja ikä|3|9|1900||1⟧",
+          "rev_id": 16740828,
+          "editor": "Raid5",
+          "comment": "+[[Ohje:Malline|mallineet]] [[Malline:Lista|lista]], [[Malline:Syntymäaika ja ikä|syntymäaika & ikä]], [[Malline:Syntymä- ja kuolinaika|syntymä- & kuolinaika]], [[Malline:Kirjaviite|kirja-]] &  [[Malline:Verkkoviite|verkkoviite]]. fix viitteet.",
+          "row_start": "2017-09-03 15:46:03",
+          "row_end": "2025-12-28 00:42:34"
+        },
+        {
+          "title": "Urho Kekkonen",
+          "template": "valtionjohto",
+          "slot": 1,
+          "field": "syntymäaika",
+          "value": "3. syyskuuta 1900",
+          "rev_id": 23745378,
+          "editor": "Anonymous87",
+          "comment": "fix",
+          "row_start": "2025-12-28 00:42:34",
+          "row_end": "2106-02-07 06:28:15.999999"
+        }
+      ],
+      "b-field-history.sql_explain": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "statement",
+          "type": "ref|filter",
+          "possible_keys": "article_asof,field_time,typed_date",
+          "key": "article_asof|typed_date",
+          "key_len": "4|1022",
+          "ref": "const",
+          "rows": "280 (1%)",
+          "Extra": "Using where; Using filesort; Using rowid filter"
+        }
+      ],
+      "c-changed-dates.sql": [
+        {
+          "page_id": 10106,
+          "title": "Aleksanteri II (Venäjä)",
+          "field": "kuolinaika",
+          "changes": 3,
+          "largest_days": 22964
+        },
+        {
+          "page_id": 61402,
+          "title": "Tommy Tabermann",
+          "field": "kuolinaika",
+          "changes": 3,
+          "largest_days": 21
+        },
+        {
+          "page_id": 11445,
+          "title": "Kyösti Kallio",
+          "field": "syntymäaika",
+          "changes": 2,
+          "largest_days": 3703
+        },
+        {
+          "page_id": 11679,
+          "title": "Teuvo Aura",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 31
+        },
+        {
+          "page_id": 19707,
+          "title": "Aleksandr Sergejevitš Menšikov",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 30
+        },
+        {
+          "page_id": 31598,
+          "title": "Nikolai II",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 60
+        },
+        {
+          "page_id": 35751,
+          "title": "Rafael Paasio",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 5498
+        },
+        {
+          "page_id": 35751,
+          "title": "Rafael Paasio",
+          "field": "syntymäaika",
+          "changes": 2,
+          "largest_days": 1224
+        },
+        {
+          "page_id": 41516,
+          "title": "Lauri Ingman",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 1826
+        },
+        {
+          "page_id": 61436,
+          "title": "Rudolf Holsti",
+          "field": "kuolinaika",
+          "changes": 2,
+          "largest_days": 31
+        }
+      ],
+      "c-changed-dates.sql_explain": [
+        {
+          "id": 1,
+          "select_type": "PRIMARY",
+          "table": "<derived2>",
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": "6613",
+          "Extra": "Using where; Using temporary; Using filesort"
+        },
+        {
+          "id": 2,
+          "select_type": "DERIVED",
+          "table": "statement",
+          "type": "range",
+          "possible_keys": "field_time,typed_date",
+          "key": "typed_date",
+          "key_len": "1022",
+          "ref": null,
+          "rows": "6613",
+          "Extra": "Using index condition; Using temporary"
+        }
+      ],
+      "d-returned-values.sql": [
+        {
+          "page_id": 158284,
+          "title": "Kotipizza Group",
+          "template": "yritys",
+          "field": "tytäryhtiö",
+          "value": "Kotipizza Oyj, Helsinki Foodstock Oy",
+          "rev_id": 24262999,
+          "row_start": "2026-09-24 08:12:03"
+        },
+        {
+          "page_id": 1679936,
+          "title": "Sinimusta Liike",
+          "template": "puolue",
+          "field": "nimi",
+          "value": "Sinimusta Liike",
+          "rev_id": 24258990,
+          "row_start": "2026-09-23 10:26:15"
+        },
+        {
+          "page_id": 1201563,
+          "title": "Sebastian Tynkkynen",
+          "template": "valtionjohto",
+          "field": "kansanedustajana",
+          "value": "17.4.2019–16.7.2024",
+          "rev_id": 24210396,
+          "row_start": "2026-08-31 15:14:45"
+        },
+        {
+          "page_id": 1201563,
+          "title": "Sebastian Tynkkynen",
+          "template": "valtionjohto",
+          "field": "virassa",
+          "value": "16.7.2024–",
+          "rev_id": 24210396,
+          "row_start": "2026-08-31 15:14:45"
+        },
+        {
+          "page_id": 1401247,
+          "title": "Turun isku 2017",
+          "template": "terrori-isku",
+          "field": "nimi",
+          "value": "Turun terrori-isku 2017",
+          "rev_id": 24181856,
+          "row_start": "2026-08-17 14:26:18"
+        },
+        {
+          "page_id": 1340445,
+          "title": "Finnaviation",
+          "template": "lentoyhtiö",
+          "field": "IATA",
+          "value": "FV",
+          "rev_id": 24169068,
+          "row_start": "2026-08-13 16:26:38"
+        },
+        {
+          "page_id": 403636,
+          "title": "Taistelukoulu",
+          "template": "sotilasyksikkö",
+          "field": "tukikohta",
+          "value": "Viipuri 1927–1939 Helsinki 1945–1947Hamina 1947–1949Tuusula 1949–1992",
+          "rev_id": 24166630,
+          "row_start": "2026-08-12 10:02:32"
+        },
+        {
+          "page_id": 403636,
+          "title": "Taistelukoulu",
+          "template": "sotilasyksikkö",
+          "field": "vuodet",
+          "value": "1927–1992",
+          "rev_id": 24166629,
+          "row_start": "2026-08-12 10:02:06"
+        },
+        {
+          "page_id": 45473,
+          "title": "Hjallis Harkimo",
+          "template": "poliitikko",
+          "field": "puoliso",
+          "value": "Leena Harkimo (1989–2002)Merikukka Forsius-Harkimo (2004–2005) Jasmine Pajari (2023–)",
+          "rev_id": 24163981,
+          "row_start": "2026-08-10 14:14:03"
+        },
+        {
+          "page_id": 45473,
+          "title": "Hjallis Harkimo",
+          "template": "poliitikko",
+          "field": "puoliso",
+          "value": "Leena Harkimo (1989–2002)Merikukka Forsius-Harkimo (2004–2005) Jasmine Pajari (2026–)",
+          "rev_id": 24163963,
+          "row_start": "2026-08-10 13:55:09"
+        }
+      ],
+      "d-returned-values.sql_explain": [
+        {
+          "id": 1,
+          "select_type": "PRIMARY",
+          "table": "<derived2>",
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": "219345",
+          "Extra": "Using where; Using filesort"
+        },
+        {
+          "id": 2,
+          "select_type": "DERIVED",
+          "table": "statement",
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": "219345",
+          "Extra": "Using temporary"
+        }
+      ],
+      "e-month.sql": [
+        {
+          "page_id": 12692,
+          "title": "Harri Holkeri",
+          "field": "syntymäaika",
+          "before_value": "6. tammikuuta 1937",
+          "after_value": "⟦Syntymäaika ja ikä|6|1|1937⟧",
+          "changed_at": "2010-05-10 11:31:56",
+          "rev_id": 8463372,
+          "editor": "Ashoka"
+        },
+        {
+          "page_id": 13650,
+          "title": "Raimo Ilaskivi",
+          "field": "syntymäaika",
+          "before_value": "26. toukokuuta 1928",
+          "after_value": "⟦Syntymäaika ja ikä|26|5|1928⟧",
+          "changed_at": "2010-05-10 11:32:29",
+          "rev_id": 8463376,
+          "editor": "Ashoka"
+        },
+        {
+          "page_id": 19530,
+          "title": "Fabian Steinheil",
+          "field": "syntymäaika",
+          "before_value": "22. helmikuuta 1831",
+          "after_value": "14. lokakuuta 1762",
+          "changed_at": "2010-05-18 06:11:50",
+          "rev_id": 8499614,
+          "editor": "Ashoka"
+        },
+        {
+          "page_id": 108521,
+          "title": "Arseni Zakrevski",
+          "field": "syntymäaika",
+          "before_value": "23. tammikuuta 1865",
+          "after_value": "24. syyskuuta 1786",
+          "changed_at": "2010-05-18 06:13:06",
+          "rev_id": 8499617,
+          "editor": "Ashoka"
+        },
+        {
+          "page_id": 109204,
+          "title": "Platon Rokassovski",
+          "field": "syntymäaika",
+          "before_value": "15. tammikuuta 1800",
+          "after_value": "15. tammikuuta 1800",
+          "changed_at": "2010-05-18 06:29:04",
+          "rev_id": 8499688,
+          "editor": "Ashoka"
+        },
+        {
+          "page_id": 61760,
+          "title": "Carl Enckell",
+          "field": "syntymäaika",
+          "before_value": "17. kesäkuuta 1876",
+          "after_value": "7. kesäkuuta 1876",
+          "changed_at": "2010-05-18 15:27:31",
+          "rev_id": 8501849,
+          "editor": "Otrfan"
+        },
+        {
+          "page_id": 48376,
+          "title": "Heikki Ritavuori",
+          "field": "syntymäaika",
+          "before_value": "⟦Kuolinaika ja ikä|23|3|1880|14|2|1922⟧",
+          "after_value": "23. maaliskuuta 1880",
+          "changed_at": "2010-05-18 15:58:09",
+          "rev_id": 8501998,
+          "editor": "Otrfan"
+        },
+        {
+          "page_id": 503080,
+          "title": "Axel Charpentier",
+          "field": "syntymäaika",
+          "before_value": "maaliskuu1949",
+          "after_value": "4. heinäkuuta 1865",
+          "changed_at": "2010-05-20 11:51:18",
+          "rev_id": 8510676,
+          "editor": "Otrfan"
+        },
+        {
+          "page_id": 360559,
+          "title": "Oiva Huttunen",
+          "field": "syntymäaika",
+          "before_value": "20. heinäkuuta",
+          "after_value": "20. heinäkuuta 1887",
+          "changed_at": "2010-05-20 12:00:32",
+          "rev_id": 8510728,
+          "editor": "Otrfan"
+        },
+        {
+          "page_id": 297519,
+          "title": "Aarne Nuorvala",
+          "field": "syntymäaika",
+          "before_value": "18. huhtikuuta 1912",
+          "after_value": "⟦Syntymäaika ja ikä|18|4|1912⟧",
+          "changed_at": "2010-05-20 14:21:49",
+          "rev_id": 8511380,
+          "editor": "Otrfan"
+        }
+      ],
+      "e-month.sql_explain": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "b",
+          "type": "range",
+          "possible_keys": "article_asof,field_time,typed_date",
+          "key": "field_time",
+          "key_len": "1029",
+          "ref": null,
+          "rows": "55",
+          "Extra": "Using index condition; Using filesort"
+        },
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "a",
+          "type": "ref",
+          "possible_keys": "article_asof,field_time,typed_date",
+          "key": "article_asof",
+          "key_len": "11",
+          "ref": "lab_infobox_time_machine.b.page_id,lab_infobox_time_machine.b.row_start",
+          "rows": "3",
+          "Extra": "Using where"
+        }
+      ]
+    }
+  ]
+}

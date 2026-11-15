@@ -1,0 +1,619 @@
+{
+  "title": "Parser refusal and duplicate parameter examples",
+  "unit": "examples",
+  "source": "uv run build.py; Parquet data/m and wtt.edit",
+  "rows": [
+    {
+      "positional_parameter": [
+        {
+          "page_id": 29,
+          "rev_id": 707991,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = [[Kuva:Anneli Jaatteenmaki.jpg|200px|Anneli Jäätteenmäki]]\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 731982,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = [[Kuva:Anneli Jaatteenmaki.jpg|200px|Anneli Jäätteenmäki]]\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 734854,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva =\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 779585,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva =\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 819984,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = [[Kuva:AnneliJäätteenmäki.jpg]]\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 836975,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = [[Kuva:AnneliJäätteenmäki.jpg]]\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 900419,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = [[Kuva:AnneliJäätteenmäki.jpg]]\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 922794,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 968167,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1011127,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1097779,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1192806,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1204093,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1277498,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1371302,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1421439,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| kuva = \n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1451401,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1456548,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1478572,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        },
+        {
+          "page_id": 29,
+          "rev_id": 1478638,
+          "template": "hallitsija",
+          "raw": "{{Hallitsija\n| nimi = Anneli Jäätteenmäki\n| arvo = [[Suomen pääministeri]]\n| virassa = <small>''[[Jäätteenmäen hallitus|Hallitus]]:''</small> <br /> [[17. huhtikuuta|17.3.]] [[2003]]–[[24. kesäkuuta|24.6.]] [[2003]]\n| edeltäjä = [[Paavo Lipponen]]\n| seuraaja = [[Matti Vanhanen]]\n| syntymäaika = [[11. helmikuuta]] [[1955]]\n| syntymäpaikka = [[Lapua]]\n| puolue = [[Suomen Keskusta]]\n|}}"
+        }
+      ],
+      "unclosed_infobox": [
+        {
+          "page_id": 327,
+          "rev_id": 6258533,
+          "template": "yhtye",
+          "raw": "{{Yhtye\n | nimi            = Hanoi Rocks\n | logo            = Hanoi logo.jpg\n | logon leveys    = 250px\n | aloitusvuosi    = [[1979]] \n | lopetusvuosi    = [[1985]], [[2001]]–[[2009]]\n | kuva            = Hanoi Rocks performing September 2005.jpg|300px|thumb|\n | leveys          = 250px\n | kuvateksti      = Hanoi Rocks esiintyi syyskuussa 2005. vas. [[Conny Bloom]], [[Andy Christell]] ja [[Michael Monroe|Mike Monroe]]. Taka-alalla keskellä rummuissa [[Lacu]] ja äärimmäisenä oikealla [[Andy McCoy]] selin.\n\n | päätyylilaji    = rock\n | tyylilajit      = [[rock]]<br />[[glam punk]] <br /> [[glam rock]] <br /> [[sleaze rock]] <br /> [[hard rock]]<br /> [[punk rock]]\n | kotipaikka      = {{maalippu|Finland}} [[Helsinki]], [[Suomi]]\n | laulukieli      = [[englannin kieli|englanti]]\n | kotisivu        = http://www.hanoirocks.info\n | jäsenet         = {{Yhtye/tietorivi|[[Michael Monroe|Mike Monroe]] - [[Laulu]], [[saxofoni]], [[huuliharppu]], [[piano]]}}\n<!--              -->{{Yhtye/tietorivi|["
+        },
+        {
+          "page_id": 327,
+          "rev_id": 6258544,
+          "template": "yhtye",
+          "raw": "{{Yhtye\n | nimi            = Hanoi Rocks\n | logo            = Hanoi logo.jpg\n | logon leveys    = 250px\n | aloitusvuosi    = [[1979]] \n | lopetusvuosi    = [[1985]], [[2001]]–[[2009]]\n | kuva            = Hanoi Rocks performing September 2005.jpg|300px|thumb|\n | leveys          = 250px\n | kuvateksti      = Hanoi Rocks esiintyi syyskuussa 2005. vas. [[Conny Bloom]], [[Andy Christell]] ja [[Michael Monroe|Mike Monroe]]. Taka-alalla keskellä rummuissa [[Lacu]] ja äärimmäisenä oikealla [[Andy McCoy]] selin.\n\n | päätyylilaji    = rock\n | tyylilajit      = [[rock]]<br />[[glam punk]] <br /> [[glam rock]] <br /> [[sleaze rock]] <br /> [[hard rock]]<br /> [[punk rock]]\n | kotipaikka      = {{maalippu|Finland}} [[Helsinki]], [[Suomi]]\n | laulukieli      = [[englannin kieli|englanti]]\n | kotisivu        = http://www.hanoirocks.info\n | jäsenet         = {{Yhtye/tietorivi|[[Michael Monroe|Mike Monroe]] - [[Laulu]], [[saxofoni]], [[huuliharppu]], [[piano]]}}\n<!--              -->{{Yhtye/tietorivi|["
+        },
+        {
+          "page_id": 327,
+          "rev_id": 6271396,
+          "template": "yhtye",
+          "raw": "{{Yhtye\n | nimi            = Hanoi Rocks\n | logo            = Hanoi logo.jpg\n | logon leveys    = 250px\n | aloitusvuosi    = [[1979]] \n | lopetusvuosi    = [[1985]], [[2001]]–[[2009]]\n | kuva            = Hanoi Rocks performing September 2005.jpg|300px|thumb|\n | leveys          = 250px\n | kuvateksti      = Hanoi Rocks esiintyi syyskuussa 2005. vas. [[Conny Bloom]], [[Andy Christell]] ja [[Michael Monroe|Mike Monroe]]. Taka-alalla keskellä rummuissa [[Lacu]] ja äärimmäisenä oikealla [[Andy McCoy]] selin.\n\n | päätyylilaji    = rock\n | tyylilajit      = [[rock]]<br />[[glam punk]] <br /> [[glam rock]] <br /> [[sleaze rock]] <br /> [[hard rock]]<br /> [[punk rock]]\n | kotipaikka      = {{maalippu|Finland}} [[Helsinki]], [[Suomi]]\n | laulukieli      = [[englannin kieli|englanti]]\n | kotisivu        = http://www.hanoirocks.info\n | jäsenet         = {{Yhtye/tietorivi|[[Michael Monroe|Mike Monroe]] - [[Laulu]], [[saxofoni]], [[huuliharppu]], [[piano]]}}\n<!--              -->{{Yhtye/tietorivi|["
+        },
+        {
+          "page_id": 327,
+          "rev_id": 6271407,
+          "template": "yhtye",
+          "raw": "{{Yhtye\n | nimi            = Hanoi Rocks\n | logo            = Hanoi logo.jpg\n | logon leveys    = 250px\n | aloitusvuosi    = [[1979]] \n | lopetusvuosi    = [[1985]], [[2001]]–[[2009]]\n | kuva            = Hanoi Rocks performing September 2005.jpg|300px|thumb|\n | leveys          = 250px\n | kuvateksti      = Hanoi Rocks esiintyi syyskuussa 2005. vas. [[Conny Bloom]], [[Andy Christell]] ja [[Michael Monroe|Mike Monroe]]. Taka-alalla keskellä rummuissa [[Lacu]] ja äärimmäisenä oikealla [[Andy McCoy]] selin.\n\n | päätyylilaji    = rock\n | tyylilajit      = [[rock]]<br />[[glam punk]] <br /> [[glam rock]] <br /> [[sleaze rock]] <br /> [[hard rock]]<br /> [[punk rock]]\n | kotipaikka      = {{maalippu|Finland}} [[Helsinki]], [[Suomi]]\n | laulukieli      = [[englannin kieli|englanti]]\n | kotisivu        = http://www.hanoirocks.info\n | jäsenet         = {{Yhtye/tietorivi|[[Michael Monroe|Mike Monroe]] - [[Laulu]], [[saxofoni]], [[huuliharppu]], [[piano]]}}\n<!--              -->{{Yhtye/tietorivi|["
+        },
+        {
+          "page_id": 8466,
+          "rev_id": 6046792,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n| virallinen nimi = Joutseno\n| kunta johon kuuluu = Lappeenranta\n| vaakuna = Coat of arms of Joutseno.jpg\n| vaakuna-artikkeli = \n| sijainti = Joutseno.sijainti.suomi.2008.svg\n| koordinaatit = {{coor dms|61|07|05|N|28|30|35|E|region:FI_type:city(10821)_scale:50000}}\n| perustamisvuosi = [[1870]]\n| perustamisviite = <ref>{{Kirjaviite | Tekijä = Paappa, Eero ja Ropponen, Jari | Nimeke = Jääsken kihlakunnan historia III 1860–1980 | Vuosi = 1992 | Kappale = | Sivu = 199 | Selite = | Julkaisupaikka = | Julkaisija = Jääsken kihlakunnan historiatoimikunta | Tunniste = ISBN 952-90-3586-1 | www = | www-teksti = | Tiedostomuoto = | Viitattu = | Kieli = }}</ref>\n| kuntaliitokset = [[Jääski]] <small>(1948)</small>\n| lääni = Etelä-Suomen lääni\n| maakunta = Etelä-Karjalan maakunta\n| seutukunta = Lappeenrannan seutukunta\n| kihlakunta = Lappeenrannan kihlakunta\n| liitetty kuntaan = [[Lappeenranta]]\n| liitetty kunnaksi = Lappeenranta\n| vuosi = 2009\n\n\n'''Joutseno''' on entinen ["
+        },
+        {
+          "page_id": 8466,
+          "rev_id": 6047017,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n| nimi= Joutseno\n| kunta johon kuuluu = Lappeenranta\n| vaakuna = Coat of arms of Joutseno.jpg\n| vaakuna-artikkeli = \n| sijainti = Joutseno.sijainti.suomi.2008.svg\n| koordinaatit = {{coor dms|61|07|05|N|28|30|35|E|region:FI_type:city(10821)_scale:50000}}\n| perustamisvuosi = [[1870]]\n| perustamisviite = <ref>{{Kirjaviite | Tekijä = Paappa, Eero ja Ropponen, Jari | Nimeke = Jääsken kihlakunnan historia III 1860–1980 | Vuosi = 1992 | Kappale = | Sivu = 199 | Selite = | Julkaisupaikka = | Julkaisija = Jääsken kihlakunnan historiatoimikunta | Tunniste = ISBN 952-90-3586-1 | www = | www-teksti = | Tiedostomuoto = | Viitattu = | Kieli = }}</ref>\n| kuntaliitokset = [[Jääski]] <small>(1948)</small>\n| lääni = Etelä-Suomen lääni\n| maakunta = Etelä-Karjalan maakunta\n| seutukunta = Lappeenrannan seutukunta\n| kihlakunta = Lappeenrannan kihlakunta\n| liitetty kuntaan = [[Lappeenranta]]\n| liitetty kunnaksi = Lappeenranta\n| vuosi = 2009\n\n\n'''Joutseno''' on entinen [[Suomi|Suome"
+        },
+        {
+          "page_id": 8466,
+          "rev_id": 6047159,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{lakkautettu Suomen kunta\n| nimi= Joutseno\n| kunta johon kuuluu = Lappeenranta\n| vaakuna = Coat of arms of Joutseno.jpg\n| vaakuna-artikkeli = \n| sijainti = Joutseno.sijainti.suomi.2008.svg\n| koordinaatit = {{coor dms|61|07|05|N|28|30|35|E|region:FI_type:city(10821)_scale:50000}}\n| perustamisvuosi = [[1870]]\n| perustamisviite = <ref>{{Kirjaviite | Tekijä = Paappa, Eero ja Ropponen, Jari | Nimeke = Jääsken kihlakunnan historia III 1860–1980 | Vuosi = 1992 | Kappale = | Sivu = 199 | Selite = | Julkaisupaikka = | Julkaisija = Jääsken kihlakunnan historiatoimikunta | Tunniste = ISBN 952-90-3586-1 | www = | www-teksti = | Tiedostomuoto = | Viitattu = | Kieli = }}</ref>\n| kuntaliitokset = [[Jääski]] <small>(1948)</small>\n| liitetty kuntaan = [[Lappeenranta]]\n| liitett kunnaksi = Lappeenranta\n| lääni = Etelä-Suomen lääni\n| maakunta = Etelä-Karjalan maakunta\n| seutukunta = Lappeenrannan seutukunta\n| kihlakunta = Lappeenrannan kihlakunta\n| liitetty kuntaan = [[Lappeenranta]]\n| liitetty kunnaksi"
+        },
+        {
+          "page_id": 8466,
+          "rev_id": 6047165,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{lakkautettu Suomen kunta\n| nimi = Joutseno\n| kunta johon kuuluu = Lappeenranta\n| vaakuna = Coat of arms of Joutseno.jpg\n| vaakuna-artikkeli = \n| sijainti = Joutseno.sijainti.suomi.2008.svg\n| koordinaatit = {{coor dms|61|07|05|N|28|30|35|E|region:FI_type:city(10821)_scale:50000}}\n| perustamisvuosi = [[1870]]\n| perustamisviite = <ref>{{Kirjaviite | Tekijä = Paappa, Eero ja Ropponen, Jari | Nimeke = Jääsken kihlakunnan historia III 1860–1980 | Vuosi = 1992 | Kappale = | Sivu = 199 | Selite = | Julkaisupaikka = | Julkaisija = Jääsken kihlakunnan historiatoimikunta | Tunniste = ISBN 952-90-3586-1 | www = | www-teksti = | Tiedostomuoto = | Viitattu = | Kieli = }}</ref>\n| kuntaliitokset = [[Jääski]] <small>(1948)</small>\n| liitetty kuntaan = [[Lappeenranta]]\n| liitett kunnaksi = Lappeenranta\n| lääni = Etelä-Suomen lääni\n| maakunta = Etelä-Karjalan maakunta\n| seutukunta = Lappeenrannan seutukunta\n| kihlakunta = Lappeenrannan kihlakunta\n| liitetty kuntaan = [[Lappeenranta]]\n| liitetty kunnaks"
+        },
+        {
+          "page_id": 8466,
+          "rev_id": 6047339,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{lakkautettu Suomen kunta\n| nimi = Joutseno\n| kunta johon kuuluu = Lappeenranta\n| vaakuna = Coat of arms of Joutseno.jpg\n| vaakuna-artikkeli = \n| sijainti = Joutseno.sijainti.suomi.2008.svg\n| koordinaatit = {{coor dms|61|07|05|N|28|30|35|E|region:FI_type:city(10821)_scale:50000}}\n| perustamisvuosi = [[1870]]\n| perustamisviite = <ref>{{Kirjaviite | Tekijä = Paappa, Eero ja Ropponen, Jari | Nimeke = Jääsken kihlakunnan historia III 1860–1980 | Vuosi = 1992 | Kappale = | Sivu = 199 | Selite = | Julkaisupaikka = | Julkaisija = Jääsken kihlakunnan historiatoimikunta | Tunniste = ISBN 952-90-3586-1 | www = | www-teksti = | Tiedostomuoto = | Viitattu = | Kieli = }}</ref>\n| kuntaliitokset = [[Jääski]] <small>(1948)</small>\n| liitetty kuntaan = [[Lappeenranta]]\n| liitetty kunnaksi = Lappeenranta\n| lääni = Etelä-Suomen lääni\n| maakunta = Etelä-Karjalan maakunta\n| seutukunta = Lappeenrannan seutukunta\n| kihlakunta = Lappeenrannan kihlakunta\n| vuosi = 2009\n\n\n'''Joutseno''' on entinen [[Suomi|Suom"
+        },
+        {
+          "page_id": 8769,
+          "rev_id": 12520305,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Nummi-Pusula\n | kunta johon kuuluu = Lohja\n | vaakuna = Nummi-Pusula.vaakuna.svg\n | vaakuna-artikkeli = Nummi-Pusulan vaakuna\n | sijainti = Nummi-Pusula.sijainti.suomi.2008.svg\n | koordinaatit = {{coor dms|60|23|30|N|23|53|10|E|region:FI_type:city(5963)_scale:100000}}\n | perustamisvuosi = 1981\n | lääni = Etelä-Suomen lääni\n | maakunta = Uudenmaan maakunta\n | seutukunta = Helsingin seutukunta\n | kuntaliitokset =\n | liitetty kuntaan = [[Lohja]]</br>[[Karjaanlohja]]\n | liitetty kunnaksi = Lohja\n | vuosi = 2013\n | väkiluku              = 4 732\n | pinta-ala             = 177,66\n\n'''Nummi-Pusula''' on [[Luettelo Suomen entisistä kunnista|entinen Suomen kunta]] [[Uudenmaan maakunta|Uudenmaan maakunnassa]]. Kunta muodostui vuonna [[1981]] [[Nummi (Nummi-Pusula)|Nummen]] ja [[Pusula]]n kuntien yhdistyessä.  Kunta lakkasi olemasta 1. tammikuuta 2013 Nummi-Pusulan ja [[Karjalohja]]n kuntien liittyessä [[Lohja]]an.<ref name=\"YLE3122012\">{{Verkkoviite | Osoite ="
+        },
+        {
+          "page_id": 8769,
+          "rev_id": 12520310,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Nummi-Pusula\n | kunta johon kuuluu = Lohja\n | vaakuna = Nummi-Pusula.vaakuna.svg\n | vaakuna-artikkeli = Nummi-Pusulan vaakuna\n | sijainti = Nummi-Pusula.sijainti.suomi.2008.svg\n | koordinaatit = {{coor dms|60|23|30|N|23|53|10|E|region:FI_type:city(5963)_scale:100000}}\n | perustamisvuosi = 1981\n | lääni = Etelä-Suomen lääni\n | maakunta = Uudenmaan maakunta\n | seutukunta = Helsingin seutukunta\n | kuntaliitokset =\n | liitetty kuntaan = [[Lohja]]</br>[[Karjanlohja]]\n | liitetty kunnaksi = Lohja\n | vuosi = 2013\n | väkiluku = 4 732\n | pinta-ala = 177,66\n\n'''Nummi-Pusula''' on [[Luettelo Suomen entisistä kunnista|entinen Suomen kunta]] [[Uudenmaan maakunta|Uudenmaan maakunnassa]]. Kunta muodostui vuonna [[1981]] [[Nummi (Nummi-Pusula)|Nummen]] ja [[Pusula]]n kuntien yhdistyessä.  Kunta lakkasi olemasta 1. tammikuuta 2013 Nummi-Pusulan ja [[Karjalohja]]n kuntien liittyessä [[Lohja]]an.<ref name=\"YLE3122012\">{{Verkkoviite | Osoite = http://yle.fi/uutiset/vuo"
+        },
+        {
+          "page_id": 8769,
+          "rev_id": 12520314,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Nummi-Pusula\n | kunta johon kuuluu = Lohja\n | vaakuna = Nummi-Pusula.vaakuna.svg\n | vaakuna-artikkeli = Nummi-Pusulan vaakuna\n | sijainti = Nummi-Pusula.sijainti.suomi.2008.svg\n | koordinaatit = {{coor dms|60|23|30|N|23|53|10|E|region:FI_type:city(5963)_scale:100000}}\n | perustamisvuosi = 1981\n | lääni = Etelä-Suomen lääni\n | maakunta = Uudenmaan maakunta\n | seutukunta = Helsingin seutukunta\n | kuntaliitokset =\n | liitetty kuntaan = [[Lohja]]\n | liitetty kunnaksi = Lohja\n | vuosi = 2013\n | väkiluku = 4 732\n | pinta-ala = 177,66\n\n'''Nummi-Pusula''' on [[Luettelo Suomen entisistä kunnista|entinen Suomen kunta]] [[Uudenmaan maakunta|Uudenmaan maakunnassa]]. Kunta muodostui vuonna [[1981]] [[Nummi (Nummi-Pusula)|Nummen]] ja [[Pusula]]n kuntien yhdistyessä.  Kunta lakkasi olemasta 1. tammikuuta 2013 Nummi-Pusulan ja [[Karjalohja]]n kuntien liittyessä [[Lohja]]an.<ref name=\"YLE3122012\">{{Verkkoviite | Osoite = http://yle.fi/uutiset/vuosi_vaihtuu_-_kartalt"
+        },
+        {
+          "page_id": 8941,
+          "rev_id": 11933160,
+          "template": "suomen kunta",
+          "raw": "{{Suomen kunta\n | virallinen nimi = Ristiina\n | muunkieliset nimet = \n | vaakuna = Ristiina.vaakuna.svg\n | vaakuna-artikkeli = Ristiinan vaakuna\n | sijainti =  Ristiina.sijainti.suomi.2008.svg\n | koordinaatit = {{coor dms|61|30|25|N|27|15|20|E|region:FI_type:city(5106)_scale:50000}}\n | vuosi = 1649\n | lääni = Itä-Suomen lääni\n | maakunta = Etelä-Savon maakunta\n | seutukunta = Mikkelin seutukunta\n | naapurikunnat =\n | pitäjä = \n | kuntaliitokset = <!-- [[Mikkeli]] [[2013]] [[Suomenniemi]] [[2013]]\n | johtaja = Virpi Siekkinen\n | valtuusto-koko = 27\n | valtuusto-puolueet = &nbsp; 2009–2012<ref>{{Verkkoviite|Tekijä=|Nimeke=Kuntavaalit 2008 tulospalvelu|Ajankohta=30.10.2008|Osoite=http://yle.fi/vaalit2008/tulospalvelu/kunnat/puolueiden_kannatus_kno696.html|Julkaisija=Yleisradio Oy |Luettu=24.3.2009}}</ref><br /> &nbsp;• [[Suomen Keskusta|Kesk.]]<br /> &nbsp;• [[Suomen Sosialidemokraattinen Puolue|SDP]]<br /> &nbsp;• [[Kansallinen Kokoomus|Kok.]]<br /> &nbsp;• [[Kristillisdemokraatit|KD]]<b"
+        },
+        {
+          "page_id": 9155,
+          "rev_id": 921753,
+          "template": "kunta",
+          "raw": "{{Kunta |\nvirallinen nimi = Vuolijoen kunta |\nvaakuna = [[Kuva:Vuolijoen vaakuna.png|100px|Vuolijoen [[vaakuna]]]] |\nsijainti =  |\nvuosi = 1915 |\nlääni = Oulun lääni |\nmaakunta = Kainuu |\nseutukunta = Kajaanin seutukunta |\nväkiluku = 2&nbsp;643 (1.1.2006) |\npinta-ala = 904 |\nmaapinta-ala =  |\nväestötiheys = 3,8 |\npitäjä = &ndash; |\nkuntaliitokset = |\nvero = 18,75 |\njohtaja = |\nosoite =  |\nsuuntanumero = 08 |\npostinumero =  |\nwww-osoite = http://www.vuolijoki.fi/ |\nwww-nimi = www.vuolijoki.fi |\n\n\n[[Kuva:Vuolijoen vaakuna.png|frame|Vuolijoen vaakuna]]\n\n'''Vuolijoki''' on [[Suomi|Suomen]] [[Luettelo Suomen kaupungeista ja kunnista|kunta]], joka sijaitsee [[Kainuun maakunta|Kainuun maakunnassa]], [[Oulun lääni]]ssä. Kunnassa [[Väkiluku|asuu]] 2775 ihmistä ja sen [[pinta-ala]] on 895,2 [[Neliökilometri|km²]], josta 203,05 km² on vesistöjä. [[Väestötiheys]] on 3,9297 asukasta/km². \n\nVuolijoki on [[Itä-Suomi|Itä-Suomen]] [[metalliteollisuus|metalliteollisuuden]] keskus. Vuolijoen [[Otanmäki]]"
+        },
+        {
+          "page_id": 9155,
+          "rev_id": 15929570,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Vuolijoki\n | kunta johon kuuluu = Kajaani\n | vaakuna = Vuolijoki.vaakuna.svg\n | vaakuna-artikkeli = Vuolijoen vaakuna\n | sijainti = Vuolijoki.sijainti.suomi.svg\n | perustamisvuosi = 1915\n | pitäjä = [[Kajaanin maalaiskunta]] [[Säräisniemi]]\n | liitetty kuntaan = [[Kajaani]]\n | liitetty kunnaksi = Kajaani\n | vuosi = 2007\n | lääni = Oulun lääni\n | maakunta = Kainuun maakunta\n | seutukunta = Kajaanin seutukunta\n | pinta-ala = 896,78\n | pinta-alaviite = <ref>{{Verkkoviite | Osoite = http://www.maanmittauslaitos.fi/Julkaisut_ja_asiakirjat/Tilastot/Vuositilastot | Nimeke = Maanmittauslaitoksen kuntien pinta-alojen vuositilastot 2006 | Ajankohta 29.3.2008 | Julkaisija = Maanmittauslaitos | Viitattu = 29.3.2008}}</ref>\n | pinta-alan vuosi = 2006\n | maapinta-ala = 688,91\n | sisävesiala = 207,87\n | väkiluku = 2&nbsp;643\n | väkilukuviite = <ref name=\"asukasluku\">{{Verkkoviite | Osoite = http://www.kajaaninyliopistokeskus.oulu.fi/kainuu/120.htm | Nimeke = Tieto"
+        },
+        {
+          "page_id": 9709,
+          "rev_id": 16419081,
+          "template": "kaupunki2",
+          "raw": "{{Kaupunki2\n| virallinen_nimi        = Sortavala\n| muu_nimi               = \n| alkuperäinen_nimi      = Сортавала\n| lempinimi              = \n| motto                  = \n| kuva_taivaanranta      = \n| kuvakoko               = \n| kuvateksti             = \n| kuva_lippu             = \n| lippu_koko             = \n| kuva_vaakuna           = Coat of Arms of Sortavala (Karelia).png\n| vaakuna_koko           = \n| kilpi_koko             = \n| kaupungin_logo         = \n| kaupungin_logon_koko   = \n| kuva_kartta            = \n| kartta_koko            = 270px\n| kartta_kuvateksti      = \n| pushpin_map            = Republic of Karelia\n| pushpin_label_position = <!-- the position of the pushpin label: left, right, top, bottom, none -->\n| aluetyyppi             = Valtio\n| alueen_nimi            = [[Venäjä]]\n| aluetyyppi1            = [[Venäjän aluejako|Tasavalta]]\n| alueen_nimi1           = [[Karjalan tasavalta]]\n| aluetyyppi2            = [[Piiri (hallintoyksikkö)|Piiri]]\n| alueen_nimi2           = [[Sor"
+        },
+        {
+          "page_id": 10754,
+          "rev_id": 18174521,
+          "template": "hallinnollinen alue",
+          "raw": "{{Hallinnollinen alue\n|nimi                   = Karjalan tasavalta<br><small>Venäjän Karjala</small>\n|alkuperäinen_nimi      = Республика Карелия<br>Karjalan tazavaldu<br>Karjalan tazovaldkund\n|kuva_lippu             = Flag of Karelia.svg\n|kuva_vaakuna           = Coat of Arms of Republic of Karelia.svg\n|sijaintikuva           = Karelia in Russia.svg\n|sijainti_kuvateksti    = Karjalan tasavallan sijainti [[Venäjän federaatio]]ssa\n|koordinaatit           = {{coord|63|49|N|33|00|E|näyttö=rivi,otsikko|type:adm1st_region:RU_scale:5000000}}\n|valtio                 = [[Venäjä]]\n|aluetyyppi1            = [[Venäjän aluejako|Tasavalta]]\n|alue1                  =\n|aluejakotyyppi1        =\n|aluejako1              =\n|aluejakotyyppi2        =\n|aluejako2              =\n|perustettu             =\n|perustettu_nimeke2     = Autonominen tasavalta\n|perustettu2            = [[13. marraskuuta]] [[1991]]\n|perustettu_nimeke3     =\n|perustettu3            =\n|lakkautettu            =\n|hallinnon_tyyppi       =\n|"
+        },
+        {
+          "page_id": 10754,
+          "rev_id": 18175194,
+          "template": "hallinnollinen alue",
+          "raw": "{{Hallinnollinen alue\n|nimi                   = Karjalan tasavalta<br><small>Venäjän Karjala</small>\n|alkuperäinen_nimi      = Республика Карелия<br>Karjalan tazavaldu<br>Karjalan tazovaldkund\n|kuva_lippu             = Flag of Karelia.svg\n|kuva_vaakuna           = Coat of Arms of Republic of Karelia.svg\n|sijaintikuva           = Karelia in Russia.svg\n|sijainti_kuvateksti    = Karjalan tasavallan sijainti [[Venäjän federaatio]]ssa\n|koordinaatit           = {{coord|63|49|N|33|00|E|näyttö=rivi,otsikko|type:adm1st_region:RU_scale:5000000}}\n|valtio                 = [[Venäjä]]\n|aluetyyppi1            = [[Venäjän aluejako|Tasavalta]]\n|alue1                  =\n|aluejakotyyppi1        =\n|aluejako1              =\n|aluejakotyyppi2        =\n|aluejako2              =\n|perustettu             =\n|perustettu_nimeke2     = Autonominen tasavalta\n|perustettu2            = [[13. marraskuuta]] [[1991]]\n|perustettu_nimeke3     =\n|perustettu3            =\n|lakkautettu            =\n|hallinnon_tyyppi       =\n|"
+        },
+        {
+          "page_id": 12582,
+          "rev_id": 20692573,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Suursaari\n | muunkieliset nimet = Hogland\n | epäviralliset nimet =\n | kunta johon kuuluu = \n | vaakuna = \n | vaakunan leveys =\n | vaakuna-artikkeli =\n | huomautus nro, vaakuna =\n | sijainti = Suursaari sijainti.svg \n | sijainnin leveys =\n | koordinaatit = \n | perustamisvuosi = 1838, [[Kymi]]stä{{efn|Seurakunnan perustamisvuosi]]\n | perustamisviite =\n | kuntaliitokset = \n | liitetty kuntaan = \n | liitetty kunnaksi = \n | liitetty kuntiin = \n | vuosi = \n | lakkauttamisvuosi = 1948 \n | lääni = Viipurin lääni\n | maakunta = Uudenmaan historiallinen maakunta\n | kuntanumero = 780\n | huomautus nro = \n | kihlakunta = Kymin kihlakunta\n | hallinnollinen_keskus = [[Suurkylä (Suursaari)|Suurkylä]]\n | pinta-ala = 20,80\n | pinta-alan vuosi = 12.3.1940\n | pinta-alaviite =<ref name=\"stv1940\">{{Verkkoviite | Osoite = http://www.doria.fi/handle/10024/69230 | Nimeke =Suomen tilastollinen vuosikirja 1940 | Tiedostomuoto =PDF | Selite =sivut 2–3, taulukko 3. Suomesta Sosi"
+        },
+        {
+          "page_id": 12626,
+          "rev_id": 8978974,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Kimmo Kalevi Immeri Sasi\n| kuva = [[Tiedosto:Kimmo Sasi 2008-03-04.jpg|250px]]\n| arvo = [[Suomen liikenne- ja viestintäministeri]]\n| virassa = [[Lipposen I hallitus]]<ref name=\"lipponenI\">{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=M1&selectedCriterion.hallitus_id=66| Nimeke = Lipponen I hallitus |Julkaisu=Suomen hallitukset |Julkaisija= Valtioneuvosto| Viitattu = 31.8.2010}}</ref><br>15.1.1999-15.4.1999<br>[[Lipposen II hallitus]]<ref name=\"lipponenII\">{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=M1&selectedCriterion.hallitus_id=67| Nimeke = Lipposen II hallitus |Julkaisu=Suomen hallitukset |Julkaisija= Valtioneuvosto| Viitattu = 31.8.2010}}</ref><br>4.1.2002-17.4.2003\n| edeltäjä =  [[Matti Aura]]<ref name=\"lipponenI\"/>\n| seuraaja =  [[Leena Luhtanen]]<ref>{{Verkkoviite | Osoite =http://www.va"
+        }
+      ],
+      "duplicate_last_wins": [
+        {
+          "page_id": 1137,
+          "rev_id": 8867243,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Sauli Väinämö Niinistö\n| kuva = [[Tiedosto:Sauli niinisto.jpg|200px|Sauli Niinistö]]\n| arvo = [[Eduskunnan puhemies]]\n| virassa = [[2007]]–\n| edeltäjä = [[Timo Kalli]]\n| seuraaja =\n| arvo2         = [[Suomen valtiovarainministeri|Valtiovarainministeri]]\n| virassa2      = [[Lipposen I  hallitus|Lipponen I]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=M1&selectedCriterion.hallitus_id=66| Nimeke = Lipposen I hallitus|Julkaisu= Suomen hallitukset |Julkaisija= www.valtioneuvosto.fi| Viitattu = 26.6.2010}}</ref> <br>[[2. helmikuuta]] [[1996]] – [[14. huhtikuuta]] [[1999]]<br>[[Lipposen II hallitus|Lipponen II]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=M1&selectedCriterion.hallitus_id=67| Nimeke = Lipposen II hallitus|Julkaisu= Suomen hallitukset |Julkaisija= www.valtioneuvosto.fi| Viitatt"
+        },
+        {
+          "page_id": 1137,
+          "rev_id": 11237979,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Sauli Väinämö Niinistö\n| kuva = [[Tiedosto:Sauli Niinistö.jpg|260px]]\n| arvo = [[Suomen tasavallan presidentti|Suomen tasavallan 12. presidentti]]\n| virassa = [[1. maaliskuuta]] [[2012]] alkaen\n| edeltäjä = [[Tarja Halonen]]\n| seuraaja =  \n| arvo2 = [[Eduskunnan puhemies]]\n| virassa = 24. huhtikuuta 2007 – 19. huhtikuuta 2011\n| edeltäjä = [[Timo Kalli]]\n| seuraaja =[[Ben Zyskowicz]]\n| arvo3 = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa3 = [[Lipposen I hallitus]]<br>13. huhtikuuta 1995 – 15. huhtikuuta 1999<br>[[Lipposen II hallitus]]<br>15. huhtikuuta 1999 – 30. elokuuta 2001\n| edeltäjä3 = [[Pertti Salolainen]]\n| seuraaja3 =[[Ville Itälä]]\n| arvo4         = [[Suomen valtiovarainministeri|Valtiovarainministeri]]\n| virassa4      = [[Lipposen I  hallitus|Lipponen I]]<ref name=\"Lipposen I hallitus\">{{Verkkoviite | Osoite=http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=M1&se"
+        },
+        {
+          "page_id": 1137,
+          "rev_id": 18590146,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi             = Sauli Niinistö\n| kuva             = Sauli Niinistö - 171106-D-GY869-041 (37501659204) (cropped).jpg\n| arvo             = [[Suomen tasavallan presidentti|Suomen tasavallan 12. presidentti]]<ref>{{Verkkoviite | Osoite = http://yle.fi/aihe/artikkeli/2012/03/01/presidenttien-virkaanastujaiset#media=78447 | Nimeke = Presidenttien virkaanastujaiset | Tekijä = Himberg, Petra | Selite = Sauli Niinistö astuu virkaansa 2012 | Julkaisu = Elävä arkisto | Ajankohta = 1.3.2012 | Julkaisija = Yle | Viitattu = 31.7.2015 }}</ref>\n| virassa          = 1.3.2012–\n| pääministeri     = [[Jyrki Katainen]]<br />[[Alexander Stubb]]<br />[[Juha Sipilä]]<br />[[Antti Rinne]]<br />[[Sanna Marin]]\n| edeltäjä         = [[Tarja Halonen]]\n|\n| edeltäjä         = [[Tarja Halonen]]\n| seuraaja         = \n| arvo2            = [[Eduskunnan puhemies|Eduskunnan 57. puhemies]]<ref name=\"edustajamatrikkeli\">{{Edustajamatrikkeli|nro=223 }}</ref>\n| virassa2         = 24.4.2007–19.4.2011\n| edel"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2674588,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2693402,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2694415,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2705161,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2721694,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2745616,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2754010,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta|Saksa]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <b"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2754100,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2754792,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2754882,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2767216,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2778124,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2778492,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2778507,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2817221,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2820237,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        },
+        {
+          "page_id": 1150,
+          "rev_id": 2820246,
+          "template": "taistelu",
+          "raw": "{{Taistelu\n | nimi = Suomen sisällissota\n | osa_sotaa = \n | kuva = Tampere destroyed in Civil War.jpg\n | kuvateksti = Tampereen kaupunki tuhoutui sisällissodassa miltei täysin\n | päivämäärä = [[27. tammikuuta]] [[1918]] &ndash; [[15. toukokuuta]] [[1918]]\n | paikka = [[Suomi]]\n | casus = \n | aluemuutokset = \n | vaikutukset = Suomen kansan sisäinen hajaannus syveni. Hidas kansallinen eheytyminen 1900-luvulla.\n | lopputulos = Valkoiset voittivat. Venäjän armeija poistui Suomesta. Suomi päätyi Saksan vaikutusvaltaan joulukuuhun 1918 asti.\n | taistelija1 = [[Punakaarti|Punaiset]]<br>[[Punakaarti]]t<br>[[Neuvosto-Venäjä]]\n | taistelija2 = [[Valkoiset]]<br>[[Suojeluskunta|Suojeluskunnat]]<br>[[Saksan keisarikunta]]<br>[[Ruotsi|Ruotsalaiset vapaaehtoiset]] | komentaja1 = \n | komentaja1=  [[Ali Aaltonen]] <br> [[Eero Haapalainen]] <br> [[Eino Rahja]] <br> [[Kullervo Manner]] \n | komentaja2 =[[ Carl Gustaf Emil Mannerheim|C.G.E.Mannerheim]]\n | vahvuus1 = 80 000&ndash;90 000 suomalaista <br/ > 4"
+        }
+      ],
+      "invalid_field_name": [
+        {
+          "page_id": 8666,
+          "rev_id": 2094823,
+          "template": "kunta",
+          "raw": "{{Kunta\n|virallinen nimi = Lammin kunta\n|vaakuna-artikkeli = \n|vaakuna = [[Kuva:Image-Lammi_vaakuna.jpg|100px|Lammin vaakuna]]\n|sijainti = [[Kuva:Location_of_Lammi_in_Finland.png|140px|Lammin sijainti]]\n|vuosi = [[1374]]\n|kuntaliitokset = \n|lääni = Etelä-Suomen lääni\n|maakunta = Kanta-Hämeen maakunta\n|seutukunta = Hämeenlinnan seutukunta\n|kihlakunta =\n|pinta-ala = 610,8\n|maapinta-ala = 537\n|sisävesiala = 73,8\n|meriala = \n|väkiluku = 5&nbsp;622\n|väkiluku-päiväys = 31.12.2005\n|väestötiheys = 10,5\n|väestötiheys-päiväys = \n|väestönkasvu = \n|väestönkasvu-päiväys = \n|väestöennuste = \n|väestöennuste-päiväys = \n|väestö-0-15 = \n|väestö-16-64 = \n|väestö-65 = \n|vero = 19,00\n|vero-päiväys = 2005\n|työttömyys = \n|työttömyys-päiväys = \n|suuntanumero = 03\n|= Helena Hirviniemi\n|valtuusto-koko = \n|valtuusto-puolueet = \n|valtuusto-paikat = \n|www-osoite = http://www.lammi.fi/\n|www-nimi = www.lammi.fi\n}}"
+        },
+        {
+          "page_id": 84090,
+          "rev_id": 8594442,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi='''Rainer von Fieandt'''\n| kuva=\n| arvo=[[Suomen pääministeri]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 5.6.2010}}</ref>\n| virassa=[[Von Fieandtin hallitus]]<br> [[29. marraskuuta|29.11.]][[1957]] – [[26. huhtikuuta|26.4.]][[1958]]\n| edeltäjä=[[V. J. Sukselainen]] (II)<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julka<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}</ref>isija= Valtioneuvosto | Viitattu = 6.6.2010}}"
+        },
+        {
+          "page_id": 84090,
+          "rev_id": 8594447,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi='''Rainer von Fieandt'''\n| kuva=\n| arvo=[[Suomen pääministeri]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 5.6.2010}}</ref>\n| virassa=[[Von Fieandtin hallitus]]<br> [[29. marraskuuta|29.11.]][[1957]] – [[26. huhtikuuta|26.4.]][[1958]]\n| edeltäjä=[[V. J. Sukselainen]] (II)<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julka<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}</ref>isija= Valtioneuvosto | Viitattu = 6.6.2010}}"
+        },
+        {
+          "page_id": 84090,
+          "rev_id": 8594452,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi='''Rainer von Fieandt'''\n| kuva=\n| arvo=[[Suomen pääministeri]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 5.6.2010}}</ref>\n| virassa=[[Von Fieandtin hallitus]]<br> [[29. marraskuuta|29.11.]][[1957]] – [[26. huhtikuuta|26.4.]][[1958]]\n| edeltäjä=[[V. J. Sukselainen]] (II)<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julka</ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}</ref>isija= Valtioneuvosto | Viitattu = 6.6.2010}}"
+        },
+        {
+          "page_id": 84090,
+          "rev_id": 8594458,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi='''Rainer von Fieandt'''\n| kuva=\n| arvo=[[Suomen pääministeri]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 5.6.2010}}</ref>\n| virassa=[[Von Fieandtin hallitus]]<br> [[29. marraskuuta|29.11.]][[1957]] – [[26. huhtikuuta|26.4.]][[1958]]\n| edeltäjä=[[V. J. Sukselainen]] (II)<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julka</ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}"
+        },
+        {
+          "page_id": 84090,
+          "rev_id": 8597229,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi='''Rainer von Fieandt'''\n| kuva=\n| arvo=[[Suomen pääministeri]]<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 5.6.2010}}</ref>\n| virassa=[[Von Fieandtin hallitus]]<br> [[29. marraskuuta|29.11.]][[1957]] – [[26. huhtikuuta|26.4.]][[1958]]\n| edeltäjä=[[V. J. Sukselainen]] (II)<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julka<ref>{{Verkkoviite | Osoite =http://www.valtioneuvosto.fi/tietoa-valtioneuvostosta/hallitukset/vuodesta-1917/tulokset/fi.jsp?report_id=V2| Nimeke =Suomen hallitukset|Julkaisu=valtioneuvosto.fi|Julkaisija= Valtioneuvosto | Viitattu = 6.6.2010}}</ref>isija= Valtioneuvosto | Viitattu = 6.6.2010}}"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13465799,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13465870,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13467176,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13467939,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13467943,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13469610,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13470369,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13470391,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13473567,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13840620,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13840653,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13840663,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13840665,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        },
+        {
+          "page_id": 297565,
+          "rev_id": 13977171,
+          "template": "valtionjohto",
+          "raw": "{{Valtionjohto\n| nimi = Olavi Johannes Mattila\n| kuva = [[Tiedosto:Olavi J. Mattila.jpg|230px]]\n| kuvateksti =\n| arvo = [[Suomen pääministeri#Pääministerin sijainen|Pääministerin sijainen]]\n| virassa = [[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä = [[Ahti Karjalainen]]\n| seuraaja = [[Kalevi Sorsa]]\n| arvo2 = [[Suomen ulkoasiainministeri|Ulkoasiainministeri]]\n| virassa2 = [[Auran II hallitus]]<br>29.10.1971 - 23.2.1972<br>[[Liinamaan hallitus]]<br>13.6.1975 - 30.11.1975\n| edeltäjä2 = [[Väinö Leskinen]]<br>[[Ahti Karjalainen]]\n| seuraaja2 = [[Kalevi Sorsa]]<br>[[Kalevi Sorsa]]\n| arvo3         = [[Suomen kauppa- ja teollisuusministeriö|Kauppa- ja teollisuusministeri]]\n| virassa3      = [[Lehdon hallitus]]<br>18.12.1963 - 12.9.1964<br>[[Auran I hallitus]]\n| edeltäjä3     = [[Toivo Wiherheimo]]<br>[[Grels Teir]]\n| seuraaja3     = [[Toivo Wiherheimo]]<br>[[Arne Berner]]\n| arvo4         = [[Ulkoasiainministeriö|Ministeri ulkoasiainministeriössä]]\n| virassa4      = [[Karjalaisen"
+        }
+      ],
+      "unreadable_template": [
+        {
+          "page_id": 64071,
+          "rev_id": 4742134,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = [[1881]] erottamalla [[Tenhola]]sta<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi2 = [[1977]]\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | maapinta-ala = 197,0<ref name=\"Toti\"/>\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574<ref name=\"Toti\"/>\n | väkiluvun vuosi = 1973\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4742138,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = [[1881]]<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi2 = [[1977]]\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | maapinta-ala = 197,0<ref name=\"Toti\"/>\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574<ref name=\"Toti\"/>\n | väkiluvun vuosi = 1973\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4743697,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi2 = [[1977]]\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4743698,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi = 1977\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4803362,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | muunkielinen nimi = Bromarvi\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi = 1977\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4803575,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | muunkielinen nimi = Bromarvi\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi = 1977\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4806422,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | muunkieliset nimet = (Bromarvi)\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi = 1977\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64071,
+          "rev_id": 4806453,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Bromarv\n | muunkieliset nimet = (Bromarvi)\n | kunta johon kuuluu = Ekenäs<br />Tammisaari</td><tr><td>Hanko<br />Hango\n | vaakuna = Bromarv.vaakuna.png\n | sijainti =\n | koordinaatit =\n | perustamisvuosi = 1881\n | perustamisviite=<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=24 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 21. huhtikuuta 2008}}</ref>\n | pitäjä = [[Tenhola]]\n | liitetty kuntiin = [[Tenhola]]<br />[[Hanko]]\n | vuosi = 1977\n | lääni = Uudenmaan lääni\n | maakunta = Uudenmaan maakunta\n | kihlakunta =\n | pinta-ala =\n | pinta-alan vuosi = 1973\n | pinta-alan viite = <ref name=\"Toti\"/>\n | maapinta-ala = 197,0\n | sisävesiala =\n | meriala = \n | väkiluku = 1&nbsp;574\n | väkiluvun vuosi = 1973\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 7,99\n}}"
+        },
+        {
+          "page_id": 64395,
+          "rev_id": 4728641,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Karuna\n | kunta johon kuuluu = Sauvo<br />Sagu</td><tr><td>Kimito<br />Kemiö\n | vaakuna = Karuna.vaakuna.svg\n | sijainti = Location of Sauvo in Finland.png\n | perustamisvuosi = [[1930]]<ref name=\"Suomen kunnat\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=152 | Nimeke = Suomen kunnat | Tekijä = | Tiedostomuoto = | Selite = Karuna | Julkaisu = |\nAjankohta = | Julkaisupaikka = | Julkaisija =  | Viitattu = viimeksi 15.4.2008}}</ref>\n | pitäjä = Sauvo\n | liitetty kuntiin = [[Sauvo]]<br />[[Kemiö]]\n | vuosi2 = [[1969]]\n | lääni = Turun ja Porin lääni\n | maakunta = Varsinais-Suomi\n | pinta-ala = \n | pinta-alan vuosi = 1963\n | maapinta-ala = 88,5<ref name=\"Suomen kunnat\"/>\n | väkiluku = 1&nbsp;213<ref name=\"Suomen kunnat\"/>\n | väkiluvun vuosi = 1963\n | väestötiheys = 13,71\n}}"
+        },
+        {
+          "page_id": 64395,
+          "rev_id": 4743661,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Karuna\n | kunta johon kuuluu = Sauvo<br />Sagu</td><tr><td>Kimito<br />Kemiö\n | vaakuna = Karuna.vaakuna.svg\n | sijainti = Location of Sauvo in Finland.png\n | perustamisvuosi = 1930\n | perustamisviite = <ref name=\"Suomen kunnat\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=152 | Nimeke = Suomen kunnat | Tekijä = | Tiedostomuoto = | Selite = Karuna | Julkaisu = |\nAjankohta = | Julkaisupaikka = | Julkaisija =  | Viitattu = viimeksi 15.4.2008}}</ref>\n | pitäjä = Sauvo\n | liitetty kuntiin = [[Sauvo]]<br />[[Kemiö]]\n | vuosi = 1969\n | lääni = Turun ja Porin lääni\n | maakunta = Varsinais-Suomi\n | pinta-ala = \n | pinta-alan vuosi = 1963\n | pinta-alaviite = <ref name=\"Suomen kunnat\"/>\n | maapinta-ala = 88,5\n | väkiluku = 1&nbsp;213\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Suomen kunnat\"/>\n | väestötiheys = 13,71\n}}"
+        },
+        {
+          "page_id": 64395,
+          "rev_id": 4963592,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Karuna\n | kunta johon kuuluu = Sauvo<br />Sagu</td><tr><td>Kimito<br />Kemiö\n | vaakuna = Karuna.vaakuna.svg\n | sijainti = Location of Sauvo in Finland.png\n | perustamisvuosi = 1930\n | perustamisviite = <ref name=\"Suomen kunnat\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=152 | Nimeke = Suomen kunnat | Tekijä = | Tiedostomuoto = | Selite = Karuna | Julkaisu = |\nAjankohta = | Julkaisupaikka = | Julkaisija =  | Viitattu = viimeksi 15.4.2008}}</ref>\n | pitäjä = Sauvo\n | liitetty kuntiin = [[Sauvo]]<br />[[Kemiö]]\n | vuosi = 1969\n | lääni = Turun ja Porin lääni\n | maakunta = Varsinais-Suomi\n | pinta-ala = \n | pinta-alan vuosi = 1963\n | pinta-alaviite = <ref name=\"Suomen kunnat\"/>\n | maapinta-ala = 88,5\n | väkiluku = 1&nbsp;213\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Suomen kunnat\"/>\n | väestötiheys = 13,71\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4726470,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = [[1923]]\n | pitäjä = [[Tammela]]<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi2 = [[1969]]\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | seutukunta = Forssan seutukunta\n | pinta-ala = 180,7\n | maapinta-ala = 174,5<ref name=\"Toti\"/>\n | väkiluku = 2&nbsp;842<ref name=\"Toti\"/>\n | väkiluvun vuosi = 1963\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4743640,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi2 = [[1969]]\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | seutukunta = Forssan seutukunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4743641,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | seutukunta = Forssan seutukunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4743647,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4811853,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]\n | pitäjä = [[Urjala]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4811860,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]<br />[[Urjala]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4812033,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]<br />[[Urjala]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 64446,
+          "rev_id": 4812049,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Koijärvi\n | kunta johon kuuluu = Forssa</td><tr><td>Urjala\n | vaakuna = \n | vaakuna huomautus, nro = 1\n | sijainti = \n | perustamisvuosi = 1923\n | pitäjä = [[Tammela]]<br />[[Urjala]]\n | liitetty kuntiin = [[Forssa]]<br />[[Urjala]]\n | liitetty kunnaksi = \n | vuosi = 1969\n | lääni = Etelä-Suomen lääni\n | maakunta = Kanta-Hämeen maakunta\n | pinta-ala = 180,7\n | pinta-alaviite = <ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=193 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 2. toukokuuta 2008}}</ref>\n | maapinta-ala = 174,5\n | väkiluku = 2&nbsp;842\n | väkiluvun vuosi = 1963\n | väkilukuviite = <ref name=\"Toti\"/>\n | väestötiheys = 16,29\n | huomautus = <sup>1</sup>Ei virallista vaakunaa\n}}"
+        },
+        {
+          "page_id": 69854,
+          "rev_id": 4732133,
+          "template": "lakkautettu suomen kunta",
+          "raw": "{{Lakkautettu Suomen kunta\n | nimi = Sääminki\n | muunkieliset nimet = Säminge\n | kunta johon kuuluu = Savonlinna<br />Nyslott</td><tr><td>Punkaharju\n | vaakuna = Sääminki_vaakuna.png\n | sijainti = \n | perustamisvuosi = [[1510]]<ref name=\"Toti\">{{Verkkoviite | Osoite = http://www.toti.eu.com/nordic.municipalities/kunta.asp?id=516 | Nimeke = Tilastotietoja Suomen kunnista | Viitattu = 23. tammikuuta 2008}}</ref>\n | pitäjä = [[Juva]]\n | liitetty kuntiin = [[Savonlinna]]<br />[[Punkaharju]]\n | vuosi2 = [[1973]]\n | lääni = Mikkelin lääni\n | maakunta = Etelä-Savon maakunta\n | pinta-ala = 1009,9<ref name=\"Toti\"/>\n | pinta-alan vuosi = 1963\n | maapinta-ala = \n | väkiluku = 11&nbsp;710<ref name=\"Toti\"/>\n | väkiluvun vuosi = 1970\n | väestötiheys = 11,60\n}}"
+        }
+      ]
+    }
+  ]
+}

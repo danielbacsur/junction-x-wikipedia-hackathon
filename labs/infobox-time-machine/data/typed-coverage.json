@@ -1,0 +1,242 @@
+{
+  "title": "Typed parser results per field",
+  "unit": "lifetimes",
+  "source": "uv run analyze.py",
+  "rows": [
+    {
+      "field": "Kuollut",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 1
+    },
+    {
+      "field": "Perustamisvuosi",
+      "result": "year",
+      "lifetimes": 1
+    },
+    {
+      "field": "Perustettu",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 12
+    },
+    {
+      "field": "Perustettu",
+      "result": "day",
+      "lifetimes": 44
+    },
+    {
+      "field": "Perustettu",
+      "result": "year",
+      "lifetimes": 78
+    },
+    {
+      "field": "Pinta-ala",
+      "result": "number",
+      "lifetimes": 2
+    },
+    {
+      "field": "Syntymäaika",
+      "result": "invalid_date_template",
+      "lifetimes": 1
+    },
+    {
+      "field": "Syntynyt",
+      "result": "day",
+      "lifetimes": 1
+    },
+    {
+      "field": "area",
+      "result": "unread_number",
+      "lifetimes": 1
+    },
+    {
+      "field": "asukasluku",
+      "result": "number",
+      "lifetimes": 1
+    },
+    {
+      "field": "asukasluku",
+      "result": "unread_number",
+      "lifetimes": 8
+    },
+    {
+      "field": "kuolinaika",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 106
+    },
+    {
+      "field": "kuolinaika",
+      "result": "day",
+      "lifetimes": 1933
+    },
+    {
+      "field": "kuolinaika",
+      "result": "invalid_date_template",
+      "lifetimes": 12
+    },
+    {
+      "field": "kuolinaika",
+      "result": "year",
+      "lifetimes": 56
+    },
+    {
+      "field": "kuolinpäivä",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 40
+    },
+    {
+      "field": "kuolinpäivä",
+      "result": "day",
+      "lifetimes": 709
+    },
+    {
+      "field": "kuolinpäivä",
+      "result": "empty",
+      "lifetimes": 1
+    },
+    {
+      "field": "kuolinpäivä",
+      "result": "invalid_date_template",
+      "lifetimes": 4
+    },
+    {
+      "field": "kuolinpäivä",
+      "result": "year",
+      "lifetimes": 18
+    },
+    {
+      "field": "kuollut",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 3
+    },
+    {
+      "field": "kuollut",
+      "result": "day",
+      "lifetimes": 12
+    },
+    {
+      "field": "kuollut",
+      "result": "year",
+      "lifetimes": 2
+    },
+    {
+      "field": "perustamisvuosi",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 268
+    },
+    {
+      "field": "perustamisvuosi",
+      "result": "day",
+      "lifetimes": 14
+    },
+    {
+      "field": "perustamisvuosi",
+      "result": "year",
+      "lifetimes": 482
+    },
+    {
+      "field": "perustettu",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 228
+    },
+    {
+      "field": "perustettu",
+      "result": "day",
+      "lifetimes": 176
+    },
+    {
+      "field": "perustettu",
+      "result": "empty",
+      "lifetimes": 23
+    },
+    {
+      "field": "perustettu",
+      "result": "year",
+      "lifetimes": 1372
+    },
+    {
+      "field": "pinta-ala",
+      "result": "empty",
+      "lifetimes": 1
+    },
+    {
+      "field": "pinta-ala",
+      "result": "number",
+      "lifetimes": 960
+    },
+    {
+      "field": "pinta-ala",
+      "result": "unread_number",
+      "lifetimes": 90
+    },
+    {
+      "field": "syntymäaika",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 119
+    },
+    {
+      "field": "syntymäaika",
+      "result": "day",
+      "lifetimes": 2434
+    },
+    {
+      "field": "syntymäaika",
+      "result": "empty",
+      "lifetimes": 1
+    },
+    {
+      "field": "syntymäaika",
+      "result": "invalid_date_template",
+      "lifetimes": 2
+    },
+    {
+      "field": "syntymäaika",
+      "result": "year",
+      "lifetimes": 78
+    },
+    {
+      "field": "syntymäpäivä",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 41
+    },
+    {
+      "field": "syntymäpäivä",
+      "result": "day",
+      "lifetimes": 1028
+    },
+    {
+      "field": "syntymäpäivä",
+      "result": "year",
+      "lifetimes": 36
+    },
+    {
+      "field": "syntynyt",
+      "result": "ambiguous_or_unread_date",
+      "lifetimes": 4
+    },
+    {
+      "field": "syntynyt",
+      "result": "day",
+      "lifetimes": 46
+    },
+    {
+      "field": "syntynyt",
+      "result": "year",
+      "lifetimes": 6
+    },
+    {
+      "field": "väkiluku",
+      "result": "empty",
+      "lifetimes": 2
+    },
+    {
+      "field": "väkiluku",
+      "result": "number",
+      "lifetimes": 1958
+    },
+    {
+      "field": "väkiluku",
+      "result": "unread_number",
+      "lifetimes": 276
+    }
+  ]
+}

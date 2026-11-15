@@ -1,0 +1,11 @@
+{
+  "title": "Recognized infobox presence before revert filtering",
+  "unit": "versions",
+  "source": "uv run recognition.py",
+  "rows": [
+    {
+      "versions": 862076,
+      "with_recognized_infobox": 360294
+    }
+  ]
+}

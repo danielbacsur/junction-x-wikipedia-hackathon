@@ -1,0 +1,15 @@
+{
+  "title": "MariaDB historical load",
+  "unit": "rows, bytes, seconds",
+  "source": "uv run load.py; information_schema.tables after ANALYZE",
+  "rows": [
+    {
+      "rows": 211379,
+      "current_rows": 110129,
+      "load_seconds": 7.532340584002668,
+      "estimated_rows": 219345,
+      "data_bytes": 88784896,
+      "index_bytes": 40534016
+    }
+  ]
+}

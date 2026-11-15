@@ -8,7 +8,9 @@ import {
   clusters,
   corpus,
   exposure,
+  infobox,
   journeys,
+  languages,
   names,
   numbers,
   offices,
@@ -26,7 +28,9 @@ import {
 } from "./data";
 import { Clusters, Exposure as ExposureChart } from "./exposure";
 import { duration, fullDay, percent } from "./format";
+import { Asked, Dates, Lifetimes } from "./infobox";
 import { Journeys as JourneysChart, Transfers } from "./journeys";
+import { Disagreements, Moved } from "./languages";
 import { MainArticle } from "./main-article";
 import { NameSwaps } from "./name-swaps";
 import { Substitutions, Unsettled } from "./numbers";
@@ -37,6 +41,7 @@ import {
   EXACT_GLOBAL_1000,
   FULL_FIWIKI,
   JOURNEY,
+  LEADS,
   ONE_ACCOUNT_2008,
   ONE_BOOK_1975,
   PLAN_AT_1000,
@@ -65,6 +70,8 @@ const JOURNEYS = "labs/sentence-journeys";
 const SOURCES = "labs/claims-before-sources";
 const NUMBERS = "labs/numbers-that-moved";
 const SCALE = "labs/history-at-scale";
+const LEADS_LAB = "labs/three-wikipedias";
+const INFOBOX = "labs/infobox-time-machine";
 
 /* ── The name of the war ──────────────────────────────────────────────── */
 
@@ -1056,6 +1063,241 @@ function Scale() {
   );
 }
 
+/* ── Three Wikipedias ─────────────────────────────────────────────────── */
+
+function Languages() {
+  const { history, wider, distance } = languages;
+  const [oldest, older] = history.since;
+
+  const finnishEnglish = languages.byPair.find(
+    (pair) => !pair.pair.includes("sv"),
+  )!;
+  const withSwedish = languages.byPair
+    .filter((pair) => pair.pair.includes("sv"))
+    .flatMap((pair) => [pair.birth.share, pair.death.share]);
+
+  /** The first row of the list: Finnish stands alone and once said otherwise. */
+  const [lead] = languages.moved;
+  const english = lead.values.find((value) => value.language === "en")!;
+
+  const read = languages.read("lifespan");
+
+  return (
+    <Section
+      id="languages"
+      lab="Three Wikipedias · where Finnish, Swedish and English give another date"
+      title={
+        <>
+          The Finnish, Swedish and English Wikipedias open{" "}
+          <N>{number(languages.differ)}</N> of <N>{number(languages.topics)}</N>{" "}
+          shared topics with a different birth or death date. For{" "}
+          <N>{history.onceAgreed}</N> of the Finnish dates, the edit history
+          shows that Finnish once gave the other date and left it.
+        </>
+      }
+      figure={
+        <>
+          <Disagreements />
+          <Moved />
+        </>
+      }
+      facts={[
+        {
+          value: `${number(languages.pairsDiffering)} of ${number(languages.pairs)}`,
+          label: `pairs of languages give a different date for the same birth or death, ${percent(languages.pairsDiffering / languages.pairs, 1)}. English and Finnish differ on ${percent(finnishEnglish.birth.share, 1)} of births and ${percent(finnishEnglish.death.share, 1)} of deaths. Every pair with Swedish in it is between ${percent(Math.min(...withSwedish), 1)} and ${percent(Math.max(...withSwedish), 1)}.`,
+        },
+        {
+          value: `${history.first} of ${history.facts}`,
+          label: `Finnish dates that another language gives differently are the first date the lead ever gave. ${oldest.facts + older.facts} have stood since ${older.years.split(" ").at(-1)} or earlier and ${history.recent} only since ${day(LEADS.recentSince)} or later.`,
+        },
+        {
+          value: `${history.asPrecise} of ${history.replaced}`,
+          label: `Finnish dates that replaced an earlier one replaced a date as exact as themselves. The rest made a vaguer one exact, such as a bare year. ${history.onceAgreed} of the ${history.facts}, ${percent(history.onceAgreed / history.facts, 1)}, once were the other language’s date.`,
+        },
+        {
+          value: `${history.matching} of ${history.pairs}`,
+          label: `differing pairs with Finnish on one side for which the lead rebuilt from the history gives, on the day of the snapshot, the date the snapshot gives. The other ${history.pairs - history.matching} are left out of everything said about the Finnish side.`,
+        },
+        {
+          value: `${wider.quantities.nearMisses} of ${wider.quantities.pairs}`,
+          label: `pairs of opening paragraphs outside lifespans give quantities within ${percent(LEADS.nearMiss.share)} of each other that are not the same. Of ${languages.read("quantity")} read by hand, ${languages.read("quantity", "real")} was a real difference and the rest rounding or a count from another year. For full dates within ${LEADS.nearMiss.days} days it is ${wider.dates.nearMisses} of ${wider.dates.pairs} pairs, and ${languages.read("date", "real")} of ${languages.read("date")} read were real.`,
+        },
+        {
+          value: `${distance.agreeing.toFixed(4)} / ${distance.differing.toFixed(4)}`,
+          label: `median cosine distance between the vectors of the two articles where their dates agree and where they differ, over ${number(distance.pairs)} pairs. The vector of a whole article does not notice one digit.`,
+        },
+      ]}
+      queries={queries.LANGUAGES}
+      source={LEADS_LAB}
+    >
+      <p>
+        The texts are the {LEADS.snapshot} snapshot of the three Wikipedias. A
+        lifespan is read from the first paragraph of each lead by rule, not by
+        understanding the language: month names in three languages, the first
+        brackets that hold a date, or markers in running text such as “född” and
+        “död”. {number(languages.topics)} topics open with a birth or a death in
+        Finnish and in at least one of the other two. {number(languages.agree)}{" "}
+        agree everywhere and {languages.differ} do not: {languages.onBirth} on
+        the birth, {languages.onDeath} on the death, {languages.onBoth} on both.
+        The rule does not check that a topic is a person.
+      </p>
+      <p>
+        Time travel is on the Finnish side only. For the {history.facts} Finnish
+        dates that another language gives differently, the lead was rebuilt from{" "}
+        <Code>passage FOR SYSTEM_TIME ALL</Code>: every prose paragraph the
+        article ever had with the stretch it stood, and at each moment the
+        paragraph that opens with a lifespan near the top. A version whose edit
+        was later reverted stays in the timeline and is not used for what the
+        lead said since, before or once. {lead.title} is the kind of case the
+        list is for: Swedish and English give a {lead.field} on {english.shown},
+        the Finnish lead said the same from {day(lead.said[0].from)} until{" "}
+        {day(lead.since)} and has said {fullDay(lead.value)} since.
+      </p>
+      <p>
+        This shows that the leads differ. It does not show which one is right:
+        no outside source was read, and the lead that two others outvote may be
+        the one that was corrected. The lab has no history for Swedish or
+        English, so a row in which Swedish stands alone does not say that
+        Swedish moved. Of the {read} differing dates read by hand,{" "}
+        {languages.read("lifespan", "real")} are real differences between the
+        leads, {languages.read("lifespan", "calendar")} are one day in two
+        calendars, {languages.read("lifespan", "convention")} are two hedges and{" "}
+        {languages.read("lifespan", "different topic")} is two different people
+        behind one Wikidata id. In all {read} the lab had read the date the lead
+        states, and with {read} cases an error rate of up to about{" "}
+        {percent(LEADS.errorCeiling)} cannot be ruled out. The labels are a
+        research agent’s, not an independent audit. One list the lab built is
+        not shown: people one lead calls dead and another does not. Of{" "}
+        {languages.read("living")} such cases drawn at random,{" "}
+        {languages.read("living", "extraction error")} were deaths the reader
+        had missed.
+      </p>
+    </Section>
+  );
+}
+
+/* ── Infobox time machine ─────────────────────────────────────────────── */
+
+function Infobox() {
+  const { dates, typed, checked } = infobox;
+  const [forced, ignored] = infobox.index;
+
+  const verdict = (name: string) =>
+    dates.read.filter((row) => row.verdict === name).length;
+
+  return (
+    <Section
+      id="infobox"
+      lab="Infobox time machine · every field of an infobox as a row that lives"
+      title={
+        <>
+          <N>{number(infobox.statements)}</N> statements read from infoboxes
+          collapse into <N>{number(infobox.rows)}</N> rows with a lifetime. A
+          birth or death date was replaced <N>{dates.events}</N> times, and of
+          the {dates.read.length} largest shifts read by hand,{" "}
+          <N>{verdict("correction")}</N> look like the repair of a slip.
+        </>
+      }
+      figure={
+        <>
+          <Lifetimes />
+          <Dates />
+          <Asked />
+        </>
+      }
+      facts={[
+        {
+          value: `${number(infobox.articlesWithBox)} of ${number(infobox.articles)}`,
+          label: `articles have an infobox the lab recognises, under ${infobox.templates} template names and ${number(infobox.fields)} field names. ${number(infobox.emptyFields)} more fields were named and left empty: they make no row.`,
+        },
+        {
+          value: number(infobox.slots),
+          label: `fields of an infobox of an article, with ${infobox.rowsPerSlot.toFixed(2)} rows each on average and a median of ${infobox.medianRowsPerSlot}: at least half were written once and their raw text never replaced. ${number(infobox.current)} rows are current.`,
+        },
+        {
+          value: `${forced.ms.toFixed(2)} / ${ignored.ms.toFixed(2)} ms`,
+          label: `for the infobox of one article as of a date, with KEY article_asof (page_id, row_end, row_start) forced and then ignored. EXPLAIN expects ${number(forced.expected)} rows and ${number(ignored.expected)}.`,
+        },
+        {
+          value: number(infobox.returns),
+          label:
+            "times a raw value was replaced and then came back, three rows in a row with no gap between them",
+        },
+        {
+          value: number(infobox.unexpanded),
+          label: `statements hold a template the lab does not expand. They are kept between ⟦ ⟧ and flagged as unresolved. ${number(infobox.positional)} positional parameters were refused, not given a field name.`,
+        },
+        {
+          value: `${number(typed.day)} + ${number(typed.year)}`,
+          label: `rows of the date fields the lab types parse to a full day and to a bare year. ${typed.ambiguous_or_unread_date + typed.invalid_date_template} more are refused and keep their raw text with no date. A bare year is stored as 1 January and never compared as a full date.`,
+        },
+        {
+          value: `${checked.overlaps} overlaps`,
+          label: `between two rows of one field, and ${checked.badPeriods} rows that end before they start. The ${number(infobox.current)} current rows are also what AS OF the last edit returns, ${number(checked.atCutoff)}.`,
+        },
+      ]}
+      queries={queries.INFOBOX}
+      source={INFOBOX}
+    >
+      <p>
+        The table is <Code>statement</Code>, system-versioned, with{" "}
+        {number(infobox.rows)} rows. A field is an article, a template, which of
+        its occurrences on the page, and a parameter name. Accepted versions
+        that give it exactly the same raw text, one after another, merge into
+        one row, loaded under <Code>system_versioning_insert_history = 1</Code>{" "}
+        so that <Code>row_start</Code> is the real time of the edit that first
+        wrote the value. <Code>FOR SYSTEM_TIME AS OF</Code> then returns the
+        infobox as the article stated it at any moment, each value with the
+        revision that wrote it. Reading the {number(infobox.versions)} versions
+        took {Math.round(infobox.parseSeconds)} s outside the database and the
+        load {infobox.loadSeconds.toFixed(2)} s.
+      </p>
+      <p>
+        Coverage, exactly. An infobox is recognised when its template name is on
+        the lab’s list, or begins with “tietolaatikko” or “infobox” and has no
+        slash. The list comes from a survey of this corpus, not from the history
+        of the templates. Infoboxes nested inside another template, handmade
+        tables, unknown aliases and anything that Wikidata or the template
+        itself supplies are outside it, and versions that were later reverted
+        are skipped altogether. So an empty result means that no statement was
+        extracted. It is not proof that Wikipedia lacked the information. Nor is
+        the end of a row always a deletion: a broken or unknown box ends rows
+        too, and a renamed parameter or a change of template starts new ones.
+      </p>
+      <p>
+        A row ends when the raw text changes, so a new reference, a spelling or
+        a change of markup ends it as surely as a new fact does. How long a
+        value stands is the persistence of a string, not the time until a
+        correction, and rows that still stand are left out of those quantiles.
+        The rates are per saved statement and follow how often an article is
+        edited. A low rate does not certify accuracy.
+      </p>
+      <p>
+        The comparison of dates needs two adjacent rows of one field that both
+        parse to a full day. It does not bridge a missing field, a value the
+        parser refused or a renamed parameter, and one person can sit in several
+        templates, so {dates.events} counts field events, not corrections in the
+        world. The {dates.read.length} read by hand are the largest shifts, in{" "}
+        {new Set(dates.read.map((row) => row.article)).size} articles, chosen
+        for being extreme: {verdict("correction")} are apparent corrections (a
+        year short of a digit, a death date in the birth field, two fields
+        swapped) and {verdict("calendar or format change")} is a change of
+        format with a passing error. None is evidence that historians revised a
+        biography, and nothing is extrapolated to the other{" "}
+        {dates.events - dates.read.length}.
+      </p>
+      <p>
+        Two things about MariaDB {checked.server.split("-")[0]}. The declared{" "}
+        <Code>PRIMARY KEY (id)</Code> becomes <Code>(id, row_end)</Code>, so an
+        id is an import identity and not a constraint across history. And a
+        current row ends at <Code>{checked.currentEnd}</Code> on this server: a
+        loader that hardcodes an earlier sentinel would turn current facts into
+        history.
+      </p>
+    </Section>
+  );
+}
+
 function Code({ children }: { children: React.ReactNode }) {
   return <code className="font-mono text-[13px]">{children}</code>;
 }
@@ -1152,6 +1394,8 @@ export const SECTIONS = [
   { id: "offices", Finding: Offices },
   { id: "numbers", Finding: Numbers },
   { id: "scale", Finding: Scale },
+  { id: "languages", Finding: Languages },
+  { id: "infobox", Finding: Infobox },
   { id: "search", Finding: Search },
 ];
 

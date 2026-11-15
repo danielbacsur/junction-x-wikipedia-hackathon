@@ -1,0 +1,79 @@
+{
+  "title": "Infobox time machine summary",
+  "unit": "counts, seconds and bytes",
+  "source": "uv run write_report.py; coverage, shape, load and validation JSON",
+  "rows": [
+    {
+      "versions_read": 862076,
+      "accepted_versions": 807335,
+      "reverted_versions_skipped": 54741,
+      "boxes_parsed": 335191,
+      "fields_parsed_including_empty": 7649662,
+      "nonempty_field_observations": 5066851,
+      "accepted_versions_with_recognized_infobox": 329887,
+      "empty_fields": 2582811,
+      "unexpanded_template_observations": 365066,
+      "articles_read": 19742,
+      "articles_with_recognized_infobox": 8222,
+      "statement_lifetimes": 211379,
+      "parse_seconds": 253.673,
+      "refusals": {
+        "positional_parameter": 34646,
+        "unclosed_infobox": 63,
+        "duplicate_last_wins": 2668,
+        "invalid_field_name": 38,
+        "unreadable_template": 33
+      },
+      "typed_lifetimes": {
+        "day": 6397,
+        "invalid_date_template": 19,
+        "unread_number": 375,
+        "number": 2921,
+        "year": 2129,
+        "ambiguous_or_unread_date": 822,
+        "empty": 28
+      },
+      "statements": 211379,
+      "distinct_fields": 2900,
+      "distinct_templates": 281,
+      "field_slots": 140227,
+      "lifetimes_per_field_slot": 1.5074058490875508,
+      "median_lifetimes_per_field_slot": 1,
+      "observations": 5066851,
+      "raw_aba": 2257,
+      "date_change_events": 150,
+      "date_fields_changed": 126,
+      "date_articles_changed": 119,
+      "date_shift_bins": {
+        "1 day": 13,
+        "2–31 days": 53,
+        ">365 days": 55,
+        "32–365 days": 29
+      },
+      "load": {
+        "rows": 211379,
+        "current_rows": 110129,
+        "load_seconds": 7.532340584002668,
+        "estimated_rows": 219345,
+        "data_bytes": 88784896,
+        "index_bytes": 40534016
+      },
+      "validation": {
+        "lifetimes": 211379,
+        "observations": 5066851,
+        "bad_periods": 0,
+        "reverted_or_missing_origin": 0,
+        "wrong_origin_page_or_time": 0,
+        "overlapping_field_periods": 0,
+        "rows_at_cutoff": 110129,
+        "current_rows": 110129,
+        "typed_value_mismatches": 0,
+        "server_version": "12.3.3-MariaDB-ubu2404",
+        "current_end_sentinel": [
+          "2106-02-07 06:28:15.999999",
+          "2106-02-07 06:28:15.999999"
+        ]
+      }
+    }
+  ]
+}

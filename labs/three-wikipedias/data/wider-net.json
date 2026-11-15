@@ -1,0 +1,28 @@
+{
+ "title": "Beyond lifespans: dates and quantities in the opening paragraph of other articles",
+ "unit": "topic and pair of languages",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "note": "A near miss: each language gives a value the other lacks, within 31 days (dates) or 10 % (quantities).",
+ "rows": [
+  {
+   "kind": "full dates in the opening paragraph",
+   "comparable_topics": 541,
+   "comparable_pairs": 915,
+   "pairs_sharing_a_value": 823,
+   "near_miss_rows": 82,
+   "near_miss_topics": 56,
+   "near_miss_pairs": 73,
+   "julian_gap_rows": 11,
+   "one_day_rows": 39
+  },
+  {
+   "kind": "quantities of 100 or more in the opening paragraph",
+   "comparable_topics": 462,
+   "comparable_pairs": 648,
+   "pairs_sharing_a_value": 301,
+   "near_miss_rows": 332,
+   "near_miss_topics": 173,
+   "near_miss_pairs": 233
+  }
+ ]
+}

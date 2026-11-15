@@ -1,0 +1,247 @@
+{
+ "title": "Cosine distance between the bge-m3 vectors of the same topic in two languages",
+ "unit": "topic",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "length_fit": [
+  {
+   "pair": "en-fi",
+   "intercept": 0.1636,
+   "per_log_length_ratio": 0.0412,
+   "per_log_shorter_length": 0.0043,
+   "r_squared": 0.211,
+   "correlation_with_log_length_ratio": 0.455
+  },
+  {
+   "pair": "en-sv",
+   "intercept": 0.1899,
+   "per_log_length_ratio": 0.0443,
+   "per_log_shorter_length": -0.0026,
+   "r_squared": 0.278,
+   "correlation_with_log_length_ratio": 0.526
+  },
+  {
+   "pair": "fi-sv",
+   "intercept": 0.2258,
+   "per_log_length_ratio": 0.0388,
+   "per_log_shorter_length": -0.0022,
+   "r_squared": 0.207,
+   "correlation_with_log_length_ratio": 0.454
+  }
+ ],
+ "note": "0 is the same direction. Computed in MariaDB with VEC_DISTANCE_COSINE on rows fetched by primary key.",
+ "rows": [
+  {
+   "pair": "en-fi",
+   "topics": 5254,
+   "p10": 0.1579,
+   "median": 0.2308,
+   "p90": 0.3349,
+   "p99": 0.4539,
+   "largest": 0.6049,
+   "bins": [
+    {
+     "from_": 0.0,
+     "to": 0.05,
+     "topics": 0
+    },
+    {
+     "from_": 0.05,
+     "to": 0.1,
+     "topics": 49
+    },
+    {
+     "from_": 0.1,
+     "to": 0.15,
+     "topics": 360
+    },
+    {
+     "from_": 0.15,
+     "to": 0.2,
+     "topics": 1143
+    },
+    {
+     "from_": 0.2,
+     "to": 0.25,
+     "topics": 1641
+    },
+    {
+     "from_": 0.25,
+     "to": 0.3,
+     "topics": 1136
+    },
+    {
+     "from_": 0.3,
+     "to": 0.35,
+     "topics": 515
+    },
+    {
+     "from_": 0.35,
+     "to": 0.4,
+     "topics": 258
+    },
+    {
+     "from_": 0.4,
+     "to": 0.45,
+     "topics": 94
+    },
+    {
+     "from_": 0.45,
+     "to": 0.5,
+     "topics": 40
+    },
+    {
+     "from_": 0.5,
+     "to": 0.55,
+     "topics": 14
+    },
+    {
+     "from_": 0.55,
+     "to": 0.6,
+     "topics": 4
+    }
+   ]
+  },
+  {
+   "pair": "en-sv",
+   "topics": 2919,
+   "p10": 0.13,
+   "median": 0.2042,
+   "p90": 0.3099,
+   "p99": 0.4065,
+   "largest": 0.6029,
+   "bins": [
+    {
+     "from_": 0.0,
+     "to": 0.05,
+     "topics": 0
+    },
+    {
+     "from_": 0.05,
+     "to": 0.1,
+     "topics": 62
+    },
+    {
+     "from_": 0.1,
+     "to": 0.15,
+     "topics": 471
+    },
+    {
+     "from_": 0.15,
+     "to": 0.2,
+     "topics": 856
+    },
+    {
+     "from_": 0.2,
+     "to": 0.25,
+     "topics": 725
+    },
+    {
+     "from_": 0.25,
+     "to": 0.3,
+     "topics": 456
+    },
+    {
+     "from_": 0.3,
+     "to": 0.35,
+     "topics": 220
+    },
+    {
+     "from_": 0.35,
+     "to": 0.4,
+     "topics": 90
+    },
+    {
+     "from_": 0.4,
+     "to": 0.45,
+     "topics": 26
+    },
+    {
+     "from_": 0.45,
+     "to": 0.5,
+     "topics": 9
+    },
+    {
+     "from_": 0.5,
+     "to": 0.55,
+     "topics": 2
+    },
+    {
+     "from_": 0.55,
+     "to": 0.6,
+     "topics": 2
+    }
+   ]
+  },
+  {
+   "pair": "fi-sv",
+   "topics": 4921,
+   "p10": 0.1606,
+   "median": 0.2443,
+   "p90": 0.3597,
+   "p99": 0.4591,
+   "largest": 0.5848,
+   "bins": [
+    {
+     "from_": 0.0,
+     "to": 0.05,
+     "topics": 0
+    },
+    {
+     "from_": 0.05,
+     "to": 0.1,
+     "topics": 22
+    },
+    {
+     "from_": 0.1,
+     "to": 0.15,
+     "topics": 300
+    },
+    {
+     "from_": 0.15,
+     "to": 0.2,
+     "topics": 991
+    },
+    {
+     "from_": 0.2,
+     "to": 0.25,
+     "topics": 1282
+    },
+    {
+     "from_": 0.25,
+     "to": 0.3,
+     "topics": 1040
+    },
+    {
+     "from_": 0.3,
+     "to": 0.35,
+     "topics": 690
+    },
+    {
+     "from_": 0.35,
+     "to": 0.4,
+     "topics": 362
+    },
+    {
+     "from_": 0.4,
+     "to": 0.45,
+     "topics": 163
+    },
+    {
+     "from_": 0.45,
+     "to": 0.5,
+     "topics": 54
+    },
+    {
+     "from_": 0.5,
+     "to": 0.55,
+     "topics": 16
+    },
+    {
+     "from_": 0.55,
+     "to": 0.6,
+     "topics": 1
+    }
+   ]
+  }
+ ]
+}

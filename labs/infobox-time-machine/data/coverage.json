@@ -1,0 +1,38 @@
+{
+  "title": "Infobox extraction coverage",
+  "unit": "counts",
+  "source": "uv run build.py; Parquet data/m and wtt.edit",
+  "rows": [
+    {
+      "versions_read": 862076,
+      "accepted_versions": 807335,
+      "reverted_versions_skipped": 54741,
+      "boxes_parsed": 335191,
+      "fields_parsed_including_empty": 7649662,
+      "nonempty_field_observations": 5066851,
+      "accepted_versions_with_recognized_infobox": 329887,
+      "empty_fields": 2582811,
+      "unexpanded_template_observations": 365066,
+      "articles_read": 19742,
+      "articles_with_recognized_infobox": 8222,
+      "statement_lifetimes": 211379,
+      "parse_seconds": 253.673,
+      "refusals": {
+        "positional_parameter": 34646,
+        "unclosed_infobox": 63,
+        "duplicate_last_wins": 2668,
+        "invalid_field_name": 38,
+        "unreadable_template": 33
+      },
+      "typed_lifetimes": {
+        "day": 6397,
+        "invalid_date_template": 19,
+        "unread_number": 375,
+        "number": 2921,
+        "year": 2129,
+        "ambiguous_or_unread_date": 822,
+        "empty": 28
+      }
+    }
+  ]
+}

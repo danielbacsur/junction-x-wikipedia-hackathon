@@ -590,3 +590,197 @@ ORDER BY distance
 LIMIT 10;`,
   },
 ];
+
+export const LANGUAGES: Query[] = [
+  {
+    about:
+      "sql/schema.sql, whole: the view every count is taken from. Two languages that state the same field of the same topic are compared at the coarser precision of the two, so a full date against a bare year compares years. calendar_shaped is a gap that is exactly the Julian offset of the century.",
+    text: String.raw`CREATE OR REPLACE VIEW lab_three_wikipedias.fact_pair AS
+SELECT qid, field, lang_a, lang_b, shown_a, shown_b, grain, gap, approx, old_style, y,
+       CASE WHEN gap = 0 THEN 'same'
+            WHEN grain = 'day' AND gap = 1 THEN '1 day'
+            WHEN grain = 'day' AND gap <= 31 THEN '2 to 31 days'
+            WHEN grain = 'day' AND gap <= 366 THEN 'up to a year'
+            WHEN grain = 'month' AND gap <= 12 THEN 'up to a year'
+            WHEN grain = 'year' AND gap = 1 THEN 'one calendar year, only years given'
+            ELSE 'more than a year' END AS size,
+       (grain = 'day' AND gap = CASE WHEN y < 1700 THEN 10 WHEN y < 1800 THEN 11 WHEN y < 1900 THEN 12 ELSE 13 END) AS calendar_shaped
+FROM (
+  SELECT a.qid, a.field, a.lang AS lang_a, b.lang AS lang_b, a.shown AS shown_a, b.shown AS shown_b, a.y,
+         CASE WHEN a.d IS NOT NULL AND b.d IS NOT NULL THEN 'day'
+              WHEN a.m IS NOT NULL AND b.m IS NOT NULL THEN 'month'
+              ELSE 'year' END AS grain,
+         CASE WHEN a.d IS NOT NULL AND b.d IS NOT NULL THEN ABS(a.day_number - b.day_number)
+              WHEN a.m IS NOT NULL AND b.m IS NOT NULL THEN ABS((a.y * 12 + a.m) - (b.y * 12 + b.m))
+              ELSE ABS(a.y - b.y) END AS gap,
+         (a.approx OR b.approx) AS approx,
+         (a.old_style OR b.old_style) AS old_style
+  FROM lab_three_wikipedias.lead_fact AS a
+  JOIN lab_three_wikipedias.lead_fact AS b ON b.qid = a.qid AND b.field = a.field AND a.lang < b.lang
+) AS p;`,
+  },
+  {
+    about:
+      "sql/people-summary.sql, whole: the topics that agree everywhere and those that differ on a birth or a death, the first bar above.",
+    text: String.raw`SELECT COUNT(*) AS topics_compared,
+       SUM(worst = 0) AS agree_everywhere,
+       SUM(worst > 0) AS disagree_somewhere,
+       SUM(birth_gap > 0) AS disagree_on_birth,
+       SUM(death_gap > 0) AS disagree_on_death,
+       SUM(worst > 0 AND firm_gap = 0) AS only_where_a_date_is_marked_approximate,
+       SUM(firm_gap > 0) AS disagree_on_a_date_given_as_exact
+FROM (
+  SELECT qid, MAX(gap) AS worst,
+         MAX(IF(field = 'birth', gap, 0)) AS birth_gap,
+         MAX(IF(field = 'death', gap, 0)) AS death_gap,
+         MAX(IF(approx, 0, gap)) AS firm_gap
+  FROM lab_three_wikipedias.fact_pair
+  GROUP BY qid
+) AS per_topic;`,
+  },
+  {
+    about:
+      "sql/people-size.sql and sql/people-shape.sql, whole: how far apart the two dates of a pair are, and which part of a full date differs.",
+    text: String.raw`SELECT field, size, COUNT(*) AS pairs, SUM(approx) AS marked_approximate,
+       SUM(old_style) AS lead_mentions_old_style, SUM(calendar_shaped) AS julian_gap_exactly
+FROM lab_three_wikipedias.fact_pair
+WHERE gap > 0
+GROUP BY field, size
+ORDER BY field, FIELD(size, '1 day', '2 to 31 days', 'up to a year', 'one calendar year, only years given', 'more than a year');
+
+SELECT CASE WHEN a.y = b.y AND a.d = b.d THEN 'same day number and year, other month'
+            WHEN a.y = b.y AND a.m = b.m THEN 'same month and year, other day'
+            WHEN a.m = b.m AND a.d = b.d THEN 'same day and month, other year'
+            ELSE 'more than one part differs' END AS shape,
+       COUNT(*) AS pairs,
+       SUM(ABS(a.day_number - b.day_number) = CASE WHEN a.y < 1700 THEN 10 WHEN a.y < 1800 THEN 11 WHEN a.y < 1900 THEN 12 ELSE 13 END) AS julian_gap_exactly
+FROM lab_three_wikipedias.lead_fact AS a
+JOIN lab_three_wikipedias.lead_fact AS b ON b.qid = a.qid AND b.field = a.field AND a.lang < b.lang
+WHERE a.d IS NOT NULL AND b.d IS NOT NULL AND a.day_number <> b.day_number
+GROUP BY shape
+ORDER BY pairs DESC;`,
+  },
+  {
+    about:
+      "sql/lead-history.sql: time travel on the Finnish side, run once for each of the Finnish articles with a date in dispute. It returns every prose paragraph the article ever had with the stretch it stood. history.py then picks the paragraph that was the lead at each moment and reads its dates, so the timelines above are this statement plus that reading, not SQL alone. The parameter is the page id.",
+    text: String.raw`SELECT HEX(p.ord) AS ord, p.born_rev, p.row_start, p.row_end, t.chars,
+       LEFT(t.text, 420) AS head, LEFT(t.wikitext, 900) AS wikihead,
+       e.user, e.editor, e.reverted_by
+FROM wtt.passage FOR SYSTEM_TIME ALL AS p
+JOIN wtt.passage_text AS t ON t.hash = p.hash
+LEFT JOIN wtt.edit AS e ON e.rev_id = p.born_rev
+WHERE p.page_id = ? AND t.kind = 'prose';`,
+  },
+  {
+    about:
+      "sql/date-near-miss.sql, whole: the wider net over articles that are not lifespans. Two languages each give a full date in the opening paragraph that the other lacks, at most 31 days apart.",
+    text: String.raw`SELECT a.qid, a.lang AS lang_a, b.lang AS lang_b, a.shown AS shown_a, b.shown AS shown_b,
+       ABS(a.day_number - b.day_number) AS gap_days, t.fi_title
+FROM lab_three_wikipedias.lead_date AS a
+JOIN lab_three_wikipedias.lead_date AS b
+  ON b.qid = a.qid AND a.lang < b.lang
+ AND a.day_number <> b.day_number AND ABS(a.day_number - b.day_number) <= 31
+JOIN lab_three_wikipedias.topic AS t ON t.qid = a.qid
+WHERE NOT EXISTS (SELECT 1 FROM lab_three_wikipedias.lead_date AS x
+                  WHERE x.qid = a.qid AND x.lang = b.lang AND x.day_number = a.day_number)
+  AND NOT EXISTS (SELECT 1 FROM lab_three_wikipedias.lead_date AS x
+                  WHERE x.qid = a.qid AND x.lang = a.lang AND x.day_number = b.day_number);`,
+  },
+];
+
+export const INFOBOX: Query[] = [
+  {
+    about:
+      "sql/schema.sql, whole: one row for each raw value of a field and the stretch of time it stood. load.py sets system_versioning_insert_history = 1 and inserts a history row with both ends of its period and a current row with its start alone.",
+    text: `CREATE TABLE statement (
+ id BIGINT UNSIGNED NOT NULL,
+ page_id INT UNSIGNED NOT NULL,
+ title VARCHAR(255) NOT NULL,
+ template VARCHAR(255) NOT NULL,
+ slot SMALLINT UNSIGNED NOT NULL,
+ field VARCHAR(255) NOT NULL,
+ raw_value MEDIUMTEXT NOT NULL,
+ value MEDIUMTEXT NOT NULL,
+ unresolved BOOLEAN NOT NULL,
+ fact_date DATE NULL,
+ fact_number DOUBLE NULL,
+ \`precision\` VARCHAR(40) NULL,
+ rev_id INT UNSIGNED NOT NULL,
+ editor VARCHAR(255) NULL,
+ editor_kind VARCHAR(8) NOT NULL,
+ comment TEXT NULL,
+ versions INT UNSIGNED NOT NULL,
+ row_start TIMESTAMP(6) GENERATED ALWAYS AS ROW START,
+ row_end TIMESTAMP(6) GENERATED ALWAYS AS ROW END,
+ PERIOD FOR SYSTEM_TIME (row_start,row_end),
+ PRIMARY KEY(id),
+ KEY article_asof(page_id,row_end,row_start),
+ KEY field_time(field,row_start),
+ KEY typed_date(field,fact_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin WITH SYSTEM VERSIONING;`,
+  },
+  {
+    about:
+      "sql/a-asof.sql, whole: the infobox of one article as it was stated at a moment. Page 1275 is Urho Kekkonen.",
+    text: String.raw`SELECT title,template,slot,field,value,raw_value,rev_id,editor,row_start
+FROM statement FOR SYSTEM_TIME AS OF TIMESTAMP '2010-12-31 23:59:59'
+WHERE page_id = 1275
+ORDER BY template,slot,field;`,
+  },
+  {
+    about:
+      "sql/b-field-history.sql, whole: every row one field of one article ever had. Its result is the bar drawn above.",
+    text: String.raw`SELECT title,template,slot,field,value,rev_id,editor,comment,row_start,row_end
+FROM statement FOR SYSTEM_TIME ALL
+WHERE page_id = 1275 AND field = 'syntymäaika'
+ORDER BY row_start;`,
+  },
+  {
+    about:
+      "sql/c-changed-dates.sql, whole: fields whose parsed full date was replaced by another, a row straight after a row. This showcase statement reads five field names and stops at 100 fields. The count of replaced birth and death dates above comes from analyze.py, which applies the same rule to the extracted rows under more field names (syntymäpäivä and kuolinpäivä among them) and without perustettu.",
+    text: `WITH history AS (
+ SELECT page_id,title,template,slot,field,fact_date,\`precision\`,row_start,
+ LAG(fact_date) OVER w AS previous_date,
+ LAG(\`precision\`) OVER w AS previous_precision,
+ LAG(row_end) OVER w AS previous_end
+ FROM statement FOR SYSTEM_TIME ALL
+ WHERE field IN ('syntynyt','syntymäaika','kuollut','kuolinaika','perustettu')
+ WINDOW w AS (PARTITION BY page_id,template,slot,field ORDER BY row_start)
+)
+SELECT page_id,title,field,COUNT(*) AS changes,MAX(ABS(DATEDIFF(fact_date,previous_date))) AS largest_days
+FROM history WHERE \`precision\`='day' AND previous_precision='day'
+ AND previous_end=row_start AND fact_date<>previous_date
+GROUP BY page_id,title,field ORDER BY changes DESC,page_id,field LIMIT 100;`,
+  },
+  {
+    about:
+      "sql/d-returned-values.sql, whole: a raw value that was replaced and then came back, three rows in a row with no gap between them. It reads every row of the table and compares SHA-256 hashes of the values.",
+    text: String.raw`WITH history AS (
+ SELECT page_id,title,template,slot,field,value,rev_id,row_start,
+ SHA2(raw_value,256) AS hash,
+ LAG(SHA2(raw_value,256),1) OVER w AS previous_hash,
+ LAG(SHA2(raw_value,256),2) OVER w AS older_hash,
+ LAG(row_end,1) OVER w AS previous_end,
+ LAG(row_end,2) OVER w AS older_end,
+ LAG(row_start,1) OVER w AS previous_start
+ FROM statement FOR SYSTEM_TIME ALL
+ WINDOW w AS (PARTITION BY page_id,template,slot,field ORDER BY row_start)
+)
+SELECT page_id,title,template,field,value,rev_id,row_start
+FROM history WHERE hash=older_hash AND hash<>previous_hash
+ AND previous_end=row_start AND older_end=previous_start
+ORDER BY row_start DESC,page_id,template,slot,field LIMIT 100;`,
+  },
+  {
+    about:
+      "sql/e-month.sql, whole: every replacement of a date of birth field in one month, with the value before and after. A row joins the row that begins where it ends.",
+    text: String.raw`SELECT b.page_id,b.title,b.field,a.value AS before_value,b.value AS after_value,
+ b.row_start AS changed_at,b.rev_id,b.editor
+FROM statement FOR SYSTEM_TIME ALL a
+JOIN statement FOR SYSTEM_TIME ALL b
+ ON b.page_id=a.page_id AND b.template=a.template AND b.slot=a.slot
+ AND b.field=a.field AND b.row_start=a.row_end
+WHERE b.field='syntymäaika' AND b.row_start>='2010-05-01' AND b.row_start<'2010-06-01'
+ORDER BY b.row_start,b.page_id;`,
+  },
+];

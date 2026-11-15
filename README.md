@@ -65,7 +65,9 @@ npm run dev                    # web on :3000, the historian agent on :3001
 ```
 
 Search works on whatever is embedded so far, and paragraphs a question needs
-are embedded on the spot. To check everything against its sources:
+are embedded on the spot. The whole path above was last run from an empty
+database on 14 November 2026 and ended with the same counts and all checks
+passing. To check everything against its sources:
 
 ```bash
 npm run validate               # eight checks against the parquet files and wikipedia's sha1
@@ -201,12 +203,12 @@ embedding job was running:
 
 | What a page does                     | Median | Slowest in 20 |
 | ------------------------------------ | ------ | ------------- |
-| Read an article on a date            | 9 ms   | 52 ms         |
-| An article's whole timeline          | 1 ms   | 7 ms          |
-| Compare two dates                    | 7 ms   | 23 ms         |
-| Find articles                        | 87 ms  | 431 ms        |
-| Gather evidence as of a date         | 108 ms | 365 ms        |
-| Trace a claim through all of history | 488 ms | 634 ms        |
+| Read an article on a date            | 9 ms   | 38 ms         |
+| An article's whole timeline          | 1 ms   | 10 ms         |
+| Compare two dates                    | 5 ms   | 17 ms         |
+| Find articles                        | 114 ms | 618 ms        |
+| Gather evidence as of a date         | 124 ms | 485 ms        |
+| Trace a claim through all of history | 610 ms | 930 ms        |
 
 Gathering evidence is timed the second time a question is asked. The first
 time, passages nobody has asked about are embedded on the spot, which takes a
@@ -226,17 +228,19 @@ office is written in the version cited for it.
 Separate agents explored ideas past the brief, each in its own folder with a
 README of what it measured, including when the answer was no.
 
-| Lab                                                           | What it found                                                                                                                                                       |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [temporal-ann](labs/temporal-ann/README.md)                   | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                                                      |
-| [history-of-history](labs/history-of-history/README.md)       | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about.                                      |
-| [exposure-clock](labs/exposure-clock/README.md)               | How long it took to undo an edit from 2004 to 2026, and what changed with temporary accounts in 2025.                                                               |
-| [paragraph-survival](labs/paragraph-survival/README.md)       | An exact wording has a half-life of 238 days; one written by a named account lasts sixteen times longer than an anonymous one.                                      |
-| [bitemporal-offices](labs/bitemporal-offices/README.md)       | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times. |
-| [sentence-journeys](labs/sentence-journeys/README.md)         | Paragraphs that travel: 1,899 stood in more than one article, 85 bulk moves show articles being split, and a copy usually outlives its source.                      |
-| [claims-before-sources](labs/claims-before-sources/README.md) | 191 paragraphs cite a first source published after the claim already stood. A manual audit of the top fifteen found no confirmed circular sourcing.                 |
-| [numbers-that-moved](labs/numbers-that-moved/README.md)       | 6,840 times one number replaced another while the words around it stayed. The twenty least settled, read by hand, were updates to newer data and not disputes.      |
-| [history-at-scale](labs/history-at-scale/README.md)           | What a versioned table costs as its past grows: which index makes an as-of read touch only the rows it returns, and what partitioning by year gets wrong.           |
+| Lab                                                           | What it found                                                                                                                                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [temporal-ann](labs/temporal-ann/README.md)                   | Vector search as of a date three ways: only exact search after the lifetime filter is correct.                                                                                        |
+| [history-of-history](labs/history-of-history/README.md)       | The naming of the 1918 war over 23 dates, the 70 % against 7 % revert asymmetry, and which years of history get written about.                                                        |
+| [exposure-clock](labs/exposure-clock/README.md)               | How long it took to undo an edit from 2004 to 2026, and what changed with temporary accounts in 2025.                                                                                 |
+| [paragraph-survival](labs/paragraph-survival/README.md)       | An exact wording has a half-life of 238 days; one written by a named account lasts sixteen times longer than an anonymous one.                                                        |
+| [bitemporal-offices](labs/bitemporal-offices/README.md)       | Terms of office with both kinds of time: who was president on a day, according to Wikipedia as of another day. The answer for 1 March 1925 has changed three times.                   |
+| [sentence-journeys](labs/sentence-journeys/README.md)         | Paragraphs that travel: 1,899 stood in more than one article, 85 bulk moves show articles being split, and a copy usually outlives its source.                                        |
+| [claims-before-sources](labs/claims-before-sources/README.md) | 191 paragraphs cite a first source published after the claim already stood. A manual audit of the top fifteen found no confirmed circular sourcing.                                   |
+| [numbers-that-moved](labs/numbers-that-moved/README.md)       | 6,840 times one number replaced another while the words around it stayed. The twenty least settled, read by hand, were updates to newer data and not disputes.                        |
+| [history-at-scale](labs/history-at-scale/README.md)           | What a versioned table costs as its past grows: which index makes an as-of read touch only the rows it returns, and what partitioning by year gets wrong.                             |
+| [infobox-time-machine](labs/infobox-time-machine/README.md)   | Every infobox field as a row with a lifetime: 211,379 lifetimes from all 862,076 versions, loaded in eight seconds, and the 150 times a stated birth or death date changed.           |
+| [three-wikipedias](labs/three-wikipedias/README.md)           | Finnish, Swedish and English disagree on a birth or death date in 313 of 3,305 shared topics, and the Finnish history shows who moved: a death in March 1918 became November in 2023. |
 
 ## Layout
 

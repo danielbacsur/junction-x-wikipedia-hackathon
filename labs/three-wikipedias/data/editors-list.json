@@ -1,0 +1,4417 @@
+{
+ "title": "Birth and death dates the three Wikipedias give differently, with the Finnish timeline",
+ "unit": "topic and field",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "candidates": 210,
+ "odd_one_out": {
+  "sv": 47,
+  "en": 31,
+  "fi": 16,
+  "none (two languages, or three values)": 116
+ },
+ "who_moved": [
+  {
+   "reading": "Finnish never had the sv value",
+   "facts": 38
+  },
+  {
+   "reading": "Finnish never had the en value",
+   "facts": 23
+  },
+  {
+   "reading": "Finnish never had the value the other two share",
+   "facts": 11
+  },
+  {
+   "reading": "Finnish used to have the sv value and left it",
+   "facts": 9
+  },
+  {
+   "reading": "Finnish used to have the en value and left it",
+   "facts": 6
+  },
+  {
+   "reading": "Finnish left the value the other two share",
+   "facts": 5
+  }
+ ],
+ "rule": "Kept: every language gives a full date, none hedged, no old-style calendar in the lead, gap not the Julian offset, not thrown out by the manual read. Score: 3 if two languages agree against the third, 2 if read by hand, 1 if Finnish once agreed with the other value. Ties by size of the gap.",
+ "rows": [
+  {
+   "qid": "Q6182980",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and en: 3 November 1860. sv: 3 november 1869.",
+   "values": {
+    "en": {
+     "shown": "3 November 1860",
+     "iso": "1860-11-03",
+     "title": "Mikael Soininen",
+     "url": "https://en.wikipedia.org/wiki/Mikael_Soininen"
+    },
+    "fi": {
+     "shown": "3. marraskuuta 1860",
+     "iso": "1860-11-03",
+     "title": "Mikael Soininen",
+     "url": "https://fi.wikipedia.org/wiki/Mikael_Soininen"
+    },
+    "sv": {
+     "shown": "3 november 1869",
+     "iso": "1869-11-03",
+     "title": "Mikael Soininen",
+     "url": "https://sv.wikipedia.org/wiki/Mikael_Soininen"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 3287,
+   "finnish": {
+    "value": "1860-11-03",
+    "standing_since": "2009-06-04 16:19:07",
+    "set_in_revision": 6830819,
+    "revision_url": "https://fi.wikipedia.org/?oldid=6830819",
+    "set_by": "named",
+    "said_before": "1907",
+    "first_value_ever": false,
+    "article_created": "2006-04-01 20:36:17",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1860-11-03",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2006-04-02 09:02:01",
+      "end": "2007-11-12 09:36:07",
+      "value": "1860",
+      "revision": 967551,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2007-11-12 09:36:07",
+      "end": "2007-11-12 09:36:54",
+      "value": "1860",
+      "revision": 3791569,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2007-11-12 09:36:54",
+      "end": "2008-07-03 15:30:23",
+      "value": "1860",
+      "revision": 3791575,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-07-03 15:30:23",
+      "end": "2008-10-27 13:05:58",
+      "value": "1860-11-03",
+      "revision": 5048953,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-10-27 13:05:58",
+      "end": "2009-06-04 16:19:07",
+      "value": "1907",
+      "revision": 5722190,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2009-06-04 16:19:07",
+      "end": "2026-10-01 10:59:12",
+      "value": "1860-11-03",
+      "revision": 6830819,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q12356153",
+   "field": "death",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and en: 1 August 1977. sv: 1 augusti 1979.",
+   "values": {
+    "en": {
+     "shown": "1 August 1977",
+     "iso": "1977-08-01",
+     "title": "Tyyne Leivo-Larsson",
+     "url": "https://en.wikipedia.org/wiki/Tyyne_Leivo-Larsson"
+    },
+    "fi": {
+     "shown": "1. elokuuta 1977",
+     "iso": "1977-08-01",
+     "title": "Tyyne Leivo-Larsson",
+     "url": "https://fi.wikipedia.org/wiki/Tyyne_Leivo-Larsson"
+    },
+    "sv": {
+     "shown": "1 augusti 1979",
+     "iso": "1979-08-01",
+     "title": "Tyyne Leivo-Larsson",
+     "url": "https://sv.wikipedia.org/wiki/Tyyne_Leivo-Larsson"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 730,
+   "finnish": {
+    "value": "1977-08-01",
+    "standing_since": "2007-01-16 02:43:48",
+    "set_in_revision": 2204889,
+    "revision_url": "https://fi.wikipedia.org/?oldid=2204889",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": false,
+    "article_created": "2006-03-16 09:12:07",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1977-08-01",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2006-03-16 09:12:07",
+      "end": "2006-08-14 17:06:12",
+      "value": "1977-08-01",
+      "revision": 897587,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-08-14 17:06:12",
+      "end": "2007-01-16 02:43:48",
+      "value": null,
+      "revision": 1495157,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2007-01-16 02:43:48",
+      "end": "2026-10-01 10:59:12",
+      "value": "1977-08-01",
+      "revision": 2204889,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q57233",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and en: 17 January 1885. sv: 17 juni 1885.",
+   "values": {
+    "en": {
+     "shown": "17 January 1885",
+     "iso": "1885-01-17",
+     "title": "Nikolaus von Falkenhorst",
+     "url": "https://en.wikipedia.org/wiki/Nikolaus_von_Falkenhorst"
+    },
+    "fi": {
+     "shown": "17. tammikuuta 1885",
+     "iso": "1885-01-17",
+     "title": "Nikolaus von Falkenhorst",
+     "url": "https://fi.wikipedia.org/wiki/Nikolaus_von_Falkenhorst"
+    },
+    "sv": {
+     "shown": "17 juni 1885",
+     "iso": "1885-06-17",
+     "title": "Nikolaus von Falkenhorst",
+     "url": "https://sv.wikipedia.org/wiki/Nikolaus_von_Falkenhorst"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 151,
+   "finnish": {
+    "value": "1885-01-17",
+    "standing_since": "2008-09-10 17:45:36",
+    "set_in_revision": 5435034,
+    "revision_url": "https://fi.wikipedia.org/?oldid=5435034",
+    "set_by": "ip",
+    "said_before": "1885",
+    "first_value_ever": false,
+    "article_created": "2006-06-14 20:13:32",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1885-01-17",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-06-14 20:13:32",
+      "end": "2008-09-10 17:45:36",
+      "value": "1885",
+      "revision": 1256135,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-09-10 17:45:36",
+      "end": "2026-10-01 10:59:12",
+      "value": "1885-01-17",
+      "revision": 5435034,
+      "editor": "ip",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q5926634",
+   "field": "death",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and sv: 30 May 1630. en: 30 March 1630.",
+   "values": {
+    "en": {
+     "shown": "30 March 1630",
+     "iso": "1630-03-30",
+     "title": "Axel Kurck",
+     "url": "https://en.wikipedia.org/wiki/Axel_Kurck"
+    },
+    "fi": {
+     "shown": "30. toukokuuta 1630",
+     "iso": "1630-05-30",
+     "title": "Axel Kurck",
+     "url": "https://fi.wikipedia.org/wiki/Axel_Kurck"
+    },
+    "sv": {
+     "shown": "30 maj 1630",
+     "iso": "1630-05-30",
+     "title": "Axel Kurck",
+     "url": "https://sv.wikipedia.org/wiki/Axel_Kurck"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 61,
+   "finnish": {
+    "value": "1630-05-30",
+    "standing_since": "2009-05-08 09:03:19",
+    "set_in_revision": 6687050,
+    "revision_url": "https://fi.wikipedia.org/?oldid=6687050",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2009-05-08 09:03:19",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1630-05-30",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2009-05-08 09:03:19",
+      "end": "2026-10-01 10:59:12",
+      "value": "1630-05-30",
+      "revision": 6687050,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4355133",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and en: 27 September 1837. sv: 27 oktober 1837.",
+   "values": {
+    "en": {
+     "shown": "27 September 1837",
+     "iso": "1837-09-27",
+     "title": "Karl Ferdinand Ignatius",
+     "url": "https://en.wikipedia.org/wiki/Karl_Ferdinand_Ignatius"
+    },
+    "fi": {
+     "shown": "27. syyskuuta 1837",
+     "iso": "1837-09-27",
+     "title": "K. E. F. Ignatius",
+     "url": "https://fi.wikipedia.org/wiki/K._E._F._Ignatius"
+    },
+    "sv": {
+     "shown": "27 oktober 1837",
+     "iso": "1837-10-27",
+     "title": "Karl Ferdinand Ignatius",
+     "url": "https://sv.wikipedia.org/wiki/Karl_Ferdinand_Ignatius"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 30,
+   "finnish": {
+    "value": "1837-09-27",
+    "standing_since": "2008-09-09 07:01:56",
+    "set_in_revision": 5427050,
+    "revision_url": "https://fi.wikipedia.org/?oldid=5427050",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2008-09-09 07:01:56",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1837-09-27",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2008-09-09 07:01:56",
+      "end": "2026-10-01 10:59:12",
+      "value": "1837-09-27",
+      "revision": 5427050,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4753808",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and en: 25 November 1772. sv: 15 november 1772.",
+   "values": {
+    "en": {
+     "shown": "25 November 1772",
+     "iso": "1772-11-25",
+     "title": "Anders Henrik Falck",
+     "url": "https://en.wikipedia.org/wiki/Anders_Henrik_Falck"
+    },
+    "fi": {
+     "shown": "25. marraskuuta 1772",
+     "iso": "1772-11-25",
+     "title": "Anders Henrik Falck",
+     "url": "https://fi.wikipedia.org/wiki/Anders_Henrik_Falck"
+    },
+    "sv": {
+     "shown": "15 november 1772",
+     "iso": "1772-11-15",
+     "title": "Anders Henrik Falck",
+     "url": "https://sv.wikipedia.org/wiki/Anders_Henrik_Falck"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 10,
+   "finnish": {
+    "value": "1772-11-25",
+    "standing_since": "2006-07-06 06:29:33",
+    "set_in_revision": 1340965,
+    "revision_url": "https://fi.wikipedia.org/?oldid=1340965",
+    "set_by": "named",
+    "said_before": "1772",
+    "first_value_ever": false,
+    "article_created": "2006-07-06 06:14:07",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1772-11-25",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-07-06 06:14:07",
+      "end": "2006-07-06 06:29:33",
+      "value": "1772",
+      "revision": 1340938,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-07-06 06:29:33",
+      "end": "2026-10-01 10:59:12",
+      "value": "1772-11-25",
+      "revision": 1340965,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q3195304",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi: 10 September 1878. sv and en: 19 September 1878.",
+   "values": {
+    "en": {
+     "shown": "19 September 1878",
+     "iso": "1878-09-19",
+     "title": "Bertel Gripenberg",
+     "url": "https://en.wikipedia.org/wiki/Bertel_Gripenberg"
+    },
+    "fi": {
+     "shown": "10. syyskuuta 1878",
+     "iso": "1878-09-10",
+     "title": "Bertel Gripenberg",
+     "url": "https://fi.wikipedia.org/wiki/Bertel_Gripenberg"
+    },
+    "sv": {
+     "shown": "19 september 1878",
+     "iso": "1878-09-19",
+     "title": "Bertel Gripenberg",
+     "url": "https://sv.wikipedia.org/wiki/Bertel_Gripenberg"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 9,
+   "finnish": {
+    "value": "1878-09-10",
+    "standing_since": "2007-06-25 08:18:29",
+    "set_in_revision": 3061927,
+    "revision_url": "https://fi.wikipedia.org/?oldid=3061927",
+    "set_by": "named",
+    "said_before": "1878",
+    "first_value_ever": false,
+    "article_created": "2007-02-23 09:05:12",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1878-09-10",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-02-23 09:05:12",
+      "end": "2007-06-25 08:18:29",
+      "value": "1878",
+      "revision": 2405254,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2007-06-25 08:18:29",
+      "end": "2026-10-01 10:59:12",
+      "value": "1878-09-10",
+      "revision": 3061927,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2478781",
+   "field": "birth",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and sv: 29 April 1749. en: 28 April 1749.",
+   "values": {
+    "en": {
+     "shown": "28 April 1749",
+     "iso": "1749-04-28",
+     "title": "Adolf Fredrik Munck",
+     "url": "https://en.wikipedia.org/wiki/Adolf_Fredrik_Munck"
+    },
+    "fi": {
+     "shown": "29. huhtikuuta 1749",
+     "iso": "1749-04-29",
+     "title": "Adolf Fredrik Munck",
+     "url": "https://fi.wikipedia.org/wiki/Adolf_Fredrik_Munck"
+    },
+    "sv": {
+     "shown": "29 april 1749",
+     "iso": "1749-04-29",
+     "title": "Adolf Fredrik Munck",
+     "url": "https://sv.wikipedia.org/wiki/Adolf_Fredrik_Munck"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "1749-04-29",
+    "standing_since": "2009-01-29 19:34:10",
+    "set_in_revision": 6194480,
+    "revision_url": "https://fi.wikipedia.org/?oldid=6194480",
+    "set_by": "named",
+    "said_before": "1749",
+    "first_value_ever": false,
+    "article_created": "2009-01-29 19:28:09",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1749-04-29",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2009-01-29 19:28:09",
+      "end": "2009-01-29 19:34:10",
+      "value": "1749",
+      "revision": 6194443,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2009-01-29 19:34:10",
+      "end": "2014-11-14 17:14:50",
+      "value": "1749-04-29",
+      "revision": 6194480,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2016-01-03 19:13:44",
+      "end": "2026-10-01 10:59:12",
+      "value": "1749-04-29",
+      "revision": 15433225,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2628567",
+   "field": "death",
+   "score": 5,
+   "read_by_hand": true,
+   "reading": "fi and sv: 4 August 1945. en: 3 August 1945. He died in California.",
+   "values": {
+    "en": {
+     "shown": "3 August 1945",
+     "iso": "1945-08-03",
+     "title": "Rudolf Holsti",
+     "url": "https://en.wikipedia.org/wiki/Rudolf_Holsti"
+    },
+    "fi": {
+     "shown": "4. elokuuta 1945",
+     "iso": "1945-08-04",
+     "title": "Rudolf Holsti",
+     "url": "https://fi.wikipedia.org/wiki/Rudolf_Holsti"
+    },
+    "sv": {
+     "shown": "4 augusti 1945",
+     "iso": "1945-08-04",
+     "title": "Rudolf Holsti",
+     "url": "https://sv.wikipedia.org/wiki/Rudolf_Holsti"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "1945-08-04",
+    "standing_since": "2008-03-16 11:01:59",
+    "set_in_revision": 4472014,
+    "revision_url": "https://fi.wikipedia.org/?oldid=4472014",
+    "set_by": "named",
+    "said_before": "1945",
+    "first_value_ever": false,
+    "article_created": "2005-07-07 07:42:11",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1945-08-04",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-12-31 13:52:15",
+      "end": "2008-03-16 11:01:59",
+      "value": "1945",
+      "revision": 2122610,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-03-16 11:01:59",
+      "end": "2026-10-01 10:59:12",
+      "value": "1945-08-04",
+      "revision": 4472014,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q11854675",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "6 January 1951",
+     "iso": "1951-01-06",
+     "title": "Bruno Sarlin",
+     "url": "https://en.wikipedia.org/wiki/Bruno_Sarlin"
+    },
+    "fi": {
+     "shown": "6. tammikuuta 1951",
+     "iso": "1951-01-06",
+     "title": "Bruno Sarlin",
+     "url": "https://fi.wikipedia.org/wiki/Bruno_Sarlin"
+    },
+    "sv": {
+     "shown": "6 januari 1952",
+     "iso": "1952-01-06",
+     "title": "Bruno Sarlin",
+     "url": "https://sv.wikipedia.org/wiki/Bruno_Sarlin"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1951-01-06",
+    "standing_since": "2020-03-04 12:42:00",
+    "set_in_revision": 18770971,
+    "revision_url": "https://fi.wikipedia.org/?oldid=18770971",
+    "set_by": "named",
+    "said_before": "1952-01-06",
+    "first_value_ever": false,
+    "article_created": "2007-05-28 10:09:06",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1951-01-06",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-05-28 10:09:06",
+      "end": "2011-12-17 16:02:46",
+      "value": "1951-01-06",
+      "revision": 2921895,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2011-12-17 16:02:46",
+      "end": "2020-03-04 12:42:00",
+      "value": "1952-01-06",
+      "revision": 11038450,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2020-03-04 12:42:00",
+      "end": "2026-10-01 10:59:12",
+      "value": "1951-01-06",
+      "revision": 18770971,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q13717361",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "3 December 1874",
+     "iso": "1874-12-03",
+     "title": "Sakari Ainali",
+     "url": "https://en.wikipedia.org/wiki/Sakari_Ainali"
+    },
+    "fi": {
+     "shown": "3. joulukuuta 1874",
+     "iso": "1874-12-03",
+     "title": "Sakari Ainali",
+     "url": "https://fi.wikipedia.org/wiki/Sakari_Ainali"
+    },
+    "sv": {
+     "shown": "3 mars 1874",
+     "iso": "1874-03-03",
+     "title": "Sakari Ainali",
+     "url": "https://sv.wikipedia.org/wiki/Sakari_Ainali"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 275,
+   "finnish": {
+    "value": "1874-12-03",
+    "standing_since": "2018-03-31 14:08:11",
+    "set_in_revision": 17193078,
+    "revision_url": "https://fi.wikipedia.org/?oldid=17193078",
+    "set_by": "named",
+    "said_before": "1874-03-03",
+    "first_value_ever": false,
+    "article_created": "2013-07-10 13:55:49",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1874-12-03",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2013-07-10 13:55:49",
+      "end": "2018-03-31 14:08:11",
+      "value": "1874-03-03",
+      "revision": 13380183,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2018-03-31 14:08:11",
+      "end": "2026-10-01 10:59:12",
+      "value": "1874-12-03",
+      "revision": 17193078,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q11865658",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "9 March 1918",
+     "iso": "1918-03-09",
+     "title": "Jakob Näs",
+     "url": "https://en.wikipedia.org/wiki/Jakob_N%C3%A4s"
+    },
+    "fi": {
+     "shown": "9. marraskuuta 1918",
+     "iso": "1918-11-09",
+     "title": "Jakob Näs",
+     "url": "https://fi.wikipedia.org/wiki/Jakob_N%C3%A4s"
+    },
+    "sv": {
+     "shown": "9 mars 1918",
+     "iso": "1918-03-09",
+     "title": "Jakob Näs",
+     "url": "https://sv.wikipedia.org/wiki/Jakob_N%C3%A4s"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 245,
+   "finnish": {
+    "value": "1918-11-09",
+    "standing_since": "2023-11-07 11:30:29",
+    "set_in_revision": 21971200,
+    "revision_url": "https://fi.wikipedia.org/?oldid=21971200",
+    "set_by": "named",
+    "said_before": "1918-03-09",
+    "first_value_ever": false,
+    "article_created": "2008-09-02 12:09:33",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1918-11-09",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2008-09-02 12:09:33",
+      "end": "2014-12-20 02:23:10",
+      "value": "1918-03-09",
+      "revision": 5392144,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2014-12-20 02:23:10",
+      "end": "2014-12-20 07:39:36",
+      "value": "1918-03-09",
+      "revision": 14524195,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2014-12-20 07:39:36",
+      "end": "2023-11-07 11:30:29",
+      "value": "1918-03-09",
+      "revision": 14524375,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2023-11-07 11:30:29",
+      "end": "2026-10-01 10:59:12",
+      "value": "1918-11-09",
+      "revision": 21971200,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4405514",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "20 November 1906",
+     "iso": "1906-11-20",
+     "title": "Kasten Antell",
+     "url": "https://en.wikipedia.org/wiki/Kasten_Antell"
+    },
+    "fi": {
+     "shown": "20. marraskuuta 1906",
+     "iso": "1906-11-20",
+     "title": "Kasten Antell",
+     "url": "https://fi.wikipedia.org/wiki/Kasten_Antell"
+    },
+    "sv": {
+     "shown": "20 juni 1906",
+     "iso": "1906-06-20",
+     "title": "Kasten Antell",
+     "url": "https://sv.wikipedia.org/wiki/Kasten_Antell"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 153,
+   "finnish": {
+    "value": "1906-11-20",
+    "standing_since": "2019-09-16 22:27:46",
+    "set_in_revision": 18416251,
+    "revision_url": "https://fi.wikipedia.org/?oldid=18416251",
+    "set_by": "named",
+    "said_before": "1906-06-20",
+    "first_value_ever": false,
+    "article_created": "2008-09-09 07:05:43",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1906-11-20",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2008-09-09 07:05:43",
+      "end": "2019-09-16 22:27:46",
+      "value": "1906-06-20",
+      "revision": 5427068,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2019-09-16 22:27:46",
+      "end": "2026-10-01 10:59:12",
+      "value": "1906-11-20",
+      "revision": 18416251,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4410933",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "31 May 1905",
+     "iso": "1905-05-31",
+     "title": "Adelaïde Ehrnrooth",
+     "url": "https://en.wikipedia.org/wiki/Adela%C3%AFde_Ehrnrooth"
+    },
+    "fi": {
+     "shown": "13. tammikuuta 1905",
+     "iso": "1905-01-13",
+     "title": "Adelaïde Ehrnrooth",
+     "url": "https://fi.wikipedia.org/wiki/Adela%C3%AFde_Ehrnrooth"
+    },
+    "sv": {
+     "shown": "13 januari 1905",
+     "iso": "1905-01-13",
+     "title": "Adelaïde Ehrnrooth",
+     "url": "https://sv.wikipedia.org/wiki/Adela%C3%AFde_Ehrnrooth"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 138,
+   "finnish": {
+    "value": "1905-01-13",
+    "standing_since": "2017-01-26 10:27:48",
+    "set_in_revision": 16215492,
+    "revision_url": "https://fi.wikipedia.org/?oldid=16215492",
+    "set_by": "named",
+    "said_before": "1905-05-31",
+    "first_value_ever": false,
+    "article_created": "2006-12-27 18:38:23",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1905-01-13",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2006-12-27 18:38:23",
+      "end": "2008-02-05 19:07:46",
+      "value": "1905",
+      "revision": 2103878,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-02-05 19:07:46",
+      "end": "2017-01-26 10:27:48",
+      "value": "1905-05-31",
+      "revision": 4239684,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-01-26 10:27:48",
+      "end": "2026-10-01 10:59:12",
+      "value": "1905-01-13",
+      "revision": 16215492,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2548588",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "16 December 1740",
+     "iso": "1740-12-16",
+     "title": "Georg Magnus Sprengtporten",
+     "url": "https://en.wikipedia.org/wiki/Georg_Magnus_Sprengtporten"
+    },
+    "fi": {
+     "shown": "16. elokuuta 1740",
+     "iso": "1740-08-16",
+     "title": "Georg Magnus Sprengtporten",
+     "url": "https://fi.wikipedia.org/wiki/Georg_Magnus_Sprengtporten"
+    },
+    "sv": {
+     "shown": "16 augusti 1740",
+     "iso": "1740-08-16",
+     "title": "Göran Magnus Sprengtporten",
+     "url": "https://sv.wikipedia.org/wiki/G%C3%B6ran_Magnus_Sprengtporten"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 122,
+   "finnish": {
+    "value": "1740-08-16",
+    "standing_since": "2019-05-09 16:16:46",
+    "set_in_revision": 18141511,
+    "revision_url": "https://fi.wikipedia.org/?oldid=18141511",
+    "set_by": "named",
+    "said_before": "1740-12-16",
+    "first_value_ever": false,
+    "article_created": "2004-10-07 14:16:05",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1740-08-16",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2004-10-07 14:16:05",
+      "end": "2008-04-08 09:53:30",
+      "value": "1740",
+      "revision": 69278,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-04-08 09:53:30",
+      "end": "2008-04-08 09:53:55",
+      "value": "1740",
+      "revision": 4598406,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2008-04-08 09:53:55",
+      "end": "2009-02-07 07:19:51",
+      "value": "1740",
+      "revision": 4598410,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2009-02-07 07:19:51",
+      "end": "2019-05-09 16:16:46",
+      "value": "1740-12-16",
+      "revision": 6237808,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2019-05-09 16:16:46",
+      "end": "2023-01-29 17:18:55",
+      "value": "1740-08-16",
+      "revision": 18141511,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2023-02-10 22:39:07",
+      "end": "2026-10-01 10:59:12",
+      "value": "1740-08-16",
+      "revision": 21262855,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6211298",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "28 May 1925",
+     "iso": "1925-05-28",
+     "title": "Esa Timonen",
+     "url": "https://en.wikipedia.org/wiki/Esa_Timonen"
+    },
+    "fi": {
+     "shown": "28. toukokuuta 1925",
+     "iso": "1925-05-28",
+     "title": "Esa Timonen",
+     "url": "https://fi.wikipedia.org/wiki/Esa_Timonen"
+    },
+    "sv": {
+     "shown": "28 augusti 1925",
+     "iso": "1925-08-28",
+     "title": "Esa Timonen",
+     "url": "https://sv.wikipedia.org/wiki/Esa_Timonen"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 92,
+   "finnish": {
+    "value": "1925-05-28",
+    "standing_since": "2010-10-29 22:33:26",
+    "set_in_revision": 9263269,
+    "revision_url": "https://fi.wikipedia.org/?oldid=9263269",
+    "set_by": "named",
+    "said_before": "1925-08-28",
+    "first_value_ever": false,
+    "article_created": "2007-03-05 13:34:47",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1925-05-28",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-03-05 13:34:47",
+      "end": "2010-10-29 22:33:26",
+      "value": "1925-08-28",
+      "revision": 2457310,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-10-29 22:33:26",
+      "end": "2015-04-20 20:23:35",
+      "value": "1925-05-28",
+      "revision": 9263269,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-04-20 20:23:35",
+      "end": "2015-04-21 11:18:26",
+      "value": "1925-05-28",
+      "revision": 14894902,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2015-04-21 11:18:26",
+      "end": "2026-10-01 10:59:12",
+      "value": "1925-05-28",
+      "revision": 14895673,
+      "editor": "ip",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q921355",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "12 September 1949",
+     "iso": "1949-09-12",
+     "title": "Erik Adolf von Willebrand",
+     "url": "https://en.wikipedia.org/wiki/Erik_Adolf_von_Willebrand"
+    },
+    "fi": {
+     "shown": "12. syyskuuta 1949",
+     "iso": "1949-09-12",
+     "title": "Erik Adolf von Willebrand",
+     "url": "https://fi.wikipedia.org/wiki/Erik_Adolf_von_Willebrand"
+    },
+    "sv": {
+     "shown": "12 december 1949",
+     "iso": "1949-12-12",
+     "title": "Erik Adolf von Willebrand",
+     "url": "https://sv.wikipedia.org/wiki/Erik_Adolf_von_Willebrand"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 91,
+   "finnish": {
+    "value": "1949-09-12",
+    "standing_since": "2006-08-07 05:47:22",
+    "set_in_revision": 1465351,
+    "revision_url": "https://fi.wikipedia.org/?oldid=1465351",
+    "set_by": "ip",
+    "said_before": "1949-12-12",
+    "first_value_ever": false,
+    "article_created": "2005-11-13 14:06:06",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1949-09-12",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-11-13 14:06:06",
+      "end": "2006-08-07 05:47:22",
+      "value": "1949-12-12",
+      "revision": 534990,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-08-07 05:47:22",
+      "end": "2026-10-01 10:59:12",
+      "value": "1949-09-12",
+      "revision": 1465351,
+      "editor": "ip",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4355145",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "15 September 1852",
+     "iso": "1852-09-15",
+     "title": "Lennart Gripenberg",
+     "url": "https://en.wikipedia.org/wiki/Lennart_Gripenberg"
+    },
+    "fi": {
+     "shown": "15. marraskuuta 1852",
+     "iso": "1852-11-15",
+     "title": "Lennart Gripenberg",
+     "url": "https://fi.wikipedia.org/wiki/Lennart_Gripenberg"
+    },
+    "sv": {
+     "shown": "15 september 1852",
+     "iso": "1852-09-15",
+     "title": "Lennart Gripenberg",
+     "url": "https://sv.wikipedia.org/wiki/Lennart_Gripenberg"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 61,
+   "finnish": {
+    "value": "1852-11-15",
+    "standing_since": "2017-02-12 06:44:48",
+    "set_in_revision": 16271310,
+    "revision_url": "https://fi.wikipedia.org/?oldid=16271310",
+    "set_by": "named",
+    "said_before": "1852-09-15",
+    "first_value_ever": false,
+    "article_created": "2008-09-09 08:01:40",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1852-11-15",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2008-09-09 08:01:40",
+      "end": "2017-02-12 06:44:48",
+      "value": "1852-09-15",
+      "revision": 5427293,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-02-12 06:44:48",
+      "end": "2026-10-01 10:59:12",
+      "value": "1852-11-15",
+      "revision": 16271310,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q204852",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "15 April 1873",
+     "iso": "1873-04-15",
+     "title": "Oskari Tokoi",
+     "url": "https://en.wikipedia.org/wiki/Oskari_Tokoi"
+    },
+    "fi": {
+     "shown": "15. toukokuuta 1873",
+     "iso": "1873-05-15",
+     "title": "Oskari Tokoi",
+     "url": "https://fi.wikipedia.org/wiki/Oskari_Tokoi"
+    },
+    "sv": {
+     "shown": "15 maj 1873",
+     "iso": "1873-05-15",
+     "title": "Oskari Tokoi",
+     "url": "https://sv.wikipedia.org/wiki/Oskari_Tokoi"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 30,
+   "finnish": {
+    "value": "1873-05-15",
+    "standing_since": "2005-08-16 11:52:08",
+    "set_in_revision": 375338,
+    "revision_url": "https://fi.wikipedia.org/?oldid=375338",
+    "set_by": "ip",
+    "said_before": "1873-04-15",
+    "first_value_ever": false,
+    "article_created": "2004-11-13 11:41:04",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1873-05-15",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2004-11-13 11:41:04",
+      "end": "2005-08-16 11:52:08",
+      "value": "1873-04-15",
+      "revision": 79596,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2005-08-16 11:52:08",
+      "end": "2007-12-01 12:25:57",
+      "value": "1873-05-15",
+      "revision": 375338,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2007-12-01 12:25:57",
+      "end": "2007-12-01 16:53:46",
+      "value": "1873-05-15",
+      "revision": 3887302,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2007-12-01 16:53:46",
+      "end": "2009-09-08 18:15:10",
+      "value": "1873-05-15",
+      "revision": 3888806,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2009-09-08 18:15:10",
+      "end": "2009-09-08 18:15:22",
+      "value": "1873-05-15",
+      "revision": 7297295,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2009-09-08 18:15:22",
+      "end": "2026-10-01 10:59:12",
+      "value": "1873-05-15",
+      "revision": 7297297,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q972912",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "20 June 1885",
+     "iso": "1885-06-20",
+     "title": "Eino Rahja",
+     "url": "https://en.wikipedia.org/wiki/Eino_Rahja"
+    },
+    "fi": {
+     "shown": "7. heinäkuuta 1885",
+     "iso": "1885-07-07",
+     "title": "Eino Rahja",
+     "url": "https://fi.wikipedia.org/wiki/Eino_Rahja"
+    },
+    "sv": {
+     "shown": "20 juni 1885",
+     "iso": "1885-06-20",
+     "title": "Eino Rahja",
+     "url": "https://sv.wikipedia.org/wiki/Eino_Rahja"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 17,
+   "finnish": {
+    "value": "1885-07-07",
+    "standing_since": "2016-10-29 17:55:12",
+    "set_in_revision": 16033951,
+    "revision_url": "https://fi.wikipedia.org/?oldid=16033951",
+    "set_by": "named",
+    "said_before": "1885-06-20",
+    "first_value_ever": false,
+    "article_created": "2004-06-29 11:15:58",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1885-07-07",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2004-06-29 11:15:58",
+      "end": "2004-06-29 17:07:18",
+      "value": null,
+      "revision": 26171,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2010-09-15 18:38:11",
+      "end": "2011-08-25 00:47:18",
+      "value": "1885-06-20",
+      "revision": 9054962,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2011-08-25 00:47:18",
+      "end": "2011-08-25 01:10:07",
+      "value": "1885-06-20",
+      "revision": 10590461,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2011-08-25 01:10:07",
+      "end": "2016-10-29 17:55:12",
+      "value": "1885-06-20",
+      "revision": 10590501,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2016-10-29 17:55:12",
+      "end": "2026-10-01 10:59:12",
+      "value": "1885-07-07",
+      "revision": 16033951,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4830270",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "16 August 1794",
+     "iso": "1794-08-16",
+     "title": "Axel Gabriel Sjöström",
+     "url": "https://en.wikipedia.org/wiki/Axel_Gabriel_Sj%C3%B6str%C3%B6m"
+    },
+    "fi": {
+     "shown": "16. elokuuta 1794",
+     "iso": "1794-08-16",
+     "title": "Axel Gabriel Sjöström",
+     "url": "https://fi.wikipedia.org/wiki/Axel_Gabriel_Sj%C3%B6str%C3%B6m"
+    },
+    "sv": {
+     "shown": "26 augusti 1794",
+     "iso": "1794-08-26",
+     "title": "Axel Gabriel Sjöström",
+     "url": "https://sv.wikipedia.org/wiki/Axel_Gabriel_Sj%C3%B6str%C3%B6m"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 10,
+   "finnish": {
+    "value": "1794-08-16",
+    "standing_since": "2008-08-27 15:29:32",
+    "set_in_revision": 5356717,
+    "revision_url": "https://fi.wikipedia.org/?oldid=5356717",
+    "set_by": "named",
+    "said_before": "1794-08-26",
+    "first_value_ever": false,
+    "article_created": "2005-08-25 09:54:41",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1794-08-16",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2005-08-25 09:54:41",
+      "end": "2006-06-05 06:01:06",
+      "value": "1794",
+      "revision": 389238,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-06-05 06:01:06",
+      "end": "2008-08-27 15:29:32",
+      "value": "1794-08-26",
+      "revision": 1214807,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2008-08-27 15:29:32",
+      "end": "2026-10-01 10:59:12",
+      "value": "1794-08-16",
+      "revision": 5356717,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4117098",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "30 August 1831",
+     "iso": "1831-08-30",
+     "title": "Antti Isotalo",
+     "url": "https://en.wikipedia.org/wiki/Antti_Isotalo"
+    },
+    "fi": {
+     "shown": "24. elokuuta 1831",
+     "iso": "1831-08-24",
+     "title": "Antti Isotalo",
+     "url": "https://fi.wikipedia.org/wiki/Antti_Isotalo"
+    },
+    "sv": {
+     "shown": "24 augusti 1831",
+     "iso": "1831-08-24",
+     "title": "Antti Isotalo",
+     "url": "https://sv.wikipedia.org/wiki/Antti_Isotalo"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 6,
+   "finnish": {
+    "value": "1831-08-24",
+    "standing_since": "2025-03-12 18:05:22",
+    "set_in_revision": 23105061,
+    "revision_url": "https://fi.wikipedia.org/?oldid=23105061",
+    "set_by": "ip",
+    "said_before": "1831-08-30",
+    "first_value_ever": false,
+    "article_created": "2005-10-07 12:07:48",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1831-08-24",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2005-10-07 12:07:48",
+      "end": "2005-10-08 15:30:31",
+      "value": "1831",
+      "revision": 465195,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2005-10-08 15:30:31",
+      "end": "2012-10-11 04:25:06",
+      "value": "1831-08-24",
+      "revision": 467153,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2012-10-11 04:25:06",
+      "end": "2012-10-11 04:27:40",
+      "value": "1831-08-24",
+      "revision": 12211976,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2012-10-11 04:27:40",
+      "end": "2016-11-07 12:34:08",
+      "value": "1831-08-24",
+      "revision": 12211980,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2016-11-07 12:34:08",
+      "end": "2016-11-07 12:35:06",
+      "value": "1831-08-24",
+      "revision": 16050576,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2016-11-07 12:35:06",
+      "end": "2016-11-07 12:38:41",
+      "value": "1831-08-24",
+      "revision": 16050577,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2016-11-07 12:38:41",
+      "end": "2016-11-07 12:48:01",
+      "value": "1831-08-24",
+      "revision": 16050580,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2016-11-07 12:48:01",
+      "end": "2017-06-29 06:49:59",
+      "value": "1831-08-24",
+      "revision": 16050600,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-06-29 06:49:59",
+      "end": "2017-06-29 07:25:43",
+      "value": "1831-08-24",
+      "revision": 16580394,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2017-06-29 07:25:43",
+      "end": "2017-09-10 11:54:57",
+      "value": "1831-08-24",
+      "revision": 16580463,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-09-10 11:54:57",
+      "end": "2020-10-27 12:25:57",
+      "value": "1831-08-30",
+      "revision": 16756881,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2020-10-27 12:25:57",
+      "end": "2020-10-27 12:26:13",
+      "value": "1831-08-30",
+      "revision": 19263717,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2020-10-27 12:26:13",
+      "end": "2023-10-05 11:32:50",
+      "value": "1831-08-30",
+      "revision": 19263718,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2023-10-05 11:32:50",
+      "end": "2023-10-05 11:33:13",
+      "value": "1831-08-30",
+      "revision": 21869833,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2023-10-05 11:33:13",
+      "end": "2024-10-17 19:21:43",
+      "value": "1831-08-30",
+      "revision": 21869835,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2024-10-17 19:21:43",
+      "end": "2024-10-17 19:53:13",
+      "value": "1831-08-24",
+      "revision": 22716584,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2024-10-17 19:53:13",
+      "end": "2024-10-22 05:58:08",
+      "value": "1831-08-30",
+      "revision": 22716641,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2024-10-22 05:58:08",
+      "end": "2024-10-22 05:58:23",
+      "value": "1831",
+      "revision": 22723838,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2024-10-22 05:58:23",
+      "end": "2024-10-22 07:48:31",
+      "value": "1831-08-24",
+      "revision": 22723840,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2024-10-22 07:48:31",
+      "end": "2025-02-24 13:41:21",
+      "value": "1831-08-30",
+      "revision": 22723993,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2025-02-24 13:41:21",
+      "end": "2025-02-24 13:41:44",
+      "value": "1831-08-24",
+      "revision": 23046918,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2025-02-24 13:41:44",
+      "end": "2025-03-12 18:05:22",
+      "value": "1831-08-30",
+      "revision": 23046919,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2025-03-12 18:05:22",
+      "end": "2026-10-01 10:59:12",
+      "value": "1831-08-24",
+      "revision": 23105061,
+      "editor": "ip",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6791696",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "October 4, 1915",
+     "iso": "1915-10-04",
+     "title": "Matti Kurikka",
+     "url": "https://en.wikipedia.org/wiki/Matti_Kurikka"
+    },
+    "fi": {
+     "shown": "1. lokakuuta 1915",
+     "iso": "1915-10-01",
+     "title": "Matti Kurikka",
+     "url": "https://fi.wikipedia.org/wiki/Matti_Kurikka"
+    },
+    "sv": {
+     "shown": "1 oktober 1915",
+     "iso": "1915-10-01",
+     "title": "Matti Kurikka",
+     "url": "https://sv.wikipedia.org/wiki/Matti_Kurikka"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 3,
+   "finnish": {
+    "value": "1915-10-01",
+    "standing_since": "2015-10-24 19:07:49",
+    "set_in_revision": 15293629,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15293629",
+    "set_by": "named",
+    "said_before": "1915-10-04",
+    "first_value_ever": false,
+    "article_created": "2005-08-21 09:10:19",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1915-10-01",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2005-08-21 09:10:19",
+      "end": "2006-02-10 23:29:58",
+      "value": "1915",
+      "revision": 383576,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-02-10 23:29:58",
+      "end": "2015-10-24 19:07:49",
+      "value": "1915-10-04",
+      "revision": 793343,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-10-24 19:07:49",
+      "end": "2026-10-01 10:59:12",
+      "value": "1915-10-01",
+      "revision": 15293629,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q1335237",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "6 June 2022",
+     "iso": "2022-06-06",
+     "title": "Keijo Korhonen (politician)",
+     "url": "https://en.wikipedia.org/wiki/Keijo_Korhonen_(politician)"
+    },
+    "fi": {
+     "shown": "4. kesäkuuta 2022",
+     "iso": "2022-06-04",
+     "title": "Keijo Korhonen",
+     "url": "https://fi.wikipedia.org/wiki/Keijo_Korhonen"
+    },
+    "sv": {
+     "shown": "6 juni 2022",
+     "iso": "2022-06-06",
+     "title": "Keijo Korhonen (politiker)",
+     "url": "https://sv.wikipedia.org/wiki/Keijo_Korhonen_(politiker)"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 2,
+   "finnish": {
+    "value": "2022-06-04",
+    "standing_since": "2025-02-25 18:12:30",
+    "set_in_revision": 23049853,
+    "revision_url": "https://fi.wikipedia.org/?oldid=23049853",
+    "set_by": "named",
+    "said_before": "2022-06-06",
+    "first_value_ever": false,
+    "article_created": "2005-04-15 09:15:47",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "2022-06-04",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2006-03-04 09:47:51",
+      "end": "2014-07-23 13:50:56",
+      "value": null,
+      "revision": 855714,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2014-07-23 13:50:56",
+      "end": "2014-07-23 13:55:29",
+      "value": null,
+      "revision": 14184244,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2014-07-23 13:55:29",
+      "end": "2022-06-05 20:10:21",
+      "value": null,
+      "revision": 14184249,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-06-05 20:10:21",
+      "end": "2022-06-05 21:18:14",
+      "value": null,
+      "revision": 20522867,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2022-06-05 21:18:14",
+      "end": "2022-06-07 08:50:40",
+      "value": null,
+      "revision": 20522983,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-06-07 08:50:40",
+      "end": "2022-06-12 06:25:57",
+      "value": "2022-06",
+      "revision": 20525225,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-06-12 06:25:57",
+      "end": "2024-03-06 05:05:16",
+      "value": "2022-06-06",
+      "revision": 20534071,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2024-03-06 05:05:16",
+      "end": "2024-03-06 05:07:34",
+      "value": "2022-06-06",
+      "revision": 22240363,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2024-03-06 05:07:34",
+      "end": "2025-02-25 18:12:30",
+      "value": "2022-06-06",
+      "revision": 22240364,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2025-02-25 18:12:30",
+      "end": "2026-10-01 10:59:12",
+      "value": "2022-06-04",
+      "revision": 23049853,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q5628544",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "17 October 2010",
+     "iso": "2010-10-17",
+     "title": "Georg C. Ehrnrooth",
+     "url": "https://en.wikipedia.org/wiki/Georg_C._Ehrnrooth"
+    },
+    "fi": {
+     "shown": "17. lokakuuta 2010",
+     "iso": "2010-10-17",
+     "title": "Georg C. Ehrnrooth",
+     "url": "https://fi.wikipedia.org/wiki/Georg_C._Ehrnrooth"
+    },
+    "sv": {
+     "shown": "19 oktober 2010",
+     "iso": "2010-10-19",
+     "title": "Georg C. Ehrnrooth",
+     "url": "https://sv.wikipedia.org/wiki/Georg_C._Ehrnrooth"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 2,
+   "finnish": {
+    "value": "2010-10-17",
+    "standing_since": "2014-05-29 13:35:49",
+    "set_in_revision": 14073722,
+    "revision_url": "https://fi.wikipedia.org/?oldid=14073722",
+    "set_by": "named",
+    "said_before": "2010-10-19",
+    "first_value_ever": false,
+    "article_created": "2005-12-17 19:29:54",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "2010-10-17",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-12-17 19:29:54",
+      "end": "2010-10-19 11:30:49",
+      "value": null,
+      "revision": 618825,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2010-10-19 11:30:49",
+      "end": "2014-05-29 13:35:49",
+      "value": "2010-10-19",
+      "revision": 9209969,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2014-05-29 13:35:49",
+      "end": "2026-10-01 10:59:12",
+      "value": "2010-10-17",
+      "revision": 14073722,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2630371",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "6 December 1887",
+     "iso": "1887-12-06",
+     "title": "Martin Ekström",
+     "url": "https://en.wikipedia.org/wiki/Martin_Ekstr%C3%B6m"
+    },
+    "fi": {
+     "shown": "7. joulukuuta 1887",
+     "iso": "1887-12-07",
+     "title": "Martin Ekström",
+     "url": "https://fi.wikipedia.org/wiki/Martin_Ekstr%C3%B6m"
+    },
+    "sv": {
+     "shown": "6 december 1887",
+     "iso": "1887-12-06",
+     "title": "Martin Ekström",
+     "url": "https://sv.wikipedia.org/wiki/Martin_Ekstr%C3%B6m"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "1887-12-07",
+    "standing_since": "2015-05-30 12:15:17",
+    "set_in_revision": 14978361,
+    "revision_url": "https://fi.wikipedia.org/?oldid=14978361",
+    "set_by": "named",
+    "said_before": "1887-12-06",
+    "first_value_ever": false,
+    "article_created": "2006-07-01 19:23:13",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1887-12-07",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-07-01 19:23:13",
+      "end": "2015-05-30 12:15:17",
+      "value": "1887-12-06",
+      "revision": 1324835,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-05-30 12:15:17",
+      "end": "2026-10-01 10:59:12",
+      "value": "1887-12-07",
+      "revision": 14978361,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q391176",
+   "field": "birth",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "12 October 1867",
+     "iso": "1867-10-12",
+     "title": "Johannes Lundson",
+     "url": "https://en.wikipedia.org/wiki/Johannes_Lundson"
+    },
+    "fi": {
+     "shown": "12. lokakuuta 1867",
+     "iso": "1867-10-12",
+     "title": "Johannes Lundson",
+     "url": "https://fi.wikipedia.org/wiki/Johannes_Lundson"
+    },
+    "sv": {
+     "shown": "11 oktober 1867",
+     "iso": "1867-10-11",
+     "title": "Johannes Lundson",
+     "url": "https://sv.wikipedia.org/wiki/Johannes_Lundson"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "1867-10-12",
+    "standing_since": "2020-12-07 03:05:58",
+    "set_in_revision": 19392196,
+    "revision_url": "https://fi.wikipedia.org/?oldid=19392196",
+    "set_by": "named",
+    "said_before": "1867-10-11",
+    "first_value_ever": false,
+    "article_created": "2006-01-02 12:19:37",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1867-10-12",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-01-05 18:27:17",
+      "end": "2007-05-21 12:29:35",
+      "value": "1867-10-11",
+      "revision": 2152496,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2007-05-21 12:29:35",
+      "end": "2020-12-07 03:04:35",
+      "value": "1867-10-12",
+      "revision": 2883665,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2020-12-07 03:04:35",
+      "end": "2020-12-07 03:05:58",
+      "value": "1867-10-11",
+      "revision": 19392195,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2020-12-07 03:05:58",
+      "end": "2026-10-01 10:59:12",
+      "value": "1867-10-12",
+      "revision": 19392196,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q536371",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "2 July 2010",
+     "iso": "2010-07-02",
+     "title": "Tommy Tabermann",
+     "url": "https://en.wikipedia.org/wiki/Tommy_Tabermann"
+    },
+    "fi": {
+     "shown": "1. heinäkuuta 2010",
+     "iso": "2010-07-01",
+     "title": "Tommy Tabermann",
+     "url": "https://fi.wikipedia.org/wiki/Tommy_Tabermann"
+    },
+    "sv": {
+     "shown": "1 juli 2010",
+     "iso": "2010-07-01",
+     "title": "Tommy Tabermann",
+     "url": "https://sv.wikipedia.org/wiki/Tommy_Tabermann"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "2010-07-01",
+    "standing_since": "2010-07-18 07:38:44",
+    "set_in_revision": 8779446,
+    "revision_url": "https://fi.wikipedia.org/?oldid=8779446",
+    "set_by": "named",
+    "said_before": "2010-07-02",
+    "first_value_ever": false,
+    "article_created": "2005-07-06 22:17:00",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "2010-07-01",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-07-06 22:17:00",
+      "end": "2006-11-30 07:35:03",
+      "value": null,
+      "revision": 304055,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-11-30 07:35:03",
+      "end": "2006-11-30 07:35:20",
+      "value": null,
+      "revision": 1980008,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2006-11-30 07:35:20",
+      "end": "2010-07-02 21:38:24",
+      "value": null,
+      "revision": 1980009,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-02 21:38:24",
+      "end": "2010-07-02 21:39:17",
+      "value": null,
+      "revision": 8719081,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2010-07-02 21:39:17",
+      "end": "2010-07-02 21:55:26",
+      "value": null,
+      "revision": 8719085,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-02 21:55:26",
+      "end": "2010-07-02 21:56:48",
+      "value": null,
+      "revision": 8719149,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2010-07-02 21:56:48",
+      "end": "2010-07-02 21:58:06",
+      "value": null,
+      "revision": 8719153,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-02 21:58:06",
+      "end": "2010-07-02 22:00:17",
+      "value": null,
+      "revision": 8719158,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2010-07-02 22:00:17",
+      "end": "2010-07-02 22:50:57",
+      "value": null,
+      "revision": 8719163,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-02 22:50:57",
+      "end": "2010-07-03 06:24:26",
+      "value": "2010-07-02",
+      "revision": 8719308,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-03 06:24:26",
+      "end": "2010-07-05 11:19:30",
+      "value": "2010-07-01",
+      "revision": 8719856,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-05 11:19:30",
+      "end": "2010-07-05 15:28:51",
+      "value": "2010-07-02",
+      "revision": 8728070,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-05 15:28:51",
+      "end": "2010-07-05 15:30:22",
+      "value": "2010-07-02",
+      "revision": 8729098,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2010-07-05 15:30:22",
+      "end": "2010-07-18 07:38:44",
+      "value": "2010-07-02",
+      "revision": 8729115,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2010-07-18 07:38:44",
+      "end": "2015-01-04 00:47:10",
+      "value": "2010-07-01",
+      "revision": 8779446,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-01-04 00:47:10",
+      "end": "2015-01-04 05:53:46",
+      "value": "2011-07-01",
+      "revision": 14556559,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2015-01-04 05:53:46",
+      "end": "2015-04-19 20:23:14",
+      "value": "2010-07-01",
+      "revision": 14556643,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-04-19 20:23:14",
+      "end": "2015-04-19 20:34:59",
+      "value": "2010-07-01",
+      "revision": 14892618,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2015-04-19 20:34:59",
+      "end": "2016-03-02 12:35:10",
+      "value": "2010-07-01",
+      "revision": 14892658,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2016-03-02 12:35:10",
+      "end": "2016-03-02 12:38:08",
+      "value": "2010-07-01",
+      "revision": 15565494,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2016-03-02 12:38:08",
+      "end": "2026-10-01 10:59:12",
+      "value": "2010-07-01",
+      "revision": 15565501,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q963467",
+   "field": "death",
+   "score": 4,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "12 October 1892",
+     "iso": "1892-10-12",
+     "title": "Xavier Marmier",
+     "url": "https://en.wikipedia.org/wiki/Xavier_Marmier"
+    },
+    "fi": {
+     "shown": "12. lokakuuta 1892",
+     "iso": "1892-10-12",
+     "title": "Xavier Marmier",
+     "url": "https://fi.wikipedia.org/wiki/Xavier_Marmier"
+    },
+    "sv": {
+     "shown": "11 oktober 1892",
+     "iso": "1892-10-11",
+     "title": "Xavier Marmier",
+     "url": "https://sv.wikipedia.org/wiki/Xavier_Marmier"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 1,
+   "finnish": {
+    "value": "1892-10-12",
+    "standing_since": "2008-05-31 14:06:06",
+    "set_in_revision": 4872028,
+    "revision_url": "https://fi.wikipedia.org/?oldid=4872028",
+    "set_by": "named",
+    "said_before": "1892-10-11",
+    "first_value_ever": false,
+    "article_created": "2007-10-12 03:45:05",
+    "once_agreed_with_other": true,
+    "on_2026_10_01": "1892-10-12",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-10-12 03:45:05",
+      "end": "2008-05-31 14:06:06",
+      "value": "1892-10-11",
+      "revision": 3621645,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-05-31 14:06:06",
+      "end": "2026-10-01 10:59:12",
+      "value": "1892-10-12",
+      "revision": 4872028,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6338167",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "1 January 1706",
+     "iso": "1706-01-01",
+     "title": "Nils Wallerius",
+     "url": "https://en.wikipedia.org/wiki/Nils_Wallerius"
+    },
+    "fi": {
+     "shown": "18. helmikuuta 1666",
+     "iso": "1666-02-18",
+     "title": "Nils Wallerius",
+     "url": "https://fi.wikipedia.org/wiki/Nils_Wallerius"
+    },
+    "sv": {
+     "shown": "1 januari 1706",
+     "iso": "1706-01-01",
+     "title": "Nils Wallerius",
+     "url": "https://sv.wikipedia.org/wiki/Nils_Wallerius"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 14561,
+   "finnish": {
+    "value": "1666-02-18",
+    "standing_since": "2024-09-29 05:31:32",
+    "set_in_revision": 22663724,
+    "revision_url": "https://fi.wikipedia.org/?oldid=22663724",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2024-09-29 05:31:32",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1666-02-18",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2024-09-29 05:31:32",
+      "end": "2026-10-01 10:59:12",
+      "value": "1666-02-18",
+      "revision": 22663724,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q17382525",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "2 January 1878",
+     "iso": "1878-01-02",
+     "title": "Jaakko Mäki",
+     "url": "https://en.wikipedia.org/wiki/Jaakko_M%C3%A4ki"
+    },
+    "fi": {
+     "shown": "2. tammikuuta 1878",
+     "iso": "1878-01-02",
+     "title": "Jaakko Mäki",
+     "url": "https://fi.wikipedia.org/wiki/Jaakko_M%C3%A4ki"
+    },
+    "sv": {
+     "shown": "2 januari 1870",
+     "iso": "1870-01-02",
+     "title": "Jaakko Mäki",
+     "url": "https://sv.wikipedia.org/wiki/Jaakko_M%C3%A4ki"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 2922,
+   "finnish": {
+    "value": "1878-01-02",
+    "standing_since": "2007-09-21 12:21:19",
+    "set_in_revision": 3509486,
+    "revision_url": "https://fi.wikipedia.org/?oldid=3509486",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2007-09-21 12:21:19",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1878-01-02",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-09-21 12:21:19",
+      "end": "2026-10-01 10:59:12",
+      "value": "1878-01-02",
+      "revision": 3509486,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q11868042",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "13 October 1929",
+     "iso": "1929-10-13",
+     "title": "Jussi Linnamo",
+     "url": "https://en.wikipedia.org/wiki/Jussi_Linnamo"
+    },
+    "fi": {
+     "shown": "13. lokakuuta 1924",
+     "iso": "1924-10-13",
+     "title": "Jussi Linnamo",
+     "url": "https://fi.wikipedia.org/wiki/Jussi_Linnamo"
+    },
+    "sv": {
+     "shown": "13 oktober 1924",
+     "iso": "1924-10-13",
+     "title": "Jussi Linnamo",
+     "url": "https://sv.wikipedia.org/wiki/Jussi_Linnamo"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 1826,
+   "finnish": {
+    "value": "1924-10-13",
+    "standing_since": "2005-01-27 12:37:23",
+    "set_in_revision": 208379,
+    "revision_url": "https://fi.wikipedia.org/?oldid=208379",
+    "set_by": "named",
+    "said_before": "1924",
+    "first_value_ever": false,
+    "article_created": "2004-05-20 16:21:30",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1924-10-13",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2004-05-20 16:21:30",
+      "end": "2004-10-23 22:02:18",
+      "value": "1924-10-13",
+      "revision": 18871,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2004-10-23 22:02:18",
+      "end": "2005-01-27 12:37:23",
+      "value": "1924",
+      "revision": 117997,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2005-01-27 12:37:23",
+      "end": "2026-10-01 10:59:12",
+      "value": "1924-10-13",
+      "revision": 208379,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4406064",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "18 December 1738",
+     "iso": "1738-12-18",
+     "title": "Magnus Stiernstråle",
+     "url": "https://en.wikipedia.org/wiki/Magnus_Stiernstr%C3%A5le"
+    },
+    "fi": {
+     "shown": "18. joulukuuta 1734",
+     "iso": "1734-12-18",
+     "title": "Magnus Stiernstråle",
+     "url": "https://fi.wikipedia.org/wiki/Magnus_Stiernstr%C3%A5le"
+    },
+    "sv": {
+     "shown": "18 december 1734",
+     "iso": "1734-12-18",
+     "title": "Magnus Stiernstråle",
+     "url": "https://sv.wikipedia.org/wiki/Magnus_Stiernstr%C3%A5le"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 1461,
+   "finnish": {
+    "value": "1734-12-18",
+    "standing_since": "2015-03-06 07:55:47",
+    "set_in_revision": 14721011,
+    "revision_url": "https://fi.wikipedia.org/?oldid=14721011",
+    "set_by": "named",
+    "said_before": "1734",
+    "first_value_ever": false,
+    "article_created": "2012-09-18 15:13:06",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1734-12-18",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2012-09-18 15:13:06",
+      "end": "2015-03-06 07:55:47",
+      "value": "1734",
+      "revision": 12128109,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-03-06 07:55:47",
+      "end": "2026-10-01 10:59:12",
+      "value": "1734-12-18",
+      "revision": 14721011,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q20255727",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "10 July 1986",
+     "iso": "1986-07-10",
+     "title": "Saara-Sofia Sirén",
+     "url": "https://en.wikipedia.org/wiki/Saara-Sofia_Sir%C3%A9n"
+    },
+    "fi": {
+     "shown": "10. heinäkuuta 1986",
+     "iso": "1986-07-10",
+     "title": "Saara-Sofia Sirén",
+     "url": "https://fi.wikipedia.org/wiki/Saara-Sofia_Sir%C3%A9n"
+    },
+    "sv": {
+     "shown": "10 juli 1985",
+     "iso": "1985-07-10",
+     "title": "Saara-Sofia Sirén",
+     "url": "https://sv.wikipedia.org/wiki/Saara-Sofia_Sir%C3%A9n"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1986-07-10",
+    "standing_since": "2015-08-19 02:20:37",
+    "set_in_revision": 15148091,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15148091",
+    "set_by": "named",
+    "said_before": "1986",
+    "first_value_ever": false,
+    "article_created": "2015-04-20 10:55:30",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1986-07-10",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2015-04-21 11:21:38",
+      "end": "2015-08-19 02:20:37",
+      "value": "1986",
+      "revision": 14895687,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-08-19 02:20:37",
+      "end": "2026-10-01 10:59:12",
+      "value": "1986-07-10",
+      "revision": 15148091,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2572023",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "16 May 1822",
+     "iso": "1822-05-16",
+     "title": "Maximilian von Alopaeus",
+     "url": "https://en.wikipedia.org/wiki/Maximilian_von_Alopaeus"
+    },
+    "fi": {
+     "shown": "16. toukokuuta 1821",
+     "iso": "1821-05-16",
+     "title": "Magnus Alopaeus (diplomaatti)",
+     "url": "https://fi.wikipedia.org/wiki/Magnus_Alopaeus_(diplomaatti)"
+    },
+    "sv": {
+     "shown": "16 maj 1821",
+     "iso": "1821-05-16",
+     "title": "Magnus Alopaeus",
+     "url": "https://sv.wikipedia.org/wiki/Magnus_Alopaeus"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1821-05-16",
+    "standing_since": "2017-08-17 10:23:25",
+    "set_in_revision": 16695004,
+    "revision_url": "https://fi.wikipedia.org/?oldid=16695004",
+    "set_by": "named",
+    "said_before": "1822-06-06",
+    "first_value_ever": false,
+    "article_created": "2011-08-14 17:04:03",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1821-05-16",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2011-08-14 17:04:03",
+      "end": "2017-08-17 10:23:25",
+      "value": "1822-06-06",
+      "revision": 10547831,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-08-17 10:23:25",
+      "end": "2026-10-01 10:59:12",
+      "value": "1821-05-16",
+      "revision": 16695004,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2595428",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "27 November 1937",
+     "iso": "1937-11-27",
+     "title": "Eero Haapalainen",
+     "url": "https://en.wikipedia.org/wiki/Eero_Haapalainen"
+    },
+    "fi": {
+     "shown": "27. marraskuuta 1937",
+     "iso": "1937-11-27",
+     "title": "Eero Haapalainen",
+     "url": "https://fi.wikipedia.org/wiki/Eero_Haapalainen"
+    },
+    "sv": {
+     "shown": "27 november 1938",
+     "iso": "1938-11-27",
+     "title": "Eero Haapalainen",
+     "url": "https://sv.wikipedia.org/wiki/Eero_Haapalainen"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1937-11-27",
+    "standing_since": "2015-07-06 14:40:58",
+    "set_in_revision": 15049994,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15049994",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": false,
+    "article_created": "2006-06-08 19:25:46",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1937-11-27",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-06-08 19:25:46",
+      "end": "2008-07-08 12:37:02",
+      "value": "1937",
+      "revision": 1230039,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-07-08 12:37:02",
+      "end": "2015-07-06 14:40:58",
+      "value": null,
+      "revision": 4647928,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2015-07-06 14:40:58",
+      "end": "2025-04-01 08:40:51",
+      "value": "1937-11-27",
+      "revision": 15049994,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2025-04-01 08:40:51",
+      "end": "2025-04-01 08:41:22",
+      "value": "1937-11-27",
+      "revision": 23144376,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2025-04-01 08:41:22",
+      "end": "2026-10-01 10:59:12",
+      "value": "1937-11-27",
+      "revision": 23144379,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q28356875",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "6 December 1905",
+     "iso": "1905-12-06",
+     "title": "Evald Häggblom",
+     "url": "https://en.wikipedia.org/wiki/Evald_H%C3%A4ggblom"
+    },
+    "fi": {
+     "shown": "6. joulukuuta 1905",
+     "iso": "1905-12-06",
+     "title": "Evald Häggblom",
+     "url": "https://fi.wikipedia.org/wiki/Evald_H%C3%A4ggblom"
+    },
+    "sv": {
+     "shown": "6 december 1906",
+     "iso": "1906-12-06",
+     "title": "Evald Häggblom",
+     "url": "https://sv.wikipedia.org/wiki/Evald_H%C3%A4ggblom"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1905-12-06",
+    "standing_since": "2016-12-30 18:44:17",
+    "set_in_revision": 16151223,
+    "revision_url": "https://fi.wikipedia.org/?oldid=16151223",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2016-12-30 18:44:17",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1905-12-06",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2016-12-30 18:44:17",
+      "end": "2026-10-01 10:59:12",
+      "value": "1905-12-06",
+      "revision": 16151223,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q3734664",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "January 7, 1738",
+     "iso": "1738-01-07",
+     "title": "Matthias Calonius",
+     "url": "https://en.wikipedia.org/wiki/Matthias_Calonius"
+    },
+    "fi": {
+     "shown": "7. tammikuuta 1738",
+     "iso": "1738-01-07",
+     "title": "Matthias Calonius",
+     "url": "https://fi.wikipedia.org/wiki/Matthias_Calonius"
+    },
+    "sv": {
+     "shown": "7 januari 1737",
+     "iso": "1737-01-07",
+     "title": "Matthias Calonius",
+     "url": "https://sv.wikipedia.org/wiki/Matthias_Calonius"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1738-01-07",
+    "standing_since": "2015-06-15 13:06:58",
+    "set_in_revision": 15008895,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15008895",
+    "set_by": "named",
+    "said_before": "1737-12-27",
+    "first_value_ever": false,
+    "article_created": "2005-05-03 22:26:08",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1738-01-07",
+    "distinct_values": 3,
+    "timeline": [
+     {
+      "start": "2005-05-03 22:26:08",
+      "end": "2006-05-08 10:32:18",
+      "value": "1738",
+      "revision": 183901,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-05-08 10:32:18",
+      "end": "2015-06-15 13:06:58",
+      "value": "1737-12-27",
+      "revision": 1098987,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-06-15 13:06:58",
+      "end": "2026-10-01 10:59:12",
+      "value": "1738-01-07",
+      "revision": 15008895,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4354530",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "15 March 1963",
+     "iso": "1963-03-15",
+     "title": "Jörgen Strand",
+     "url": "https://en.wikipedia.org/wiki/J%C3%B6rgen_Strand"
+    },
+    "fi": {
+     "shown": "15. maaliskuuta 1962",
+     "iso": "1962-03-15",
+     "title": "Jörgen Strand",
+     "url": "https://fi.wikipedia.org/wiki/J%C3%B6rgen_Strand"
+    },
+    "sv": {
+     "shown": "15 mars 1962",
+     "iso": "1962-03-15",
+     "title": "Jörgen Strand",
+     "url": "https://sv.wikipedia.org/wiki/J%C3%B6rgen_Strand"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1962-03-15",
+    "standing_since": "2009-02-19 14:58:47",
+    "set_in_revision": 6297983,
+    "revision_url": "https://fi.wikipedia.org/?oldid=6297983",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2009-02-19 14:58:47",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1962-03-15",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2009-02-19 14:58:47",
+      "end": "2026-10-01 10:59:12",
+      "value": "1962-03-15",
+      "revision": 6297983,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6095100",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "6 April 1986",
+     "iso": "1986-04-06",
+     "title": "Jussi Saukkonen",
+     "url": "https://en.wikipedia.org/wiki/Jussi_Saukkonen"
+    },
+    "fi": {
+     "shown": "6. huhtikuuta 1986",
+     "iso": "1986-04-06",
+     "title": "Jussi Saukkonen",
+     "url": "https://fi.wikipedia.org/wiki/Jussi_Saukkonen"
+    },
+    "sv": {
+     "shown": "6 april 1985",
+     "iso": "1985-04-06",
+     "title": "Jussi Saukkonen",
+     "url": "https://sv.wikipedia.org/wiki/Jussi_Saukkonen"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1986-04-06",
+    "standing_since": "2007-02-28 16:09:46",
+    "set_in_revision": 2433379,
+    "revision_url": "https://fi.wikipedia.org/?oldid=2433379",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2005-11-14 16:11:05",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1986-04-06",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-02-28 16:09:46",
+      "end": "2026-10-01 10:59:12",
+      "value": "1986-04-06",
+      "revision": 2433379,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q7177967",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "16 December 1961",
+     "iso": "1961-12-16",
+     "title": "Peter Östman",
+     "url": "https://en.wikipedia.org/wiki/Peter_%C3%96stman"
+    },
+    "fi": {
+     "shown": "16. joulukuuta 1961",
+     "iso": "1961-12-16",
+     "title": "Peter Östman",
+     "url": "https://fi.wikipedia.org/wiki/Peter_%C3%96stman"
+    },
+    "sv": {
+     "shown": "16 december 1960",
+     "iso": "1960-12-16",
+     "title": "Peter Östman",
+     "url": "https://sv.wikipedia.org/wiki/Peter_%C3%96stman"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 365,
+   "finnish": {
+    "value": "1961-12-16",
+    "standing_since": "2010-03-02 17:18:28",
+    "set_in_revision": 8107999,
+    "revision_url": "https://fi.wikipedia.org/?oldid=8107999",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2010-03-02 14:52:22",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1961-12-16",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2010-03-02 17:18:28",
+      "end": "2026-10-01 10:59:12",
+      "value": "1961-12-16",
+      "revision": 8107999,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q553859",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "12 February 1923",
+     "iso": "1923-02-12",
+     "title": "Robert Tigerstedt",
+     "url": "https://en.wikipedia.org/wiki/Robert_Tigerstedt"
+    },
+    "fi": {
+     "shown": "2. joulukuuta 1923",
+     "iso": "1923-12-02",
+     "title": "Robert Tigerstedt",
+     "url": "https://fi.wikipedia.org/wiki/Robert_Tigerstedt"
+    },
+    "sv": {
+     "shown": "2 december 1923",
+     "iso": "1923-12-02",
+     "title": "Robert Tigerstedt",
+     "url": "https://sv.wikipedia.org/wiki/Robert_Tigerstedt"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 293,
+   "finnish": {
+    "value": "1923-12-02",
+    "standing_since": "2012-09-23 13:18:27",
+    "set_in_revision": 12145472,
+    "revision_url": "https://fi.wikipedia.org/?oldid=12145472",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2012-09-23 13:18:27",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1923-12-02",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2012-09-23 13:18:27",
+      "end": "2026-10-01 10:59:12",
+      "value": "1923-12-02",
+      "revision": 12145472,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q3044507",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "27 February 1957",
+     "iso": "1957-02-27",
+     "title": "Wiljo Tuompo",
+     "url": "https://en.wikipedia.org/wiki/Wiljo_Tuompo"
+    },
+    "fi": {
+     "shown": "25. marraskuuta 1957",
+     "iso": "1957-11-25",
+     "title": "Wiljo Einar Tuompo",
+     "url": "https://fi.wikipedia.org/wiki/Wiljo_Einar_Tuompo"
+    },
+    "sv": {
+     "shown": "25 november 1957",
+     "iso": "1957-11-25",
+     "title": "Wiljo Tuompo",
+     "url": "https://sv.wikipedia.org/wiki/Wiljo_Tuompo"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 271,
+   "finnish": {
+    "value": "1957-11-25",
+    "standing_since": "2013-03-01 11:55:24",
+    "set_in_revision": 12760713,
+    "revision_url": "https://fi.wikipedia.org/?oldid=12760713",
+    "set_by": "named",
+    "said_before": "1957",
+    "first_value_ever": false,
+    "article_created": "2007-05-13 09:36:22",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1957-11-25",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-05-13 09:36:22",
+      "end": "2013-03-01 11:55:24",
+      "value": "1957",
+      "revision": 2833571,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2013-03-01 11:55:24",
+      "end": "2026-10-01 10:59:12",
+      "value": "1957-11-25",
+      "revision": 12760713,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q26922112",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "8 March 1941",
+     "iso": "1941-03-08",
+     "title": "Tom Grönberg",
+     "url": "https://en.wikipedia.org/wiki/Tom_Gr%C3%B6nberg"
+    },
+    "fi": {
+     "shown": "8. marraskuuta 1941",
+     "iso": "1941-11-08",
+     "title": "Tom Grönberg",
+     "url": "https://fi.wikipedia.org/wiki/Tom_Gr%C3%B6nberg"
+    },
+    "sv": {
+     "shown": "8 november 1941",
+     "iso": "1941-11-08",
+     "title": "Tom Grönberg",
+     "url": "https://sv.wikipedia.org/wiki/Tom_Gr%C3%B6nberg"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 245,
+   "finnish": {
+    "value": "1941-11-08",
+    "standing_since": "2016-09-09 15:21:40",
+    "set_in_revision": 15941117,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15941117",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2016-09-09 15:21:40",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1941-11-08",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2016-09-09 15:21:40",
+      "end": "2026-10-01 10:59:12",
+      "value": "1941-11-08",
+      "revision": 15941117,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4350490",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "21 March 1947",
+     "iso": "1947-03-21",
+     "title": "Irja Seurujärvi-Kari",
+     "url": "https://en.wikipedia.org/wiki/Irja_Seuruj%C3%A4rvi-Kari"
+    },
+    "fi": {
+     "shown": "21. marraskuuta 1947",
+     "iso": "1947-11-21",
+     "title": "Irja Seurujärvi-Kari",
+     "url": "https://fi.wikipedia.org/wiki/Irja_Seuruj%C3%A4rvi-Kari"
+    },
+    "sv": {
+     "shown": "21 november 1947",
+     "iso": "1947-11-21",
+     "title": "Irja Seurujärvi-Kari",
+     "url": "https://sv.wikipedia.org/wiki/Irja_Seuruj%C3%A4rvi-Kari"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 245,
+   "finnish": {
+    "value": "1947-11-21",
+    "standing_since": "2015-08-10 15:39:59",
+    "set_in_revision": 15130827,
+    "revision_url": "https://fi.wikipedia.org/?oldid=15130827",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2010-12-16 10:18:21",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1947-11-21",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2015-08-10 15:39:59",
+      "end": "2026-10-01 10:59:12",
+      "value": "1947-11-21",
+      "revision": 15130827,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6204863",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "July 14, 1948",
+     "iso": "1948-07-14",
+     "title": "Christoffer Taxell",
+     "url": "https://en.wikipedia.org/wiki/Christoffer_Taxell"
+    },
+    "fi": {
+     "shown": "14. helmikuuta 1948",
+     "iso": "1948-02-14",
+     "title": "Christoffer Taxell",
+     "url": "https://fi.wikipedia.org/wiki/Christoffer_Taxell"
+    },
+    "sv": {
+     "shown": "14 februari 1948",
+     "iso": "1948-02-14",
+     "title": "Christoffer Taxell",
+     "url": "https://sv.wikipedia.org/wiki/Christoffer_Taxell"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 151,
+   "finnish": {
+    "value": "1948-02-14",
+    "standing_since": "2005-01-19 20:44:08",
+    "set_in_revision": 114438,
+    "revision_url": "https://fi.wikipedia.org/?oldid=114438",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2005-01-19 20:44:08",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1948-02-14",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2005-01-19 20:44:08",
+      "end": "2015-10-12 14:18:13",
+      "value": "1948-02-14",
+      "revision": 114438,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-10-12 14:18:13",
+      "end": "2015-10-15 15:23:12",
+      "value": "1948-02-14",
+      "revision": 15269461,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2015-10-15 15:23:12",
+      "end": "2017-11-13 09:14:52",
+      "value": "1948-02-14",
+      "revision": 15275363,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-11-13 09:14:52",
+      "end": "2017-11-13 09:26:23",
+      "value": "1948-02-14",
+      "revision": 16895288,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2017-11-13 09:26:23",
+      "end": "2026-10-01 10:59:12",
+      "value": "1948-02-14",
+      "revision": 16895302,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q11850627",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "8 July 1954",
+     "iso": "1954-07-08",
+     "title": "Albin Manner",
+     "url": "https://en.wikipedia.org/wiki/Albin_Manner"
+    },
+    "fi": {
+     "shown": "8. heinäkuuta 1954",
+     "iso": "1954-07-08",
+     "title": "Albin Manner",
+     "url": "https://fi.wikipedia.org/wiki/Albin_Manner"
+    },
+    "sv": {
+     "shown": "8 februari 1954",
+     "iso": "1954-02-08",
+     "title": "Albin Manner",
+     "url": "https://sv.wikipedia.org/wiki/Albin_Manner"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 150,
+   "finnish": {
+    "value": "1954-07-08",
+    "standing_since": "2007-05-02 12:15:20",
+    "set_in_revision": 2770002,
+    "revision_url": "https://fi.wikipedia.org/?oldid=2770002",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2007-05-02 12:15:20",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1954-07-08",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-05-02 12:15:20",
+      "end": "2026-10-01 10:59:12",
+      "value": "1954-07-08",
+      "revision": 2770002,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q5397309",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "28 May 1941",
+     "iso": "1941-05-28",
+     "title": "Edvard Kilpeläinen",
+     "url": "https://en.wikipedia.org/wiki/Edvard_Kilpel%C3%A4inen"
+    },
+    "fi": {
+     "shown": "28. toukokuuta 1941",
+     "iso": "1941-05-28",
+     "title": "E. Kilpeläinen",
+     "url": "https://fi.wikipedia.org/wiki/E._Kilpel%C3%A4inen"
+    },
+    "sv": {
+     "shown": "28 mars 1941",
+     "iso": "1941-03-28",
+     "title": "Edvard Kilpeläinen",
+     "url": "https://sv.wikipedia.org/wiki/Edvard_Kilpel%C3%A4inen"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 61,
+   "finnish": {
+    "value": "1941-05-28",
+    "standing_since": "2007-05-30 13:11:10",
+    "set_in_revision": 2935570,
+    "revision_url": "https://fi.wikipedia.org/?oldid=2935570",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2007-05-30 13:11:10",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1941-05-28",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-05-30 13:11:10",
+      "end": "2026-10-01 10:59:12",
+      "value": "1941-05-28",
+      "revision": 2935570,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q713646",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "26 May 1958",
+     "iso": "1958-05-26",
+     "title": "Arto Bryggare",
+     "url": "https://en.wikipedia.org/wiki/Arto_Bryggare"
+    },
+    "fi": {
+     "shown": "26. toukokuuta 1958",
+     "iso": "1958-05-26",
+     "title": "Arto Bryggare",
+     "url": "https://fi.wikipedia.org/wiki/Arto_Bryggare"
+    },
+    "sv": {
+     "shown": "26 mars 1958",
+     "iso": "1958-03-26",
+     "title": "Arto Bryggare",
+     "url": "https://sv.wikipedia.org/wiki/Arto_Bryggare"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 61,
+   "finnish": {
+    "value": "1958-05-26",
+    "standing_since": "2006-02-07 05:50:54",
+    "set_in_revision": 778791,
+    "revision_url": "https://fi.wikipedia.org/?oldid=778791",
+    "set_by": "ip",
+    "said_before": "1958",
+    "first_value_ever": false,
+    "article_created": "2005-05-08 12:39:50",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1958-05-26",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-05-08 12:39:50",
+      "end": "2006-02-07 05:50:54",
+      "value": "1958",
+      "revision": 188306,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-02-07 05:50:54",
+      "end": "2008-11-14 11:18:00",
+      "value": "1958-05-26",
+      "revision": 778791,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2008-11-14 11:18:00",
+      "end": "2008-11-14 11:21:06",
+      "value": "1958-05-26",
+      "revision": 5814859,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2008-11-14 11:21:06",
+      "end": "2026-10-01 10:59:12",
+      "value": "1958-05-26",
+      "revision": 5814879,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q13360609",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "16 June 1860",
+     "iso": "1860-06-16",
+     "title": "Nikolai Mexmontan",
+     "url": "https://en.wikipedia.org/wiki/Nikolai_Mexmontan"
+    },
+    "fi": {
+     "shown": "16. kesäkuuta 1860",
+     "iso": "1860-06-16",
+     "title": "Nikolaj Mexmontan",
+     "url": "https://fi.wikipedia.org/wiki/Nikolaj_Mexmontan"
+    },
+    "sv": {
+     "shown": "15 augusti 1860",
+     "iso": "1860-08-15",
+     "title": "Nicolaj Mexmontan",
+     "url": "https://sv.wikipedia.org/wiki/Nicolaj_Mexmontan"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 60,
+   "finnish": {
+    "value": "1860-06-16",
+    "standing_since": "2012-04-07 11:44:28",
+    "set_in_revision": 11478665,
+    "revision_url": "https://fi.wikipedia.org/?oldid=11478665",
+    "set_by": "named",
+    "said_before": "1861",
+    "first_value_ever": false,
+    "article_created": "2009-01-20 15:55:34",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1860-06-16",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2009-01-20 15:55:34",
+      "end": "2012-04-07 11:44:28",
+      "value": "1861",
+      "revision": 6146398,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2012-04-07 11:44:28",
+      "end": "2026-10-01 10:59:12",
+      "value": "1860-06-16",
+      "revision": 11478665,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4802431",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "22 July 1522",
+     "iso": "1522-07-22",
+     "title": "Arvid Kurck",
+     "url": "https://en.wikipedia.org/wiki/Arvid_Kurck"
+    },
+    "fi": {
+     "shown": "22. heinäkuuta 1522",
+     "iso": "1522-07-22",
+     "title": "Arvid Kurki",
+     "url": "https://fi.wikipedia.org/wiki/Arvid_Kurki"
+    },
+    "sv": {
+     "shown": "23 maj 1522",
+     "iso": "1522-05-23",
+     "title": "Arvid Kurck",
+     "url": "https://sv.wikipedia.org/wiki/Arvid_Kurck"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 60,
+   "finnish": {
+    "value": "1522-07-22",
+    "standing_since": "2009-12-09 22:09:51",
+    "set_in_revision": 7706998,
+    "revision_url": "https://fi.wikipedia.org/?oldid=7706998",
+    "set_by": "named",
+    "said_before": "1522",
+    "first_value_ever": false,
+    "article_created": "2005-08-08 09:30:07",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1522-07-22",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-08-08 09:30:07",
+      "end": "2009-12-09 22:09:51",
+      "value": "1522",
+      "revision": 357600,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2009-12-09 22:09:51",
+      "end": "2009-12-14 14:13:25",
+      "value": "1522-07-22",
+      "revision": 7706998,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2011-06-12 06:31:57",
+      "end": "2026-10-01 10:59:12",
+      "value": "1522-07-22",
+      "revision": 10292482,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q1712767",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "19 April 1835",
+     "iso": "1835-04-19",
+     "title": "Julius Krohn",
+     "url": "https://en.wikipedia.org/wiki/Julius_Krohn"
+    },
+    "fi": {
+     "shown": "19. huhtikuuta 1835",
+     "iso": "1835-04-19",
+     "title": "Julius Krohn",
+     "url": "https://fi.wikipedia.org/wiki/Julius_Krohn"
+    },
+    "sv": {
+     "shown": "19 februari 1835",
+     "iso": "1835-02-19",
+     "title": "Julius Krohn",
+     "url": "https://sv.wikipedia.org/wiki/Julius_Krohn"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 59,
+   "finnish": {
+    "value": "1835-04-19",
+    "standing_since": "2005-11-30 20:37:25",
+    "set_in_revision": 568550,
+    "revision_url": "https://fi.wikipedia.org/?oldid=568550",
+    "set_by": "named",
+    "said_before": "1835",
+    "first_value_ever": false,
+    "article_created": "2005-11-30 18:02:39",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1835-04-19",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2005-11-30 18:02:39",
+      "end": "2005-11-30 20:37:25",
+      "value": "1835",
+      "revision": 568181,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2005-11-30 20:37:25",
+      "end": "2026-10-01 10:59:12",
+      "value": "1835-04-19",
+      "revision": 568550,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q57176",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "12 June 1892",
+     "iso": "1892-06-12",
+     "title": "Ferdinand Schörner",
+     "url": "https://en.wikipedia.org/wiki/Ferdinand_Sch%C3%B6rner"
+    },
+    "fi": {
+     "shown": "12. kesäkuuta 1892",
+     "iso": "1892-06-12",
+     "title": "Ferdinand Schörner",
+     "url": "https://fi.wikipedia.org/wiki/Ferdinand_Sch%C3%B6rner"
+    },
+    "sv": {
+     "shown": "12 maj 1892",
+     "iso": "1892-05-12",
+     "title": "Ferdinand Schörner",
+     "url": "https://sv.wikipedia.org/wiki/Ferdinand_Sch%C3%B6rner"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 31,
+   "finnish": {
+    "value": "1892-06-12",
+    "standing_since": "2007-11-16 16:59:40",
+    "set_in_revision": 3812310,
+    "revision_url": "https://fi.wikipedia.org/?oldid=3812310",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2007-11-16 16:59:40",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1892-06-12",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-11-16 16:59:40",
+      "end": "2026-10-01 10:59:12",
+      "value": "1892-06-12",
+      "revision": 3812310,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q5946085",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "2 October 1904",
+     "iso": "1904-10-02",
+     "title": "Selim Lemström",
+     "url": "https://en.wikipedia.org/wiki/Selim_Lemstr%C3%B6m"
+    },
+    "fi": {
+     "shown": "2. lokakuuta 1904",
+     "iso": "1904-10-02",
+     "title": "Selim Lemström",
+     "url": "https://fi.wikipedia.org/wiki/Selim_Lemstr%C3%B6m"
+    },
+    "sv": {
+     "shown": "2 november 1904",
+     "iso": "1904-11-02",
+     "title": "Selim Lemström",
+     "url": "https://sv.wikipedia.org/wiki/Selim_Lemstr%C3%B6m"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 31,
+   "finnish": {
+    "value": "1904-10-02",
+    "standing_since": "2007-04-23 19:29:05",
+    "set_in_revision": 2720527,
+    "revision_url": "https://fi.wikipedia.org/?oldid=2720527",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2007-04-23 19:29:05",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1904-10-02",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2007-04-23 19:29:05",
+      "end": "2026-10-01 10:59:12",
+      "value": "1904-10-02",
+      "revision": 2720527,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q4345709",
+   "field": "birth",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "25 July 1867",
+     "iso": "1867-07-25",
+     "title": "Juhani Arajärvi",
+     "url": "https://en.wikipedia.org/wiki/Juhani_Araj%C3%A4rvi"
+    },
+    "fi": {
+     "shown": "25. heinäkuuta 1867",
+     "iso": "1867-07-25",
+     "title": "Juhani Arajärvi",
+     "url": "https://fi.wikipedia.org/wiki/Juhani_Araj%C3%A4rvi"
+    },
+    "sv": {
+     "shown": "25 juni 1867",
+     "iso": "1867-06-25",
+     "title": "Juhani Arajärvi",
+     "url": "https://sv.wikipedia.org/wiki/Juhani_Araj%C3%A4rvi"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 30,
+   "finnish": {
+    "value": "1867-07-25",
+    "standing_since": "2006-10-22 11:40:58",
+    "set_in_revision": 1782992,
+    "revision_url": "https://fi.wikipedia.org/?oldid=1782992",
+    "set_by": "named",
+    "said_before": "1867",
+    "first_value_ever": false,
+    "article_created": "2006-04-05 17:42:23",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1867-07-25",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2006-04-05 17:42:23",
+      "end": "2006-10-22 11:40:58",
+      "value": "1867",
+      "revision": 978857,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2006-10-22 11:40:58",
+      "end": "2026-10-01 10:59:12",
+      "value": "1867-07-25",
+      "revision": 1782992,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q6190332",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "25 July 1675",
+     "iso": "1675-07-25",
+     "title": "Johan Stiernhöök",
+     "url": "https://en.wikipedia.org/wiki/Johan_Stiernh%C3%B6%C3%B6k"
+    },
+    "fi": {
+     "shown": "25. kesäkuuta 1675",
+     "iso": "1675-06-25",
+     "title": "Johan Stiernhöök",
+     "url": "https://fi.wikipedia.org/wiki/Johan_Stiernh%C3%B6%C3%B6k"
+    },
+    "sv": {
+     "shown": "25 juli 1675",
+     "iso": "1675-07-25",
+     "title": "Johan Stiernhöök",
+     "url": "https://sv.wikipedia.org/wiki/Johan_Stiernh%C3%B6%C3%B6k"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 30,
+   "finnish": {
+    "value": "1675-06-25",
+    "standing_since": "2015-03-26 19:18:57",
+    "set_in_revision": 14790397,
+    "revision_url": "https://fi.wikipedia.org/?oldid=14790397",
+    "set_by": "named",
+    "said_before": "1675",
+    "first_value_ever": false,
+    "article_created": "2013-05-07 16:51:45",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1675-06-25",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2013-05-07 16:51:45",
+      "end": "2015-03-26 19:18:57",
+      "value": "1675",
+      "revision": 13243471,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2015-03-26 19:18:57",
+      "end": "2026-10-01 10:59:12",
+      "value": "1675-06-25",
+      "revision": 14790397,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q2548588",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "13 October 1819",
+     "iso": "1819-10-13",
+     "title": "Georg Magnus Sprengtporten",
+     "url": "https://en.wikipedia.org/wiki/Georg_Magnus_Sprengtporten"
+    },
+    "fi": {
+     "shown": "13. lokakuuta 1819",
+     "iso": "1819-10-13",
+     "title": "Georg Magnus Sprengtporten",
+     "url": "https://fi.wikipedia.org/wiki/Georg_Magnus_Sprengtporten"
+    },
+    "sv": {
+     "shown": "19 september 1819",
+     "iso": "1819-09-19",
+     "title": "Göran Magnus Sprengtporten",
+     "url": "https://sv.wikipedia.org/wiki/G%C3%B6ran_Magnus_Sprengtporten"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 24,
+   "finnish": {
+    "value": "1819-10-13",
+    "standing_since": "2009-02-07 07:19:51",
+    "set_in_revision": 6237808,
+    "revision_url": "https://fi.wikipedia.org/?oldid=6237808",
+    "set_by": "ip",
+    "said_before": "1819",
+    "first_value_ever": false,
+    "article_created": "2004-10-07 14:16:05",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1819-10-13",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2004-10-07 14:16:05",
+      "end": "2008-04-08 09:53:30",
+      "value": "1819",
+      "revision": 69278,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2008-04-08 09:53:30",
+      "end": "2008-04-08 09:53:55",
+      "value": "1819",
+      "revision": 4598406,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2008-04-08 09:53:55",
+      "end": "2009-02-07 07:19:51",
+      "value": "1819",
+      "revision": 4598410,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2009-02-07 07:19:51",
+      "end": "2023-01-29 17:18:55",
+      "value": "1819-10-13",
+      "revision": 6237808,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2023-02-10 22:39:07",
+      "end": "2026-10-01 10:59:12",
+      "value": "1819-10-13",
+      "revision": 21262855,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q497749",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "14 December 1936",
+     "iso": "1936-12-14",
+     "title": "Vihtori Kosola",
+     "url": "https://en.wikipedia.org/wiki/Vihtori_Kosola"
+    },
+    "fi": {
+     "shown": "14. joulukuuta 1936",
+     "iso": "1936-12-14",
+     "title": "Vihtori Kosola",
+     "url": "https://fi.wikipedia.org/wiki/Vihtori_Kosola"
+    },
+    "sv": {
+     "shown": "27 november 1936",
+     "iso": "1936-11-27",
+     "title": "Vihtori Kosola",
+     "url": "https://sv.wikipedia.org/wiki/Vihtori_Kosola"
+    }
+   },
+   "odd_one_out": "sv",
+   "largest_gap_days": 17,
+   "finnish": {
+    "value": "1936-12-14",
+    "standing_since": "2004-09-16 19:39:43",
+    "set_in_revision": 73260,
+    "revision_url": "https://fi.wikipedia.org/?oldid=73260",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2004-09-16 19:39:43",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1936-12-14",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2004-09-16 19:39:43",
+      "end": "2011-06-02 16:57:01",
+      "value": "1936-12-14",
+      "revision": 73260,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2011-06-02 16:57:01",
+      "end": "2011-06-02 16:59:44",
+      "value": "1936-12-14",
+      "revision": 10255456,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2011-06-02 16:59:44",
+      "end": "2012-04-01 16:09:37",
+      "value": "1936-12-14",
+      "revision": 10255464,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2012-04-01 16:09:37",
+      "end": "2012-04-01 16:11:32",
+      "value": "1936-12-14",
+      "revision": 11455983,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2012-04-01 16:11:32",
+      "end": "2017-08-19 15:40:32",
+      "value": "1936-12-14",
+      "revision": 11455991,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2017-08-19 15:40:32",
+      "end": "2017-08-25 20:22:25",
+      "value": "1936-12-14",
+      "revision": 16700371,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2017-08-25 20:22:25",
+      "end": "2021-08-10 00:25:23",
+      "value": "1936-12-14",
+      "revision": 16717944,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2021-08-10 00:25:23",
+      "end": "2021-08-10 09:11:56",
+      "value": "1936-12-14",
+      "revision": 19928117,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2021-08-10 09:11:56",
+      "end": "2022-01-27 07:47:18",
+      "value": "1936-12-14",
+      "revision": 19928547,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-01-27 07:47:18",
+      "end": "2022-01-27 07:49:11",
+      "value": "1936-12-14",
+      "revision": 20258634,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-01-27 07:49:11",
+      "end": "2022-11-04 11:59:47",
+      "value": "1936-12-14",
+      "revision": 20258635,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-04 11:59:47",
+      "end": "2022-11-04 12:05:50",
+      "value": "1936-12-14",
+      "revision": 20973828,
+      "editor": "ip",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-04 12:05:50",
+      "end": "2022-11-08 20:42:45",
+      "value": "1936-12-14",
+      "revision": 20973863,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-08 20:42:45",
+      "end": "2022-11-09 15:34:32",
+      "value": "1936-12-14",
+      "revision": 20992269,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-09 15:34:32",
+      "end": "2022-11-14 10:11:12",
+      "value": "1936-12-14",
+      "revision": 20995064,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-14 10:11:12",
+      "end": "2022-11-14 12:25:02",
+      "value": "1936-12-14",
+      "revision": 21010471,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-14 12:25:02",
+      "end": "2022-11-14 12:52:09",
+      "value": "1936-12-14",
+      "revision": 21010803,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-14 12:52:09",
+      "end": "2022-11-14 12:54:45",
+      "value": "1936-12-14",
+      "revision": 21010838,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-14 12:54:45",
+      "end": "2022-11-14 13:01:20",
+      "value": "1936-12-14",
+      "revision": 21010843,
+      "editor": "ip",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-14 13:01:20",
+      "end": "2022-11-14 13:04:43",
+      "value": "1936-12-14",
+      "revision": 21010853,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-14 13:04:43",
+      "end": "2022-11-14 13:08:07",
+      "value": "1936-12-14",
+      "revision": 21010858,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-14 13:08:07",
+      "end": "2022-11-14 13:10:16",
+      "value": "1936-12-14",
+      "revision": 21010865,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-14 13:10:16",
+      "end": "2022-11-14 13:12:52",
+      "value": "1936-12-14",
+      "revision": 21010867,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2022-11-14 13:12:52",
+      "end": "2022-11-14 13:14:21",
+      "value": "1936-12-14",
+      "revision": 21010876,
+      "editor": "named",
+      "reverted": true
+     },
+     {
+      "start": "2022-11-14 13:14:21",
+      "end": "2026-10-01 10:59:12",
+      "value": "1936-12-14",
+      "revision": 21010878,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q3920485",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "20 July 1916",
+     "iso": "1916-07-20",
+     "title": "Nikolai Kleigels",
+     "url": "https://en.wikipedia.org/wiki/Nikolai_Kleigels"
+    },
+    "fi": {
+     "shown": "4. elokuuta 1916",
+     "iso": "1916-08-04",
+     "title": "Nikolai Clayhills",
+     "url": "https://fi.wikipedia.org/wiki/Nikolai_Clayhills"
+    },
+    "sv": {
+     "shown": "4 augusti 1916",
+     "iso": "1916-08-04",
+     "title": "Nikolai Clayhills",
+     "url": "https://sv.wikipedia.org/wiki/Nikolai_Clayhills"
+    }
+   },
+   "odd_one_out": "en",
+   "largest_gap_days": 15,
+   "finnish": {
+    "value": "1916-08-04",
+    "standing_since": "2020-01-14 18:14:29",
+    "set_in_revision": 18661519,
+    "revision_url": "https://fi.wikipedia.org/?oldid=18661519",
+    "set_by": "named",
+    "said_before": null,
+    "first_value_ever": true,
+    "article_created": "2020-01-14 18:14:29",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1916-08-04",
+    "distinct_values": 1,
+    "timeline": [
+     {
+      "start": "2020-01-14 18:14:29",
+      "end": "2026-10-01 10:59:12",
+      "value": "1916-08-04",
+      "revision": 18661519,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  },
+  {
+   "qid": "Q11884500",
+   "field": "death",
+   "score": 3,
+   "read_by_hand": false,
+   "reading": null,
+   "values": {
+    "en": {
+     "shown": "27 November 1851",
+     "iso": "1851-11-27",
+     "title": "Nils Abraham af Ursin",
+     "url": "https://en.wikipedia.org/wiki/Nils_Abraham_af_Ursin"
+    },
+    "fi": {
+     "shown": "17. marraskuuta 1851",
+     "iso": "1851-11-17",
+     "title": "Nils Abraham af Ursin",
+     "url": "https://fi.wikipedia.org/wiki/Nils_Abraham_af_Ursin"
+    },
+    "sv": {
+     "shown": "27 november 1851",
+     "iso": "1851-11-27",
+     "title": "Nils Abraham af Ursin",
+     "url": "https://sv.wikipedia.org/wiki/Nils_Abraham_af_Ursin"
+    }
+   },
+   "odd_one_out": "fi",
+   "largest_gap_days": 10,
+   "finnish": {
+    "value": "1851-11-17",
+    "standing_since": "2013-07-29 10:37:59",
+    "set_in_revision": 13420975,
+    "revision_url": "https://fi.wikipedia.org/?oldid=13420975",
+    "set_by": "named",
+    "said_before": "1851",
+    "first_value_ever": false,
+    "article_created": "2007-10-24 17:24:22",
+    "once_agreed_with_other": false,
+    "on_2026_10_01": "1851-11-17",
+    "distinct_values": 2,
+    "timeline": [
+     {
+      "start": "2007-10-24 17:24:22",
+      "end": "2013-07-29 10:37:59",
+      "value": "1851",
+      "revision": 3688806,
+      "editor": "named",
+      "reverted": false
+     },
+     {
+      "start": "2013-07-29 10:37:59",
+      "end": "2026-10-01 10:59:12",
+      "value": "1851-11-17",
+      "revision": 13420975,
+      "editor": "named",
+      "reverted": false
+     }
+    ]
+   }
+  }
+ ]
+}

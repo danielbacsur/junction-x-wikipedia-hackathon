@@ -1,0 +1,88 @@
+{
+ "title": "When the Finnish lead first said what it says, for every date it gives differently",
+ "unit": "Finnish birth or death date that another language gives differently",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "standing_since": [
+  {
+   "standing_since": "2003 to 2009",
+   "facts": 120
+  },
+  {
+   "standing_since": "2010 to 2014",
+   "facts": 89
+  },
+  {
+   "standing_since": "2015 to 2019",
+   "facts": 74
+  },
+  {
+   "standing_since": "2020 to 2022",
+   "facts": 27
+  },
+  {
+   "standing_since": "2023 to 2026",
+   "facts": 23
+  }
+ ],
+ "set_by": [
+  {
+   "editor": "named",
+   "facts": 310
+  },
+  {
+   "editor": "ip",
+   "facts": 23
+  }
+ ],
+ "note": "From wtt.passage FOR SYSTEM_TIME ALL. Versions marked reverted_by are left out unless a row says otherwise.",
+ "rows": [
+  {
+   "metric": "disagreeing pairs with Finnish on one side",
+   "value": 391
+  },
+  {
+   "metric": "of those, Finnish history rebuilt and matching the snapshot",
+   "value": 384
+  },
+  {
+   "metric": "Finnish facts behind them (topic and field)",
+   "value": 333
+  },
+  {
+   "metric": "current value is the first value the lead ever stated",
+   "value": 164
+  },
+  {
+   "metric": "current value replaced an earlier one",
+   "value": 169
+  },
+  {
+   "metric": "of those, the earlier one was as precise (a change, not a refinement)",
+   "value": 75
+  },
+  {
+   "metric": "current value first stated within 30 days of the first version",
+   "value": 163
+  },
+  {
+   "metric": "current value standing only since 1 August 2023 or later",
+   "value": 22
+  },
+  {
+   "metric": "Finnish lead once agreed with the other language (not counting reverted versions)",
+   "value": 63
+  },
+  {
+   "metric": "the same, counting reverted versions",
+   "value": 64
+  },
+  {
+   "metric": "Finnish value changed between the snapshot and 1 October 2026",
+   "value": 5
+  },
+  {
+   "metric": "Finnish agrees with the other language on 1 October 2026",
+   "value": 2
+  }
+ ]
+}

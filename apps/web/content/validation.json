@@ -1,5 +1,5 @@
 {
-  "validatedAt": "2026-11-14T12:50:54.727Z",
+  "validatedAt": "2026-11-14T14:00:18.705Z",
   "deep": false,
   "passed": true,
   "checks": [
@@ -16,19 +16,19 @@
         "versionedArticles": 19742,
         "allFinnish": 568416
       },
-      "seconds": 4.673882
+      "seconds": 3.0989072500000003
     },
     {
-      "name": "stored versions carry the text wikipedia hashed",
+      "name": "stored versions carry the text Wikipedia hashed",
       "ok": true,
-      "detail": "299 of 300 match wikipedia's sha1, 1 are pre-2006 versions hashed before utf-8, 0 are wrong",
+      "detail": "299 of 300 match Wikipedia's sha1, 1 is a pre-2006 version hashed before UTF-8, 0 are wrong",
       "numbers": {
         "sampled": 300,
         "match": 299,
         "legacy": 1,
         "wrong": 0
       },
-      "seconds": 25.609317750000002
+      "seconds": 7.753693875
     },
     {
       "name": "asking for a date returns the version live at that moment",
@@ -39,7 +39,7 @@
         "wrong": 0,
         "beforeFirstEdit": 0
       },
-      "seconds": 3.659959666999999
+      "seconds": 0.9172474999999994
     },
     {
       "name": "two edits in one second stay two versions",
@@ -49,19 +49,19 @@
         "same": 0,
         "moved": 20
       },
-      "seconds": 1.040396292000005
+      "seconds": 0.3105087500000009
     },
     {
       "name": "every version rebuilds from its passages",
       "ok": true,
-      "detail": "300 of 300 versions rebuilt byte for byte inside MariaDB, 300 match wikipedia's own sha1, 0 were hashed before utf-8",
+      "detail": "300 of 300 versions rebuilt byte for byte inside MariaDB, 300 match Wikipedia's own sha1, 0 were hashed before UTF-8",
       "numbers": {
         "checked": 300,
         "different": 0,
         "matchWikipedia": 300,
         "legacy": 0
       },
-      "seconds": 26.772423291
+      "seconds": 7.659858042
     },
     {
       "name": "search pinned to a date never returns text from another time",
@@ -72,7 +72,7 @@
         "inside": 40,
         "leaked": 0
       },
-      "seconds": 118.85221774999998
+      "seconds": 52.656417334
     },
     {
       "name": "every cited passage stood in the cited version",
@@ -83,7 +83,7 @@
         "sources": 40,
         "wrong": 0
       },
-      "seconds": 14.599842459000007
+      "seconds": 5.741729374999995
     },
     {
       "name": "every stated term of office is in the version cited for it",
@@ -95,7 +95,7 @@
         "timed": 102,
         "accepted": 102
       },
-      "seconds": 0.14267270799999823
+      "seconds": 0.028155125000004774
     }
   ],
   "corpus": {
@@ -103,7 +103,7 @@
     "lifetimes": 2972662,
     "wordings": 1630250,
     "searchableWordings": 960142,
-    "embeddedWordings": 193237,
+    "embeddedWordings": 293991,
     "wordingMb": 745,
     "wholeCopyMb": 12163,
     "reverts": 46334,
@@ -118,14 +118,14 @@
       "mb": 6537
     },
     {
+      "name": "passage_vector",
+      "rows": 164440,
+      "mb": 2942
+    },
+    {
       "name": "article",
       "rows": 483080,
       "mb": 2293
-    },
-    {
-      "name": "passage_vector",
-      "rows": 122558,
-      "mb": 1907
     },
     {
       "name": "passage_text",
@@ -134,8 +134,8 @@
     },
     {
       "name": "passage",
-      "rows": 2880612,
-      "mb": 784
+      "rows": 2565601,
+      "mb": 908
     },
     {
       "name": "article_vector",
@@ -163,11 +163,6 @@
       "mb": 2
     },
     {
-      "name": "office_unparsed",
-      "rows": 17,
-      "mb": 0
-    },
-    {
       "name": "office_term",
       "rows": 102,
       "mb": 0
@@ -175,6 +170,11 @@
     {
       "name": "category_link",
       "rows": 1760,
+      "mb": 0
+    },
+    {
+      "name": "office_unparsed",
+      "rows": 17,
       "mb": 0
     }
   ]

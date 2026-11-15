@@ -61,3 +61,25 @@ export const FULL_FIWIKI = { millionRows: 85, gigabytes: [20, 22] };
  * four-digit values in 1000–2099 are year-shaped".
  */
 export const YEAR_SHAPED = { from: 1000, to: 2099 };
+
+/**
+ * labs/three-wikipedias/README.md. "What we found": "The texts are the
+ * August 2025 snapshot in wtt.article". The table under "Time travel on the
+ * Finnish side": "has stood since the article's first 30 days", "standing
+ * only since 1 August 2023 or later". "Wider": "within 31 days or within
+ * 10 %". "Manual read": "With 30 cases, an error rate up to about 10 %
+ * cannot be ruled out".
+ */
+export const LEADS = {
+  snapshot: "August 2025",
+  firstDays: 30,
+  recentSince: "2023-08-01",
+  nearMiss: { days: 31, share: 0.1 },
+  errorCeiling: 0.1,
+};
+
+/**
+ * labs/infobox-time-machine/README.md, "Which fields move": "Among fields
+ * with at least 1,000 observations and 50 distinct field slots".
+ */
+export const MOVING_FIELDS = { observations: 1_000, slots: 50 };

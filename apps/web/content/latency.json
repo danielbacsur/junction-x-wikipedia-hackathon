@@ -1,12 +1,12 @@
 {
-  "measuredAt": "2026-11-14T13:21:01.257Z",
+  "measuredAt": "2026-11-14T14:01:11.785Z",
   "operations": [
     {
       "name": "read an article on a date",
       "about": "every block that stood that day, with the edit that wrote it",
       "runs": 60,
       "medianMs": 9,
-      "p95Ms": 52,
+      "p95Ms": 38,
       "sqlMedianMs": 9
     },
     {
@@ -14,40 +14,40 @@
       "about": "edits, reverts and disputes per month from the slim edit table",
       "runs": 60,
       "medianMs": 1,
-      "p95Ms": 7,
-      "sqlMedianMs": 1
+      "p95Ms": 10,
+      "sqlMedianMs": 2
     },
     {
       "name": "compare two dates",
       "about": "blocks that stood on exactly one of the two days",
       "runs": 60,
-      "medianMs": 7,
-      "p95Ms": 23,
-      "sqlMedianMs": 6
+      "medianMs": 5,
+      "p95Ms": 17,
+      "sqlMedianMs": 5
     },
     {
       "name": "find articles",
       "about": "vectors, titles and stemmed passages fused in one statement",
       "runs": 37,
-      "medianMs": 87,
-      "p95Ms": 431,
-      "sqlMedianMs": 60
+      "medianMs": 114,
+      "p95Ms": 618,
+      "sqlMedianMs": 85
     },
     {
       "name": "gather evidence as of a date",
       "about": "embed the question, route to articles, exact passage search that day",
       "runs": 37,
-      "medianMs": 108,
-      "p95Ms": 365,
-      "sqlMedianMs": 120
+      "medianMs": 124,
+      "p95Ms": 485,
+      "sqlMedianMs": 130
     },
     {
       "name": "trace a claim through all of history",
       "about": "nearest wordings ever written, with every stretch each one stood",
       "runs": 8,
-      "medianMs": 488,
-      "p95Ms": 634,
-      "sqlMedianMs": 455
+      "medianMs": 610,
+      "p95Ms": 930,
+      "sqlMedianMs": 542
     }
   ]
 }

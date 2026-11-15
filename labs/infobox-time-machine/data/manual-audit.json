@@ -1,0 +1,708 @@
+{
+  "title": "Manual audit of sixteen extreme date transitions",
+  "unit": "reviewed cases",
+  "source": "audit_notes.json; uv run audit_context.py; uv run audit.py",
+  "rows": [
+    {
+      "title": "Jarmo Viinanen",
+      "page_id": 351358,
+      "field": "syntymäpäivä",
+      "rev_id": 23596341,
+      "classification": "correction",
+      "reason": "The editor added an infobox with year 195, then restored the missing final digit. The lead says 1959 in both inspected revisions. This looks like a typing repair.",
+      "transition": {
+        "before": "0195-02-23",
+        "after": "1959-02-23",
+        "absolute_days": 644287,
+        "bucket": ">365 days",
+        "changed_at": "2025-10-05 09:16:50",
+        "rev_id": 23596341,
+        "editor": "Weisself",
+        "comment": null
+      },
+      "inspected_revisions": [
+        23596339,
+        23596341
+      ],
+      "evidence": [
+        {
+          "rev_id": 23596339,
+          "raw_value": "{{Syntymäaika ja ikä|23|2|195}}",
+          "row_start": "2025-10-05 09:16:38",
+          "row_end": "2025-10-05 09:16:50",
+          "editor": "Weisself",
+          "comment": "+Tietolaatikko"
+        },
+        {
+          "rev_id": 23596341,
+          "raw_value": "{{Syntymäaika ja ikä|23|2|1959}}",
+          "row_start": "2025-10-05 09:16:50",
+          "row_end": null,
+          "editor": "Weisself",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Terttu Savola",
+      "page_id": 266213,
+      "field": "syntymäpäivä",
+      "rev_id": 22405441,
+      "classification": "correction",
+      "reason": "The new infobox used year 194 while the lead already said 1941. The replacement appends the missing digit; its summary says “ikä fix” (age fix).",
+      "transition": {
+        "before": "0194-06-22",
+        "after": "1941-06-22",
+        "absolute_days": 638078,
+        "bucket": ">365 days",
+        "changed_at": "2024-05-23 21:16:25",
+        "rev_id": 22405441,
+        "editor": "2001:99A:1A90:F300:35D0:ABFA:7101:F615",
+        "comment": "ikä fix"
+      },
+      "inspected_revisions": [
+        22358967,
+        22405441
+      ],
+      "evidence": [
+        {
+          "rev_id": 22358967,
+          "raw_value": "{{Syntymäaika ja ikä|22|6|194}}",
+          "row_start": "2024-04-30 01:25:45",
+          "row_end": "2024-05-23 21:16:25",
+          "editor": "Linkkerpar",
+          "comment": "Risan lähteen korjaus ja tietolaatikko."
+        },
+        {
+          "rev_id": 22405441,
+          "raw_value": "{{Syntymäaika ja ikä|22|6|1941}}",
+          "row_start": "2024-05-23 21:16:25",
+          "row_end": null,
+          "editor": "2001:99A:1A90:F300:35D0:ABFA:7101:F615",
+          "comment": "ikä fix"
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Jouko Skinnari",
+      "page_id": 86288,
+      "field": "kuolinaika",
+      "rev_id": 15670161,
+      "classification": "correction",
+      "reason": "The same editor changes death year 2916 to 2016 immediately. The lead already reports 21 April 2016. This looks like a mistyped digit.",
+      "transition": {
+        "before": "2916-04-21",
+        "after": "2016-04-21",
+        "absolute_days": 328718,
+        "bucket": ">365 days",
+        "changed_at": "2016-04-21 19:35:30",
+        "rev_id": 15670161,
+        "editor": "Tappinen",
+        "comment": null
+      },
+      "inspected_revisions": [
+        15670159,
+        15670161
+      ],
+      "evidence": [
+        {
+          "rev_id": 15670159,
+          "raw_value": "{{Kuolinaika ja ikä|12|8|1946|21|4|2916}}",
+          "row_start": "2016-04-21 19:35:12",
+          "row_end": "2016-04-21 19:35:30",
+          "editor": "Tappinen",
+          "comment": null
+        },
+        {
+          "rev_id": 15670161,
+          "raw_value": "{{Kuolinaika ja ikä|12|8|1946|21|4|2016}}",
+          "row_start": "2016-04-21 19:35:30",
+          "row_end": null,
+          "editor": "Tappinen",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Oskari Arjanne",
+      "page_id": 923334,
+      "field": "kuolinpäivä",
+      "rev_id": 20383285,
+      "classification": "correction",
+      "reason": "The added infobox says death in 1862, while the existing lead and its cited biography say 1962. The replacement agrees with that lead; the edit summary is “1962”.",
+      "transition": {
+        "before": "1862-10-03",
+        "after": "1962-10-03",
+        "absolute_days": 36524,
+        "bucket": ">365 days",
+        "changed_at": "2022-03-26 14:02:29",
+        "rev_id": 20383285,
+        "editor": "87.95.89.152",
+        "comment": "1962"
+      },
+      "inspected_revisions": [
+        19388104,
+        20383285
+      ],
+      "evidence": [
+        {
+          "rev_id": 19388104,
+          "raw_value": "[[3. lokakuuta]] [[1862]]",
+          "row_start": "2020-12-05 17:37:52",
+          "row_end": "2022-03-26 14:02:29",
+          "editor": "Maantietäjä",
+          "comment": "tietolaatikko"
+        },
+        {
+          "rev_id": 20383285,
+          "raw_value": "[[3. lokakuuta]] [[1962]]",
+          "row_start": "2022-03-26 14:02:29",
+          "row_end": null,
+          "editor": "87.95.89.152",
+          "comment": "1962"
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Bruno Jalander",
+      "page_id": 350816,
+      "field": "syntymäaika",
+      "rev_id": 14410991,
+      "classification": "correction",
+      "reason": "The birth field contains a death-date-and-age template whose death date is 14 December 1966. It is replaced with 28 August 1872, already the birth date in both leads. This repairs a misplaced template.",
+      "transition": {
+        "before": "1966-12-14",
+        "after": "1872-08-28",
+        "absolute_days": 34440,
+        "bucket": ">365 days",
+        "changed_at": "2014-10-30 22:19:39",
+        "rev_id": 14410991,
+        "editor": "Jepse",
+        "comment": null
+      },
+      "inspected_revisions": [
+        8551502,
+        14410991
+      ],
+      "evidence": [
+        {
+          "rev_id": 8551502,
+          "raw_value": "{{Kuolinaika ja ikä|28|8|1872|14|12|1966}}",
+          "row_start": "2010-05-28 17:08:48",
+          "row_end": "2014-10-30 22:19:39",
+          "editor": "Ashoka",
+          "comment": null
+        },
+        {
+          "rev_id": 14410991,
+          "raw_value": "[[28. elokuuta]] [[1872]]",
+          "row_start": "2014-10-30 22:19:39",
+          "row_end": null,
+          "editor": "Jepse",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Urho Kiukas",
+      "page_id": 331348,
+      "field": "syntymäaika",
+      "rev_id": 18949591,
+      "classification": "correction",
+      "reason": "The same editor replaces a death-date-and-age template in the birth field with the lead’s 19 November 1902 birth date. The lead is unchanged.",
+      "transition": {
+        "before": "1995-11-19",
+        "after": "1902-11-19",
+        "absolute_days": 33968,
+        "bucket": ">365 days",
+        "changed_at": "2020-05-26 15:54:05",
+        "rev_id": 18949591,
+        "editor": "93.106.56.151",
+        "comment": null
+      },
+      "inspected_revisions": [
+        18949576,
+        18949591
+      ],
+      "evidence": [
+        {
+          "rev_id": 18949576,
+          "raw_value": "{{Kuolinaika ja ikä|19|11|1902|19|11|1995}}",
+          "row_start": "2020-05-26 15:48:23",
+          "row_end": "2020-05-26 15:54:05",
+          "editor": "93.106.56.151",
+          "comment": null
+        },
+        {
+          "rev_id": 18949591,
+          "raw_value": "[[19. marraskuuta]] [[1902]]",
+          "row_start": "2020-05-26 15:54:05",
+          "row_end": null,
+          "editor": "93.106.56.151",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Mikko Juva",
+      "page_id": 65810,
+      "field": "syntymäaika",
+      "rev_id": 9973322,
+      "classification": "correction",
+      "reason": "The editor first inserts a death-date-and-age template into the birth field, then replaces it with the lead’s 22 November 1918 date. The insertion summary says “malline lisätty” (template added).",
+      "transition": {
+        "before": "2004-01-01",
+        "after": "1918-11-22",
+        "absolute_days": 31086,
+        "bucket": ">365 days",
+        "changed_at": "2011-03-27 08:39:42",
+        "rev_id": 9973322,
+        "editor": "Ashoka",
+        "comment": null
+      },
+      "inspected_revisions": [
+        9973318,
+        9973322,
+        12193206
+      ],
+      "evidence": [
+        {
+          "rev_id": 9973318,
+          "raw_value": "{{Kuolinaika ja ikä|22|11|1918|1|1|2004}}",
+          "row_start": "2011-03-27 08:38:57",
+          "row_end": "2011-03-27 08:39:42",
+          "editor": "Ashoka",
+          "comment": "malline lisätty"
+        },
+        {
+          "rev_id": 9973322,
+          "raw_value": "[[22. marraskuuta]] [[1918]]",
+          "row_start": "2011-03-27 08:39:42",
+          "row_end": "2012-10-06 08:53:15",
+          "editor": "Ashoka",
+          "comment": null
+        },
+        {
+          "rev_id": 12193206,
+          "raw_value": "[[22. marraskuuta]] [[1918]]<ref name = HSMUISTOT />",
+          "row_start": "2012-10-06 08:53:15",
+          "row_end": "2015-04-03 16:27:58",
+          "editor": "Kotivalo",
+          "comment": "lähteistys KKO82 +HS"
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Arseni Zakrevski",
+      "page_id": 108521,
+      "field": "syntymäaika",
+      "rev_id": 8499617,
+      "classification": "correction",
+      "reason": "The birth field initially contains 23 January 1865, which both leads identify as the death date. The replacement is the existing lead’s 24 September 1786 birth date.",
+      "transition": {
+        "before": "1865-01-23",
+        "after": "1786-09-24",
+        "absolute_days": 28610,
+        "bucket": ">365 days",
+        "changed_at": "2010-05-18 06:13:06",
+        "rev_id": 8499617,
+        "editor": "Ashoka",
+        "comment": null
+      },
+      "inspected_revisions": [
+        7518371,
+        8499617
+      ],
+      "evidence": [
+        {
+          "rev_id": 7518371,
+          "raw_value": "[[23. tammikuuta]] [[1865]]",
+          "row_start": "2009-10-28 10:35:49",
+          "row_end": "2010-05-18 06:13:06",
+          "editor": "193.142.23.208",
+          "comment": null
+        },
+        {
+          "rev_id": 8499617,
+          "raw_value": "[[24. syyskuuta]] [[1786]]",
+          "row_start": "2010-05-18 06:13:06",
+          "row_end": null,
+          "editor": "Ashoka",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Fabian Steinheil",
+      "page_id": 19530,
+      "field": "syntymäaika",
+      "rev_id": 8499614,
+      "classification": "correction",
+      "reason": "The birth field says 22 February 1831, close to the death date (23 February 1831) in the lead. The replacement is the lead’s 14 October 1762 birth date. The one-day death discrepancy is not resolved by this read.",
+      "transition": {
+        "before": "1831-02-22",
+        "after": "1762-10-14",
+        "absolute_days": 24967,
+        "bucket": ">365 days",
+        "changed_at": "2010-05-18 06:11:50",
+        "rev_id": 8499614,
+        "editor": "Ashoka",
+        "comment": null
+      },
+      "inspected_revisions": [
+        7518338,
+        8499614
+      ],
+      "evidence": [
+        {
+          "rev_id": 7518338,
+          "raw_value": "[[22. helmikuuta]] [[1831]]",
+          "row_start": "2009-10-28 10:30:33",
+          "row_end": "2010-05-18 06:11:50",
+          "editor": "193.142.23.208",
+          "comment": null
+        },
+        {
+          "rev_id": 8499614,
+          "raw_value": "[[14. lokakuuta]] [[1762]]",
+          "row_start": "2010-05-18 06:11:50",
+          "row_end": null,
+          "editor": "Ashoka",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Aleksanteri II (Venäjä)",
+      "page_id": 10106,
+      "field": "kuolinaika",
+      "rev_id": 8498487,
+      "classification": "calendar or format change",
+      "reason": "A conversion from plain date links to a death-date-and-age template reverses birth and death arguments. The next inspected revision by the same editor fixes their order. Both leads keep the same dates. This is a formatting conversion with a transient error, not evidence of a historical date dispute.",
+      "transition": {
+        "before": "1881-03-13",
+        "after": "1818-04-29",
+        "absolute_days": 22964,
+        "bucket": ">365 days",
+        "changed_at": "2010-05-17 19:57:48",
+        "rev_id": 8498487,
+        "editor": "Ashoka",
+        "comment": null
+      },
+      "inspected_revisions": [
+        7633313,
+        8498487,
+        8498492
+      ],
+      "evidence": [
+        {
+          "rev_id": 7633313,
+          "raw_value": "[[13. maaliskuuta]] [[1881]]",
+          "row_start": "2009-11-23 14:00:36",
+          "row_end": "2010-05-17 19:57:48",
+          "editor": "130.234.69.15",
+          "comment": "väärä kuukausi muutettu oikeaksi"
+        },
+        {
+          "rev_id": 8498487,
+          "raw_value": "{{Kuolinaika ja ikä|13|3|1881|29|4|1818}}",
+          "row_start": "2010-05-17 19:57:48",
+          "row_end": "2010-05-17 19:58:27",
+          "editor": "Ashoka",
+          "comment": null
+        },
+        {
+          "rev_id": 8498492,
+          "raw_value": "{{Kuolinaika ja ikä|29|4|1818|13|3|1881}}",
+          "row_start": "2010-05-17 19:58:27",
+          "row_end": "2018-04-02 11:31:58",
+          "editor": "Ashoka",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Anders Fabian Orrhjelm",
+      "page_id": 1166414,
+      "field": "kuolinaika",
+      "rev_id": 23144673,
+      "classification": "correction",
+      "reason": "The death field initially repeats the lead’s 30 November 1762 birth date. Its replacement agrees with the lead’s 2 December 1816 death date and adds an age.",
+      "transition": {
+        "before": "1762-11-30",
+        "after": "1816-12-02",
+        "absolute_days": 19725,
+        "bucket": ">365 days",
+        "changed_at": "2025-04-01 12:36:36",
+        "rev_id": 23144673,
+        "editor": "2001:999:600:5197:B809:5162:E609:DB80",
+        "comment": null
+      },
+      "inspected_revisions": [
+        22363373,
+        23144673
+      ],
+      "evidence": [
+        {
+          "rev_id": 22363373,
+          "raw_value": "[[30. marraskuuta]] [[1762]]",
+          "row_start": "2024-05-02 11:02:39",
+          "row_end": "2025-04-01 12:36:36",
+          "editor": "Laurikainen",
+          "comment": null
+        },
+        {
+          "rev_id": 23144673,
+          "raw_value": "[[2. joulukuuta]] [[1816]] (54)",
+          "row_start": "2025-04-01 12:36:36",
+          "row_end": null,
+          "editor": "2001:999:600:5197:B809:5162:E609:DB80",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Heikki Ritavuori",
+      "page_id": 48376,
+      "field": "kuolinaika",
+      "rev_id": 8501998,
+      "classification": "correction",
+      "reason": "The two fields were swapped. The summary explicitly says “ajat väärinpäin + fix” (dates reversed + fix), and the replacement death field agrees with the unchanged lead.",
+      "transition": {
+        "before": "1880-03-23",
+        "after": "1922-02-14",
+        "absolute_days": 15302,
+        "bucket": ">365 days",
+        "changed_at": "2010-05-18 15:58:09",
+        "rev_id": 8501998,
+        "editor": "Otrfan",
+        "comment": "ajat väärinpäin + fix"
+      },
+      "inspected_revisions": [
+        8501926,
+        8501998,
+        8670065
+      ],
+      "evidence": [
+        {
+          "rev_id": 8501926,
+          "raw_value": "[[23. maaliskuuta]] [[1880]]",
+          "row_start": "2010-05-18 15:42:09",
+          "row_end": "2010-05-18 15:58:09",
+          "editor": "Ashoka",
+          "comment": null
+        },
+        {
+          "rev_id": 8501998,
+          "raw_value": "{{Kuolinaika ja ikä|23|3|1880|14|2|1922}}",
+          "row_start": "2010-05-18 15:58:09",
+          "row_end": "2010-06-21 14:09:29",
+          "editor": "Otrfan",
+          "comment": "ajat väärinpäin + fix"
+        },
+        {
+          "rev_id": 8670065,
+          "raw_value": "{{Kuolinaika ja ikä|23|3|1880|14|2|1922}}<ref>{{Verkkoviite | Osoite =http://www.eduskunta.fi/triphome/bin/hx3000.sh?{haku}=kaikki&{kieli}=su&%24{base}=hetekaue&%24{oohtml}=hx3500&%24{html}=hx3500&%24{snhtml}=hxnosynk&%24{thwurlsave}=%24{surldum}&%24{maxpage}=50&ASC=&SUKUNIMI=RITAVUORI&ETUNIMI=&VPR_KOODI=&EKRJ_KOODI=&SUKUPUOLI=&EDUSKUNTAKIELI=&VAALIKAUSI=&VPR_ALKUTEPVM=&VPR_LOPPUTEPVM=&submit=+Hae+| Nimeke =Edustajamatrikkeli Heikki Ritavuori|Julkaisu=eduskunta.fi|Julkaisija= Eduskunta| Viitattu = 21.6.2010}}</ref>",
+          "row_start": "2010-06-21 14:09:29",
+          "row_end": "2010-06-29 23:40:36",
+          "editor": "Ashoka",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Heikki Ritavuori",
+      "page_id": 48376,
+      "field": "syntymäaika",
+      "rev_id": 8501998,
+      "classification": "correction",
+      "reason": "The same edit repairs the paired birth field. The prior death-date-and-age template is replaced by 23 March 1880, matching the unchanged lead. This is the second field in one repair, not a second independent incident.",
+      "transition": {
+        "before": "1922-02-14",
+        "after": "1880-03-23",
+        "absolute_days": 15302,
+        "bucket": ">365 days",
+        "changed_at": "2010-05-18 15:58:09",
+        "rev_id": 8501998,
+        "editor": "Otrfan",
+        "comment": "ajat väärinpäin + fix"
+      },
+      "inspected_revisions": [
+        8501926,
+        8501998,
+        8670123
+      ],
+      "evidence": [
+        {
+          "rev_id": 8501926,
+          "raw_value": "{{Kuolinaika ja ikä|23|3|1880|14|2|1922}}",
+          "row_start": "2010-05-18 15:42:09",
+          "row_end": "2010-05-18 15:58:09",
+          "editor": "Ashoka",
+          "comment": null
+        },
+        {
+          "rev_id": 8501998,
+          "raw_value": "[[23. maaliskuuta]] [[1880]]",
+          "row_start": "2010-05-18 15:58:09",
+          "row_end": "2010-06-21 14:20:12",
+          "editor": "Otrfan",
+          "comment": "ajat väärinpäin + fix"
+        },
+        {
+          "rev_id": 8670123,
+          "raw_value": "[[23. maaliskuuta]] [[1880]]<ref>{{Verkkoviite | Osoite =http://www.eduskunta.fi/triphome/bin/hx3000.sh?{haku}=kaikki&{kieli}=su&%24{base}=hetekaue&%24{oohtml}=hx3500&%24{html}=hx3500&%24{snhtml}=hxnosynk&%24{thwurlsave}=%24{surldum}&%24{maxpage}=50&ASC=&SUKUNIMI=RITAVUORI&ETUNIMI=&VPR_KOODI=&EKRJ_KOODI=&SUKUPUOLI=&EDUSKUNTAKIELI=&VAALIKAUSI=&VPR_ALKUTEPVM=&VPR_LOPPUTEPVM=&submit=+Hae+| Nimeke =Edustajamatrikkeli Heikki Ritavuori|Julkaisu=eduskunta.fi|Julkaisija= Eduskunta| Viitattu = 21.6.2010}}</ref>",
+          "row_start": "2010-06-21 14:20:12",
+          "row_end": "2010-06-29 23:40:36",
+          "editor": "Ashoka",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Veikko Vennamo",
+      "page_id": 11808,
+      "field": "syntymäaika",
+      "rev_id": 5079291,
+      "classification": "correction",
+      "reason": "The newly added infobox gives 26 February 1950, while the lead already gives 11 June 1913. The replacement makes the field agree with the lead. The source of the incorrect date is not established.",
+      "transition": {
+        "before": "1950-02-26",
+        "after": "1913-06-11",
+        "absolute_days": 13409,
+        "bucket": ">365 days",
+        "changed_at": "2008-07-09 09:25:57",
+        "rev_id": 5079291,
+        "editor": "V-MLehto",
+        "comment": null
+      },
+      "inspected_revisions": [
+        5012852,
+        5079291
+      ],
+      "evidence": [
+        {
+          "rev_id": 5012852,
+          "raw_value": "[[26. helmikuuta]] [[1950]]",
+          "row_start": "2008-06-27 10:18:34",
+          "row_end": "2008-07-09 09:25:57",
+          "editor": "MikkoK",
+          "comment": "lisätty malline ja siihen kuuluvat tiedot"
+        },
+        {
+          "rev_id": 5079291,
+          "raw_value": "[[11. kesäkuuta]] [[1913]]",
+          "row_start": "2008-07-09 09:25:57",
+          "row_end": null,
+          "editor": "V-MLehto",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Uuno Suni",
+      "page_id": 1556627,
+      "field": "syntymäpäivä",
+      "rev_id": 18685723,
+      "classification": "correction",
+      "reason": "The same editor changes the birth field from 14 May 1962 to 14 May 1926. Both leads already give 1926. A later formatting edit retains that date.",
+      "transition": {
+        "before": "1962-05-14",
+        "after": "1926-05-14",
+        "absolute_days": 13149,
+        "bucket": ">365 days",
+        "changed_at": "2020-01-24 22:26:21",
+        "rev_id": 18685723,
+        "editor": "80.223.109.157",
+        "comment": null
+      },
+      "inspected_revisions": [
+        18685692,
+        18685723,
+        18708349
+      ],
+      "evidence": [
+        {
+          "rev_id": 18685692,
+          "raw_value": "[[14.5.1962]]",
+          "row_start": "2020-01-24 22:19:51",
+          "row_end": "2020-01-24 22:26:21",
+          "editor": "80.223.109.157",
+          "comment": null
+        },
+        {
+          "rev_id": 18685723,
+          "raw_value": "[[14.5.1926]]",
+          "row_start": "2020-01-24 22:26:21",
+          "row_end": "2020-02-03 20:59:18",
+          "editor": "80.223.109.157",
+          "comment": null
+        },
+        {
+          "rev_id": 18708349,
+          "raw_value": "{{Syntymäaika ja ikä|14|5|1926||1}}",
+          "row_start": "2020-02-03 20:59:18",
+          "row_end": "2022-05-07 18:49:42",
+          "editor": "Anr",
+          "comment": "fix"
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    },
+    {
+      "title": "Lauri Aho",
+      "page_id": 100000,
+      "field": "syntymäaika",
+      "rev_id": 11229431,
+      "classification": "correction",
+      "reason": "The birth field gives 18 July 1866, while the lead gives 18 July 1901. The later field agrees with the lead. No edit summary explains the original mismatch or intent.",
+      "transition": {
+        "before": "1866-07-18",
+        "after": "1901-07-18",
+        "absolute_days": 12783,
+        "bucket": ">365 days",
+        "changed_at": "2012-02-03 21:14:59",
+        "rev_id": 11229431,
+        "editor": "82.128.222.232",
+        "comment": null
+      },
+      "inspected_revisions": [
+        5357111,
+        11229431
+      ],
+      "evidence": [
+        {
+          "rev_id": 5357111,
+          "raw_value": "[[18. heinäkuuta]] [[1866]]",
+          "row_start": "2008-08-27 16:10:15",
+          "row_end": "2012-02-03 21:14:59",
+          "editor": "Theodor Herzl",
+          "comment": null
+        },
+        {
+          "rev_id": 11229431,
+          "raw_value": "[[18. heinäkuuta]] [[1901]]",
+          "row_start": "2012-02-03 21:14:59",
+          "row_end": null,
+          "editor": "82.128.222.232",
+          "comment": null
+        }
+      ],
+      "scope": "Manual read of infobox, edit summaries, lead excerpts at the listed revisions; no external sources or talk pages"
+    }
+  ]
+}

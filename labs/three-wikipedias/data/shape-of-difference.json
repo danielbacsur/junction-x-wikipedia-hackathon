@@ -1,0 +1,28 @@
+{
+ "title": "Full birth and death dates that disagree: which part differs",
+ "unit": "pair of languages stating the same field of the same topic",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "note": "Finnish, Swedish and English leads as of the August 2025 text snapshot",
+ "rows": [
+  {
+   "shape": "same month and year, other day",
+   "pairs": 211,
+   "julian_gap_exactly": 32.0
+  },
+  {
+   "shape": "same day number and year, other month",
+   "pairs": 85,
+   "julian_gap_exactly": 0.0
+  },
+  {
+   "shape": "more than one part differs",
+   "pairs": 70,
+   "julian_gap_exactly": 11.0
+  },
+  {
+   "shape": "same day and month, other year",
+   "pairs": 41,
+   "julian_gap_exactly": 0.0
+  }
+ ]
+}

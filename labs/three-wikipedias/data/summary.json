@@ -1,0 +1,88 @@
+{
+ "title": "Three Wikipedias on the history of Finland: what can be compared and what disagrees",
+ "unit": "count",
+ "source": "wtt.article, wtt.article_vector, wtt.passage (FOR SYSTEM_TIME ALL), wtt.edit; article text August 2025, Finnish history to 2026-10-01; labs/three-wikipedias",
+ "note": "Finnish, Swedish and English leads as of the August 2025 text snapshot",
+ "rows": [
+  {
+   "metric": "topics_compared",
+   "value": 3305
+  },
+  {
+   "metric": "agree_everywhere",
+   "value": 2992
+  },
+  {
+   "metric": "disagree_somewhere",
+   "value": 313
+  },
+  {
+   "metric": "disagree_on_birth",
+   "value": 185
+  },
+  {
+   "metric": "disagree_on_death",
+   "value": 158
+  },
+  {
+   "metric": "only_where_a_date_is_marked_approximate",
+   "value": 31
+  },
+  {
+   "metric": "disagree_on_a_date_given_as_exact",
+   "value": 282
+  },
+  {
+   "metric": "topics_lifespan_en_fi",
+   "value": 1280
+  },
+  {
+   "metric": "topics_lifespan_en_fi_sv",
+   "value": 1257
+  },
+  {
+   "metric": "topics_lifespan_fi_sv",
+   "value": 770
+  },
+  {
+   "metric": "topics_other_en_fi",
+   "value": 1055
+  },
+  {
+   "metric": "topics_other_en_fi_sv",
+   "value": 1662
+  },
+  {
+   "metric": "topics_other_fi_sv",
+   "value": 1232
+  },
+  {
+   "metric": "still_living_rows",
+   "value": 95
+  },
+  {
+   "metric": "still_living_topics",
+   "value": 63
+  },
+  {
+   "metric": "pairs_compared",
+   "value": 10097
+  },
+  {
+   "metric": "pairs_disagreeing",
+   "value": 518
+  },
+  {
+   "metric": "facts_disagreeing",
+   "value": 343
+  },
+  {
+   "metric": "topics_disagreeing_on_birth_and_death",
+   "value": 30
+  },
+  {
+   "metric": "editors_list_candidates",
+   "value": 210
+  }
+ ]
+}

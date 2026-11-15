@@ -166,6 +166,8 @@ test("the atlas shows what every lab found", async ({ page }) => {
     "offices",
     "numbers",
     "scale",
+    "languages",
+    "infobox",
     "search",
   ]) {
     await expect(page.locator(`#${id}`)).toBeVisible();

@@ -22,7 +22,7 @@ services:
       # The pool and the vector cache below are sized for a VM with 8 GB:
       # with a 3 GB pool and a 2 GB cache, a few heavy queries on top took
       # the server to 7.7 GB and the kernel killed it.
-      - --innodb-buffer-pool-size=2G
+      - --innodb-buffer-pool-size=1536M
       - --innodb-log-file-size=2G
       - --innodb-flush-log-at-trx-commit=2
 

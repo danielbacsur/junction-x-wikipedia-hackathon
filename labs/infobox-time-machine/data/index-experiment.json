@@ -1,0 +1,61 @@
+{
+  "title": "Article as-of index versus full scan",
+  "unit": "milliseconds",
+  "source": "uv run benchmark.py; identical SQL except FORCE/IGNORE INDEX; seven runs each",
+  "rows": [
+    {
+      "hint": "FORCE INDEX (article_asof)",
+      "median_ms": 2.3971670016180724,
+      "runs_ms": [
+        4.665042011765763,
+        3.8823749928269535,
+        2.73183302488178,
+        2.3971670016180724,
+        1.5476660046260804,
+        1.3153330073691905,
+        1.1601669830270112
+      ],
+      "explain": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "statement",
+          "type": "range",
+          "possible_keys": "article_asof",
+          "key": "article_asof",
+          "key_len": "11",
+          "ref": null,
+          "rows": "164",
+          "Extra": "Using index condition; Using filesort"
+        }
+      ]
+    },
+    {
+      "hint": "IGNORE INDEX (article_asof)",
+      "median_ms": 72.6447079796344,
+      "runs_ms": [
+        187.1349580178503,
+        103.91358300694264,
+        72.6447079796344,
+        53.15787499421276,
+        54.09020799561404,
+        59.90454199491069,
+        73.92741701914929
+      ],
+      "explain": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "statement",
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": "219345",
+          "Extra": "Using where; Using filesort"
+        }
+      ]
+    }
+  ]
+}

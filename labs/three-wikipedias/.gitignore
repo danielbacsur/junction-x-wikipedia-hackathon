@@ -1,0 +1,3 @@
+cache/leads.json.gz
+cache/*.log
+__pycache__/

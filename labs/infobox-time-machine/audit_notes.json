@@ -1,0 +1,114 @@
+[
+  {
+    "page_id": 351358,
+    "field": "syntymäpäivä",
+    "rev_id": 23596341,
+    "classification": "correction",
+    "reason": "The editor added an infobox with year 195, then restored the missing final digit. The lead says 1959 in both inspected revisions. This looks like a typing repair."
+  },
+  {
+    "page_id": 266213,
+    "field": "syntymäpäivä",
+    "rev_id": 22405441,
+    "classification": "correction",
+    "reason": "The new infobox used year 194 while the lead already said 1941. The replacement appends the missing digit; its summary says “ikä fix” (age fix)."
+  },
+  {
+    "page_id": 86288,
+    "field": "kuolinaika",
+    "rev_id": 15670161,
+    "classification": "correction",
+    "reason": "The same editor changes death year 2916 to 2016 immediately. The lead already reports 21 April 2016. This looks like a mistyped digit."
+  },
+  {
+    "page_id": 923334,
+    "field": "kuolinpäivä",
+    "rev_id": 20383285,
+    "classification": "correction",
+    "reason": "The added infobox says death in 1862, while the existing lead and its cited biography say 1962. The replacement agrees with that lead; the edit summary is “1962”."
+  },
+  {
+    "page_id": 350816,
+    "field": "syntymäaika",
+    "rev_id": 14410991,
+    "classification": "correction",
+    "reason": "The birth field contains a death-date-and-age template whose death date is 14 December 1966. It is replaced with 28 August 1872, already the birth date in both leads. This repairs a misplaced template."
+  },
+  {
+    "page_id": 331348,
+    "field": "syntymäaika",
+    "rev_id": 18949591,
+    "classification": "correction",
+    "reason": "The same editor replaces a death-date-and-age template in the birth field with the lead’s 19 November 1902 birth date. The lead is unchanged."
+  },
+  {
+    "page_id": 65810,
+    "field": "syntymäaika",
+    "rev_id": 9973322,
+    "classification": "correction",
+    "reason": "The editor first inserts a death-date-and-age template into the birth field, then replaces it with the lead’s 22 November 1918 date. The insertion summary says “malline lisätty” (template added)."
+  },
+  {
+    "page_id": 108521,
+    "field": "syntymäaika",
+    "rev_id": 8499617,
+    "classification": "correction",
+    "reason": "The birth field initially contains 23 January 1865, which both leads identify as the death date. The replacement is the existing lead’s 24 September 1786 birth date."
+  },
+  {
+    "page_id": 19530,
+    "field": "syntymäaika",
+    "rev_id": 8499614,
+    "classification": "correction",
+    "reason": "The birth field says 22 February 1831, close to the death date (23 February 1831) in the lead. The replacement is the lead’s 14 October 1762 birth date. The one-day death discrepancy is not resolved by this read."
+  },
+  {
+    "page_id": 10106,
+    "field": "kuolinaika",
+    "rev_id": 8498487,
+    "classification": "calendar or format change",
+    "reason": "A conversion from plain date links to a death-date-and-age template reverses birth and death arguments. The next inspected revision by the same editor fixes their order. Both leads keep the same dates. This is a formatting conversion with a transient error, not evidence of a historical date dispute."
+  },
+  {
+    "page_id": 1166414,
+    "field": "kuolinaika",
+    "rev_id": 23144673,
+    "classification": "correction",
+    "reason": "The death field initially repeats the lead’s 30 November 1762 birth date. Its replacement agrees with the lead’s 2 December 1816 death date and adds an age."
+  },
+  {
+    "page_id": 48376,
+    "field": "kuolinaika",
+    "rev_id": 8501998,
+    "classification": "correction",
+    "reason": "The two fields were swapped. The summary explicitly says “ajat väärinpäin + fix” (dates reversed + fix), and the replacement death field agrees with the unchanged lead."
+  },
+  {
+    "page_id": 48376,
+    "field": "syntymäaika",
+    "rev_id": 8501998,
+    "classification": "correction",
+    "reason": "The same edit repairs the paired birth field. The prior death-date-and-age template is replaced by 23 March 1880, matching the unchanged lead. This is the second field in one repair, not a second independent incident."
+  },
+  {
+    "page_id": 11808,
+    "field": "syntymäaika",
+    "rev_id": 5079291,
+    "classification": "correction",
+    "reason": "The newly added infobox gives 26 February 1950, while the lead already gives 11 June 1913. The replacement makes the field agree with the lead. The source of the incorrect date is not established."
+  },
+  {
+    "page_id": 1556627,
+    "field": "syntymäpäivä",
+    "rev_id": 18685723,
+    "classification": "correction",
+    "reason": "The same editor changes the birth field from 14 May 1962 to 14 May 1926. Both leads already give 1926. A later formatting edit retains that date."
+  },
+  {
+    "page_id": 100000,
+    "field": "syntymäaika",
+    "rev_id": 11229431,
+    "classification": "correction",
+    "reason": "The birth field gives 18 July 1866, while the lead gives 18 July 1901. The later field agrees with the lead. No edit summary explains the original mismatch or intent."
+  }
+]
