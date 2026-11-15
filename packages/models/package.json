@@ -2,19 +2,20 @@
   "name": "@wtt/package-models",
   "version": "0.0.0",
   "private": true,
-
   "type": "module",
-
   "exports": {
     ".": "./index.ts"
   },
-
   "scripts": {
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "vitest --run"
   },
-
   "devDependencies": {
     "@types/node": "^24",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5"
+  },
+  "dependencies": {
+    "@google/genai": "^3.3.0"
   }
 }
