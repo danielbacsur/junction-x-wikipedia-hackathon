@@ -1,27 +1,11 @@
-import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { defineAgent } from "eve";
-
-// The agent runs on a Gemma model in Ollama on this machine, so it works
-// with no account or key. Pointing LLM_BASE_URL at an OpenAI-compatible
-// provider, such as NVIDIA's for Nemotron, switches it to that model.
-const remote = process.env.LLM_BASE_URL;
-
-const provider = createOpenAICompatible({
-  name: remote ? "remote" : "ollama",
-  baseURL: remote ?? `${process.env.OLLAMA_URL ?? "http://127.0.0.1:11434"}/v1`,
-  apiKey: process.env.LLM_API_KEY,
-  includeUsage: true,
-  transformRequestBody: remote
-    ? undefined
-    : (body) => ({ ...body, temperature: 0 }),
+const google = createGoogleGenerativeAI({
+  apiKey: process.env.GEMINI_API_KEY ?? process.env.GOOGLE_GENERATIVE_AI_API_KEY,
 });
-
 export default defineAgent({
-  model: provider(process.env.LLM_MODEL ?? "gemma4:e2b"),
+  model: google(process.env.GEMINI_MODEL ?? "gemini-4-hydrogen"),
   defaultTools: false,
-  // Keep the small local model focused on tool calls and concise replies.
-  reasoning: remote ? "provider-default" : "none",
-
-  // Ollama allocates this much for the model, and eve compacts before it.
-  modelContextWindowTokens: 32_000,
+  reasoning: "provider-default",
+  modelContextWindowTokens: 1_000_000,
 });

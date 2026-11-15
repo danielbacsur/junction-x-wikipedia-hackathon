@@ -108,7 +108,7 @@ function SourceCard({
   other?: Other;
 }) {
   const here = readHref(source.title, at);
-  const claim = `${here}${here.includes("?") ? "&" : "?"}claim=${source.hash}`;
+  const claim = source.hash ? `${here}${here.includes("?") ? "&" : "?"}claim=${source.hash}` : source.url;
 
   return (
     <li
@@ -167,6 +167,7 @@ function SourceCard({
         <span>
           wording written {day(source.bornAt)}
           {source.bornBy ? ` by ${source.bornBy}` : ""}
+          {source.bornUndone && <span className="text-removed"> · this edit was later reverted</span>}
         </span>
         {source.distance !== null && (
           <span
@@ -260,7 +261,7 @@ export function AnswerCard({
       {evidence && evidence.sources.length > 0 && (
         <div className="font-serif text-[19px] leading-relaxed">
           {asked.status === "done" && asked.sentences.length > 0 ? (
-            asked.sentences.map((sentence, index) => (
+            asked.sentences.filter(sentence => sentence.supported).map((sentence, index) => (
               <span
                 key={index}
                 title={
@@ -284,7 +285,7 @@ export function AnswerCard({
             ))
           ) : (
             <span className={asked.status === "writing" ? "writing" : ""}>
-              {asked.answer}
+              {asked.answer || (asked.status === "done" ? "No answer passed the evidence checks." : "Checking the answer against its passages…")}
             </span>
           )}
         </div>
@@ -299,8 +300,7 @@ export function AnswerCard({
             below in {(asked.answerMs / 1000).toFixed(1)} s. Passages found in{" "}
             {asked.evidenceMs} ms. The numbers are checked against the passage
             each sentence cites. The wording is the model&apos;s
-            {asked.sentences.some((sentence) => !sentence.supported) &&
-              ". Dotted sentences cite no passage, or state a number that is not in the passage they cite, and should not be trusted"}
+            . Citation and number checks do not verify the meaning of a sentence
             .
           </p>
         )}

@@ -20,6 +20,7 @@ export type PassageHit = {
   bornAt: string;
   bornBy: string | null;
   bornEditor: string;
+  bornUndone?: boolean;
 
   /** Since when the wording has stood where it stands. */
   since: string;
@@ -42,6 +43,7 @@ type PassageRow = {
   born_at: string;
   born_by: string | null;
   born_editor: string;
+  born_undone: number;
   since: string;
   slot: number;
   distance: number | null;
@@ -61,6 +63,7 @@ const toHit = (row: PassageRow): PassageHit => ({
   bornAt: row.born_at,
   bornBy: row.born_by,
   bornEditor: row.born_editor,
+  bornUndone: Boolean(row.born_undone),
   since: row.since,
   slot: row.slot,
   distance: row.distance === null ? null : Number(row.distance),
@@ -83,15 +86,14 @@ const CANDIDATES = 300;
 const SELECTED = `
   p.page_id, r.title, HEX(p.hash) AS hash, t.kind, t.text, r.rev_id,
   p.born_rev, b.saved_at AS born_at, b.user AS born_by,
-  b.editor AS born_editor, p.row_start AS since, p.slot`;
+  b.editor AS born_editor, b.reverted_by IS NOT NULL AS born_undone, p.row_start AS since, p.slot`;
 
 /**
  * The statement at the heart of the product: semantic and keyword search
  * over what an article said at one moment. The vector index and the
  * full-text index each name their best wordings from all of history, and
  * the join with the versioned passage table keeps the ones that stood in
- * an article at that moment. Wordings that only arrived through an edit
- * later reverted are left out, so vandalism cannot be cited.
+ * an article at that moment. Later-reverted wordings remain part of the historical record and are annotated.
  */
 export const passageSearch = async (
   database: Db,
@@ -152,7 +154,6 @@ export const passageSearch = async (
      JOIN revision ${asOf(input.at)} AS r ON r.page_id = p.page_id
      JOIN passage_text AS t USING (hash)
      JOIN edit AS b ON b.rev_id = p.born_rev
-     WHERE b.reverted_by IS NULL
      ORDER BY score DESC
      LIMIT ${input.limit}`,
     [...params, ...when(input.at), ...when(input.at)],
@@ -187,7 +188,6 @@ export const passagesWithin = async (
      JOIN revision ${asOf(input.at)} AS r ON r.page_id = p.page_id
      JOIN edit AS b ON b.rev_id = p.born_rev
      WHERE p.page_id IN (${input.pages.map(() => "?").join(", ")})
-       AND b.reverted_by IS NULL
      ORDER BY distance
      LIMIT ${input.limit}`,
     [input.vector, ...when(input.at), ...when(input.at), ...input.pages],

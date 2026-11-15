@@ -9,6 +9,8 @@ import {
   passagesWithin,
 } from "./passages.ts";
 import { type Shown, show } from "./sql.ts";
+import { understandQuestion } from "./understand.ts";
+import { whoHeld } from "./offices.ts";
 import { asOf, moment, when } from "./time.ts";
 
 export type Source = PassageHit & {
@@ -24,6 +26,7 @@ export type Source = PassageHit & {
 
 export type Evidence = {
   question: string;
+  language?: string;
 
   /** null means the latest version in the dataset. */
   at: string | null;
@@ -146,8 +149,24 @@ export const gatherEvidence = async (
 ): Promise<Evidence> => {
   const database = db().traced();
   const at = moment(date);
-  const terms = await pickTerms(database, question);
-  const vector = toVector(await embedOne(question));
+  const understood = await understandQuestion(question);
+  const terms = await pickTerms(database, understood.query);
+  terms.foreign = false;
+  if (understood.office) {
+    const holding = await whoHeld(understood.office.name, understood.office.day, date);
+    if (holding) return {
+      question, language: understood.language, at, terms,
+      articles: holding.holders.map(h => ({ pageId: h.pageId, title: h.person, revId: h.revId })),
+      sources: holding.holders.map((h, index) => ({
+        n: index + 1, pageId: h.pageId, title: h.person, hash: "", kind: "office",
+        text: `${h.person}: ${h.office}, ${h.from} – ${h.to ?? "open-ended"}. On ${holding.day}: ${h.sourceText}`,
+        revId: h.revId, bornRev: h.revId, bornAt: h.saidSince, bornBy: h.editor,
+        bornEditor: h.editorKind, since: h.saidSince, slot: 0, distance: null,
+        vectorRank: null, keywordRank: null, score: 1, url: h.url, bornUrl: h.url,
+      })), nearest: null, tooFar: TOO_FAR, embeddedNow: 0, sql: holding.sql,
+    };
+  }
+  const vector = toVector(await embedOne(understood.query));
 
   // Two ways to find where to look, at the same time: the articles nearest
   // in meaning, and the passages nearest in meaning or sharing a rare word.
@@ -213,6 +232,7 @@ export const gatherEvidence = async (
   );
 
   const sources = [...merged.values()]
+    .filter(hit => hit.distance !== null && hit.distance <= TOO_FAR)
     .sort((a, b) => b.score - a.score)
     .slice(0, SOURCES)
     .map((hit, index) => ({
@@ -229,6 +249,7 @@ export const gatherEvidence = async (
 
   return {
     question,
+    language: understood.language,
     at,
     terms,
     articles,

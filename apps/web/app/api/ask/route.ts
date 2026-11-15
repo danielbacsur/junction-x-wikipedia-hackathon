@@ -47,11 +47,10 @@ export const GET = async (request: Request) => {
         send({
           type: "done",
           answer,
-          // The model is shown the article's title with each passage, and
-          // a year in "Suomen presidentinvaali 1956" is one it may repeat.
+          // Only the cited passage text supplies numeric evidence.
           sentences: checkAnswer(
             answer,
-            evidence.sources.map((source) => `${source.title}\n${source.text}`),
+            evidence.sources.map((source) => source.text),
           ),
           model: answerModel(),
           ms: Math.round(performance.now() - found),
