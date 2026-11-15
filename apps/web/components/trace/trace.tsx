@@ -9,6 +9,7 @@ import { SqlDrawer } from "@/components/sql-drawer";
 import validation from "@/content/validation.json";
 import { day, number, readHref } from "@/lib/format";
 
+import { ImageClaim } from "./image-claim";
 import { arrange } from "./arrange";
 import { Timeline } from "./timeline";
 import { useTrace } from "./use-trace";
@@ -110,7 +111,7 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
               <>
                 {figure} is first written on{" "}
                 <a
-                  href={`#w-${earliestSaying.pageId}-${earliestSaying.hash}`}
+                  href={`${readHref(earliestSaying.title, earliestSaying.firstSeen)}#p-${earliestSaying.hash}`}
                   className="text-rubric underline decoration-rule decoration-1 underline-offset-4"
                 >
                   {day(earliestSaying.firstSeen)}
@@ -153,7 +154,7 @@ function Found({ tracing, earliest }: { tracing: Tracing; earliest: Trace }) {
           {tracing.subject &&
             ` Passages are stored under their article's title, so the claim was asked as one about ${tracing.subject}, the article of the nearest wording.`}{" "}
           “Earliest” is the oldest of the wordings within {tracing.near} of the
-          closest one, and an older one may be missing: {COVERAGE}
+          closest one before limiting displayed results. {tracing.coverage.matched} matching histories were considered; {tracing.coverage.shown} are shown. An older one may be missing: {COVERAGE}
           {traces.length === tracing.limit &&
             `, and only the ${tracing.limit} closest are shown, so a gap in the chart is not proof the claim was absent`}
           .
@@ -295,6 +296,8 @@ export function TraceClaim() {
             Trace
           </button>
         </form>
+
+        <ImageClaim onExtract={setDraft} />
 
         {!claim && (
           <div className="mt-10">

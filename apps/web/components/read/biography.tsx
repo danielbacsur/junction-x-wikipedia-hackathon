@@ -6,6 +6,7 @@ import { SqlDrawer } from "@/components/sql-drawer";
 import { FIRST_YEAR, LAST_YEAR, LATEST, day, minute, span } from "@/lib/format";
 import { useJson } from "@/lib/use-json";
 
+import { ParagraphStory } from "./story";
 import { Words } from "./words";
 
 const START = Date.UTC(FIRST_YEAR, 0, 1);
@@ -181,6 +182,8 @@ export function Biography({
               </li>
             ))}
           </ol>
+
+          <ParagraphStory key={hash} title={title} hash={hash} />
 
           {life.wordings.length > 1 && (
             <div>
