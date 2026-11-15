@@ -60,5 +60,5 @@ date are embedded on the spot.
 
 ## Where it is weakest
 
-- Answers use Gemini with GEMINI_API_KEY. Every released sentence has valid passage citations and matching numbers; semantic entailment still needs reader judgment. Embeddings remain local bge-m3.
+- Answers use Gemini through Vercel AI Gateway with AI_GATEWAY_API_KEY. Every released sentence has valid passage citations and matching numbers; semantic entailment still needs reader judgment. Embeddings remain local bge-m3.
 - Only wordings with a vector can be found by meaning, and the job that computes them is still running. Trace says how many had one when last counted.

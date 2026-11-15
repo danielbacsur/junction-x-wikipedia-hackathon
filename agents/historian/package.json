@@ -10,10 +10,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@ai-sdk/google": "^4.0.121",
-    "@ai-sdk/openai-compatible": "3.0.92",
     "@vercel/connect": "2.7.0",
     "@wtt/package-engine": "0.0.0",
+    "@wtt/package-models": "^0.0.0",
     "ai": "7.0.173",
     "eve": "1.0.0-rc.17",
     "zod": "4.6.7"

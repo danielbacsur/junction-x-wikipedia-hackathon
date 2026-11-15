@@ -46,7 +46,7 @@ http://localhost:3000/mcp`).
 ## Run it
 
 You need Node 24 or later, Docker, [Ollama](https://ollama.com) and the
-GitHub CLI for the dataset downloads, plus a Gemini API key for generation.
+GitHub CLI for the dataset downloads, plus a Vercel AI Gateway key for generation.
 
 ```bash
 npm install
@@ -60,7 +60,7 @@ done
 
 npm run load                   # schema and every loader, about ten minutes
 ollama pull bge-m3
-export GEMINI_API_KEY=your-key   # keep the key out of source control
+export AI_GATEWAY_API_KEY=your-key   # keep the key out of source control
 npm run embed                  # vectors for paragraphs, resumable, runs for hours
 npm run dev                    # web on :3000, the historian agent on :3001
 ```
@@ -78,13 +78,13 @@ npm test                       # unit tests, and engine tests against the loaded
 npm run e2e -w @wtt/app-web    # every journey in a real browser
 ```
 
-Generation uses Gemini (`GEMINI_MODEL`, default `gemini-4-hydrogen`); paragraph stories use `GEMINI_STORY_MODEL` (default `gemini-4-argon`). Requests through the Interactions API are stateless (`store: false`). The historian uses the Google AI SDK provider for function calling. Retrieval and bge-m3 embeddings stay local.
+Generation uses Gemini (`GEMINI_MODEL`, default `gemini-4-hydrogen`); paragraph stories use `GEMINI_STORY_MODEL` (default `gemini-4-argon`). All generation, images, structured answers and historian function calls use Vercel AI Gateway through the AI SDK. Set `AI_GATEWAY_API_KEY` locally; Vercel deployments can also authenticate with OIDC. Model IDs accept the `google/` prefix. Retrieval and bge-m3 embeddings stay local.
 
 Ask translates a question into Finnish for retrieval and answers in its detected language. Only sentences with valid citations and matching numeric values are released; this does not prove semantic entailment. Office questions with an explicit day use application time and the selected Wikipedia system time. Trace accepts screenshots, pasted images and camera photos (PNG/JPEG/WebP, up to 8 MB); extracted claims must be reviewed before tracing. The paragraph panel can explain its complete linked wording history, refusing oversized inputs rather than truncating them.
 
 Trace reports candidate and display counts, and computes earliest-found dates before display limits. Its nearest 300 vectors do not guarantee exhaustive recall. Later-reverted passages remain visible in historical answers with an annotation. The latest history is the 1 October 2026 snapshot.
 
-Run `npm test` for offline checks. Run `npm run test:integration -w @wtt/package-engine` with the database, Ollama and Gemini key to check the loaded dataset.
+Run `npm test` for offline checks. Run `npm run test:integration -w @wtt/package-engine` with the database, Ollama and gateway key to check the loaded dataset.
 
 ## How it works
 

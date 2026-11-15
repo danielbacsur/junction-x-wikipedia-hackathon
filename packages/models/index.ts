@@ -82,5 +82,5 @@ export {
   streamChat,
 } from "./chat.ts";
 
-export { gemini, geminiModel } from "./gemini.ts";
+export { gemini, geminiModel, gatewayModel } from "./gemini.ts";
 export { extractClaim } from "./image-claim.ts";
