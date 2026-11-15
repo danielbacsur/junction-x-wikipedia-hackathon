@@ -45,7 +45,6 @@ JOIN passage  FOR SYSTEM_TIME AS OF TIMESTAMP '2007-12-31 23:59:59' AS p USING (
 JOIN revision FOR SYSTEM_TIME AS OF TIMESTAMP '2007-12-31 23:59:59' AS r ON r.page_id = p.page_id
 JOIN passage_text AS t USING (hash)
 JOIN edit AS b ON b.rev_id = p.born_rev
-WHERE b.reverted_by IS NULL
 ORDER BY score DESC LIMIT 8;`;
 
 const LIFE = `SELECT row_start, row_end, born_rev
@@ -113,7 +112,7 @@ const FINDINGS = [
   },
   {
     title: "A revert alone does not show that an edit was wrong.",
-    body: "Counting every version between a revert and the text it restored marked up to 96% of an often-vandalised article as undone, because the same vandal text returns and each return restores the last. Only a revert that itself stood, and came within thirty days, takes a version out of what Wikipedia said: 41,603 of 46,197 reverts stood.",
+    body: "Counting every version between a revert and the text it restored marked up to 96% of an often-vandalised article as undone, because the same vandal text returns and each return restores the last. The revert flag records a revert that itself stood and came within thirty days: 41,603 of 46,197 reverts stood. Historical retrieval keeps these versions and annotates them.",
     source: "packages/ingest/edits.ts",
   },
   {
@@ -129,7 +128,7 @@ const LIMITS = [
   "Vectors are computed on this laptop at 20 to 40 paragraphs a second, most edited articles first, so not every wording has one yet. Passages a question needs are embedded on the spot.",
   "Which article a question is about is decided with today’s article vectors, which know things the past did not. What gets cited is decided from passages that stood on the date.",
   "Which wording replaced which is our reading of the edits, shown with a similarity score. Lifetimes and authors are not.",
-  "The answer is written by a 5 billion parameter model running locally. It translates loosely, which is why every sentence must cite a passage and uncited ones are marked.",
+  "Gemini writes answers in the detected question language. Only sentences with valid passage citations and matching numeric values are released. These checks do not establish semantic entailment. Paragraph stories are model interpretations of the complete linked wording history.",
 ];
 
 function Figure({ value, label }: { value: string; label: string }) {
@@ -256,7 +255,7 @@ export default function Method() {
           />
           <Statement
             title="What Wikipedia said about a question on a day"
-            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and drops anything that arrived through an edit that was reverted within thirty days by a revert that itself stood. This pass is a first net: the index can miss true neighbours, as the first finding below measured. A second statement then compares the question with every passage that stood that day in the articles the first pass and the article vectors point to, exactly, and that is the pass with full recall."
+            about="The vector index and the full-text index each name candidates from all of history. The join with the versioned table keeps the ones that stood that day, and annotates wordings whose introducing edit was later reverted. This pass is a first net: the index can miss true neighbours, as the first finding below measured. A second statement then compares the question with every passage that stood that day in the articles the first pass and the article vectors point to, exactly, and that is the pass with full recall."
             sql={SEARCH}
           />
           <Statement
@@ -372,8 +371,8 @@ export default function Method() {
           </table>
         </div>
         <p className="mt-2 text-xs text-ink-faint">
-          Writing an answer is not in the table. The local model takes two to
-          four seconds for it, and that time is the model&apos;s, not
+          Writing an answer is not in the table. Gemini response time depends on
+          the provider, and that time is the model&apos;s, not
           MariaDB&apos;s.
         </p>
       </section>

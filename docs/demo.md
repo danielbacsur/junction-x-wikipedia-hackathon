@@ -54,11 +54,11 @@ date are embedded on the spot.
 
 ## For a longer look
 
-- **Agent**, `/agent`: click the question about the president of 1 March 1925. A local model picks the lookup, and the panel shows the row MariaDB returned and the SQL.
+- **Agent**, `/agent`: click the question about the president of 1 March 1925. Gemini picks the lookup, and the panel shows the row MariaDB returned and the SQL.
 - **Atlas**, `/atlas`: what the labs measured about the edits themselves, each section with its SQL.
 - **MCP**: `claude mcp add --transport http palimpsest http://localhost:3000/mcp`, then ask another assistant what Wikipedia said on a day.
 
 ## Where it is weakest
 
-- Answers are written by `gemma4:e2b`, a small local model. It writes Finnish well and translates it loosely, which is why the first step asks in Finnish. The numbers in an answer are checked against the cited passage and the wording is not. Setting `LLM_BASE_URL`, `LLM_API_KEY` and `LLM_MODEL` swaps in a larger model.
+- Answers use Gemini with GEMINI_API_KEY. Every released sentence has valid passage citations and matching numbers; semantic entailment still needs reader judgment. Embeddings remain local bge-m3.
 - Only wordings with a vector can be found by meaning, and the job that computes them is still running. Trace says how many had one when last counted.

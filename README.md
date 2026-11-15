@@ -35,7 +35,7 @@ statements.
   term an infobox stated as an application-time period and the stretch
   Wikipedia stated it as system time. The answer for 1 March 1925 has changed
   three times.
-- **Agent**: a historian running on a local Gemma model that looks things up
+- **Agent**: a historian running on Gemini with nine database tools that looks things up
   with the same queries and shows the SQL of every step.
 - **MCP**: the same queries as tools for any other assistant, at `/mcp`. An
   assistant that cites Wikipedia cites it as of now; this lets it ask what
@@ -46,7 +46,7 @@ http://localhost:3000/mcp`).
 ## Run it
 
 You need Node 24 or later, Docker, [Ollama](https://ollama.com) and the
-GitHub CLI for the dataset downloads. No account or API key.
+GitHub CLI for the dataset downloads, plus a Gemini API key for generation.
 
 ```bash
 npm install
@@ -59,7 +59,8 @@ for set in s m l; do
 done
 
 npm run load                   # schema and every loader, about ten minutes
-ollama pull bge-m3 && ollama pull gemma4:e2b
+ollama pull bge-m3
+export GEMINI_API_KEY=your-key   # keep the key out of source control
 npm run embed                  # vectors for paragraphs, resumable, runs for hours
 npm run dev                    # web on :3000, the historian agent on :3001
 ```
@@ -77,9 +78,13 @@ npm test                       # unit tests, and engine tests against the loaded
 npm run e2e -w @wtt/app-web    # every journey in a real browser
 ```
 
-To answer with a hosted model instead of local Gemma, such as NVIDIA
-Nemotron, set `LLM_BASE_URL`, `LLM_API_KEY` and `LLM_MODEL` to any
-OpenAI-compatible endpoint. Retrieval and embeddings stay local either way.
+Generation uses Gemini (`GEMINI_MODEL`, default `gemini-4-hydrogen`); paragraph stories use `GEMINI_STORY_MODEL` (default `gemini-4-argon`). Requests through the Interactions API are stateless (`store: false`). The historian uses the Google AI SDK provider for function calling. Retrieval and bge-m3 embeddings stay local.
+
+Ask translates a question into Finnish for retrieval and answers in its detected language. Only sentences with valid citations and matching numeric values are released; this does not prove semantic entailment. Office questions with an explicit day use application time and the selected Wikipedia system time. Trace accepts screenshots, pasted images and camera photos (PNG/JPEG/WebP, up to 8 MB); extracted claims must be reviewed before tracing. The paragraph panel can explain its complete linked wording history, refusing oversized inputs rather than truncating them.
+
+Trace reports candidate and display counts, and computes earliest-found dates before display limits. Its nearest 300 vectors do not guarantee exhaustive recall. Later-reverted passages remain visible in historical answers with an annotation. The latest history is the 1 October 2026 snapshot.
+
+Run `npm test` for offline checks. Run `npm run test:integration -w @wtt/package-engine` with the database, Ollama and Gemini key to check the loaded dataset.
 
 ## How it works
 
@@ -212,8 +217,7 @@ embedding job was running:
 
 Gathering evidence is timed the second time a question is asked. The first
 time, passages nobody has asked about are embedded on the spot, which takes a
-second or two. Writing the answer is the local model's time, two to four
-seconds, and is not in the table.
+second or two. Writing the answer uses Gemini; provider latency is separate from the database timings in the table.
 
 `npm run validate` passes eight checks: every row of the datasets is in the
 database, stored text hashes to Wikipedia's sha1, 500 random moments return
@@ -246,7 +250,7 @@ README of what it measured, including when the answer was no.
 
 ```
 apps/web            Next.js 16: the pages and the json routes under app/api
-agents/historian    eve agent on local Gemma with tools over the engine
+agents/historian    eve agent on Gemini with nine tools over the engine
 packages/db         connection pool that records its SQL, schema, migrations
 packages/wikitext   wikitext into blocks that rebuild exactly; cleaning; stems
 packages/ingest     loaders, embedding job, validate, evaluate
