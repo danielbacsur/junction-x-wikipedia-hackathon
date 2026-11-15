@@ -193,7 +193,7 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
         </h1>
         <p className="mt-4 text-ink-soft">
           Ask what Finnish Wikipedia said, when a claim appeared, or how an
-          article changed. A local model picks the lookups, and each one shows
+          article changed. Gemini picks the lookups, and each one shows
           what MariaDB returned and the SQL it ran.
         </p>
         <p className="mt-4 text-xs text-ink-faint">AI historian · {model}</p>
@@ -264,7 +264,7 @@ function Conversation({ sessionId }: { sessionId: string | null }) {
           <p role="status" className="writing mt-6 text-sm text-ink-soft">
             {agent.status === "resuming"
               ? "Reopening the conversation…"
-              : "Looking it up. The local model takes a few seconds."}
+              : "Looking it up in the historical records…"}
           </p>
         )}
         {(sendError || agent.error) && (

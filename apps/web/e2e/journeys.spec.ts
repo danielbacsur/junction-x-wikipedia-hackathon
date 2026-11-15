@@ -344,3 +344,19 @@ test("no page scrolls sideways on a phone @phone", async ({ page }) => {
     expect(overflow, `${path} is wider than the screen`).toBeLessThanOrEqual(1);
   }
 });
+
+test("an image claim is reviewed before tracing", async ({ page }) => {
+  await page.goto("/trace");
+  await page.getByLabel("Upload claim image").setInputFiles("e2e/fixtures/claim.png");
+  await expect(page.getByLabel("The claim to trace")).toHaveValue(/Finland declared independence in 1917/);
+  await expect(page).toHaveURL(/\/trace$/);
+  await page.getByRole("button", { name: "Trace", exact: true }).click();
+  await expect(page.getByRole("heading", { name: /Earliest wording found/ })).toBeVisible();
+});
+
+test("the paragraph story explains the complete linked history", async ({ page }) => {
+  await page.goto("/read/Talvisota?date=2007-12-31&claim=0CED976AFA46F845");
+  await page.getByRole("button", { name: "Explain how this paragraph changed" }).click();
+  await expect(page.getByText("Gemini interpretation of the complete linked wording history.", { exact: false })).toBeVisible();
+  await expect(page.locator("aside section p.whitespace-pre-wrap")).not.toBeEmpty();
+});

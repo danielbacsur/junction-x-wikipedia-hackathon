@@ -166,7 +166,9 @@ export const gatherEvidence = async (
       })), nearest: null, tooFar: TOO_FAR, embeddedNow: 0, sql: holding.sql,
     };
   }
-  const vector = toVector(await embedOne(understood.query));
+  // Keep the calibrated multilingual distance on the original question.
+  // Translation supplies Finnish keywords, not a different vector threshold.
+  const vector = toVector(await embedOne(question));
 
   // Two ways to find where to look, at the same time: the articles nearest
   // in meaning, and the passages nearest in meaning or sharing a rare word.
@@ -242,7 +244,7 @@ export const gatherEvidence = async (
       bornUrl: `https://fi.wikipedia.org/?oldid=${hit.bornRev}`,
     }));
 
-  const distances = sources.flatMap((source) =>
+  const distances = [...merged.values()].flatMap((source) =>
     source.distance === null ? [] : [source.distance],
   );
   const nearest = distances.length > 0 ? Math.min(...distances) : null;

@@ -39,9 +39,8 @@ export const answerPrompt = (evidence: Evidence): Message[] => {
         `number and name exactly as the passage has it. End every sentence ` +
         `with the number of the passage it comes from, like [1] or [2][3]. Do ` +
         `not use anything you know from elsewhere, and do not mention events ` +
-        `after ${date}. If the passages do not answer the question, say that ` +
-        `Wikipedia's passages from that date do not answer it, and say what ` +
-        `they do cover.`,
+        `after ${date}. If the passages do not answer the question, return no sentences. ` +
+        `Do not substitute a description of unrelated passages.`,
     },
     {
       role: "user",

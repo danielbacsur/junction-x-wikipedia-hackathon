@@ -279,3 +279,9 @@ Wikipedia's text is under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); every row
 keeps the article's page id and revision id, so every result links back to
 the version it came from. The code is under the [MIT licence](LICENSE).
+
+## Hosted demo backend
+
+The Vercel frontend forwards `/api`, `/mcp` and `/eve` requests through a server-only authenticated backend connection (`BACKEND_URL` and `BACKEND_TOKEN`). The demo backend runs alongside the loaded MariaDB and local bge-m3 model. `scripts/backend-gateway.mjs` listens on loopback and requires the shared token; no database port is exposed. The historian authenticates the same service token.
+
+`scripts/run-demo-backend.mjs` supervises the web server on 3100, gateway on 3101, historian on 3102, and a Cloudflare demo tunnel. Set `AI_GATEWAY_API_KEY`, `BACKEND_TOKEN`, and `HISTORIAN_URL=http://127.0.0.1:3102` privately. Build with that historian URL before starting. The current demo runs on the development Mac and requires it to stay online. A tunnel restart can change its hostname; update Vercel's `BACKEND_URL` and redeploy in that case. For permanent hosting, move the backend and database to an always-on host and use a stable hostname.

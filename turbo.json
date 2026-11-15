@@ -47,10 +47,13 @@
     "OLLAMA_URL",
     "RUN_INTEGRATION",
     "AI_GATEWAY_API_KEY",
-    "VERCEL_OIDC_TOKEN"
+    "VERCEL_OIDC_TOKEN",
+    "BACKEND_TOKEN"
   ],
   "globalEnv": [
     "GEMINI_MODEL",
-    "GEMINI_STORY_MODEL"
+    "GEMINI_STORY_MODEL",
+    "BACKEND_URL",
+    "HISTORIAN_URL"
   ]
 }

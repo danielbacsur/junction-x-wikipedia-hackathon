@@ -28,6 +28,12 @@ const reachable = await db()
 afterAll(() => db().end());
 
 describe.runIf(reachable)("against the loaded database", () => {
+  it("refuses an unrelated question using the calibrated original-language vector", async () => {
+    const evidence = await gatherEvidence("How do I reset my router?");
+    expect(evidence.sources).toEqual([]);
+    expect(evidence.nearest).toBeGreaterThan(evidence.tooFar);
+  });
+
   it("reads an article as it stood at the end of 2008", async () => {
     const article = await readArticle("Talvisota", "2008");
 
