@@ -1,0 +1,52 @@
+[
+  {
+    "id": "sentence",
+    "gap": 0.3,
+    "text": "This is one sentence from Wikipedia, on how many Finns died in the Winter War. Twenty-three years, eighteen wordings, three different numbers."
+  },
+  {
+    "id": "name",
+    "gap": 0.25,
+    "text": "That's a palimpsest: a page scraped and written over, with the old words still showing through."
+  },
+  {
+    "id": "kept",
+    "gap": 0.3,
+    "text": "Our Palimpsest keeps every layer: every version of nearly twenty thousand articles on Finland's history. Each paragraph lives in a system-versioned MariaDB table, with the second it appeared and the second it was replaced."
+  },
+  {
+    "id": "read",
+    "gap": 0.3,
+    "text": "Pick any day, and the article is back as it stood, in nine milliseconds. Put two days side by side, and every changed word is marked."
+  },
+  {
+    "id": "ask",
+    "gap": 0.3,
+    "text": "Ask how many Finns died, and vector search finds the passages by meaning, as they stood that day, in one query. Gemini answers only from those, and every number is checked against its source."
+  },
+  {
+    "id": "two",
+    "gap": 0.35,
+    "text": "Ask again as of today, and the answer is sixty-two higher."
+  },
+  {
+    "id": "trace",
+    "gap": 0.3,
+    "text": "Follow a claim back through every rewrite, to whoever wrote it first: Cimon Avaro."
+  },
+  {
+    "id": "who",
+    "gap": 0.35,
+    "text": "See who changed what, to the second. This paragraph was deleted, and back a hundred and fifteen seconds later."
+  },
+  {
+    "id": "wider",
+    "gap": 0.45,
+    "text": "Across the archive, nearly seven thousand numbers changed while the words around them stayed."
+  },
+  {
+    "id": "slogan",
+    "gap": 3.2,
+    "text": "If Wikipedia ever said it, Palimpsest can find it, date it, and answer from it."
+  }
+]

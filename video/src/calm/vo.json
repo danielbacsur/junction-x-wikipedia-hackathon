@@ -1,0 +1,794 @@
+{
+  "scribes": {
+    "gap": 1.1,
+    "text": "A thousand years ago, parchment was precious. So when a text was no longer wanted, the scribes scraped it away, and wrote over it. But the old ink never quite left. A page like that is called a palimpsest.",
+    "duration": 15.66,
+    "words": [
+      {
+        "w": "A",
+        "start": 0,
+        "end": 0.08
+      },
+      {
+        "w": "thousand",
+        "start": 0.133,
+        "end": 0.56
+      },
+      {
+        "w": "years",
+        "start": 0.6,
+        "end": 0.8
+      },
+      {
+        "w": "ago,",
+        "start": 0.88,
+        "end": 1.28
+      },
+      {
+        "w": "parchment",
+        "start": 1.36,
+        "end": 2.08
+      },
+      {
+        "w": "was",
+        "start": 2.14,
+        "end": 2.32
+      },
+      {
+        "w": "precious.",
+        "start": 2.409,
+        "end": 3.52
+      },
+      {
+        "w": "So",
+        "start": 3.573,
+        "end": 3.68
+      },
+      {
+        "w": "when",
+        "start": 3.712,
+        "end": 3.84
+      },
+      {
+        "w": "a",
+        "start": 3.92,
+        "end": 4
+      },
+      {
+        "w": "text",
+        "start": 4.08,
+        "end": 4.4
+      },
+      {
+        "w": "was",
+        "start": 4.46,
+        "end": 4.64
+      },
+      {
+        "w": "no",
+        "start": 4.693,
+        "end": 4.8
+      },
+      {
+        "w": "longer",
+        "start": 4.846,
+        "end": 5.12
+      },
+      {
+        "w": "wanted,",
+        "start": 5.177,
+        "end": 5.92
+      },
+      {
+        "w": "the",
+        "start": 5.94,
+        "end": 6
+      },
+      {
+        "w": "scribes",
+        "start": 6.08,
+        "end": 6.56
+      },
+      {
+        "w": "scraped",
+        "start": 6.64,
+        "end": 7.2
+      },
+      {
+        "w": "it",
+        "start": 7.227,
+        "end": 7.28
+      },
+      {
+        "w": "away,",
+        "start": 7.36,
+        "end": 7.92
+      },
+      {
+        "w": "and",
+        "start": 7.96,
+        "end": 8.08
+      },
+      {
+        "w": "wrote",
+        "start": 8.133,
+        "end": 8.4
+      },
+      {
+        "w": "over",
+        "start": 8.464,
+        "end": 8.72
+      },
+      {
+        "w": "it.",
+        "start": 8.8,
+        "end": 9.28
+      },
+      {
+        "w": "But",
+        "start": 9.38,
+        "end": 9.68
+      },
+      {
+        "w": "the",
+        "start": 9.72,
+        "end": 9.84
+      },
+      {
+        "w": "old",
+        "start": 9.9,
+        "end": 10.08
+      },
+      {
+        "w": "ink",
+        "start": 10.18,
+        "end": 10.48
+      },
+      {
+        "w": "never",
+        "start": 10.52,
+        "end": 10.72
+      },
+      {
+        "w": "quite",
+        "start": 10.787,
+        "end": 11.12
+      },
+      {
+        "w": "left.",
+        "start": 11.232,
+        "end": 12
+      },
+      {
+        "w": "A",
+        "start": 12.2,
+        "end": 12.4
+      },
+      {
+        "w": "page",
+        "start": 12.48,
+        "end": 12.8
+      },
+      {
+        "w": "like",
+        "start": 12.848,
+        "end": 13.04
+      },
+      {
+        "w": "that",
+        "start": 13.104,
+        "end": 13.36
+      },
+      {
+        "w": "is",
+        "start": 13.413,
+        "end": 13.52
+      },
+      {
+        "w": "called",
+        "start": 13.577,
+        "end": 13.92
+      },
+      {
+        "w": "a",
+        "start": 14.04,
+        "end": 14.16
+      },
+      {
+        "w": "palimpsest.",
+        "start": 14.26,
+        "end": 15.44
+      }
+    ]
+  },
+  "wikipedia": {
+    "gap": 1,
+    "text": "Wikipedia is one, too. It has been rewritten eight hundred and sixty-two thousand times, and all we ever read is the top layer.",
+    "duration": 9.98,
+    "words": [
+      {
+        "w": "Wikipedia",
+        "start": 0,
+        "end": 0.72
+      },
+      {
+        "w": "is",
+        "start": 0.827,
+        "end": 1.04
+      },
+      {
+        "w": "one,",
+        "start": 1.12,
+        "end": 1.44
+      },
+      {
+        "w": "too.",
+        "start": 1.54,
+        "end": 2.08
+      },
+      {
+        "w": "It",
+        "start": 2.16,
+        "end": 2.32
+      },
+      {
+        "w": "has",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "w": "been",
+        "start": 2.528,
+        "end": 2.72
+      },
+      {
+        "w": "rewritten",
+        "start": 2.792,
+        "end": 3.44
+      },
+      {
+        "w": "eight",
+        "start": 3.48,
+        "end": 3.68
+      },
+      {
+        "w": "hundred",
+        "start": 3.73,
+        "end": 4.08
+      },
+      {
+        "w": "and",
+        "start": 4.2,
+        "end": 4.56
+      },
+      {
+        "w": "sixty-two",
+        "start": 4.64,
+        "end": 5.2
+      },
+      {
+        "w": "thousand",
+        "start": 5.307,
+        "end": 6.16
+      },
+      {
+        "w": "times,",
+        "start": 6.253,
+        "end": 7.2
+      },
+      {
+        "w": "and",
+        "start": 7.26,
+        "end": 7.44
+      },
+      {
+        "w": "all",
+        "start": 7.48,
+        "end": 7.6
+      },
+      {
+        "w": "we",
+        "start": 7.653,
+        "end": 7.76
+      },
+      {
+        "w": "ever",
+        "start": 7.792,
+        "end": 7.92
+      },
+      {
+        "w": "read",
+        "start": 8,
+        "end": 8.32
+      },
+      {
+        "w": "is",
+        "start": 8.427,
+        "end": 8.64
+      },
+      {
+        "w": "the",
+        "start": 8.68,
+        "end": 8.8
+      },
+      {
+        "w": "top",
+        "start": 8.92,
+        "end": 9.28
+      },
+      {
+        "w": "layer.",
+        "start": 9.347,
+        "end": 9.76
+      }
+    ]
+  },
+  "light": {
+    "gap": 1.5,
+    "text": "So we held it up to the light.",
+    "duration": 2.22,
+    "words": [
+      {
+        "w": "So",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "w": "we",
+        "start": 0.213,
+        "end": 0.32
+      },
+      {
+        "w": "held",
+        "start": 0.368,
+        "end": 0.56
+      },
+      {
+        "w": "it",
+        "start": 0.613,
+        "end": 0.72
+      },
+      {
+        "w": "up",
+        "start": 0.8,
+        "end": 0.96
+      },
+      {
+        "w": "to",
+        "start": 1.013,
+        "end": 1.12
+      },
+      {
+        "w": "the",
+        "start": 1.14,
+        "end": 1.2
+      },
+      {
+        "w": "light.",
+        "start": 1.28,
+        "end": 2
+      }
+    ]
+  },
+  "open": {
+    "gap": 1,
+    "text": "Now you can open any article, as it stood on any day. Lay two days side by side, and see every word that changed. Ask a question, and Gemini answers from the words of that day, right next to today's.",
+    "duration": 16.38,
+    "words": [
+      {
+        "w": "Now",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "w": "you",
+        "start": 0.18,
+        "end": 0.24
+      },
+      {
+        "w": "can",
+        "start": 0.28,
+        "end": 0.4
+      },
+      {
+        "w": "open",
+        "start": 0.464,
+        "end": 0.72
+      },
+      {
+        "w": "any",
+        "start": 0.82,
+        "end": 1.12
+      },
+      {
+        "w": "article,",
+        "start": 1.19,
+        "end": 1.84
+      },
+      {
+        "w": "as",
+        "start": 1.893,
+        "end": 2
+      },
+      {
+        "w": "it",
+        "start": 2.053,
+        "end": 2.16
+      },
+      {
+        "w": "stood",
+        "start": 2.24,
+        "end": 2.64
+      },
+      {
+        "w": "on",
+        "start": 2.693,
+        "end": 2.8
+      },
+      {
+        "w": "any",
+        "start": 2.9,
+        "end": 3.2
+      },
+      {
+        "w": "day.",
+        "start": 3.32,
+        "end": 3.76
+      },
+      {
+        "w": "Lay",
+        "start": 3.96,
+        "end": 4.56
+      },
+      {
+        "w": "two",
+        "start": 4.64,
+        "end": 4.88
+      },
+      {
+        "w": "days",
+        "start": 4.96,
+        "end": 5.28
+      },
+      {
+        "w": "side",
+        "start": 5.344,
+        "end": 5.6
+      },
+      {
+        "w": "by",
+        "start": 5.68,
+        "end": 5.84
+      },
+      {
+        "w": "side,",
+        "start": 5.92,
+        "end": 6.32
+      },
+      {
+        "w": "and",
+        "start": 6.46,
+        "end": 6.88
+      },
+      {
+        "w": "see",
+        "start": 6.94,
+        "end": 7.12
+      },
+      {
+        "w": "every",
+        "start": 7.213,
+        "end": 7.68
+      },
+      {
+        "w": "word",
+        "start": 7.76,
+        "end": 8.08
+      },
+      {
+        "w": "that",
+        "start": 8.128,
+        "end": 8.32
+      },
+      {
+        "w": "changed.",
+        "start": 8.4,
+        "end": 9.04
+      },
+      {
+        "w": "Ask",
+        "start": 9.24,
+        "end": 9.84
+      },
+      {
+        "w": "a",
+        "start": 9.88,
+        "end": 9.92
+      },
+      {
+        "w": "question,",
+        "start": 9.982,
+        "end": 10.56
+      },
+      {
+        "w": "and",
+        "start": 10.7,
+        "end": 11.12
+      },
+      {
+        "w": "Gemini",
+        "start": 11.2,
+        "end": 11.68
+      },
+      {
+        "w": "answers",
+        "start": 11.75,
+        "end": 12.24
+      },
+      {
+        "w": "from",
+        "start": 12.288,
+        "end": 12.48
+      },
+      {
+        "w": "the",
+        "start": 12.5,
+        "end": 12.56
+      },
+      {
+        "w": "words",
+        "start": 12.64,
+        "end": 13.04
+      },
+      {
+        "w": "of",
+        "start": 13.12,
+        "end": 13.28
+      },
+      {
+        "w": "that",
+        "start": 13.344,
+        "end": 13.6
+      },
+      {
+        "w": "day,",
+        "start": 13.7,
+        "end": 14.08
+      },
+      {
+        "w": "right",
+        "start": 14.173,
+        "end": 14.64
+      },
+      {
+        "w": "next",
+        "start": 14.704,
+        "end": 14.96
+      },
+      {
+        "w": "to",
+        "start": 15.04,
+        "end": 15.2
+      },
+      {
+        "w": "today's.",
+        "start": 15.307,
+        "end": 16.16
+      }
+    ]
+  },
+  "follow": {
+    "gap": 1.2,
+    "text": "Follow a single claim back through every rewriting, to the hand that first wrote it. And see who changed what, down to the second.",
+    "duration": 9.180000000000001,
+    "words": [
+      {
+        "w": "Follow",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "w": "a",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "w": "single",
+        "start": 0.537,
+        "end": 0.88
+      },
+      {
+        "w": "claim",
+        "start": 0.947,
+        "end": 1.28
+      },
+      {
+        "w": "back",
+        "start": 1.344,
+        "end": 1.6
+      },
+      {
+        "w": "through",
+        "start": 1.63,
+        "end": 1.84
+      },
+      {
+        "w": "every",
+        "start": 1.933,
+        "end": 2.4
+      },
+      {
+        "w": "rewriting,",
+        "start": 2.472,
+        "end": 3.2
+      },
+      {
+        "w": "to",
+        "start": 3.333,
+        "end": 3.6
+      },
+      {
+        "w": "the",
+        "start": 3.62,
+        "end": 3.68
+      },
+      {
+        "w": "hand",
+        "start": 3.76,
+        "end": 4.08
+      },
+      {
+        "w": "that",
+        "start": 4.128,
+        "end": 4.32
+      },
+      {
+        "w": "first",
+        "start": 4.387,
+        "end": 4.72
+      },
+      {
+        "w": "wrote",
+        "start": 4.773,
+        "end": 5.04
+      },
+      {
+        "w": "it.",
+        "start": 5.147,
+        "end": 5.68
+      },
+      {
+        "w": "And",
+        "start": 5.76,
+        "end": 6
+      },
+      {
+        "w": "see",
+        "start": 6.06,
+        "end": 6.24
+      },
+      {
+        "w": "who",
+        "start": 6.3,
+        "end": 6.48
+      },
+      {
+        "w": "changed",
+        "start": 6.54,
+        "end": 6.96
+      },
+      {
+        "w": "what,",
+        "start": 7.056,
+        "end": 7.68
+      },
+      {
+        "w": "down",
+        "start": 7.728,
+        "end": 7.92
+      },
+      {
+        "w": "to",
+        "start": 7.973,
+        "end": 8.08
+      },
+      {
+        "w": "the",
+        "start": 8.1,
+        "end": 8.16
+      },
+      {
+        "w": "second.",
+        "start": 8.251,
+        "end": 8.96
+      }
+    ]
+  },
+  "close": {
+    "gap": 3.6,
+    "text": "Every edit is kept in MariaDB. Nothing we write is ever really gone. This is Palimpsest.",
+    "duration": 7.739999999999999,
+    "words": [
+      {
+        "w": "Every",
+        "start": 0,
+        "end": 0.32
+      },
+      {
+        "w": "edit",
+        "start": 0.4,
+        "end": 0.72
+      },
+      {
+        "w": "is",
+        "start": 0.773,
+        "end": 0.88
+      },
+      {
+        "w": "kept",
+        "start": 0.96,
+        "end": 1.28
+      },
+      {
+        "w": "in",
+        "start": 1.307,
+        "end": 1.36
+      },
+      {
+        "w": "MariaDB.",
+        "start": 1.453,
+        "end": 2.56
+      },
+      {
+        "w": "Nothing",
+        "start": 2.64,
+        "end": 3.2
+      },
+      {
+        "w": "we",
+        "start": 3.253,
+        "end": 3.36
+      },
+      {
+        "w": "write",
+        "start": 3.427,
+        "end": 3.76
+      },
+      {
+        "w": "is",
+        "start": 3.813,
+        "end": 3.92
+      },
+      {
+        "w": "ever",
+        "start": 3.984,
+        "end": 4.24
+      },
+      {
+        "w": "really",
+        "start": 4.297,
+        "end": 4.64
+      },
+      {
+        "w": "gone.",
+        "start": 4.736,
+        "end": 5.36
+      },
+      {
+        "w": "This",
+        "start": 5.488,
+        "end": 6
+      },
+      {
+        "w": "is",
+        "start": 6.107,
+        "end": 6.32
+      },
+      {
+        "w": "Palimpsest.",
+        "start": 6.4,
+        "end": 7.52
+      }
+    ]
+  }
+}

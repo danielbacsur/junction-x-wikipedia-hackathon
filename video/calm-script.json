@@ -1,0 +1,8 @@
+[
+  { "id": "scribes", "gap": 1.1, "text": "A thousand years ago, parchment was precious. So when a text was no longer wanted, the scribes scraped it away, and wrote over it. But the old ink never quite left. A page like that is called a palimpsest." },
+  { "id": "wikipedia", "gap": 1.0, "text": "Wikipedia is one, too. It has been rewritten eight hundred and sixty-two thousand times, and all we ever read is the top layer." },
+  { "id": "light", "gap": 1.5, "text": "So we held it up to the light." },
+  { "id": "open", "gap": 1.0, "text": "Now you can open any article, as it stood on any day. Lay two days side by side, and see every word that changed. Ask a question, and Gemini answers from the words of that day, right next to today's." },
+  { "id": "follow", "gap": 1.2, "text": "Follow a single claim back through every rewriting, to the hand that first wrote it. And see who changed what, down to the second." },
+  { "id": "close", "gap": 3.6, "text": "Every edit is kept in MariaDB. Nothing we write is ever really gone. This is Palimpsest." }
+]

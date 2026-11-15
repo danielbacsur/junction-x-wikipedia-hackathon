@@ -1,0 +1,10 @@
+[
+  { "id": "hook", "text": "Wikipedia shows you one page. Today's. But this number has not always been this number." },
+  { "id": "title", "text": "This is Palimpsest. Eight hundred sixty-two thousand versions of Wikipedia, in MariaDB, questioned through Gemini." },
+  { "id": "ask", "text": "Ask anything, and pick a date. Gemini answers from the paragraphs that stood that day, next to today's answer. Every sentence cites its passage, and every number is checked." },
+  { "id": "trace", "text": "Paste a claim, or drop a screenshot. Palimpsest follows it through every rewording. Twenty-two thousand eight hundred, in 2003. Twenty-six thousand six hundred, in 2006. And today's number, first written on August twenty-second, 2009." },
+  { "id": "who", "text": "It shows who changed what. This paragraph was deleted at 6:43 in the evening. Two minutes later, it was back." },
+  { "id": "office", "text": "Even facts move. Who was president on March first, 1925? It depends which year's Wikipedia you ask." },
+  { "id": "how", "text": "Underneath, every paragraph is a system-versioned row. Vector search and time travel run in one SQL statement." },
+  { "id": "end", "text": "Any date. Any claim. Every edit. If Wikipedia ever said it, Palimpsest can find it, date it, and answer from it." }
+]

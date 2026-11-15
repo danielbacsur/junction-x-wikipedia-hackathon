@@ -1,0 +1,16 @@
+[
+  { "id": "ago", "shot": "room", "gap": 0.55, "text": "A thousand years ago, parchment was too precious to waste." },
+  { "id": "scraped", "shot": "scrape", "gap": 0.9, "text": "So when a text was no longer wanted, the scribes scraped it away, and wrote over it." },
+  { "id": "remembers", "shot": "scrape", "gap": 0.7, "text": "But ink remembers. Beneath the new words, the old ones stayed." },
+  { "id": "called", "shot": "scrape", "gap": 1.1, "text": "A page like that is called a palimpsest." },
+  { "id": "largest", "shot": "wiki", "gap": 0.7, "text": "Wikipedia is the largest one ever made." },
+  { "id": "everyday", "shot": "wiki", "gap": 0.8, "text": "Every day, a sentence is scraped away, and another is written in its place." },
+  { "id": "top", "shot": "wiki", "gap": 1.2, "text": "And all we ever read is the top layer." },
+  { "id": "light", "shot": "light", "gap": 1.6, "text": "So we held it up to the light." },
+  { "id": "versions", "shot": "layers", "gap": 0.7, "text": "Eight hundred and sixty-two thousand versions. Every layer, kept in MariaDB." },
+  { "id": "ask", "shot": "layers", "gap": 0.7, "text": "Ask what Wikipedia said on any day you choose, and Gemini answers from the words that stood there." },
+  { "id": "follow", "shot": "layers", "gap": 0.6, "text": "Follow one claim through every rewriting." },
+  { "id": "hand", "shot": "layers", "gap": 1.3, "text": "See whose hand changed it, to the second." },
+  { "id": "gone", "shot": "dawn", "gap": 1.0, "text": "Nothing we write is ever really gone." },
+  { "id": "name", "shot": "dawn", "gap": 3.2, "text": "Palimpsest. If Wikipedia ever said it, we can find it, date it, and answer from it." }
+]

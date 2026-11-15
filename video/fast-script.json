@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hook",
+    "gap": 0.45,
+    "text": "[excited] Wikipedia has been rewritten eight hundred and sixty-two thousand times. You have only ever read the last version."
+  },
+  {
+    "id": "scribes",
+    "gap": 0.45,
+    "text": "A thousand years ago, scribes scraped old pages clean, and wrote over them. But the ink never really left. They called it a palimpsest."
+  },
+  {
+    "id": "light",
+    "gap": 0.8,
+    "text": "So we held Wikipedia up to the light."
+  },
+  {
+    "id": "open",
+    "gap": 0.5,
+    "text": "[excited] Open any article, on any day since two thousand and two. Lay two days side by side, and see every word that changed. Ask a question, and Gemini answers from that day's words, right next to today's. Paste any claim, and follow it through every rewording, back to the hand that first wrote it."
+  },
+  {
+    "id": "watch",
+    "gap": 0.6,
+    "text": "Watch a paragraph vanish at six forty-three, and return two minutes later. See how long a bad edit survives: fifteen minutes. Find every number that quietly changed. Find the claim that waited nineteen years for a source. Watch a war change its name. Catch three languages disagreeing over a birthday. And ask who was president on one single day: the answer depends on which year's Wikipedia you ask."
+  },
+  {
+    "id": "close",
+    "gap": 3.2,
+    "text": "Every edit, kept in MariaDB. Every answer, written by Gemini. Nothing we write is ever really gone. This is Palimpsest."
+  }
+]
